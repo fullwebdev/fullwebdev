@@ -1,34 +1,7 @@
-# PWA 200
+# Web On Fire
 
-A [SFEIR School](https://www.sfeir.com/formation/school/)
+Open source training about Web's modern capabilities
 
-![logo](https://www.sfeir.com/img/school/formations/Progressive%20Web%20Apps%20200.png)
+## Credits
 
-[Planning, trainers and other details](https://www.sfeir.com/formation/school/progressive-web-apps-200/)
-
-# Slides
-
-You can view the slides [here](https://sfeir-open-source.github.io/sfeir-school-pwa/).
-
-# Run project
-
-    # Install dependencies
-    `npm i`
-
-    # Run application
-    `npm start`
-
-    # Run step
-    `npm start --step=XXX `
-
-# Steps
-
-Each exercice has two directories:
-
-- a clean directory to get you started (ex: step-3)
-- a solution directory (ex: step-3-solution)
-
-to go a step run the npm script with `--step=XX` :
-
-- `npm start --step=3` for an exercice
-- `npm start --step=3-solution` for the solution
+This learning material was forked from the PWA [SFEIR School](https://github.com/sfeir-open-source/sfeir-school-pwa).
