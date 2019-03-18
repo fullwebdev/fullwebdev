@@ -30,8 +30,6 @@ module.exports = function(env = {}, args) {
     paths = {
       step: stepDir,
       dist: env.prod ? 'build' : '.tmp',
-      assets: 'assets',
-      commons: 'common',
       indexTemplate: ''
     };
 
@@ -70,6 +68,7 @@ Check the folder name in steps/, read the README and try again.
   return {
     mode: 'development',
     entry: paths.indexjs,
+    devtool: 'cheap-module-source-map',
     output: {
       path: path.resolve(__dirname, '.build'),
       filename: 'bundle.js',
@@ -79,8 +78,11 @@ Check the folder name in steps/, read the README and try again.
       rules: [
         {
           test: /\.js$/,
-          loader: 'babel-loader'
-          // Babel options are loaded from .babelrc
+          loader: 'babel-loader',
+          options: {
+            presets: [['@babel/preset-env']],
+            plugins: ['@babel/plugin-syntax-dynamic-import']
+          }
         },
         {
           test: /\.css$/,
@@ -110,14 +112,12 @@ Check the folder name in steps/, read the README and try again.
           ]
     ),
     devServer: {
-      contentBase: [
-        path.join(__dirname, paths.dist),
-        path.join(__dirname, paths.assets),
-        path.join(__dirname, paths.commons),
-        path.join(__dirname, paths.step)
-      ],
+      contentBase: [path.join(__dirname, paths.dist), __dirname, path.join(__dirname, paths.step)],
       compress: true,
-      historyApiFallback: true
+      historyApiFallback: true,
+      proxy: {
+        '/api': 'http://localhost:9000/'
+      }
     }
   };
 };

@@ -1,6 +1,6 @@
 export class PeoplesService {
   constructor() {
-    this.API_URL = '/mocks/people.json';
+    this.API_URL = '/api/peoples';
     this.peoples = null;
     this.peopleMap = new Map();
     this.hasRequestPending = false;

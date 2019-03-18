@@ -10,18 +10,15 @@ export class PeopleCard extends LitElement {
     };
   }
 
-  constructor(/*{people = {}, skillOn, describe}*/) {
+  constructor() {
     super();
-    /*this.people = people;
-        this.skillOn = skillOn;
-        this.describe = describe;*/
   }
 
   render() {
     return html`
-      <link rel="stylesheet" href="/mdl/material.min.css" />
-      <link rel="stylesheet" href="/css/app.css" />
-      <link rel="stylesheet" href="/css/md-overwrite.css" />
+      <link rel="stylesheet" href="/mdl/material.min.css" crossorigin="anonymous" />
+      <link rel="stylesheet" href="/css/app.css" crossorigin="anonymous" />
+      <link rel="stylesheet" href="/css/md-overwrite.css" crossorigin="anonymous" />
       <style>
         :host {
           display: block;

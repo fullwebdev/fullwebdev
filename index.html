@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="peopleApp">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#020307" />
+    <title>Sfeir People</title>
+
+    <!--
+      The `<base>` tag below is present to support two advanced deployment options:
+      1) Differential serving. 2) Serving from a non-root path.
+
+      Instead of manually editing the `<base>` tag yourself, you should generally either:
+      a) Add a `basePath` property to the build configuration in your `polymer.json`.
+      b) Use the `--base-path` command-line option for `polymer build`.
+    -->
+    <base href="/" />
+
+    <link rel="manifest" href="/manifest.json" />
+
+    <link rel="stylesheet" href="/css/material-icons.css" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <script src="/mdl/material.min.js"></script>
+    <script>
+      // Load and register pre-caching Service Worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('service-worker.js', {
+            scope: '/'
+          });
+        });
+      }
+
+      // Redux assumes `process.env.NODE_ENV` exists in the ES module build.
+      // https://github.com/reactjs/redux/issues/2907
+      window.process = { env: { NODE_ENV: 'production' } };
+    </script>
+    <style>
+      body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #fafafa !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Always shows a header, even in smaller screens. -->
+    <people-app></people-app>
+    <noscript>
+      Please enable JavaScript to view this website.
+    </noscript>
+    <!-- Load webcomponents-loader.js to check and load any polyfills your browser needs -->
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <!-- Built with love using PWA Starter Kit -->
+    <script type="module" src="common/app/components/PeopleApp.js" crossorigin="anonymous"></script>
+  </body>
+</html>
