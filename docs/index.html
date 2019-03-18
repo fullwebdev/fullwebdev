@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Web on Fire</title>
+
+    <meta name="description" content="A Theme for open source sfeir schools" />
+    <meta name="author" content="Jean-François Garreau AKA jefBinomed" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <style>
+      body {
+        text-align: center;
+        background-color: grey;
+        padding-top: 3em;
+      }
+
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      .logo {
+        position: relative;
+        width: 500px;
+        max-width: 500px;
+      }
+
+      .breizhcamp {
+        display: inline-block;
+        background-color: #fff;
+        padding: 2em;
+        border-radius: 20px;
+        margin-bottom: 0;
+      }
+
+      .sfeir-logo {
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        margin: auto;
+        height: 600px;
+        max-height: 600px;
+      }
+
+      .block a,
+      .sfeir-logo::before {
+        font-weight: 800;
+        font-size: 50px;
+      }
+
+      .sfeir-logo::before {
+        color: #0b4269;
+        position: absolute;
+        content: 'pwa';
+        text-transform: uppercase;
+        top: 280px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      .sfeir-logo:after {
+        background: url(/school-theme/images/star.png), url(/school-theme/images/star.png);
+        background-position: calc(50% - 35px) 40px, calc(50% + 35px) 40px;
+        background-repeat: no-repeat;
+        background-size: 55px;
+        content: '';
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+        height: 200px;
+        left: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="block breizhcamp">
+      <a href="./breizhcamp.html">
+        <img src="/assets/images/logo-breizhcamp.png" class="logo breizhcamp-logo" alt="breizhcamp" />
+        <div>Université</div>
+        <div>🔥 F.I.R.E. 🔥</div>
+      </a>
+    </div>
+    <div class="block">
+      <a href="./school.html">
+        <div class="sfeir-logo logo" style='background-image: url("/school-theme/images/logo_empty.png");'></div>
+      </a>
+    </div>
+  </body>
+</html>
