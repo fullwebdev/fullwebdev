@@ -32,16 +32,15 @@
     "PWA, service worker, vanillajs, materials"
   ],
   "scripts": {
-    "start": "webpack-dev-server --step-$npm_config_step",
-    "dev": "webpack-dev-server",
+    "step": "webpack-dev-server --step-$npm_config_step",
     "api": "node server/api/server.js",
     "prpl:build": "polymer build --auto-base-path && gulp prpl-server",
     "prpl:watch": "nodemon --exec \"npm run prpl:build\" --watch common/app --watch index.html --watch css --watch polymer.json --watch push-manifest.json",
     "prpl:start:cli": "prpl-server --root server/build",
     "prpl:server": "node server/server.js",
-    "prpl:start": "concurrently \"npm run prpl:server\" \"npm run prpl:proxy\"",
+    "prpl:start": "concurrently \"npm:prpl:server\" \"npm:prpl:proxy\"",
     "prpl:proxy": "cd server/http2-proxy && ./nghttpx -f127.0.0.1,8443 -b127.0.0.1,8080 server.key server.crt --no-ocsp",
-    "prpl": "concurrently \"npm run prpl:watch\" \"npm run prpl:start\"",
+    "start": "concurrently \"npm:prpl:watch\" \"npm:prpl:start\"",
     "precommit": "lint-staged",
     "prettify": "prettier --write ./**/*.{json,html,css,scss,md,js,ts}"
   },
