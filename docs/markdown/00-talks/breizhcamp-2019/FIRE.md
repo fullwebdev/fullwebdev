@@ -10,7 +10,7 @@
 ![purple w-300](./assets/images/engaging_icon.png)
 
 <p>
-<span class="center">PRPL<br>Pattern<br><br>prpl-server v1<br>20 Fev 2019</span>
+<span class="center">PRPL<br>Pattern<br><br>prpl-server v1.4<br>8 Janv 2019</span>
 <span class="center">In the<br>"store" ? 🤔<br><br>TWA<br>5 Fev 2019</span>
 <span class="center">SW <br>& Window<br><br>Workbox v4<br>27 Fev 2019</span>
 <span class="center">Sign in<br>w/o any friction<br><br>WebAuthn<br>4 Mars 2019</span>
