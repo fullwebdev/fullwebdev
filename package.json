@@ -1,35 +1,13 @@
 {
-  "name": "@sfeir/school-pwa200",
-  "version": "2.0.0-rc.1",
-  "description": "Exercices and demos for the PWA SFEIR School",
-  "contributors": [
-    {
-      "name": "Florian Orpelière",
-      "email": "florian.orpeliere@gmail.com"
-    },
-    {
-      "name": "Wassim Chegham",
-      "email": "github@wassimchegham.com"
-    },
-    {
-      "name": "Jean-Francois Garreau",
-      "email": "jean.francois.garreau@gmail.com"
-    },
-    {
-      "name": "Noël Macé",
-      "email": "contact@noelmace.com"
-    },
-    {
-      "name": "Cyril Balit",
-      "email": "balit.c@sfeir.com"
-    }
-  ],
+  "name": "web-on-fire",
+  "version": "0.1.0",
+  "description": "Exercices and demos for my Web on F.I.R.E. talks",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sfeir/pwa-200.git"
+    "url": "git+https://github.com/noelmace/web-on-fire.git"
   },
   "keywords": [
-    "PWA, service worker, vanillajs, materials"
+    "PWA, service worker, vanillajs"
   ],
   "scripts": {
     "step": "webpack-dev-server --step-$npm_config_step",
@@ -45,9 +23,9 @@
     "prettify": "prettier --write ./**/*.{json,html,css,scss,md,js,ts}"
   },
   "bugs": {
-    "url": "https://github.com/Sfeir/pwa-200/issues"
+    "url": "https://github.com/noelmace/web-on-fire/issues"
   },
-  "homepage": "https://github.com/Sfeir/pwa-200#readme",
+  "homepage": "https://github.com/noelmace/web-on-fire#readme",
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.2.7",
     "cors": "^2.8.5",
