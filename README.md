@@ -14,7 +14,7 @@
 
 All docs & slides are availables at:
 
-> **noelmace.github.io/web-on-fire**
+> **[fire.noelmace.com](http://fire.noelmace.com)**
 
 ## Light it up!
 
