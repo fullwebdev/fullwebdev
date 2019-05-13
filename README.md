@@ -16,8 +16,6 @@ All docs & slides are availables at:
 
 > **noelmace.github.io/web-on-fire**
 
-:construction: _These aren't modern, progressive web apps, as they was quickly made with RevealJS without any build system ... sorry for that, I'm working on it._
-
 ## Light it up!
 
 ### Demo App
