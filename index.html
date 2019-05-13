@@ -14,31 +14,69 @@
       body {
         text-align: center;
         background-color: #000;
-        padding-top: 3em;
+        color: #fff;
       }
 
-      a {
-        color: #000;
-        text-decoration: none;
+      header {
+        margin-bottom: 3em;
+      }
+
+      header .title {
+        font-size: 50px;
+        font-weight: bold;
+      }
+
+      header .subtitle {
+        font-size: 20px;
+        font-style: italic;
       }
 
       .logo {
-        position: relative;
-        width: 500px;
-        max-width: 500px;
+        max-width: calc(90vw - 3em);
       }
 
-      .breizhcamp {
-        display: inline-block;
-        background-color: #fff;
-        padding: 2em;
+      .logo.bow {
+        height: 150px;
+      }
+
+      .logo.breizhcamp {
+        height: 100px;
+      }
+
+      .block {
+        color: #000;
         border-radius: 20px;
-        margin-bottom: 0;
+        background-color: #fff;
+        font-weight: 800;
+        font-size: 30px;
+        flex: 1 1 0;
+        margin: 0.5em;
+        padding: 1em;
+      }
+
+      .block > * {
+        margin: 0.5em 0;
       }
 
       .block a {
-        font-weight: 800;
-        font-size: 50px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .date {
+        font-weight: normal;
+        font-size: 20px;
+        margin-bottom: 2em;
+      }
+
+      .talks {
+        display: flex;
+        flex-basis: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        align-content: space-around;
       }
 
       .github-corner:hover .octo-arm {
@@ -70,7 +108,7 @@
   </head>
 
   <body>
-    <a href="https://github.com/noelmace/web-on-fire" class="github-corner" aria-label="View source on GitHub">
+    <a href="https://github.com/noelmace/web-on-fire" target="_blank" class="github-corner" aria-label="View source on GitHub">
       <svg
         width="80"
         height="80"
@@ -92,12 +130,32 @@
         ></path>
       </svg>
     </a>
-    <div class="block breizhcamp">
-      <a href="./breizhcamp-2019.html">
-        <img src="./assets/images/logo-breizhcamp.png" class="logo breizhcamp-logo" alt="breizhcamp" />
-        <div>Université</div>
-        <div>🔥 F.I.R.E. 🔥</div>
-      </a>
+    <header>
+      <div class="title">The Web is on F.I.R.E. !!!</div>
+      <div class="subtitle">
+        Learn Web's Modern Capabilities with <a href="https://twitter.com/noel_mace" target="_blank">Noël Macé</a>!
+      </div>
+    </header>
+    <h1>2019</h1>
+    <div class="talks">
+      <div class="block bow">
+        <div class="date">2019-06-07</div>
+        <div>PRPL: it's time to join this fantastic four!</div>
+        <img src="./assets/images/logos/bow.png" class="logo bow" alt="Best of Web" />
+        <a href="http://bestofweb.paris/" target="_blank">Best of Web</a>
+      </div>
+      <div class="block bow">
+        <div class="date">2019-06-06</div>
+        <div>Workshop</div>
+        <img src="./assets/images/logos/bow.png" class="logo bow" alt="Best of Web" />
+        <a href="http://bestofweb.paris/" target="_blank">Best of Web</a>
+      </div>
+      <div class="block">
+        <div class="date">2019-03-20</div>
+        <a href="./breizhcamp-2019.html">Université</a>
+        <a href="https://www.breizhcamp.org/" target="_blank"><img src="./assets/images/logo-breizhcamp.png" class="logo breizhcamp" alt="breizhcamp" /></a>
+        <a href="https://youtu.be/OQ-dr-7pLaA" target="_blank">A revoir sur Youtube!</a>
+      </div>
     </div>
   </body>
 </html>
