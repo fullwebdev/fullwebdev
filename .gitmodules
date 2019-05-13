@@ -1,0 +1,3 @@
+[submodule "new-docs"]
+	path = docs
+	url = https://github.com/noelmace/web-on-fire-docs.git
