@@ -10,7 +10,6 @@ var cacheAppShellStatic = [
   '/img/bg_left.png',
   '/img/bg_right.png',
   '/img/cat.jpg',
-  '/img/logo-sfeir.svg',
   '/img/offline.jpg',
   '/img/search.svg',
   '/mdl/material.min.css',

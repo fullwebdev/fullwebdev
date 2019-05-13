@@ -2,7 +2,7 @@
 
 exports.peoples = [
   {
-    email: 'hogandickerson@sfeir.com',
+    email: 'hogandickerson@acme.com',
     lastname: 'Powers',
     firstname: 'Black',
     gender: 'male',
@@ -14,7 +14,7 @@ exports.peoples = [
     linkedin: 'qui',
     url: 'ex',
     contactInfoPro: {
-      mail: 'blackpowers@sfeir.com',
+      mail: 'blackpowers@acme.com',
       fixedPhone: '+33182449424',
       mobilePhone: '+33684850125',
       street: '220 Ide Court',
@@ -23,7 +23,7 @@ exports.peoples = [
     },
     functionName: 'Mcpherson',
     functionDescription: 'Wendi',
-    entity: 'Sfeir-Paris',
+    entity: 'Acme-Paris',
     currentClient: 'Adeo',
     workcity: 'Luxembourg',
     workCoords: {
@@ -38,7 +38,7 @@ exports.peoples = [
     birthDate: '11/12/2001',
     socialNumber: '4785882151',
     contactInfoPerso: {
-      mail: 'wendipowers@sfeir.com',
+      mail: 'wendipowers@acme.com',
       fixedPhone: '+33197859629',
       mobilePhone: '+33682956737',
       street: '789 Nolans Lane',
@@ -62,7 +62,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'luannpowers@sfeir.com',
+    email: 'luannpowers@acme.com',
     lastname: 'Shaffer',
     firstname: 'Vargas',
     gender: 'male',
@@ -74,7 +74,7 @@ exports.peoples = [
     linkedin: 'enim',
     url: 'do',
     contactInfoPro: {
-      mail: 'vargasshaffer@sfeir.com',
+      mail: 'vargasshaffer@acme.com',
       fixedPhone: '+33197542822',
       mobilePhone: '+33688258827',
       street: '108 Covert Street',
@@ -83,7 +83,7 @@ exports.peoples = [
     },
     functionName: 'Greta',
     functionDescription: 'Teresa',
-    entity: 'Sfeir-Nantes',
+    entity: 'Acme-Nantes',
     currentClient: 'Adeo',
     workcity: 'Nantes',
     workCoords: {
@@ -98,7 +98,7 @@ exports.peoples = [
     birthDate: '17/10/2008',
     socialNumber: '16499299613',
     contactInfoPerso: {
-      mail: 'teresashaffer@sfeir.com',
+      mail: 'teresashaffer@acme.com',
       fixedPhone: '+33180943636',
       mobilePhone: '+33684757129',
       street: '949 Montgomery Street',
@@ -122,7 +122,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'sofiashaffer@sfeir.com',
+    email: 'sofiashaffer@acme.com',
     lastname: 'Yang',
     firstname: 'Mendez',
     gender: 'male',
@@ -134,7 +134,7 @@ exports.peoples = [
     linkedin: 'qui',
     url: 'git',
     contactInfoPro: {
-      mail: 'mendezyang@sfeir.com',
+      mail: 'mendezyang@acme.com',
       fixedPhone: '+33186156125',
       mobilePhone: '+33685949922',
       street: '718 Billings Place',
@@ -143,7 +143,7 @@ exports.peoples = [
     },
     functionName: 'Pugh',
     functionDescription: 'Roy',
-    entity: 'Sfeir-Nantes',
+    entity: 'Acme-Nantes',
     currentClient: 'Adeo',
     workcity: 'Nantes',
     workCoords: {
@@ -158,7 +158,7 @@ exports.peoples = [
     birthDate: '30/09/2010',
     socialNumber: '9527509429',
     contactInfoPerso: {
-      mail: 'royyang@sfeir.com',
+      mail: 'royyang@acme.com',
       fixedPhone: '+33180859936',
       mobilePhone: '+33694150833',
       street: '765 Bokee Court',
@@ -182,7 +182,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'marisayang@sfeir.com',
+    email: 'marisayang@acme.com',
     lastname: 'Kelly',
     firstname: 'Rodgers',
     gender: 'male',
@@ -194,7 +194,7 @@ exports.peoples = [
     linkedin: 'JavaScript',
     url: 'duis',
     contactInfoPro: {
-      mail: 'rodgerskelly@sfeir.com',
+      mail: 'rodgerskelly@acme.com',
       fixedPhone: '+33182846234',
       mobilePhone: '+33695454827',
       street: '458 Little Street',
@@ -203,7 +203,7 @@ exports.peoples = [
     },
     functionName: 'Clarice',
     functionDescription: 'Paige',
-    entity: 'Sfeir-Nantes',
+    entity: 'Acme-Nantes',
     currentClient: 'Sanofi',
     workcity: 'Nantes',
     workCoords: {
@@ -218,7 +218,7 @@ exports.peoples = [
     birthDate: '13/08/2003',
     socialNumber: '16786202449',
     contactInfoPerso: {
-      mail: 'paigekelly@sfeir.com',
+      mail: 'paigekelly@acme.com',
       fixedPhone: '+33183740931',
       mobilePhone: '+33695152736',
       street: '638 Jardine Place',
@@ -242,7 +242,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'penelopekelly@sfeir.com',
+    email: 'penelopekelly@acme.com',
     lastname: 'Alford',
     firstname: 'Misty',
     gender: 'female',
@@ -254,7 +254,7 @@ exports.peoples = [
     linkedin: 'amet',
     url: 'in',
     contactInfoPro: {
-      mail: 'mistyalford@sfeir.com',
+      mail: 'mistyalford@acme.com',
       fixedPhone: '+33181359229',
       mobilePhone: '+33691454335',
       street: '143 Moore Street',
@@ -263,7 +263,7 @@ exports.peoples = [
     },
     functionName: 'Kent',
     functionDescription: 'Lancaster',
-    entity: 'Sfeir-Lille',
+    entity: 'Acme-Lille',
     currentClient: 'Generali',
     workcity: 'Luxembourg',
     workCoords: {
@@ -278,7 +278,7 @@ exports.peoples = [
     birthDate: '23/06/2013',
     socialNumber: '6592428004',
     contactInfoPerso: {
-      mail: 'lancasteralford@sfeir.com',
+      mail: 'lancasteralford@acme.com',
       fixedPhone: '+33191353833',
       mobilePhone: '+33685643823',
       street: '326 Brighton Avenue',
@@ -302,7 +302,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'sheppardalford@sfeir.com',
+    email: 'sheppardalford@acme.com',
     lastname: 'Dixon',
     firstname: 'Franks',
     gender: 'male',
@@ -314,7 +314,7 @@ exports.peoples = [
     linkedin: 'fugiat',
     url: 'adipisicing',
     contactInfoPro: {
-      mail: 'franksdixon@sfeir.com',
+      mail: 'franksdixon@acme.com',
       fixedPhone: '+33187152429',
       mobilePhone: '+33695747931',
       street: '527 Independence Avenue',
@@ -323,7 +323,7 @@ exports.peoples = [
     },
     functionName: 'Walters',
     functionDescription: 'Charlotte',
-    entity: 'Sfeir-Nantes',
+    entity: 'Acme-Nantes',
     currentClient: 'Adeo',
     workcity: 'Nantes',
     workCoords: {
@@ -338,7 +338,7 @@ exports.peoples = [
     birthDate: '03/12/2009',
     socialNumber: '10176756867',
     contactInfoPerso: {
-      mail: 'charlottedixon@sfeir.com',
+      mail: 'charlottedixon@acme.com',
       fixedPhone: '+33194152421',
       mobilePhone: '+33680243523',
       street: '691 Bogart Street',
@@ -362,7 +362,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'gingerdixon@sfeir.com',
+    email: 'gingerdixon@acme.com',
     lastname: 'Kirby',
     firstname: 'Frederick',
     gender: 'male',
@@ -374,7 +374,7 @@ exports.peoples = [
     linkedin: 'JavaScript',
     url: 'amet',
     contactInfoPro: {
-      mail: 'frederickkirby@sfeir.com',
+      mail: 'frederickkirby@acme.com',
       fixedPhone: '+33196244333',
       mobilePhone: '+33694549827',
       street: '677 Grand Street',
@@ -383,7 +383,7 @@ exports.peoples = [
     },
     functionName: 'Susie',
     functionDescription: 'Obrien',
-    entity: 'Sfeir-Lille',
+    entity: 'Acme-Lille',
     currentClient: 'Generali',
     workcity: 'Paris',
     workCoords: {
@@ -398,7 +398,7 @@ exports.peoples = [
     birthDate: '03/04/2012',
     socialNumber: '7854914196',
     contactInfoPerso: {
-      mail: 'obrienkirby@sfeir.com',
+      mail: 'obrienkirby@acme.com',
       fixedPhone: '+33181447537',
       mobilePhone: '+33688154732',
       street: '429 Grattan Street',
@@ -422,7 +422,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'oconnorkirby@sfeir.com',
+    email: 'oconnorkirby@acme.com',
     lastname: 'Wong',
     firstname: 'Kellie',
     gender: 'female',
@@ -434,7 +434,7 @@ exports.peoples = [
     linkedin: 'dolore',
     url: 'fugiat',
     contactInfoPro: {
-      mail: 'kelliewong@sfeir.com',
+      mail: 'kelliewong@acme.com',
       fixedPhone: '+33191745625',
       mobilePhone: '+33691249437',
       street: '142 Heyward Street',
@@ -443,7 +443,7 @@ exports.peoples = [
     },
     functionName: 'Greene',
     functionDescription: 'Shirley',
-    entity: 'Sfeir-Est',
+    entity: 'Acme-Est',
     currentClient: 'Sanofi',
     workcity: 'Paris',
     workCoords: {
@@ -458,7 +458,7 @@ exports.peoples = [
     birthDate: '30/09/2001',
     socialNumber: '3193874425',
     contactInfoPerso: {
-      mail: 'shirleywong@sfeir.com',
+      mail: 'shirleywong@acme.com',
       fixedPhone: '+33197843737',
       mobilePhone: '+33689550328',
       street: '424 Gatling Place',
@@ -482,7 +482,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'pearliewong@sfeir.com',
+    email: 'pearliewong@acme.com',
     lastname: 'Weiss',
     firstname: 'Tasha',
     gender: 'female',
@@ -494,7 +494,7 @@ exports.peoples = [
     linkedin: 'git',
     url: 'mollit',
     contactInfoPro: {
-      mail: 'tashaweiss@sfeir.com',
+      mail: 'tashaweiss@acme.com',
       fixedPhone: '+33192859131',
       mobilePhone: '+33695050633',
       street: '381 Bowne Street',
@@ -503,7 +503,7 @@ exports.peoples = [
     },
     functionName: 'Larson',
     functionDescription: 'Lilly',
-    entity: 'Sfeir-Est',
+    entity: 'Acme-Est',
     currentClient: 'Generali',
     workcity: 'Lille',
     workCoords: {
@@ -518,7 +518,7 @@ exports.peoples = [
     birthDate: '29/08/2014',
     socialNumber: '10904542270',
     contactInfoPerso: {
-      mail: 'lillyweiss@sfeir.com',
+      mail: 'lillyweiss@acme.com',
       fixedPhone: '+33199058930',
       mobilePhone: '+33687043335',
       street: '523 Seton Place',
@@ -542,7 +542,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'lelaweiss@sfeir.com',
+    email: 'lelaweiss@acme.com',
     lastname: 'Buckley',
     firstname: 'Davidson',
     gender: 'male',
@@ -554,7 +554,7 @@ exports.peoples = [
     linkedin: 'ea',
     url: 'sunt',
     contactInfoPro: {
-      mail: 'davidsonbuckley@sfeir.com',
+      mail: 'davidsonbuckley@acme.com',
       fixedPhone: '+33189259029',
       mobilePhone: '+33683648521',
       street: '567 Thomas Street',
@@ -563,7 +563,7 @@ exports.peoples = [
     },
     functionName: 'Lula',
     functionDescription: 'Massey',
-    entity: 'Sfeir-Luxembourg',
+    entity: 'Acme-Luxembourg',
     currentClient: 'Sanofi',
     workcity: 'Strasbourg',
     workCoords: {
@@ -578,7 +578,7 @@ exports.peoples = [
     birthDate: '25/11/2007',
     socialNumber: '4204274692',
     contactInfoPerso: {
-      mail: 'masseybuckley@sfeir.com',
+      mail: 'masseybuckley@acme.com',
       fixedPhone: '+33194556032',
       mobilePhone: '+33695454439',
       street: '946 Fenimore Street',
@@ -602,7 +602,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'mariebuckley@sfeir.com',
+    email: 'mariebuckley@acme.com',
     lastname: 'Walsh',
     firstname: 'Dalton',
     gender: 'male',
@@ -614,7 +614,7 @@ exports.peoples = [
     linkedin: 'elit',
     url: 'enim',
     contactInfoPro: {
-      mail: 'daltonwalsh@sfeir.com',
+      mail: 'daltonwalsh@acme.com',
       fixedPhone: '+33199345835',
       mobilePhone: '+33685745633',
       street: '545 Preston Court',
@@ -623,7 +623,7 @@ exports.peoples = [
     },
     functionName: 'Simmons',
     functionDescription: 'Norma',
-    entity: 'Sfeir-Luxembourg',
+    entity: 'Acme-Luxembourg',
     currentClient: 'Adeo',
     workcity: 'Strasbourg',
     workCoords: {
@@ -638,7 +638,7 @@ exports.peoples = [
     birthDate: '22/01/2006',
     socialNumber: '5268805734',
     contactInfoPerso: {
-      mail: 'normawalsh@sfeir.com',
+      mail: 'normawalsh@acme.com',
       fixedPhone: '+33187243935',
       mobilePhone: '+33685655723',
       street: '812 Monroe Street',
@@ -662,7 +662,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'kennedywalsh@sfeir.com',
+    email: 'kennedywalsh@acme.com',
     lastname: 'Hamilton',
     firstname: 'Toni',
     gender: 'female',
@@ -674,7 +674,7 @@ exports.peoples = [
     linkedin: 'do',
     url: 'est',
     contactInfoPro: {
-      mail: 'tonihamilton@sfeir.com',
+      mail: 'tonihamilton@acme.com',
       fixedPhone: '+33189740139',
       mobilePhone: '+33698259436',
       street: '415 Engert Avenue',
@@ -683,7 +683,7 @@ exports.peoples = [
     },
     functionName: 'Francis',
     functionDescription: 'Maude',
-    entity: 'Sfeir-Nantes',
+    entity: 'Acme-Nantes',
     currentClient: 'Adeo',
     workcity: 'Nantes',
     workCoords: {
@@ -698,7 +698,7 @@ exports.peoples = [
     birthDate: '14/06/2011',
     socialNumber: '9275039863',
     contactInfoPerso: {
-      mail: 'maudehamilton@sfeir.com',
+      mail: 'maudehamilton@acme.com',
       fixedPhone: '+33197351930',
       mobilePhone: '+33685855720',
       street: '368 Bartlett Street',
@@ -722,7 +722,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'jennahamilton@sfeir.com',
+    email: 'jennahamilton@acme.com',
     lastname: 'Mcintyre',
     firstname: 'Celeste',
     gender: 'female',
@@ -734,7 +734,7 @@ exports.peoples = [
     linkedin: 'do',
     url: 'duis',
     contactInfoPro: {
-      mail: 'celestemcintyre@sfeir.com',
+      mail: 'celestemcintyre@acme.com',
       fixedPhone: '+33192240020',
       mobilePhone: '+33690055837',
       street: '978 Ocean Parkway',
@@ -743,7 +743,7 @@ exports.peoples = [
     },
     functionName: 'Brigitte',
     functionDescription: 'Edith',
-    entity: 'Sfeir-Lille',
+    entity: 'Acme-Lille',
     currentClient: 'Sanofi',
     workcity: 'Lille',
     workCoords: {
@@ -758,7 +758,7 @@ exports.peoples = [
     birthDate: '25/09/2003',
     socialNumber: '15749101628',
     contactInfoPerso: {
-      mail: 'edithmcintyre@sfeir.com',
+      mail: 'edithmcintyre@acme.com',
       fixedPhone: '+33189548228',
       mobilePhone: '+33687658136',
       street: '373 Rochester Avenue',
@@ -782,7 +782,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'lessiemcintyre@sfeir.com',
+    email: 'lessiemcintyre@acme.com',
     lastname: 'Calhoun',
     firstname: 'Wilcox',
     gender: 'male',
@@ -794,7 +794,7 @@ exports.peoples = [
     linkedin: 'esse',
     url: 'excepteur',
     contactInfoPro: {
-      mail: 'wilcoxcalhoun@sfeir.com',
+      mail: 'wilcoxcalhoun@acme.com',
       fixedPhone: '+33189746425',
       mobilePhone: '+33696641032',
       street: '235 Kensington Street',
@@ -803,7 +803,7 @@ exports.peoples = [
     },
     functionName: 'Oneal',
     functionDescription: 'Stefanie',
-    entity: 'Sfeir-Est',
+    entity: 'Acme-Est',
     currentClient: 'Generali',
     workcity: 'Lille',
     workCoords: {
@@ -818,7 +818,7 @@ exports.peoples = [
     birthDate: '29/06/2009',
     socialNumber: '5122752902',
     contactInfoPerso: {
-      mail: 'stefaniecalhoun@sfeir.com',
+      mail: 'stefaniecalhoun@acme.com',
       fixedPhone: '+33182548434',
       mobilePhone: '+33693959437',
       street: '193 Union Street',
@@ -842,7 +842,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'marshacalhoun@sfeir.com',
+    email: 'marshacalhoun@acme.com',
     lastname: 'Knapp',
     firstname: 'Rosario',
     gender: 'female',
@@ -854,7 +854,7 @@ exports.peoples = [
     linkedin: 'quis',
     url: 'anim',
     contactInfoPro: {
-      mail: 'rosarioknapp@sfeir.com',
+      mail: 'rosarioknapp@acme.com',
       fixedPhone: '+33193157837',
       mobilePhone: '+33685358230',
       street: '174 Seaview Avenue',
@@ -863,7 +863,7 @@ exports.peoples = [
     },
     functionName: 'Leblanc',
     functionDescription: 'Mosley',
-    entity: 'Sfeir-Nantes',
+    entity: 'Acme-Nantes',
     currentClient: 'Sanofi',
     workcity: 'Nantes',
     workCoords: {
@@ -878,7 +878,7 @@ exports.peoples = [
     birthDate: '18/09/2005',
     socialNumber: '9963575055',
     contactInfoPerso: {
-      mail: 'mosleyknapp@sfeir.com',
+      mail: 'mosleyknapp@acme.com',
       fixedPhone: '+33186044123',
       mobilePhone: '+33698243927',
       street: '211 River Street',
@@ -902,7 +902,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'briggsknapp@sfeir.com',
+    email: 'briggsknapp@acme.com',
     lastname: 'Sparks',
     firstname: 'Aguirre',
     gender: 'male',
@@ -914,7 +914,7 @@ exports.peoples = [
     linkedin: 'esse',
     url: 'ex',
     contactInfoPro: {
-      mail: 'aguirresparks@sfeir.com',
+      mail: 'aguirresparks@acme.com',
       fixedPhone: '+33187844426',
       mobilePhone: '+33699650539',
       street: '585 Just Court',
@@ -923,7 +923,7 @@ exports.peoples = [
     },
     functionName: 'Decker',
     functionDescription: 'Allie',
-    entity: 'Sfeir-Nantes',
+    entity: 'Acme-Nantes',
     currentClient: 'Generali',
     workcity: 'Nantes',
     workCoords: {
@@ -938,7 +938,7 @@ exports.peoples = [
     birthDate: '27/12/2010',
     socialNumber: '13145851920',
     contactInfoPerso: {
-      mail: 'alliesparks@sfeir.com',
+      mail: 'alliesparks@acme.com',
       fixedPhone: '+33193650132',
       mobilePhone: '+33698640530',
       street: '274 Fairview Place',
@@ -962,7 +962,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'josiesparks@sfeir.com',
+    email: 'josiesparks@acme.com',
     lastname: 'Little',
     firstname: 'Benita',
     gender: 'female',
@@ -974,7 +974,7 @@ exports.peoples = [
     linkedin: 'anim',
     url: 'proident',
     contactInfoPro: {
-      mail: 'benitalittle@sfeir.com',
+      mail: 'benitalittle@acme.com',
       fixedPhone: '+33183252635',
       mobilePhone: '+33683657625',
       street: '611 Columbus Place',
@@ -983,7 +983,7 @@ exports.peoples = [
     },
     functionName: 'Greer',
     functionDescription: 'Lynne',
-    entity: 'Sfeir-Lille',
+    entity: 'Acme-Lille',
     currentClient: 'Sanofi',
     workcity: 'Paris',
     workCoords: {
@@ -998,7 +998,7 @@ exports.peoples = [
     birthDate: '09/11/2006',
     socialNumber: '14829745059',
     contactInfoPerso: {
-      mail: 'lynnelittle@sfeir.com',
+      mail: 'lynnelittle@acme.com',
       fixedPhone: '+33183859432',
       mobilePhone: '+33681856639',
       street: '583 Ralph Avenue',
@@ -1022,7 +1022,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'mannlittle@sfeir.com',
+    email: 'mannlittle@acme.com',
     lastname: 'Mays',
     firstname: 'Lucy',
     gender: 'female',
@@ -1034,7 +1034,7 @@ exports.peoples = [
     linkedin: 'culpa',
     url: 'fugiat',
     contactInfoPro: {
-      mail: 'lucymays@sfeir.com',
+      mail: 'lucymays@acme.com',
       fixedPhone: '+33193643925',
       mobilePhone: '+33696148836',
       street: '649 Varanda Place',
@@ -1043,7 +1043,7 @@ exports.peoples = [
     },
     functionName: 'Dorothea',
     functionDescription: 'Higgins',
-    entity: 'Sfeir-Luxembourg',
+    entity: 'Acme-Luxembourg',
     currentClient: 'Sanofi',
     workcity: 'Paris',
     workCoords: {
@@ -1058,7 +1058,7 @@ exports.peoples = [
     birthDate: '15/09/2013',
     socialNumber: '12194744430',
     contactInfoPerso: {
-      mail: 'higginsmays@sfeir.com',
+      mail: 'higginsmays@acme.com',
       fixedPhone: '+33180148328',
       mobilePhone: '+33698655620',
       street: '409 Royce Street',
@@ -1082,7 +1082,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'jewellmays@sfeir.com',
+    email: 'jewellmays@acme.com',
     lastname: 'Nash',
     firstname: 'Maribel',
     gender: 'female',
@@ -1094,7 +1094,7 @@ exports.peoples = [
     linkedin: 'et',
     url: 'officia',
     contactInfoPro: {
-      mail: 'maribelnash@sfeir.com',
+      mail: 'maribelnash@acme.com',
       fixedPhone: '+33186654225',
       mobilePhone: '+33692350026',
       street: '844 Nelson Street',
@@ -1103,7 +1103,7 @@ exports.peoples = [
     },
     functionName: 'Finley',
     functionDescription: 'Hodge',
-    entity: 'Sfeir-Paris',
+    entity: 'Acme-Paris',
     currentClient: 'Adeo',
     workcity: 'Strasbourg',
     workCoords: {
@@ -1118,7 +1118,7 @@ exports.peoples = [
     birthDate: '31/12/2003',
     socialNumber: '13635038970',
     contactInfoPerso: {
-      mail: 'hodgenash@sfeir.com',
+      mail: 'hodgenash@acme.com',
       fixedPhone: '+33180442526',
       mobilePhone: '+33683441038',
       street: '873 Rutland Road',
@@ -1142,7 +1142,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'loisnash@sfeir.com',
+    email: 'loisnash@acme.com',
     lastname: 'Romero',
     firstname: 'Suzanne',
     gender: 'female',
@@ -1154,7 +1154,7 @@ exports.peoples = [
     linkedin: 'nulla',
     url: 'AngularJS',
     contactInfoPro: {
-      mail: 'suzanneromero@sfeir.com',
+      mail: 'suzanneromero@acme.com',
       fixedPhone: '+33194854739',
       mobilePhone: '+33695946836',
       street: '343 India Street',
@@ -1163,7 +1163,7 @@ exports.peoples = [
     },
     functionName: 'Long',
     functionDescription: 'Dunlap',
-    entity: 'Sfeir-Paris',
+    entity: 'Acme-Paris',
     currentClient: 'Generali',
     workcity: 'Strasbourg',
     workCoords: {
@@ -1178,7 +1178,7 @@ exports.peoples = [
     birthDate: '26/07/2010',
     socialNumber: '6066273135',
     contactInfoPerso: {
-      mail: 'dunlapromero@sfeir.com',
+      mail: 'dunlapromero@acme.com',
       fixedPhone: '+33190046632',
       mobilePhone: '+33682642927',
       street: '211 Dearborn Court',
@@ -1202,7 +1202,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'ewingromero@sfeir.com',
+    email: 'ewingromero@acme.com',
     lastname: 'Franklin',
     firstname: 'Mcleod',
     gender: 'male',
@@ -1214,7 +1214,7 @@ exports.peoples = [
     linkedin: 'pariatur',
     url: 'ea',
     contactInfoPro: {
-      mail: 'mcleodfranklin@sfeir.com',
+      mail: 'mcleodfranklin@acme.com',
       fixedPhone: '+33184443228',
       mobilePhone: '+33689748437',
       street: '357 Bergen Street',
@@ -1223,7 +1223,7 @@ exports.peoples = [
     },
     functionName: 'Gray',
     functionDescription: 'Vicki',
-    entity: 'Sfeir-Nantes',
+    entity: 'Acme-Nantes',
     currentClient: 'Generali',
     workcity: 'Nantes',
     workCoords: {
@@ -1238,7 +1238,7 @@ exports.peoples = [
     birthDate: '12/06/2010',
     socialNumber: '12894801054',
     contactInfoPerso: {
-      mail: 'vickifranklin@sfeir.com',
+      mail: 'vickifranklin@acme.com',
       fixedPhone: '+33193957032',
       mobilePhone: '+33682946735',
       street: '444 Fuller Place',
@@ -1262,7 +1262,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'morsefranklin@sfeir.com',
+    email: 'morsefranklin@acme.com',
     lastname: 'Middleton',
     firstname: 'Rita',
     gender: 'female',
@@ -1274,7 +1274,7 @@ exports.peoples = [
     linkedin: 'culpa',
     url: 'laborum',
     contactInfoPro: {
-      mail: 'ritamiddleton@sfeir.com',
+      mail: 'ritamiddleton@acme.com',
       fixedPhone: '+33182850832',
       mobilePhone: '+33697754525',
       street: '789 Waldane Court',
@@ -1283,7 +1283,7 @@ exports.peoples = [
     },
     functionName: 'Tisha',
     functionDescription: 'Figueroa',
-    entity: 'Sfeir-Luxembourg',
+    entity: 'Acme-Luxembourg',
     currentClient: 'Sanofi',
     workcity: 'Paris',
     workCoords: {
@@ -1298,7 +1298,7 @@ exports.peoples = [
     birthDate: '26/01/2003',
     socialNumber: '3091430665',
     contactInfoPerso: {
-      mail: 'figueroamiddleton@sfeir.com',
+      mail: 'figueroamiddleton@acme.com',
       fixedPhone: '+33197453827',
       mobilePhone: '+33697656922',
       street: '902 Neptune Court',
@@ -1322,7 +1322,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'marianmiddleton@sfeir.com',
+    email: 'marianmiddleton@acme.com',
     lastname: 'Burks',
     firstname: 'Benson',
     gender: 'male',
@@ -1334,7 +1334,7 @@ exports.peoples = [
     linkedin: 'irure',
     url: 'aliqua',
     contactInfoPro: {
-      mail: 'bensonburks@sfeir.com',
+      mail: 'bensonburks@acme.com',
       fixedPhone: '+33198350534',
       mobilePhone: '+33699649228',
       street: '929 Desmond Court',
@@ -1343,7 +1343,7 @@ exports.peoples = [
     },
     functionName: 'Patrick',
     functionDescription: 'Martinez',
-    entity: 'Sfeir-Lille',
+    entity: 'Acme-Lille',
     currentClient: 'Adeo',
     workcity: 'Paris',
     workCoords: {
@@ -1358,7 +1358,7 @@ exports.peoples = [
     birthDate: '18/11/2011',
     socialNumber: '11949750189',
     contactInfoPerso: {
-      mail: 'martinezburks@sfeir.com',
+      mail: 'martinezburks@acme.com',
       fixedPhone: '+33185946627',
       mobilePhone: '+33689956823',
       street: '118 Calder Place',
@@ -1382,7 +1382,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'peggyburks@sfeir.com',
+    email: 'peggyburks@acme.com',
     lastname: 'Powell',
     firstname: 'Joni',
     gender: 'female',
@@ -1394,7 +1394,7 @@ exports.peoples = [
     linkedin: 'nisi',
     url: 'occaecat',
     contactInfoPro: {
-      mail: 'jonipowell@sfeir.com',
+      mail: 'jonipowell@acme.com',
       fixedPhone: '+33193657029',
       mobilePhone: '+33686258626',
       street: '461 Furman Avenue',
@@ -1403,7 +1403,7 @@ exports.peoples = [
     },
     functionName: 'Janis',
     functionDescription: 'Little',
-    entity: 'Sfeir-Lille',
+    entity: 'Acme-Lille',
     currentClient: 'Sanofi',
     workcity: 'Luxembourg',
     workCoords: {
@@ -1418,7 +1418,7 @@ exports.peoples = [
     birthDate: '01/08/2003',
     socialNumber: '6221502209',
     contactInfoPerso: {
-      mail: 'littlepowell@sfeir.com',
+      mail: 'littlepowell@acme.com',
       fixedPhone: '+33180359123',
       mobilePhone: '+33697745725',
       street: '952 Nassau Avenue',
@@ -1442,7 +1442,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'donaldsonpowell@sfeir.com',
+    email: 'donaldsonpowell@acme.com',
     lastname: 'Duran',
     firstname: 'Eaton',
     gender: 'male',
@@ -1454,7 +1454,7 @@ exports.peoples = [
     linkedin: 'elit',
     url: 'id',
     contactInfoPro: {
-      mail: 'eatonduran@sfeir.com',
+      mail: 'eatonduran@acme.com',
       fixedPhone: '+33199141430',
       mobilePhone: '+33699848328',
       street: '154 Chester Avenue',
@@ -1463,7 +1463,7 @@ exports.peoples = [
     },
     functionName: 'Jessica',
     functionDescription: 'Osborn',
-    entity: 'Sfeir-Nantes',
+    entity: 'Acme-Nantes',
     currentClient: 'Sanofi',
     workcity: 'Nantes',
     workCoords: {
@@ -1478,7 +1478,7 @@ exports.peoples = [
     birthDate: '26/02/2009',
     socialNumber: '14879200058',
     contactInfoPerso: {
-      mail: 'osbornduran@sfeir.com',
+      mail: 'osbornduran@acme.com',
       fixedPhone: '+33199257431',
       mobilePhone: '+33699055321',
       street: '276 Luquer Street',
@@ -1502,7 +1502,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'beasleyduran@sfeir.com',
+    email: 'beasleyduran@acme.com',
     lastname: 'Delgado',
     firstname: 'Morgan',
     gender: 'female',
@@ -1514,7 +1514,7 @@ exports.peoples = [
     linkedin: 'elit',
     url: 'ullamco',
     contactInfoPro: {
-      mail: 'morgandelgado@sfeir.com',
+      mail: 'morgandelgado@acme.com',
       fixedPhone: '+33199041631',
       mobilePhone: '+33699741226',
       street: '650 Garfield Place',
@@ -1523,7 +1523,7 @@ exports.peoples = [
     },
     functionName: 'Millie',
     functionDescription: 'Clark',
-    entity: 'Sfeir-Lille',
+    entity: 'Acme-Lille',
     currentClient: 'Adeo',
     workcity: 'Paris',
     workCoords: {
@@ -1538,7 +1538,7 @@ exports.peoples = [
     birthDate: '07/10/2007',
     socialNumber: '9542445500',
     contactInfoPerso: {
-      mail: 'clarkdelgado@sfeir.com',
+      mail: 'clarkdelgado@acme.com',
       fixedPhone: '+33198744424',
       mobilePhone: '+33696553628',
       street: '954 Ingraham Street',
@@ -1562,7 +1562,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'evangelinedelgado@sfeir.com',
+    email: 'evangelinedelgado@acme.com',
     lastname: 'Jefferson',
     firstname: 'Anita',
     gender: 'female',
@@ -1574,7 +1574,7 @@ exports.peoples = [
     linkedin: 'Java',
     url: 'labore',
     contactInfoPro: {
-      mail: 'anitajefferson@sfeir.com',
+      mail: 'anitajefferson@acme.com',
       fixedPhone: '+33199054224',
       mobilePhone: '+33686147936',
       street: '721 Ocean Avenue',
@@ -1583,7 +1583,7 @@ exports.peoples = [
     },
     functionName: 'Melva',
     functionDescription: 'Cathryn',
-    entity: 'Sfeir-Nantes',
+    entity: 'Acme-Nantes',
     currentClient: 'Adeo',
     workcity: 'Nantes',
     workCoords: {
@@ -1598,7 +1598,7 @@ exports.peoples = [
     birthDate: '17/01/2014',
     socialNumber: '11917961949',
     contactInfoPerso: {
-      mail: 'cathrynjefferson@sfeir.com',
+      mail: 'cathrynjefferson@acme.com',
       fixedPhone: '+33198947220',
       mobilePhone: '+33686351433',
       street: '218 College Place',
@@ -1622,7 +1622,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'earlenejefferson@sfeir.com',
+    email: 'earlenejefferson@acme.com',
     lastname: 'Mullins',
     firstname: 'Chrystal',
     gender: 'female',
@@ -1634,7 +1634,7 @@ exports.peoples = [
     linkedin: 'cillum',
     url: 'culpa',
     contactInfoPro: {
-      mail: 'chrystalmullins@sfeir.com',
+      mail: 'chrystalmullins@acme.com',
       fixedPhone: '+33198850538',
       mobilePhone: '+33685652737',
       street: '863 Dikeman Street',
@@ -1643,7 +1643,7 @@ exports.peoples = [
     },
     functionName: 'Melton',
     functionDescription: 'Gaines',
-    entity: 'Sfeir-Paris',
+    entity: 'Acme-Paris',
     currentClient: 'Sanofi',
     workcity: 'Paris',
     workCoords: {
@@ -1658,7 +1658,7 @@ exports.peoples = [
     birthDate: '16/06/2000',
     socialNumber: '7479137865',
     contactInfoPerso: {
-      mail: 'gainesmullins@sfeir.com',
+      mail: 'gainesmullins@acme.com',
       fixedPhone: '+33191755724',
       mobilePhone: '+33699254529',
       street: '511 Colin Place',
@@ -1682,7 +1682,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'merrittmullins@sfeir.com',
+    email: 'merrittmullins@acme.com',
     lastname: 'Bishop',
     firstname: 'Woodward',
     gender: 'male',
@@ -1694,7 +1694,7 @@ exports.peoples = [
     linkedin: 'anim',
     url: 'git',
     contactInfoPro: {
-      mail: 'woodwardbishop@sfeir.com',
+      mail: 'woodwardbishop@acme.com',
       fixedPhone: '+33181346931',
       mobilePhone: '+33695754039',
       street: '353 Hewes Street',
@@ -1703,7 +1703,7 @@ exports.peoples = [
     },
     functionName: 'Carrie',
     functionDescription: 'Heath',
-    entity: 'Sfeir-Est',
+    entity: 'Acme-Est',
     currentClient: 'Generali',
     workcity: 'Strasbourg',
     workCoords: {
@@ -1718,7 +1718,7 @@ exports.peoples = [
     birthDate: '14/01/2000',
     socialNumber: '8096292131',
     contactInfoPerso: {
-      mail: 'heathbishop@sfeir.com',
+      mail: 'heathbishop@acme.com',
       fixedPhone: '+33188152926',
       mobilePhone: '+33696858637',
       street: '660 Fillmore Avenue',
@@ -1742,7 +1742,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'mitzibishop@sfeir.com',
+    email: 'mitzibishop@acme.com',
     lastname: 'Burnett',
     firstname: 'Peck',
     gender: 'male',
@@ -1754,7 +1754,7 @@ exports.peoples = [
     linkedin: 'quis',
     url: 'adipisicing',
     contactInfoPro: {
-      mail: 'peckburnett@sfeir.com',
+      mail: 'peckburnett@acme.com',
       fixedPhone: '+33190744937',
       mobilePhone: '+33684258920',
       street: '626 Hamilton Walk',
@@ -1763,7 +1763,7 @@ exports.peoples = [
     },
     functionName: 'Holder',
     functionDescription: 'Cindy',
-    entity: 'Sfeir-Lille',
+    entity: 'Acme-Lille',
     currentClient: 'Sanofi',
     workcity: 'Luxembourg',
     workCoords: {
@@ -1778,7 +1778,7 @@ exports.peoples = [
     birthDate: '05/08/2000',
     socialNumber: '13199062662',
     contactInfoPerso: {
-      mail: 'cindyburnett@sfeir.com',
+      mail: 'cindyburnett@acme.com',
       fixedPhone: '+33192846828',
       mobilePhone: '+33694746430',
       street: '940 Bridgewater Street',
@@ -1802,7 +1802,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'caroleburnett@sfeir.com',
+    email: 'caroleburnett@acme.com',
     lastname: 'Park',
     firstname: 'Norman',
     gender: 'male',
@@ -1814,7 +1814,7 @@ exports.peoples = [
     linkedin: 'ex',
     url: 'id',
     contactInfoPro: {
-      mail: 'normanpark@sfeir.com',
+      mail: 'normanpark@acme.com',
       fixedPhone: '+33180352328',
       mobilePhone: '+33690252234',
       street: '950 Maujer Street',
@@ -1823,7 +1823,7 @@ exports.peoples = [
     },
     functionName: 'Keller',
     functionDescription: 'Sanders',
-    entity: 'Sfeir-Lille',
+    entity: 'Acme-Lille',
     currentClient: 'Adeo',
     workcity: 'Lille',
     workCoords: {
@@ -1838,7 +1838,7 @@ exports.peoples = [
     birthDate: '28/06/2003',
     socialNumber: '10279959827',
     contactInfoPerso: {
-      mail: 'sanderspark@sfeir.com',
+      mail: 'sanderspark@acme.com',
       fixedPhone: '+33194743925',
       mobilePhone: '+33694556937',
       street: '374 Sapphire Street',
@@ -1862,7 +1862,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'huntpark@sfeir.com',
+    email: 'huntpark@acme.com',
     lastname: 'Lewis',
     firstname: 'Rachelle',
     gender: 'female',
@@ -1874,7 +1874,7 @@ exports.peoples = [
     linkedin: 'in',
     url: 'occaecat',
     contactInfoPro: {
-      mail: 'rachellelewis@sfeir.com',
+      mail: 'rachellelewis@acme.com',
       fixedPhone: '+33194347629',
       mobilePhone: '+33690052137',
       street: '237 Ridgecrest Terrace',
@@ -1883,7 +1883,7 @@ exports.peoples = [
     },
     functionName: 'Jane',
     functionDescription: 'Head',
-    entity: 'Sfeir-Luxembourg',
+    entity: 'Acme-Luxembourg',
     currentClient: 'Sanofi',
     workcity: 'Luxembourg',
     workCoords: {
@@ -1898,7 +1898,7 @@ exports.peoples = [
     birthDate: '05/09/2001',
     socialNumber: '12082427498',
     contactInfoPerso: {
-      mail: 'headlewis@sfeir.com',
+      mail: 'headlewis@acme.com',
       fixedPhone: '+33192754626',
       mobilePhone: '+33682843333',
       street: '514 Highland Avenue',
@@ -1922,7 +1922,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'rebeccalewis@sfeir.com',
+    email: 'rebeccalewis@acme.com',
     lastname: 'Tillman',
     firstname: 'Wynn',
     gender: 'male',
@@ -1934,7 +1934,7 @@ exports.peoples = [
     linkedin: 'pariatur',
     url: 'in',
     contactInfoPro: {
-      mail: 'wynntillman@sfeir.com',
+      mail: 'wynntillman@acme.com',
       fixedPhone: '+33198840126',
       mobilePhone: '+33683958531',
       street: '618 Lee Avenue',
@@ -1943,7 +1943,7 @@ exports.peoples = [
     },
     functionName: 'Gamble',
     functionDescription: 'Muriel',
-    entity: 'Sfeir-Paris',
+    entity: 'Acme-Paris',
     currentClient: 'Adeo',
     workcity: 'Strasbourg',
     workCoords: {
@@ -1958,7 +1958,7 @@ exports.peoples = [
     birthDate: '09/03/2006',
     socialNumber: '10712128961',
     contactInfoPerso: {
-      mail: 'murieltillman@sfeir.com',
+      mail: 'murieltillman@acme.com',
       fixedPhone: '+33182250521',
       mobilePhone: '+33686943336',
       street: '758 McDonald Avenue',
@@ -1982,7 +1982,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'gibbstillman@sfeir.com',
+    email: 'gibbstillman@acme.com',
     lastname: 'Buchanan',
     firstname: 'Wyatt',
     gender: 'male',
@@ -1994,7 +1994,7 @@ exports.peoples = [
     linkedin: 'non',
     url: 'ES6',
     contactInfoPro: {
-      mail: 'wyattbuchanan@sfeir.com',
+      mail: 'wyattbuchanan@acme.com',
       fixedPhone: '+33199344331',
       mobilePhone: '+33697544224',
       street: '103 Ebony Court',
@@ -2003,7 +2003,7 @@ exports.peoples = [
     },
     functionName: 'Aida',
     functionDescription: 'Reid',
-    entity: 'Sfeir-Est',
+    entity: 'Acme-Est',
     currentClient: 'Generali',
     workcity: 'Strasbourg',
     workCoords: {
@@ -2018,7 +2018,7 @@ exports.peoples = [
     birthDate: '10/12/2014',
     socialNumber: '12094501908',
     contactInfoPerso: {
-      mail: 'reidbuchanan@sfeir.com',
+      mail: 'reidbuchanan@acme.com',
       fixedPhone: '+33183951336',
       mobilePhone: '+33682040933',
       street: '691 Middagh Street',
@@ -2042,7 +2042,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'ramonabuchanan@sfeir.com',
+    email: 'ramonabuchanan@acme.com',
     lastname: 'Carpenter',
     firstname: 'Corrine',
     gender: 'female',
@@ -2054,7 +2054,7 @@ exports.peoples = [
     linkedin: 'fugiat',
     url: 'enim',
     contactInfoPro: {
-      mail: 'corrinecarpenter@sfeir.com',
+      mail: 'corrinecarpenter@acme.com',
       fixedPhone: '+33180752939',
       mobilePhone: '+33688652924',
       street: '140 Dinsmore Place',
@@ -2063,7 +2063,7 @@ exports.peoples = [
     },
     functionName: 'Dana',
     functionDescription: 'Young',
-    entity: 'Sfeir-Lille',
+    entity: 'Acme-Lille',
     currentClient: 'Sanofi',
     workcity: 'Luxembourg',
     workCoords: {
@@ -2078,7 +2078,7 @@ exports.peoples = [
     birthDate: '15/01/2006',
     socialNumber: '8779501153',
     contactInfoPerso: {
-      mail: 'youngcarpenter@sfeir.com',
+      mail: 'youngcarpenter@acme.com',
       fixedPhone: '+33193150832',
       mobilePhone: '+33696155422',
       street: '844 Reed Street',
@@ -2102,7 +2102,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'haleycarpenter@sfeir.com',
+    email: 'haleycarpenter@acme.com',
     lastname: 'William',
     firstname: 'Dean',
     gender: 'male',
@@ -2114,7 +2114,7 @@ exports.peoples = [
     linkedin: 'ea',
     url: 'quis',
     contactInfoPro: {
-      mail: 'deanwilliam@sfeir.com',
+      mail: 'deanwilliam@acme.com',
       fixedPhone: '+33187455835',
       mobilePhone: '+33694252623',
       street: '151 Railroad Avenue',
@@ -2123,7 +2123,7 @@ exports.peoples = [
     },
     functionName: 'Butler',
     functionDescription: 'Glenn',
-    entity: 'Sfeir-Paris',
+    entity: 'Acme-Paris',
     currentClient: 'Generali',
     workcity: 'Lille',
     workCoords: {
@@ -2138,7 +2138,7 @@ exports.peoples = [
     birthDate: '30/11/2006',
     socialNumber: '11743085818',
     contactInfoPerso: {
-      mail: 'glennwilliam@sfeir.com',
+      mail: 'glennwilliam@acme.com',
       fixedPhone: '+33191151236',
       mobilePhone: '+33694543027',
       street: '380 Cove Lane',
@@ -2162,7 +2162,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'susannewilliam@sfeir.com',
+    email: 'susannewilliam@acme.com',
     lastname: 'Calderon',
     firstname: 'Odom',
     gender: 'male',
@@ -2174,7 +2174,7 @@ exports.peoples = [
     linkedin: 'est',
     url: 'consequat',
     contactInfoPro: {
-      mail: 'odomcalderon@sfeir.com',
+      mail: 'odomcalderon@acme.com',
       fixedPhone: '+33191158039',
       mobilePhone: '+33699159523',
       street: '494 Lott Place',
@@ -2183,7 +2183,7 @@ exports.peoples = [
     },
     functionName: 'Hannah',
     functionDescription: 'Kristie',
-    entity: 'Sfeir-Paris',
+    entity: 'Acme-Paris',
     currentClient: 'Generali',
     workcity: 'Luxembourg',
     workCoords: {
@@ -2198,7 +2198,7 @@ exports.peoples = [
     birthDate: '20/10/2010',
     socialNumber: '12066586427',
     contactInfoPerso: {
-      mail: 'kristiecalderon@sfeir.com',
+      mail: 'kristiecalderon@acme.com',
       fixedPhone: '+33197753824',
       mobilePhone: '+33694750823',
       street: '434 Madison Place',
@@ -2222,7 +2222,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'collinscalderon@sfeir.com',
+    email: 'collinscalderon@acme.com',
     lastname: 'Ewing',
     firstname: 'Chambers',
     gender: 'male',
@@ -2234,7 +2234,7 @@ exports.peoples = [
     linkedin: 'officia',
     url: 'laborum',
     contactInfoPro: {
-      mail: 'chambersewing@sfeir.com',
+      mail: 'chambersewing@acme.com',
       fixedPhone: '+33192849834',
       mobilePhone: '+33697745224',
       street: '986 Visitation Place',
@@ -2243,7 +2243,7 @@ exports.peoples = [
     },
     functionName: 'Lawanda',
     functionDescription: 'Estela',
-    entity: 'Sfeir-Paris',
+    entity: 'Acme-Paris',
     currentClient: 'Generali',
     workcity: 'Lille',
     workCoords: {
@@ -2258,7 +2258,7 @@ exports.peoples = [
     birthDate: '29/08/2000',
     socialNumber: '16880984099',
     contactInfoPerso: {
-      mail: 'estelaewing@sfeir.com',
+      mail: 'estelaewing@acme.com',
       fixedPhone: '+33199560022',
       mobilePhone: '+33695252335',
       street: '234 Noble Street',
@@ -2282,7 +2282,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'jacklynewing@sfeir.com',
+    email: 'jacklynewing@acme.com',
     lastname: 'Wagner',
     firstname: 'Kinney',
     gender: 'male',
@@ -2294,7 +2294,7 @@ exports.peoples = [
     linkedin: 'exercitation',
     url: 'sint',
     contactInfoPro: {
-      mail: 'kinneywagner@sfeir.com',
+      mail: 'kinneywagner@acme.com',
       fixedPhone: '+33191643521',
       mobilePhone: '+33683844637',
       street: '277 Allen Avenue',
@@ -2303,7 +2303,7 @@ exports.peoples = [
     },
     functionName: 'Jeri',
     functionDescription: 'Carla',
-    entity: 'Sfeir-Lille',
+    entity: 'Acme-Lille',
     currentClient: 'Adeo',
     workcity: 'Lille',
     workCoords: {
@@ -2318,7 +2318,7 @@ exports.peoples = [
     birthDate: '24/02/2012',
     socialNumber: '16549231054',
     contactInfoPerso: {
-      mail: 'carlawagner@sfeir.com',
+      mail: 'carlawagner@acme.com',
       fixedPhone: '+33184245523',
       mobilePhone: '+33688852727',
       street: '193 Johnson Avenue',
@@ -2342,7 +2342,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'nitawagner@sfeir.com',
+    email: 'nitawagner@acme.com',
     lastname: 'Mcconnell',
     firstname: 'Warner',
     gender: 'male',
@@ -2354,7 +2354,7 @@ exports.peoples = [
     linkedin: 'anim',
     url: 'cupidatat',
     contactInfoPro: {
-      mail: 'warnermcconnell@sfeir.com',
+      mail: 'warnermcconnell@acme.com',
       fixedPhone: '+33192246626',
       mobilePhone: '+33681946735',
       street: '107 Commercial Street',
@@ -2363,7 +2363,7 @@ exports.peoples = [
     },
     functionName: 'Calderon',
     functionDescription: 'Traci',
-    entity: 'Sfeir-Lille',
+    entity: 'Acme-Lille',
     currentClient: 'Generali',
     workcity: 'Luxembourg',
     workCoords: {
@@ -2378,7 +2378,7 @@ exports.peoples = [
     birthDate: '31/10/2003',
     socialNumber: '13202155083',
     contactInfoPerso: {
-      mail: 'tracimcconnell@sfeir.com',
+      mail: 'tracimcconnell@acme.com',
       fixedPhone: '+33193553933',
       mobilePhone: '+33685953521',
       street: '109 Whitty Lane',
@@ -2402,7 +2402,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'camachomcconnell@sfeir.com',
+    email: 'camachomcconnell@acme.com',
     lastname: 'Hughes',
     firstname: 'Murray',
     gender: 'male',
@@ -2414,7 +2414,7 @@ exports.peoples = [
     linkedin: 'consequat',
     url: 'cillum',
     contactInfoPro: {
-      mail: 'murrayhughes@sfeir.com',
+      mail: 'murrayhughes@acme.com',
       fixedPhone: '+33182257834',
       mobilePhone: '+33681842632',
       street: '970 Henry Street',
@@ -2423,7 +2423,7 @@ exports.peoples = [
     },
     functionName: 'Lesa',
     functionDescription: 'Susan',
-    entity: 'Sfeir-Est',
+    entity: 'Acme-Est',
     currentClient: 'Generali',
     workcity: 'Strasbourg',
     workCoords: {
@@ -2438,7 +2438,7 @@ exports.peoples = [
     birthDate: '09/02/2011',
     socialNumber: '5670562177',
     contactInfoPerso: {
-      mail: 'susanhughes@sfeir.com',
+      mail: 'susanhughes@acme.com',
       fixedPhone: '+33190348124',
       mobilePhone: '+33691941137',
       street: '296 Polhemus Place',
@@ -2462,7 +2462,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'cantrellhughes@sfeir.com',
+    email: 'cantrellhughes@acme.com',
     lastname: 'Walker',
     firstname: 'Waller',
     gender: 'male',
@@ -2474,7 +2474,7 @@ exports.peoples = [
     linkedin: 'adipisicing',
     url: 'enim',
     contactInfoPro: {
-      mail: 'wallerwalker@sfeir.com',
+      mail: 'wallerwalker@acme.com',
       fixedPhone: '+33180159328',
       mobilePhone: '+33690054636',
       street: '872 Ira Court',
@@ -2483,7 +2483,7 @@ exports.peoples = [
     },
     functionName: 'Roseann',
     functionDescription: 'Shelton',
-    entity: 'Sfeir-Paris',
+    entity: 'Acme-Paris',
     currentClient: 'Adeo',
     workcity: 'Paris',
     workCoords: {
@@ -2498,7 +2498,7 @@ exports.peoples = [
     birthDate: '27/01/2013',
     socialNumber: '10641120239',
     contactInfoPerso: {
-      mail: 'sheltonwalker@sfeir.com',
+      mail: 'sheltonwalker@acme.com',
       fixedPhone: '+33198544631',
       mobilePhone: '+33690249123',
       street: '882 Clifton Place',
@@ -2522,7 +2522,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'mcneilwalker@sfeir.com',
+    email: 'mcneilwalker@acme.com',
     lastname: 'Bullock',
     firstname: 'Erna',
     gender: 'female',
@@ -2534,7 +2534,7 @@ exports.peoples = [
     linkedin: 'est',
     url: 'nulla',
     contactInfoPro: {
-      mail: 'ernabullock@sfeir.com',
+      mail: 'ernabullock@acme.com',
       fixedPhone: '+33188144121',
       mobilePhone: '+33692952428',
       street: '299 Gerry Street',
@@ -2543,7 +2543,7 @@ exports.peoples = [
     },
     functionName: 'May',
     functionDescription: 'Melissa',
-    entity: 'Sfeir-Lille',
+    entity: 'Acme-Lille',
     currentClient: 'Generali',
     workcity: 'Strasbourg',
     workCoords: {
@@ -2558,7 +2558,7 @@ exports.peoples = [
     birthDate: '14/11/2010',
     socialNumber: '3048243950',
     contactInfoPerso: {
-      mail: 'melissabullock@sfeir.com',
+      mail: 'melissabullock@acme.com',
       fixedPhone: '+33182147720',
       mobilePhone: '+33697342926',
       street: '137 Knapp Street',
@@ -2582,7 +2582,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'hooverbullock@sfeir.com',
+    email: 'hooverbullock@acme.com',
     lastname: 'Rosario',
     firstname: 'Levy',
     gender: 'male',
@@ -2594,7 +2594,7 @@ exports.peoples = [
     linkedin: 'et',
     url: 'JavaScript',
     contactInfoPro: {
-      mail: 'levyrosario@sfeir.com',
+      mail: 'levyrosario@acme.com',
       fixedPhone: '+33189142720',
       mobilePhone: '+33692146532',
       street: '749 Aitken Place',
@@ -2603,7 +2603,7 @@ exports.peoples = [
     },
     functionName: 'Romero',
     functionDescription: 'Robles',
-    entity: 'Sfeir-Est',
+    entity: 'Acme-Est',
     currentClient: 'Adeo',
     workcity: 'Luxembourg',
     workCoords: {
@@ -2618,7 +2618,7 @@ exports.peoples = [
     birthDate: '29/09/2008',
     socialNumber: '9428109191',
     contactInfoPerso: {
-      mail: 'roblesrosario@sfeir.com',
+      mail: 'roblesrosario@acme.com',
       fixedPhone: '+33182852828',
       mobilePhone: '+33687047829',
       street: '266 Havens Place',
@@ -2642,7 +2642,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'poperosario@sfeir.com',
+    email: 'poperosario@acme.com',
     lastname: 'Martinez',
     firstname: 'John',
     gender: 'female',
@@ -2654,7 +2654,7 @@ exports.peoples = [
     linkedin: 'nulla',
     url: 'anim',
     contactInfoPro: {
-      mail: 'johnmartinez@sfeir.com',
+      mail: 'johnmartinez@acme.com',
       fixedPhone: '+33194848628',
       mobilePhone: '+33696450034',
       street: '361 Halsey Street',
@@ -2663,7 +2663,7 @@ exports.peoples = [
     },
     functionName: 'Phyllis',
     functionDescription: 'Concetta',
-    entity: 'Sfeir-Lille',
+    entity: 'Acme-Lille',
     currentClient: 'Generali',
     workcity: 'Lille',
     workCoords: {
@@ -2678,7 +2678,7 @@ exports.peoples = [
     birthDate: '15/04/2009',
     socialNumber: '12451216663',
     contactInfoPerso: {
-      mail: 'concettamartinez@sfeir.com',
+      mail: 'concettamartinez@acme.com',
       fixedPhone: '+33181152924',
       mobilePhone: '+33692150932',
       street: '225 Newkirk Placez',
@@ -2702,7 +2702,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'corinamartinez@sfeir.com',
+    email: 'corinamartinez@acme.com',
     lastname: 'Barker',
     firstname: 'Mullen',
     gender: 'male',
@@ -2714,7 +2714,7 @@ exports.peoples = [
     linkedin: 'quis',
     url: 'irure',
     contactInfoPro: {
-      mail: 'mullenbarker@sfeir.com',
+      mail: 'mullenbarker@acme.com',
       fixedPhone: '+33190355237',
       mobilePhone: '+33695148531',
       street: '531 Georgia Avenue',
@@ -2723,7 +2723,7 @@ exports.peoples = [
     },
     functionName: 'Cherie',
     functionDescription: 'Yates',
-    entity: 'Sfeir-Luxembourg',
+    entity: 'Acme-Luxembourg',
     currentClient: 'Adeo',
     workcity: 'Paris',
     workCoords: {
@@ -2738,7 +2738,7 @@ exports.peoples = [
     birthDate: '03/07/2006',
     socialNumber: '13941244767',
     contactInfoPerso: {
-      mail: 'yatesbarker@sfeir.com',
+      mail: 'yatesbarker@acme.com',
       fixedPhone: '+33189451027',
       mobilePhone: '+33683343325',
       street: '549 Prospect Street',
@@ -2762,7 +2762,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'kathybarker@sfeir.com',
+    email: 'kathybarker@acme.com',
     lastname: 'Carr',
     firstname: 'Townsend',
     gender: 'male',
@@ -2774,7 +2774,7 @@ exports.peoples = [
     linkedin: 'ex',
     url: 'dolore',
     contactInfoPro: {
-      mail: 'townsendcarr@sfeir.com',
+      mail: 'townsendcarr@acme.com',
       fixedPhone: '+33185543938',
       mobilePhone: '+33688743325',
       street: '529 Apollo Street',
@@ -2783,7 +2783,7 @@ exports.peoples = [
     },
     functionName: 'Porter',
     functionDescription: 'Mercer',
-    entity: 'Sfeir-Lille',
+    entity: 'Acme-Lille',
     currentClient: 'Generali',
     workcity: 'Luxembourg',
     workCoords: {
@@ -2798,7 +2798,7 @@ exports.peoples = [
     birthDate: '05/09/2011',
     socialNumber: '10132143513',
     contactInfoPerso: {
-      mail: 'mercercarr@sfeir.com',
+      mail: 'mercercarr@acme.com',
       fixedPhone: '+33195145433',
       mobilePhone: '+33691344834',
       street: '942 Belmont Avenue',
@@ -2822,7 +2822,7 @@ exports.peoples = [
     birthDateChild5: ''
   },
   {
-    email: 'harveycarr@sfeir.com',
+    email: 'harveycarr@acme.com',
     lastname: 'Rodgers',
     firstname: 'Brewer',
     gender: 'male',
@@ -2834,7 +2834,7 @@ exports.peoples = [
     linkedin: 'ad',
     url: 'fugiat',
     contactInfoPro: {
-      mail: 'brewerrodgers@sfeir.com',
+      mail: 'brewerrodgers@acme.com',
       fixedPhone: '+33190343337',
       mobilePhone: '+33696945021',
       street: '934 Humboldt Street',
@@ -2843,7 +2843,7 @@ exports.peoples = [
     },
     functionName: 'Vasquez',
     functionDescription: 'Pamela',
-    entity: 'Sfeir-Luxembourg',
+    entity: 'Acme-Luxembourg',
     currentClient: 'Sanofi',
     workcity: 'Paris',
     workCoords: {
@@ -2858,7 +2858,7 @@ exports.peoples = [
     birthDate: '17/02/2000',
     socialNumber: '16982835261',
     contactInfoPerso: {
-      mail: 'pamelarodgers@sfeir.com',
+      mail: 'pamelarodgers@acme.com',
       fixedPhone: '+33194741131',
       mobilePhone: '+33682944422',
       street: '423 Hendrix Street',

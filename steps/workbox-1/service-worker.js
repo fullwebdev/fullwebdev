@@ -21,7 +21,6 @@ var cacheAppShellStatic = [
   'img/icons/icon-192x192.png',
   'img/icons/icon-256x256.png',
   'img/icons/icon-32x32.png',
-  'img/logo-sfeir.svg',
   'img/md-cellphone.svg',
   'img/md-email.svg',
   'img/md-github.svg',

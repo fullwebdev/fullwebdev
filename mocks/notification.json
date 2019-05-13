@@ -1,5 +1,5 @@
 {
-  "email": "hogandickerson@sfeir.com",
+  "email": "hogandickerson@acme.com",
   "lastname": "Powers",
   "firstname": "Black",
   "gender": "male",
@@ -11,7 +11,7 @@
   "linkedin": "qui",
   "url": "ex",
   "contactInfoPro": {
-    "mail": "blackpowers@sfeir.com",
+    "mail": "blackpowers@acme.com",
     "fixedPhone": "+33182449424",
     "mobilePhone": "+33684850125",
     "street": "220 Ide Court",
@@ -20,7 +20,7 @@
   },
   "functionName": "Mcpherson",
   "functionDescription": "Wendi",
-  "entity": "Sfeir-Paris",
+  "entity": "Acme-Paris",
   "currentClient": "Adeo",
   "workcity": "Luxembourg",
   "workAdress": "rue...",
@@ -31,7 +31,7 @@
   "birthDate": "11/12/2001",
   "socialNumber": "4785882151",
   "contactInfoPerso": {
-    "mail": "wendipowers@sfeir.com",
+    "mail": "wendipowers@acme.com",
     "fixedPhone": "+33197859629",
     "mobilePhone": "+33682956737",
     "street": "789 Nolans Lane",

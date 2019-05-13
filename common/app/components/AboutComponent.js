@@ -14,7 +14,7 @@ export class AboutComponent extends PageViewElement {
   render() {
     return html`
       <h1>About</h1>
-      <p>Sfeir School PWA</p>
+      <p>Web on F.I.R.E demo</p>
       <p>
         Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub vultu latens, odorandi vias periculorum
         occultas perquam sagax. is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio,

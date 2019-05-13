@@ -57,20 +57,16 @@ export class PeopleCard extends LitElement {
         <div class="mdl-card__supporting-text">
           Manager : <span>${this.people.manager}</span>
           <br />
-          Location : <a href="http://www.sfeir.com/contact/">${this.people.entity}</a>
-          ${this.people.entity == 'Sfeir-Benelux'
+          Location : <a href="http://www.acme.com/contact/">${this.people.entity}</a>
+          ${this.people.entity == 'Acme-Benelux'
             ? html`
-                <a
-                  target="_blank"
-                  title="Locate"
-                  href="http://sfeirmaplux.appspot.com/#sferian/${splitEmail(this.people.email)}"
-                >
+                <a target="_blank" title="Locate" href="http://map.acme.com/#people/${splitEmail(this.people.email)}">
                   <md-icon md-svg-icon="img/md-map.svg"></md-icon>
                 </a>
               `
-            : this.people.entity == 'Sfeir-Paris'
+            : this.people.entity == 'Acme-Paris'
             ? html`
-                <a target="_blank" title="Locate" href="http://map.sfeir.com/#sferian/${splitEmail(this.people.email)}">
+                <a target="_blank" title="Locate" href="http://map.acme.com/#people/${splitEmail(this.people.email)}">
                   <md-icon md-svg-icon="img/md-map.svg"></md-icon> </a
                 >̀
               `
@@ -226,7 +222,7 @@ export class PeopleCard extends LitElement {
           </md-button>
           <md-button
             target="_blank"
-            href="https://sfeirgroup.slack.com/messages/@${people.slack}/"
+            href="https://acme.slack.com/messages/@${people.slack}/"
             class="md-icon-button"
             aria-label="slack"
           >

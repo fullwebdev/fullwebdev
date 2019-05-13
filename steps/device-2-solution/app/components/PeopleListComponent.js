@@ -120,7 +120,7 @@ export class PeopleList extends LitElement {
               <div class="people-list-all md-padding" layout="row" layout-wrap layout-align="center center">
                 <div>
                   <div>
-                    <h1>No sfeirien found</h1>
+                    <h1>No people found</h1>
                   </div>
                 </div>
               </div>
