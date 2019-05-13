@@ -1,14 +1,8 @@
 # Présentation
 
-<div style="display: flex">
+<img src="assets/images/noel.jpg" height="400px" class="center"/>
 
-![speaker](./assets/images/noel.jpg)
-<!-- .element style="flex: 1" -->
-
-![badge](./assets/images/avocado-rocks.png)
-<!-- .element style="flex: 1" -->
-
-</div>
+<br/>
 
 ## Noël Macé
 
@@ -17,4 +11,4 @@
 ### Developer Advocate
 
 ![Bonitasoft](./assets/images/bonitasoft-logo.png)
-<!-- .element style="margin-top: 2em; height: 100px" -->
+<!-- .element style="margin-top: 1em; height: 200px" -->
