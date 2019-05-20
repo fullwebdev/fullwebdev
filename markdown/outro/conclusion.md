@@ -1,5 +1,3 @@
-<!-- .slide: class="two-column-layout" -->
-
 # Perspectives
 
 <br>
@@ -9,7 +7,7 @@ Notes:
 Échec de Firefox OS
 Limites du principe de client léger ?
 
-##--##
+<div class="multicol"> <div class="col">
 
 - Support (quasi) généralisé
 - Mises en avant
@@ -22,6 +20,8 @@ Limites du principe de client léger ?
   - La mort du dev hybride ??
     - du dev natif ??? 🙄
 
-##--##
+</div><div class="col">
 
 ![center h-700](./assets/images/crystal_ball.png)
+
+</div></div>

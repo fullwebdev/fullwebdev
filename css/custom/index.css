@@ -112,6 +112,11 @@ Specifics
   text-align: center;
   text-shadow: #000 1px 0 10px; }
 
+.multicol {
+  display: flex; }
+  .multicol .col {
+    flex: 1; }
+
 .reveal .slides section .target-capacities {
   position: absolute;
   transform: rotateZ(270deg);

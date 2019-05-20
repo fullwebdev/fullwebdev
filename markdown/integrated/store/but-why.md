@@ -6,17 +6,15 @@
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
-
 # Avantages avancés par Microsoft
 
-##--##
+<div class="multicol">   <div class="col">
 
 <br>
 
 ![center h-400](./assets/images/windows-store.png)
 
-##--##
+</div>  <div class="col">
 
 <br><br>
 
@@ -27,6 +25,8 @@
 **"Easy install"**
 
 **"Business insights"**
+
+</div></div>
 
 ##==##
 
@@ -66,11 +66,9 @@ comme celle de Air Canada.
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
-
 # Easy Install?
 
-##--##
+<div class="multicol">   <div class="col">
 
 ![center h-600](./assets/images/store/install-button.png)
 <br>
@@ -78,23 +76,25 @@ comme celle de Air Canada.
 © [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) [Google](https://developers.google.com/web/progressive-web-apps/desktop)
 <!-- .element: class="copyright" -->
 
-##--##
+</div>  <div class="col">
 
 <br><br>
 
 "Staring in **Chrome 73**, [Desktop Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/desktop)
 are now supported on all desktop platforms, including Chrome OS, Linux, Mac, and Windows."
 
-##==##
+</div></div>
 
-<!-- .slide: class="two-column-layout" -->
+
+##==##
 
 # Easy Install?
 
-##--##
+<div class="multicol">   <div class="col">
+
 ![center](./assets/images/store/ios-install.png)
 
-##--##
+</div>  <div class="col">
 
 <br><br>
 
@@ -103,6 +103,9 @@ There is still some issues with IOS...
 <br><br>
 
 And App Manifest support by Firefox & Edge is still under development...
+
+</div></div>
+
 
 ##==##
 
@@ -124,11 +127,9 @@ And App Manifest support by Firefox & Edge is still under development...
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
-
 # What do you want?
 
-##--##
+<div class="multicol">   <div class="col">
 
 ![ w-200](./assets/images/WHATWG_logo.png)
 ![ w-200](./assets/images/mdn-logo.png)
@@ -136,13 +137,15 @@ And App Manifest support by Firefox & Edge is still under development...
 ![ w-200](./assets/images/w3c-logo.png)
 ![ w-200](./assets/images/tc39-logo.png)
 
-##--##
+</div>  <div class="col">
 
 ![ w-200](./assets/images/windows-store.png)
 ![ w-200](./assets/images/chrome-web-store-logo.png)
 ![ w-200](./assets/images/gsuite-marketplace-logo.svg)
 ![ w-200](./assets/images/Google_Play-logo.png)
 ![ w-200](./assets/images/app-store-apple-logo.png)
+
+</div></div>
 
 ##==##
 

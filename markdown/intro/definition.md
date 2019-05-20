@@ -1,4 +1,4 @@
-<!-- .slide: class="transition-white fire-bg-blue" -->
+<!-- .slide: class="transition-white fire-bg-blue fire-specific-slide" data-background="css/theme/legacy/images/background_blue.png" -->
 
 # Définition
 
@@ -73,6 +73,8 @@ De nouvelles technos pour un MEILLEUR web, sans oublier les best practices “hi
 
 ##==##
 
+<!-- .slide: class="fire-basic-slide" -->
+
 # Progressive
 
 <!-- .element: class="center-big" -->
@@ -91,6 +93,8 @@ Making the most of the reach and capabilities of the platform — but also showi
 But... What does this actually mean in practice?
 
 ##==##
+
+<!-- .slide: class="fire-basic-slide" -->
 
 # Progressive
 

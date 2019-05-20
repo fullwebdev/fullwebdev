@@ -1,4 +1,4 @@
-<!-- .slide: class="transition-white fire-bg-blue" -->
+<!-- .slide: class="transition-white fire-bg-blue fire-specific-slide" data-background="css/theme/legacy/images/background_blue.png" -->
 
 # Outils
 
@@ -16,17 +16,15 @@
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
-
 # Lighthouse
 
-##--##
+<div class="multicol"> <div class="col">
 
 <br><br>
 
 ![center](./assets/images/lighthouse.png)
 
-##--##
+</div><div class="col">
 
 <br><br><br>
 
@@ -38,6 +36,8 @@ Audits> "Run audits"
 CLI:
 
 npm i -g lighthouse lighthouse <url>
+
+</div></div>
 
 Notes:
 Lighthouse, which you'll learn more about, has tools from the app and from the command line to help check security.

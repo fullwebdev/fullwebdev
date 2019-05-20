@@ -1,4 +1,4 @@
-<!-- .slide: class="exercice fire-bg-pink" -->
+<!-- .slide: class="exercice fire-bg-pink fire-specific-slide" data-background="css/theme/legacy/images/background_pink.png" -->
 
 # Créer un bouton pour installer l'app
 

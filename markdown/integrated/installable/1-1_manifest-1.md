@@ -1,4 +1,4 @@
-<!-- .slide: class="exercice fire-bg-pink" -->
+<!-- .slide: class="exercice fire-bg-pink fire-specific-slide" data-background="css/theme/legacy/images/background_pink.png" -->
 
 # Créer votre propre manifest
 
@@ -29,11 +29,10 @@
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
-
 # Ajouter à l’écran d’accueil
 
-##--##
+<div class="multicol">
+  <div class="col">
 
 <br><br>
 
@@ -43,9 +42,13 @@
   <br><br>
 - Utilisateur engagé...
 
-##--##
+  </div>
+  <div class="col">
 
 ![center h-600](./assets/images/pwa_add_to_screen.png)
+
+</div>
+</div>
 
 Notes:
 

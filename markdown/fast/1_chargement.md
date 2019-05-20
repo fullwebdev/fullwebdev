@@ -1,4 +1,4 @@
-<!-- .slide: class="transition-white fire-bg-pink" -->
+<!-- .slide: class="transition-white fire-bg-pink fire-specific-slide" data-background="css/theme/legacy/images/background_pink.png" -->
 
 # Chargement
 

@@ -1,23 +1,18 @@
-<!-- .slide: class="transition-white fire-bg-blue" -->
+<!-- .slide: class="transition-white fire-bg-blue fire-specific-slide" data-background="css/theme/legacy/images/background_blue.png" -->
 
 # Chrome Web Store <br>& G Suite Marketplace
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
-
 # Why ?
 
-Notes:
-Cf https://developer.chrome.com/apps/about_apps
-
-##--##
+<div class="multicol"> <div class="col">
 
 <br><br>
 
 ![center h-300](./assets/images/store/Chrome-App-List-icon.png)
 
-##--##
+</div><div class="col">
 
 <br><br><br><br>
 
@@ -25,28 +20,34 @@ Cf https://developer.chrome.com/apps/about_apps
 Deliver an experience comparable to a native application.
 </p>
 
-##==##
-
-<!-- .slide: class="two-column-layout" -->
-
-# Why ?
+</div></div>
 
 Notes:
 Cf https://developer.chrome.com/apps/about_apps
 
-##--##
+##==##
+
+# Why ?
+
+
+<div class="multicol"> <div class="col">
 
 <br><br>
 
 ![center h-300](./assets/images/gsuite-marketplace-logo.svg)
 
-##--##
+</div><div class="col">
 
 <br><br><br><br>
 
 <p class="quotation">
 Find and install third-party applications that are integrated with G Suite.
 </p>
+
+</div></div>
+
+Notes:
+Cf https://developer.chrome.com/apps/about_apps
 
 ##==##
 

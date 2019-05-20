@@ -1562,7 +1562,9 @@
 		dom.wrapper.removeEventListener( 'touchmove', onTouchMove, false );
 		dom.wrapper.removeEventListener( 'touchend', onTouchEnd, false );
 
-		dom.pauseOverlay.removeEventListener( 'click', resume, false );
+		if(dom.pauseOverlay) {
+			dom.pauseOverlay.removeEventListener( 'click', resume, false );
+		}
 
 		if ( config.progress && dom.progress ) {
 			dom.progress.removeEventListener( 'click', onProgressClicked, false );

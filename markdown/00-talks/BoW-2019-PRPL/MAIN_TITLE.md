@@ -1,4 +1,4 @@
-<!-- .slide: class="first-slide" -->
+<!-- .slide: class="first-slide fire-specific-slide" data-background="css/theme/legacy/images/background_blue.png"-->
 
 **The web is on 🔥 F.I.R.E. 🔥**
 

@@ -40,13 +40,12 @@ https://developers.google.com/web/updates/2014/11/Support-for-installable-web-ap
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="with-code" -->
 
 # Le fichier
 
-##--##
-
-<!-- .slide: class="with-code" -->
+<div class="multicol">
+  <div class="col">
 
 ```javascript
 {
@@ -67,21 +66,24 @@ https://developers.google.com/web/updates/2014/11/Support-for-installable-web-ap
 }
 ```
 
-##--##
+  </div>
+  <div class="col">
 
 ![center h-600](./assets/images/black_phone.png)
+
+  </div>
+</div>
 
 Notes:
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="with-code" -->
 
 # Icône
 
-##--##
-
-<!-- .slide: class="with-code" -->
+<div class="multicol">
+  <div class="col">
 
 ```javascript
 {
@@ -100,21 +102,25 @@ Notes:
 
 <!-- .element: class="big-code" -->
 
-##--##
+  </div>
+  <div class="col">
 
 ![center h-600](./assets/images/pwa_icon.png)
+
+  </div>
+</div>
 
 Notes:
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="with-code" -->
 
 # Page de garde (splash screen)
 
-##--##
+<div class="multicol">
+  <div class="col">
 
-<!-- .slide: class="with-code" -->
 
 ```javascript
 {
@@ -130,21 +136,24 @@ Notes:
 
 <!-- .element: class="big-code" -->
 
-##--##
+</div>   <div class="col">
 
 ![center h-600](./assets/images/pwa_splash.png)
+
+</div>
+</div>
 
 Notes:
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="with-code" -->
 
 # Premier écran
 
-##--##
+<div class="multicol">
+  <div class="col">
 
-<!-- .slide: class="with-code" -->
 
 ```javascript
 {
@@ -156,21 +165,23 @@ Notes:
 
 <!-- .element: class="big-code" -->
 
-##--##
+</div>   <div class="col">
 
 ![center h-600](./assets/images/pwa_first-screen.png)
+
+</div>
+</div>
 
 Notes:
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="with-code" -->
 
 # Premier écran pour l'analytics
 
-##--##
-
-<!-- .slide: class="with-code" -->
+<div class="multicol">
+  <div class="col">
 
 ```javascript
 {
@@ -182,21 +193,24 @@ Notes:
 
 <!-- .element: class="big-code" -->
 
-##--##
+</div>   <div class="col">
 
 ![center h-600](./assets/images/pwa_first-screen.png)
+
+</div>
+</div>
 
 Notes:
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="with-code" -->
 
 # Window
 
-##--##
-
-<!-- .slide: class="with-code" -->
+<div class="multicol">
+  <div class="col">
+  
 
 ```javascript
 {
@@ -208,21 +222,23 @@ Notes:
 
 <!-- .element: class="big-code" -->
 
-##--##
+</div>   <div class="col">
 
 ![center h-600](./assets/images/pwa_first-screen-window.png)
+
+</div>
+</div>
 
 Notes:
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="with-code" -->
 
 # Video Games
 
-##--##
-
-<!-- .slide: class="with-code" -->
+<div class="multicol">
+  <div class="col">
 
 ```javascript
 {
@@ -235,21 +251,24 @@ Notes:
 
 <!-- .element: class="big-code" -->
 
-##--##
+</div>   <div class="col">
 
 ![center h-600](./assets/images/pwa_games.png)
+
+</div>
+</div>
 
 Notes:
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="with-code" -->
 
 # Video Games
 
-##--##
+<div class="multicol">
+  <div class="col">
 
-<!-- .slide: class="with-code" -->
 
 ```javascript
 {
@@ -262,9 +281,12 @@ Notes:
 
 <!-- .element: class="big-code" -->
 
-##--##
+</div>   <div class="col">
 
 ![center h-600](./assets/images/pwa_games_landscape.png)
+
+  </div>
+</div>
 
 Notes:
 

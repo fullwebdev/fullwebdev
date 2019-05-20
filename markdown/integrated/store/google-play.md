@@ -1,4 +1,4 @@
-<!-- .slide: class="transition-white fire-bg-blue" -->
+<!-- .slide: class="transition-white fire-bg-blue fire-specific-slide" data-background="css/theme/legacy/images/background_blue.png" -->
 
 # Google Play
 
@@ -56,7 +56,7 @@ ACTIVITIES
 
 ##==##
 
-<!-- .slide: class="flex-row" -->
+<!-- .slide: class="flex-row fire-basic-slide" -->
 
 # TWA
 
@@ -72,7 +72,7 @@ Comes from the same developer.
 
 ##==##
 
-<!-- .slide: class="flex-row" -->
+<!-- .slide: class="flex-row fire-basic-slide" -->
 
 # TWA
 
@@ -88,15 +88,7 @@ Rendered by the user's browser.
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
-
-Notes:
-source: https://youtu.be/TCgT8dzSiU8
-[Pete Lepage](https://petelepage.com/blog/2010/05/biography/), Developer Advocate on the Web team at Google.
-New ways to integrate **parts** of your web experience **into** you native Android app.
-https://g.co/TrustedWebActivities
-
-##--##
+<div class="multicol"> <div class="col">
 
 <br>
 
@@ -104,7 +96,7 @@ https://g.co/TrustedWebActivities
 <video autoplay loop muted playsinline height="600" src="./assets/images/gifs/wrap-and-dump.mp4"></video>
 </p>
 
-##--##
+</div><div class="col">
 
 <br><br><br>
 
@@ -114,6 +106,13 @@ https://g.co/TrustedWebActivities
 [Pete Lepage](https://petelepage.com/blog/2010/05/biography/), 31 mai 2018
 <!-- .element class="quotation-author" -->
 
+</div></div>
+
+Notes:
+source: https://youtu.be/TCgT8dzSiU8
+[Pete Lepage](https://petelepage.com/blog/2010/05/biography/), Developer Advocate on the Web team at Google.
+New ways to integrate **parts** of your web experience **into** you native Android app.
+https://g.co/TrustedWebActivities
 
 ##==##
 

@@ -1,4 +1,4 @@
-<!-- .slide: class="exercice fire-bg-pink" -->
+<!-- .slide: class="exercice fire-bg-pink fire-specific-slide" data-background="css/theme/legacy/images/background_pink.png" -->
 
 # Near me
 
@@ -119,13 +119,12 @@ function toggleFullScreen() {
 
 ##==##
 
-<!-- .slide: class="two-column-layout" -->
+<!-- .slide: class="with-code" -->
 
 # CSS pseudo-selectors
 
-##--##
-
-<!-- .slide: class="with-code" -->
+<div class="multicol">
+  <div class="col">
 
 ```css
 div:-webkit-full-screen {
@@ -141,12 +140,10 @@ div:fullscreen {
   width: 100% !important;
 }
 ```
-
 <!-- .element: class="big-code" -->
 
-##--##
-
-<!-- .slide: class="with-code" -->
+  </div>
+  <div class="col">
 
 ```css
 :-webkit-full-screen .tohide {
@@ -162,10 +159,10 @@ div:fullscreen {
   display: none;
 }
 ```
-
 <!-- .element: class="big-code" -->
 
-<br>
+  </div>
+</div>
 
 Notes:
 While in fullscreen, hide any children with class 'tohide'
