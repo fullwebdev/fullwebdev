@@ -18,6 +18,7 @@
         background-color: #121212;
         color: #fff;
         font-family: Roboto, sans-serif;
+        font-size: 18px;
       }
 
       a {
@@ -26,25 +27,21 @@
       }
 
       .accent {
-        color: #65dbff;
+        background-color: #a8e9fe;
+        color: #121212;
       }
 
-      header {
-        margin-bottom: 3em;
+      h1 {
+        font-size: 25px;
       }
 
       header .title {
-        font-size: 50px;
+        font-size: 40px;
         font-weight: bold;
-      }
-
-      header .subtitle {
-        font-size: 20px;
       }
 
       .block {
         background-color: #333;
-        font-size: 20px;
         flex: 1 1 0;
         margin: 0.5em;
         padding: 1em;
@@ -62,6 +59,15 @@
         display: block;
       }
 
+      .social {
+        align-items: center;
+        margin: 1em;
+      }
+
+      .social > * {
+        margin: 10px;
+      }
+
       .logo {
         max-width: calc(90vw - 3em);
       }
@@ -76,17 +82,18 @@
 
       .date {
         font-weight: normal;
-        font-size: 20px;
         margin-bottom: 0;
       }
 
-      .slides:before, .youtube:before {
+      .slides:before,
+      .youtube:before,
+      .twitter:before {
         background-size: 100%;
         background-repeat: no-repeat;
         display: inline-block;
         width: 25px;
         height: 25px;
-        content: "";
+        content: '';
         vertical-align: middle;
         margin-right: 0.5em;
       }
@@ -99,7 +106,20 @@
         background-image: url(assets/images/emojis/man-teacher.svg);
       }
 
-      .talks {
+      .twitter:before {
+        background-image: url(assets/images/logos/twitter-black.svg);
+        width: 18px;
+        height: 18px;
+      }
+
+      .twitter {
+        font-size: 14px;
+        font-weight: bold;
+        padding: 5px;
+      }
+
+      .talks,
+      .social {
         display: flex;
         flex-basis: auto;
         flex-direction: row;
@@ -109,11 +129,15 @@
         align-content: space-around;
       }
 
-      .block .title {
+      .talks {
+        margin-top: 2em;
+      }
+
+      .block h1 {
         padding: 6px 20px;
         flex-grow: 1;
         margin-top: 1em 0;
-        font-size: 28px;
+        font-size: 25px;
         font-weight: bolder;
       }
 
@@ -184,28 +208,37 @@
     <header>
       <div class="title">Web on F.I.R.E.</div>
       <div class="subtitle">
-        Learn Web's Modern Capabilities with <a href="https://twitter.com/noel_mace" target="_blank">Noël Macé</a>!
+        Learn Web's Modern Capabilities with <a href="https://www.linkedin.com/in/noelmace/" target="_blank">Noël Macé</a>.
       </div>
     </header>
-    <h1>2019</h1>
+    <div class="social">
+        <a href="https://twitter.com/noel_mace?ref_src=twsrc%5Etfw" class="twitter follow-button accent">
+          Follow @noel_mace
+        </a>
+        <a
+          href="https://twitter.com/intent/tweet?button_hashtag=WebOnFIRE&ref_src=twsrc%5Etfw"
+          class="twitter hashtag-button accent"
+        >
+          Tweet #WebOnFIRE
+        </a>
+      </div>
     <div class="talks">
       <div class="block bow">
         <div class="date">2019-06-07</div>
         <a href="http://bestofweb.paris/" target="_blank" class="event"> Best of Web</a>
-        <div class="title">PRPL: it's time to join these fantastic four!</div>
+        <h1>PRPL: it's time to join these fantastic four!</h1>
         <a href="./BoW-PRPL-2019.html" class="slides">slides</a>
       </div>
       <div class="block bow">
         <div class="date">2019-06-06</div>
         <a href="http://bestofweb.paris/" target="_blank" class="event"> Best of Web</a>
-        <div class="title">Workshop</div>
+        <h1>Workshop</h1>
         <a href="./BoW-workshop-2019.html" class="slides">slides</a>
       </div>
       <div class="block">
         <div class="date">2019-03-20</div>
         <a href="https://www.breizhcamp.org/" target="_blank" class="event">BreizhCamp </a>
-        
-        <div class="title">Université</div>
+        <h1>Université</h1>
         <a href="https://youtu.be/OQ-dr-7pLaA" target="_blank" class="youtube">
           Watch the video
         </a>
