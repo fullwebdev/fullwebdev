@@ -6,11 +6,7 @@
 
 # Minimal Entrypoint
 
-Should it include the main navigation UI?
-
-<br>
-
-![center](./assets/images/PRPL/prpl_loading-appshell_html-vs-js.png)
+![center h-800](./assets/images/PRPL/small-door.jpg)
 
 Notes:
 left: application shell is in html -> heavy entry point
@@ -29,6 +25,11 @@ include everything needed for first paint
 © [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) [Google](https://developers.google.com/web/fundamentals/architecture/app-shell)
 <!-- .element class="copyright" -->
 
+##==##
+
+# Should the entry point include the app shell ? 
+
+![center h-800](./assets/images/PRPL/nested-tables.jpg)
 
 ##==##
 

@@ -8,6 +8,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <style>
@@ -31,27 +33,19 @@
         font-style: italic;
       }
 
-      .logo {
-        max-width: calc(90vw - 3em);
-      }
-
-      .logo.bow {
-        height: 150px;
-      }
-
-      .logo.breizhcamp {
-        height: 100px;
-      }
-
       .block {
         color: #000;
         border-radius: 20px;
         background-color: #fff;
         font-weight: 800;
-        font-size: 30px;
+        font-size: 25px;
         flex: 1 1 0;
         margin: 0.5em;
         padding: 1em;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
       .block > * {
@@ -61,6 +55,18 @@
       .block a {
         text-decoration: none;
         display: block;
+      }
+
+      .logo {
+        max-width: calc(90vw - 3em);
+      }
+
+      .logo.bow {
+        height: 50px;
+      }
+
+      .logo.breizhcamp {
+        height: 50px;
       }
 
       .date {
@@ -77,6 +83,20 @@
         justify-content: center;
         align-items: stretch;
         align-content: space-around;
+      }
+
+      .block .title {
+        font-size: 40px;
+        flex-grow: 1;
+        margin-bottom: 1em;
+      }
+
+      .emoji {
+        height: 40px;
+      }
+
+      a img {
+        vertical-align: middle;
       }
 
       .github-corner:hover .octo-arm {
@@ -108,7 +128,12 @@
   </head>
 
   <body>
-    <a href="https://github.com/noelmace/web-on-fire" target="_blank" class="github-corner" aria-label="View source on GitHub">
+    <a
+      href="https://github.com/noelmace/web-on-fire"
+      target="_blank"
+      class="github-corner"
+      aria-label="View source on GitHub"
+    >
       <svg
         width="80"
         height="80"
@@ -140,22 +165,33 @@
     <div class="talks">
       <div class="block bow">
         <div class="date">2019-06-07</div>
-        <div>PRPL: it's time to join these fantastic four!</div>
-        <img src="./assets/images/logos/bow.png" class="logo bow" alt="Best of Web" />
-        <a href="http://bestofweb.paris/" target="_blank">Best of Web</a>
+        <a href="./BoW-PRPL-2019.html" class="title"
+          ><img class="emoji" src="./assets/images/emojis/male-teacher.png" alt="slides" /> PRPL: it's time to join
+          these fantastic four!</a
+        >
+        <a href="http://bestofweb.paris/" target="_blank">
+          <img src="./assets/images/logos/bow.png" class="logo bow" alt="Best of Web" /> Best of Web</a
+        >
       </div>
       <div class="block bow">
         <div class="date">2019-06-06</div>
-        <a href="./BoW-workshop-2019.html">Workshop</a>
-        <img src="./assets/images/logos/bow.png" class="logo bow" alt="Best of Web" />
-        <a href="http://bestofweb.paris/" target="_blank">Best of Web</a>
+        <a href="./BoW-workshop-2019.html" class="title"
+          ><img class="emoji" src="./assets/images/emojis/male-teacher.png" alt="slides" /> Workshop</a
+        >
+        <a href="http://bestofweb.paris/" target="_blank">
+          <img src="./assets/images/logos/bow.png" class="logo bow" alt="Best of Web" /> Best of Web</a
+        >
       </div>
       <div class="block">
         <div class="date">2019-03-20</div>
-        <a href="./breizhcamp-2019.html">Université</a>
-        <a href="https://www.breizhcamp.org/" target="_blank"><img src="./assets/images/logo-breizhcamp.png" class="logo breizhcamp" alt="breizhcamp" /></a>
+        <a href="./breizhcamp-2019.html" class="title"
+          ><img class="emoji" src="./assets/images/emojis/male-teacher.png" alt="slides" /> Université</a
+        >
+        <a href="https://www.breizhcamp.org/" target="_blank"
+          ><img src="./assets/images/logo-breizhcamp.png" class="logo breizhcamp" alt="breizhcamp"
+        /></a>
         <a href="https://youtu.be/OQ-dr-7pLaA" target="_blank">
-          <img src="assets/images/logos/youtube.svg" alt="YouTube" height="25px">
+          <img src="assets/images/logos/youtube.svg" alt="YouTube" height="25px" />
           Watch the video
         </a>
       </div>
