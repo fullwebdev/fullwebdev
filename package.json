@@ -17,8 +17,9 @@
     "prpl:start:cli": "prpl-server --root server/build",
     "prpl:server": "node server/server.js",
     "prpl:start": "concurrently \"npm:prpl:server\" \"npm:prpl:proxy\"",
-    "prpl:proxy": "cd server/http2-proxy && ./nghttpx -f127.0.0.1,8443 -b127.0.0.1,8080 server.key server.crt --no-ocsp",
-    "start": "concurrently \"npm:prpl:watch\" \"npm:prpl:start\"",
+    "prpl:proxy": "cd server/http2-proxy && nghttpx -f127.0.0.1,8443 -b127.0.0.1,8080 server.key server.crt --no-ocsp",
+    "dev": "concurrently \"npm:prpl:watch\" \"npm:prpl:start\"",
+    "start": "npm run prpl:build && npm run prpl:start",
     "precommit": "lint-staged",
     "prettify": "prettier --write ./**/*.{json,html,css,scss,md,js,ts}"
   },
