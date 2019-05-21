@@ -14,7 +14,7 @@
 
 All docs & slides are availables at:
 
-> [fire.noelmace.com](https://fire.noelmace.com)
+> **[fire.noelmace.com](http://fire.noelmace.com)**
 
 ## Light it up!
 
@@ -64,7 +64,7 @@ To do so, run:
 1. `npm run api`
 1. (in another terminal) `npm run step --step=<dirname>`
 
-## <img src="./docs/assets/images/fire/fire-warning.png" width="30"> Warning: May Contain Hot Topics
+## :warning: Warning: May Contain Hot Topics
 
 This project may contain a bunch of work in progress as I use it mainly to experiment new modern web capabilities and approach, in order to demonstrate them during my talks & workshops. As a result, there is a good chance that some part of it simply doesn't work, or that the documentation will not be sufficient by itself to allow a complete understanding. _This is especially the case with "steps" (`/steps` & `npm run step --step="step-name"`)._
 
