@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="peopleApp">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,10 +19,12 @@
     <link rel="manifest" href="/manifest.json" />
 
     <link rel="stylesheet" href="/css/material-icons.css" crossorigin="anonymous" />
-
     <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" crossorigin="anonymous" />
+    
     <link rel="shortcut icon" href="/img/favicon.ico" />
+
     <script src="/mdl/material.min.js"></script>
+
     <script>
       // Load and register pre-caching Service Worker
       if ('serviceWorker' in navigator) {
@@ -46,13 +48,15 @@
   </head>
 
   <body>
-    <!-- Always shows a header, even in smaller screens. -->
     <people-app></people-app>
+
     <noscript>
       Please enable JavaScript to view this website.
     </noscript>
+    
     <!-- Load webcomponents-loader.js to check and load any polyfills your browser needs -->
     <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    
     <!-- Built with love using PWA Starter Kit -->
     <script type="module" src="common/app/components/PeopleApp.js" crossorigin="anonymous"></script>
   </body>
