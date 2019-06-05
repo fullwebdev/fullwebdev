@@ -208,6 +208,9 @@ Specifics
   width: 100%;
   color: white; }
 
+.reveal .slides section.light *, .reveal .slides section.light h1 {
+  color: white; }
+
 /* Overrides */
 .reveal pre code {
   max-height: 1000px; }

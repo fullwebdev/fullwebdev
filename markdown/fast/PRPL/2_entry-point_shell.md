@@ -16,23 +16,6 @@ The App Entrypoint should have minimal static dependencies, in other words, not 
 
 ##==##
 
-# Shell
-
-include everything needed for first paint
-
-![center h-800](./assets/images/app_shell.png)
-
-© [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) [Google](https://developers.google.com/web/fundamentals/architecture/app-shell)
-<!-- .element class="copyright" -->
-
-##==##
-
-# Should the entry point include the app shell ? 
-
-![center h-800](./assets/images/PRPL/nested-tables.jpg)
-
-##==##
-
 <!-- .slide: class="flex-row"-->
 
 # Conditionally loads polyfills
@@ -57,3 +40,21 @@ see the [webcomponentsjs README](https://github.com/webcomponents/webcomponentsj
 other polyfills (like fetch) needs a "custom" approach
 see [Loading Polyfills only when needed](https://philipwalton.com/articles/loading-polyfills-only-when-needed/) for example
 or even the (deprecated) npm package [dynamic-polyfill](https://github.com/PascalAOMS/dynamic-polyfill)
+
+##==##
+
+# Shell
+
+include everything needed for first paint
+
+![center h-800](./assets/images/app_shell.png)
+
+© [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) [Google](https://developers.google.com/web/fundamentals/architecture/app-shell)
+
+<!-- .element class="copyright" -->
+
+##==##
+
+# Should the entry point include the app shell ?
+
+![center h-800](./assets/images/PRPL/nested-tables.jpg)

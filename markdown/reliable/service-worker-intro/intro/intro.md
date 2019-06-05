@@ -28,16 +28,3 @@ Pas d’accès au DOM
 Asynchrone (Pas de localstorage ou de XHR synchrone)
 Thread différente du script principal donc non-bloquant
 https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API
-
-##==##
-
-# Support
-
-![center](./assets/images/caniuse_serviceworker.png)
-
-<br>
-<h2 class="center"><a href="https://jakearchibald.github.io/isserviceworkerready/" target="_blank">Is Service Worker Ready ?</a></h2>
-<br>
-
-Notes:
-MàJ: 2018-09-18 - https://caniuse.com/#feat=serviceworkers

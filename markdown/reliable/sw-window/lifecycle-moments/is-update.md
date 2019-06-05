@@ -26,6 +26,12 @@ wb.register();
 
 ##==##
 
+<!-- .slide: data-background="black" -->
+
+![h-800](assets/images/ok-folks-lets-dive-in.jpg)
+
+##==##
+
 <!-- .slide: class="with-code flex-row" -->
 
 # Explanation

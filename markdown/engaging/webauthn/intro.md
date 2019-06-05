@@ -33,6 +33,10 @@ mais quid de la sécu ?
 
 ##==##
 
+![h-150](assets/images/webauthn/google-closed-beta.png)
+
+##==##
+
 <!-- .slide: data-background="./assets/images/webauthn/mess.jpeg" class="full-center transition" -->
 
 Notes:

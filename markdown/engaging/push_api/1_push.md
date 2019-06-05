@@ -29,15 +29,6 @@ Complémentaires
 
 ##==##
 
-# Support
-
-![center h-800](./assets/images/caniuse_push.png)
-
-Notes:
-MAJ: 2018-08-31
-
-##==##
-
 <!-- .slide: class="flex-row" -->
 
 # Partie client
