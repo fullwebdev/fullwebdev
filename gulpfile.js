@@ -34,7 +34,7 @@ gulp.task('prpl-server:build', () => {
  * Copies the assets to the server directory
  */
 gulp.task('prpl-server:assets', () => {
-  return gulp.src(['img/**', 'css/**', 'mdl/**'], { base: '.' }).pipe(gulp.dest('server/build'));
+  return gulp.src(['img/**', 'css/**', 'mdl/**', 'manifest.json'], { base: '.' }).pipe(gulp.dest('server/build'));
 });
 
 gulp.task('prpl-server', gulp.series('prpl-server:clean', 'prpl-server:build', 'prpl-server:assets'));
