@@ -1,3 +1,6 @@
 [submodule "slides-reveal"]
 	path = slides-reveal
 	url = https://github.com/noelmace/wof-reveal.git
+[submodule "prpl-demo"]
+	path = prpl-demo
+	url = git@github.com:noelmace/prpl-demo.git
