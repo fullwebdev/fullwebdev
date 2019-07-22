@@ -1,3 +1,3 @@
-[submodule "new-docs"]
-	path = docs
-	url = https://github.com/noelmace/web-on-fire-docs.git
+[submodule "slides-reveal"]
+	path = slides-reveal
+	url = https://github.com/noelmace/wof-reveal.git
