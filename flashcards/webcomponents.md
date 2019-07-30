@@ -102,6 +102,119 @@ browsers](https://caniuse.com/#feat=custom-elementsv1).
 </p>
 </details>
 
+<details>
+<summary>What global object permits to manage Custom Elements registration?</summary>
+<p>
+
+```javascript
+Window.customElements
+```
+
+</p>
+</details>
+
+<details>
+<summary>
+How using a Custom Element is different from using any other HTML element?
+</summary>
+<p>
+
+**It's NOT!**
+
+A Custom Element constructor **needs** to extend the
+[`HTMLElement`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+interface in order to inherit the entire DOM API!
+
+</p>
+</details>
+
+<details>
+<summary>Define a <code>&lt;dumb-element&gt;</code> Custom Element.</summary>
+<p>
+
+```javascript
+class DumbElement extends HTMLElement {...}
+window.customElements.define('dumb-element', DumbElement);
+
+// Or use an anonymous class if you don't want a named constructor in current scope.
+window.customElements.define('dumb-element', class extends HTMLElement {...});
+```
+
+</p>
+</details>
+
+<details>
+<summary>What do you define using a CE class?</summary>
+<p>
+
+The CE public JavaScript API and some of its behavior.
+
+For example, you could define how to "open" an `<app-drawer>` CE like so:
+
+```javascript
+class AppDrawer extends HTMLElement {
+
+  // A getter/setter for an open property.
+  get open() {
+    return this.hasAttribute('open');
+  }
+
+  set open(val) {
+    // Reflect the value of the open property as an HTML attribute.
+    if (val) {
+      this.setAttribute('open', '');
+    } else {
+      this.removeAttribute('open');
+    }
+    this.toggleDrawer();
+  }
+
+    // Can define constructor arguments if you wish.
+  constructor() {
+    super();
+
+    // Setup a click listener on <app-drawer> itself.
+    this.addEventListener('click', e => {
+      this.toggleDrawer();
+    });
+  }
+
+  toggleDrawer() {
+    ...
+  }
+}
+```
+
+</p>
+</details>
+
+<details>
+<summary>
+What should you always do if you define a constructor for a CE class?
+</summary>
+<p>
+
+If you define a constructor, always call super() first!
+This is specific to CE and required by the spec.
+
+</p>
+</details>
+
+<details>
+<summary>What are the 3 rules your have to follow when defining a CE?</summary>
+<p>
+
+1. The name of a custom element **must contain a dash** (-). 
+> So `<x-tags>`, `<my-element>`, and `<my-awesome-app>` are all valid names, while `<tabs>` and `<foo_bar>` are not.
+> This requirement is so the HTML parser can distinguish custom elements from regular elements. It also ensures forward compatibility when new tags are added to HTML.
+2. You can't register the same tag more than **once**.
+> Attempting to do so will throw a DOMException.
+3. Custom elements cannot be **self-closing**.
+> This is because HTML only allows a few elements to be self-closing. Always write a closing tag (<app-drawer></app-drawer>).
+
+</p>
+</details>
+
 <br>
 
 > **references**
