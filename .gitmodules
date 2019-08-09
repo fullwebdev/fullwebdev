@@ -4,3 +4,6 @@
 [submodule "prpl-demo"]
 	path = prpl-demo
 	url = git@github.com:noelmace/prpl-demo.git
+[submodule "flashcards-app"]
+	path = flashcards-app
+	url = git@github.com:noelmace/devcards.git
