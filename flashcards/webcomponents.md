@@ -224,6 +224,93 @@ This is specific to CE and required by the spec.
 > - [Custom Elements v1](https://developers.google.com/web/fundamentals/web-components/customelements)
 >   by [Eric Bidelman](https://developers.google.com/web/resources/contributors/ericbidelman), Google
 
+## Templates & Slots
+
+<details>
+<summary>What are the attributes and elements permitting to use slots?</summary>
+<p>
+
+Inside a template or your WC, use the [`<slot>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot) element
+in order to define a placeholder:
+
+```javascript
+customElements.define(
+  'my-element',
+  class extends HTMLElement {
+    constructor() {
+      super();
+
+      const shadow = this.attachShadow({ mode: 'open' });
+      const container = document.createElement('div');
+
+      container.innerHTML = `
+        <slot name="title"></slot>
+      `;
+
+      shadow.appendChild(container);
+    }
+  }
+);
+```
+
+Use the [`slot`](https://developer.mozilla.org/fr/docs/Web/HTML/Attributs_universels#attr-slot) attribute to define the
+content for this slot:
+
+```html
+<my-element>
+  <span slot="title">Hello World!</span>
+</my-element>
+```
+
+You can also use one anonymous slot by removing the `name` attribute and the `slot` attribute value.
+
+</p>
+</details>
+
+## Styling
+
+<details>
+<summary>How could you selectively expose chosen elements from their shadow tree to the outside page for styling purposes?</summary>
+<p>
+
+You can use [CSS Shadow Parts](https://drafts.csswg.org/css-shadow-parts/) for that!
+
+The **experimental** [`::part`](https://developer.mozilla.org/en-US/docs/Web/CSS/::part) CSS pseudo-element permits to
+select an element within a shadow tree that has a matching `part` attribute.
+
+Here is an example:
+
+**light tree**
+
+```html
+<style>
+  custom-element::part(hello-world) {
+    color: red;
+  }
+</style>
+<custom-element></custom-element>
+```
+
+**shadow tree (in your WC)**
+
+```html
+<div part="hello-world">
+  Hello World!
+</div>
+```
+
+> :warning: **highly experimental**
+>
+> This feature is only at the first stage for W3C specification ("First Public Working Draft").
+> It's only supported by Chrome 73 and Firefox 69 behind the `layout.css.shadow-parts.enabled` preference.
+> Check the [explainer](https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md),
+> [Editor's Draft](https://drafts.csswg.org/css-shadow-parts/) and
+> [issues](https://github.com/w3c/csswg-drafts/labels/css-shadow-parts-1) before using it in production, and be prepared
+> for changes!
+
+</p>
+</details>
+
 ## _Acknowledgments_
 
 Portions of this flashcards are modifications based on:
