@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Devcards - Flashcards 4 Devs</title>
+    <meta name="description" content="Devcards - Flashcards for Developers" />
+    <meta name="author" content="Noël Macé" />
+  </head>
+
+  <body>
+    <select id="test-select">
+      <option value="">--Please choose a benchmark to run--</option>
+      <option value="floor">floor</option>
+    </select>
+    <p>Open the console in order to see the result.</p>
+    <script src="./node_modules/lodash/lodash.js"></script>
+    <script src="./node_modules/platform/platform.js"></script>
+    <script src="./node_modules/benchmark/benchmark.js"></script>
+    <script type="module">
+      document.getElementById('test-select').addEventListener('change', e => {
+        const value = e.target.value;
+        if (value) {
+          const file = `./${e.target.value}.js`;
+          console.log(`loading ${file} ...`);
+          import(file);
+        }
+      });
+    </script>
+  </body>
+</html>

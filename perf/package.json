@@ -1,0 +1,16 @@
+{
+  "name": "wof-perf-tests",
+  "version": "0.0.0",
+  "description": "performance testing for Modern Web",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js $*",
+    "serve": "http-server"
+  },
+  "author": "Noël Macé",
+  "license": "MIT",
+  "dependencies": {
+    "benchmark": "^2.1.4",
+    "http-server": "^0.11.1"
+  }
+}
