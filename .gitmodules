@@ -10,3 +10,6 @@
 [submodule "slides-modern-vanilla"]
 	path = slides-modern-vanilla
 	url = git@github.com:noelmace/slides-modern-vanilla.git
+[submodule "www"]
+	path = www
+	url = git@github.com:noelmace/wwwwof.git
