@@ -1,5 +1,17 @@
 const sass = require('node-sass');
 
+const distFiles = [
+	'*.html',
+	'reveal-config.js',
+	'markdown/**',
+	'favicon.png',
+	'css/**',
+	'js/**',
+	'lib/**',
+	'assets/**',
+	'plugin/**',
+];
+
 module.exports = grunt => {
 
 	require('load-grunt-tasks')(grunt);
@@ -34,7 +46,7 @@ module.exports = grunt => {
 			},
 			build: {
 				src: 'js/reveal.js',
-				dest: 'js/reveal.min.js'
+				dest: 'dist/js/reveal.min.js'
 			}
 		},
 
@@ -45,24 +57,24 @@ module.exports = grunt => {
 			},
 			core: {
 				src: 'css/reveal.scss',
-				dest: 'css/reveal.css'
+				dest: 'dist/css/reveal.css'
 			},
 			themes: {
 				expand: true,
 				cwd: 'css/theme/source',
 				src: ['*.sass', '*.scss'],
-				dest: 'css/theme',
+				dest: 'dist/css/theme',
 				ext: '.css'
 			},
 			custom: {
 				src: 'css/custom/source/index.scss',
-				dest: 'css/custom/index.css'
+				dest: 'dist/css/custom/index.css'
 			}
 		},
 
 		autoprefixer: {
 			core: {
-				src: 'css/reveal.css'
+				src: 'dist/css/reveal.css'
 			}
 		},
 
@@ -71,8 +83,8 @@ module.exports = grunt => {
 				compatibility: 'ie9'
 			},
 			compress: {
-				src: 'css/reveal.css',
-				dest: 'css/reveal.min.css'
+				src: 'dist/css/reveal.css',
+				dest: 'dist/css/reveal.min.css'
 			}
 		},
 
@@ -108,7 +120,7 @@ module.exports = grunt => {
 			server: {
 				options: {
 					port: port,
-					base: root,
+					base: 'dist',
 					livereload: true,
 					open: true,
 					useAvailablePort: true
@@ -118,16 +130,25 @@ module.exports = grunt => {
 
 		zip: {
 			bundle: {
-				src: [
-					'index.html',
-					'css/**',
-					'js/**',
-					'lib/**',
-					'images/**',
-					'plugin/**',
-					'**.md'
-				],
-				dest: 'reveal-js-presentation.zip'
+				src: distFiles,
+				dest: 'dist/reveal-js-presentation.zip'
+			}
+		},
+
+		copy: {
+			dist: {
+				src: distFiles,
+				dest: 'dist/'
+			},
+			html: {
+				src: root.map(path => path + '/*.html'),
+				dest: 'dist/'
+			}
+		},
+
+		clean: {
+			build: {
+				src: ['dist']
 			}
 		},
 
@@ -160,7 +181,8 @@ module.exports = grunt => {
 				tasks: 'test'
 			},
 			html: {
-				files: root.map(path => path + '/*.html')
+				files: root.map(path => path + '/*.html'),
+				tasks: 'copy:html'
 			},
 			markdown: {
 				files: root.map(path => path + '/*.md')
@@ -173,7 +195,7 @@ module.exports = grunt => {
 	});
 
 	// Default task
-	grunt.registerTask( 'default', [ 'css', 'js' ] );
+	grunt.registerTask( 'default', [ 'init', 'css', 'js' ] );
 
 	// JS task
 	grunt.registerTask( 'js', [ 'jshint', 'uglify', 'qunit' ] );
@@ -183,6 +205,9 @@ module.exports = grunt => {
 
 	// Custom CSS
 	grunt.registerTask( 'css-custom', [ 'sass:custom' ] );
+
+	// clean dist
+	grunt.registerTask( 'init', [ 'clean:build', 'copy:dist' ] );
 
 	// Core framework CSS
 	grunt.registerTask( 'css-core', [ 'sass:core', 'autoprefixer', 'cssmin' ] );
@@ -194,9 +219,9 @@ module.exports = grunt => {
 	grunt.registerTask( 'package', [ 'default', 'zip' ] );
 
 	// Serve presentation locally
-	grunt.registerTask( 'serve', [ 'connect', 'watch' ] );
+	grunt.registerTask( 'serve', ['default', 'connect', 'watch' ] );
 
 	// Run tests
 	grunt.registerTask( 'test', [ 'jshint', 'qunit' ] );
-
+ 
 };
