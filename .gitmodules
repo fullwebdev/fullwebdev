@@ -13,3 +13,6 @@
 [submodule "www"]
 	path = www
 	url = git@github.com:noelmace/wwwwof.git
+[submodule "deckdeckgo"]
+	path = deckdeckgo
+	url = git@github.com:noelmace/deckdeckgo.git
