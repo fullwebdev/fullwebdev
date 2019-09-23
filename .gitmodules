@@ -12,7 +12,7 @@
 	url = git@github.com:noelmace/slides-modern-vanilla.git
 [submodule "console"]
 	path = console
-	url = git@github.com:noelmace/wof-console.git
+	url = git@github.com:noelmace/wofshow-console.git
 [submodule "deckdeckgo"]
 	path = deckdeckgo
 	url = git@github.com:noelmace/deckdeckgo.git
