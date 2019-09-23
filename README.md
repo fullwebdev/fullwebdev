@@ -1,7 +1,6 @@
 # Web On F.I.R.E.
 
-:fire: **Learning materials for Web's modern capabilities & Progressive Web
-Apps.** :fire:
+> The F.I.R.E. safety kit for everyone! Learn the best new capabilities of the modern web without burning out!
 
 <br>
 
@@ -9,18 +8,35 @@ Apps.** :fire:
 
 <br>
 
-**F**ast, **I**ntegrated, **R**eliable & **E**ngaging Web Apps with
-state-of-the-art techniques.
+F.I.R.E. stand for **F**ast, **I**ntegrated, **R**eliable & **E**ngaging.
+IMO, they are the four pillars of UX, DX (Developer eXperience) & quality everyone should care about when creating Web Apps.
 
-## Docs/slides
+Advocating for their adoption (an thus Web Developers) is one of my main focuses.
+Go check [wof.show](https://wof.show) for more information.
 
-All docs & slides are available at:
+**_This repository is only ment to be an entry point to the other ones I created as part of the "Web on F.I.R.E. Show"._**
+Please refer to the following sub-modules instead.
 
-> **[fire.noelmace.com](http://fire.noelmace.com)**
+## Slides
 
-See [slides-reveal](https://github.com/noelmace/wof-reveal) for more details.
+- **slides-modern-vanilla**: Brace Yourself, :icecream: Vanilla is coming ... back :sunglasses:!
+  - :man_teacher: [modern-vanilla.wof.show](https://modern-vanilla.wof.show)
+  - :man_technologist: :octocat:/[noelmace/slides-modern-vanilla](https://github.com/noelmace/slides-modern-vanilla)
+  - made with [**deckdeckgo**](http://deckdeckgo.com/)
+- **reveal-slides**: Previous slides made with RevealJS
+  - :man_teacher: [reveal.wof.show](https://reveal.wof.show)
+  - :man_technologist: :octocat:/[noelmace/wof-reveal](https://github.com/noelmace/wof-reveal)
 
-## Demos
+## Experiments/Demos
 
-Check out [prpl-demo](https://github.com/noelmace/prpl-demo) for a demo of some
-features, including P.R.P.L.
+- [**flashcards-app**](https://github.com/noelmace/devcards): Vanilla & Web Components
+- [**prpl-demo**](https://github.com/noelmace/prpl-demo): some old demos, including a P.R.P.L. one from my talk [_PRPL: it's time to join these fantastic four!_](https://reveal.wof.show/BoW-PRPL-2019.html#/)
+
+## Misc
+
+- [**www**](https://github.com/noelmace/wofshow-console): web.show website
+
+### Sandbox
+
+- [**flashcards**](./flashcards): writing some flashcards on Github using markdown :man_shrugging:
+- [**perf**](./perf): some Node & Web Browsers performance tests
