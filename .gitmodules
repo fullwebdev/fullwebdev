@@ -11,7 +11,7 @@
 	path = slides-modern-vanilla
 	url = git@github.com:noelmace/slides-modern-vanilla.git
 [submodule "www"]
-	path = www
+	path = console
 	url = git@github.com:noelmace/wwwwof.git
 [submodule "deckdeckgo"]
 	path = deckdeckgo
