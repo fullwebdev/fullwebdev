@@ -34,9 +34,8 @@ Please refer to the following sub-modules instead.
 
 ## Misc
 
-- [**www**](https://github.com/noelmace/wofshow-console): web.show website
+- [**console**](https://github.com/noelmace/wofshow-console): [wof.show](https://wof.show) "console" web app
 - [**abstracts**](https://github.com/noelmace/abstracts): talks abstracts
-
 
 ### Sandbox
 
