@@ -10,9 +10,9 @@
 [submodule "slides-modern-vanilla"]
 	path = slides-modern-vanilla
 	url = git@github.com:noelmace/slides-modern-vanilla.git
-[submodule "www"]
+[submodule "console"]
 	path = console
-	url = git@github.com:noelmace/wwwwof.git
+	url = git@github.com:noelmace/wof-console.git
 [submodule "deckdeckgo"]
 	path = deckdeckgo
 	url = git@github.com:noelmace/deckdeckgo.git
