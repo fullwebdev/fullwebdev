@@ -16,3 +16,6 @@
 [submodule "deckdeckgo"]
 	path = deckdeckgo
 	url = git@github.com:noelmace/deckdeckgo.git
+[submodule "abstracts"]
+	path = abstracts
+	url = git@github.com:noelmace/abstracts.git
