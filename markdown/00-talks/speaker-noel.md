@@ -10,5 +10,4 @@
 
 ### Developer Advocate
 
-![Bonitasoft](./assets/images/bonitasoft-logo.png)
 <!-- .element style="margin-top: 1em; height: 200px" -->
