@@ -32,10 +32,11 @@ Please refer to the following sub-modules instead.
 - [**flashcards-app**](https://github.com/noelmace/devcards): Vanilla & Web Components
 - [**prpl-demo**](https://github.com/noelmace/prpl-demo): some old demos, including a P.R.P.L. one from my talk [_PRPL: it's time to join these fantastic four!_](https://reveal.wof.show/BoW-PRPL-2019.html#/)
 
-## Misc
+## Websites
 
-- [**console**](https://github.com/noelmace/wofshow-console): [wof.show](https://wof.show) "console" web app
+- [**console**](https://github.com/noelmace/wofshow-console): [console.wof.show](https://console.wof.show) the Wof.Show "console" web app
 - [**abstracts**](https://github.com/noelmace/abstracts): talks abstracts
+- [**www**](https://github.com/noelmace/wwwof): [wof.show](https://wof.show) home page
 
 ### Sandbox
 
