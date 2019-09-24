@@ -19,3 +19,6 @@
 [submodule "abstracts"]
 	path = abstracts
 	url = git@github.com:noelmace/abstracts.git
+[submodule "www"]
+	path = www
+	url = git@github.com:noelmace/wwwof.git
