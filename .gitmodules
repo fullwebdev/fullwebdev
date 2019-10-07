@@ -1,24 +1,24 @@
 [submodule "slides-reveal"]
-	path = slides-reveal
+	path = slides/reveal
 	url = https://github.com/noelmace/wof-reveal.git
 [submodule "prpl-demo"]
-	path = prpl-demo
+	path = demos/people
 	url = git@github.com:noelmace/prpl-demo.git
 [submodule "flashcards-app"]
-	path = flashcards-app
+	path = demos/devcards
 	url = git@github.com:noelmace/devcards.git
 [submodule "slides-modern-vanilla"]
-	path = slides-modern-vanilla
+	path = slides/modern-vanilla
 	url = git@github.com:noelmace/slides-modern-vanilla.git
 [submodule "console"]
-	path = console
+	path = websites/console
 	url = git@github.com:noelmace/wofshow-console.git
 [submodule "deckdeckgo"]
-	path = deckdeckgo
+	path = slides/deckdeckgo
 	url = git@github.com:noelmace/deckdeckgo.git
 [submodule "abstracts"]
-	path = abstracts
+	path = websites/abstracts
 	url = git@github.com:noelmace/abstracts.git
 [submodule "www"]
-	path = www
+	path = websites/www
 	url = git@github.com:noelmace/wwwof.git

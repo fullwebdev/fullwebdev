@@ -19,18 +19,18 @@ Please refer to the following sub-modules instead.
 
 ## Slides
 
-- **slides-modern-vanilla**: Brace Yourself, :icecream: Vanilla is coming ... back :sunglasses:!
+- **modern-vanilla**: Brace Yourself, :icecream: Vanilla is coming ... back :sunglasses:!
   - :man_teacher: [modern-vanilla.wof.show](https://modern-vanilla.wof.show)
   - :man_technologist: :octocat:/[noelmace/slides-modern-vanilla](https://github.com/noelmace/slides-modern-vanilla)
   - made with [**deckdeckgo**](http://deckdeckgo.com/)
-- **reveal-slides**: Previous slides made with RevealJS
+- **reveal**: Previous slides made with RevealJS
   - :man_teacher: [reveal.wof.show](https://reveal.wof.show)
   - :man_technologist: :octocat:/[noelmace/wof-reveal](https://github.com/noelmace/wof-reveal)
 
 ## Experiments/Demos
 
-- [**flashcards-app**](https://github.com/noelmace/devcards): Vanilla & Web Components
-- [**prpl-demo**](https://github.com/noelmace/prpl-demo): some old demos, including a P.R.P.L. one from my talk [_PRPL: it's time to join these fantastic four!_](https://reveal.wof.show/BoW-PRPL-2019.html#/)
+- :construction: [**devcards**](https://github.com/noelmace/devcards): Vanilla & Web Components
+- [**people**](https://github.com/noelmace/prpl-demo): some old demos, including a P.R.P.L. one from my talk [_PRPL: it's time to join these fantastic four!_](https://reveal.wof.show/BoW-PRPL-2019.html#/)
 
 ## Websites
 
@@ -38,7 +38,7 @@ Please refer to the following sub-modules instead.
 - [**abstracts**](https://github.com/noelmace/abstracts): talks abstracts
 - [**www**](https://github.com/noelmace/wwwof): [wof.show](https://wof.show) home page
 
-### Sandbox
+## Misc
 
-- [**flashcards**](./flashcards): writing some flashcards on Github using markdown :man_shrugging:
+- :construction: [**flashcards**](./flashcards): writing some flashcards on Github using markdown :man_shrugging:
 - [**perf**](./perf): some Node & Web Browsers performance tests
