@@ -19,11 +19,15 @@ Please refer to the following sub-modules instead.
 
 ## Slides
 
+- **WoF Conf**: Web of F.I.R.E. conference edition
+  - :man_teacher: [conf.wof.show](conf.wof.show)
+  - :man_technologist: :octocat:/[noelmace/slides-wof-conf](https://github.com/noelmace/slides-wof-conf)
+  - made with [**deckdeckgo**](http://deckdeckgo.com/)
 - **modern-vanilla**: Brace Yourself, :icecream: Vanilla is coming ... back :sunglasses:!
   - :man_teacher: [modern-vanilla.wof.show](https://modern-vanilla.wof.show)
   - :man_technologist: :octocat:/[noelmace/slides-modern-vanilla](https://github.com/noelmace/slides-modern-vanilla)
   - made with [**deckdeckgo**](http://deckdeckgo.com/)
-- **reveal**: Previous slides made with RevealJS
+- **reveal**: (deprecated) slides made with RevealJS
   - :man_teacher: [reveal.wof.show](https://reveal.wof.show)
   - :man_technologist: :octocat:/[noelmace/wof-reveal](https://github.com/noelmace/wof-reveal)
 
