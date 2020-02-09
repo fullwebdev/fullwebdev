@@ -9,7 +9,7 @@
     "test": "grunt test",
     "start": "grunt serve",
     "build": "grunt",
-    "ci:build": "../../check-changed.sh . && npm run build"
+    "ci:build": "../../check-changed.sh . && npm run build || echo \"skipping build\""
   },
   "author": {
     "name": "Noël Macé",
