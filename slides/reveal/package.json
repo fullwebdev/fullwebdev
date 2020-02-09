@@ -1,10 +1,10 @@
 {
-  "name": "reveal.js",
-  "version": "3.8.0",
-  "description": "The HTML Presentation Framework",
-  "homepage": "http://revealjs.com",
-  "subdomain": "revealjs",
-  "main": "js/reveal.js",
+  "name": "@wof/slides-reveal",
+  "version": "1.0.0",
+  "description": "Web on FIRE Slides made with Reveal.js",
+  "homepage": "https://wof.show",
+  "private": true,
+  "main": "index.html",
   "scripts": {
     "test": "grunt test",
     "start": "grunt serve",
@@ -12,13 +12,13 @@
     "ci:build": "../../check-changed.sh . && npm run build"
   },
   "author": {
-    "name": "Hakim El Hattab",
-    "email": "hakim.elhattab@gmail.com",
-    "web": "http://hakim.se"
+    "name": "Noël Macé",
+    "email": "contact@noelmace.com",
+    "web": "https://noelmace.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hakimel/reveal.js.git"
+    "url": "git://github.com/noelmace/web-on-fire.git"
   },
   "engines": {
     "node": ">=9.0.0"
