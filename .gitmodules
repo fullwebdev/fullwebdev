@@ -1,6 +1,3 @@
-[submodule "slides-reveal"]
-	path = slides/reveal
-	url = git@github.com:noelmace/wof-reveal.git
 [submodule "prpl-demo"]
 	path = demos/people
 	url = git@github.com:noelmace/prpl-demo.git
