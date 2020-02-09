@@ -7,6 +7,8 @@
 packages=('slides/reveal')
 
 ROOTWD=$(pwd)
+echo "root set to $ROOTWD"
+
 CI_BUILD_FAILED=true
 
 for pkg in $packages; do
@@ -14,8 +16,8 @@ for pkg in $packages; do
     CI_BUILD_FAILED=false
     cd "$pkg"
     npm run build
-    mv dist "${ROOT_WD}/dist/$pkg"
-    cd "${ROOT_WD}"
+    cp -RT ./dist/* "${ROOTWD}/dist/"
+    cd "${ROOTWD}"
   else
     echo "skipping $pkg build"
   fi
