@@ -24,20 +24,15 @@ if [ -z "$PATHS_TO_SEARCH" ]; then
     exit 2
 fi
 
-# 3. Get the latest commit
-# LATEST_TAG=$(git describe --abbrev=0)
-# LATEST_DEPLOYED_COMMIT=$(git show-ref -s ${LATEST_TAG})
-
-# 4. Get the latest commit in the searched paths
+# 3. Get the latest commit in the searched paths
 LATEST_COMMIT_IN_PATH=$(git log -1 --format=format:%H --full-diff ${PATHS_TO_SEARCH})
 echo "Latest commit in ${PATHS_TO_SEARCH} is ${LATEST_COMMIT_IN_PATH:0:7}"
 
-# 5. Count the number of "build" tags containing this commit
-NUMBER_OF_RELEASES=$(git tag --contains ${LATEST_COMMIT_IN_PATH} | grep build- | wc -l)
+# 4. test of the "latest" tags contains this commit
+NUMBER_OF_RELEASES=$(git tag 'latest' --contains ${LATEST_COMMIT_IN_PATH} | wc -l)
 
 if [ "${NUMBER_OF_RELEASES}" -gt "0" ]; then
-    echo "${LATEST_COMMIT_IN_PATH:0:7} have already been deployed by :"
-    echo "$(git tag --contains ${LATEST_COMMIT_IN_PATH})"
+    echo "${LATEST_COMMIT_IN_PATH:0:7} have already been deployed"
     exit 1
 fi
 

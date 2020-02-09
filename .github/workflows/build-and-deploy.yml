@@ -31,6 +31,7 @@ jobs:
       uses: Xotl/cool-github-releases@v1.1.2
       with:
         mode: download
+        tag_name: latest
         assets: www.tar.gz
         github_token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -46,11 +47,6 @@ jobs:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: ./dist
-    
-    - name: Create git tag
-      run: bash tag-build.sh
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Create archive
       run: |
@@ -58,7 +54,11 @@ jobs:
         tar -cvzf www.tar.gz dist
 
     - name: Publish Github Release
-      uses: ncipollo/release-action@v1
+      uses: "marvinpinto/action-automatic-releases@latest"
       with:
-        artifacts: "www.tar.gz"
-        token: ${{ secrets.GITHUB_TOKEN }}
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "latest"
+        prerelease: true
+        title: "Latest deployed build"
+        files: |
+          www.tar.gz
