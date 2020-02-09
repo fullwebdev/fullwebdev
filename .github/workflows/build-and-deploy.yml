@@ -24,19 +24,39 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-node-
 
-    - run: npm ci
+    - name: Install dependencies
+      run: npm ci
 
-    - run: |
-        npm run ci:build
+    - name: Download latest build 
+      uses: Xotl/cool-github-releases@v1.1.2
+      with:
+        mode: download
+        assets: www.tar.gz
+        github_token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2
+    - name: Extract latest build
+      run: tar -xvzf www.tar.gz 
+
+    - name: Build
+      run: bash ci-build.sh
+
+    - name: Deploy to gh pages
+      uses: peaceiris/actions-gh-pages@v2.10.1
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: ./dist
     
-    - name: Tag
+    - name: Create git tag
       run: bash tag-build.sh
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Create archive
+      run: tar -cvzf dist
+
+    - name: Publish Github Release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "www.tar.gz"
+        token: ${{ secrets.GITHUB_TOKEN }}
