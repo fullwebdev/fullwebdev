@@ -4,19 +4,32 @@
 ## nor to return success if one or more (but not all) scripts failed
 
 ## TODO: use jq via https://github.com/awesome-global-contributions/action-yq
-packages=('slides/reveal')
+PACKAGES=('slides/reveal')
+ROOT_DISTS=('slides/reveal')
+
+NBR_PACKAGES=${#PACKAGES[@]}
+NBR_ROOT_DISTS=${#PACKAGES[@]}
+
+if [ ${NBR_PACKAGES} -neq ${NBR_ROOT_DISTS} ]; then
+  echo "Configuration error"
+  exit 2
+fi
 
 ROOTWD=$(pwd)
 echo "root set to $ROOTWD"
 
 CI_BUILD_FAILED=true
 
-for pkg in $packages; do
+for (( i=0; i<${NBR_PACKAGES}; i++ )); do
+  pkg="${PACKAGES[$i]}"
+  root_dist="${ROOTWD}/dist/${ROOT_DISTS[$i]}"
   if (bash ./check-changed.sh "$pkg"); then
     CI_BUILD_FAILED=false
     cd "$pkg"
     npm run build
-    cp -RT ./dist/* "${ROOTWD}/dist/"
+    rm -rf "${root_dist}"
+    mkdir -p "${root_dist}"
+    cp -RT ./dist "${root_dist}"
     cd "${ROOTWD}"
   else
     echo "skipping $pkg build"
@@ -24,6 +37,6 @@ for pkg in $packages; do
 done
 
 if ${CI_BUILD_FAILED}; then
-  echo "ALL builds failed"
+  echo "Nothing to build!"
   exit 1
 fi
