@@ -1,0 +1,15 @@
+{
+  "name": "@wof/root",
+  "version": "2.0.0-alpha.1",
+  "private": true,
+  "scripts": {
+    "ci:build": "lerna run ci:build",
+    "postinstall": "lerna bootstrap",
+    "release": "standard-version",
+    "postrelease": "git push --follow-tags"
+  },
+  "devDependencies": {
+    "lerna": "^3.20.2",
+    "standard-version": "^7.1.0"
+  }
+}
