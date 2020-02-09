@@ -57,7 +57,7 @@ jobs:
         tar -cvzf www.tar.gz dist
 
     - name: Publish Github Release
-      uses: "marvinpinto/action-automatic-releases@latest"
+      uses: "marvinpinto/action-automatic-releases@v0.3.0"
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         automatic_release_tag: "latest"
