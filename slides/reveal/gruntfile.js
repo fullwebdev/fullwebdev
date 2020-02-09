@@ -46,7 +46,7 @@ module.exports = grunt => {
 			},
 			build: {
 				src: 'js/reveal.js',
-				dest: '../../dist/slides/reveal/js/reveal.min.js'
+				dest: 'dist/slides/reveal/js/reveal.min.js'
 			}
 		},
 
@@ -57,24 +57,24 @@ module.exports = grunt => {
 			},
 			core: {
 				src: 'css/reveal.scss',
-				dest: '../../dist/slides/reveal/css/reveal.css'
+				dest: 'dist/slides/reveal/css/reveal.css'
 			},
 			themes: {
 				expand: true,
 				cwd: 'css/theme/source',
 				src: ['*.sass', '*.scss'],
-				dest: '../../dist/slides/reveal/css/theme',
+				dest: 'dist/slides/reveal/css/theme',
 				ext: '.css'
 			},
 			custom: {
 				src: 'css/custom/source/index.scss',
-				dest: '../../dist/slides/reveal/css/custom/index.css'
+				dest: 'dist/slides/reveal/css/custom/index.css'
 			}
 		},
 
 		autoprefixer: {
 			core: {
-				src: '../../dist/slides/reveal/css/reveal.css'
+				src: 'dist/slides/reveal/css/reveal.css'
 			}
 		},
 
@@ -83,8 +83,8 @@ module.exports = grunt => {
 				compatibility: 'ie9'
 			},
 			compress: {
-				src: '../../dist/slides/reveal/css/reveal.css',
-				dest: '../../dist/slides/reveal/css/reveal.min.css'
+				src: 'dist/slides/reveal/css/reveal.css',
+				dest: 'dist/slides/reveal/css/reveal.min.css'
 			}
 		},
 
@@ -120,7 +120,7 @@ module.exports = grunt => {
 			server: {
 				options: {
 					port: port,
-					base: '../../dist/slides/reveal',
+					base: 'dist/slides/reveal',
 					livereload: true,
 					open: true,
 					useAvailablePort: true
@@ -131,24 +131,24 @@ module.exports = grunt => {
 		zip: {
 			bundle: {
 				src: distFiles,
-				dest: '../../dist/slides/reveal/reveal-js-presentation.zip'
+				dest: 'dist/slides/reveal/reveal-js-presentation.zip'
 			}
 		},
 
 		copy: {
 			dist: {
 				src: distFiles,
-				dest: '../../dist/slides/reveal/'
+				dest: 'dist/slides/reveal/'
 			},
 			html: {
 				src: root.map(path => path + '/*.html'),
-				dest: '../../dist/slides/reveal/'
+				dest: 'dist/slides/reveal/'
 			}
 		},
 
 		clean: {
 			build: {
-				src: ['../../dist/slides/reveal']
+				src: ['dist/slides/reveal']
 			}
 		},
 
