@@ -1,0 +1,11 @@
+{
+  "name": "@wof/root",
+  "version": "2.0.0-alpha.1",
+  "private": true,
+  "scripts": {
+    "ci:build": "lerna run ci:build"
+  },
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  }
+}
