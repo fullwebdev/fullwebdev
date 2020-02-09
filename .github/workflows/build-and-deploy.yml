@@ -53,7 +53,9 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Create archive
-      run: tar -cvzf dist
+      run: |
+        rm www.tar.gz
+        tar -cvzf www.tar.gz dist
 
     - name: Publish Github Release
       uses: ncipollo/release-action@v1
