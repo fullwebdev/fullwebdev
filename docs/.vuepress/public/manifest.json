@@ -1,6 +1,6 @@
 {
-  "name": "The Web on FIRE Show",
-  "short_name": "WoF Show",
+  "name": "Web on FIRE",
+  "short_name": "WoF",
   "display": "standalone",
   "theme_color": "#ed6c30",
   "background_color": "#ffffff",
