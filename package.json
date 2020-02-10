@@ -14,10 +14,14 @@
     "postinstall": "lerna bootstrap",
     "release": "standard-version",
     "release:test": "standard-version --dry-run",
-    "postrelease": "git push --follow-tags"
+    "postrelease": "git push --follow-tags",
+    "start": "lerna run start --scope=@wof/docs",
+    "build": "bash build.sh -f",
+    "postbuild": "http-server dist -o"
   },
   "devDependencies": {
     "lerna": "^3.20.2",
-    "standard-version": "^7.1.0"
+    "standard-version": "^7.1.0",
+    "http-server": "^0.12.1"
   }
 }
