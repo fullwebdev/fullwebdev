@@ -69,3 +69,15 @@ Feel free to suggest modifications by clicking on the "Edit page" link that you 
 
 - :construction: [**flashcards**](./misc/flashcards): writing some flashcards on Github using markdown :man_shrugging:
 - [**perf**](./misc/perf): some Node & Web Browsers performance tests
+
+## License
+
+© Copyright 2020 [Noël Macé](mailto:contact@noelmace.com)
+
+### Docs
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Except as otherwise noted, all documentation is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
+### Code
+
+Except as otherwise notes, all code (including code samples) is licensed under a [MIT license](./LICENSE).
