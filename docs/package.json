@@ -1,0 +1,23 @@
+{
+  "name": "@wof/docs",
+  "private": true,
+  "scripts": {
+    "build": "vuepress build .",
+    "start": "vuepress dev ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noelmace/web-on-fire.git"
+  },
+  "author": "Noel Macé",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noelmace/web-on-fire/issues"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^1.0.0-alpha.30",
+    "@vuepress/plugin-pwa": "^1.2.0",
+    "@github/clipboard-copy-element": "^1.1.2",
+    "vuepress": "^1.2.0"
+  }
+}
