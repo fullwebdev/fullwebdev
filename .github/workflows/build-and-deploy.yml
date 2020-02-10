@@ -40,7 +40,7 @@ jobs:
 
     - name: Build
       run: |
-        bash ci-build.sh
+        bash build.sh
         cp ./CNAME ./dist/CNAME
 
 

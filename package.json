@@ -17,7 +17,7 @@
     "postinstall": "lerna bootstrap",
     "release": "standard-version",
     "postrelease": "git push --follow-tags",
-    "build": "rm -rf ./dist && npm run vuepress:build && npm run codelabs:build",
+    "build:docs": "npm run vuepress:build && npm run codelabs:build",
     "codelabs:build": "node build-codelabs.js",
     "vuepress:build": "vuepress build docs",
     "vuepress:start": "vuepress dev docs"
