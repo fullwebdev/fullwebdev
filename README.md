@@ -25,6 +25,14 @@ This monorepo host a lot of things! Go check the following chapters for more det
 > :information_source: I'm currently in the process of migrating all my related projects to this monorepo.
 > In the meantime, most of them are provided as submodules.
 
+## Docs
+
+> :construction: Work in progress :construction:
+
+The [docs](./docs) permits to generate the [next.wof.show](https://next.wof.show) website using [Vuepress](https://vuepress.vuejs.org/). It should replace the current [wof.show](https://wof.show) website soon enough, making everything simpler for everyone.
+
+Feel free to suggest modifications by clicking on the "Edit page" link that you will find at the bottom of each page.
+
 ## Slides
 
 - **WoF Conf**: Web of F.I.R.E. conference edition
@@ -36,15 +44,21 @@ This monorepo host a lot of things! Go check the following chapters for more det
   - :man_technologist: :octocat:/[noelmace/slides-modern-vanilla](https://github.com/noelmace/slides-modern-vanilla)
   - made with [**deckdeckgo**](http://deckdeckgo.com/)
 - **reveal**: (deprecated) slides made with RevealJS
-  - :man_teacher: [slides](https://noelmace.github.io/web-on-fire/slides/reveal/index.html)
-  - :man_technologist: :octocat:/[slides/reveal](./slides/reveal)
+  - :man_teacher: [next.wof.show](http://next.wof.show/slides/reveal/)
+  - :man_technologist: [slides/reveal](./slides/reveal)
+
+## Codelabs
+
+- :man_teacher: [next.wof.show](http://next.wof.show/codelabs/)
+- :man_technologist: [packages/codelabs](./packages/codelabs)
+- made with [Google Codelab Tools](https://github.com/googlecodelabs/tools)
 
 ## Experiments/Demos
 
 - [**devcards**](https://github.com/noelmace/devcards): Vanilla & Web Components
 - [**people**](https://github.com/noelmace/prpl-demo): some old demos, including a P.R.P.L. one from my talk [_PRPL: it's time to join these fantastic four!_](https://reveal.wof.show/BoW-PRPL-2019.html#/)
 
-## Websites
+## Other Websites
 
 - [**console**](https://github.com/noelmace/wofshow-console): [console.wof.show](https://console.wof.show) the Wof.Show "console" web app
 - [**abstracts**](https://github.com/noelmace/abstracts): talks abstracts
