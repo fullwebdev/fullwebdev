@@ -8,9 +8,9 @@ PACKAGES=('slides/reveal')
 ROOT_DISTS=('slides/reveal')
 
 NBR_PACKAGES=${#PACKAGES[@]}
-NBR_ROOT_DISTS=${#PACKAGES[@]}
+NBR_ROOT_DISTS=${#ROOT_DISTS[@]}
 
-if [ ${NBR_PACKAGES} -neq ${NBR_ROOT_DISTS} ]; then
+if [[ "${NBR_PACKAGES}" -ne "${NBR_ROOT_DISTS}" ]]; then
   echo "Configuration error"
   exit 2
 fi
