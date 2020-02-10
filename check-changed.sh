@@ -14,10 +14,11 @@ set -e
 
 # 1. Get all the arguments of the script
 # https://unix.stackexchange.com/a/197794
-PATHS_TO_SEARCH="$*"
+PATH_TO_SEARCH="$1"
+TAG_NAME="$2"
 
 # 2. Make sure the paths to search are not empty
-if [ -z "$PATHS_TO_SEARCH" ]; then
+if [ -z "$PATH_TO_SEARCH" ]; then
     echo "Please provide the paths to search for."
     echo "Example usage:"
     echo "./exit-if-path-not-changed.sh path/to/dir1 path/to/dir2"
@@ -25,11 +26,19 @@ if [ -z "$PATHS_TO_SEARCH" ]; then
 fi
 
 # 3. Get the latest commit in the searched paths
-LATEST_COMMIT_IN_PATH=$(git log -1 --format=format:%H --full-diff ${PATHS_TO_SEARCH})
-echo "Latest commit in ${PATHS_TO_SEARCH} is ${LATEST_COMMIT_IN_PATH:0:7}"
+LATEST_COMMIT_IN_PATH=$(git log -1 --format=format:%H --full-diff ${PATH_TO_SEARCH})
+echo "Latest commit in ${PATH_TO_SEARCH} is ${LATEST_COMMIT_IN_PATH:0:7}"
 
 # 4. test of the "latest" tags contains this commit
-NUMBER_OF_RELEASES=$(git tag 'latest' --contains ${LATEST_COMMIT_IN_PATH} | wc -l)
+
+if [ -z "${TAG_NAME}" ]; then
+    echo "Search in releases"
+    SEMVER_REGEX="^v[0-9]+\.[0-9]+\.[0-9]+"
+    NUMBER_OF_RELEASES=$(git tag --contains ${LATEST_COMMIT_IN_PATH} | grep -E ${SEMVER_REGEX} | wc -l)
+else
+    echo "Search in ${TAG_NAME}"
+    NUMBER_OF_RELEASES=$(git tag "${TAG_NAME}" --contains ${LATEST_COMMIT_IN_PATH} | wc -l)
+fi
 
 if [ "${NUMBER_OF_RELEASES}" -gt "0" ]; then
     echo "${LATEST_COMMIT_IN_PATH:0:7} have already been deployed"

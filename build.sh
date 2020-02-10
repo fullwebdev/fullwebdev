@@ -29,7 +29,7 @@ for (( i=0; i<${NBR_PACKAGES}; i++ )); do
   pkg="${PACKAGES[$i]}"
   echo "Package: $pkg"
   root_dist="${ROOTWD}/dist/${ROOT_DISTS[$i]}"
-  bash ./check-changed.sh "$pkg"
+  bash ./check-changed.sh "$pkg" latest
   HAS_CHANGED=$?
 
   ## TODO: refact in order to optimise
