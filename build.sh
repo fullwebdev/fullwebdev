@@ -10,6 +10,11 @@ ROOT_DISTS=('slides/reveal')
 NBR_PACKAGES=${#PACKAGES[@]}
 NBR_ROOT_DISTS=${#ROOT_DISTS[@]}
 
+if [[ "$1" == "-f" ]]; then
+  echo "Force build"
+  FORCE=true
+fi
+
 if [[ "${NBR_PACKAGES}" -ne "${NBR_ROOT_DISTS}" ]]; then
   echo "Configuration error"
   exit 2
@@ -22,8 +27,9 @@ CI_BUILD_FAILED=true
 
 for (( i=0; i<${NBR_PACKAGES}; i++ )); do
   pkg="${PACKAGES[$i]}"
+  echo "Package: $pkg"
   root_dist="${ROOTWD}/dist/${ROOT_DISTS[$i]}"
-  if (bash ./check-changed.sh "$pkg"); then
+  if [[ $FORCE = true ]] || (bash ./check-changed.sh "$pkg"); then
     CI_BUILD_FAILED=false
     cd "$pkg"
     npm run build
