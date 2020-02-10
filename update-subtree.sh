@@ -3,6 +3,12 @@ set -e
 
 # inspired by https://github.com/xedi/action-subtree-sync
 
+PACKAGES=('packages/data-driven-pwa')
+REPOS=('noelmace/data-driven-pwa')
+
+NBR_PACKAGES=${#PACKAGES[@]}
+NBR_REPOS=${#REPOS[@]}
+
 if [ "$1" != "--local" ]; then
   mkdir -p $HOME/.ssh
   
@@ -22,23 +28,42 @@ EOF
 fi
 
 rm -rf /tmp/split
+mkdir -p /tmp/split
 
-echo "Get release repository into split directory"
-git clone github:"noelmace/data-driven-pwa" /tmp/split --bare
+for (( i=0; i<${NBR_PACKAGES}; i++ )); do
+  
+  pkg="${PACKAGES[$i]}"
+  repo="${REPOS[$i]}"
+  echo "== $pkg -> $repo =="
 
-echo "Create the release split branch"
-git subtree split --prefix="packages/data-driven-pwa" --squash -b split
+  bash ./check-changed.sh "$pkg"
+  HAS_CHANGED=$?
 
-echo "Push to the split directory"
-git push /tmp/split split:master
+  if [[ $HAS_CHANGED -eq 0 ]]; then
 
-echo "Push the split directory to the release origin"
-cd /tmp/split
-git push -u origin master
-## TODO: fallback to an update branch if push failed
+    echo "Get release repository into split directory"
+    git clone github:"$repo" /tmp/split/$repo --bare
 
-# Tag the subtree repository
-# git tag "new-subtree-test"
-# git push --tags
+    echo "Create the release split branch"
+    git subtree split --prefix="packages/data-driven-pwa" --squash -b split
 
-# DUN
+    echo "Push to the split directory"
+    git push /tmp/split/$repo split:master
+    git branch -D split
+
+    echo "Push the split directory to $repo"
+    cd /tmp/split/$repo
+    git push -u origin master
+    ## TODO: fallback to an update branch if push failed
+
+    ## only for tags
+    # TAG_NAME=$(basename "${GITHUB_REF}")
+    # echo "Tag ${TAG_NAME} in $repo"
+    # git tag ${TAG_NAME}
+    # git push origin refs/tags/${TAG_NAME} -f
+
+    cd -
+  else
+    echo "no change in "
+  fi
+done
