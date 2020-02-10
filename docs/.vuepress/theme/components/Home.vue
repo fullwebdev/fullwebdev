@@ -41,8 +41,19 @@
         v-if="data.actionText && data.actionLink"
       >
         <NavLink
-          class="action-button"
+          class="action-button button"
           :item="actionLink"
+        />
+      </p>
+
+      <p
+        class="action"
+        v-if="data.langText && data.langLink && data.langIcon"
+      >
+        <NavLink
+          :class="['lang-button', 'button', 'with-icon', 'lang-' + data.langIcon]"
+          class="lang-button button"
+          :item="langLink"
         />
       </p>
     </header>
@@ -92,6 +103,13 @@ export default {
         link: this.data.actionLink,
         text: this.data.actionText
       }
+    },
+
+    langLink () {
+      return {
+        link: this.data.langLink,
+        text: this.data.langText
+      }
     }
   }
 }
@@ -119,18 +137,43 @@ export default {
       font-size 1.6rem
       line-height 1.3
       color lighten($textColor, 40%)
-    .action-button
+    .button
       display inline-block
-      font-size 1.2rem
-      color #fff
-      background-color $accentColor
       padding 0.8rem 1.6rem
       border-radius 4px
       transition background-color .1s ease
       box-sizing border-box
+      &.with-icon:before
+        content: "";
+        display: inline-block;
+        color: #fff;
+        height: 30px;
+        margin-right: 13px;
+        position: relative;
+        top: -2px;
+        vertical-align: middle;
+        width: 30px;
+      &.lang-en:before
+          background: url("/icons/en.svg") no-repeat scroll center center / 100% auto rgba(0, 0, 0, 0);
+      &.lang-fr:before
+          background: url("/icons/fr.svg") no-repeat scroll center center / 100% auto rgba(0, 0, 0, 0);
+    .action-button
+      font-size 1.2rem
+      padding 0.8rem 1.6rem
+      color #fff
+      background-color $accentColor
       border-bottom 1px solid darken($accentColor, 10%)
       &:hover
         background-color lighten($accentColor, 10%)
+    .lang-button
+      font-size 1rem
+      padding .6rem 1rem
+      color #2c3e50
+      background-color $complementaryColor
+      border-bottom 1px solid darken($complementaryColor, 10%)
+      &:hover
+        background-color lighten($complementaryColor, 10%)
+    
   .features
     border-top 1px solid $borderColor
     padding 1.2rem 0
