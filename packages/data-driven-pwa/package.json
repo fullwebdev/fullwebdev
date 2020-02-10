@@ -1,0 +1,19 @@
+{
+  "name": "@wof/data-driven-pwa",
+  "version": "1.0.0-alpha.1",
+  "homepage": "https://wof.show",
+  "private": true,
+  "author": {
+    "name": "Noël Macé",
+    "email": "contact@noelmace.com",
+    "web": "https://noelmace.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/noelmace/web-on-fire.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noelmace/web-on-fire/issues"
+  }
+}

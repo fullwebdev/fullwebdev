@@ -10,6 +10,7 @@ Learn the best new capabilities of the modern web without burning out!
 
 [![release](https://img.shields.io/github/v/tag/noelmace/web-on-fire?sort=semver&include_prereleases&label=release)](https://github.com/noelmace/web-on-fire/blob/master/CHANGELOG.md)
 [![CD](https://github.com/noelmace/web-on-fire/workflows/Deploy/badge.svg)](https://github.com/noelmace/web-on-fire/actions?query=workflow%3ADeploy)
+![Release Subtrees](https://github.com/noelmace/web-on-fire/workflows/Release%20Subtrees/badge.svg)
 
 ![Hendrix burn guitare](https://media.giphy.com/media/SpZEbPjQTTKZa/giphy.gif)
 
