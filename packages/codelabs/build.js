@@ -5,7 +5,7 @@ const markedSync = require('marked');
 const cheerio = require('cheerio');
 const createCodelabIndex = require('./createCodelabIndex');
 
-const outputDir = path.join(__dirname, 'dist', 'codelabs');
+const outputDir = path.join(__dirname, 'dist');
 
 /**
  * @param {string} src
@@ -62,7 +62,7 @@ async function createCodelab(file) {
 }
 
 async function main() {
-  const srcDir = path.join(__dirname, 'codelabs');
+  const srcDir = __dirname;
 
   const codelabs = [];
 
