@@ -6,6 +6,6 @@ Codelabs are step by step tutorials. They teach a specific topic through practic
 
 Learn how to add background sync, notifications and modern web capabilities to a data-driven PWA.
 
-<a href="/codelabs/modern-data-driven/index.html?index=/codelabs/" target="_blank">
+<a href="/codelabs/doc/modern-data-driven/index.html?index=/codelabs/" target="_blank">
   > Go to the codelab
 </a>
