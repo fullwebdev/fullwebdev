@@ -13,6 +13,7 @@
   "scripts": {
     "postinstall": "lerna bootstrap",
     "release": "standard-version",
+    "release:test": "standard-version --dry-run",
     "postrelease": "git push --follow-tags"
   },
   "devDependencies": {
