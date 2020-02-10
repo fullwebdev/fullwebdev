@@ -36,8 +36,10 @@ for (( i=0; i<${NBR_PACKAGES}; i++ )); do
   repo="${REPOS[$i]}"
   echo "== $pkg -> $repo =="
 
+  set +e
   bash ./check-changed.sh "$pkg"
   HAS_CHANGED=$?
+  set -e
 
   if [[ $HAS_CHANGED -eq 0 ]]; then
 
