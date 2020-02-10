@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-alpha.2](https://github.com/noelmace/web-on-fire/compare/v2.0.0-alpha.1...v2.0.0-alpha.2) (2020-02-10)
+
+
+### Features
+
+* init new website & codelab ([5dd2c7a](https://github.com/noelmace/web-on-fire/commit/5dd2c7a7bb1d8e7451e7a8d3aea5e43b66d52795))
+
+
+### Bug Fixes
+
+* **docs:** app name ([0f0d30e](https://github.com/noelmace/web-on-fire/commit/0f0d30e76685d21bf16712698376c1ae98ceb2b2))
+* **docs:** link to codelab ([c77a90f](https://github.com/noelmace/web-on-fire/commit/c77a90fea35c6b566523e07486418fe16852ef70))
+* **slides/reveal:** remove "next" from index ([27812a1](https://github.com/noelmace/web-on-fire/commit/27812a164517f31eba775609156e0c3ef5d2fc58))
+
 ## [2.0.0-alpha.1](https://github.com/noelmace/web-on-fire/compare/v1.0.0...v2.0.0-alpha.1) (2020-02-09)
 
 
