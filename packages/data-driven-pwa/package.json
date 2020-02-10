@@ -1,18 +1,22 @@
 {
   "name": "@wof/data-driven-pwa",
   "version": "1.0.0-alpha.1",
-  "homepage": "https://wof.show",
+  "homepage": "https://next.wof.show/codelabs/doc/modern-data-driven",
   "private": true,
   "author": {
     "name": "Noël Macé",
     "email": "contact@noelmace.com",
     "web": "https://noelmace.com"
   },
+  "description": "WoF codelab project",
+  "keywords": [
+    "codelabs"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/noelmace/web-on-fire.git"
   },
-  "license": "MIT",
+  "license": " Apache-2.0",
   "bugs": {
     "url": "https://github.com/noelmace/web-on-fire/issues"
   }
