@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-alpha.3](https://github.com/noelmace/web-on-fire/compare/v2.0.0-alpha.2...v2.0.0-alpha.3) (2020-02-10)
+
+
+### Features
+
+* **codelabs:** fr version ([f7ed4e1](https://github.com/noelmace/web-on-fire/commit/f7ed4e10fd9bf440d8e76b536cdb78c9916518a3))
+* **docs:** internationalization (fr) ([04f6127](https://github.com/noelmace/web-on-fire/commit/04f6127615d1d9cc28effb5a9ceee63831f8f041))
+
+
+### Bug Fixes
+
+* **docs:** french title ([2a61e37](https://github.com/noelmace/web-on-fire/commit/2a61e375462511cb655d7c5e13d8bb2d5e5343a8))
+* **docs:** remove git clone cmd from homepage ([9f12020](https://github.com/noelmace/web-on-fire/commit/9f1202004015f84d7a3befc9394d9050652dc210))
+
 ## [2.0.0-alpha.2](https://github.com/noelmace/web-on-fire/compare/v2.0.0-alpha.1...v2.0.0-alpha.2) (2020-02-10)
 
 
