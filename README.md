@@ -50,5 +50,5 @@ This monorepo host a lot of things! Go check the following chapters for more det
 
 ## Misc
 
-- :construction: [**flashcards**](./flashcards): writing some flashcards on Github using markdown :man_shrugging:
-- [**perf**](./perf): some Node & Web Browsers performance tests
+- :construction: [**flashcards**](./misc/flashcards): writing some flashcards on Github using markdown :man_shrugging:
+- [**perf**](./misc/perf): some Node & Web Browsers performance tests

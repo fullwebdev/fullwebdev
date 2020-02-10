@@ -1,6 +1,7 @@
 {
   "packages": [
-    "slides/reveal"
+    "slides/reveal",
+    "misc/perf"
   ],
   "version": "independent"
 }
