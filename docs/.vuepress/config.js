@@ -7,7 +7,7 @@ module.exports = {
     },
     '/fr/': {
       lang: 'fr-FR',
-      title: 'WoF Docs',
+      title: 'Web on FIRE',
       description: 'Découvrez les dernières nouveautés de la Plateforme Web avec Noël Macé.'
     }
   },
