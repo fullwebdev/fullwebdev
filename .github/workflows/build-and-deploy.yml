@@ -39,7 +39,10 @@ jobs:
       run: tar -xvzf www.tar.gz 
 
     - name: Build
-      run: bash ci-build.sh
+      run: |
+        bash ci-build.sh
+        cp ./CNAME ./dist/CNAME
+
 
     - name: Deploy to gh pages
       uses: peaceiris/actions-gh-pages@v2.10.1
