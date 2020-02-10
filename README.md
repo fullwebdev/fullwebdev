@@ -9,10 +9,10 @@ Learn the best new capabilities of the modern web without burning out!
 [![Next Website](https://img.shields.io/website?up_message=next.wof.show&url=https%3A%2F%2Fnext.wof.show&label=next%20website)](https://next.wof.show)
 
 [![release](https://img.shields.io/github/v/tag/noelmace/web-on-fire?sort=semver&include_prereleases&label=release)](https://github.com/noelmace/web-on-fire/blob/master/CHANGELOG.md)
-[![CD](https://github.com/noelmace/web-on-fire/workflows/Deploy/badge.svg)](https://github.com/noelmace/web-on-fire/actions?query=workflow%3ADeploy)
-![Release Subtrees](https://github.com/noelmace/web-on-fire/workflows/Release%20Subtrees/badge.svg)
+[![Deploy](https://github.com/noelmace/web-on-fire/workflows/Deploy/badge.svg)](https://github.com/noelmace/web-on-fire/actions?query=workflow%3ADeploy)
+[![Release Subtrees](https://github.com/noelmace/web-on-fire/workflows/Release%20Subtrees/badge.svg)](https://github.com/noelmace/web-on-fire/actions?query=workflow%3A%22Release+Subtrees%22)
 
-![Hendrix burn guitare](https://media.giphy.com/media/SpZEbPjQTTKZa/giphy.gif)
+![Hendrix burn guitare](https://media.giphy.com/media/SpZEbPjQTTKZa/giphy.gif)]
 
 ## About
 
