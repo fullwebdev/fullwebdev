@@ -32,10 +32,6 @@
         {{ data.tagline || $description || 'Welcome to your VuePress site' }}
       </p>
 
-      <clipboard-copy for="homepage-git-clone-command">
-        <code class="language-bash" id="homepage-git-clone-command">git clone https://github.com/noelmace/web-on-fire.git</code>
-      </clipboard-copy>
-
       <p
         class="action"
         v-if="data.actionText && data.actionLink"
@@ -88,10 +84,6 @@ import NavLink from '@theme/components/NavLink.vue';
 
 export default {
   components: { NavLink },
-
-  beforeMount() {
-    import('@github/clipboard-copy-element');
-  },
 
   computed: {
     data () {
