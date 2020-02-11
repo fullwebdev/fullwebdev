@@ -260,3 +260,75 @@ Enfin, rechargez la page : vous constaterez que votre nouvel évènement a bien 
 <aside class="warning">
   Le background sync sous Chrome <a href="https://github.com/GoogleChrome/workbox/issues/1896">peut parfois être capricieux</a>. Si un "Registered Sync" n'apparait pas après que vous ayez créé votre évènement, il s'agit sans doute d'un bug indépendant de l'application. Fermez complètement Chrome (y compris les processus en arrière plan), redémarrez le, et retentez l'opération après avoir supprimé toutes les données de l'application (Clear Storage > Clear site data).
 </aside>
+
+## Informer l'utilisateur de l'enregistement
+
+La potentialité d'une perte de données est toujours source de stress pour vos utilisateurs.
+
+<aside class="special">
+  Votre serviteur en sait quelque chose, étant donné qu'il écrit actuellement ce chapitre pour la seconde fois, suite à un git checkout malencontreux 😓. Ironique n'est-ce pas ?
+</aside>
+
+C'est pourquoi il est indispensable de prendre en compte l'intégralité de leur parcours, de la création de données hors ligne (et donc, leur stockage localement) à l'enregistrement de celles ci côté serveur une fois la connexion retrouvée.
+
+<aside class="warning">
+  Notez bien que sans l'usage des outils de développement et l'accès au serveur, vous auriez été bien incapable de dire, à l'étape précédente, si vos évènements avaient bien été enregistrés.
+</aside>
+
+Ici, notre application est plutôt sommaire. Nous nous contenterons donc d'informer l'utisateur de l'enregistrement de ces données via une notification.
+
+### Afficher une notification
+
+Ajoutez le code suivant à **app/sw.js** :
+
+```javascript
+const showNotification = () => {
+  self.registration.showNotification('Background sync success!', {
+    body: '🎉`🎉`🎉`'
+  });
+};
+```
+
+Comme son nom l'indique, cette fonction fait usage de la Notification API pour afficher une notification "système". Rien de plus.
+
+Pour y faire appel à la reception d'un sync event, ajoutez une option `onSync` à notre BackgroundSyncPlugin, comme suit :
+
+```javascript
+const bgSyncPlugin = new BackgroundSyncPlugin('dashboardr-queue', {
+  onSync: showNotification
+});
+```
+
+### Tester l'application
+
+Répétez maintenant les mêmes opérations qu'à l'étape précédente. Rechargez l'application, activez le service worker via un skipInstall, rechargez à nouveau, puis passez hors (en coupant le serveur et la connection réseau de votre machine). Vous pouvez à présent créer un nouvel évènement.
+
+Réactivez votre connection (serveur, puis machine). Vous verrez alors apparaître la notification.
+
+Mais il semblerait que nous ayons créé une notification trompeuse. Votre évènement n'a pas été enregistré ! Explorez les devtools pour vous en assurer.
+
+### Explication
+
+Par défaut, un BackgroundSyncPlugin a un comportement des plus simple. Il créé un file (queue) par défaut, stocke toutes les appels correspondant à la route à laquelle il a été associé dans celle-ci quand ils échouent, et les rejouent tous à la reception d'un sync event.
+
+Mais l'option `onSync` n'a pas vocation à n'être qu'une simple callback en adition de ce comportement. Elle le remplace.
+
+Ainsi, quand nous avons associé `showNotification` au `onSync` du plugin, nous n'avons pas ajouté un comportement.
+Nous l'avons remplacé.
+
+### Customiser le comportement de Workbox
+
+Pour réparer cette erreur, nous devons reproduire le comportement par défaut du plugin, et donc rejouer tous les appels dans sa file.
+
+Editez `showNotification` pour obtenir le résultat suivant :
+
+```javascript
+const showNotification = ({ queue }) => {
+  queue.replayRequests();
+  self.registration.showNotification('Background sync success!', {
+    body: '🎉`🎉`🎉`'
+  });
+};
+```
+
+Enfin, ré-effectuez le test de l'application précédent, et gardez un œil sur la console et "Network". Votre appel POST sur /api/add sera cette fois-ci rejoué correctement une fois la connexion retrouvée, et votre évènement bien enregistré.
