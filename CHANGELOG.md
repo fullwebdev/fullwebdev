@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-alpha.5](https://github.com/noelmace/web-on-fire/compare/v2.0.0-alpha.4...v2.0.0-alpha.5) (2020-02-11)
+
+
+### Features
+
+* **data-driven-pwa:** add first projects ([5a737f9](https://github.com/noelmace/web-on-fire/commit/5a737f98ae493fcf414e762ff6f5c72a4f0381db))
+
 ## [2.0.0-alpha.4](https://github.com/noelmace/web-on-fire/compare/v2.0.0-alpha.3...v2.0.0-alpha.4) (2020-02-10)
 
 ## [2.0.0-alpha.3](https://github.com/noelmace/web-on-fire/compare/v2.0.0-alpha.2...v2.0.0-alpha.3) (2020-02-10)
