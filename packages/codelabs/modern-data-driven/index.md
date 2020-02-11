@@ -2,4 +2,4 @@
 
 ## Introduction
 
-In this codelab, you will learn ...
+For now, this codelab is only available [in french](/codelabs/doc/modern-data-driven_fr/index.html?index=/codelabs/).
