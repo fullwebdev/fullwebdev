@@ -34,7 +34,8 @@ echo "Latest commit in ${PATH_TO_SEARCH} is ${LATEST_COMMIT_IN_PATH:0:7}"
 if [ -z "${TAG_NAME}" ]; then
     echo "Search in releases"
     SEMVER_REGEX="^v[0-9]+\.[0-9]+\.[0-9]+"
-    NUMBER_OF_RELEASES=$(git tag --contains ${LATEST_COMMIT_IN_PATH} | grep -E ${SEMVER_REGEX} | wc -l)
+    # since the PREVIOUS release
+    NUMBER_OF_RELEASES=$(( $(git tag --contains ${LATEST_COMMIT_IN_PATH} | grep -E ${SEMVER_REGEX} | wc -l) - 1 ))
 else
     echo "Search in ${TAG_NAME}"
     NUMBER_OF_RELEASES=$(git tag "${TAG_NAME}" --contains ${LATEST_COMMIT_IN_PATH} | wc -l)
