@@ -114,3 +114,18 @@ Une fois l'étape 7 finalisée, retournez à la racine du dépôt :
 ```bash
 cd ..
 ```
+
+## Synchronisation en arrière plan
+
+Rendez vous dans le projet "before-bgsync" et lancez le serveur de développement :
+
+```bash
+cd before-bgsync
+npm run --silent start
+```
+
+Ouvrez [localhost:8081](http://localhost:8081) avec Chrome.
+
+<aside class="warning">
+  Si vous ne l'avez pas déjà fait à l'étape précédente, acceptez la demande d'autorisation de notifications.
+</aside>
