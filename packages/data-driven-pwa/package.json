@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git://github.com/noelmace/web-on-fire.git"
   },
-  "license": " Apache-2.0",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/noelmace/web-on-fire/issues"
   },
