@@ -107,6 +107,17 @@ _Crédit image: ©️ Google Inc._
 
 ### Cache et IndexDB
 
+<aside class="warning">
+  <p>Assurez vous d'utiliser la dernière version de Workbox (5.0.0 au moment de l'écriture de ce codelab).</p>
+  <p>
+    Pour se faire, utilisez la ligne suivante à la place de celle indiquée sur le codelab Google:
+  <p>
+</aside>
+
+```javascript
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.0.0/workbox-sw.js');
+```
+
 Suivez les <a href="https://codelabs.developers.google.com/codelabs/workbox-indexeddb/#3" target="_blank" rel="noopener noreferrer">étapes 4 à 7 du codelab Google</a> pour permettre à l'application de fonctionner pleinement hors-ligne.
 
 ## Enregistrer les données une fois de retour en ligne
