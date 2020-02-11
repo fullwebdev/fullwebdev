@@ -131,11 +131,28 @@ cd before-bgsync
 npm run --silent start
 ```
 
-Ouvrez ensuite [localhost:8081](http://localhost:8081) avec Chrome.
+Ouvrez ensuite [localhost:8081](http://localhost:8081) avec Chrome pour tester l'application.
 
 <aside class="warning">
   Si vous ne l'avez pas déjà fait à l'étape précédente, acceptez la demande d'autorisation de notifications.
 </aside>
+
+Une fois l'application chargée, stoppez le serveur (Ctrl+C dans le terminal) pour simuler une coupure réseau, puis rechargez l'application.
+
+Vous constaterez alors que l'application semble fonctionner à l'identique.
+
+### Analyser le fonctionnement du mode hors-ligne
+
+<aside style="notice">
+  Si vous avez effectué l'étape 4, vous pouvez passer cette étape.
+</aside>
+
+Dans les developer tools de Chrome, explorez les éléments suivants :
+
+* Service Workers : un service worker est actif
+* IndexedDB : la base de donnée 'dashboardr' permet de stocker localement les events pour une consultation hors ligne
+
+Enfin, stoppez le serveur (Ctrl+C dans la console) avant de passer à l'étape suivante.
 
 ### Explication
 
@@ -156,16 +173,90 @@ Un problème persiste cependant : comme le serveur n'est bien évidemment pas di
 
 Nous allons durant cette étape résoudre ce problème via workbox-background-sync, et donc la Background Sync API.
 
-### STEPS
-
-***TODO***
-
 ### Compatibilité des navigateurs
 
 La [BackgroundSync API](https://wicg.github.io/BackgroundSync/spec/) est toujours à ce jour à l'état de Draft.
 Par conséquent, même si [Firefox souhaite l'implémenter depuis longtemps](https://groups.google.com/forum/#!msg/mozilla.dev.platform/cTAnBeZFtUE/kx0I4UC-AQAJ), celle-ci n'est pour l'heure supportée que par [Chrome](https://www.chromestatus.com/feature/6170807885627392) et [Opera](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/sync#Browser_compatibility).
 
-Fort heureusement, nous avons implémenté cette fonctionnalité via Workbox, qui intègre une [stratégie de fallback](https://developers.google.com/web/tools/workbox/modules/workbox-background-sync#adding_a_request_to_the_queue) :
+Fort heureusement, nous allons implémenter cette fonctionnalité via Workbox, qui intègre une [stratégie de fallback](https://developers.google.com/web/tools/workbox/modules/workbox-background-sync#adding_a_request_to_the_queue) :
 à chaque fois que le service worker sera à nouveau démarré, celui-ci rejouera tous les appels qui n'ont pu aboutir jusque là, et ont donc été mis en attente.
 
 Cela est bien entendu moins efficace (car l'application doit être active pour se faire), mais résout la plupart des problèmes de compatibilité.
+
+### Mise en place du Background Sync
+
+Ajoutez le code suivant dans **app/sw.js** juste en dessous de `precacheAndRoute` :
+
+```javascript
+const { BackgroundSyncPlugin } = workbox.backgroundSync;
+const { registerRoute } = workbox.routing;
+const { NetworkOnly } = workbox.strategies;
+
+const bgSyncPlugin = new BackgroundSyncPlugin('dashboardr-queue');
+
+const networkWithBackgroundSync = new NetworkOnly({
+  plugins: [bgSyncPlugin]
+});
+
+registerRoute(/\/api\/add/, networkWithBackgroundSync, 'POST');
+```
+
+Enregistrez le fichier, et relancez le serveur :
+
+```bash
+npm run --silent start
+```
+
+### Tester l'application
+
+Pour voir le résultat de cette nouvelle fonctionnalité, effectuez les actions suivantes :
+
+1. Actualisez l'application
+  a. Rafraîchissez la page dans Chrome.
+  b. Activez le nouveau service worker en cliquant sur `skipWaiting` dans les Developer Tools > Service Workers.
+  c. Enfin, rafraîchissez la page à nouveau.
+2. Stoppez le serveur en entrant `Ctrl+C` pour remettre l'application hors-ligne.
+3. Déconnectez votre ordinateur du réseau **pour de vrais** !
+4. Dans les devtools, à la section "Background Sync", démarrez la capture des évènements Background Sync.
+
+![capture: record bgsync in Chrome](./assets/record-bgsync.png)
+
+5. Créer un nouvel 'event' via le formulaire en bas de l'application.
+
+En allant à l'onglet 'Network' des devtools, vous pourrez constater qu'une requête vers `/api/add` a échouée.
+
+![capture: request failed](./assets/5-failed-request.png)
+
+Dans le même temps, une nouvelle base `workbox-background-sync` a été créée, contenant une request vers `http://localhost:8081/api/add` (`requestData.url`) (cf. "Application > IndexedDB") et un évènement "Registered Sync" est visible dans "Background Sync".
+
+<aside class="notice">
+  Pensez à rafraîchir IndexedDB (click droit) si rien n'apparaît.
+</aside>
+
+Enfin, il est temps de repasser en ligne :
+
+1. Relancez le serveur
+
+```bash
+npm run --silent start
+```
+
+2. Une fois le serveur pleinement disponible, rétablissez la connexion de votre machine.
+
+De nouveaux évènements Background Sync sont à présent visible dans les devtools.
+
+![capture: bgsync events](./assets/bgsync-events.png)
+
+Cela a permis à votre service worker de retenter l'appel à `/api/add`, avec succès cette fois, comme indiqué dans "Networks".
+
+Bien entendu, la requête à du même coup été supprimée de la base IndexedDB.
+
+Enfin, rechargez la page : vous constaterez que votre nouvel évènement a bien été enregistré, et est donc toujours présent.
+
+<aside class="special">
+  Vos nouveaux évènements ont même été enregistrés par le serveur dans `server-data/events.json`.
+</aside>
+
+<aside class="warning">
+  Le background sync sous Chrome <a href="https://github.com/GoogleChrome/workbox/issues/1896">peut parfois être capricieux</a>. Si un "Registered Sync" n'apparait pas après que vous ayez créé votre évènement, il s'agit sans doute d'un bug indépendant de l'application. Fermez complètement Chrome (y compris les processus en arrière plan), redémarrez le, et retentez l'opération après avoir supprimé toutes les données de l'application (Clear Storage > Clear site data).
+</aside>
