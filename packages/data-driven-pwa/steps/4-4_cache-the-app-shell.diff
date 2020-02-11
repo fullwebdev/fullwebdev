@@ -1,0 +1,85 @@
+diff --git a/project/app/js/main.js b/project/app/js/main.js
+index 7708915..e3288ba 100644
+--- a/project/app/js/main.js
++++ b/project/app/js/main.js
+@@ -14,7 +14,17 @@ See the License for the specific language governing permissions and
+ limitations under the License.
+ */
+ 
+-// TODO - register service worker
++if ('serviceWorker' in navigator) {
++  window.addEventListener('load', () => {
++    navigator.serviceWorker.register('/sw.js')
++      .then(registration => {
++        console.log(`Service Worker registered! Scope: ${registration.scope}`);
++      })
++      .catch(err => {
++        console.log(`Service Worker registration failed: ${err}`);
++      });
++  });
++}
+ 
+ const container = document.getElementById('container');
+ const offlineMessage = document.getElementById('offline');
+diff --git a/project/app/sw.js b/project/app/sw.js
+index 95e8cf2..cfaa417 100644
+--- a/project/app/sw.js
++++ b/project/app/sw.js
+@@ -13,3 +13,12 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ */
++
++importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox-sw.js');
++
++if (workbox) {
++  console.log(`Yay! Workbox is loaded 🎉`);
++  workbox.precaching.precacheAndRoute([]);
++} else {
++  console.log(`Boo! Workbox didn't load 😬`);
++}
+diff --git a/project/gulpfile.js b/project/gulpfile.js
+index 32e7d07..cea26fa 100644
+--- a/project/gulpfile.js
++++ b/project/gulpfile.js
+@@ -15,6 +15,7 @@ limitations under the License.
+ */
+ const gulp = require('gulp');
+ const del = require('del');
++const workboxBuild = require('workbox-build');
+ 
+ // Clean "build" directory
+ const clean = () => {
+@@ -28,10 +29,30 @@ const copy = () => {
+ };
+ gulp.task('copy', copy);
+ 
+-// TODO - add "service worker" task here
++const serviceWorker = () => {
++  return workboxBuild.injectManifest({
++    swSrc: 'app/sw.js',
++    swDest: 'build/sw.js',
++    globDirectory: 'build',
++    globPatterns: [
++      'style/main.css',
++      'index.html',
++      'js/idb-promised.js',
++      'js/main.js',
++      'images/**/*.*',
++      'manifest.json'
++    ]
++  }).then(resources => {
++    console.log(`Injected ${resources.count} resources for precaching, ` +
++        `totaling ${resources.size} bytes.`);
++  }).catch(err => {
++    console.log('Uh oh 😬', err);
++  });
++}
++gulp.task('service-worker', serviceWorker);
+ 
+ // This is the app's build process
+-const build = gulp.series('clean', 'copy');
++const build = gulp.series('clean', 'copy', 'service-worker');
+ gulp.task('build', build);
+ 
+ // Watch our "app" files & rebuild whenever they change
