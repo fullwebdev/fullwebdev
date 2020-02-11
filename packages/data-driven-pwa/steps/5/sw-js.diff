@@ -1,21 +1,21 @@
 --- project/app/sw.js
 +++ project/app/sw.js
-@@ -19,6 +19,18 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.5.0/workbox
+@@ -19,6 +19,18 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.0.0/workbox
  if (workbox) {
    console.log(`Yay! Workbox is loaded 🎉`);
    workbox.precaching.precacheAndRoute([]);
 +
-+  const bgSyncPlugin = new workbox.backgroundSync.Plugin('dashboardr-queue');
++  const { BackgroundSyncPlugin } = workbox.backgroundSync;
++  const { registerRoute } = workbox.routing;
++  const { NetworkOnly } = workbox.strategies;
 +
-+  const networkWithBackgroundSync = new workbox.strategies.NetworkOnly({
-+    plugins: [bgSyncPlugin],
++  const bgSyncPlugin = new BackgroundSyncPlugin('dashboardr-queue');
++
++  const networkWithBackgroundSync = new NetworkOnly({
++    plugins: [bgSyncPlugin]
 +  });
 +
-+  workbox.routing.registerRoute(
-+    /\/api\/add/,
-+    networkWithBackgroundSync,
-+    'POST'
-+  );
++  registerRoute(/\/api\/add/, networkWithBackgroundSync, 'POST');
  } else {
    console.log(`Boo! Workbox didn't load 😬`);
  }

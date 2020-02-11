@@ -1,25 +1,19 @@
 --- project/app/sw.js
 +++ project/app/sw.js
-@@ -20,7 +20,21 @@ if (workbox) {
-   console.log(`Yay! Workbox is loaded 🎉`);
-   workbox.precaching.precacheAndRoute([]);
+@@ -24,7 +24,15 @@ if (workbox) {
+   const { registerRoute } = workbox.routing;
+   const { NetworkOnly } = workbox.strategies;
  
--  const bgSyncPlugin = new workbox.backgroundSync.Plugin('dashboardr-queue');
+-  const bgSyncPlugin = new BackgroundSyncPlugin('dashboardr-queue');
 +  const showNotification = () => {
 +    self.registration.showNotification('Background sync success!', {
 +      body: '🎉`🎉`🎉`'
 +    });
 +  };
-+  
-+  const bgSyncPlugin = new workbox.backgroundSync.Plugin(
-+    'dashboardr-queue',
-+    {
-+      callbacks: {
-+        queueDidReplay: showNotification
-+        // other types of callbacks could go here
-+      }
-+    }
-+  );
++
++  const bgSyncPlugin = new BackgroundSyncPlugin('dashboardr-queue', {
++    onSync: showNotification
++  });
  
-   const networkWithBackgroundSync = new workbox.strategies.NetworkOnly({
-     plugins: [bgSyncPlugin],
+   const networkWithBackgroundSync = new NetworkOnly({
+     plugins: [bgSyncPlugin]
