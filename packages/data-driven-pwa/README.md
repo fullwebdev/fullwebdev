@@ -23,6 +23,27 @@ During this codelab, you’ll create a fully offline-capable, data-driven Progre
 
 Follow the [Codelabs instructions](https://codelab.wof.show).
 
+## Steps
+
+Each step of this codelab can be automatically done by running one of the following commands from the root directory of this project.
+
+> :warning: steps (i.e. patches) can only be applied **in the right order**\
+> (4-4, then 4-5, then 4-6 etc...)
+
+### node script
+
+```bash
+npm run goto --step="<short-step-name>"
+```
+
+"short-step-name" being the name of a directory in steps/
+
+### git
+
+```bash
+git apply steps/<long-step-name>.patch
+```
+
 ## More resources
 
 * Data driven PWA codelab [instructions](https://codelabs.developers.google.com/codelabs/workbox-indexeddb/index.html) & [repository](https://github.com/googlecodelabs/workbox-indexeddb)
