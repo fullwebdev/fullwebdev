@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-alpha.6](https://github.com/noelmace/web-on-fire/compare/v2.0.0-alpha.5...v2.0.0-alpha.6) (2020-02-11)
+
+
+### Features
+
+* **codelabs:** fr modern-data-driven - bgsync ([5ebdd46](https://github.com/noelmace/web-on-fire/commit/5ebdd467acec84f85df93a1bcb40c98f021b3264))
+* **codelabs:** fr modern-data-driven - bgsync 1 ([423d838](https://github.com/noelmace/web-on-fire/commit/423d83811a1da1d1537b2d8023d2b382c9a02d94))
+* **codelabs:** fr modern-data-driven - bgsync 2 ([17d7f23](https://github.com/noelmace/web-on-fire/commit/17d7f230b35a4ccd25b7c4baae376b5e8f7c2130))
+* **codelabs:** fr modern-data-driven - create PWA ([a31c39a](https://github.com/noelmace/web-on-fire/commit/a31c39a07b3fd73f7f12532a0f3c7b982f4a7b33))
+* **codelabs:** fr modern-data-driven - intro ([da5147f](https://github.com/noelmace/web-on-fire/commit/da5147fc55ca86233378e89ffa13564b7be7e8f1))
+* **codelabs:** workbox version notice ([a5decf5](https://github.com/noelmace/web-on-fire/commit/a5decf558301b323b9d4e484ef1dcc70063303d2))
+* **data-driven-pwa:** step 4-4 ([e842dbd](https://github.com/noelmace/web-on-fire/commit/e842dbdae7162240cd81b23563d2a1b59ed18421))
+* **data-driven-pwa:** step 4-5 ([2da89b2](https://github.com/noelmace/web-on-fire/commit/2da89b2880ef670994fddecfc0dd18e5935ae295))
+* **data-driven-pwa:** step 4-6 ([939cc3d](https://github.com/noelmace/web-on-fire/commit/939cc3d0e4364fd313d0dc9c296bb6269d69919e))
+* **data-driven-pwa:** step 4-7 ([5c301cd](https://github.com/noelmace/web-on-fire/commit/5c301cd39126c70a35fb898d5bebd6bbf7f8e281))
+* **data-driven-pwa:** step 5 ([313783c](https://github.com/noelmace/web-on-fire/commit/313783c33fd653b9348f235ca4518fb2e3ce2150))
+* **data-driven-pwa:** step 6 ([fbf89b6](https://github.com/noelmace/web-on-fire/commit/fbf89b6af7d9230152845da9da8aa6e9f29ac180))
+* **data-driven-pwa:** steps using diff/patch ([83e498e](https://github.com/noelmace/web-on-fire/commit/83e498e4edd35d88f2fc44986c52a2a0bf968c16))
+
+
+### Bug Fixes
+
+* **codelabs:** redirect modern-data-driven en to fr ([b4530ca](https://github.com/noelmace/web-on-fire/commit/b4530ca8a79c2c02986559215275986f88f143bd))
+* **data-driven-pwa:** replayRequests ([b8e6498](https://github.com/noelmace/web-on-fire/commit/b8e64987b501b73dad3e6a5997412b346112bd28))
+* **data-driven-pwa:** use workbox 5 ([b019092](https://github.com/noelmace/web-on-fire/commit/b01909237649e083ac2d68e29956115d8c2a34c5))
+* **docs:** favicon for subprojects ([d09cc8f](https://github.com/noelmace/web-on-fire/commit/d09cc8f255e34ff5ff4834d15a81cb3e023252b3))
+
 ## [2.0.0-alpha.5](https://github.com/noelmace/web-on-fire/compare/v2.0.0-alpha.4...v2.0.0-alpha.5) (2020-02-11)
 
 
