@@ -109,23 +109,52 @@ _Crédit image: ©️ Google Inc._
 
 Suivez les <a href="https://codelabs.developers.google.com/codelabs/workbox-indexeddb/#3" target="_blank" rel="noopener noreferrer">étapes 4 à 7 du codelab Google</a> pour permettre à l'application de fonctionner pleinement hors-ligne.
 
-Une fois l'étape 7 finalisée, retournez à la racine du dépôt :
+## Enregistrer les données une fois de retour en ligne
 
-```bash
-cd ..
-```
+### Démarrer le serveur
 
-## Synchronisation en arrière plan
-
-Rendez vous dans le projet "before-bgsync" et lancez le serveur de développement :
+Si vous êtes passé directement à cette étape sans effectuer la précédente, rendez vous dans le projet "before-bgsync" et lancez le serveur de développement :
 
 ```bash
 cd before-bgsync
 npm run --silent start
 ```
 
-Ouvrez [localhost:8081](http://localhost:8081) avec Chrome.
+Ouvrez ensuite [localhost:8081](http://localhost:8081) avec Chrome.
 
 <aside class="warning">
   Si vous ne l'avez pas déjà fait à l'étape précédente, acceptez la demande d'autorisation de notifications.
 </aside>
+
+### Explication
+
+L'application dont vous disposez à présent (après avoir suivi l'étape précédent, ou en étant passé directement à celle-ci) est une PWA entièrement disponible hors-ligne.
+
+Sans développement spécifique, quand un utilisateur tente d'accéder à une Web App en étant déconnecté, un message "Offline" est affiché, empéchant toute utilisateur de l'application.
+
+<p class="center">
+  <img src="./assets/firefox-offline.png" alt="firefox is offline" style="margin: 1rem"/>
+</p>
+
+Workbox a permis, en mettant en cache le App Shell, de ne jamais afficher ce type de message pour tout utilisateur retournant sur l'application.
+
+Mais une application n'est rien sans données !
+Nous avons donc utilisé IndexDB pour mettre ces données en cache (ici, des "events"), et permettre de les consulter même en étant hors-ligne.
+
+Un problème persiste cependant : comme le serveur n'est bien évidemment pas disponible quand l'utilisateur est hors ligne, tous les "events" qu'il aura alors créé n'auront été stockés que localement. Ils seront donc perdus très rapidement !
+
+Nous allons durant cette étape résoudre ce problème via workbox-background-sync, et donc la Background Sync API.
+
+### STEPS
+
+***TODO***
+
+### Compatibilité des navigateurs
+
+La [BackgroundSync API](https://wicg.github.io/BackgroundSync/spec/) est toujours à ce jour à l'état de Draft.
+Par conséquent, même si [Firefox souhaite l'implémenter depuis longtemps](https://groups.google.com/forum/#!msg/mozilla.dev.platform/cTAnBeZFtUE/kx0I4UC-AQAJ), celle-ci n'est pour l'heure supportée que par [Chrome](https://www.chromestatus.com/feature/6170807885627392) et [Opera](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/sync#Browser_compatibility).
+
+Fort heureusement, nous avons implémenté cette fonctionnalité via Workbox, qui intègre une [stratégie de fallback](https://developers.google.com/web/tools/workbox/modules/workbox-background-sync#adding_a_request_to_the_queue) :
+à chaque fois que le service worker sera à nouveau démarré, celui-ci rejouera tous les appels qui n'ont pu aboutir jusque là, et ont donc été mis en attente.
+
+Cela est bien entendu moins efficace (car l'application doit être active pour se faire), mais résout la plupart des problèmes de compatibilité.

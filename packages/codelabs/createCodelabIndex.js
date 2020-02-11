@@ -29,6 +29,9 @@ module.exports = function createIndex(codelab) {
         .error {
           color: red;
         }
+        .center {
+          text-align: center;
+        }
       </style>
     </head>
 
