@@ -1,11 +1,12 @@
 --- project/app/sw.js
 +++ project/app/sw.js
-@@ -24,7 +24,15 @@ if (workbox) {
+@@ -24,7 +24,16 @@ if (workbox) {
    const { registerRoute } = workbox.routing;
    const { NetworkOnly } = workbox.strategies;
  
 -  const bgSyncPlugin = new BackgroundSyncPlugin('dashboardr-queue');
-+  const showNotification = () => {
++  const showNotification = ({ queue }) => {
++    queue.replayRequests();
 +    self.registration.showNotification('Background sync success!', {
 +      body: '🎉`🎉`🎉`'
 +    });
