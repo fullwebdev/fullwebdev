@@ -16,8 +16,17 @@
     "type": "git",
     "url": "git://github.com/noelmace/web-on-fire.git"
   },
-  "license": " Apache-2.0",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/noelmace/web-on-fire/issues"
+  },
+  "scripts": {
+    "postinstall": "lerna bootstrap",
+    "goto": "node goto-step.js $npm_config_step"
+  },
+  "devDependencies": {
+    "@types/diff": "^4.0.2",
+    "diff": "^4.0.2",
+    "lerna": "^3.20.2"
   }
 }

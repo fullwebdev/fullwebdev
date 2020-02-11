@@ -4,7 +4,8 @@
   "description": "",
   "main": ".",
   "scripts": {
-    "build": "node build.js"
+    "build": "node build.js",
+    "watch": "concurrently -n server,watch \"http-server dist\" \"node build --watch\""
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,10 @@
     "@vuepress/plugin-google-analytics": "^1.0.0-alpha.30",
     "@vuepress/plugin-pwa": "^1.2.0",
     "cheerio": "^1.0.0-rc.3",
+    "chokidar": "^3.3.1",
+    "concurrently": "^5.1.0",
     "fs-extra": "^8.1.0",
+    "http-server": "^0.12.1",
     "marked": "^0.7.0",
     "vuepress": "^1.2.0"
   }

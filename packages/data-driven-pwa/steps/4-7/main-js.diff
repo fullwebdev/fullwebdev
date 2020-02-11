@@ -1,0 +1,50 @@
+--- project/app/js/main.js
++++ project/app/js/main.js
+@@ -48,6 +48,15 @@ function saveEventDataLocally(events) {
+   });
+ }
+ 
++function getLocalEventData() {
++  if (!('indexedDB' in window)) {return null;}
++  return dbPromise.then(db => {
++    const tx = db.transaction('events', 'readonly');
++    const store = tx.objectStore('events');
++    return store.getAll();
++  });
++}
++
+ const container = document.getElementById('container');
+ const offlineMessage = document.getElementById('offline');
+ const noDataMessage = document.getElementById('no-data');
+@@ -73,11 +82,20 @@ function loadContentNetworkFirst() {
+       setLastUpdated(new Date());
+       messageDataSaved();
+     }).catch(err => {
+-      messageSaveError(); 
++      messageSaveError();
+       console.warn(err);
+     });
+-  }).catch(err => { // if we can't connect to the server...
++  }).catch(err => {
+     console.log('Network requests have failed, this is expected if offline');
++    getLocalEventData()
++    .then(offlineData => {
++      if (!offlineData.length) {
++        messageNoData();
++      } else {
++        messageOffline();
++        updateUI(offlineData); 
++      }
++    });
+   });
+ }
+ 
+@@ -104,7 +122,7 @@ function addAndPostEvent(e) {
+   updateUI([data]);
+ 
+   saveEventDataLocally([data]);
+-  
++
+   const headers = new Headers({'Content-Type': 'application/json'});
+   const body = JSON.stringify(data);
+   return fetch('api/add', {

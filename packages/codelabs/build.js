@@ -6,6 +6,7 @@ const cheerio = require('cheerio');
 const createCodelabIndex = require('./createCodelabIndex');
 
 const outputDir = path.join(__dirname, 'dist');
+const args = process.argv.slice(2);
 
 /**
  * @param {string} src
@@ -106,4 +107,18 @@ async function main() {
   }
 }
 
-main();
+if(args[0] === "--watch") {
+  const chokidar = require('chokidar');
+  console.log('initial build...');
+  main();
+  console.log('done ✔️\n')
+  chokidar.watch('./*/*.md', { ignored: ['./dist', './node_modules']}).on('change', (event, path) => {
+    console.log(`${path} changed. Rebuilding...`);
+    main();
+  })
+  .on('ready', () => {
+    console.log('watching html files...');
+  });
+} else {
+  main();
+}
