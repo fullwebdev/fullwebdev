@@ -63,9 +63,18 @@ header {
 
 #install-btn {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-  background-color: #e0e0e0;
+  background-color: #0487d1;
   font-weight: bold;
   margin-right: 1rem;
+}
+
+#dismiss-btn {
+  background-color: #e1f5fe;
+  text-transform: none;
+}
+
+#install-card {
+  background-color: #b3e5fc;
 }
 
 .home {
