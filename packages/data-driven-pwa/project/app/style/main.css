@@ -49,6 +49,25 @@ header {
   padding: 5px 20px;
 }
 
+@media (max-width: 499px) {
+  .navbar {
+    padding-right: .5rem;
+    padding-left: .5rem;
+  }
+}
+
+.app-title {
+  flex-grow: 1;
+  text-align: left;
+}
+
+#install-btn {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  background-color: #e0e0e0;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
 .home {
   color: white;
   text-decoration: none;
@@ -196,6 +215,10 @@ input {
   width: 100%;
 }
 
+.send-btn {
+  width: 30%;
+}
+
 .button {
   border-radius: 2px;
   border: none;
@@ -218,7 +241,6 @@ input {
   text-transform: uppercase;
   transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
   vertical-align: middle;
-  width: 30%;
   will-change: box-shadow;
 }
 
