@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-alpha.8](https://github.com/noelmace/web-on-fire/compare/v2.0.0-alpha.7...v2.0.0-alpha.8) (2020-02-12)
+
+
+### Features
+
+* **codelabs:** light infobox ([7033f97](https://github.com/noelmace/web-on-fire/commit/7033f97f574f4de9a1ef2d43f1d30140e773d485))
+* **codelabs:** MDD_fr - code for first A2HS btn ([e77a937](https://github.com/noelmace/web-on-fire/commit/e77a9379d7fd38d418852da873b36f648be17cbd))
+* **codelabs:** MDD_fr A2HS UX part1&2 ([d46dde4](https://github.com/noelmace/web-on-fire/commit/d46dde4e4d01aeec95005f2ebed2b98374532c72))
+* **codelabs:** MDD_fr conclusion A2HS ([9a9fb06](https://github.com/noelmace/web-on-fire/commit/9a9fb065233fac5808a59fe4304e0fa06cc74f01))
+* **codelabs:** MDD_fr instructions 1st A2HS btn ([bbf4dd0](https://github.com/noelmace/web-on-fire/commit/bbf4dd0ab295093d9a4c3e4c0010492d4aff80f7))
+* **codelabs:** promote install - part 1 ([31a0a30](https://github.com/noelmace/web-on-fire/commit/31a0a300d01126d9a3ccb70629a90700b5b0ec6e))
+* **data-diven-pwa:** steps 9 (a to c) ([e33f766](https://github.com/noelmace/web-on-fire/commit/e33f76697be588bcd4645c7a4e0b2d8e9ec32566))
+* **data-driven-pwa:** step 7 ([2c75567](https://github.com/noelmace/web-on-fire/commit/2c75567193895725ccf8404dc64a414b23df6898))
+* **data-driven-pwa:** step 8 ([0ca63d7](https://github.com/noelmace/web-on-fire/commit/0ca63d7927ebf57a60335365a7f2a2c65075738f))
+
+
+### Bug Fixes
+
+* **codelabs:** misspellings ([f2bed17](https://github.com/noelmace/web-on-fire/commit/f2bed1768e198878e655252601046076494061dd))
+* **codelabs:** refresh app before step 4 ([28944e7](https://github.com/noelmace/web-on-fire/commit/28944e7e0e3cd93a0175f2fe543dbd3200488560))
+* **codelabs:** remove refs to open-wc ([f08c6fd](https://github.com/noelmace/web-on-fire/commit/f08c6fd702164b95646a9e30a9adee3ea9b4f05c))
+* **data-driven-pwa:** css for install btn ([bb318b4](https://github.com/noelmace/web-on-fire/commit/bb318b44740da89915e0fbae0fcd2abae1cf9a2a))
+* **data-driven-pwa:** css for promotion ([432e138](https://github.com/noelmace/web-on-fire/commit/432e13869fa3178b51c7987727a8fde5c6e428e2))
+* **data-driven-pwa:** manifest ([2fb6412](https://github.com/noelmace/web-on-fire/commit/2fb64129c9d62cb4668c0846eeca3dcbfd84920e))
+
 ## [2.0.0-alpha.7](https://github.com/noelmace/web-on-fire/compare/v2.0.0-alpha.6...v2.0.0-alpha.7) (2020-02-12)
 
 
