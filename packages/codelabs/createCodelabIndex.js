@@ -17,7 +17,7 @@ module.exports = function createIndex(codelab) {
       <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
       <meta name="theme-color" content="#4F7DC9">
       <meta charset="UTF-8">
-      <title>open-wc codelab | ${codelab.heading}</title>
+      <title>WoF codelab | ${codelab.heading}</title>
       <link rel="icon" type="image/png" href="/favicon.png">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -50,7 +50,7 @@ module.exports = function createIndex(codelab) {
     <body>
       <google-codelab title="${
         codelab.heading
-      }" feedback-link="https://github.com/open-wc/open-wc/issues">
+      }" feedback-link="https://github.com/noelmace/web-on-fire/issues">
 
         ${codelab.steps.map(createStep).join('')}
 
