@@ -39,7 +39,7 @@ et d'avoir au moins une fois contribué au développement d'une Web App (peu imp
 
 * un système Windows ou Mac OS X
   * si vous utilisez Linux, vous pourrez au besoin utiliser une [VM](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/), mais vous devrez également y installer la dernière version de Chrome (cf. plus haut), et vous assurer que celle-ci peut accéder au système hôte via un réseau virtuel (HTTP)
-* un smartphone Android, un cable usb et [Android Studio](https://developer.android.com/studio)
+* un smartphone Android "récent" avec Chrome, [Chrome Canary](https://play.google.com/store/apps/details?id=com.chrome.canary&hl=en), [Firefox Nightly](https://play.google.com/store/apps/details?id=org.mozilla.fennec_aurora&hl=en_US), et un cable usb
 
 ## Mise en place
 
@@ -329,3 +329,49 @@ const showNotification = ({ queue }) => {
 ```
 
 Enfin, ré-effectuez le test de l'application précédent, et gardez un œil sur la console et "Network". Votre appel POST sur /api/add sera cette fois-ci rejoué correctement une fois la connexion retrouvée, et votre évènement bien enregistré.
+
+## Encourager l'installation de l'application
+
+Nous avons implémenté des fonctionnalités qui répondent aux besoins de nos utilisateurs, dans une application performante, et avec une UX qui corresponde à leurs attentes.
+
+À présent que nous pouvons donc être confiant dans le succès de notre app ( 🤷‍♂ ), notre priorité devient la fidélisation de la foule d'utilisateurs qui ne va pas manquer de l'utiliser.
+
+Pour se faire, rien de mieux, techniquement, que l'installation (ou A2HS, pour Add to Home Screen).
+
+### Se débarasser de la mini info-bar
+
+Malheureusement, la [mini info-bar](https://developers.google.com/web/fundamentals/app-install-banners/native) Chrome rebute bien plus le grand public qu'elle n'incite à l'installation.
+Il va donc être primordial pour nous de l'éviter à tout prix.
+
+<aside class="notice">
+  <p>
+    Pour les chapitres comme ceux-ci, où vous apporterez pas ou peu de modification au service-worker `sw.js`, mais aurez besoin de mettre à jour l'html et le javascript du window context régulièrement, il peut être plus pratique de recharger toute l'application à chaque rafraîchissement de la page, et donc d'éviter tout cache.
+  </p>
+  <p>
+    Pour cela, vous pouvez activer l'option "Update on reload" pour recharger un service worker complet à chaque fois :
+  </p>
+  <p class="center">
+    <img src="./assets/update-on-reload.png" alt="capture: update on reload" />
+  </p>
+</aside>
+
+Dans **app/main.js**, ajouter le code suivant dans le `if('serviceWorker in navigator)` :
+
+```javascript
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', e => {
+  console.log('beforeInstallPrompt event detected');
+  e.preventDefault();
+  deferredPrompt = e;
+  console.log('ready for A2HS');
+});
+```
+
+Mettez à jour votre application, et observez la console.
+
+<aside class="tip">
+  <p>
+    Pour tester l'affichage de la mini-infobar, vous aurez besoin de charger la web app sur Chrome Android, en HTTPS ou localhost. La solution la plus simple consiste à <a href="https://developers.google.com/web/tools/chrome-devtools/remote-debugging/local-server">utiliser la redirection de port de Chrome</a>.
+  </p>
+</aside>
