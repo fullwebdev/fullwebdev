@@ -1,30 +1,51 @@
 {
-  "name": "PWA demo",
-  "short_name": "PWA demo",
+  "name": "WoF Codelab Demo",
+  "short_name": "WoFCD",
   "lang": "en-US",
-  "start_url": "index.html",
+  "start_url": "/index.html",
   "display": "standalone",
   "theme_color": "#90a8b2",
+  "Scope": "/",
   "icons": [
     {
+      "src": "images/touch/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
       "src": "images/touch/icon-128x128.png",
-      "sizes": "128x128"
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "images/touch/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
     },
     {
       "src": "images/touch/icon-192x192.png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "images/touch/icon-256x256.png",
-      "sizes": "256x256"
+      "sizes": "192x192",
+      "type": "image/png"
     },
     {
       "src": "images/touch/icon-384x384.png",
-      "sizes": "384x384"
+      "sizes": "384x384",
+      "type": "image/png"
     },
     {
       "src": "images/touch/icon-512x512.png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ]
 }
