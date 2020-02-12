@@ -399,19 +399,19 @@ Mettez à jour votre application, et observez la console.
 
 ## Encourager l'installation de l'application
 
+A présent, seuls le menu du navigateur, et éventuellement l'omnibox permettent d'installer notre Web App.
+
+Afin d'être plus incitatif, ajoutez un bouton d'installation dans le `<header>` (entre les deux éléments existants) de **app/index.html** :
+
 ```html
 <li>
   <button class="button ripple" id="install-btn" style="display: none">Install</button>
 </li>
 ```
 
-```javascript
-const btnAdd = document.getElementById('install-btn');
+Remarquez que ce bouton est masqué par défaut. Il sera affiché <i>uniquement</i> si le navigateur supporte le A2HS, et que l'utilisateur n'a pas déjà refusé l'installation.
 
-function showInstallPromotion() {
-  btnAdd.style.display = 'inline-block';
-}
-```
+Pour ce faire, appeler une fonction `showInstallPromotion` en réponse à l'évènement `beforeInstallPrompt`, dans **app/main.js** :
 
 ```javascript
 window.addEventListener('beforeinstallprompt', e => {
@@ -421,6 +421,18 @@ window.addEventListener('beforeinstallprompt', e => {
   showInstallPromotion();
 });
 ```
+
+Plus haut, définissez cette fonction comme suit :
+
+```javascript
+const btnAdd = document.getElementById('install-btn');
+
+function showInstallPromotion() {
+  btnAdd.style.display = 'inline-block';
+}
+```
+
+Enfin, au click sur ce bouton, affichez l'install prompt :
 
 ```javascript
 btnAdd.addEventListener('click', e => {
@@ -436,6 +448,8 @@ btnAdd.addEventListener('click', e => {
   });
 });
 ```
+
+Rafraîchissez l'application dans le navigateur pour observer le résultat et tester ce bouton.
 
 <aside class="info">
   Portions of this page are modifications based on work created and <a href="/readme/policies/">shared by Google</a> and used according to terms described in the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons 4.0 Attribution License</a>.
