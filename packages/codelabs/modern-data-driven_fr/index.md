@@ -90,10 +90,13 @@ Ouvrez l'application en entrant l'url [localhost:8081](http://localhost:8081) da
 L'application vous demande alors une autorisation pour pouvoir afficher des notifications. Cliquez sur "Autoriser" ou "Allow" pour l'accepter.
 
 ![Autoriser les notifications](https://codelabs.developers.google.com/codelabs/workbox-indexeddb/img/9ca6ac4aededfba6.png) \
-_Crédit image: ©️ Google Inc._
 
 <aside class="special">
   Cette application est issue d'un codelab de Google intitulé <a href="https://codelabs.developers.google.com/codelabs/workbox-indexeddb/#2" target="_blank" rel="noopener noreferrer"><i>Build an offline-first, data-driven PWA</i></a>.
+</aside>
+
+<aside class="info">
+  Portions of this page are modifications based on work created and <a href="/readme/policies/">shared by Google</a> and used according to terms described in the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons 4.0 Attribution License</a>.
 </aside>
 
 ## Une application orientée données
@@ -171,6 +174,10 @@ npm run goto --step=4-7
 ```javascript
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.0.0/workbox-sw.js');
 ```
+
+<aside class="info">
+  Portions of this page are modifications based on work created and <a href="/readme/policies/">shared by Google</a> and used according to terms described in the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons 4.0 Attribution License</a>.
+</aside>
 
 ## Ne pas perdre de données hors-ligne
 
@@ -262,6 +269,10 @@ Enfin, rechargez la page : vous constaterez que votre nouvel évènement a bien 
   Le background sync sous Chrome <a href="https://github.com/GoogleChrome/workbox/issues/1896">peut parfois être capricieux</a>. Si un "Registered Sync" n'apparait pas après que vous ayez créé votre évènement, il s'agit sans doute d'un bug indépendant de l'application. Fermez complètement Chrome (y compris les processus en arrière plan), redémarrez le, et retentez l'opération après avoir supprimé toutes les données de l'application (Clear Storage > Clear site data).
 </aside>
 
+<aside class="info">
+  Portions of this page are modifications based on work created and <a href="/readme/policies/">shared by Google</a> and used according to terms described in the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons 4.0 Attribution License</a>.
+</aside>
+
 ## Informer l'utilisateur de l'enregistement
 
 La potentialité d'une perte de données est toujours source de stress pour vos utilisateurs. _Votre serviteur en sait quelque chose, étant donné qu'il écrit actuellement ce chapitre pour la seconde fois, suite à un git checkout malencontreux 😓. Ironique n'est-ce pas ?_
@@ -330,6 +341,10 @@ const showNotification = ({ queue }) => {
 
 Enfin, ré-effectuez le test de l'application précédent, et gardez un œil sur la console et "Network". Votre appel POST sur /api/add sera cette fois-ci rejoué correctement une fois la connexion retrouvée, et votre évènement bien enregistré.
 
+<aside class="info">
+  Portions of this page are modifications based on work created and <a href="/readme/policies/">shared by Google</a> and used according to terms described in the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons 4.0 Attribution License</a>.
+</aside>
+
 ## Se débarasser de la mini info-bar
 
 Nous avons implémenté des fonctionnalités qui répondent aux besoins de nos utilisateurs, dans une application performante, et avec une UX qui corresponde à leurs attentes.
@@ -341,7 +356,6 @@ Pour se faire, rien de mieux, techniquement, que l'installation (ou A2HS, pour A
 Afin d'encourager l'installation des Web Apps, une première solution apportée par Chrome for Android est la mini info-bar.
 
 ![mini info-bar](https://developers.google.com/web/updates/images/2018/06/a2hs-infobar-cropped.png)
-_image credit: CC BY 4.0 ©️ Google_
 
 Malheureusement, cette [mini info-bar](https://developers.google.com/web/fundamentals/app-install-banners/native) rebute bien plus le grand public qu'elle n'incite à l'installation.
 Il va donc être primordial pour nous de l'éviter à tout prix.
@@ -377,6 +391,10 @@ Mettez à jour votre application, et observez la console.
   <p class="center">
     <img src="./assets/update-on-reload.png" alt="capture: update on reload" />
   </p>
+</aside>
+
+<aside class="info">
+  Portions of this page are modifications based on work created and <a href="/readme/policies/">shared by Google</a> and used according to terms described in the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons 4.0 Attribution License</a>.
 </aside>
 
 ## Encourager l'installation de l'application
@@ -418,3 +436,7 @@ btnAdd.addEventListener('click', e => {
   });
 });
 ```
+
+<aside class="info">
+  Portions of this page are modifications based on work created and <a href="/readme/policies/">shared by Google</a> and used according to terms described in the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons 4.0 Attribution License</a>.
+</aside>
