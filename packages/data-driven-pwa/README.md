@@ -44,6 +44,10 @@ npm run goto --step="<short-step-name>"
 git apply steps/<long-step-name>.patch
 ```
 
+> If you run this command from the monorepo, you'll need to run it from _this_ directory (`packages/data-driven-pwa`) and add the following option :
+>
+> `--directory="packages/data-driven-pwa`
+
 ## More resources
 
 * Data driven PWA codelab [instructions](https://codelabs.developers.google.com/codelabs/workbox-indexeddb/index.html) & [repository](https://github.com/googlecodelabs/workbox-indexeddb)
