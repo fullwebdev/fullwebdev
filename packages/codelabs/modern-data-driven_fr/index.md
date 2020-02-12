@@ -109,16 +109,30 @@ npm run goto --step=4
   <p>Cette même commande permet également de "sauter"/corriger tous les chapitres suivants. Il est cependant indispensable de les lancer avant toute modification du code du projet, dans l'ordre, en commençant par 4.</p>
 </aside>
 
-Une fois le serveur démarré et l'application chargée dans votre navigateur, stoppez le serveur (`Ctrl+C` dans le terminal) pour simuler une coupure réseau, puis rechargez l'application.
+Étant donné que cette commande modifie, pour cette étape, la configuration de build, vous devez également stopper (`Ctrl+C`) le serveur et le relancer :
 
-Vous constaterez alors que l'application semble fonctionner à l'identique.
+```bash
+cd project
+npm run --silent start
+```
 
-Dans les developer tools de Chrome, explorez les éléments suivants :
+Retournez dans le navigateur, et mettez à jour l'application :
 
-* Service Workers : un service worker est actif
-* IndexedDB : la base de donnée 'dashboardr' permet de stocker localement les events pour une consultation hors ligne
+1. Rafraîchissez la page dans Chrome (`Ctrl+Maj+R`)
+2. Ouvrez les Developer Tools (`Ctrl+Maj+i`)
+3. Sélectionnez la section _Service Workers_
+4. Activez le nouveau service worker en cliquant sur `skipWaiting`
+5. Enfin, rafraîchissez la page à nouveau
 
-L'application dont vous disposez à présent est une PWA entièrement disponible hors-ligne.
+<aside class="tip">
+  Notez bien ces étapes. Vous devrez les reproduire souvent par la suite.
+</aside>
+
+Enfin, stoppez le serveur pour simuler une coupure réseau, puis rechargez l'application dans le navigateur. Vous constaterez alors que l'application semble fonctionner à l'identique.
+
+Dans les developer tools de Chrome, sélectionnez la section _IndexedDB_, puis la base de donnée _dashboardr_. Celle-ci permet de stocker localement les "évènements" pour une consultation hors ligne.
+
+L'application dont vous disposez à présent est bien une PWA entièrement disponible hors-ligne !
 
 ### Explication
 
@@ -196,19 +210,19 @@ npm run --silent start
 
 ### Tester l'application
 
-Pour voir le résultat de cette nouvelle fonctionnalité, effectuez les actions suivantes :
+Pour voir le résultat de cette nouvelle fonctionnalité, effectuez une nouvelle mise à jour de l'application (refresh - skipWaiting - refresh) et stopper le serveur.
 
-1. Actualisez l'application
-  1. Rafraîchissez la page dans Chrome
-  2. Activez le nouveau service worker en cliquant sur `skipWaiting` dans `Developer Tools > Service Workers`
-  3. Enfin, rafraîchissez la page à nouveau
-2. Stoppez le serveur en entrant `Ctrl+C` pour remettre l'application hors-ligne
-3. Déconnectez votre ordinateur du réseau **pour de vrais** (wifi et cable)
-4. Dans `Developer Tools > Background Sync`, démarrez la capture des évènements Background Sync.
+Déconnectez votre ordinateur du réseau **pour de vrais** (wifi et cable).
+
+<aside class="warning">
+  Le background sync se basant sur le <i>véritable</i> statut de la connection réseau de votre système, il est indispensable d'activer et désactiver votre ordinateur pour ce chapitre et le suivant. <b>Le trottling via les DevTools et l'arrêt de serveur ne suffiront pas.</b>
+</aside>
+
+Dans `Developer Tools > Background Sync`, démarrez la capture des évènements Background Sync.
 
 ![capture: record bgsync in Chrome](./assets/record-bgsync.png)
 
-5. Créer un nouvel 'event' via le formulaire en bas de l'application.
+Créer un nouvel 'event' via le formulaire en bas de l'application.
 
 En allant à l'onglet 'Network' des devtools, vous pourrez constater qu'une requête vers `/api/add` a échouée.
 
