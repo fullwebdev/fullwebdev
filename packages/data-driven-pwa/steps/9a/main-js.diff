@@ -1,0 +1,42 @@
+--- project/app/js/main.js
++++ project/app/js/main.js
+@@ -25,10 +25,11 @@ if ('serviceWorker' in navigator) {
+       });
+   });
+ 
+-  const btnAdd = document.getElementById('install-btn');
++  const installCard = document.getElementById('install-card');
++  const btnAdd = installCard.querySelector('#install-btn');
+ 
+   function showInstallPromotion() {
+-    btnAdd.style.display = 'inline-block';
++    installCard.style.display = 'inline-block';
+   }
+ 
+   let deferredPrompt;
+@@ -44,7 +45,7 @@ if ('serviceWorker' in navigator) {
+ 
+   btnAdd.addEventListener('click', e => {
+     // hide our user interface that shows our A2HS button
+-    btnAdd.style.display = 'none';
++    installCard.style.display = 'none';
+     // Show the prompt
+     deferredPrompt.prompt();
+     // Wait for the user to respond to the prompt
+@@ -57,7 +58,6 @@ if ('serviceWorker' in navigator) {
+       deferredPrompt = null;
+     });
+   });
+-
+ }
+ 
+ function createIndexedDB() {
+@@ -179,7 +179,8 @@ function updateUI(events) {
+            <p>${event.note}</p>
+          </div>
+        </li>`;
+-    container.insertAdjacentHTML('beforeend', item);
++    const where = container.childElementCount < 6 ? 'afterbegin' : 'beforeend';
++    container.insertAdjacentHTML(where, item);
+   });
+ }

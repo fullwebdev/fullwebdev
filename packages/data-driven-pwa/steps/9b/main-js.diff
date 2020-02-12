@@ -1,0 +1,56 @@
+--- project/app/js/main.js
++++ project/app/js/main.js
+@@ -13,6 +13,30 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ */
++const COOKIE_NAME = 'POSTPONED_A2HS';
++
++function setCookie(name, value, expirationMinutes) {
++  let d = new Date();
++  d.setTime(d.getTime() + expirationMinutes * 60 * 1000);
++
++  let expires = 'expires='+d.toUTCString();
++  document.cookie = name + '=' + value + '; ' + expires + '; path=/';
++}
++
++function getCookie(cookieName) {
++  let name = cookieName + '=';
++  let ca = document.cookie.split(';');
++  let c;
++
++  for(var i = 0; i < ca.length; i++) {
++    c = ca[i].trim();
++    if (c.indexOf(name) == 0) {
++      return c.substring(name.length, c.length);
++    }
++  }
++
++  return '';
++}
+ 
+ if ('serviceWorker' in navigator) {
+   window.addEventListener('load', () => {
+@@ -27,9 +51,21 @@ if ('serviceWorker' in navigator) {
+ 
+   const installCard = document.getElementById('install-card');
+   const btnAdd = installCard.querySelector('#install-btn');
++  const btnDismiss = installCard.querySelector('#dismiss-btn');
++
++  btnDismiss.addEventListener('click', e => {
++    installCard.style.display = 'none';
++    // By default, Chrome stop showing the mini info-bar during 3 months
++    // after the user dismissed it.
++    // We set it to 2 minutes for testing purpose only.
++    setCookie(COOKIE_NAME, 'true', 3);
++  })
+ 
+   function showInstallPromotion() {
+-    installCard.style.display = 'inline-block';
++    if(getCookie(COOKIE_NAME) !== 'true') {
++      installCard.style.display = 'inline-block';
++      setCookie(COOKIE_NAME, 'true', 1);
++    }
+   }
+ 
+   let deferredPrompt;

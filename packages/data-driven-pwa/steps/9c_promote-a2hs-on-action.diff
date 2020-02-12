@@ -1,0 +1,62 @@
+diff --git a/project/app/index.html b/project/app/index.html
+index 5b606ef..9401ae9 100644
+--- a/project/app/index.html
++++ b/project/app/index.html
+@@ -68,7 +68,7 @@ limitations under the License.
+         <!-- items dynamically populated -->
+         <li class="card" id="install-card" style="display: none">
+           <div class="card-text">
+-            <h2>Browse events anytime you want!</h2>
++            <h2>Add events where you want, when you want!</h2>
+             <p>
+               <button class="button ripple" id="dismiss-btn">Not now</button>
+               <button class="button ripple" id="install-btn">Install</button>
+diff --git a/project/app/js/main.js b/project/app/js/main.js
+index 0df9937..7c5457f 100644
+--- a/project/app/js/main.js
++++ b/project/app/js/main.js
+@@ -38,6 +38,8 @@ function getCookie(cookieName) {
+   return '';
+ }
+ 
++let showInstallPromotion;
++
+ if ('serviceWorker' in navigator) {
+   window.addEventListener('load', () => {
+     navigator.serviceWorker.register('/sw.js')
+@@ -61,7 +63,7 @@ if ('serviceWorker' in navigator) {
+     setCookie(COOKIE_NAME, 'true', 3);
+   })
+ 
+-  function showInstallPromotion() {
++  showInstallPromotion = () => {
+     if(getCookie(COOKIE_NAME) !== 'true') {
+       installCard.style.display = 'inline-block';
+       setCookie(COOKIE_NAME, 'true', 1);
+@@ -76,7 +78,6 @@ if ('serviceWorker' in navigator) {
+     e.preventDefault();
+     // Stash the event so it can be triggered later.
+     deferredPrompt = e;
+-    showInstallPromotion();
+   });
+ 
+   btnAdd.addEventListener('click', e => {
+@@ -190,6 +191,9 @@ function addAndPostEvent(e) {
+     note: document.getElementById('note').value
+   };
+   updateUI([data]);
++  if (typeof showInstallPromotion === 'function') {
++    showInstallPromotion();
++  }
+ 
+   saveEventDataLocally([data]);
+ 
+@@ -215,7 +219,7 @@ function updateUI(events) {
+            <p>${event.note}</p>
+          </div>
+        </li>`;
+-    const where = container.childElementCount < 6 ? 'afterbegin' : 'beforeend';
++    const where = events.length > 1 ? 'afterbegin' : 'beforeend';
+     container.insertAdjacentHTML(where, item);
+   });
+ }
