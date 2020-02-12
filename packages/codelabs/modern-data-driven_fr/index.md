@@ -18,7 +18,7 @@ et d'avoir au moins une fois contribué au développement d'une Web App (peu imp
 ### IMPORTANT
 
 <aside class="warning">
-  <b>Dans le cas où vous assistiez à une version "live" de ce codelab (durant une conférence, comme le Devfest Paris 2020 par exemple), il vous est fortement recommandé d'effectuer les étapes 2 et 3 (installations) en amont !</b>
+  <b>Dans le cas où vous assistiez à une version "live" de ce codelab (durant une conférence, comme le DevFest Paris 2020 par exemple), il vous est fortement recommandé d'effectuer les étapes 2 et 3 (installations) en amont !</b>
 </aside>
 
 ### Logiciels indispensables
@@ -27,7 +27,7 @@ et d'avoir au moins une fois contribué au développement d'une Web App (peu imp
   * recommandation : [Download Visual Studio Code](https://code.visualstudio.com/)
 * La dernière version de Chrome
   * [Chrome Canary](https://www.google.com/chrome/canary/)
-  * ou [Chome Dev](https://www.google.com/chrome/dev/) si vous ne pouvez install la version Canary (eg sur Linux)
+  * ou [Chrome Dev](https://www.google.com/chrome/dev/) si vous ne pouvez install la version Canary (eg sur Linux)
   * (optionnel, en supplément) [Firefox](https://www.mozilla.org/fr/firefox/channel/desktop/#nightly) Nightly ou Developer Edition
 * [Node.js](https://nodejs.org/en/) et [npm](https://www.npmjs.com/)
 
@@ -68,7 +68,7 @@ npm install
 ```
 
 <aside class="special">
-  Cette commande lance l'installation des outils de développement depuis la racine du dépôt, incluant [Lerna](https://lerna.js.org/). Ce dernier est ensuite utilisé pour également installer les dépendances de tous les sous-projets, à partir desquels vous effectuerez les étapes suivantes. Par concéquent, <b>il ne vous sera pas nécessaire d'effectuer un `npm install` pour chacun de ces projets</b>.
+  Cette commande lance l'installation des outils de développement depuis la racine du dépôt, incluant [Lerna](https://lerna.js.org/). Ce dernier est ensuite utilisé pour également installer les dépendances de tous les sous-projets, à partir desquels vous effectuerez les étapes suivantes. Par conséquent, <b>il ne vous sera pas nécessaire d'effectuer un `npm install` pour chacun de ces projets</b>.
 </aside>
 
 ## Premier contact avec l'application
@@ -133,13 +133,13 @@ Retournez dans le navigateur, et mettez à jour l'application :
 
 Enfin, stoppez le serveur pour simuler une coupure réseau, puis rechargez l'application dans le navigateur. Vous constaterez alors que l'application semble fonctionner à l'identique.
 
-Dans les developer tools de Chrome, sélectionnez la section _IndexedDB_, puis la base de donnée _dashboardr_. Celle-ci permet de stocker localement les "évènements" pour une consultation hors ligne.
+Dans les developer tools de Chrome, sélectionnez la section _IndexedDB_, puis la base de donnée _dashboard_. Celle-ci permet de stocker localement les "évènements" pour une consultation hors ligne.
 
 L'application dont vous disposez à présent est bien une PWA entièrement disponible hors-ligne !
 
 ### Explication
 
-Sans développement spécifique, quand un utilisateur tente d'accéder à une Web App en étant déconnecté, un message "Offline" est affiché, empéchant toute utilisation de l'application.
+Sans développement spécifique, quand un utilisateur tente d'accéder à une Web App en étant déconnecté, un message "Offline" est affiché, empêchant toute utilisation de l'application.
 
 <p class="center">
   <img src="./assets/firefox-offline.png" alt="firefox is offline" style="margin: 1rem"/>
@@ -222,7 +222,7 @@ Pour voir le résultat de cette nouvelle fonctionnalité, effectuez une nouvelle
 Déconnectez votre ordinateur du réseau **pour de vrais** (wifi et cable).
 
 <aside class="warning">
-  Le background sync se basant sur le <i>véritable</i> statut de la connection réseau de votre système, il est indispensable d'activer et désactiver votre ordinateur pour ce chapitre et le suivant. <b>Le trottling via les DevTools et l'arrêt de serveur ne suffiront pas.</b>
+  Le background sync se basant sur le <i>véritable</i> statut de la connection réseau de votre système, il est indispensable d'activer et désactiver votre ordinateur pour ce chapitre et le suivant. <b>Le throttling via les DevTools et l'arrêt de serveur ne suffiront pas.</b>
 </aside>
 
 Dans `Developer Tools > Background Sync`, démarrez la capture des évènements Background Sync.
@@ -266,14 +266,14 @@ Enfin, rechargez la page : vous constaterez que votre nouvel évènement a bien 
 </aside>
 
 <aside class="warning">
-  Le background sync sous Chrome <a href="https://github.com/GoogleChrome/workbox/issues/1896">peut parfois être capricieux</a>. Si un "Registered Sync" n'apparait pas après que vous ayez créé votre évènement, il s'agit sans doute d'un bug indépendant de l'application. Fermez complètement Chrome (y compris les processus en arrière plan), redémarrez le, et retentez l'opération après avoir supprimé toutes les données de l'application (Clear Storage > Clear site data).
+  Le background sync sous Chrome <a href="https://github.com/GoogleChrome/workbox/issues/1896">peut parfois être capricieux</a>. Si un "Registered Sync" n'apparaît pas après que vous ayez créé votre évènement, il s'agit sans doute d'un bug indépendant de l'application. Fermez complètement Chrome (y compris les processus en arrière plan), redémarrez le, et retentez l'opération après avoir supprimé toutes les données de l'application (Clear Storage > Clear site data).
 </aside>
 
 <aside class="info">
   Portions of this page are modifications based on work created and <a href="/readme/policies/">shared by Google</a> and used according to terms described in the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons 4.0 Attribution License</a>.
 </aside>
 
-## Informer l'utilisateur de l'enregistement
+## Informer l'utilisateur de l'enregistrement
 
 La potentialité d'une perte de données est toujours source de stress pour vos utilisateurs. _Votre serviteur en sait quelque chose, étant donné qu'il écrit actuellement ce chapitre pour la seconde fois, suite à un git checkout malencontreux 😓. Ironique n'est-ce pas ?_
 
@@ -283,7 +283,7 @@ C'est pourquoi il est indispensable de prendre en compte l'intégralité de leur
   Notez bien que sans l'usage des outils de développement et l'accès au serveur, vous auriez été bien incapable de dire, à l'étape précédente, si vos évènements avaient bien été enregistrés.
 </aside>
 
-Ici, notre application est plutôt sommaire. Nous nous contenterons donc d'informer l'utisateur de l'enregistrement de ces données via une notification.
+Ici, notre application est plutôt sommaire. Nous nous contenterons donc d'informer l'utilisateur de l'enregistrement de ces données via une notification.
 
 ### Afficher une notification
 
@@ -319,7 +319,7 @@ Mais il semblerait que nous ayons créé une notification trompeuse. Votre évè
 
 Par défaut, un BackgroundSyncPlugin a un comportement des plus simple. Il créé un file (queue) par défaut, stocke toutes les appels correspondant à la route à laquelle il a été associé dans celle-ci quand ils échouent, et les rejouent tous à la reception d'un sync event.
 
-Mais l'option `onSync` n'a pas vocation à n'être qu'une simple callback en adition de ce comportement. Elle le remplace.
+Mais l'option `onSync` n'a pas vocation à n'être qu'une simple callback en addition de ce comportement. Elle le remplace.
 
 Ainsi, quand nous avons associé `showNotification` au `onSync` du plugin, nous n'avons pas ajouté un comportement.
 Nous l'avons remplacé.
@@ -328,7 +328,7 @@ Nous l'avons remplacé.
 
 Pour réparer cette erreur, nous devons reproduire le comportement par défaut du plugin, et donc rejouer tous les appels dans sa file.
 
-Editez `showNotification` pour obtenir le résultat suivant :
+Éditez `showNotification` pour obtenir le résultat suivant :
 
 ```javascript
 const showNotification = ({ queue }) => {
@@ -345,7 +345,7 @@ Enfin, ré-effectuez le test de l'application précédent, et gardez un œil sur
   Portions of this page are modifications based on work created and <a href="/readme/policies/">shared by Google</a> and used according to terms described in the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons 4.0 Attribution License</a>.
 </aside>
 
-## Se débarasser de la mini info-bar
+## Se débarrasser de la mini info-bar
 
 Nous avons implémenté des fonctionnalités qui répondent aux besoins de nos utilisateurs, dans une application performante, et avec une UX qui corresponde à leurs attentes.
 
@@ -362,7 +362,7 @@ Il va donc être primordial pour nous de l'éviter à tout prix.
 
 <aside class="tip">
   <p>
-    Pour tester l'affichage de la mini-infobar, vous aurez besoin de charger la web app sur Chrome Android, en HTTPS ou localhost. La solution la plus simple consiste à <a href="https://developers.google.com/web/tools/chrome-devtools/remote-debugging/local-server">utiliser la redirection de port de Chrome</a>.
+    Pour tester l'affichage de la mini info-bar, vous aurez besoin de charger la web app sur Chrome Android, en HTTPS ou localhost. La solution la plus simple consiste à <a href="https://developers.google.com/web/tools/chrome-devtools/remote-debugging/local-server">utiliser la redirection de port de Chrome</a>.
   </p>
 </aside>
 
