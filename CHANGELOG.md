@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-alpha.9](https://github.com/noelmace/web-on-fire/compare/v2.0.0-alpha.8...v2.0.0-alpha.9) (2020-02-12)
+
+
+### Bug Fixes
+
+* **codelab:** rewrite chapter 4 ([f239f13](https://github.com/noelmace/web-on-fire/commit/f239f13142be6c5adec8a5304b7be0fb486e5eec))
+
 ## [2.0.0-alpha.8](https://github.com/noelmace/web-on-fire/compare/v2.0.0-alpha.7...v2.0.0-alpha.8) (2020-02-12)
 
 
