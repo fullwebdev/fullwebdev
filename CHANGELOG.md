@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-alpha.7](https://github.com/noelmace/web-on-fire/compare/v2.0.0-alpha.6...v2.0.0-alpha.7) (2020-02-12)
+
+
+### Features
+
+* **codelabs:** fr modern-data-driven - sync event ([30b8aff](https://github.com/noelmace/web-on-fire/commit/30b8affc5fbeefde086878e58872b4d7fe161140))
+* **data-driven-pwa:** all step 4 ([da5d543](https://github.com/noelmace/web-on-fire/commit/da5d543f5426ab7d9e7abe263f169bd67e46ae73))
+
 ## [2.0.0-alpha.6](https://github.com/noelmace/web-on-fire/compare/v2.0.0-alpha.5...v2.0.0-alpha.6) (2020-02-11)
 
 
