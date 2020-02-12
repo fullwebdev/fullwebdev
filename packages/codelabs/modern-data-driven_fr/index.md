@@ -366,7 +366,7 @@ Il va donc être primordial pour nous de l'éviter à tout prix.
   </p>
 </aside>
 
-Dans **app/main.js**, ajouter le code suivant dans le `if('serviceWorker in navigator)` :
+Dans **app/js/main.js**, ajouter le code suivant dans le `if('serviceWorker in navigator)` :
 
 ```javascript
 let deferredPrompt;
@@ -411,7 +411,7 @@ Afin d'être plus incitatif, ajoutez un bouton d'installation dans le `<header>`
 
 Remarquez que ce bouton est masqué par défaut. Il sera affiché <i>uniquement</i> si le navigateur supporte le A2HS, et que l'utilisateur n'a pas déjà refusé l'installation.
 
-Pour ce faire, appeler une fonction `showInstallPromotion` en réponse à l'évènement `beforeInstallPrompt`, dans **app/main.js** :
+Pour ce faire, appeler une fonction `showInstallPromotion` en réponse à l'évènement `beforeInstallPrompt`, dans **app/js/main.js** :
 
 ```javascript
 window.addEventListener('beforeinstallprompt', e => {
@@ -454,3 +454,191 @@ Rafraîchissez l'application dans le navigateur pour observer le résultat et te
 <aside class="info">
   Portions of this page are modifications based on work created and <a href="/readme/policies/">shared by Google</a> and used according to terms described in the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons 4.0 Attribution License</a>.
 </aside>
+
+## Améliorer l'UX de l'A2HS
+
+Ajouter un bouton au header de votre application est rarement une bonne pratique.
+L'espace y est rare, et l'A2HS n'est pas, dans la plupart des cas, la première fonctionnalité à mettre en avant.
+
+Pour bien promouvoir l'installation de votre application vous devez, comme évoqué précédemment, bien intégrer celle-ci au parcours de l'utilisateur, en prenant en compte son niveau de fidélisation.
+
+Plusieurs UX patterns, en fonction de votre type d'application, existent pour cela.
+
+<aside class="tip">
+  Peter Mclachlan a écrit un excellent article sur le sujet intitulé <a href="https://developers.google.com/web/fundamentals/app-install-banners/promoting-install-mobile" target="_blank" rel="noopener noreferrer"><i>Patterns for Promoting PWA Installation (mobile)</i></a>
+</aside>
+
+Pour cette application, nous pouvons adoptez deux approches différentes.
+
+### Promouvoir à la consultation
+
+Dans le cas où la consultation des événements soit le premier usage de l'application, la meilleure approche sera de promouvoir l'installation dans le cadre de ce parcours.
+
+Supprimez le bouton d'installation précédemment créé dans **app/index.html**, et ajouter une nouvelle "card" d'installation dans le container où les événements sont dynamiquement ajoutés :
+
+```html
+<ul id="container" class="container">
+  <!-- items dynamically populated -->
+  <li class="card" id="install-card" style="display: none">
+    <div class="card-text">
+      <h2>Browse events anytime you want!</h2>
+      <p>
+        <button class="button ripple" id="install-btn">Install</button>
+      </p>
+    </div>
+  </li>
+</ul>
+```
+
+Dans **app/js/main.js**, remplacer `btnAdd` par le code suivant :
+
+```javascript
+const installCard = document.getElementById('install-card');
+const btnAdd = installCard.querySelector('#install-btn');
+```
+
+Enfin, remplacez `btnAdd` par `installCard` dans `showInstallPromotion` et l'EventListener de `btnAdd 'click'` :
+
+```javascript
+function showInstallPromotion() {
+  installCard.style.display = 'inline-block';
+}
+```
+
+```javascript
+btnAdd.addEventListener('click', e => {
+    installCard.style.display = 'none';
+    deferredPrompt.prompt();
+    //...
+}
+```
+
+Enfin, pour un meilleur affichage, ajoutez un test dans `updateUI` afin de faire en sorte que "l'install card" s'affiche après le cinquième évènement :
+
+```javascript
+function updateUI(events) {
+  events.forEach(event => {
+    const item =
+      `<li class="card">
+         <div class="card-text">
+           <h2>${event.title}</h2>
+           <h4>${event.date}</h4>
+           <h4>${event.city}</h4>
+           <p>${event.note}</p>
+         </div>
+       </li>`;
+    const where = container.childElementCount < 6 ? 'afterbegin' : 'beforeend';
+    container.insertAdjacentHTML(where, item);
+  });
+}
+```
+
+Rechargez l'application, et assurez vous que tout fonctionne comme prévu.
+
+Cette approche reste malgré tout ennuyante pour l'utilisateur. C'est pourquoi il est important d'y poser des limites.
+
+1. **Permettre à l'utilisateur de refuser/masquer cette card**
+
+Dans **app/index.html**, ajoutez un bouton "Dismiss" :
+
+```html
+<div class="card-text">
+  <h2>Browse events anytime you want!</h2>
+  <p>
+    <button class="button ripple" id="dismiss-btn">Not now</button>
+    <button class="button ripple" id="install-btn">Install</button>
+  </p>
+</div>
+```
+
+Dans **app/js/main.js**, ajoutez un `EventHandler` pour masquer la card au click sur ce bouton :
+
+```javascript
+const btnDismiss = installCard.querySelector('#dismiss-btn');
+
+btnDismiss.addEventListener('click', e => {
+  installCard.style.display = 'none';
+}
+```
+
+Rechargez l'application et cliquez sur le bouton. Rechargez à nouveau, et la card ré-apparaît.
+
+2. **Conserver ce choix en mémoire**
+
+Pour cela, vous utiliserez simplement un cookie.
+
+Copiez-collez les helpers suivants au début de **app/js/main.js** :
+
+```javascript
+const COOKIE_NAME = 'POSTPONED_A2HS';
+
+function setCookie(name, value, expirationMinutes) {
+  let d = new Date();
+  d.setTime(d.getTime() + expirationMinutes * 60 * 1000);
+
+  let expires = 'expires='+d.toUTCString();
+  document.cookie = name + '=' + value + '; ' + expires + '; path=/';
+}
+
+function getCookie(cookieName) {
+  let name = cookieName + '=';
+  let ca = document.cookie.split(';');
+  let c;
+
+  for(var i = 0; i < ca.length; i++) {
+    c = ca[i].trim();
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+
+  return '';
+}
+```
+
+Créez un cookie au click sur le bouton dismiss :
+
+```javascript
+btnDismiss.addEventListener('click', e => {
+  installCard.style.display = 'none';
+  // By default, Chrome stop showing the mini info-bar during 3 months
+  // after the user dismissed it.
+  // We set it to 2 minutes for testing purpose only.
+  setCookie(COOKIE_NAME, 'true', 2);
+})
+```
+
+Enfin, assurez vous que vous n'afficherez pas la card tant que ce cookie ne sera pas expiré :
+
+```javascript
+function showInstallPromotion() {
+  if(getCookie(COOKIE_NAME) !== 'true') {
+    installCard.style.display = 'inline-block';
+  }
+}
+```
+
+Rechargez l'application, cliquez sur le bouton "Not now", et recharger l'application à nouveau pour vérifier que la card est bien toujours masquée. Puis attendez l'expiration du cookie (ici, 3 minutes) et rechargez la page : la card apparaît à nouveau.
+
+3. **Limiter le nombre de fois où vous la présentez à l'utilisateur**
+
+Même en l'absence de refus par l'utilisateur, il est primordial de limiter l'affichage de cette card dans le temps, afin de ne pas paraître trop intrusif.
+
+Dans **app/js/main.js**, ajouter un cookie à l'affichage de la card avec un temps plus court :
+
+```javascript
+function showInstallPromotion() {
+  if(getCookie(COOKIE_NAME) !== 'true') {
+    installCard.style.display = 'inline-block';
+    setCookie(COOKIE_NAME, 'true', 1);
+  }
+}
+```
+
+Rechargez la page par deux fois pour constater que la card est masquée.
+
+### Promouvoir à l'utilisation
+
+Si malgré tout, nous constations que cette approche demeure trop intrusif pour un faible rendement, cela peut signifier que l'utilisateur n'est pas assez fidélisé si il ne fait que consulter des événements.
+
+Dans ce cas, la création par l'utilisateur d'un premier événement sera sans aucun doute _le_ moment clef.
