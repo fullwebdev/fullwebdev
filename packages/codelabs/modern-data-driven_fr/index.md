@@ -21,7 +21,7 @@ et d'avoir au moins une fois contribué au développement d'une Web App (peu imp
   <b>Dans le cas où vous assistiez à une version "live" de ce codelab (durant une conférence, comme le Devfest Paris 2020 par exemple), il vous est fortement recommandé d'effectuer les étapes 2 et 3 (installations) en amont !</b>
 </aside>
 
-## Logiciels pré-requis
+### Logiciels indispensables
 
 * Un IDE / un éditeur de code ou de texte
   * recommandation : [Download Visual Studio Code](https://code.visualstudio.com/)
@@ -31,15 +31,15 @@ et d'avoir au moins une fois contribué au développement d'une Web App (peu imp
   * (optionnel, en supplément) [Firefox](https://www.mozilla.org/fr/firefox/channel/desktop/#nightly) Nightly ou Developer Edition
 * [Node.js](https://nodejs.org/en/) et [npm](https://www.npmjs.com/)
 
-### Pour tester certaines étapes
+### Recommandations
 
 <aside class="notice">
-  Ces éléments sont nécessaires pour tester plusieurs fonctionnalités que vous ajouterez à la PWA. Ils ne sont pas absolument indispensable pour compléter ce codelab, mais très fortement recommandés.
+  Ces éléments sont nécessaires pour tester plusieurs fonctionnalités que vous ajouterez à la PWA. Ils ne sont pas absolument indispensables pour compléter ce codelab, mais très fortement recommandés.
 </aside>
 
 * un système Windows ou Mac OS X
-  * si vous utilisez Linux, vous pouvez utilisez une [VM](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/), mais vous devrez également y installer la dernière version de Chrome (cf. plus haut), et vous assurer que celle-ci peut accéder au système hôte via un réseau virtuel (HTTP)
-* un smartphone Android, un cable usb et [Android Studio](https://developer.android.com/studio) ℹ️
+  * si vous utilisez Linux, vous pourrez au besoin utiliser une [VM](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/), mais vous devrez également y installer la dernière version de Chrome (cf. plus haut), et vous assurer que celle-ci peut accéder au système hôte via un réseau virtuel (HTTP)
+* un smartphone Android, un cable usb et [Android Studio](https://developer.android.com/studio)
 
 ## Mise en place
 
@@ -71,18 +71,7 @@ npm install
   Cette commande lance l'installation des outils de développement depuis la racine du dépôt, incluant [Lerna](https://lerna.js.org/). Ce dernier est ensuite utilisé pour également installer les dépendances de tous les sous-projets, à partir desquels vous effectuerez les étapes suivantes. Par concéquent, <b>il ne vous sera pas nécessaire d'effectuer un `npm install` pour chacun de ces projets</b>.
 </aside>
 
-## (optionnel) Créer la PWA
-
-<aside class="special">
-  Le projet à partir duquel vous effectuerez les étapes ultérieurs de ce codelab se basent sur l'application construite en suivant le codelab de Google intitulé <a href="https://codelabs.developers.google.com/codelabs/workbox-indexeddb" target="_blank" rel="noopener noreferrer"><i>Build an offline-first, data-driven PWA</i></a>. Vous pouvez sauter ce chapitre si vous ne souhaitez pas construire l'application vous même.
-</aside>
-
-### démarrer le serveur
-
-<aside class="notice">
-  Les points suivants remplacent l'étape 3 du codelab mentionné précédemment.<br>
-  <a href="https://codelabs.developers.google.com/codelabs/workbox-indexeddb/#2" target="_blank" rel="noopener noreferrer">Consultez la page correspondante</a> pour plus d'explications.
-</aside>
+## Premier contact avec l'application
 
 Via le terminal, rendez-vous dans le dossier "project" où se situent les éléments de base du projet :
 
@@ -96,8 +85,6 @@ cd project
 npm run --silent start
 ```
 
-### Ouvrir l'application
-
 Ouvrez l'application en entrant l'url [localhost:8081](http://localhost:8081) dans votre navigateur web.
 
 L'application vous demande alors une autorisation pour pouvoir afficher des notifications. Cliquez sur "Autoriser" ou "Allow" pour l'accepter.
@@ -105,73 +92,73 @@ L'application vous demande alors une autorisation pour pouvoir afficher des noti
 ![Autoriser les notifications](https://codelabs.developers.google.com/codelabs/workbox-indexeddb/img/9ca6ac4aededfba6.png) \
 _Crédit image: ©️ Google Inc._
 
-### Cache et IndexDB
-
-<aside class="warning">
-  <p>Assurez vous d'utiliser la dernière version de Workbox (5.0.0 au moment de l'écriture de ce codelab).</p>
-  <p>
-    Pour se faire, utilisez la ligne suivante à la place de celle indiquée sur le codelab Google:
-  <p>
+<aside class="special">
+  Cette application est issue d'un codelab de Google intitulé <a href="https://codelabs.developers.google.com/codelabs/workbox-indexeddb/#2" target="_blank" rel="noopener noreferrer"><i>Build an offline-first, data-driven PWA</i></a>.
 </aside>
 
-```javascript
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.0.0/workbox-sw.js');
-```
+## Une application orientée données
 
-Suivez les <a href="https://codelabs.developers.google.com/codelabs/workbox-indexeddb/#3" target="_blank" rel="noopener noreferrer">étapes 4 à 7 du codelab Google</a> pour permettre à l'application de fonctionner pleinement hors-ligne.
-
-## Enregistrer les données une fois de retour en ligne
-
-### Démarrer le serveur
-
-Si vous êtes passé directement à cette étape sans effectuer la précédente, rendez vous dans le projet "before-bgsync" et lancez le serveur de développement :
+Retournez à la racine du projet, et lancez la commande permettant de modifier automatiquement le code pour ce chapitre :
 
 ```bash
-cd before-bgsync
-npm run --silent start
+cd ..
+npm run goto --step=4
 ```
 
-Ouvrez ensuite [localhost:8081](http://localhost:8081) avec Chrome pour tester l'application.
-
-<aside class="warning">
-  Si vous ne l'avez pas déjà fait à l'étape précédente, acceptez la demande d'autorisation de notifications.
+<aside class="special">
+  <p>Cette même commande permet également de "sauter"/corriger tous les chapitres suivants. Il est cependant indispensable de les lancer avant toute modification du code du projet, dans l'ordre, en commençant par 4.</p>
 </aside>
 
-Une fois l'application chargée, stoppez le serveur (Ctrl+C dans le terminal) pour simuler une coupure réseau, puis rechargez l'application.
+Une fois le serveur démarré et l'application chargée dans votre navigateur, stoppez le serveur (`Ctrl+C` dans le terminal) pour simuler une coupure réseau, puis rechargez l'application.
 
 Vous constaterez alors que l'application semble fonctionner à l'identique.
-
-### Analyser le fonctionnement du mode hors-ligne
-
-<aside style="notice">
-  Si vous avez effectué l'étape 4, vous pouvez passer cette étape.
-</aside>
 
 Dans les developer tools de Chrome, explorez les éléments suivants :
 
 * Service Workers : un service worker est actif
 * IndexedDB : la base de donnée 'dashboardr' permet de stocker localement les events pour une consultation hors ligne
 
-Enfin, stoppez le serveur (Ctrl+C dans la console) avant de passer à l'étape suivante.
+L'application dont vous disposez à présent est une PWA entièrement disponible hors-ligne.
 
 ### Explication
 
-L'application dont vous disposez à présent (après avoir suivi l'étape précédent, ou en étant passé directement à celle-ci) est une PWA entièrement disponible hors-ligne.
-
-Sans développement spécifique, quand un utilisateur tente d'accéder à une Web App en étant déconnecté, un message "Offline" est affiché, empéchant toute utilisateur de l'application.
+Sans développement spécifique, quand un utilisateur tente d'accéder à une Web App en étant déconnecté, un message "Offline" est affiché, empéchant toute utilisation de l'application.
 
 <p class="center">
   <img src="./assets/firefox-offline.png" alt="firefox is offline" style="margin: 1rem"/>
 </p>
 
-Workbox a permis, en mettant en cache le App Shell, de ne jamais afficher ce type de message pour tout utilisateur retournant sur l'application.
+Workbox a permis, en mettant en cache le App Shell, de ne jamais montrer ce type de message à un utilisateur retournant sur l'application.
 
 Mais une application n'est rien sans données !
 Nous avons donc utilisé IndexDB pour mettre ces données en cache (ici, des "events"), et permettre de les consulter même en étant hors-ligne.
 
 Un problème persiste cependant : comme le serveur n'est bien évidemment pas disponible quand l'utilisateur est hors ligne, tous les "events" qu'il aura alors créé n'auront été stockés que localement. Ils seront donc perdus très rapidement !
 
-Nous allons durant cette étape résoudre ce problème via workbox-background-sync, et donc la Background Sync API.
+Nous allons dans le chapitre suivant résoudre ce problème via workbox-background-sync, et donc la Background Sync API.
+
+### Pas-à-pas (optionnel)
+
+Vous pouvez également suivre les <a href="https://codelabs.developers.google.com/codelabs/workbox-indexeddb/#3" target="_blank" rel="noopener noreferrer">étapes 4 à 7 du codelab Google</a> pour mieux comprendre en détails ces fonctionnalités.
+
+Pour gagner du temps, les "step" correspondant ont été créés pour la commande "goto". Leurs numéros suivent le format `4-<step google>` :
+
+```bash
+npm run goto --step=4-4
+npm run goto --step=4-5
+npm run goto --step=4-6
+npm run goto --step=4-7
+```
+
+<aside class="warning">
+  Si vous décidez d'écrire ce code vous même, assurez vous d'utiliser la dernière version de Workbox (5.0.0) au lieu de celle indiquée dans le premier code d'exemple (3.5.0).
+</aside>
+
+```javascript
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.0.0/workbox-sw.js');
+```
+
+## Ne pas perdre de données hors-ligne
 
 ### Compatibilité des navigateurs
 
@@ -212,12 +199,12 @@ npm run --silent start
 Pour voir le résultat de cette nouvelle fonctionnalité, effectuez les actions suivantes :
 
 1. Actualisez l'application
-  a. Rafraîchissez la page dans Chrome.
-  b. Activez le nouveau service worker en cliquant sur `skipWaiting` dans les Developer Tools > Service Workers.
-  c. Enfin, rafraîchissez la page à nouveau.
-2. Stoppez le serveur en entrant `Ctrl+C` pour remettre l'application hors-ligne.
-3. Déconnectez votre ordinateur du réseau **pour de vrais** !
-4. Dans les devtools, à la section "Background Sync", démarrez la capture des évènements Background Sync.
+  1. Rafraîchissez la page dans Chrome
+  2. Activez le nouveau service worker en cliquant sur `skipWaiting` dans `Developer Tools > Service Workers`
+  3. Enfin, rafraîchissez la page à nouveau
+2. Stoppez le serveur en entrant `Ctrl+C` pour remettre l'application hors-ligne
+3. Déconnectez votre ordinateur du réseau **pour de vrais** (wifi et cable)
+4. Dans `Developer Tools > Background Sync`, démarrez la capture des évènements Background Sync.
 
 ![capture: record bgsync in Chrome](./assets/record-bgsync.png)
 
@@ -227,7 +214,7 @@ En allant à l'onglet 'Network' des devtools, vous pourrez constater qu'une requ
 
 ![capture: request failed](./assets/5-failed-request.png)
 
-Dans le même temps, une nouvelle base `workbox-background-sync` a été créée, contenant une request vers `http://localhost:8081/api/add` (`requestData.url`) (cf. "Application > IndexedDB") et un évènement "Registered Sync" est visible dans "Background Sync".
+Dans le même temps, une nouvelle base `workbox-background-sync` a été créée, contenant une request vers `http://localhost:8081/api/add` (`requestData.url`) (cf. `Developer Tools > Application > IndexedDB`) et un évènement "Registered Sync" est visible dans "Background Sync".
 
 <aside class="notice">
   Pensez à rafraîchir IndexedDB (click droit) si rien n'apparaît.
@@ -254,7 +241,7 @@ Bien entendu, la requête à du même coup été supprimée de la base IndexedDB
 Enfin, rechargez la page : vous constaterez que votre nouvel évènement a bien été enregistré, et est donc toujours présent.
 
 <aside class="special">
-  Vos nouveaux évènements ont même été enregistrés par le serveur dans `server-data/events.json`.
+  Vos nouveaux évènements ont même été enregistrés par le serveur dans <code>server-data/events.json</code>.
 </aside>
 
 <aside class="warning">
@@ -263,11 +250,7 @@ Enfin, rechargez la page : vous constaterez que votre nouvel évènement a bien 
 
 ## Informer l'utilisateur de l'enregistement
 
-La potentialité d'une perte de données est toujours source de stress pour vos utilisateurs.
-
-<aside class="special">
-  Votre serviteur en sait quelque chose, étant donné qu'il écrit actuellement ce chapitre pour la seconde fois, suite à un git checkout malencontreux 😓. Ironique n'est-ce pas ?
-</aside>
+La potentialité d'une perte de données est toujours source de stress pour vos utilisateurs. _Votre serviteur en sait quelque chose, étant donné qu'il écrit actuellement ce chapitre pour la seconde fois, suite à un git checkout malencontreux 😓. Ironique n'est-ce pas ?_
 
 C'est pourquoi il est indispensable de prendre en compte l'intégralité de leur parcours, de la création de données hors ligne (et donc, leur stockage localement) à l'enregistrement de celles ci côté serveur une fois la connexion retrouvée.
 
