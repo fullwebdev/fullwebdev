@@ -330,28 +330,25 @@ const showNotification = ({ queue }) => {
 
 Enfin, ré-effectuez le test de l'application précédent, et gardez un œil sur la console et "Network". Votre appel POST sur /api/add sera cette fois-ci rejoué correctement une fois la connexion retrouvée, et votre évènement bien enregistré.
 
-## Encourager l'installation de l'application
+## Se débarasser de la mini info-bar
 
 Nous avons implémenté des fonctionnalités qui répondent aux besoins de nos utilisateurs, dans une application performante, et avec une UX qui corresponde à leurs attentes.
 
-À présent que nous pouvons donc être confiant dans le succès de notre app ( 🤷‍♂ ), notre priorité devient la fidélisation de la foule d'utilisateurs qui ne va pas manquer de l'utiliser.
+À présent que nous pouvons donc être confiant dans le succès de notre app ( 🤷‍ ), notre priorité devient la fidélisation de la foule d'utilisateurs qui ne va pas manquer de l'utiliser.
 
 Pour se faire, rien de mieux, techniquement, que l'installation (ou A2HS, pour Add to Home Screen).
 
-### Se débarasser de la mini info-bar
+Afin d'encourager l'installation des Web Apps, une première solution apportée par Chrome for Android est la mini info-bar.
 
-Malheureusement, la [mini info-bar](https://developers.google.com/web/fundamentals/app-install-banners/native) Chrome rebute bien plus le grand public qu'elle n'incite à l'installation.
+![mini info-bar](https://developers.google.com/web/updates/images/2018/06/a2hs-infobar-cropped.png)
+_image credit: CC BY 4.0 ©️ Google_
+
+Malheureusement, cette [mini info-bar](https://developers.google.com/web/fundamentals/app-install-banners/native) rebute bien plus le grand public qu'elle n'incite à l'installation.
 Il va donc être primordial pour nous de l'éviter à tout prix.
 
-<aside class="notice">
+<aside class="tip">
   <p>
-    Pour les chapitres comme ceux-ci, où vous apporterez pas ou peu de modification au service-worker `sw.js`, mais aurez besoin de mettre à jour l'html et le javascript du window context régulièrement, il peut être plus pratique de recharger toute l'application à chaque rafraîchissement de la page, et donc d'éviter tout cache.
-  </p>
-  <p>
-    Pour cela, vous pouvez activer l'option "Update on reload" pour recharger un service worker complet à chaque fois :
-  </p>
-  <p class="center">
-    <img src="./assets/update-on-reload.png" alt="capture: update on reload" />
+    Pour tester l'affichage de la mini-infobar, vous aurez besoin de charger la web app sur Chrome Android, en HTTPS ou localhost. La solution la plus simple consiste à <a href="https://developers.google.com/web/tools/chrome-devtools/remote-debugging/local-server">utiliser la redirection de port de Chrome</a>.
   </p>
 </aside>
 
@@ -370,8 +367,14 @@ window.addEventListener('beforeinstallprompt', e => {
 
 Mettez à jour votre application, et observez la console.
 
-<aside class="tip">
+<aside class="notice">
   <p>
-    Pour tester l'affichage de la mini-infobar, vous aurez besoin de charger la web app sur Chrome Android, en HTTPS ou localhost. La solution la plus simple consiste à <a href="https://developers.google.com/web/tools/chrome-devtools/remote-debugging/local-server">utiliser la redirection de port de Chrome</a>.
+    Pour les chapitres comme ceux-ci, où vous apporterez pas ou peu de modification au service-worker `sw.js`, mais aurez besoin de mettre à jour l'html et le javascript du window context régulièrement, il peut être plus pratique de recharger toute l'application à chaque rafraîchissement de la page, et donc d'éviter tout cache.
+  </p>
+  <p>
+    Pour cela, vous pouvez activer l'option "Update on reload" pour recharger un service worker complet à chaque fois :
+  </p>
+  <p class="center">
+    <img src="./assets/update-on-reload.png" alt="capture: update on reload" />
   </p>
 </aside>
