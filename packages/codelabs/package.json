@@ -5,7 +5,7 @@
   "main": ".",
   "scripts": {
     "build": "node build.js",
-    "watch": "concurrently -n server,watch \"http-server dist\" \"node build --watch\""
+    "start": "concurrently -n server,watch \"http-server dist\" \"node build --watch\""
   },
   "repository": {
     "type": "git",
