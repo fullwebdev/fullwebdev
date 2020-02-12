@@ -51,7 +51,9 @@ Clonez le code de démarrage depuis GitHub via la commande suivante :
 git clone https://github.com/noelmace/data-driven-pwa.git
 ```
 
-Vous pouvez également le télécharger au format zip [en cliquant ici](https://github.com/noelmace/data-driven-pwa/archive/master.zip).
+<aside class="info">
+  Vous pouvez également le <a href="https://github.com/noelmace/data-driven-pwa/archive/master.zip">télécharger au format zip</a>, mais cela n'est pas recommandé pour ce codelab.
+</aside>
 
 ### Dépendances
 
@@ -92,7 +94,7 @@ L'application vous demande alors une autorisation pour pouvoir afficher des noti
 ![Autoriser les notifications](https://codelabs.developers.google.com/codelabs/workbox-indexeddb/img/9ca6ac4aededfba6.png) \
 
 <aside class="special">
-  Cette application est issue d'un codelab de Google intitulé <a href="https://codelabs.developers.google.com/codelabs/workbox-indexeddb/#2" target="_blank" rel="noopener noreferrer"><i>Build an offline-first, data-driven PWA</i></a>.
+  Cette application est issue d'un codelab de Google intitulé <a href="https://codelabs.developers.google.com/codelabs/workbox-indexeddb/#2" target="_blank" rel="noopener noreferrer"><i>Build an offline-first, data-driven PWA</i></a>, sur lequel nous allons revenir au chapitre suivant.
 </aside>
 
 <aside class="info">
@@ -101,18 +103,70 @@ L'application vous demande alors une autorisation pour pouvoir afficher des noti
 
 ## Une application orientée données
 
-Retournez à la racine du projet, et lancez la commande permettant de modifier automatiquement le code pour ce chapitre :
+### Outil : appliquer automatiquement le code des chapitre
+
+Pour chaque chapitre, il vous sera demandé de modifier le code de l'application.
+Nous appellerons une étape importante de ces modification (couvrant tout ou partie d'un chapitre) un "step", numéroté à partir de 4 (le chapitre actuel).
+
+Il vous est bien entendu recommandé d'effectuer vous même les modifications indiquées. Sauf directive contraire, évitez autant que possible de faire des copiés-collés ou de reproduire le code tel quel.
+Vous devriez avoir assez d'indications, en vous inspirant des exemples, ainsi qu'en live ou via les ressources annexes, pour identifier par vous même le code à écrire.
+
+Malgré tout, quand le temps est compté ou ne serait-ce que pour vérifier sa bonne compréhension, il peut être utile d'appliquer automatiquement ce code de correction.
+
+Le projet associé à ce codelab offre deux manières de faire cela.
+
+<aside class="warning">
+  Les commandes suivantes doivent être impérativement lancées à partir du dossier racine du projet `data-driven-pwa`.
+</aside>
+
+Un script permet d'appliquer les diff présents dans les dossiers de `steps/<numéro de step>/` :
 
 ```bash
-cd ..
-npm run goto --step=4
+npm run goto --step="<numéro du step"
+```
+
+Si vous préférez utiliser Git, la commande suivante vous permettra de faire exactement la même chose, à partir des fichier `steps/<numéro de step>_<description>.diff`, parfaitement identiques aux précédents :
+
+```bash
+git apply steps/<numéro de step>_<description>.diff
+```
+
+<aside class="warning">
+  Un "step" ne peut être appliqué qu'après que tous les steps précédents l'aient également été, dans l'ordre de leur numérotation !
+</aside>
+
+<aside class="tip">
+  Les fichiers .diff eux même peuvent également vous aider à vous y retrouver dans un chapitre. Pour les consulter, je vous recommande d'installer le syntax highlighter pour VS Code via l'extension [diff](https://marketplace.visualstudio.com/items?itemName=rafaelmaiolla.diff).
+</aside>
+
+Si, par exemple, vous preniez du retard (ou vous lassiez) au chapitre 5, vous pourrez directement démarrer le chapitre 7 en lançant les commandes suivantes :
+
+```bash
+git checkout HEAD .
+npm run goto --step="4-4"
+npm run goto --step="4-5"
+npm run goto --step="4-6"
+npm run goto --step="4-7"
+npm run goto --step="5"
+npm run goto --step="6"
+```
+
+### Tester le mode hors ligne
+
+Retournez à la racine du projet, et appliquez toutes les modifications pour ce chapitre :
+
+```bash
+npm run goto --step=4-4
+npm run goto --step=4-5
+npm run goto --step=4-6
+npm run goto --step=4-7
 ```
 
 <aside class="special">
   <p>Cette même commande permet également de "sauter"/corriger tous les chapitres suivants. Il est cependant indispensable de les lancer avant toute modification du code du projet, dans l'ordre, en commençant par 4.</p>
 </aside>
 
-Étant donné que cette commande modifie, pour cette étape, la configuration de build, vous devez également stopper (`Ctrl+C`) le serveur et le relancer :
+Étant donné que le step 4-4 modifie la configuration de build, vous devez également stopper le serveur (`Ctrl+C`) et le relancer :
 
 ```bash
 cd project
@@ -154,21 +208,14 @@ Un problème persiste cependant : comme le serveur n'est bien évidemment pas di
 
 Nous allons dans le chapitre suivant résoudre ce problème via workbox-background-sync, et donc la Background Sync API.
 
-### Pas-à-pas (optionnel)
+### Pas-à-pas
 
-Vous pouvez également suivre les <a href="https://codelabs.developers.google.com/codelabs/workbox-indexeddb/#3" target="_blank" rel="noopener noreferrer">étapes 4 à 7 du codelab Google</a> pour mieux comprendre en détails ces fonctionnalités.
+Pour mieux comprendre en détails ces fonctionnalités, consulter rapidement les <a href="https://codelabs.developers.google.com/codelabs/workbox-indexeddb/#3" target="_blank" rel="noopener noreferrer">étapes 4 à 7 du codelab Google</a> (ne démarrez pas le chapitre 8, nous allons traiter le sujet d'une autre manière).
 
-Pour gagner du temps, les "step" correspondant ont été créés pour la commande "goto". Leurs numéros suivent le format `4-<step google>` :
-
-```bash
-npm run goto --step=4-4
-npm run goto --step=4-5
-npm run goto --step=4-6
-npm run goto --step=4-7
-```
+Comme vu précédemment, les "step" correspondant ont été créés. Ici, je vous recommande de les utiliser pour gagner du temps. Leurs numéros suivent le format `4-<step google>` :
 
 <aside class="warning">
-  Si vous décidez d'écrire ce code vous même, assurez vous d'utiliser la dernière version de Workbox (5.0.0) au lieu de celle indiquée dans le premier code d'exemple (3.5.0).
+  Si vous décidez par la suite d'écrire ce code vous même, assurez vous d'utiliser la dernière version de Workbox (5.0.0) au lieu de celle indiquée dans le premier code d'exemple (3.5.0). Cela n'aura aucune impacte sur les étapes du codelab Google, mais en aura pour celui-ci dés le chapitre suivant.
 </aside>
 
 ```javascript
