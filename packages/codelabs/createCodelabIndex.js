@@ -32,6 +32,18 @@ module.exports = function createIndex(codelab) {
         .center {
           text-align: center;
         }
+        aside.info {
+          background: #f1f3f4;
+          border: none !important;
+          color: #606165;
+        }
+        aside.info:last-child {
+          margin-top: 4em !important;
+          margin-bottom: 0 !important;
+        }
+        aside.info a {
+          color: #34a4ff !important;
+        }
       </style>
     </head>
 
