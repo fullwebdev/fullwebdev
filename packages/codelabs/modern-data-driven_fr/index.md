@@ -642,3 +642,50 @@ Rechargez la page par deux fois pour constater que la card est masquée.
 Si malgré tout, nous constations que cette approche demeure trop intrusif pour un faible rendement, cela peut signifier que l'utilisateur n'est pas assez fidélisé si il ne fait que consulter des événements.
 
 Dans ce cas, la création par l'utilisateur d'un premier événement sera sans aucun doute _le_ moment clef.
+
+Dans **app/js/main.js**, supprimez l'appel à `showInstallPromotion()` dans l'EventHandler du `beforeInstallPrompt` :
+
+```javascript
+window.addEventListener('beforeinstallprompt', e => {
+  console.log('beforeInstallPrompt event detected');
+  e.preventDefault();
+  deferredPrompt = e;
+  // don't show anything for now
+});
+```
+
+Ajoutez le ensuite dans `addAndPostEvent`, après l'appel à `updateUI` :
+
+```javascript
+updateUI([data]);
+showInstallPromotion();
+
+saveEventDataLocally([data]);
+```
+
+Relancer l'application. Quel(s) problème(s) d'UX pouvez vous encore identifier ? Quelles autres approches auriez-vous pu/du prendre ?
+
+Prenez le temps d'expérimenter de possible correctifs avant de passer à la conclusion de ce chapitre.
+
+<aside class="warning">
+  On ne triche pas 😉
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  ... sauf si vous en avez vraiment envie bien sûr ...
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</aside>
+
+Un soucis assez évident est que la card devrait s'afficher au dessus du formulaire, ou au moins à côté de l'événement créé, afin de s'assurer que l'utilisateur en prenne directement connaissance et puisse la comprendre et l'utiliser dans le bon contexte.
+
+Remplacer la ligne où la variable `where` est initialisée dans `updateUI` par la suivante :
+
+```javascript
+const where = events.length > 1 ? 'afterbegin' : 'beforeend';
+```
+
+Suivant cette même idée de promouvoir "l'installation d'un site web" (concept encore peu compris par le grand public), il est également important de bien choisir votre wording.
+
+Dans **app/index.html**, remplacez le titre de cette card par :
+
+```html
+<h2>Add events where you want, when you want!</h2>
+```
