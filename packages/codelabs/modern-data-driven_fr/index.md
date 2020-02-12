@@ -378,3 +378,43 @@ Mettez à jour votre application, et observez la console.
     <img src="./assets/update-on-reload.png" alt="capture: update on reload" />
   </p>
 </aside>
+
+## Encourager l'installation de l'application
+
+```html
+<li>
+  <button class="button ripple" id="install-btn" style="display: none">Install</button>
+</li>
+```
+
+```javascript
+const btnAdd = document.getElementById('install-btn');
+
+function showInstallPromotion() {
+  btnAdd.style.display = 'inline-block';
+}
+```
+
+```javascript
+window.addEventListener('beforeinstallprompt', e => {
+  console.log('beforeInstallPrompt event detected');
+  e.preventDefault();
+  deferredPrompt = e;
+  showInstallPromotion();
+});
+```
+
+```javascript
+btnAdd.addEventListener('click', e => {
+  btnAdd.style.display = 'none';
+  deferredPrompt.prompt();
+  deferredPrompt.userChoice.then(choiceResult => {
+    if (choiceResult.outcome === 'accepted') {
+      console.log('User accepted the A2HS prompt');
+    } else {
+      console.log('User dismissed the A2HS prompt');
+    }
+    deferredPrompt = null;
+  });
+});
+```
