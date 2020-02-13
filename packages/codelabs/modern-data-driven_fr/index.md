@@ -802,8 +802,49 @@ if (navigator.share) {
 
 Mettez à jour l'application dans Chrome sur Android, et cliquez sur le bouton.
 
-### Web Share Target API
+## Recevoir un partage de données
 
 À ne pas confondre avec la Web Share API, la [Web Share **Target** API]() va nous permettre, à l'opposer, d'indiquer au système que notre application peut _recevoir_ un partage.
+
+Dans **app/manifest.json**, ajoutez l'entrée suivante à d'informer le système que votre PWA, une fois installée, pourra être ajoutée à la liste des applications vers lesquelles il est possible de partager du contenu :
+
+```json
+"share_target": {
+  "action": "/",
+  "method": "GET",
+  "enctype": "application/x-www-form-urlencoded",
+  "params": {
+    "title": "title",
+    "text": "text",
+    "url": "url"
+  }
+}
+```
+
+Ici, nous dison au système que lorsque l'utilisateur selectionne notre application comme cible d'un partage, il doit fait appel, en HTTP Get, à notre url racine (donc index.html) et passer les paramètres GET title et text.
+
+Dans **app/js/main.js**, ajoutez, en fin de fichier, la méthode qui permettra d'enregistrer un nouvel évènement si au moins un de ces paramètres est renseigné :
+
+```javascript
+window.addEventListener('DOMContentLoaded', () => {
+  const parsedUrl = new URL(window.location);
+  const title = parsedUrl.searchParams.get('title');
+  const text = parsedUrl.searchParams.get('text');
+  const url = parsedUrl.searchParams.get('url');
+  if (title || text || url) {
+    updateUI([{
+      title,
+      note: url && text ? `${text}: ${url}` : url || text,
+      date: '',
+      city: ''
+    }]);
+  }
+});
+```
+Relancez l'application dans Chrome pour Android. Assurez vous bien, via les DevTools, que le manifest ne présente pas d'erreur, et que main.js a été mis à jour.
+
+Installez l'application (Menu > Ajouter l'application à l'écran d'accueil).
+
+Enfin, ouvrez l'application de votre choix pour effectuer un partage (Chrome lui même peut être utilisé), et sélectionnez "WoF Codelab Demo" comme cible. Une fois l'application ouverte, assurez vous que le nouvel évènement a bien été créé.
 
 
