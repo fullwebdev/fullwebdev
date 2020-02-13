@@ -21,7 +21,7 @@ During this codelab, you’ll create a fully offline-capable, data-driven Progre
 
 ## Getting started
 
-Follow the [Codelabs instructions](https://codelab.wof.show).
+Follow the [Codelabs instructions](https://next.wof.show/codelabs/doc/modern-data-driven_fr).
 
 ## Steps
 
