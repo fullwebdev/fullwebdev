@@ -77,6 +77,10 @@ header {
   background-color: #b3e5fc;
 }
 
+.share {
+  display: none;
+}
+
 .home {
   color: white;
   text-decoration: none;
