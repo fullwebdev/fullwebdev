@@ -1,0 +1,46 @@
+diff --git a/project/app/index.html b/project/app/index.html
+index 9401ae9..e5fa6bd 100644
+--- a/project/app/index.html
++++ b/project/app/index.html
+@@ -48,6 +48,7 @@ limitations under the License.
+   <header>
+     <ul class="navbar">
+       <li class="app-title"><a class="home" href="#home"><h2>Dashboardr</h2></a></li>
++      <li><img src="images/icons/share.svg" class="button share" alt="share" /></li>
+       <li><img class="profile" src="images/profile/cat.jpg" alt="An adorable cat" /></li>
+     </ul>
+   </header>
+diff --git a/project/app/js/main.js b/project/app/js/main.js
+index bbd60f7..0c219c5 100644
+--- a/project/app/js/main.js
++++ b/project/app/js/main.js
+@@ -13,6 +13,29 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ */
++
++/**
++ * @type HTMLElement
++ */
++const shareBtn = document.querySelector('.share');
++
++if (navigator.share) {
++  shareBtn.addEventListener('click', async () => {
++    try {
++      await navigator.share({
++        title: 'wof.show',
++        text: 'Check out wof.show.',
++        url: 'https://next.wof.show/'
++      });
++      console.log('Successful share');
++    } catch (error) {
++      console.warn('Error sharing', error);
++    }
++  });
++} else {
++  console.warn(`The Web Share Api isn't supported by your Browser.`)
++}
++
+ const COOKIE_NAME = 'POSTPONED_A2HS';
+ 
+ function setCookie(name, value, expirationMinutes) {

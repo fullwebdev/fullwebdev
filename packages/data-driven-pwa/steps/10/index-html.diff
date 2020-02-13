@@ -1,0 +1,10 @@
+--- project/app/index.html
++++ project/app/index.html
+@@ -48,6 +48,7 @@ limitations under the License.
+   <header>
+     <ul class="navbar">
+       <li class="app-title"><a class="home" href="#home"><h2>Dashboardr</h2></a></li>
++      <li><img src="images/icons/share.svg" class="button share" alt="share" /></li>
+       <li><img class="profile" src="images/profile/cat.jpg" alt="An adorable cat" /></li>
+     </ul>
+   </header>

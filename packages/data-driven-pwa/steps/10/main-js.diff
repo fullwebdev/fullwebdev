@@ -1,0 +1,32 @@
+--- project/app/js/main.js
++++ project/app/js/main.js
+@@ -13,6 +13,29 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ */
++
++/**
++ * @type HTMLElement
++ */
++const shareBtn = document.querySelector('.share');
++
++if (navigator.share) {
++  shareBtn.addEventListener('click', async () => {
++    try {
++      await navigator.share({
++        title: 'wof.show',
++        text: 'Check out wof.show.',
++        url: 'https://next.wof.show/'
++      });
++      console.log('Successful share');
++    } catch (error) {
++      console.warn('Error sharing', error);
++    }
++  });
++} else {
++  console.warn(`The Web Share Api isn't supported by your Browser.`)
++}
++
+ const COOKIE_NAME = 'POSTPONED_A2HS';
+ 
+ function setCookie(name, value, expirationMinutes) {
