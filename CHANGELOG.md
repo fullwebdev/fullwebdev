@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-beta.0](https://github.com/noelmace/web-on-fire/compare/v2.0.0-alpha.9...v2.0.0-beta.0) (2020-02-13)
+
+
+### Features
+
+* **codelabs:** MDD_fr Share Target ([222a90e](https://github.com/noelmace/web-on-fire/commit/222a90e1601b5c3e7388bc1910d48304e851b464))
+* **codelabs:** MDD_fr Web Share API ([18c9a0e](https://github.com/noelmace/web-on-fire/commit/18c9a0efeeab743e6b2f9c52317093059e95e875))
+* **data-driven-pwa:** share icon ([21fabf7](https://github.com/noelmace/web-on-fire/commit/21fabf7897a135a92eeea02f9cb9927c23e765c0))
+* **data-driven-pwa:** step 10a ([093c1a6](https://github.com/noelmace/web-on-fire/commit/093c1a6923be7d1f95af6fecc4abb6cebe054f48))
+* **data-driven-pwa:** step 11 ([99482f6](https://github.com/noelmace/web-on-fire/commit/99482f65b33dc4839d54737cd84f7f0f052bdbd0))
+
+
+### Bug Fixes
+
+* **data-driven-pwa:** css for share ([6f06670](https://github.com/noelmace/web-on-fire/commit/6f066703a2b080ea7d86c2747e15a4142a174d82))
+
 ## [2.0.0-alpha.9](https://github.com/noelmace/web-on-fire/compare/v2.0.0-alpha.8...v2.0.0-alpha.9) (2020-02-12)
 
 
