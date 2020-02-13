@@ -37,9 +37,9 @@ et d'avoir au moins une fois contribué au développement d'une Web App (peu imp
   Ces éléments sont nécessaires pour tester plusieurs fonctionnalités que vous ajouterez à la PWA. Ils ne sont pas absolument indispensables pour compléter ce codelab, mais très fortement recommandés.
 </aside>
 
-* un système Windows ou Mac OS X
-  * si vous utilisez Linux, vous pourrez au besoin utiliser une [VM](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/), mais vous devrez également y installer la dernière version de Chrome (cf. plus haut), et vous assurer que celle-ci peut accéder au système hôte via un réseau virtuel (HTTP)
-* un smartphone Android "récent" avec Chrome, [Chrome Canary](https://play.google.com/store/apps/details?id=com.chrome.canary&hl=en), [Firefox Nightly](https://play.google.com/store/apps/details?id=org.mozilla.fennec_aurora&hl=en_US), et un cable usb
+* un smartphone Android "récent" avec Chrome, [Chrome Canary](https://play.google.com/store/apps/details?id=com.chrome.canary&hl=fr), et un cable usb
+  * OU Mac OS X & Safari
+* Git
 
 ## Mise en place
 
@@ -70,7 +70,7 @@ npm install
 ```
 
 <aside class="special">
-  Cette commande lance l'installation des outils de développement depuis la racine du dépôt, incluant [Lerna](https://lerna.js.org/). Ce dernier est ensuite utilisé pour également installer les dépendances de tous les sous-projets, à partir desquels vous effectuerez les étapes suivantes. Par conséquent, <b>il ne vous sera pas nécessaire d'effectuer un `npm install` pour chacun de ces projets</b>.
+  Cette commande lance l'installation des outils de développement depuis la racine du dépôt, incluant <a bref="https://lerna.js.org/">Lerna</a>. Ce dernier est ensuite utilisé pour également installer les dépendances de tous les sous-projets, à partir desquels vous effectuerez les étapes suivantes. Par conséquent, <b>il ne vous sera pas nécessaire d'effectuer un <code>npm install</code> pour chacun de ces projets</b>.
 </aside>
 
 ## Premier contact avec l'application
