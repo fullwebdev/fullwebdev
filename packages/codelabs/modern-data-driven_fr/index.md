@@ -736,3 +736,74 @@ Dans **app/index.html**, remplacez le titre de cette card par :
 ```html
 <h2>Add events where you want, when you want!</h2>
 ```
+
+## Partager des événements
+
+### Débugger l'application sur Android
+
+<aside class="tip">
+  Si vous êtes fan d'Apple jusqu'au bout des ongles et n'avez qu'un Mac OS et iOS à disposition ? Pas de panique : ce sujet a été justement sélectionné car un des rares également compatible Safari (du moins, en théorie). Vous pouvez donc sauter cette partie, et continuer avec Safari. Au passage, je vous invite à aller lire <a href="https://twitter.com/slightlylate/status/1191026394421026816">ce petit thread sur Twitter</a> où Alex Russell, le "père" des PWA, fait le point sur les rapport entre votre chouchou et le Web.
+</aside>
+
+Connectez votre smartphone Android à votre ordinateur par cable USB.
+
+Dans les paramètres Android, ouvrez le menu About Phone pour afficher le Build Number, et taper dessus 7 fois :
+
+* Android 9 (API level 28) and higher: Settings > About Phone > Build Number
+* Android 8.0.0 (API level 26) and Android 8.1.0 (API level 26): Settings > System > About Phone > Build Number
+* Android 7.1 (API level 25) and lower: Settings > About Phone > Build Number
+  
+Cela permet d'afficher les [Options de développement](https://developer.android.com/studio/debug/dev-options) à la racine du menu, tout en bas de la liste.
+
+A la section "Débogage", activez le Débogage USB.
+
+Ouvrez ensuite [chrome://inspect/#devices] dans Chrome sur votre ordinateur. Acceptez la demande de connexion sur votre smartphone.
+
+Cliquez sur le bouton `Port forwarding...` et ajouter le port 8081 pour localhost:8081.
+
+Ouvrez Chrome sur Android. Il devrait alors apparaître dans la liste des périphériques connectés dans Chrome sur votre ordinateur.
+
+Entre `localhost:8081` dans le champs 'Open Tab with url' et validez. L'application s'ouvre alors sur votre téléphone. Cliquez sur 'inspect' pour en afficher une copie sur votre ordinateur et pouvoir utiliser les DevTools.
+
+### Web Share API
+
+Dans le header de **app/index.html**, ajoutez un bouton "Share" pour inciter vos utilisateur à partager autour d'eux la joie qu'ils éprouvent en utilisant votre formidable Web App :
+
+```html
+<li><img src="images/icons/share.svg" class="button share" alt="share" /></li>
+```
+
+<aside class="tips">
+  La Web Share API est trés simple. Consulter la page MDN de <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share">Navigator.share</a> devrait vous suffire. Pour plus de détails, vous pouvez également consulter l'article de présentation sur <a href="https://web.dev/web-share/">Web.dev</a>.
+</aside>
+
+Dans **app/js/mains.js** nous allons à présent pouvoir utiliser la Web Share Api pour partager du contenu au click sur ce bouton :
+
+```javascript
+const shareBtn = document.querySelector('.share');
+
+if (navigator.share) {
+  shareBtn.addEventListener('click', async () => {
+    try {
+      await navigator.share({
+        title: 'The Web is on FIRE, the Codelab',
+        text: `Check out this codelab!`,
+        url: 'https://next.wof.show/codelabs/doc/modern-data-driven_fr/'
+      });
+      console.log('Successful share');
+    } catch (error) {
+      console.warn('Error sharing', error);
+    }
+  });
+} else {
+  console.warn(`The Web Share Api isn't supported by your Browser.`)
+}
+```
+
+Mettez à jour l'application dans Chrome sur Android, et cliquez sur le bouton.
+
+### Web Share Target API
+
+À ne pas confondre avec la Web Share API, la [Web Share **Target** API]() va nous permettre, à l'opposer, d'indiquer au système que notre application peut _recevoir_ un partage.
+
+
