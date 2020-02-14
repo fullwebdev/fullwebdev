@@ -56,7 +56,7 @@ git apply steps/<long-step-name>.patch
 * [Background Sync](https://developers.google.com/web/updates/2015/12/background-sync)
 * [Workbox codelab](https://codelabs.developers.google.com/codelabs/workbox-lab/#0)
 * [PWA training materials](https://developers.google.com/web/ilt/pwa/)
-* [Notes pour les conférences WoF](https://github.com/noelmace/slides-wof-conf/blob/master/src/notes.md)
+* [WoF Conference - Notes (with links to other resources)](https://github.com/noelmace/slides-wof-conf/blob/master/src/notes.md)
 
 ## License
 
