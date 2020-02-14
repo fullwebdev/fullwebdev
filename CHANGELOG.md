@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-beta.2](https://github.com/noelmace/web-on-fire/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2020-02-14)
+
+
+### Features
+
+* **codelabs:** MDD_fr dark mode ([bc2a425](https://github.com/noelmace/web-on-fire/commit/bc2a4252e8d77558e16fa33bc691a21b8fc5dc7e))
+
+
+### Bug Fixes
+
+* **codelabs:** intro ([08884d0](https://github.com/noelmace/web-on-fire/commit/08884d0b77f9bb712f64652ff1c2b92ca9e71653))
+* **codelabs:** MDD_fr intro ([3edb3bd](https://github.com/noelmace/web-on-fire/commit/3edb3bdceae24cdd7a6b117fec9f557f13f7960a))
+
 ## [2.0.0-beta.1](https://github.com/noelmace/web-on-fire/compare/v2.0.0-beta.0...v2.0.0-beta.1) (2020-02-13)
 
 ## [2.0.0-beta.0](https://github.com/noelmace/web-on-fire/compare/v2.0.0-alpha.9...v2.0.0-beta.0) (2020-02-13)
