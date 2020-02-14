@@ -11,7 +11,8 @@ Durant ce codelab, vous créerez une PWA orientée données, suivant les derniè
 * Comment utiliser la synchronisation en arrière-plan (background sync) pour mettre à jour l'application, même lorsque celle-ci n'est pas affichée
 * Utiliser la Notification API à bon escient avec le Background Sync
 * Bonnes pratiques de promotions de l'installation d'une Web App
-* Gestion des partages
+* Partages (Web Share API & Web Share Target API)
+* (Bonus) variables CSS et Media Queries Level 5
 
 ### Pré-requis
 
@@ -96,7 +97,7 @@ Ouvrez l'application en entrant l'url [localhost:8081](http://localhost:8081) da
 
 L'application vous demande alors une autorisation pour pouvoir afficher des notifications. Cliquez sur "Autoriser" ou "Allow" pour l'accepter.
 
-![Autoriser les notifications](https://codelabs.developers.google.com/codelabs/workbox-indexeddb/img/9ca6ac4aededfba6.png) \
+![Autoriser les notifications](./assets/notifications.png) 
 
 <aside class="special">
   Cette application est issue d'un codelab de Google intitulé <a href="https://codelabs.developers.google.com/codelabs/workbox-indexeddb/#2" target="_blank" rel="noopener noreferrer"><i>Build an offline-first, data-driven PWA</i></a>, sur lequel nous allons revenir au chapitre suivant.
@@ -852,4 +853,35 @@ Installez l'application (Menu > Ajouter l'application à l'écran d'accueil).
 
 Enfin, ouvrez l'application de votre choix pour effectuer un partage (Chrome lui même peut être utilisé), et sélectionnez "WoF Codelab Demo" comme cible. Une fois l'application ouverte, assurez vous que le nouvel évènement a bien été créé.
 
+## (Optionnel) Mode sombre
 
+Dans **app/style/main.css**, utilisez des [variables CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) pour déporter chaque définition de couleur dans un fichier **app/style/light.css**.
+
+Pour les mêmes variables, définissez les valeurs pour un mode sombre dans un fichier **app/style/dark.css**.
+
+Utilisez ces trois fichiers et [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) pour définir un mode "light" ou "dark" en fonction des préférences de l'utilisateur, sur la base de l'example suivant :
+
+```html
+<script>
+  if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+    document.documentElement.style.display = 'none';
+    document.head.insertAdjacentHTML(
+        'beforeend',
+        '<link rel="stylesheet" href="style/light.css" onload="document.documentElement.style.display = \'\'">'
+    );
+  }
+</script>
+<link rel="stylesheet" href="style/dark.css" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="style/light.css" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
+<link rel="stylesheet" href="style/main.css">
+```
+
+<aside class="tip">
+  Cet exemple est inspiré de l'excellent article <a href="https://web.dev/prefers-color-scheme/">prefers-color-scheme: Hello darkness, my old friend</a>. Sa lecture pourra vous aider à accomplir cet exercice et mieux comprendre ses tenant et aboutissant.
+</aside>
+
+Enfin, vous pouvez ajouter un bouton toggle dans le header afin de permettre à l'utilisateur de changer de mode dynamiquement. Pensez à sauvegarder cette préférence via un cookie.
+
+<aside class="tip">
+  Pour une correction ultérieure, n'hésitez pas à enregistrer cette dernière étape dans votre propre fork du projet, et à créer une Pull Request.
+</aside>
