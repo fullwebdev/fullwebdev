@@ -2,11 +2,16 @@
 
 ## Introduction
 
-Durant ce codelab, vous créerez une application Web progressive disponible hors-ligne, orientée données, et dotée de capacités modernes de pointe.
+Durant ce codelab, vous créerez une PWA orientée données, suivant les dernières bonnes pratiques et technologies, afin de garantir la meilleure satisfaction utilisateur. 
 
 ### Sujets traités
 
-* Comment utiliser la synchronisation en arrière-plan (background sync) pour mettre à jour l'application, même lorsque celle-ci n'est pas affichée.
+* Rendre une Web App disponible hors ligne
+* Principes d'une Web App orientée données
+* Comment utiliser la synchronisation en arrière-plan (background sync) pour mettre à jour l'application, même lorsque celle-ci n'est pas affichée
+* Utiliser la Notification API à bon escient avec le Background Sync
+* Bonnes pratiques de promotions de l'installation d'une Web App
+* Gestion des partages
 
 ### Pré-requis
 
@@ -18,7 +23,7 @@ et d'avoir au moins une fois contribué au développement d'une Web App (peu imp
 ### IMPORTANT
 
 <aside class="warning">
-  <b>Dans le cas où vous assistiez à une version "live" de ce codelab (durant une conférence, comme le DevFest Paris 2020 par exemple), il vous est fortement recommandé d'effectuer les étapes 2 et 3 (installations) en amont !</b>
+  <b>Dans le cas où vous assistiez à une version "live" de ce codelab (durant une conférence, comme le DevFest Paris 2020 par exemple), il vous est fortement recommandé d'effectuer les étapes 1 à 3 en amont !</b>
 </aside>
 
 ### Logiciels indispensables
