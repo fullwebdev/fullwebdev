@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SPA URL</title>
+    <link rel="stylesheet" href="/minimal-spa/index.css" />
+    <base href="/minimal-spa/5-routes/1-async/" />
+  </head>
+  <body>
+    <header>
+      <h1>SPA Minimaliste</h1>
+      <nav>
+        <button onclick="navigate('/post/1')">
+          Article 1</button
+        ><button onclick="navigate('/post/2')">
+          Article 2
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="content"></section>
+    </main>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
