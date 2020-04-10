@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg"  width="900" height="300" >
+  <polygon points="250,99 300,4 600,4 650,99" fill="#ffffff" stroke="black"/>
+  <text x="50.3%" y="50" font-size="24px" font-weight="bold" text-anchor="middle" alignment-baseline="central">
+    Workflow
+  </text>
+  <polygon points="200,199 250,104 650,104 700,199" fill="#c4c4c4" stroke="black"/>
+  <text x="50.3%" y="150" font-size="24px" font-weight="bold" text-anchor="middle" alignment-baseline="central">
+    Acceptance
+  </text>
+  <polygon points="150,299 200,204 700,204 750,299" fill="#929292" stroke="black"/>
+  <text x="50.3%" y="250" font-size="24px" font-weight="bold" text-anchor="middle" alignment-baseline="central">
+    Components Integration
+  </text>
+</svg>

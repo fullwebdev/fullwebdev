@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg"  width="900" height="900" >
+    <polygon points="400,100 450,0 500,100" fill="#ffffff" stroke="black"/>
+  <text x="50%" y="75" font-size="24px" font-weight="bold" text-anchor="middle" alignment-baseline="central">
+    GUI
+  </text>
+  <polygon points="350,200 400,105 500,105 550,200" fill="#c4c4c4" stroke="black"/>
+  <text x="50%" y="150" font-size="24px" font-weight="bold" text-anchor="middle" alignment-baseline="central">
+    E2E
+  </text>
+  <line x1="0" x2="900" y1="302.5" y2="302.5" stroke="black" stroke-width="5"/>
+  <polygon points="300,300 350,205 550,205 600,300" fill="#929292" stroke="black"/>
+  <text x="50%" y="250" font-size="24px" font-weight="bold" text-anchor="middle" alignment-baseline="central">
+    Integration
+  </text>
+  <polygon points="250,400 300,305 600,305 650,400" fill="#ffffff" stroke="black"/>
+  <text x="50%" y="350" font-size="24px" font-weight="bold" text-anchor="middle" alignment-baseline="central">
+    Workflow
+  </text>
+  <polygon points="200,500 250,405 650,405 700,500" fill="#c4c4c4" stroke="black"/>
+  <text x="50%" y="450" font-size="24px" font-weight="bold" text-anchor="middle" alignment-baseline="central">
+    Acceptance
+  </text>
+  <line x1="0" x2="900" y1="602.5" y2="602.5" stroke="black" stroke-width="5"/>
+
+  <polygon points="150,600 200,505 700,505 750,600" fill="#929292" stroke="black"/>
+  <text x="50%" y="550" font-size="24px" font-weight="bold" text-anchor="middle" alignment-baseline="central">
+    Components Integration
+  </text>
+  <polygon points="100,700 150,605 750,605 800,700" fill="#ffffff" stroke="black"/>
+  <text x="50%" y="650" font-size="24px" font-weight="bold" text-anchor="middle" alignment-baseline="central">
+    Components
+  </text>
+  <polygon points="50,800 100,705 800,705 850,800" fill="#c4c4c4" stroke="black"/>
+  <text x="50%" y="750" font-size="24px" font-weight="bold" text-anchor="middle" alignment-baseline="central">
+    Unit tests
+  </text>
+  <polygon points="0,900 50,805 850,805 900,900" fill="#929292" stroke="black"/>
+  <text x="50%" y="850" font-size="24px" font-weight="bold" text-anchor="middle" alignment-baseline="central">
+    Typings
+  </text>
+</svg>

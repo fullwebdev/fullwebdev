@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300">
+  <polygon points="205,100 300,0 395,100" fill="#ffffff" stroke="black"/>
+  <text x="50%" y="75" font-size="24px" font-weight="bold" text-anchor="middle" alignment-baseline="central">
+    E2E
+  </text>
+  <polygon points="105,200 200,105 400,105 495,200" fill="#c4c4c4" stroke="black"/>
+  <text x="50%" y="150" font-size="24px" font-weight="bold" text-anchor="middle" alignment-baseline="central">
+    Acceptation
+  </text>
+  <polygon points="0,300 100,205 500,205 600,300" fill="#929292" stroke="black"/>
+  <text x="50%" y="250" font-size="24px" font-weight="bold" text-anchor="middle" alignment-baseline="central">
+    Unitaires
+  </text>
+</svg>
