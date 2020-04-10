@@ -1,0 +1,15 @@
+{
+  "name": "illustrations",
+  "version": "0.3.2",
+  "private": true,
+  "scripts": {
+    "build": "npm run mermaid",
+    "mermaid": "bash scripts/build-mermaid.sh"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "mermaid.cli": "^0.5.1"
+  },
+  "author": "Noël Macé <contact@noelmace.com>",
+  "license": "MIT"
+}
