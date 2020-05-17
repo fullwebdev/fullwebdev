@@ -13,9 +13,6 @@
 [submodule "deckdeckgo"]
 	path = slides/deckdeckgo
 	url = git@github.com:noelmace/deckdeckgo.git
-[submodule "www"]
-	path = websites/www
-	url = git@github.com:noelmace/wwwof.git
 [submodule "slides/wof-conf"]
 	path = slides/wof-conf
 	url = git@github.com:noelmace/slides-wof-conf.git
