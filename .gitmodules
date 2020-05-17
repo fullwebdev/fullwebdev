@@ -7,9 +7,6 @@
 [submodule "slides-modern-vanilla"]
 	path = slides/modern-vanilla
 	url = git@github.com:noelmace/slides-modern-vanilla.git
-[submodule "deckdeckgo"]
-	path = slides/deckdeckgo
-	url = git@github.com:noelmace/deckdeckgo.git
 [submodule "slides/wof-conf"]
 	path = slides/wof-conf
 	url = git@github.com:noelmace/slides-wof-conf.git
