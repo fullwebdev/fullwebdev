@@ -4,7 +4,7 @@
 ## nor to return success if one or more (but not all) scripts failed
 
 ## TODO: use jq via https://github.com/awesome-global-contributions/action-yq
-PACKAGES=('docs' 'packages/codelabs' 'slides/reveal')
+PACKAGES=('docs' 'packages/codelabs' 'packages/reveal')
 ROOT_DISTS=('' 'codelabs/doc' 'slides/reveal')
 
 NBR_PACKAGES=${#PACKAGES[@]}

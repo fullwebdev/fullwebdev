@@ -46,7 +46,7 @@ Feel free to suggest modifications by clicking on the "Edit page" link that you 
   - made with [**deckdeckgo**](http://deckdeckgo.com/)
 - **reveal**: (deprecated) slides made with RevealJS
   - :man_teacher: [next.wof.show](http://next.wof.show/slides/reveal/)
-  - :man_technologist: [slides/reveal](./slides/reveal)
+  - :man_technologist: [slides/reveal](./packages/reveal)
 
 ## Codelabs
 
