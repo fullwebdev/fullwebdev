@@ -45,7 +45,8 @@ module.exports = {
           '/',
           '/introduction/',
           '/conferences/',
-          '/codelabs/'
+          '/codelabs/',
+          '/flashcards/'
         ],
         lastUpdated: 'Last Updated'
       },
@@ -75,7 +76,8 @@ module.exports = {
           ['/fr/', 'Accueil'],
           '/fr/introduction/',
           '/fr/conferences/',
-          '/fr/codelabs/'
+          '/fr/codelabs/',
+          '/fr/flashcards/'
         ],
         lastUpdated: 'Dernière mise à jour'
       }
