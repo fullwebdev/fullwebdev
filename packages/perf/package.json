@@ -1,7 +1,8 @@
 {
-  "name": "wof-perf-tests",
+  "name": "perf-tests",
+  "private": true,
   "version": "0.0.0",
-  "description": "performance testing for Modern Web",
+  "description": "quick performance testing",
   "main": "index.js",
   "scripts": {
     "start": "node index.js $*",
