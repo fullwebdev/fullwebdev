@@ -42,17 +42,6 @@
           :item="actionLink"
         />
       </p>
-
-      <p
-        class="action"
-        v-if="data.langText && data.langLink && data.langIcon"
-      >
-        <NavLink
-          :class="['lang-button', 'button', 'with-icon', 'lang-' + data.langIcon]"
-          class="lang-button button"
-          :item="langLink"
-        />
-      </p>
     </header>
 
     <div
