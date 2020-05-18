@@ -1,3 +1,0 @@
-[submodule "prpl-demo"]
-	path = demos/people
-	url = git@github.com:noelmace/prpl-demo.git
