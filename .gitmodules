@@ -4,6 +4,3 @@
 [submodule "flashcards-app"]
 	path = demos/devcards
 	url = git@github.com:noelmace/devcards.git
-[submodule "slides-modern-vanilla"]
-	path = slides/modern-vanilla
-	url = git@github.com:noelmace/slides-modern-vanilla.git
