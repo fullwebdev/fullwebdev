@@ -2,8 +2,8 @@
 
 (old) Slides made with Reveal.js by [Noël Macé](https://twitter.com/noel_mace).
 
-> This project is part of the [Web on FIRE](https://wof.show) project. \
-> Go check the associated [monorepo](https://github.com/noelmace/web-on-fire) for more information.
+> This project is part of the [FullWeb.dev](https://fullweb.dev) project. \
+> Go check the associated [monorepo](https://github.com/fullwebdev/fullwebdev) for more information.
 
 ## :warning: The content of these slides is no longer updated
 

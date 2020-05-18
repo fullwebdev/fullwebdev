@@ -2,20 +2,20 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'JustWeb.io',
-      description: 'A transverse vision of modern web development'
+      title: 'FullWeb.dev',
+      description: 'A transverse vision of modern web development',
     },
     '/fr/': {
       lang: 'fr-FR',
-      title: 'JustWeb.io',
-      description: 'Une approche transversale du développement Web'
+      title: 'FullWeb.dev',
+      description: 'Une approche transversale du développement Web',
     }
   },
   themeConfig: {
     logo: '/favicon/icon-384x384.png',
     displayAllHeaders: false,
     sidebarDepth: 2,
-    repo: 'noelmace/web-on-fire',
+    repo: 'fullwebdev/fullwebdev',
     docsDir: 'docs',
     editLinks: true,
     locales: {
@@ -110,19 +110,19 @@ module.exports = {
       {
         property: 'og:image',
         content:
-          'https://raw.githubusercontent.com/noelmace/web-on-fire/master/docs/.vuepress/public/favicon/icon-384x384.png',
+          'https://raw.githubusercontent.com/fullwebdev/fullwebdev/master/docs/.vuepress/public/favicon/icon-384x384.png',
       },
     ],
-    ['meta', { property: 'og:site_name', content: 'WoF.Show' }],
+    ['meta', { property: 'og:site_name', content: 'FullWeb.dev' }],
     [
       'meta',
       {
         property: 'og:description',
         content:
-          'Learn the best new capabilities of the modern web without burning out!',
+          'A transverse vision of modern web development',
       },
     ],
     ['meta', { name: 'twitter:card', content: 'summary' }],
-    ['meta', { name: 'twitter:title', content: 'The WoF Show' }],
+    ['meta', { name: 'twitter:title', content: 'FullWeb.dev' }],
   ],
 };

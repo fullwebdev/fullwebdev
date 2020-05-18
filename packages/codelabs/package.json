@@ -1,5 +1,5 @@
 {
-  "name": "@wof/codelabs",
+  "name": "@fullwebdev/codelabs",
   "version": "1.0.0-alpha.1",
   "description": "",
   "main": ".",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/noelmace/web-on-fire.git"
+    "url": "git+https://github.com/fullwebdev/fullwebdev.git"
   },
   "author": "Noel Macé",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/noelmace/web-on-fire/issues"
+    "url": "https://github.com/fullwebdev/fullwebdev/issues"
   },
-  "homepage": "https://github.com/noelmace/web-on-fire#readme",
+  "homepage": "https://github.com/fullwebdev/fullwebdev#readme",
   "devDependencies": {
     "@github/clipboard-copy-element": "^1.1.2",
     "@types/cheerio": "^0.22.13",

@@ -7,21 +7,21 @@
   </a>
 </p>
 
-> This project is part of the [Web on FIRE](https://wof.show) project. \
-> Go check the associated [monorepo](https://github.com/noelmace/web-on-fire) for more information.
+> This project is part of the [FullWeb.dev](https://fullweb.dev) project. \
+> Go check the associated [monorepo](https://github.com/fullwebdev/fullwebdev) for more information.
 
 During this codelab, you’ll create a fully offline-capable, data-driven Progressive Web App with state of the art modern capabilities.
 
-- **:man_technologist: instructions: on [next.wof.show](https://next.wof.show/codelabs/doc/modern-data-driven)**
+- **:man_technologist: instructions: on [fullweb.dev](https://fullweb.dev/codelabs/doc/modern-data-driven)**
 - **:man_teacher: Slides: [conf.wof.show](https://conf.wof.show)**
 - **:book: Notes: [noelmace/slides-wof-conf > notes.md](https://github.com/noelmace/slides-wof-conf/blob/master/src/notes.md)**
-- **:house: Home: [noelmace/web-on-fire](https://github.com/noelmace/web-on-fire)**
+- **:house: Home: [fullwebdev/fullwebdev](https://github.com/fullwebdev/fullwebdev)**
 
 
 
 ## Getting started
 
-Follow the [Codelabs instructions](https://next.wof.show/codelabs/doc/modern-data-driven_fr).
+Follow the [Codelabs instructions](https://fullweb.dev/codelabs/doc/modern-data-driven_fr).
 
 ## Steps
 

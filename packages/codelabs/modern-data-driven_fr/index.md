@@ -794,7 +794,7 @@ if (navigator.share) {
       await navigator.share({
         title: 'The Web is on FIRE, the Codelab',
         text: `Check out this codelab!`,
-        url: 'https://next.wof.show/codelabs/doc/modern-data-driven_fr/'
+        url: 'https://fullweb.dev/codelabs/doc/modern-data-driven_fr/'
       });
       console.log('Successful share');
     } catch (error) {

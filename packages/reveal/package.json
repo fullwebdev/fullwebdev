@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/noelmace/web-on-fire.git"
+    "url": "git://github.com/fullwebdev/fullwebdev.git"
   },
   "engines": {
     "node": ">=9.0.0"

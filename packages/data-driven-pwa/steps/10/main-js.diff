@@ -14,9 +14,9 @@
 +  shareBtn.addEventListener('click', async () => {
 +    try {
 +      await navigator.share({
-+        title: 'wof.show',
-+        text: 'Check out wof.show.',
-+        url: 'https://next.wof.show/'
++        title: 'fullweb.dev',
++        text: 'Check out fullweb.dev',
++        url: 'https://fullweb.dev/'
 +      });
 +      console.log('Successful share');
 +    } catch (error) {
@@ -28,5 +28,5 @@
 +}
 +
  const COOKIE_NAME = 'POSTPONED_A2HS';
- 
+
  function setCookie(name, value, expirationMinutes) {

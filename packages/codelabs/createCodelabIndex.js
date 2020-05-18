@@ -50,7 +50,7 @@ module.exports = function createIndex(codelab) {
     <body>
       <google-codelab title="${
         codelab.heading
-      }" feedback-link="https://github.com/noelmace/web-on-fire/issues">
+      }" feedback-link="https://github.com/fullwebdev/fullwebdev/issues">
 
         ${codelab.steps.map(createStep).join('')}
 

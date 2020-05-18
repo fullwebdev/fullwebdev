@@ -1,7 +1,7 @@
 {
   "name": "@wof/data-driven-pwa",
   "version": "1.0.0-alpha.1",
-  "homepage": "https://next.wof.show/codelabs/doc/modern-data-driven",
+  "homepage": "https://fullweb.dev/codelabs/doc/modern-data-driven",
   "private": true,
   "author": {
     "name": "Noël Macé",
@@ -14,11 +14,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/noelmace/web-on-fire.git"
+    "url": "git://github.com/fullwebdev/fullwebdev.git"
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/noelmace/web-on-fire/issues"
+    "url": "https://github.com/fullwebdev/fullwebdev/issues"
   },
   "scripts": {
     "postinstall": "lerna bootstrap",
