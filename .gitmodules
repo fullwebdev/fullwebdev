@@ -7,6 +7,3 @@
 [submodule "slides-modern-vanilla"]
 	path = slides/modern-vanilla
 	url = git@github.com:noelmace/slides-modern-vanilla.git
-[submodule "slides/wof-conf"]
-	path = slides/wof-conf
-	url = git@github.com:noelmace/slides-wof-conf.git
