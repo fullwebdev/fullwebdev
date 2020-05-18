@@ -20,11 +20,12 @@
 <template>
   <main class="home" aria-labelledby="main-title">
     <header class="hero">
-      <img
+      <!-- <img
         v-if="data.heroImage"
         :src="$withBase(data.heroImage)"
         :alt="data.heroAlt || 'hero'"
-      >
+      > -->
+      <Logo id="logo"/>
 
       <h1 v-if="data.heroText !== null" id="main-title">{{ data.heroText || $title || 'Hello' }}</h1>
 
@@ -115,11 +116,9 @@ export default {
   display block
   .hero
     text-align center
-    img
-      max-width: 100%
-      max-height 280px
+    #logo
       display block
-      margin 3rem auto 1.5rem
+      margin 5rem auto 5rem
     h1
       font-size 3rem
     h1, .description, .action
@@ -165,7 +164,7 @@ export default {
       border-bottom 1px solid darken($complementaryColor, 10%)
       &:hover
         background-color lighten($complementaryColor, 10%)
-    
+
   .features
     border-top 1px solid $borderColor
     padding 1.2rem 0

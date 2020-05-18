@@ -2,13 +2,13 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'The Web is on FIRE',
-      description: 'Learn the best new capabilities of the modern web without burning out!'
+      title: 'JustWeb.io',
+      description: 'A transverse vision of modern web development'
     },
     '/fr/': {
       lang: 'fr-FR',
-      title: 'Web on FIRE',
-      description: 'Découvrez les dernières nouveautés de la Plateforme Web avec Noël Macé.'
+      title: 'JustWeb.io',
+      description: 'Une approche transversale du développement Web'
     }
   },
   themeConfig: {

@@ -1,8 +1,8 @@
 {
-  "name": "Web on FIRE",
-  "short_name": "WoF",
+  "name": "JustWeb.io",
+  "short_name": "JustWeb",
   "display": "standalone",
-  "theme_color": "#ed6c30",
+  "theme_color": "#076ff7",
   "background_color": "#ffffff",
   "scope": "/",
   "start_url": "/",
