@@ -11,7 +11,7 @@ NBR_REPOS=${#REPOS[@]}
 
 if [ "$1" != "--local" ]; then
   mkdir -p $HOME/.ssh
-  
+
   # Key scan for github.com
   ssh-keyscan github.com >> $HOME/.ssh/known_hosts
 
@@ -31,13 +31,13 @@ rm -rf /tmp/split
 mkdir -p /tmp/split
 
 for (( i=0; i<${NBR_PACKAGES}; i++ )); do
-  
+
   pkg="${PACKAGES[$i]}"
   repo="${REPOS[$i]}"
   echo "== $pkg -> $repo =="
 
   set +e
-  bash ./check-changed.sh "$pkg"
+  bash ./scripts/check-changed.sh "$pkg"
   HAS_CHANGED=$?
   set -e
 

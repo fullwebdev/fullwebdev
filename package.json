@@ -16,7 +16,7 @@
     "release:test": "standard-version --dry-run",
     "postrelease": "git push --follow-tags",
     "start": "lerna run start --scope=@wof/docs",
-    "build": "bash build.sh -f",
+    "build": "bash scripts/build.sh -f",
     "postbuild": "http-server dist -o"
   },
   "devDependencies": {

@@ -11,9 +11,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-        
+
       - name: Release data-driven-pwa
         run: |
-          bash update-subtree.sh
+          bash scripts/update-subtree.sh
         env:
           DEPLOY_KEY: ${{ secrets.DATA_DRIVEN_PWA_DEPLOY_KEY }}
