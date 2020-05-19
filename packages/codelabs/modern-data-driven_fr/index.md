@@ -54,11 +54,11 @@ et d'avoir au moins une fois contribué au développement d'une Web App (peu imp
 Clonez le code de démarrage depuis GitHub via la commande suivante :
 
 ```bash
-git clone https://github.com/noelmace/data-driven-pwa.git
+git clone https://github.com/fullwebdev/data-driven-pwa.git
 ```
 
 <aside class="info">
-  Vous pouvez également le <a href="https://github.com/noelmace/data-driven-pwa/archive/master.zip">télécharger au format zip</a>, mais cela n'est pas recommandé pour ce codelab.
+  Vous pouvez également le <a href="https://github.com/fullwebdev/data-driven-pwa/archive/master.zip">télécharger au format zip</a>, mais cela n'est pas recommandé pour ce codelab.
 </aside>
 
 ### Dépendances
