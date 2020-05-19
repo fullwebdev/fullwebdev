@@ -1,3 +1,7 @@
 /.vscode
 /dist
 node_modules
+/docs/material
+/docs/fr/material
+/docs/.vuepress/public/graphs
+/docs/.vuepress/public/images
