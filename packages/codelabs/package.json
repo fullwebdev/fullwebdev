@@ -19,17 +19,14 @@
   "homepage": "https://github.com/fullwebdev/fullwebdev#readme",
   "devDependencies": {
     "@github/clipboard-copy-element": "^1.1.2",
-    "@types/cheerio": "^0.22.13",
-    "@types/fs-extra": "^8.0.1",
-    "@types/marked": "^0.6.5",
-    "@vuepress/plugin-google-analytics": "^1.0.0-alpha.30",
-    "@vuepress/plugin-pwa": "^1.2.0",
+    "@types/cheerio": "^0.22.18",
+    "@types/fs-extra": "^9.0.1",
+    "@types/marked": "^0.7.4",
     "cheerio": "^1.0.0-rc.3",
-    "chokidar": "^3.3.1",
-    "concurrently": "^5.1.0",
-    "fs-extra": "^8.1.0",
-    "http-server": "^0.12.1",
-    "marked": "^0.7.0",
-    "vuepress": "^1.2.0"
+    "chokidar": "^3.4.0",
+    "concurrently": "^5.2.0",
+    "fs-extra": "^9.0.0",
+    "http-server": "^0.12.3",
+    "marked": "^1.1.0"
   }
 }

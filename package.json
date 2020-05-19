@@ -14,7 +14,6 @@
     "lint": "prettier --write \"./**/*.{js,css,ts,jsx,tsx,html,yml,vue,styl,md}\" && markdownlint . --fix",
     "pretty": "prettier --write \"./**/*.{js,css,ts,jsx,tsx,html,yml,vue,styl,md}\"",
     "grammar": "bash scripts/grammar.sh",
-    "preinstall": "git submodule init && git submodule update",
     "postinstall": "lerna bootstrap",
     "release": "standard-version",
     "release:test": "standard-version --dry-run",
@@ -31,18 +30,18 @@
     "l": "lerna run"
   },
   "devDependencies": {
-    "lerna": "^3.20.2",
-    "standard-version": "^7.1.0",
-    "http-server": "^0.12.1",
+    "lerna": "^3.21.0",
+    "standard-version": "^8.0.0",
+    "http-server": "^0.12.3",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@commitlint/prompt-cli": "^8.3.5",
-    "concurrently": "^5.1.0",
-    "husky": "^4.2.3",
-    "lint-staged": "^10.0.8",
+    "concurrently": "^5.2.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.4",
     "markdownlint-cli": "~0.23.1",
     "@monocli/cli": "^0.5.0-beta.2",
-    "prettier": "^1.19.1"
+    "prettier": "^2.0.5"
   },
   "husky": {
     "hooks": {
