@@ -119,10 +119,12 @@ module.exports = {
       {
         property: 'og:description',
         content:
-          'A transverse vision of modern web development',
+          'Modern Web Architecture & Development',
       },
     ],
-    ['meta', { name: 'twitter:card', content: 'summary' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:image', content: 'https://fullweb.dev/social.png' }],
+    ['meta', { name: 'twitter:image:alt', content: 'A transverse vision of modern web development' }],
     ['meta', { name: 'twitter:title', content: 'FullWeb.dev' }],
   ],
 };
