@@ -10,7 +10,6 @@
 
 [![Stay tuned on Twitter!](https://img.shields.io/twitter/follow/noel_mace?style=social&label=stay%20tuned%21)](https://twitter.com/intent/follow?screen_name=noel_mace)
 [![Website](https://img.shields.io/website?up_message=fullweb.dev&url=https%3A%2F%2Ffullweb.dev)](https://fullweb.dev)
-[![Next Website](https://img.shields.io/website?up_message=next.fullweb.dev&url=https%3A%2F%2Fnext.fullweb.dev&label=next%20website)](https://next.fullweb.dev)
 
 [![release](https://img.shields.io/github/v/tag/fullwebdev/fullwebdev?sort=semver&include_prereleases&label=release)](https://github.com/fullwebdev/fullwebdev/blob/master/CHANGELOG.md)
 [![Deploy](https://github.com/fullwebdev/fullwebdev/workflows/Deploy/badge.svg)](https://github.com/fullwebdev/fullwebdev/actions?query=workflow%3ADeploy)
