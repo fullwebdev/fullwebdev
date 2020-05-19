@@ -4,6 +4,11 @@
       "scope": "code-samples",
       "directory": "packages/code-samples",
       "url": "git@github.com:noelmace/mwa-examples.git"
+    },
+    {
+      "scope": "illustrations",
+      "directory": "packages/illustrations",
+      "url": "git@github.com:noelmace/mwa-illustrations.git"
     }
   ]
 }
