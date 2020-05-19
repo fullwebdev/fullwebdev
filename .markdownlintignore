@@ -1,0 +1,11 @@
+node_modules
+build
+dist
+.vuepress/
+refs/
+.vscode
+.github
+CHANGELOG.md
+definitions.md
+biblio.md
+**/TITLE.md

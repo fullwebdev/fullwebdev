@@ -16,4 +16,4 @@ jobs:
         run: |
           bash scripts/update-subtree.sh
         env:
-          DEPLOY_KEY: ${{ secrets.DATA_DRIVEN_PWA_DEPLOY_KEY }}
+          DEPLOY_KEY: ${{ secrets.SUBTREES_DEPLOY_KEY }}

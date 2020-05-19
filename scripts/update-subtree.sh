@@ -3,8 +3,8 @@ set -e
 
 # inspired by https://github.com/xedi/action-subtree-sync
 
-PACKAGES=('packages/data-driven-pwa')
-REPOS=('noelmace/data-driven-pwa')
+PACKAGES=('packages/data-driven-pwa', 'packages/code-samples', 'packages/illustrations')
+REPOS=('noelmace/data-driven-pwa', 'noelmace/mwa-examples', 'noelmace/mwa-illustrations')
 
 NBR_PACKAGES=${#PACKAGES[@]}
 NBR_REPOS=${#REPOS[@]}

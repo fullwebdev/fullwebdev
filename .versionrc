@@ -1,0 +1,52 @@
+{
+  "bumpFiles": [
+    {
+      "filename": "package.json",
+      "type": "json"
+    },
+    {
+      "filename": "package-lock.json",
+      "type": "json"
+    },
+    {
+      "filename": "docs/package.json",
+      "type": "json"
+    },
+    {
+      "filename": "docs/package-lock.json",
+      "type": "json"
+    },
+    {
+      "filename": "packages/code-samples/package.json",
+      "type": "json"
+    },
+    {
+      "filename": "packages/code-samples/package-lock.json",
+      "type": "json"
+    },
+    {
+      "filename": "packages/codelabs/package.json",
+      "type": "json"
+    },
+    {
+      "filename": "packages/codelabs/package-lock.json",
+      "type": "json"
+    },
+    {
+      "filename": "packages/data-driven-pwa/package.json",
+      "type": "json"
+    },
+    {
+      "filename": "packages/data-driven-pwa/package-lock.json",
+      "type": "json"
+    },
+    {
+      "filename": "packages/illustrations/package.json",
+      "type": "json"
+    },
+    {
+      "filename": "packages/illustrations/package-lock.json",
+      "type": "json"
+    }
+  ]
+}

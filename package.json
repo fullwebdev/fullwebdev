@@ -1,6 +1,6 @@
 {
   "name": "fullwebdev",
-  "version": "0.2.0-beta.1",
+  "version": "0.5.0-alpha.1",
   "private": true,
   "description": "A transverse vision of modern web development",
   "license": "MIT",
@@ -11,17 +11,52 @@
   "author": "Noël Macé",
   "homepage": "https://github.com/fullwebdev/fullwebdev",
   "scripts": {
+    "lint": "prettier --write \"./**/*.{js,css,ts,jsx,tsx,html,yml,vue,styl,md}\" && markdownlint . --fix",
+    "pretty": "prettier --write \"./**/*.{js,css,ts,jsx,tsx,html,yml,vue,styl,md}\"",
+    "grammar": "bash scripts/grammar.sh",
+    "preinstall": "git submodule init && git submodule update",
     "postinstall": "lerna bootstrap",
     "release": "standard-version",
     "release:test": "standard-version --dry-run",
     "postrelease": "git push --follow-tags",
     "start": "lerna run start --scope=@fullwebdev/docs",
-    "build": "bash scripts/build.sh -f",
-    "postbuild": "http-server dist -o"
+    "build:docs": "bash scripts/build.sh -f",
+    "serve:docs": "http-server dist -o",
+    "build:illustrations": "lerna run build --scope=@fullwebdev/illustrations",
+    "prebuild:livre": "npm run build:illustrations",
+    "build:livre": "lerna run build --scope=@fullwebdev/livre-fr",
+    "build:code-samples:index": "lerna run build:index --scope=@fullwebdev/code-samples",
+    "commit": "commit",
+    "lerna": "lerna",
+    "l": "lerna run"
   },
   "devDependencies": {
     "lerna": "^3.20.2",
     "standard-version": "^7.1.0",
-    "http-server": "^0.12.1"
+    "http-server": "^0.12.1",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@commitlint/prompt-cli": "^8.3.5",
+    "concurrently": "^5.1.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "markdownlint-cli": "~0.23.1",
+    "@monocli/cli": "^0.5.0-beta.2",
+    "prettier": "^1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build:code-samples:index && lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.md": [
+      "prettier --write",
+      "markdownlint --fix"
+    ],
+    "*.{js,css,ts,jsx,tsx,html,yml,vue,styl}": [
+      "prettier --write"
+    ]
   }
 }

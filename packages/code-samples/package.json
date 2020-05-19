@@ -1,6 +1,6 @@
 {
-  "name": "examples",
-  "version": "0.4.0",
+  "name": "@fullwebdev/code-samples",
+  "version": "0.5.0-alpha.1",
   "private": true,
   "scripts": {
     "start": "es-dev-server --root-dir ./src --compatibility none",
