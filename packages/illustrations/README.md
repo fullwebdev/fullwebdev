@@ -1,9 +1,8 @@
-# Modern Web Apps - Illustrations
+# FullWeb.dev - Illustrations
 
-"Modern Web Apps" related illustrations by Noël Macé
+Illustrations for the [FullWeb.dev](https://fullweb.dev) and related contents.
 
-Go check the [monorepo](https://github.com/noelmace/mwa-root) for more
-information.
+Go check [`fullwebdev/fullwebdev`](https://github.com/fullwebdev/fullwebdev) for more information, to send a PR or to open an issue.
 
 ## License
 
