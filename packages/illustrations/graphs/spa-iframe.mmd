@@ -1,0 +1,12 @@
+sequenceDiagram
+  participant DOM
+  participant JS as JavaScript
+  participant I as IFrame masquée
+  participant S as Serveur
+
+  DOM->>JS: évènement utilisateur
+  JS->>I: définie l'URL source
+  I->>S: GET "url source"
+  S->>I: HTML
+  I->>JS: callback(HTML)
+  JS->>DOM: el.innerHTML = HTML

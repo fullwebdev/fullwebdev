@@ -1,0 +1,26 @@
+sequenceDiagram
+  participant U as Utilisateur
+  participant N as Navigateur
+  participant S as Serveur
+  participant A as API
+
+  U->>N: www.mon-blog.com
+  activate N
+    N->>S: GET /
+    activate S
+    Note right of S: Fichier statique
+    S-->>N: index.html
+    deactivate S
+    N-->>U: affichage accueil
+  deactivate N
+  U->>N: click lien /article-1.html
+  activate N
+    N->>S: GET /article-1.html
+    activate S
+      Note right of S: Génération HTML
+      S->>A: GET /posts/1
+      A-->>S: JSON
+      S-->>N: article-1.html
+    deactivate S
+    N-->>U: affichage article 1
+  deactivate N

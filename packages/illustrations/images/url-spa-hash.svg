@@ -1,0 +1,16 @@
+<svg width="640" height="240" 
+  xmlns="http://www.w3.org/2000/svg" 
+  xmlns:svg="http://www.w3.org/2000/svg">
+  <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+  <rect width="100%" height="100%" x="0" y="0" fill="#ffffff" />
+  <text x="321" y="125" font-family="Monospace" text-anchor="middle" font-size="24">https://www.myblog.com/app/read/#/posts/1</text>
+  <polyline points="60,110 65,120"/>
+  <text x="160" y="175" font-size="24" id="svg_10">origine</text>
+  <polyline points="25,132 25,147 350,147 350,132 345,132 345,142 30,142 30,132"/>
+  <text font-size="24" id="svg_10" x="398" y="175">base</text>
+  <polyline points="355,132 355,147 475,147 475,132 470,132 470,142 360,142 360,132"/>
+  <text font-size="24" id="svg_10" x="530" y="175">hash</text>
+  <polyline points="480,132 480,147 624,147 624,132 619,132 619,142 485,142 485,132"/>
+  <text font-size="24" id="svg_10" x="537" y="78.7">route</text>
+  <polyline transform="matrix(-1,0,0,-1,1130,395)"  points="507,294 507,309 617,309 617,294 613.1,294 613.1,304 510.9,304 510.9,294"/>
+</svg>
