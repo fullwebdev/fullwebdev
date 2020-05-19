@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0-beta.1](https://github.com/fullwebdev/fullwebdev/compare/v0.1.0...v0.2.0-beta.1) (2020-05-19)
+
+
+### Features
+
+* **docs:** add conferences ([a7156a4](https://github.com/fullwebdev/fullwebdev/commit/a7156a48c440dc3ee668996c9b7149d377c5d95d))
+* **docs:** links to reveal confs ([b5849a7](https://github.com/fullwebdev/fullwebdev/commit/b5849a745655a6ca0548a31a1f234ebad5c25c86))
+* **docs:** move flashcards to docs ([06a546c](https://github.com/fullwebdev/fullwebdev/commit/06a546ce015db107ace22fdac6b2d9f7b1933474))
+
+
+### Bug Fixes
+
+* **docs:** remove useless language button ([ad45c45](https://github.com/fullwebdev/fullwebdev/commit/ad45c45e644decf78795f901778157eb73573ad2))
+* **docs:** renaming ([918dc96](https://github.com/fullwebdev/fullwebdev/commit/918dc96607d9b0e20ec95f8c398d14d7f964b501))
+* **docs:** use a twitter large image card ([25d756a](https://github.com/fullwebdev/fullwebdev/commit/25d756a4c1fb433194a8e117ee93415eb1067f35))
+
 # [0.1.0](https://github.com/fullwebdev/fullwebdev/compare/v0.0.0...v0.1.0) (2020-05-17)
 
 First beta on https://next.wof.show (see [noelmace/web-on-fire](https://github.com/noelmace/web-on-fire/blob/master/CHANGELOG.md)).
