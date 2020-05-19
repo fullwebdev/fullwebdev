@@ -1,0 +1,3 @@
+[submodule "packages/livre-fr"]
+	path = packages/livre-fr
+	url = git@github.com:noelmace/livre-web-apps.git
