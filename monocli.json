@@ -3,17 +3,17 @@
     {
       "scope": "data-driven-pwa",
       "directory": "packages/data-driven-pwa",
-      "url": "git@github.com:noelmace/data-driven-pwa.git"
+      "url": "git@github.com:fullwebdev/data-driven-pwa.git"
     },
     {
       "scope": "illustrations",
       "directory": "packages/illustrations",
-      "url": "git@github.com:noelmace/mwa-illustrations.git"
+      "url": "git@github.com:fullwebdev/illustrations.git"
     },
     {
       "scope": "code-samples",
       "directory": "packages/code-samples",
-      "url": "git@github.com:noelmace/mwa-examples.git"
+      "url": "git@github.com:fullwebdev/code-samples.git"
     }
   ]
 }
