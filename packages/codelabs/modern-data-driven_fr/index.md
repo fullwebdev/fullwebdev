@@ -2,17 +2,17 @@
 
 ## Introduction
 
-Durant ce codelab, vous créerez une PWA orientée données, suivant les dernières bonnes pratiques et technologies, afin de garantir la meilleure satisfaction utilisateur. 
+Durant ce codelab, vous créerez une PWA orientée données, suivant les dernières bonnes pratiques et technologies, afin de garantir la meilleure satisfaction utilisateur.
 
 ### Sujets traités
 
-* Rendre une Web App disponible hors ligne
-* Principes d'une Web App orientée données
-* Comment utiliser la synchronisation en arrière-plan (background sync) pour mettre à jour l'application, même lorsque celle-ci n'est pas affichée
-* Utiliser la Notification API à bon escient avec le Background Sync
-* Bonnes pratiques de promotions de l'installation d'une Web App
-* Partages (Web Share API & Web Share Target API)
-* (Bonus) variables CSS et Media Queries Level 5
+- Rendre une Web App disponible hors ligne
+- Principes d'une Web App orientée données
+- Comment utiliser la synchronisation en arrière-plan (background sync) pour mettre à jour l'application, même lorsque celle-ci n'est pas affichée
+- Utiliser la Notification API à bon escient avec le Background Sync
+- Bonnes pratiques de promotions de l'installation d'une Web App
+- Partages (Web Share API & Web Share Target API)
+- (Bonus) variables CSS et Media Queries Level 5
 
 ### Pré-requis
 
@@ -29,13 +29,13 @@ et d'avoir au moins une fois contribué au développement d'une Web App (peu imp
 
 ### Logiciels indispensables
 
-* Un IDE / un éditeur de code ou de texte
-  * recommandation : [Download Visual Studio Code](https://code.visualstudio.com/)
-* La dernière version de Chrome
-  * [Chrome Canary](https://www.google.com/chrome/canary/)
-  * ou [Chrome Dev](https://www.google.com/chrome/dev/) si vous ne pouvez install la version Canary (eg sur Linux)
-  * (optionnel, en supplément) [Firefox](https://www.mozilla.org/fr/firefox/channel/desktop/#nightly) Nightly ou Developer Edition
-* [Node.js](https://nodejs.org/en/) et [npm](https://www.npmjs.com/)
+- Un IDE / un éditeur de code ou de texte
+  - recommandation : [Download Visual Studio Code](https://code.visualstudio.com/)
+- La dernière version de Chrome
+  - [Chrome Canary](https://www.google.com/chrome/canary/)
+  - ou [Chrome Dev](https://www.google.com/chrome/dev/) si vous ne pouvez install la version Canary (e.g. sur Linux)
+  - (optionnel, en supplément) [Firefox](https://www.mozilla.org/fr/firefox/channel/desktop/#nightly) Nightly ou Developer Edition
+- [Node.js](https://nodejs.org/en/) et [npm](https://www.npmjs.com/)
 
 ### Recommandations
 
@@ -43,9 +43,9 @@ et d'avoir au moins une fois contribué au développement d'une Web App (peu imp
   Ces éléments sont nécessaires pour tester plusieurs fonctionnalités que vous ajouterez à la PWA. Ils ne sont pas absolument indispensables pour compléter ce codelab, mais très fortement recommandés.
 </aside>
 
-* un smartphone Android "récent" avec Chrome, [Chrome Canary](https://play.google.com/store/apps/details?id=com.chrome.canary&hl=fr), et un cable usb
-  * OU Mac OS X & Safari
-* Git
+- un smartphone Android "récent" avec Chrome, [Chrome Canary](https://play.google.com/store/apps/details?id=com.chrome.canary&hl=fr), et un cable usb
+  - OU Mac OS X & Safari
+- Git
 
 ## Mise en place
 
@@ -97,7 +97,7 @@ Ouvrez l'application en entrant l'url [localhost:8081](http://localhost:8081) da
 
 L'application vous demande alors une autorisation pour pouvoir afficher des notifications. Cliquez sur "Autoriser" ou "Allow" pour l'accepter.
 
-![Autoriser les notifications](./assets/notifications.png) 
+![Autoriser les notifications](./assets/notifications.png)
 
 <aside class="special">
   Cette application est issue d'un codelab de Google intitulé <a href="https://codelabs.developers.google.com/codelabs/workbox-indexeddb/#2" target="_blank" rel="noopener noreferrer"><i>Build an offline-first, data-driven PWA</i></a>, sur lequel nous allons revenir au chapitre suivant.
@@ -225,7 +225,9 @@ Comme vu précédemment, les "step" correspondant ont été créés. Ici, je vou
 </aside>
 
 ```javascript
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.0.0/workbox-sw.js');
+importScripts(
+  "https://storage.googleapis.com/workbox-cdn/releases/5.0.0/workbox-sw.js"
+);
 ```
 
 <aside class="info">
@@ -253,13 +255,13 @@ const { BackgroundSyncPlugin } = workbox.backgroundSync;
 const { registerRoute } = workbox.routing;
 const { NetworkOnly } = workbox.strategies;
 
-const bgSyncPlugin = new BackgroundSyncPlugin('dashboardr-queue');
+const bgSyncPlugin = new BackgroundSyncPlugin("dashboardr-queue");
 
 const networkWithBackgroundSync = new NetworkOnly({
   plugins: [bgSyncPlugin]
 });
 
-registerRoute(/\/api\/add/, networkWithBackgroundSync, 'POST');
+registerRoute(/\/api\/add/, networkWithBackgroundSync, "POST");
 ```
 
 Enregistrez le fichier, et relancez le serveur :
@@ -344,8 +346,8 @@ Ajoutez le code suivant à **app/sw.js** :
 
 ```javascript
 const showNotification = () => {
-  self.registration.showNotification('Background sync success!', {
-    body: '🎉`🎉`🎉`'
+  self.registration.showNotification("Background sync success!", {
+    body: "🎉`🎉`🎉`"
   });
 };
 ```
@@ -355,7 +357,7 @@ Comme son nom l'indique, cette fonction fait usage de la Notification API pour a
 Pour y faire appel à la reception d'un sync event, ajoutez une option `onSync` à notre BackgroundSyncPlugin, comme suit :
 
 ```javascript
-const bgSyncPlugin = new BackgroundSyncPlugin('dashboardr-queue', {
+const bgSyncPlugin = new BackgroundSyncPlugin("dashboardr-queue", {
   onSync: showNotification
 });
 ```
@@ -386,8 +388,8 @@ Pour réparer cette erreur, nous devons reproduire le comportement par défaut d
 ```javascript
 const showNotification = ({ queue }) => {
   queue.replayRequests();
-  self.registration.showNotification('Background sync success!', {
-    body: '🎉`🎉`🎉`'
+  self.registration.showNotification("Background sync success!", {
+    body: "🎉`🎉`🎉`"
   });
 };
 ```
@@ -424,11 +426,11 @@ Dans **app/js/main.js**, ajouter le code suivant dans le `if('serviceWorker in n
 ```javascript
 let deferredPrompt;
 
-window.addEventListener('beforeinstallprompt', e => {
-  console.log('beforeInstallPrompt event detected');
+window.addEventListener("beforeinstallprompt", e => {
+  console.log("beforeInstallPrompt event detected");
   e.preventDefault();
   deferredPrompt = e;
-  console.log('ready for A2HS');
+  console.log("ready for A2HS");
 });
 ```
 
@@ -458,7 +460,9 @@ Afin d'être plus incitatif, ajoutez un bouton d'installation dans le `<header>`
 
 ```html
 <li>
-  <button class="button ripple" id="install-btn" style="display: none">Install</button>
+  <button class="button ripple" id="install-btn" style="display: none">
+    Install
+  </button>
 </li>
 ```
 
@@ -467,8 +471,8 @@ Remarquez que ce bouton est masqué par défaut. Il sera affiché <i>uniquement<
 Pour ce faire, appeler une fonction `showInstallPromotion` en réponse à l'évènement `beforeInstallPrompt`, dans **app/js/main.js** :
 
 ```javascript
-window.addEventListener('beforeinstallprompt', e => {
-  console.log('beforeInstallPrompt event detected');
+window.addEventListener("beforeinstallprompt", e => {
+  console.log("beforeInstallPrompt event detected");
   e.preventDefault();
   deferredPrompt = e;
   showInstallPromotion();
@@ -478,24 +482,24 @@ window.addEventListener('beforeinstallprompt', e => {
 Plus haut, définissez cette fonction comme suit :
 
 ```javascript
-const btnAdd = document.getElementById('install-btn');
+const btnAdd = document.getElementById("install-btn");
 
 function showInstallPromotion() {
-  btnAdd.style.display = 'inline-block';
+  btnAdd.style.display = "inline-block";
 }
 ```
 
 Enfin, au click sur ce bouton, affichez l'install prompt :
 
 ```javascript
-btnAdd.addEventListener('click', e => {
-  btnAdd.style.display = 'none';
+btnAdd.addEventListener("click", e => {
+  btnAdd.style.display = "none";
   deferredPrompt.prompt();
   deferredPrompt.userChoice.then(choiceResult => {
-    if (choiceResult.outcome === 'accepted') {
-      console.log('User accepted the A2HS prompt');
+    if (choiceResult.outcome === "accepted") {
+      console.log("User accepted the A2HS prompt");
     } else {
-      console.log('User dismissed the A2HS prompt');
+      console.log("User dismissed the A2HS prompt");
     }
     deferredPrompt = null;
   });
@@ -546,15 +550,15 @@ Supprimez le bouton d'installation précédemment créé dans **app/index.html**
 Dans **app/js/main.js**, remplacer `btnAdd` par le code suivant :
 
 ```javascript
-const installCard = document.getElementById('install-card');
-const btnAdd = installCard.querySelector('#install-btn');
+const installCard = document.getElementById("install-card");
+const btnAdd = installCard.querySelector("#install-btn");
 ```
 
 Enfin, remplacez `btnAdd` par `installCard` dans `showInstallPromotion` et l'EventListener de `btnAdd 'click'` :
 
 ```javascript
 function showInstallPromotion() {
-  installCard.style.display = 'inline-block';
+  installCard.style.display = "inline-block";
 }
 ```
 
@@ -571,8 +575,7 @@ Enfin, pour un meilleur affichage, ajoutez un test dans `updateUI` afin de faire
 ```javascript
 function updateUI(events) {
   events.forEach(event => {
-    const item =
-      `<li class="card">
+    const item = `<li class="card">
          <div class="card-text">
            <h2>${event.title}</h2>
            <h4>${event.date}</h4>
@@ -580,7 +583,7 @@ function updateUI(events) {
            <p>${event.note}</p>
          </div>
        </li>`;
-    const where = container.childElementCount < 6 ? 'afterbegin' : 'beforeend';
+    const where = container.childElementCount < 6 ? "afterbegin" : "beforeend";
     container.insertAdjacentHTML(where, item);
   });
 }
@@ -623,50 +626,50 @@ Pour cela, vous utiliserez simplement un cookie.
 Copiez-collez les helpers suivants au début de **app/js/main.js** :
 
 ```javascript
-const COOKIE_NAME = 'POSTPONED_A2HS';
+const COOKIE_NAME = "POSTPONED_A2HS";
 
 function setCookie(name, value, expirationMinutes) {
   let d = new Date();
   d.setTime(d.getTime() + expirationMinutes * 60 * 1000);
 
-  let expires = 'expires='+d.toUTCString();
-  document.cookie = name + '=' + value + '; ' + expires + '; path=/';
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = name + "=" + value + "; " + expires + "; path=/";
 }
 
 function getCookie(cookieName) {
-  let name = cookieName + '=';
-  let ca = document.cookie.split(';');
+  let name = cookieName + "=";
+  let ca = document.cookie.split(";");
   let c;
 
-  for(var i = 0; i < ca.length; i++) {
+  for (var i = 0; i < ca.length; i++) {
     c = ca[i].trim();
     if (c.indexOf(name) == 0) {
       return c.substring(name.length, c.length);
     }
   }
 
-  return '';
+  return "";
 }
 ```
 
 Créez un cookie au click sur le bouton dismiss :
 
 ```javascript
-btnDismiss.addEventListener('click', e => {
-  installCard.style.display = 'none';
+btnDismiss.addEventListener("click", e => {
+  installCard.style.display = "none";
   // By default, Chrome stop showing the mini info-bar during 3 months
   // after the user dismissed it.
   // We set it to 2 minutes for testing purpose only.
-  setCookie(COOKIE_NAME, 'true', 2);
-})
+  setCookie(COOKIE_NAME, "true", 2);
+});
 ```
 
 Enfin, assurez vous que vous n'afficherez pas la card tant que ce cookie ne sera pas expiré :
 
 ```javascript
 function showInstallPromotion() {
-  if(getCookie(COOKIE_NAME) !== 'true') {
-    installCard.style.display = 'inline-block';
+  if (getCookie(COOKIE_NAME) !== "true") {
+    installCard.style.display = "inline-block";
   }
 }
 ```
@@ -681,9 +684,9 @@ Dans **app/js/main.js**, ajouter un cookie à l'affichage de la card avec un tem
 
 ```javascript
 function showInstallPromotion() {
-  if(getCookie(COOKIE_NAME) !== 'true') {
-    installCard.style.display = 'inline-block';
-    setCookie(COOKIE_NAME, 'true', 1);
+  if (getCookie(COOKIE_NAME) !== "true") {
+    installCard.style.display = "inline-block";
+    setCookie(COOKIE_NAME, "true", 1);
   }
 }
 ```
@@ -699,8 +702,8 @@ Dans ce cas, la création par l'utilisateur d'un premier événement sera sans a
 Dans **app/js/main.js**, supprimez l'appel à `showInstallPromotion()` dans l'EventHandler du `beforeInstallPrompt` :
 
 ```javascript
-window.addEventListener('beforeinstallprompt', e => {
-  console.log('beforeInstallPrompt event detected');
+window.addEventListener("beforeinstallprompt", e => {
+  console.log("beforeInstallPrompt event detected");
   e.preventDefault();
   deferredPrompt = e;
   // don't show anything for now
@@ -732,7 +735,7 @@ Un soucis assez évident est que la card devrait s'afficher au dessus du formula
 Remplacer la ligne où la variable `where` est initialisée dans `updateUI` par la suivante :
 
 ```javascript
-const where = events.length > 1 ? 'afterbegin' : 'beforeend';
+const where = events.length > 1 ? "afterbegin" : "beforeend";
 ```
 
 Suivant cette même idée de promouvoir "l'installation d'un site web" (concept encore peu compris par le grand public), il est également important de bien choisir votre wording.
@@ -755,10 +758,10 @@ Connectez votre smartphone Android à votre ordinateur par cable USB.
 
 Dans les paramètres Android, ouvrez le menu About Phone pour afficher le Build Number, et taper dessus 7 fois :
 
-* Android 9 (API level 28) and higher: Settings > About Phone > Build Number
-* Android 8.0.0 (API level 26) and Android 8.1.0 (API level 26): Settings > System > About Phone > Build Number
-* Android 7.1 (API level 25) and lower: Settings > About Phone > Build Number
-  
+- Android 9 (API level 28) and higher: Settings > About Phone > Build Number
+- Android 8.0.0 (API level 26) and Android 8.1.0 (API level 26): Settings > System > About Phone > Build Number
+- Android 7.1 (API level 25) and lower: Settings > About Phone > Build Number
+
 Cela permet d'afficher les [Options de développement](https://developer.android.com/studio/debug/dev-options) à la racine du menu, tout en bas de la liste.
 
 A la section "Débogage", activez le Débogage USB.
@@ -786,23 +789,23 @@ Dans le header de **app/index.html**, ajoutez un bouton "Share" pour inciter vos
 Dans **app/js/mains.js** nous allons à présent pouvoir utiliser la Web Share Api pour partager du contenu au click sur ce bouton :
 
 ```javascript
-const shareBtn = document.querySelector('.share');
+const shareBtn = document.querySelector(".share");
 
 if (navigator.share) {
-  shareBtn.addEventListener('click', async () => {
+  shareBtn.addEventListener("click", async () => {
     try {
       await navigator.share({
-        title: 'The Web is on FIRE, the Codelab',
+        title: "The Web is on FIRE, the Codelab",
         text: `Check out this codelab!`,
-        url: 'https://fullweb.dev/codelabs/doc/modern-data-driven_fr/'
+        url: "https://fullweb.dev/codelabs/doc/modern-data-driven_fr/"
       });
-      console.log('Successful share');
+      console.log("Successful share");
     } catch (error) {
-      console.warn('Error sharing', error);
+      console.warn("Error sharing", error);
     }
   });
 } else {
-  console.warn(`The Web Share Api isn't supported by your Browser.`)
+  console.warn(`The Web Share Api isn't supported by your Browser.`);
 }
 ```
 
@@ -810,7 +813,7 @@ Mettez à jour l'application dans Chrome sur Android, et cliquez sur le bouton.
 
 ## Recevoir un partage de données
 
-À ne pas confondre avec la Web Share API, la [Web Share **Target** API]() va nous permettre, à l'opposer, d'indiquer au système que notre application peut _recevoir_ un partage.
+À ne pas confondre avec la Web Share API, la Web Share **Target** API va nous permettre, à l'opposer, d'indiquer au système que notre application peut _recevoir_ un partage.
 
 Dans **app/manifest.json**, ajoutez l'entrée suivante à d'informer le système que votre PWA, une fois installée, pourra être ajoutée à la liste des applications vers lesquelles il est possible de partager du contenu :
 
@@ -832,21 +835,24 @@ Ici, nous dison au système que lorsque l'utilisateur selectionne notre applicat
 Dans **app/js/main.js**, ajoutez, en fin de fichier, la méthode qui permettra d'enregistrer un nouvel évènement si au moins un de ces paramètres est renseigné :
 
 ```javascript
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("DOMContentLoaded", () => {
   const parsedUrl = new URL(window.location);
-  const title = parsedUrl.searchParams.get('title');
-  const text = parsedUrl.searchParams.get('text');
-  const url = parsedUrl.searchParams.get('url');
+  const title = parsedUrl.searchParams.get("title");
+  const text = parsedUrl.searchParams.get("text");
+  const url = parsedUrl.searchParams.get("url");
   if (title || text || url) {
-    updateUI([{
-      title,
-      note: url && text ? `${text}: ${url}` : url || text,
-      date: '',
-      city: ''
-    }]);
+    updateUI([
+      {
+        title,
+        note: url && text ? `${text}: ${url}` : url || text,
+        date: "",
+        city: ""
+      }
+    ]);
   }
 });
 ```
+
 Relancez l'application dans Chrome pour Android. Assurez vous bien, via les DevTools, que le manifest ne présente pas d'erreur, et que main.js a été mis à jour.
 
 Installez l'application (Menu > Ajouter l'application à l'écran d'accueil).
@@ -863,17 +869,25 @@ Utilisez ces trois fichiers et [`prefers-color-scheme`](https://developer.mozill
 
 ```html
 <script>
-  if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
-    document.documentElement.style.display = 'none';
+  if (window.matchMedia("(prefers-color-scheme: dark)").media === "not all") {
+    document.documentElement.style.display = "none";
     document.head.insertAdjacentHTML(
-        'beforeend',
-        '<link rel="stylesheet" href="style/light.css" onload="document.documentElement.style.display = \'\'">'
+      "beforeend",
+      '<link rel="stylesheet" href="style/light.css" onload="document.documentElement.style.display = \'\'">'
     );
   }
 </script>
-<link rel="stylesheet" href="style/dark.css" media="(prefers-color-scheme: dark)">
-<link rel="stylesheet" href="style/light.css" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
-<link rel="stylesheet" href="style/main.css">
+<link
+  rel="stylesheet"
+  href="style/dark.css"
+  media="(prefers-color-scheme: dark)"
+/>
+<link
+  rel="stylesheet"
+  href="style/light.css"
+  media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)"
+/>
+<link rel="stylesheet" href="style/main.css" />
 ```
 
 <aside class="tip">
