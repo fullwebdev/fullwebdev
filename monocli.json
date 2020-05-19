@@ -1,3 +1,9 @@
 {
-  "projects": []
+  "projects": [
+    {
+      "scope": "code-samples",
+      "directory": "packages/code-samples",
+      "url": "git@github.com:noelmace/mwa-examples.git"
+    }
+  ]
 }
