@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0-beta.3](https://github.com/fullwebdev/fullwebdev/compare/v0.5.0-beta.2...v0.5.0-beta.3) (2020-05-19)
+
 ## [0.5.0-beta.2](https://github.com/fullwebdev/fullwebdev/compare/v0.5.0-beta.1...v0.5.0-beta.2) (2020-05-19)
 
 ### Bug Fixes
