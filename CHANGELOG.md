@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0-beta.2](https://github.com/fullwebdev/fullwebdev/compare/v0.5.0-beta.1...v0.5.0-beta.2) (2020-05-19)
+
+### Bug Fixes
+
+- **codelabs:** new data-driven-pwa url after transfer ([ad165c5](https://github.com/fullwebdev/fullwebdev/commit/ad165c5986396cdf8ca50a26549a1524f47ff57c))
+
 ## [0.5.0-beta.1](https://github.com/fullwebdev/fullwebdev/compare/v0.2.0-beta.1...v0.5.0-beta.1) (2020-05-19)
 
 ### Features
