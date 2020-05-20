@@ -3,65 +3,70 @@ name: Deploy
 on:
   push:
     branches:
-    - master
+      - master
 
 jobs:
   build-deploy:
     runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@v1
+      - uses: actions/checkout@v1
+        with:
+          submodules: true
+          token: ${{ secrets.ACCESS_TOKEN }}
 
-    - name: Setup Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: '10.x'
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
 
-    - name: Cache dependencies
-      uses: actions/cache@v1
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
-    - name: Install dependencies
-      run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
-    - name: Download latest build
-      uses: Xotl/cool-github-releases@v1.1.2
-      with:
-        mode: download
-        tag_name: latest
-        assets: www.tar.gz
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download latest build
+        uses: Xotl/cool-github-releases@v1.1.2
+        with:
+          mode: download
+          tag_name: latest
+          assets: www.tar.gz
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Extract latest build
-      run: tar -xvzf www.tar.gz
+      - name: Extract latest build
+        run: tar -xvzf www.tar.gz
 
-    - name: Build
-      run: |
-        bash scripts/build.sh
-        cp ./CNAME ./dist/CNAME
+      - name: Extract material
+        run: node scripts/extract-material.js
 
+      - name: Build
+        run: |
+          bash scripts/build.sh
+          cp ./CNAME ./dist/CNAME
 
-    - name: Deploy to gh pages
-      uses: peaceiris/actions-gh-pages@v2.10.1
-      env:
-        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./dist
+      - name: Deploy to gh pages
+        uses: peaceiris/actions-gh-pages@v2.10.1
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./dist
 
-    - name: Create archive
-      run: |
-        rm www.tar.gz
-        tar -cvzf www.tar.gz dist
+      - name: Create archive
+        run: |
+          rm www.tar.gz
+          tar -cvzf www.tar.gz dist
 
-    - name: Publish Github Release
-      uses: "marvinpinto/action-automatic-releases@latest"
-      with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "latest"
-        prerelease: true
-        title: "Latest deployed build"
-        files: |
-          www.tar.gz
+      - name: Publish Github Release
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Latest deployed build"
+          files: |
+            www.tar.gz
