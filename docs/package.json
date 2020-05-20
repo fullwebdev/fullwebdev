@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "vuepress build .",
-    "start": "vuepress dev . --host localhost"
+    "start": "vuepress dev . --host localhost --no-clear-screen"
   },
   "repository": {
     "type": "git",
