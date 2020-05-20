@@ -6,6 +6,14 @@ const { sidebar: materialSidebarFr } = require("vuepress-bar")(
   }
 );
 
+const { sidebar: materialSidebarEn } = require("vuepress-bar")(
+  `${__dirname}/../material/`,
+  {
+    addReadMeToFirstGroup: false,
+    stripNumbers: true,
+  }
+);
+
 module.exports = {
   locales: {
     "/": {
@@ -50,12 +58,14 @@ module.exports = {
           { text: "About", link: "/about/" },
         ],
         sidebar: {
+          "/material/": ["/introduction/", ...materialSidebarEn],
           "/": [
             "/",
             "/introduction/",
             "/conferences/",
             "/codelabs/",
             "/flashcards/",
+            "/material/",
           ],
         },
         lastUpdated: "Last Updated",
@@ -83,7 +93,7 @@ module.exports = {
           { text: "À propos", link: "/fr/about/" },
         ],
         sidebar: {
-          "/fr/material/": materialSidebarFr,
+          "/fr/material/": ["/fr/introduction/", ...materialSidebarFr],
           "/": [
             ["/fr/", "Accueil"],
             "/fr/introduction/",

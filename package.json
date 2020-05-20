@@ -20,6 +20,7 @@
     "postrelease": "git push --follow-tags",
     "start": "lerna run start --scope=@fullwebdev/docs",
     "build:docs": "bash scripts/build.sh -f",
+    "build:material": "node scripts/extract-material.js",
     "serve:docs": "http-server dist -o",
     "build:illustrations": "lerna run build --scope=@fullwebdev/illustrations",
     "prebuild:livre": "npm run build:illustrations",
