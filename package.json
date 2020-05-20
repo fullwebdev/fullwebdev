@@ -19,6 +19,7 @@
     "release:test": "standard-version --dry-run",
     "postrelease": "git push --follow-tags",
     "start": "lerna run start --scope=@fullwebdev/docs",
+    "prebuild:docs": "npm run build:illustrations && bash scripts/cp-assets.sh && npm run build:material",
     "build:docs": "bash scripts/build.sh -f",
     "build:material": "node scripts/extract-material.js",
     "serve:docs": "http-server dist -o",

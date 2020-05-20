@@ -46,7 +46,7 @@ jobs:
 
       - name: Build
         run: |
-          bash scripts/build.sh
+          npm run build:docs
           cp ./CNAME ./dist/CNAME
 
       - name: Deploy to gh pages
