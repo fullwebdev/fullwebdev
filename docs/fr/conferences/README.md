@@ -3,7 +3,7 @@
 ## WoF Show (v2.0)
 
 > Toutes les dernières nouveautés de la Web Platform, leurs apports niveau UX, et des cas concret !\
-> En un talk ! 
+> En un talk !
 
 ::: details
 La Web platform évolue en permanence ! Et ça fait 4 ans qu’on évoque les 4 même technos pour appliquer les 4 grands éléments qui font une bonne web app : Fast, Integrated, Reliable & Engaging !
@@ -51,13 +51,13 @@ Et bien entendu, nous verrons enfin comment les mettre en place (notament grâce
 
 22 Octobre 2019 - 11:20
 
-:man_teacher: [slides](https://devfestnantes-2019.wof.show/) - :film_projector: [vidéo](https://youtu.be/_byWU9V4fXw) 
+:man_teacher: [slides](https://devfestnantes-2019.wof.show/) - :film_projector: [vidéo](https://youtu.be/_byWU9V4fXw)
 
 #### [ParisWeb](https://www.paris-web.fr/2019/conferences/the-web-is-on-fire.php)
 
 11 Octobre 2019 - 12:00
 
-:man_teacher: [slides](https://parisweb-2019.wof.show/) - :film_projector: [vidéo](https://youtu.be/iaWGWm9wtXM?t=11025)
+:man_teacher: [slides](https://parisweb-2019.wof.show/) - :film_projector: [vidéo](https://vimeo.com/380989996)
 
 ### 👨‍🏫 Université
 

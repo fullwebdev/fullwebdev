@@ -43,13 +43,13 @@ December 10, 2019 - 14:00
 
 October 22, 2019 - 11:20
 
-:man_teacher: [slides](https://devfestnantes-2019.wof.show/) - :film_projector: [video (:fr: french)](https://youtu.be/_byWU9V4fXw) 
+:man_teacher: [slides](https://devfestnantes-2019.wof.show/) - :film_projector: [video (:fr: french)](https://youtu.be/_byWU9V4fXw)
 
 #### [ParisWeb](https://www.paris-web.fr/2019/conferences/the-web-is-on-fire.php)
 
 October 11, 2019 - 12:00
 
-:man_teacher: [slides](https://parisweb-2019.wof.show/) - :film_projector: [video (:fr: french)](https://youtu.be/iaWGWm9wtXM?t=11025)
+:man_teacher: [slides](https://parisweb-2019.wof.show/) - :film_projector: [video (:fr: french)](https://vimeo.com/380989996)
 
 ### 👨‍🏫 University
 
