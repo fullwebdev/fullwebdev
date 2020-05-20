@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0-beta.4](https://github.com/fullwebdev/fullwebdev/compare/v0.5.0-beta.3...v0.5.0-beta.4) (2020-05-20)
+
+### Features
+
+- **docs:** add fr learning material ([a152816](https://github.com/fullwebdev/fullwebdev/commit/a1528167bcd3b4bf9969bdcd6ae9cb15198ac1d9))
+- **docs:** complete material extraction ([ebb5530](https://github.com/fullwebdev/fullwebdev/commit/ebb553044b96df8166743d599e36ae202ec5d0bf))
+
+### Bug Fixes
+
+- **docs:** broken link to parisweb video ([9fd843f](https://github.com/fullwebdev/fullwebdev/commit/9fd843fccb1374c394bf4c7e689168bbb5de12c0))
+- **docs:** missing index in /material ([864a564](https://github.com/fullwebdev/fullwebdev/commit/864a5641e2f43eb9923cb200f34524e3166fb3d1))
+
 ## [0.5.0-beta.3](https://github.com/fullwebdev/fullwebdev/compare/v0.5.0-beta.2...v0.5.0-beta.3) (2020-05-19)
 
 ## [0.5.0-beta.2](https://github.com/fullwebdev/fullwebdev/compare/v0.5.0-beta.1...v0.5.0-beta.2) (2020-05-19)
