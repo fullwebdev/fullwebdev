@@ -2,8 +2,8 @@
 
 ## Workaround to lerna run ci:build because it doesn't permit to add a precondition
 ## nor to return success if one or more (but not all) scripts failed
+## TODO: move to monocli
 
-## TODO: use jq via https://github.com/awesome-global-contributions/action-yq
 PACKAGES=('docs' 'packages/codelabs' 'packages/reveal')
 ROOT_DISTS=('' 'codelabs/doc' 'slides/reveal')
 
@@ -29,10 +29,9 @@ for (( i=0; i<${NBR_PACKAGES}; i++ )); do
   pkg="${PACKAGES[$i]}"
   echo "Package: $pkg"
   root_dist="${ROOTWD}/dist/${ROOT_DISTS[$i]}"
-  bash ./scripts/check-changed.sh "$pkg" latest
+  ${ROOTWD}/node_modules/.bin/monocli check "$pkg" --tag latest
   HAS_CHANGED=$?
 
-  ## TODO: refact in order to optimise
   if [[ $pkg == "docs" ]] && [[ $HAS_CHANGED -eq 0 ]]; then
     echo "Docs have changed!"
     echo "Forcing all packages to rebuild."

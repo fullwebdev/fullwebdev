@@ -14,6 +14,18 @@
       "scope": "code-samples",
       "directory": "packages/code-samples",
       "url": "git@github.com:fullwebdev/code-samples.git"
+    },
+    {
+      "scope": "docs",
+      "directory": "docs"
+    },
+    {
+      "scope": "codelabs",
+      "directory": "packages/codelabs"
+    },
+    {
+      "scope": "reveal",
+      "directory": "packages/reveal"
     }
   ]
 }
