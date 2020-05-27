@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/fullwebdev/fullwebdev/compare/v0.5.0-beta.4...v0.5.0) (2020-05-27)
+
+### Features
+
+- **docs:** add temporary introduction / about page ([9b7dd23](https://github.com/fullwebdev/fullwebdev/commit/9b7dd23632a3cfae55191fb2666a31398e997439))
+
 ## [0.5.0-beta.4](https://github.com/fullwebdev/fullwebdev/compare/v0.5.0-beta.3...v0.5.0-beta.4) (2020-05-20)
 
 ### Features
