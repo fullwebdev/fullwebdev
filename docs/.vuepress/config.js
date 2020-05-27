@@ -58,10 +58,10 @@ module.exports = {
           { text: "About", link: "/about/" },
         ],
         sidebar: {
-          "/material/": ["/introduction/", ...materialSidebarEn],
+          "/material/": [["/about/", "Introduction"], ...materialSidebarEn],
           "/": [
             "/",
-            "/introduction/",
+            ["/about/", "Introduction"],
             "/conferences/",
             "/codelabs/",
             "/flashcards/",
@@ -93,10 +93,13 @@ module.exports = {
           { text: "À propos", link: "/fr/about/" },
         ],
         sidebar: {
-          "/fr/material/": ["/fr/introduction/", ...materialSidebarFr],
+          "/fr/material/": [
+            ["/fr/about/", "Introduction"],
+            ...materialSidebarFr,
+          ],
           "/": [
             ["/fr/", "Accueil"],
-            "/fr/introduction/",
+            ["/fr/about/", "Introduction"],
             "/fr/conferences/",
             "/fr/codelabs/",
             "/fr/flashcards/",
