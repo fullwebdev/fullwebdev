@@ -17,7 +17,6 @@
     "postinstall": "lerna bootstrap",
     "release": "standard-version",
     "release:test": "standard-version --dry-run",
-    "postrelease": "git push --follow-tags",
     "update-subtrees": "monocli update",
     "start": "lerna run start --scope=@fullwebdev/docs",
     "prebuild:docs": "npm run build:illustrations && bash scripts/cp-assets.sh && npm run build:material",
