@@ -1,4 +1,7 @@
-/.vscode
+/.vscode/*
+!/.vscode/settings.json
+!/.vscode/md-import.code-snippets
+!/.vscode/spellright.dict
 /dist
 node_modules
 /docs/material/*

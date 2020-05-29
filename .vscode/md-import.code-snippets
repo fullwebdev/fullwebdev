@@ -1,0 +1,11 @@
+{
+	// Usage: Copy the relative path of the file you want to import, and then use this snippet 
+	"Import code snippet": {
+		"scope": "markdown",
+		"prefix": "ics",
+		"body": [
+			"<<< @/../${1:$CLIPBOARD${2:#}}"
+		],
+		"description": "import code snippet (Vuepress syntax)"
+	}
+}
