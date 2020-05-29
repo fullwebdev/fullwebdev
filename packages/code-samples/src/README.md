@@ -4,6 +4,14 @@
 
 ## Essential Parts
 
+### Components
+
+1. (intro)
+   [JQuery Plugin](components/jquery/range-slider.html)
+2. React
+   - [Hello World - without JSX](components/react/hello-world.html)
+   - [Hello World - JSX](components/react/hello-jsx.html)
+
 ### Routing
 
 1. [Location API](minimal-spa/2-location/)
@@ -12,7 +20,8 @@
    - [Replace](minimal-spa/3-hashroute/replace/)
 1. [History API](minimal-spa/4-history-api/)
 1. Routes
-   - [asynchronous](minimal-spa/5-routes/1-async/) (bad practice)
+   - [asynchronous](minimal-spa/5-routes/1-async/) (bad
+     practice)
    - [synchronous](minimal-spa/5-routes/2-sync)
    - [redirect](minimal-spa/5-routes/3-redirect)
 1. Data
