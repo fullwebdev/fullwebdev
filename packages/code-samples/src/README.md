@@ -11,6 +11,14 @@
 2. React
    - [Hello World - without JSX](components/react/hello-world.html)
    - [Hello World - JSX](components/react/hello-jsx.html)
+3. Function-based
+   - [Hello World](components/function/hello-world.html)
+   - [Using Parameters](components/function/bad-update.html)
+     (bad practice)
+   - [Using Parameters](components/function/params.html)
+     (not pure)
+   - [With lit-html](components/function/with-lit-html.html)
+     (not pure)
 
 ### Routing
 
