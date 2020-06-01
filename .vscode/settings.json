@@ -184,7 +184,12 @@
     "SpiderMonkey",
     "ECMA-357",
     "stateless",
-    "stateful"
+    "stateful",
+    "lit-html",
+    "lit-element",
+    "hook",
+    "Abramov",
+    "Haunted"
   ],
   "cSpell.language": "fr,en",
   "cSpell.allowCompoundWords": true,
