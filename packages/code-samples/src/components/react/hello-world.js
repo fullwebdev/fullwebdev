@@ -14,7 +14,7 @@ ReactDOM.render(
 //#endregion render-function
 
 //#region class
-class StatefulHelloWorld extends React.Component {
+class ClassHelloWorld extends React.Component {
   render() {
     return React.createElement(
       "div",
@@ -28,7 +28,7 @@ class StatefulHelloWorld extends React.Component {
 //#region render-class
 ReactDOM.render(
   React.createElement(
-    StatefulHelloWorld,
+    ClassHelloWorld,
     { toWhat: "Component" },
     null
   ),
