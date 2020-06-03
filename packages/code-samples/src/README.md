@@ -6,16 +6,21 @@
 
 ### Components
 
-1. (intro)
-   [JQuery Plugin](components/jquery/range-slider.html)
-2. React
+1. Intro
+   - [JQuery Plugin](components/jquery/range-slider.html)
+2. AngularJS
+   1. [v1.0 - directive](components/angularjs/directive/hello-world.html)
+   2. [v1.2 - controllerAs](components/angularjs/controller-as/hello-world.html)
+   3. [v1.3 - bindToController](components/angularjs/bindtocontroller/hello-world.html)
+   4. [v1.5+ - component helper](components/angularjs/component-helper/hello-world.html)
+3. React
    - [Hello World - without JSX](components/react/hello-world.html)
    - [Hello World - JSX](components/react/hello-jsx.html)
    - [State](components/react/stateful.html)
    - [Shared Hook](components/react/responsive-component/index.html)
      (from
      [Dan Abramov](https://gist.github.com/gaearon/cb5add26336003ed8c0004c4ba820eae))
-3. Function-based
+4. Function-based
    - [Hello World](components/function/hello-world.html)
    - [Using Parameters](components/function/bad-update.html)
      (bad practice)
