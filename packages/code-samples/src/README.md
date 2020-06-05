@@ -29,6 +29,13 @@
    - [With lit-html](components/function/with-lit-html.html)
      (not pure)
 
+#### Web Components
+
+1. Custom Elements
+   - [autonomous](components/custom-elements/autonomous/hello-world.html)
+   - [customized built-in](components/custom-elements/customized-buit-in/hello-world.html)
+   - [conflict](components/custom-elements/conflict/conflict.html)
+
 ### Routing
 
 1. [Location API](minimal-spa/2-location/)
