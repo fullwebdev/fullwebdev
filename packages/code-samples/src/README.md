@@ -35,6 +35,7 @@
    - [autonomous](components/custom-elements/autonomous/hello-world.html)
    - [customized built-in](components/custom-elements/customized-buit-in/hello-world.html)
    - [conflict](components/custom-elements/conflict/conflict.html)
+   - [names validity](components/custom-elements/names/index.html)
 
 ### Routing
 
