@@ -95,10 +95,10 @@ const showErrors = (
 
   if (isValidCustomElementName(ceName)) {
     ceNameValidationEl.classList.add("success");
-    ceNameValidationEl.innerHTML = `"${ceName}" is a valid custom element name string`;
+    ceNameValidationEl.textContent = `"${ceName}" is a valid custom element name string`;
   } else {
     ceNameValidationEl.classList.add("error");
-    ceNameValidationEl.innerHTML = `"${ceName}" isn't a valid custom element name string`;
+    ceNameValidationEl.textContent = `"${ceName}" isn't a valid custom element name string`;
   }
 
   container.appendChild(ceNameValidationEl);
@@ -107,10 +107,10 @@ const showErrors = (
 
   if (isValidElementName(ceName)) {
     nameValidationEl.classList.add("success");
-    nameValidationEl.innerHTML = `"${ceName}" is a valid name for createElement as defined by the HTML standard`;
+    nameValidationEl.textContent = `"${ceName}" is a valid name for createElement as defined by the HTML standard`;
   } else {
     nameValidationEl.classList.add("error");
-    nameValidationEl.innerHTML = `"${ceName}" isn't a valid name for createElement as defined by the HTML standard`;
+    nameValidationEl.textContent = `"${ceName}" isn't a valid name for createElement as defined by the HTML standard`;
   }
 
   container.appendChild(nameValidationEl);
@@ -154,7 +154,7 @@ try {
 
   const workaroundTitle = document.createElement("p");
   workaroundTitle.classList.add("transition");
-  workaroundTitle.innerHTML =
+  workaroundTitle.textContent =
     "but when using `innerHTML`...";
   nonAsciiContainer.appendChild(workaroundTitle);
 

@@ -4,7 +4,7 @@ class EmptyComponent extends HTMLParagraphElement {}
 
 class HelloWorldParagraphComponent extends HTMLParagraphElement {
   connectedCallback() {
-    this.innerHTML = "Hello Paragraph!";
+    this.textContent = "Hello Paragraph!";
   }
 }
 
