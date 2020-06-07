@@ -1,10 +1,8 @@
-class HelloWorldParagraphComponent extends HTMLParagraphElement {
-  //#region constructor
-  constructor() {
-    const el = super();
-  }
-  //#endregion constructor
+//#region empty-component
+class EmptyComponent extends HTMLParagraphElement {}
+//#endregion empty-component
 
+class HelloWorldParagraphComponent extends HTMLParagraphElement {
   connectedCallback() {
     this.innerHTML = "Hello Paragraph!";
   }
