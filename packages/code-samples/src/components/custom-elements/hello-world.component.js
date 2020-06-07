@@ -1,6 +1,7 @@
 //#region class
 class HelloWorldComponent extends HTMLElement {
-  connectedCallback() {
+  constructor() {
+    super();
     this.innerHTML = "<p>Hello World</p>";
   }
 }
