@@ -38,6 +38,10 @@
    - [names validity](components/custom-elements/names/index.html)
 2. Shadow DOM
    - [attach](components/shadow-dom/attach/index.html)
+   - [open vs. closed](components/shadow-dom/access/bases/index.html)
+   - workaround to closed mode
+     - [using iife](components/shadow-dom/access/workaround/iife/index.html)
+     - [using a private field](components/shadow-dom/access/workaround/private-field/index.html)
 
 ### Routing
 

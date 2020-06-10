@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shadow DOM - Access (workaround)</title>
+    <script defer src="index.js"></script>
+    <style>
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Shadow DOM - Access (workaround)</h1>
+    <p>
+      This demo uses
+      <a
+        href="https://caniuse.com/#feat=mdn-javascript_classes_private_class_fields"
+        >Private class fields</a
+      >
+      and will only work on Chrome & Opera.
+    </p>
+    <demo-closed></demo-closed>
+    <p class="error error-closed"></p>
+  </body>
+</html>
