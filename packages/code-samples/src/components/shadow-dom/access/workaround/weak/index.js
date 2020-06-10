@@ -6,8 +6,8 @@ HTMLElement.prototype.attachShadow = function () {
 };
 //#endregion workaround
 
-//#region el-in-iife
-(function () {
+//#region el-in-block
+{
   const shadows = new WeakMap();
   class ClosedComponent extends HTMLElement {
     //#region closed-constructor
@@ -35,8 +35,8 @@ HTMLElement.prototype.attachShadow = function () {
   }
 
   customElements.define("demo-closed", ClosedComponent);
-})();
-//#endregion el-in-iife
+}
+//#endregion el-in-block
 
 //#region add-long-text
 const closedCpt = document.querySelector("demo-closed");
