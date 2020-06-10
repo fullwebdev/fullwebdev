@@ -42,6 +42,10 @@
    - workaround to closed mode
      - [using iife](components/shadow-dom/access/workaround/iife/index.html)
      - [using a private field](components/shadow-dom/access/workaround/private-field/index.html)
+   - style
+     - [host](components/shadow-dom/style/host/index.html)
+     - [context](components/shadow-dom/style/context/index.html)
+     - [CSS Custom Properties](components/shadow-dom/style/custom-props/index.html)
 
 ### Routing
 

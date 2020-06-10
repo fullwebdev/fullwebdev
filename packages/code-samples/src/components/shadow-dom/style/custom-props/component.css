@@ -1,0 +1,25 @@
+/* #region border-color */
+:host {
+  border: 1px solid var(--random-text-border-color, black);
+}
+/* #endregion border-color */
+
+/* #region text-color */
+:host {
+  color: var(--random-text-color, gray);
+}
+/* #endregion text-color */
+
+/* #region span-color */
+span {
+  color: var(--random-text-color, yellow);
+}
+/* #endregion span-color */
+
+:host {
+  padding: 1rem;
+}
+
+:host(.center) {
+  text-align: center;
+}

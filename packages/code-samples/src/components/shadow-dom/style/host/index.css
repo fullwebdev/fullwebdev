@@ -1,0 +1,17 @@
+/* #region body */
+body {
+  color: red;
+}
+/* #endregion body */
+
+main {
+  padding: 1rem;
+}
+
+/* #region in-main */
+main > * {
+  display: block;
+  margin: 1rem 0;
+  color: black;
+}
+/* #endregion in-main */
