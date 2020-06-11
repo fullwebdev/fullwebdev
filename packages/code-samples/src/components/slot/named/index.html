@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Shadow DOM - composition</title>
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <h1>Shadow DOM - composition</h1>
+    <!-- #region simple -->
+    <demo-box>
+      <span slot="content">Lorem Ipsum</span>
+      <span slot="title">Hello</span>
+    </demo-box>
+    <!-- #endregion simple -->
+    <!-- #region multiple -->
+    <demo-box>
+      <p>Another text.</p>
+      <span slot="content">Lorem Ipsum</span>
+      <span slot="title">Good bye</span>
+      <span slot="content">dolor sit amet</span>
+    </demo-box>
+    <!-- #endregion multiple -->
+  </body>
+</html>

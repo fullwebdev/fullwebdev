@@ -49,6 +49,9 @@
 3. Template
    - [basics](components/template/basics/index.html)
    - [programmatic](components/template/prog/index.html)
+4. Composition
+   - [basics](components/slot/basics/index.html)
+   - [named slots](components/slot/named/index.html)
 
 ### Routing
 

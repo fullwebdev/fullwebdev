@@ -1,0 +1,19 @@
+<demo-box>
+  #shadow-dom
+  <style>
+    :host {
+      border: 1px solid
+        var(--random-text-border-color, black);
+      display: block;
+      padding: 1rem;
+    }
+  </style>
+  <h1>Hello</h1>
+  <p>
+    <slot>
+      <span>Lorem Ipsum</span>
+    </slot>
+  </p>
+
+  <span>Lorem Ipsum</span>
+</demo-box>

@@ -13,5 +13,16 @@
   <body>
     <h1>HTML Template - basics</h1>
     <random-lorem-ipsum></random-lorem-ipsum>
+    <template id="random-lorem-ipsum-template">
+      <style>
+        :host {
+          border: 1px solid
+            var(--random-text-border-color, black);
+          display: block;
+          padding: 1rem;
+        }
+      </style>
+      <span class="random-text"></span>
+    </template>
   </body>
 </html>
