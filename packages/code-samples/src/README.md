@@ -46,6 +46,9 @@
      - [host](components/shadow-dom/style/host/index.html)
      - [context](components/shadow-dom/style/context/index.html)
      - [CSS Custom Properties](components/shadow-dom/style/custom-props/index.html)
+3. Template
+   - [basics](components/template/basics/index.html)
+   - [programmatic](components/template/prog/index.html)
 
 ### Routing
 
