@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Custom Element - attributes & props</title>
+    <!-- #region scripts -->
+    <script src="pre.js"></script>
+    <script defer src="random-text.component.js"></script>
+    <script defer src="index.js"></script>
+    <!-- #endregion scripts -->
+    <style>
+      body {
+        text-align: center;
+      }
+      main {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      .interactions {
+        display: flex;
+        flex-direction: column;
+      }
+      .interactions > * {
+        margin: 0.5rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Custom Element - attributes & props</h1>
+    <p>
+      This demo use the new "<a
+        href="https://github.com/tc39/proposal-private-methods"
+        >Private methods and getter/setters for JavaScript
+        classes</a
+      >" syntaxe, which is only supported by
+      <a
+        href="https://chromestatus.com/feature/5700509656678400"
+        >Chrome 84+</a
+      >.
+    </p>
+    <main>
+      <!-- #region random-text -->
+      <random-text length="100"></random-text>
+      <!-- #endregion random-text -->
+      <div class="interactions">
+        <!-- #region new-text-button -->
+        <button class="new-text-button">change text</button>
+        <!-- #endregion new-text-button -->
+        <!-- #region length -->
+        <label for="length">Length</label>
+        <input
+          type="number"
+          id="length-input"
+          min="-1"
+          name="length"
+          value=""
+        />
+        <!-- #endregion length -->
+      </div>
+    </main>
+  </body>
+</html>

@@ -36,6 +36,9 @@
    - [customized built-in](components/custom-elements/customized-buit-in/hello-world.html)
    - [conflict](components/custom-elements/conflict/conflict.html)
    - [names validity](components/custom-elements/names/index.html)
+   - attributes and properties
+     - [basics](components/custom-elements/attrs-and-props/basics/index.html)
+     - [attribute](components/custom-elements/attrs-and-props/attribute/index.html)
 2. Shadow DOM
    - [attach](components/shadow-dom/attach/index.html)
    - [open vs. closed](components/shadow-dom/access/bases/index.html)
