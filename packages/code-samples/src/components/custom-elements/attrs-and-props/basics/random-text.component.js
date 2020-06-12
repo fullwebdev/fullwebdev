@@ -37,8 +37,6 @@
 
       const shadow = this.attachShadow({ mode: "open" });
       shadow.appendChild(template.content.cloneNode(true));
-
-      this.render();
     }
     //#endregion constructor
 
@@ -142,6 +140,12 @@
       return this.#possibleTexts[id];
     }
     //#endregion getRandomText
+
+    //#region connectedCallback
+    connectedCallback() {
+      this.render();
+    }
+    //#endregion connectedCallback
   }
 
   customElements.define("random-text", RandomTextComponent);

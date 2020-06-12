@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Custom Elements - Hello World</title>
+    <!-- #region scripts -->
+    <script src="before-define.js"></script>
+    <script defer type="module" src="index.js"></script>
+    <!-- #endregion scripts -->
+    <style>
+      .error {
+        color: red;
+      }
+      hello-world,
+      connected-hello-world,
+      good-hello-world {
+        display: inline-block;
+        padding: 1rem;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Custom Elements - Life Cycle</h1>
+    <h2>descriptive</h2>
+    <!-- #region descriptive -->
+    <hello-world></hello-world>
+    <!-- #endregion descriptive -->
+    <h2>createElement</h2>
+    <h3>Before Define</h3>
+    <section id="before-define"></section>
+    <h3>After Define</h3>
+    <h4>hello-world</h4>
+    <section id="after-define"></section>
+    <h4>connecte-hello-world</h4>
+    <section id="connected-after-define"></section>
+    <h4>good-hello-world</h4>
+    <section id="good-after-define"></section>
+  </body>
+</html>

@@ -39,6 +39,7 @@
    - attributes and properties
      - [basics](components/custom-elements/attrs-and-props/basics/index.html)
      - [attribute](components/custom-elements/attrs-and-props/attribute/index.html)
+   - [life cycle](components/custom-elements/life-cycle/index.html)
 2. Shadow DOM
    - [attach](components/shadow-dom/attach/index.html)
    - [open vs. closed](components/shadow-dom/access/bases/index.html)
