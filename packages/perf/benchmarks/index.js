@@ -1,7 +1,7 @@
-global.Benchmark = require('benchmark');
+global.Benchmark = require("benchmark");
 
 const file = process.argv[2];
-const path = `./${file}.js`
+const path = `./${file}.js`;
 
 if (!file || !fs.existsSync(path)) {
   console.log(`
@@ -14,4 +14,3 @@ Run the given benchmark file using node.
 } else {
   require(`./${process.argv[2]}.js`);
 }
-

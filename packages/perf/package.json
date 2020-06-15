@@ -5,8 +5,8 @@
   "description": "quick performance testing",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js $*",
-    "serve": "http-server"
+    "run": "node benchmarks/index.js $*",
+    "start": "http-server"
   },
   "author": "Noël Macé",
   "license": "MIT",
