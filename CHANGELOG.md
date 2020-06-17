@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/fullwebdev/fullwebdev/compare/v0.5.0...v0.6.0) (2020-06-17)
+
+### Features
+
+- **code-samples:** angularjs components ([4a9e7cc](https://github.com/fullwebdev/fullwebdev/commit/4a9e7cc521d3d839c1b6059766ef0d24d5103ef9))
+- **code-samples:** attach shadow DOM with style ([619f756](https://github.com/fullwebdev/fullwebdev/commit/619f75697956c8041595521f77a2de9d386292ba))
+- **code-samples:** custom-element function & empty class ([52a8bcc](https://github.com/fullwebdev/fullwebdev/commit/52a8bccf29c8ad9abbcca6f44d59e02de6525253))
+- **code-samples:** custom-elements fundamentals ([8fe9937](https://github.com/fullwebdev/fullwebdev/commit/8fe9937b063a5227723b9a12008974235d883947))
+- **code-samples:** custom-elements valid naming & polyfil ([d74d48b](https://github.com/fullwebdev/fullwebdev/commit/d74d48b71ddd17d63a17653b9bbddd306e75effd))
+- **code-samples:** html template ([cbea811](https://github.com/fullwebdev/fullwebdev/commit/cbea81150a6c828ed1e4ee9ab744fd46abd1fa6f))
+- **code-samples:** JQuery Plugin using Range Sample ([012fcf4](https://github.com/fullwebdev/fullwebdev/commit/012fcf4120b4ce6deab576f01cb1b8acfa249b5b))
+- **code-samples:** open and closed shadow dom modes ([8ecd5cd](https://github.com/fullwebdev/fullwebdev/commit/8ecd5cd52170a3d8f910fb1f5f448b84e0268cb7))
+- **code-samples:** react component hello world ([7a9cf3c](https://github.com/fullwebdev/fullwebdev/commit/7a9cf3c2a8e00beeaae9b0c32ec1e99b02f76aab))
+- **code-samples:** react component hello world with JSX ([d0a1987](https://github.com/fullwebdev/fullwebdev/commit/d0a1987c449ed83b037530349c9d63c16979b0c3))
+- **code-samples:** react stateful components ([348836f](https://github.com/fullwebdev/fullwebdev/commit/348836fea6ae02c25ba0e93ba8ca7f6f003e8439))
+- **code-samples:** shadow dom style ([6b62d06](https://github.com/fullwebdev/fullwebdev/commit/6b62d06afd5c8aad5bc41cc9e84b5fb3be2841ef))
+- **code-samples:** shared react hooks ([18d4784](https://github.com/fullwebdev/fullwebdev/commit/18d4784617ae090449be1048794d308406d552e7))
+- **code-samples:** slot ([230f72a](https://github.com/fullwebdev/fullwebdev/commit/230f72af61c146f8631a2270ba8c26f01bbe9147))
+- **code-samples:** vanilla & lit-html function-based component ([e538701](https://github.com/fullwebdev/fullwebdev/commit/e538701897e273b364f9e0d06102859594d9ad45))
+- **code-samples:** wc attributes & props ([c6b3177](https://github.com/fullwebdev/fullwebdev/commit/c6b3177fee1c38b2652c90c076c2aad5c9fff06d))
+- **code-samples:** wc lifecycle ([a137110](https://github.com/fullwebdev/fullwebdev/commit/a1371109514aa2dadc1b67e17349b0bd68b50e42))
+- **illustrations:** JQuery Range Slider ([976a89e](https://github.com/fullwebdev/fullwebdev/commit/976a89ef02ef32a75164b663583cacba59fa1a3c))
+
+### Bug Fixes
+
+- **code-samples:** use textContent instead of innerHTML ([f39afef](https://github.com/fullwebdev/fullwebdev/commit/f39afef515e9ad5089b4e3425a714304097f9767))
+- copyright ([6fd4151](https://github.com/fullwebdev/fullwebdev/commit/6fd4151b440736ed0b3acc70aaeb1283e6a4fe6d))
+
 ## [0.5.0](https://github.com/fullwebdev/fullwebdev/compare/v0.5.0-beta.4...v0.5.0) (2020-05-27)
 
 ### Features
