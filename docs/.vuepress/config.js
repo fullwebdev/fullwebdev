@@ -1,3 +1,5 @@
+const path = require("path");
+
 const { sidebar: materialSidebarFr } = require("vuepress-bar")(
   `${__dirname}/../fr/material/`,
   {
@@ -27,6 +29,12 @@ module.exports = {
       description: "Une approche transversale du développement Web",
     },
   },
+  additionalPages: [
+    // {
+    //   path: '/libraries/:name',
+    //   filePath: path.resolve(__dirname, 'components/LibraryDetails.vue')
+    // }
+  ],
   themeConfig: {
     logo: "/favicon/icon-384x384.png",
     displayAllHeaders: false,
