@@ -1,4 +1,4 @@
-import LibraryDetails from "./theme/views/LibraryDetails.vue";
+import InventoryEntry from "./views/InventoryEntry.vue";
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
@@ -8,9 +8,9 @@ export default ({
 }) => {
   router.addRoutes([
     {
-      name: "libraryDetails",
-      path: "/libraries/:name",
-      component: LibraryDetails,
+      name: "inventoryEntry",
+      path: "/inventory/:name",
+      component: InventoryEntry,
     },
   ]);
 };
