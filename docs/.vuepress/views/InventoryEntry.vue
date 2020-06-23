@@ -133,7 +133,9 @@ export default {
 
       try {
         const npmRes = await fetch(
-          `https://api.npms.io/v2/package/${this.$route.params.name}`
+          `https://api.npms.io/v2/package/${encodeURIComponent(
+            this.$route.params.name
+          )}`
         );
         const npmData = await npmRes.json();
 
