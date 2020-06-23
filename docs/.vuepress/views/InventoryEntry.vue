@@ -331,7 +331,7 @@ export default {
             if (sizeData.gzip / 1024 < 4) {
               this.isMicro = true;
             }
-            let dlTime = Math.round((sizeData.gzip / (250 * 1024)) * 1000);
+            let dlTime = Math.round((sizeData.gzip / (30 * 1024)) * 1000);
             if (dlTime > 999) {
               dlTime = `${Math.round(dlTime * 100) / 100}s`;
             } else {
