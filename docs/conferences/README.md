@@ -1,6 +1,6 @@
 # Conferences & Events
 
-## WoF Show (v2.0)
+## Web on FIRE (v2.0)
 
 > The F.I.R.E. safety kit for everyone!\
 > Learn the best new capabilities of the modern web in one shot without burning out!
@@ -88,7 +88,7 @@ Conference (30-50min)\
 
 :man_teacher: [slides](https://devfesttls19.wof.show/) - :film_projector: [video (:fr: french)](https://youtu.be/-d_Ka7OE4Xk)
 
-## WoF Show (v1.0)
+## Web on FIRE (v1.0)
 
 **The Web is on FIRE!**
 

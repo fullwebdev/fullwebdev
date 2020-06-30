@@ -1,6 +1,14 @@
 # Conférences & Évènements
 
-## WoF Show (v2.0)
+## En cours...
+
+Pages de présentation de mes possibles futures conférences :
+
+- [Web on FIRE II : reviving the flame](wof-v3.html)
+- [Le Web dont vous êtes le héros](web-hero.html)
+- [Brace yourself, the Vanilla Web is coming !](VanillaWeb.html)
+
+## Web on FIRE (v2.0)
 
 > Toutes les dernières nouveautés de la Web Platform, leurs apports niveau UX, et des cas concret !\
 > En un talk !
@@ -77,7 +85,7 @@ Deep Dive (2h)
 ::: details
 Dans un monde de saveurs complexes et sophistiquées, la guerre du toping fait rage à Web-steros ! Face au champs de bataille, les pronostiques vont bon train pour savoir qui l’emportera entre le crunchy Angulaire, le fondant Reactifs et le décoratif Vue. Durant ce temps, loin de ces vicissitudes, la petite saveur basique vanille avance encore et toujours vers son destin. S’agirait-il du héro de la légende, susceptible de renverser le destin de ce monde sans heurts ?
 
-Sache, voyageur, qu’elle est déjà passée par nos contrées. Viens, et écoute son histoire. Laisse moi te raconter comment elle nous a permis de renverser notre vieux roi, et tu saura enfin ce qui se prépare pour ton royaume.
+Sache, voyageur, qu’elle est déjà passée par nos contrées. Viens, et écoute son histoire. Laisse-moi te raconter comment elle nous a permis de renverser notre vieux roi, et tu sauras enfin ce qui se prépare pour ton royaume.
 :::
 
 ### :microphone: [Paris Open Source Summit](https://2019.opensourcesummit.paris/)
@@ -94,7 +102,7 @@ Conférence (30-50min)\
 
 :man_teacher: [slides](https://devfesttls19.wof.show/) - :film_projector: [vidéo](https://youtu.be/-d_Ka7OE4Xk)
 
-## WoF Show (v1.0)
+## Web on FIRE (v1.0)
 
 **The Web is on FIRE!**
 
