@@ -1,6 +1,6 @@
 {
   "name": "@fullwebdev/code-samples",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "private": true,
   "scripts": {
     "start": "concurrently npm:watch:index npm:serve",

@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/fullwebdev/fullwebdev/compare/v0.6.0...v0.7.0) (2020-07-01)
+
+### Features
+
+- **docs:** inventory bundle size & markers ([9fa1ae1](https://github.com/fullwebdev/fullwebdev/commit/9fa1ae1fe53bd700a718225057d72e98a4c8b4b1))
+- **docs:** new fr talk abstracts ([68c5ff3](https://github.com/fullwebdev/fullwebdev/commit/68c5ff3c4698d4f8d02a313129305a553517eeb4))
+- **docs:** tooling inventory ([782f5ae](https://github.com/fullwebdev/fullwebdev/commit/782f5ae089d122c1beecf7b4d863c09d3443b6d0))
+
+### Bug Fixes
+
+- **docs:** inventory item bundle dl time ([9b80bad](https://github.com/fullwebdev/fullwebdev/commit/9b80bad88f62f1ec194d94257ed097d80975e519))
+- **docs:** scoped packages in inventory ([6acf65b](https://github.com/fullwebdev/fullwebdev/commit/6acf65b1c3647bb34ea9b82419a20cbd0106bf7b))
+
 ## [0.6.0](https://github.com/fullwebdev/fullwebdev/compare/v0.5.0...v0.6.0) (2020-06-17)
 
 ### Features
