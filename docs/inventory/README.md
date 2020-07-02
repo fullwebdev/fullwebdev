@@ -72,6 +72,7 @@ Includes DOM Manipulation & templating.
 | [MobX](./mobx)            | 60         |
 | [NgRX](./%40ngrx%2Fstore) | 48         |
 | [beedle](./beedle)        | 15         |
+| [lit-up](./lit-up)        | 5          | :zap: up-to-date microlib |
 
 ### Reactive programming
 
@@ -118,28 +119,30 @@ Includes DOM Manipulation & templating.
 
 May include some multi-purpose libraries which doesn't define themselves as "frameworks".
 
-| name                                                                     | popularity | status                                                                                                       |
-| ------------------------------------------------------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------ |
-| [Vue](./vue)                                                             | 84         |                                                                                                              |
-| [Angular](./%40angular%2Fcore)                                           | 79         |                                                                                                              |
-| [AngularJS](./angular)                                                   | 66         | :stop_sign: deprecated in favor of Angular                                                                   |
-| [Next.js](./next)                                                        | 63         |                                                                                                              |
-| [backbone](./backbone)                                                   | 61         | :wavy_dash: low maintenance                                                                                  |
-| [Nuxt.js](./nuxt)                                                        | 52         |                                                                                                              |
-| [Polymer](./%40polymer%2Fpolymer)                                        | 52         | :stop_sign: [deprecated in favor of LitElement](https://www.polymer-project.org/blog/2018-05-02-roadmap-faq) |
-| [Ionic](./%40ionic%2Fcore)                                               | 49         |                                                                                                              |
-| [knockout](./knockout)                                                   | 43         |                                                                                                              |
-| [mithril](./mithril)                                                     | 40         |                                                                                                              |
-| [ember](./ember-cli)                                                     | 39         |                                                                                                              |
-| [Flutter Web](https://flutter.dev/docs/get-started/flutter-for/web-devs) | NA         |                                                                                                              |
-| [Meteor](https://www.meteor.com/)                                        | NA         |                                                                                                              |
-| [riot](./riot)                                                           | 36         |                                                                                                              |
-| [choo](./choo)                                                           | 28         |                                                                                                              |
-| [aurelia](./aurelia)                                                     | 18         |                                                                                                              |
-| [apprun](./apprun)                                                       | 17         |                                                                                                              |
-| [bobril](./bobril)                                                       | 16         |                                                                                                              |
-| [doz](./doz)                                                             | 7          |                                                                                                              |
-| [nanochoo](./nanochoo)                                                   | 6          | :x: unmaintained                                                                                             |
+<!-- prettier-ignore -->
+| name                              | popularity | status                                                                                                       |
+| --------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------ |
+| [Vue](./vue)                      | 84         |                                                                                                              |
+| [Angular](./%40angular%2Fcore)    | 79         |                                                                                                              |
+| [AngularJS](./angular)            | 66         | :stop_sign: deprecated in favor of Angular                                                                   |
+| [Next.js](./next)                 | 63         |                                                                                                              |
+| [backbone](./backbone)            | 61         | :wavy_dash: low maintenance                                                                                  |
+| [Nuxt.js](./nuxt)                 | 52         |                                                                                                              |
+| [Polymer](./%40polymer%2Fpolymer) | 52         | :stop_sign: [deprecated in favor of LitElement](https://www.polymer-project.org/blog/2018-05-02-roadmap-faq) |
+| [Ionic](./%40ionic%2Fcore)        | 49         |                                                                                                              |
+| [knockout](./knockout)            | 43         |                                                                                                              |
+| [mithril](./mithril)              | 40         |                                                                                                              |
+| [ember](./ember-cli)              | 39         |                                                                                                              |
+| [Mavo](https://mavo.io/)          | NA         |                                                                                                              |
+| [Flutter Web](https://flutter.dev/docs/get-started/flutter-for/web-devs) | NA |                                                                               |
+| [Meteor](https://www.meteor.com/) | NA         |                                                                                                              |
+| [riot](./riot)                    | 36         |                                                                                                              |
+| [choo](./choo)                    | 28         |                                                                                                              |
+| [aurelia](./aurelia)              | 18         |                                                                                                              |
+| [apprun](./apprun)                | 17         |                                                                                                              |
+| [bobril](./bobril)                | 16         |                                                                                                              |
+| [doz](./doz)                      | 7          |                                                                                                              |
+| [nanochoo](./nanochoo)            | 6          | :x: unmaintained                                                                                             |
 
 ## Static Site Generation
 
