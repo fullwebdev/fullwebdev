@@ -77,3 +77,10 @@
 1. Navigation
    - [`onclick` callback](minimal-spa/7-navigation/1-callback)
    - [global handling](minimal-spa/7-navigation/2-global)
+
+### Rendering
+
+#### Limitations
+
+1. Network
+   - [scripts](rendering/limitations/network/scripts/)
