@@ -17,16 +17,15 @@
 
 ## About
 
-> :construction: WIP
+This website and the associated contents are currently under development.
+
+If you want to be informed of the latest evolutions, subscribe to (i.e. "watch") this project's releases 
+and follow me on Twitter.
+
+Contributions are very welcomed too, so do not hesitate to open an issue and to fork this repository and send a Pull-Request.
 
 ## License
 
 © Copyright 2020 [Noël Macé](mailto:contact@noelmace.com)
 
-### Docs
-
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Except as otherwise noted, all documentation is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-
-### Code
-
-Except as otherwise notes, all code (including code samples) is licensed under a [MIT license](./LICENSE).
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /> Except as otherwise noted, the content of this project is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>, and programming source code (including code samples) is licensed under the [MIT license](./LICENSE).
