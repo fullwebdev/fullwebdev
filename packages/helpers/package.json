@@ -1,0 +1,38 @@
+{
+  "name": "@fullwebdev/helpers",
+  "version": "0.1.0-alpha.1",
+  "description": "A library with helpers functions for Modern Web Apps development",
+  "main": "index.js",
+  "module": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "validate-types": "tsc",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fullwebdev/fullwebdev.git",
+    "directory": "packages/helpers"
+  },
+  "author": {
+    "name": "Noël Macé",
+    "url": "https://noelmace.com"
+  },
+  "files": [
+    "*.d.ts",
+    "*.js",
+    "src"
+  ],
+  "keywords": [
+    "utils",
+    "helpers"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fullwebdev/fullwebdev/issues"
+  },
+  "homepage": "https://github.com/fullwebdev/fullwebdev#readme",
+  "devDependencies": {
+    "typescript": "^3.9.6"
+  }
+}

@@ -4,7 +4,17 @@ module.exports = {
     "scope-enum": [
       2,
       "always",
-      ["docs", "code-samples", "codelabs", "data-driven-pwa", "illustrations", "livre-fr", "perf", "reveal"]
-    ]
-  }
+      [
+        "docs",
+        "code-samples",
+        "codelabs",
+        "data-driven-pwa",
+        "illustrations",
+        "livre-fr",
+        "perf",
+        "reveal",
+        "helpers",
+      ],
+    ],
+  },
 };
