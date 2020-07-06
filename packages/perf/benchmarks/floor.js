@@ -1,18 +1,14 @@
-const suite = new Benchmark.Suite();
+export function init() {
+  const input = 5.9;
+  return { input };
+}
 
-const input = 5.9;
-
-suite
-  .add("double Bitwise not", function () {
-    ~~input;
-  })
-  .add("Math.floor", function () {
-    Math.floor(input);
-  })
-  .on("cycle", function (event) {
-    console.log(String(event.target));
-  })
-  .on("complete", function () {
-    console.log("Fastest is " + this.filter("fastest").map("name"));
-  })
-  .run({ async: true });
+// prettier-ignore
+export const tests = {
+doubleBitwiseNot: function ({ input }) {
+  ~~input;
+},
+mathFloor: function ({ input }) {
+  Math.floor(input);
+},
+};

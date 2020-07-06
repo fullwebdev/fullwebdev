@@ -4,32 +4,192 @@
   <head>
     <meta charset="utf-8" />
 
-    <title>Devcards - Flashcards 4 Devs</title>
-    <meta name="description" content="Devcards - Flashcards for Developers" />
+    <title>basic benchmarks</title>
+    <meta name="description" content="basic benchmarks" />
     <meta name="author" content="Noël Macé" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css"
+    />
+    <style>
+      html {
+        font-size: 14px;
+        font-family: Roboto, "Helvetica Neue", sans-serif;
+      }
+      header {
+        text-align: center;
+      }
+      main {
+        max-width: 720px;
+        text-align: center;
+        margin: 0 auto;
+      }
+      table {
+        border-collapse: collapse;
+        margin: 1rem auto;
+      }
+      th {
+        font-size: 12px;
+        color: #fff;
+        line-height: 1.4;
+        text-transform: uppercase;
+        background-color: #36304a;
+        text-align: center;
+      }
+      th,
+      td {
+        padding: 1rem;
+        min-width: 10rem;
+      }
+      td {
+        border: solid #36304a 1px;
+        text-align: left;
+      }
+      td.code-cell {
+        padding: 0;
+        font-size: 15px;
+      }
+      pre {
+        margin: 0;
+        padding: 1rem !important;
+      }
+      code {
+        font-family: "Fira Code", monospace;
+      }
+      td.fastest {
+        background-color: #9cee82;
+      }
+      td.slowest {
+        background-color: #ff6347;
+      }
+    </style>
   </head>
 
   <body>
-    <select id="test-select">
-      <option value="">--Please choose a benchmark to run--</option>
-      <option value="floor">floor</option>
-      <option value="/browser/rendering/simple-create/benchmark"
-        >simple-create</option
-      >
-    </select>
-    <p>Open the console in order to see the result.</p>
+    <header>
+      <h1>Basic benchmarks</h1>
+      <select id="test-select">
+        <option value="">--Please choose a benchmark to run--</option>
+        <option value="floor">floor</option>
+        <option value="loop-small-array">loop on a small array</option>
+        <option value="loop-big-array">loop on a big array</option>
+        <option value="create-element">rendering (wrong test)</option>
+      </select>
+    </header>
+    <main>
+      <section>
+        <table>
+          <thead>
+            <tr>
+              <th>code</th>
+              <th>result</th>
+            </tr>
+          </thead>
+          <tbody id="cycles"></tbody>
+        </table>
+      </section>
+      <section id="complete"></section>
+    </main>
     <script src="../node_modules/lodash/lodash.js"></script>
     <script src="../node_modules/platform/platform.js"></script>
     <script src="../node_modules/benchmark/benchmark.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
     <script type="module">
-      document.getElementById("test-select").addEventListener("change", (e) => {
-        const value = e.target.value;
-        if (value) {
-          const file = `./${e.target.value}.js`;
-          console.log(`loading ${file} ...`);
-          import(file);
-        }
-      });
+      const cyclesEl = document.getElementById("cycles");
+      const completeEl = document.getElementById("complete");
+
+      const cycleRowTemplate = document.createElement("tr");
+      cycleRowTemplate.innerHTML = `<td class="code-cell"></td><td></td>`;
+
+      function createRow(fn, text) {
+        const row = cycleRowTemplate.cloneNode(true);
+        const code = codeTemplate.cloneNode(true);
+        code.firstChild.innerText = fn;
+        row.cells[0].appendChild(code);
+        hljs.highlightBlock(code);
+        row.cells[1].innerText = text;
+        return row;
+      }
+
+      const codeTemplate = document.createElement("pre");
+      codeTemplate.innerHTML = `<code class="js"></code>`;
+
+      const loading = document.createElement("tr");
+      loading.innerHTML = `<td colspan="3">loading...</td>`;
+
+      document
+        .getElementById("test-select")
+        .addEventListener("change", async (e) => {
+          e.preventDefault();
+          const value = e.target.value;
+
+          if (value) {
+            const suite = new Benchmark.Suite();
+
+            suite
+              .on("cycle", function (event) {
+                const row = cyclesEl.querySelector(
+                  `.test-${event.target.name}`
+                );
+                row.cells[1].innerText = `${Math.round(
+                  event.target.hz / 1000
+                )} MOps/sec ±${
+                  Math.round(event.target.stats.rme * 100) / 100
+                }%`;
+              })
+              .on("complete", function () {
+                this.filter("fastest")
+                  .map("name")
+                  .forEach((name) => {
+                    const row = cyclesEl.querySelector(`.test-${name}`);
+                    row.cells[1].classList.add("fastest");
+                  });
+                this.filter("slowest")
+                  .map("name")
+                  .forEach((name) => {
+                    const row = cyclesEl.querySelector(`.test-${name}`);
+                    row.cells[1].classList.add("slowest");
+                  });
+              });
+
+            cyclesEl.innerText = "";
+
+            loading.cells[0].innerText = "loading...";
+            cyclesEl.appendChild(loading);
+            completeEl.innerText = "";
+
+            const file = `./${e.target.value}.js`;
+
+            const { init, tests } = await import(file);
+
+            loading.cells[0].innerText = "running...";
+
+            let params = {};
+
+            if (init) {
+              const initRow = createRow(init, "SET UP METHOD");
+              cyclesEl.appendChild(initRow);
+              params = init();
+            }
+
+            Object.entries(tests).forEach(([key, testFn]) => {
+              suite.add(key, function () {
+                testFn(params);
+              });
+
+              const row = createRow(testFn, "pending...");
+              row.classList.add(`test-${key}`);
+              cyclesEl.appendChild(row);
+              loading.remove();
+            });
+
+            suite.run({ async: false });
+          }
+        });
     </script>
   </body>
 </html>

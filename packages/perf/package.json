@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "description": "quick performance testing",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "run": "node benchmarks/index.js $*",
+    "exec": "node benchmarks/index.js $*",
     "start": "http-server"
   },
   "author": "Noël Macé",
