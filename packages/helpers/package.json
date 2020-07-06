@@ -1,5 +1,5 @@
 {
-  "name": "@fullwebdev/helpers",
+  "name": "@fullweb/helpers",
   "version": "0.1.0-alpha.1",
   "description": "A library with helpers functions for Modern Web Apps development",
   "main": "index.js",
