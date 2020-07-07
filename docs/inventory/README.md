@@ -43,6 +43,7 @@ Includes DOM Manipulation & templating.
 | [surplus](./surplus)                         | 15         | :x: unmaintained                                         |
 | [domdiff](./domdiff)                         | 15         | :zap: up-to-date microlib                                |
 | [domvm](./domvm)                             | 14         | :wavy_dash: low maintenance                              |
+| [Dyo](./dyo)                                 | 13         |                                                          |
 | [uhtml](./uhtml)                             | 13         | :zap: up-to-date microlib                                |
 | [simulacra](./simulacra)                     | 13         | :wavy_dash: low maintenance                              |
 | [ivi](./ivi)                                 | 10         |                                                          |
@@ -52,8 +53,13 @@ Includes DOM Manipulation & templating.
 | [HyperAxe](./hyperaxe)                       | 7          | :x: unmaintained                                         |
 | [attodom](./attodom)                         | 5          |                                                          |
 | [stage0](./stage0)                           | 4          |                                                          |
+| [CRUI](./%40crui%2Fcore)                     | 4          | :wavy_dash: low maintenance                              |
 | [lite-html](./lite-html)                     | 4          | :x: unmaintained                                         |
+| [faster-dom](./faster-dom)                   | 8          | :wavy_dash: low maintenance                              |
+| [glasgow](./glasgow)                         | 4          | :wavy_dash: low maintenance                              |
 | [solid](./solid-js)                          | 3          |                                                          |
+| [fntags](./fntags)                           | 3          | :wavy_dash: low maintenance                              |
+| [Datum.js](./datum)                          | 2          | :x: unmaintained                                         |
 
 ### Routing
 
@@ -111,9 +117,11 @@ Includes DOM Manipulation & templating.
 | [svelte](./svelte?library=false)             | 48         |                             |
 | [stencil](./%40stencil%2Fcore?library=false) | 41         |                             |
 | [sapper](./sapper?library=false)             | 28         |                             |
+| [Etch](./etch)                               | 22         | :x: unmaintained            |
 | [hybrids](./hybrids)                         | 21         |                             |
 | [SkateJS](./skatejs)                         | 20         | :x: unmaintained            |
 | [Slim.js](./slim-js)                         | 16         | :wavy_dash: low maintenance |
+| [Heresy](./heresy)                           | 12         |                             |
 
 ## Frameworks
 
@@ -141,6 +149,7 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 | [aurelia](./aurelia)              | 18         |                                                                                                              |
 | [apprun](./apprun)                | 17         |                                                                                                              |
 | [bobril](./bobril)                | 16         |                                                                                                              |
+| [Dojo](./%40dojo%2Fcore)          | 15         | :x: unmaintained                                                                                             |
 | [doz](./doz)                      | 7          |                                                                                                              |
 | [nanochoo](./nanochoo)            | 6          | :x: unmaintained                                                                                             |
 
