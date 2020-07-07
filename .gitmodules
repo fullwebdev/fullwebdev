@@ -1,3 +1,6 @@
 [submodule "packages/livre-fr"]
 	path = packages/livre-fr
 	url = https://github.com/noelmace/livre-web-apps.git
+[submodule "packages/benchmark"]
+	path = packages/benchmark
+	url = https://@github.com/fullwebdev/benchmark.git
