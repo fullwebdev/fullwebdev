@@ -33,20 +33,26 @@ Includes DOM Manipulation & templating.
 | [htm](./htm)                                 | 32         | :zap: up-to-date microlib                                |
 | [alpine](./alpinejs)                         | 30         |                                                          |
 | [ractive](./ractive)                         | 30         |                                                          |
+| [nerv](./nervjs)                             | 30         |                                                          |
 | [redom](./redom)                             | 24         | :zap: up-to-date microlib                                |
 | [hyperhtml](./hyperhtml)                     | 24         |                                                          |
 | [nanohtml](./nanohtml)                       | 24         |                                                          |
+| [react-lite](./react-lite)                   | 19         | :x: unmaintained                                         |
+| [maquette](./maquette)                       | 18         | :zap: up-to-date microlib                                |
 | [lighterhtml](./lighterhtml)                 | 17         |                                                          |
 | [hyperscript-helpers](./hyperscript-helpers) | 17         |                                                          |
 | [val](./%40skatejs%2Fval)                    | 17         |                                                          |
 | [sinuous](./sinuous)                         | 16         | :zap: up-to-date microlib                                |
 | [surplus](./surplus)                         | 15         | :x: unmaintained                                         |
 | [domdiff](./domdiff)                         | 15         | :zap: up-to-date microlib                                |
+| [vidom](./vidom)                             | 14         | :wavy_dash: low maintenance                              |
 | [domvm](./domvm)                             | 14         | :wavy_dash: low maintenance                              |
 | [Dyo](./dyo)                                 | 13         |                                                          |
 | [uhtml](./uhtml)                             | 13         | :zap: up-to-date microlib                                |
 | [simulacra](./simulacra)                     | 13         | :wavy_dash: low maintenance                              |
+| [petit-dom](./petit-dom)                     | 12         | :wavy_dash: low maintenance                              |
 | [ivi](./ivi)                                 | 10         |                                                          |
+| [isotope](./%40isotope%2Fcore)               | 9          | :zap: up-to-date microlib                                |
 | [mikado](./mikado)                           | 8          | :wavy_dash: low maintenance                              |
 | [domc](./domc)                               | 8          | :x: unmaintained                                         |
 | [tiny-lit](./%40tiny-lit%2Fcore)             | 7          | :zap: up-to-date microlib                                |
@@ -59,7 +65,7 @@ Includes DOM Manipulation & templating.
 | [glasgow](./glasgow)                         | 4          | :wavy_dash: low maintenance                              |
 | [solid](./solid-js)                          | 3          |                                                          |
 | [fntags](./fntags)                           | 3          | :wavy_dash: low maintenance                              |
-| [Datum.js](./datum)                          | 2          | :x: unmaintained                                         |
+| [Datum.js](./Datum)                          | 3          |                                                          |
 
 ### Routing
 
@@ -82,11 +88,12 @@ Includes DOM Manipulation & templating.
 
 ### Reactive programming
 
-| name                  | popularity | status |
-| --------------------- | ---------- | ------ |
-| [RxJS](./rxjs)        | 92         |        |
-| [Bacon.js](./baconjs) | 35         |        |
-| [Kefir](./kefir)      | 31         |        |
+| name                  | popularity | status           |
+| --------------------- | ---------- | ---------------- |
+| [RxJS](./rxjs)        | 92         |                  |
+| [Bacon.js](./baconjs) | 35         |                  |
+| [Kefir](./kefir)      | 31         |                  |
+| [s-js](./s-js)        | 16         | :x: unmaintained |
 
 ### Styling
 
@@ -103,11 +110,11 @@ Includes DOM Manipulation & templating.
 
 | name                                      | popularity | status                    | details                                               |
 | ----------------------------------------- | ---------- | ------------------------- | ----------------------------------------------------- |
+| [three.js](./three)                       | 63         |                           | 3D library                                            |
 | [Modernizr](./modernizr)                  | 24         |                           | detects HTML5 and CSS3 features in the user’s browser |
 | [haunted](./haunted)                      | 22         |                           | Hooks for web components                              |
 | [lit-helpers](./%40open-wc%2Flit-helpers) | 20         | :zap: up-to-date microlib | Helpers and utils for lit-html and lit-element        |
 | [neverland](./neverland)                  | 9          |                           | React like Hooks for hyperHTML                        |
-| [three.js](./three)                       | 63         |                           | 3D library                                            |
 
 ## Component-Based Development
 
@@ -122,36 +129,46 @@ Includes DOM Manipulation & templating.
 | [SkateJS](./skatejs)                         | 20         | :x: unmaintained            |
 | [Slim.js](./slim-js)                         | 16         | :wavy_dash: low maintenance |
 | [Heresy](./heresy)                           | 12         |                             |
+| [mimbl](./mimbl)                             | 6          |                             |
 
 ## Frameworks
 
 May include some multi-purpose libraries which doesn't define themselves as "frameworks".
 
 <!-- prettier-ignore -->
-| name                              | popularity | status                                                                                                       |
-| --------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------ |
-| [Vue](./vue)                      | 84         |                                                                                                              |
-| [Angular](./%40angular%2Fcore)    | 79         |                                                                                                              |
-| [AngularJS](./angular)            | 66         | :stop_sign: deprecated in favor of Angular                                                                   |
-| [Next.js](./next)                 | 63         |                                                                                                              |
-| [backbone](./backbone)            | 61         | :wavy_dash: low maintenance                                                                                  |
-| [Nuxt.js](./nuxt)                 | 52         |                                                                                                              |
-| [Polymer](./%40polymer%2Fpolymer) | 52         | :stop_sign: [deprecated in favor of LitElement](https://www.polymer-project.org/blog/2018-05-02-roadmap-faq) |
-| [Ionic](./%40ionic%2Fcore)        | 49         |                                                                                                              |
-| [knockout](./knockout)            | 43         |                                                                                                              |
-| [mithril](./mithril)              | 40         |                                                                                                              |
-| [ember](./ember-cli)              | 39         |                                                                                                              |
-| [Mavo](https://mavo.io/)          | NA         |                                                                                                              |
-| [Flutter Web](https://flutter.dev/docs/get-started/flutter-for/web-devs) | NA |                                                                               |
-| [Meteor](https://www.meteor.com/) | NA         |                                                                                                              |
-| [riot](./riot)                    | 36         |                                                                                                              |
-| [choo](./choo)                    | 28         |                                                                                                              |
-| [aurelia](./aurelia)              | 18         |                                                                                                              |
-| [apprun](./apprun)                | 17         |                                                                                                              |
-| [bobril](./bobril)                | 16         |                                                                                                              |
-| [Dojo](./%40dojo%2Fcore)          | 15         | :x: unmaintained                                                                                             |
-| [doz](./doz)                      | 7          |                                                                                                              |
-| [nanochoo](./nanochoo)            | 6          | :x: unmaintained                                                                                             |
+| name                                | popularity | status                                     |
+| ----------------------------------- | ---------- | ------------------------------------------ |
+| [Vue](./vue)                        | 84         |                                            |
+| [Angular](./%40angular%2Fcore)      | 79         |                                            |
+| [AngularJS](./angular)              | 66         | :stop_sign: deprecated in favor of Angular |
+| [Next.js](./next)                   | 63         |                                            |
+| [backbone](./backbone)              | 61         | :wavy_dash: low maintenance                |
+| [Nuxt.js](./nuxt)                   | 52         |                                            |
+| [Polymer](./%40polymer%2Fpolymer)   | 52         | :stop_sign: [deprecated in favor of LitElement](https://www.polymer-project.org/blog/2018-05-02-roadmap-faq) |
+| [Ionic](./%40ionic%2Fcore)          | 49         |                                            |
+| [knockout](./knockout)              | 43         |                                            |
+| [mithril](./mithril)                | 40         |                                            |
+| [ember](./ember-cli)                | 39         |                                            |
+| [Mavo](https://mavo.io/)            | NA         |                                            |
+| [Flutter Web](https://flutter.dev/docs/get-started/flutter-for/web-devs) | NA |               |
+| [Meteor](https://www.meteor.com/)   | NA         |                                            |
+| [riot](./riot)                      | 36         |                                            |
+| [Yew](https://yew.rs)               | NA         |                                            |
+| [Marionette](./backbone.marionette) | 35         |                                            |
+| [rax](./rax)                        | 31         |                                            |
+| [choo](./choo)                      | 28         |                                            |
+| [san](./san)                        | 24         |                                            |
+| [aurelia](./aurelia)                | 18         |                                            |
+| [Dojo](./%40dojo%framework)         | 18         |                                            |
+| [apprun](./apprun)                  | 17         |                                            |
+| [bobril](./bobril)                  | 16         |                                            |
+| [hyperdom](./hyperdom)              | 11         | :wavy_dash: low maintenance                |
+| [doz](./doz)                        | 7          |                                            |
+| [plastiq](./plastiq)                | 6          | :stop_sign: deprecated in favor of Hyperdom |
+| [nanochoo](./nanochoo)              | 6          | :x: unmaintained                           |
+| [scarletsframe](./scarletsframe)    | 5          |                                            |
+| [hyperoop](./hyperoop)              | 4          | :wavy_dash: low maintenance                |
+| [sifrr](./%40sifrr%2Fdev)           | 3          |                                            |
 
 ## Static Site Generation
 
@@ -173,6 +190,7 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 | -------------------------------------------------------------------------- | ---------- | ------ |
 | [typescript](./typescript?library=false)                                   | 67         |
 | [Elm](https://elm-lang.org)                                                | NA         |
+| [Clojure / ClojureScript](https://clojurescript.org/)                      | NA         |
 | [marko](./marko?library=false)                                             | 36         |
 | [Reason](https://reasonml.github.io) _(via [BuncleScript](./bs-platform))_ | 34         |
 | [imba](./imba?library=false)                                               | 26         |
@@ -214,10 +232,11 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 
 ### Misc
 
-| name                                                         | popularity | details                                                 |
-| ------------------------------------------------------------ | ---------- | ------------------------------------------------------- |
-| [es-dev-server](./es-dev-server?library=false)               | 25         | Development server for modern web apps                  |
-| [browserslist](https://github.com/browserslist/browserslist) | NA         | Share target browsers between different front-end tools |
+| name                                                         | popularity | details                                                   |
+| ------------------------------------------------------------ | ---------- | --------------------------------------------------------- |
+| [es-dev-server](./es-dev-server?library=false)               | 25         | Development server for modern web apps                    |
+| [rawact](./babel-plugin-rawact)                              | 18         | Compiles React.js components into native DOM instructions |
+| [browserslist](https://github.com/browserslist/browserslist) | NA         | Share target browsers between different front-end tools   |
 
 ## Further reading
 
