@@ -4,6 +4,8 @@ Inventory of WebDev tools, libraries and frameworks.
 
 Entries are orderred by popularity, based on npmjs.org download statistics.
 
+Open the _"details"_ containers for unmaintained projects with low popularity.
+
 ::: tip
 Is your favorite tool or library missing?
 
@@ -37,35 +39,42 @@ Includes DOM Manipulation & templating.
 | [redom](./redom)                             | 24         | :zap: up-to-date microlib                                |
 | [hyperhtml](./hyperhtml)                     | 24         |                                                          |
 | [nanohtml](./nanohtml)                       | 24         |                                                          |
-| [react-lite](./react-lite)                   | 19         | :x: unmaintained                                         |
 | [maquette](./maquette)                       | 18         | :zap: up-to-date microlib                                |
 | [lighterhtml](./lighterhtml)                 | 17         |                                                          |
 | [hyperscript-helpers](./hyperscript-helpers) | 17         |                                                          |
 | [val](./%40skatejs%2Fval)                    | 17         |                                                          |
 | [sinuous](./sinuous)                         | 16         | :zap: up-to-date microlib                                |
-| [surplus](./surplus)                         | 15         | :x: unmaintained                                         |
 | [domdiff](./domdiff)                         | 15         | :zap: up-to-date microlib                                |
-| [vidom](./vidom)                             | 14         | :wavy_dash: low maintenance                              |
-| [domvm](./domvm)                             | 14         | :wavy_dash: low maintenance                              |
 | [Dyo](./dyo)                                 | 13         |                                                          |
 | [uhtml](./uhtml)                             | 13         | :zap: up-to-date microlib                                |
-| [simulacra](./simulacra)                     | 13         | :wavy_dash: low maintenance                              |
-| [petit-dom](./petit-dom)                     | 12         | :wavy_dash: low maintenance                              |
 | [ivi](./ivi)                                 | 10         |                                                          |
 | [isotope](./%40isotope%2Fcore)               | 9          | :zap: up-to-date microlib                                |
-| [mikado](./mikado)                           | 8          | :wavy_dash: low maintenance                              |
-| [domc](./domc)                               | 8          | :x: unmaintained                                         |
 | [tiny-lit](./%40tiny-lit%2Fcore)             | 7          | :zap: up-to-date microlib                                |
-| [HyperAxe](./hyperaxe)                       | 7          | :x: unmaintained                                         |
 | [attodom](./attodom)                         | 5          |                                                          |
 | [stage0](./stage0)                           | 4          |                                                          |
-| [CRUI](./%40crui%2Fcore)                     | 4          | :wavy_dash: low maintenance                              |
-| [lite-html](./lite-html)                     | 4          | :x: unmaintained                                         |
-| [faster-dom](./faster-dom)                   | 8          | :wavy_dash: low maintenance                              |
-| [glasgow](./glasgow)                         | 4          | :wavy_dash: low maintenance                              |
 | [solid](./solid-js)                          | 3          |                                                          |
-| [fntags](./fntags)                           | 3          | :wavy_dash: low maintenance                              |
 | [Datum.js](./Datum)                          | 3          |                                                          |
+
+::: details
+
+| name                       | popularity | status                      |
+| -------------------------- | ---------- | --------------------------- |
+| [react-lite](./react-lite) | 19         | :x: unmaintained            |
+| [surplus](./surplus)       | 15         | :x: unmaintained            |
+| [vidom](./vidom)           | 14         | :wavy_dash: low maintenance |
+| [domvm](./domvm)           | 14         | :wavy_dash: low maintenance |
+| [simulacra](./simulacra)   | 13         | :wavy_dash: low maintenance |
+| [petit-dom](./petit-dom)   | 12         | :wavy_dash: low maintenance |
+| [mikado](./mikado)         | 8          | :wavy_dash: low maintenance |
+| [domc](./domc)             | 8          | :x: unmaintained            |
+| [HyperAxe](./hyperaxe)     | 7          | :x: unmaintained            |
+| [CRUI](./%40crui%2Fcore)   | 4          | :wavy_dash: low maintenance |
+| [lite-html](./lite-html)   | 4          | :x: unmaintained            |
+| [faster-dom](./faster-dom) | 8          | :wavy_dash: low maintenance |
+| [glasgow](./glasgow)       | 4          | :wavy_dash: low maintenance |
+| [fntags](./fntags)         | 3          | :wavy_dash: low maintenance |
+
+:::
 
 ### Routing
 
@@ -118,18 +127,23 @@ Includes DOM Manipulation & templating.
 
 ## Component-Based Development
 
-| name                                         | popularity | status                      |
+| name                                         | popularity | status |
+| -------------------------------------------- | ---------- | ------ |
+| [lit-element](./lit-element)                 | 49         |        |
+| [svelte](./svelte?library=false)             | 48         |        |
+| [stencil](./%40stencil%2Fcore?library=false) | 41         |        |
+| [sapper](./sapper?library=false)             | 28         |        |
+| [hybrids](./hybrids)                         | 21         |        |
+| [Heresy](./heresy)                           | 12         |        |
+| [mimbl](./mimbl)                             | 6          |        |
+
+:::details
+| name | popularity | status |
 | -------------------------------------------- | ---------- | --------------------------- |
-| [lit-element](./lit-element)                 | 49         |                             |
-| [svelte](./svelte?library=false)             | 48         |                             |
-| [stencil](./%40stencil%2Fcore?library=false) | 41         |                             |
-| [sapper](./sapper?library=false)             | 28         |                             |
-| [Etch](./etch)                               | 22         | :x: unmaintained            |
-| [hybrids](./hybrids)                         | 21         |                             |
-| [SkateJS](./skatejs)                         | 20         | :x: unmaintained            |
-| [Slim.js](./slim-js)                         | 16         | :wavy_dash: low maintenance |
-| [Heresy](./heresy)                           | 12         |                             |
-| [mimbl](./mimbl)                             | 6          |                             |
+| [Etch](./etch) | 22 | :x: unmaintained |
+| [SkateJS](./skatejs) | 20 | :x: unmaintained |
+| [Slim.js](./slim-js) | 16 | :wavy_dash: low maintenance |
+:::
 
 ## Frameworks
 
@@ -162,13 +176,18 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 | [Dojo](./%40dojo%framework)         | 18         |                                            |
 | [apprun](./apprun)                  | 17         |                                            |
 | [bobril](./bobril)                  | 16         |                                            |
-| [hyperdom](./hyperdom)              | 11         | :wavy_dash: low maintenance                |
 | [doz](./doz)                        | 7          |                                            |
-| [plastiq](./plastiq)                | 6          | :stop_sign: deprecated in favor of Hyperdom |
-| [nanochoo](./nanochoo)              | 6          | :x: unmaintained                           |
 | [scarletsframe](./scarletsframe)    | 5          |                                            |
-| [hyperoop](./hyperoop)              | 4          | :wavy_dash: low maintenance                |
 | [sifrr](./%40sifrr%2Fdev)           | 3          |                                            |
+
+:::details
+| name | popularity | status |
+| ----------------------------------- | ---------- | ------------------------------------------ |
+| [hyperdom](./hyperdom) | 11 | :wavy_dash: low maintenance |
+| [plastiq](./plastiq) | 6 | :stop_sign: deprecated in favor of Hyperdom |
+| [nanochoo](./nanochoo) | 6 | :x: unmaintained |
+| [hyperoop](./hyperoop) | 4 | :wavy_dash: low maintenance |
+:::
 
 ## Static Site Generation
 
