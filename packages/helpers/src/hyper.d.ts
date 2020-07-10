@@ -7,9 +7,9 @@ export type ElDescriptor = [
   string,
   ElOptions,
   ElDescriptor[]?
-] | { partKey: string };
+];
 
-export interface FwdElement extends HTMLElement {
-  parts?: { [key:string] : string }
-  _childParts?: Map<string, Node>
+export interface TemplateInstance extends HTMLElement {
+  _partsCache?: Map<string, Node>
+  parts?: { [key : string]: string }
 }
