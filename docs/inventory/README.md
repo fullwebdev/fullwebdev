@@ -21,7 +21,7 @@ Go [edit this page](https://github.com/fullwebdev/fullwebdev/edit/master/docs/in
 
 ### Rendering
 
-Includes DOM Manipulation & templating.
+DOM Manipulation & templating. May also include some libraries requiring specific build tools.
 
 | name                                         | popularity | status                                                   |
 | -------------------------------------------- | ---------- | -------------------------------------------------------- |
@@ -39,6 +39,7 @@ Includes DOM Manipulation & templating.
 | [redom](./redom)                             | 24         | :zap: up-to-date microlib                                |
 | [hyperhtml](./hyperhtml)                     | 24         |                                                          |
 | [nanohtml](./nanohtml)                       | 24         |                                                          |
+| [moon](./moon)                               | 21         | :zap: up-to-date microlib                                |
 | [maquette](./maquette)                       | 18         | :zap: up-to-date microlib                                |
 | [lighterhtml](./lighterhtml)                 | 17         |                                                          |
 | [hyperscript-helpers](./hyperscript-helpers) | 17         |                                                          |
@@ -50,29 +51,31 @@ Includes DOM Manipulation & templating.
 | [ivi](./ivi)                                 | 10         |                                                          |
 | [isotope](./%40isotope%2Fcore)               | 9          | :zap: up-to-date microlib                                |
 | [tiny-lit](./%40tiny-lit%2Fcore)             | 7          | :zap: up-to-date microlib                                |
-| [attodom](./attodom)                         | 5          |                                                          |
+| [attodom](./attodom)                         | 5          | :zap: up-to-date microlib                                |
 | [stage0](./stage0)                           | 4          |                                                          |
 | [solid](./solid-js)                          | 3          |                                                          |
-| [Datum.js](./Datum)                          | 3          |                                                          |
 
 ::: details
 
-| name                       | popularity | status                      |
-| -------------------------- | ---------- | --------------------------- |
-| [react-lite](./react-lite) | 19         | :x: unmaintained            |
-| [surplus](./surplus)       | 15         | :x: unmaintained            |
-| [vidom](./vidom)           | 14         | :wavy_dash: low maintenance |
-| [domvm](./domvm)           | 14         | :wavy_dash: low maintenance |
-| [simulacra](./simulacra)   | 13         | :wavy_dash: low maintenance |
-| [petit-dom](./petit-dom)   | 12         | :wavy_dash: low maintenance |
-| [mikado](./mikado)         | 8          | :wavy_dash: low maintenance |
-| [domc](./domc)             | 8          | :x: unmaintained            |
-| [HyperAxe](./hyperaxe)     | 7          | :x: unmaintained            |
-| [CRUI](./%40crui%2Fcore)   | 4          | :wavy_dash: low maintenance |
-| [lite-html](./lite-html)   | 4          | :x: unmaintained            |
-| [faster-dom](./faster-dom) | 8          | :wavy_dash: low maintenance |
-| [glasgow](./glasgow)       | 4          | :wavy_dash: low maintenance |
-| [fntags](./fntags)         | 3          | :wavy_dash: low maintenance |
+| name                       | popularity | status                                                    |
+| -------------------------- | ---------- | --------------------------------------------------------- |
+| [react-lite](./react-lite) | 19         | :x: unmaintained                                          |
+| [surplus](./surplus)       | 15         | :x: unmaintained                                          |
+| [vidom](./vidom)           | 14         | :wavy_dash: low maintenance & :turtle: performance issues |
+| [domvm](./domvm)           | 14         | :wavy_dash: low maintenance                               |
+| [simulacra](./simulacra)   | 13         | :wavy_dash: low maintenance                               |
+| [petit-dom](./petit-dom)   | 12         | :wavy_dash: low maintenance                               |
+| [mikado](./mikado)         | 8          | :wavy_dash: low maintenance                               |
+| [domc](./domc)             | 8          | :x: unmaintained                                          |
+| [HyperAxe](./hyperaxe)     | 7          | :x: unmaintained                                          |
+| [ganic](./ganic)           | 6          | :turtle: performance issues                               |
+| [CRUI](./%40crui%2Fcore)   | 4          | :wavy_dash: low maintenance                               |
+| [lite-html](./lite-html)   | 4          | :x: unmaintained                                          |
+| [faster-dom](./faster-dom) | 8          | :wavy_dash: low maintenance                               |
+| [glasgow](./glasgow)       | 4          | :wavy_dash: low maintenance & :turtle: performance issues |
+| [fntags](./fntags)         | 3          | :wavy_dash: low maintenance & :turtle: performance issues |
+| [Datum.js](./Datum)        | 3          | :turtle: performance issues                               |
+| [literaljs](./literaljs)   | 1          | :wavy_dash: low maintenance & :turtle: performance issues |
 
 :::
 
@@ -117,13 +120,14 @@ Includes DOM Manipulation & templating.
 
 ### Misc
 
-| name                                      | popularity | status                    | details                                               |
-| ----------------------------------------- | ---------- | ------------------------- | ----------------------------------------------------- |
-| [three.js](./three)                       | 63         |                           | 3D library                                            |
-| [Modernizr](./modernizr)                  | 24         |                           | detects HTML5 and CSS3 features in the user’s browser |
-| [haunted](./haunted)                      | 22         |                           | Hooks for web components                              |
-| [lit-helpers](./%40open-wc%2Flit-helpers) | 20         | :zap: up-to-date microlib | Helpers and utils for lit-html and lit-element        |
-| [neverland](./neverland)                  | 9          |                           | React like Hooks for hyperHTML                        |
+| name                                      | popularity | status                      | details                                               |
+| ----------------------------------------- | ---------- | --------------------------- | ----------------------------------------------------- |
+| [three.js](./three)                       | 63         |                             | 3D library                                            |
+| [vuera](./vuera)                          | 27         | :wavy_dash: low maintenance | Use React in Vue and Vue in React                     |
+| [Modernizr](./modernizr)                  | 24         |                             | detects HTML5 and CSS3 features in the user’s browser |
+| [haunted](./haunted)                      | 22         |                             | Hooks for web components                              |
+| [lit-helpers](./%40open-wc%2Flit-helpers) | 20         | :zap: up-to-date microlib   | Helpers and utils for lit-html and lit-element        |
+| [neverland](./neverland)                  | 9          |                             | React like Hooks for hyperHTML                        |
 
 ## Component-Based Development
 
@@ -134,15 +138,17 @@ Includes DOM Manipulation & templating.
 | [stencil](./%40stencil%2Fcore?library=false) | 41         |        |
 | [sapper](./sapper?library=false)             | 28         |        |
 | [hybrids](./hybrids)                         | 21         |        |
-| [Heresy](./heresy)                           | 12         |        |
-| [mimbl](./mimbl)                             | 6          |        |
 
 :::details
-| name | popularity | status |
-| -------------------------------------------- | ---------- | --------------------------- |
-| [Etch](./etch) | 22 | :x: unmaintained |
-| [SkateJS](./skatejs) | 20 | :x: unmaintained |
-| [Slim.js](./slim-js) | 16 | :wavy_dash: low maintenance |
+
+| name                 | popularity | status                      |
+| -------------------- | ---------- | --------------------------- |
+| [Etch](./etch)       | 22         | :x: unmaintained            |
+| [SkateJS](./skatejs) | 20         | :x: unmaintained            |
+| [Slim.js](./slim-js) | 16         | :wavy_dash: low maintenance |
+| [Heresy](./heresy)   | 12         | :turtle: performance issues |
+| [mimbl](./mimbl)     | 6          | :turtle: performance issues |
+
 :::
 
 ## Frameworks
@@ -170,23 +176,27 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 | [Yew](https://yew.rs)               | NA         |                                            |
 | [Marionette](./backbone.marionette) | 35         |                                            |
 | [rax](./rax)                        | 31         |                                            |
+| [Cycle.js](./%40cycle%2Fdom)        | 30         |                                            |
 | [choo](./choo)                      | 28         |                                            |
 | [san](./san)                        | 24         |                                            |
 | [aurelia](./aurelia)                | 18         |                                            |
 | [Dojo](./%40dojo%framework)         | 18         |                                            |
 | [apprun](./apprun)                  | 17         |                                            |
 | [bobril](./bobril)                  | 16         |                                            |
-| [doz](./doz)                        | 7          |                                            |
 | [scarletsframe](./scarletsframe)    | 5          |                                            |
 | [sifrr](./%40sifrr%2Fdev)           | 3          |                                            |
 
 :::details
-| name | popularity | status |
-| ----------------------------------- | ---------- | ------------------------------------------ |
-| [hyperdom](./hyperdom) | 11 | :wavy_dash: low maintenance |
-| [plastiq](./plastiq) | 6 | :stop_sign: deprecated in favor of Hyperdom |
-| [nanochoo](./nanochoo) | 6 | :x: unmaintained |
-| [hyperoop](./hyperoop) | 4 | :wavy_dash: low maintenance |
+
+| name                   | popularity | status                                      |
+| ---------------------- | ---------- | ------------------------------------------- |
+| [hyperdom](./hyperdom) | 11         | :wavy_dash: low maintenance                 |
+| [doz](./doz)           | 7          | :turtle: performance issues                 |
+| [stem](./stem-core)    | 6          | :turtle: performance issues                 |
+| [plastiq](./plastiq)   | 6          | :stop_sign: deprecated in favor of Hyperdom |
+| [nanochoo](./nanochoo) | 6          | :x: unmaintained                            |
+| [hyperoop](./hyperoop) | 4          | :wavy_dash: low maintenance                 |
+
 :::
 
 ## Static Site Generation
@@ -212,6 +222,7 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 | [Clojure / ClojureScript](https://clojurescript.org/)                      | NA         |
 | [marko](./marko?library=false)                                             | 36         |
 | [Reason](https://reasonml.github.io) _(via [BuncleScript](./bs-platform))_ | 34         |
+| [purescript](./purescript)                                                 | 28         |
 | [imba](./imba?library=false)                                               | 26         |
 
 ## Dev Tools
