@@ -1,1 +1,1 @@
-export { el } from "./src/hyper.js";
+export { el, template, textPart } from "./src/hyper.js";
