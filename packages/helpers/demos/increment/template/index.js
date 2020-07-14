@@ -1,6 +1,6 @@
-import { template, part } from "../../../index.js";
+import { Template, part } from "../../../index.js";
 
-const incrementTemplate = template("div", { classList: "incrementDemo" }, [
+const incrementTemplate = new Template("div", { classList: "incrementDemo" }, [
   [
     "p",
     { classList: ["count", ["danger", part("count", (count) => count < 0)]] },

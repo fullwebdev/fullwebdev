@@ -1,74 +1,54 @@
-import {
-  TemplatePart,
-  AttributePartMeta,
-  TextPartMeta,
-  PartMeta,
-  ClassPartMeta,
-} from "./template-part.js";
-
 /**
  * @typedef {import("./template-options").TemplateInstance} TemplateInstance
  * @typedef {import("./template-options").TemplateElChild} TemplateElChild
  * @typedef {import("./template-options").TemplateElOptions} TemplateElOptions
+ * @typedef {import("./template-part").TemplatePart} TemplatePart
+ * @typedef {import("./template-part").PartMeta} PartMeta
  */
 
-class Template {
+/**
+ * pre-parsed template allowing to create elements with dynamic content
+ * associated to state data
+ */
+export class Template {
   /**
    * @param {string} tagName
    * @param {TemplateElOptions} options
    * @param {TemplateElChild[]} children
    */
   constructor(tagName, options, children) {
-    this.root = this._createElement(tagName, options, []);
-    this.childrenData = children;
     /**
-     * @type {Map<string, PartMeta[]>}
+     * describe each dynamic part of the template
+     *
+     * @type {{[key: string]: PartMeta[]}}
      */
-    this._partsMeta = new Map();
-    this._step(this.root, this.childrenData);
+    this._partsMeta = {};
+    this.root = this._createElement(tagName, options, []);
+    this._parseChildren(this.root, children);
   }
 
   /**
-   * @param {TemplateInstance} parent
-   * @param {TemplateElChild[]} descriptors
-   * @param {number[]} childPath
-   */
-  _step(parent, descriptors, childPath = []) {
-    for (let i = 0; i < descriptors.length; i++) {
-      const descOrPart = descriptors[i];
-      let node;
-
-      if (descOrPart instanceof TemplatePart) {
-        node = document.createElement("span");
-        // we do not check if a property already exist with this name for performance reasons
-        // if there is one, it will just be overridden
-        this._partsMeta.set(descOrPart.key, [
-          ...this._partsMeta.get(descOrPart.key),
-          new TextPartMeta([...childPath, i], descOrPart.formatter),
-        ]);
-      } else if (typeof descOrPart === "string") {
-        node = document.createTextNode(descOrPart);
-      } else {
-        const [type, options, children] = descOrPart;
-        node = this._createElement(type, options, [...childPath, i]);
-        if (children) {
-          this._step(node, descOrPart[2], [...childPath, i]);
-        }
-      }
-      parent.append(node);
-    }
-  }
-
-  /**
+   * Create a new HTMLElement from the pre-created one,
+   * with a state attribute allowing to update its dynamic content.
+   *
+   * This element still need to be added to the DOM afterward.
+   *
    * @param {{ [key: string]: any; }} props
+   * @returns {TemplateInstance}
    */
   render(props) {
     const root = /** @type {TemplateInstance} */ (this.root.cloneNode(true));
-    root._partsCache = new Map();
-    root.state = {};
-    root._statesMap = new Map();
 
-    for (let [key, partsMeta] of this._partsMeta.entries()) {
+    // literal objects are more effective than maps in this case
+    // i.e. when storring small amount of arrays
+    root._partsCache = {};
+    root._stateCache = {};
+    root.state = {};
+
+    const metaKeys = Object.keys(this._partsMeta);
+    for (let i = 0; i < metaKeys.length; i++) {
+      const key = metaKeys[i];
+      const partsMeta = this._partsMeta[key];
       const prop = props[key];
       if (prop === undefined) {
         throw new Error(`missing prop ${key}`);
@@ -76,92 +56,32 @@ class Template {
 
       for (let i = 0; i < partsMeta.length; i++) {
         const partMeta = partsMeta[i];
+        const { renderer, node } = this._partCacheInfo(root, partMeta);
 
-        /**
-         * @type {Element}
-         */
-        let partEl = root;
-        for (let j = 0; j < partMeta.path.length; j++) {
-          partEl = partEl.children[partMeta.path[j]];
+        if (!root._partsCache[key]) {
+          root._partsCache[key] = [];
         }
-
-        let setter, node;
-        if (partMeta instanceof AttributePartMeta) {
-          node = partEl;
-          setter = partMeta.formatter
-            ? (node, data) => {
-                let formattedData = partMeta.formatter(data);
-                if (formattedData === true) {
-                  formattedData = "";
-                }
-                if (
-                  formattedData === false ||
-                  formattedData === null ||
-                  formattedData === undefined
-                ) {
-                  node.removeAttribute(partMeta.name);
-                } else {
-                  node.setAttribute(partMeta.name, formattedData);
-                }
-              }
-            : (node, data) => {
-                let formattedData = data;
-                if (formattedData === true) {
-                  formattedData = "";
-                }
-                if (
-                  formattedData === false ||
-                  formattedData === null ||
-                  formattedData === undefined
-                ) {
-                  node.removeAttribute(partMeta.name);
-                } else {
-                  node.setAttribute(partMeta.name, formattedData);
-                }
-              };
-        } else if (partMeta instanceof ClassPartMeta) {
-          node = partEl;
-          setter = partMeta.formatter
-            ? (node, data) => {
-                partMeta.formatter(data)
-                  ? node.classList.add(partMeta.name)
-                  : node.classList.remove(partMeta.name);
-              }
-            : (node, data) => {
-                data
-                  ? node.classList.add(partMeta.name)
-                  : node.classList.remove(partMeta.name);
-              };
-        } else if (partMeta instanceof TextPartMeta) {
-          node = document.createTextNode("");
-          partEl.replaceWith(node);
-          setter = partMeta.formatter
-            ? (node, data) => {
-                node.textContent = partMeta.formatter(data);
-              }
-            : (node, data) => {
-                node.textContent = data;
-              };
-        }
-        root._partsCache.set(key, [
-          ...(root._partsCache.get(key) || []),
-          { node, setter },
-        ]);
+        root._partsCache[key].push({
+          node,
+          renderer: partMeta.formatter
+            ? (node, data) => renderer(node, partMeta.formatter(data))
+            : renderer,
+        });
       }
 
       Object.defineProperty(root.state, key, {
         get: function () {
           // @ts-ignore
-          return this._statesMap.get(key);
+          return this._stateCache[key];
         }.bind(root),
         set: function (data) {
           // @ts-ignore
-          const cache = this._partsCache.get(key);
+          const cache = this._partsCache[key];
           for (let i = 0; i < cache.length; i++) {
-            cache[i].setter(cache[i].node, data);
+            cache[i].renderer(cache[i].node, data);
           }
           // @ts-ignore
-          this._statesMap.set(key, data);
+          this._stateCache[key] = data;
         }.bind(root),
       });
 
@@ -169,6 +89,94 @@ class Template {
     }
 
     return root;
+  }
+
+  /**
+   * create children elements and store dynamic parts data
+   *
+   * @param {TemplateInstance} parent
+   * @param {TemplateElChild[]} descriptors
+   * @param {number[]} childPath
+   */
+  _parseChildren(parent, descriptors, childPath = []) {
+    for (let i = 0; i < descriptors.length; i++) {
+      const descOrPart = descriptors[i];
+      let node;
+
+      if (typeof descOrPart === "string") {
+        node = document.createTextNode(descOrPart);
+      } else if (Array.isArray(descOrPart)) {
+        const [type, options, children] = descOrPart;
+        node = this._createElement(type, options, [...childPath, i]);
+        if (children) {
+          this._parseChildren(node, descOrPart[2], [...childPath, i]);
+        }
+      } else {
+        node = document.createElement("span");
+        if (!this._partsMeta[descOrPart.key]) {
+          this._partsMeta[descOrPart.key] = [];
+        }
+        this._partsMeta[descOrPart.key].push({
+          type: "text",
+          path: [...childPath, i],
+          formatter: descOrPart.formatter,
+        });
+      }
+      parent.append(node);
+    }
+  }
+
+  /**
+   * get the associated Node and rendering function from dynamic part metadatas
+   *
+   * @param { TemplateInstance } root
+   * @param { PartMeta } partMeta
+   *
+   * @returns {{ renderer: (node: Node, data: any) => void, node: Node }}
+   */
+  _partCacheInfo(root, partMeta) {
+    /**
+     * @type {Element}
+     */
+    let partEl = root;
+    for (let j = 0; j < partMeta.path.length; j++) {
+      partEl = partEl.children[partMeta.path[j]];
+    }
+
+    let renderer, node;
+    if (partMeta.type === "attribute") {
+      node = partEl;
+      renderer = (node, data) => {
+        let formattedData = data;
+        if (formattedData === true) {
+          formattedData = "";
+        }
+        if (
+          formattedData === false ||
+          formattedData === null ||
+          formattedData === undefined
+        ) {
+          node.removeAttribute(partMeta.name);
+        } else {
+          node.setAttribute(partMeta.name, formattedData);
+        }
+      };
+    } else if (partMeta.type === "class") {
+      node = partEl;
+      renderer = (node, data) => {
+        data
+          ? node.classList.add(partMeta.name)
+          : node.classList.remove(partMeta.name);
+      };
+    } else {
+      node = document.createTextNode("");
+      partEl.replaceWith(node);
+      renderer = (node, data) => {
+        node.textContent = data;
+      };
+    }
+
+    return { renderer, node };
   }
 
   /**
@@ -184,31 +192,36 @@ class Template {
 
     // forEach is faster than for..of & for loops on very small arrays
     // i.e. when length < 10
-    attributes.forEach(([key, value]) => {
-      if (value instanceof TemplatePart) {
-        this._partsMeta.set(value.key, [
-          ...(this._partsMeta.get(value.key) || []),
-          new AttributePartMeta(path, key, value.formatter),
-        ]);
-      } else if (value === false || value === null || value === undefined) {
-        node.removeAttribute(key);
+    attributes.forEach(([name, value]) => {
+      if (value === false || value === null || value === undefined) {
+        node.removeAttribute(name);
       } else if (value === true) {
-        node.setAttribute(key, "");
+        node.setAttribute(name, "");
+      } else if (typeof value === "string") {
+        node.setAttribute(name, value);
       } else {
-        node.setAttribute(key, value);
+        if (!this._partsMeta[value.key]) {
+          this._partsMeta[value.key] = [];
+        }
+        this._partsMeta[value.key].push({
+          type: "attribute",
+          path,
+          name,
+          formatter: value.formatter,
+        });
       }
     });
 
     if (typeof classList === "string") {
       node.className = classList;
-    } else {
+    } else if (Array.isArray(classList)) {
       classList.forEach((klass) => {
         if (Array.isArray(klass)) {
           const [name, { key, formatter }] = klass;
-          this._partsMeta.set(key, [
-            ...(this._partsMeta.get(key) || []),
-            new ClassPartMeta(path, name, formatter),
-          ]);
+          if (!this._partsMeta[key]) {
+            this._partsMeta[key] = [];
+          }
+          this._partsMeta[key].push({ type: "class", path, name, formatter });
         } else {
           node.classList.add(klass);
         }
@@ -219,21 +232,14 @@ class Template {
 }
 
 /**
- * mark a Text node in a Template
- * @param {string} key
- * @param {(data: any) => string | boolean} [formatter]
+ * mark a dynamic part of a Template and associate it to a state for future rendering
+ * can be used as an attribute, a class or a text child node
+ *
+ * @param {string} key state key
+ * @param {(data: any) => string | boolean} [formatter] function to apply to the state data before rendering
+ *
+ * @return {TemplatePart}
  */
 export function part(key, formatter) {
-  return new TemplatePart(key, formatter);
-}
-
-/**
- * generate a pre-parsed template
- *
- * @param {string} tagName
- * @param {TemplateElOptions} options
- * @param {TemplateElChild[]} children
- */
-export function template(tagName, options, children = []) {
-  return new Template(tagName, options, children);
+  return { key, formatter };
 }
