@@ -1,0 +1,14 @@
+/node_modules
+*.log
+/coverage
+.nyc_output
+/test
+.eslintrc.js
+.huskyrc
+.lintstagedrc
+.prettierrc
+.taprc
+coverage-map.js
+tsconfig.json
+/.vscode
+/demos
