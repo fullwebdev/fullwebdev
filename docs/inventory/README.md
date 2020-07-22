@@ -204,11 +204,13 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 | name                                            | popularity | status |
 | ----------------------------------------------- | ---------- | ------ |
 | [Gatsby](./gatsby?library=false)                | 60         |
-| [vuepress](./vuepress?library=false)            | 43         |
 | [hugo](https://gohugo.io/)                      | NA         |
 | [Jekyll](https://jekyllrb.com/)                 | NA         |
+| [vuepress](./vuepress?library=false)            | 43         |
+| [Hexo](./hexo?library=false)                    | 38         |
 | [Eleventy](./%4011ty%2Feleventy?library=false)  | 32         |
 | [gridsome](./gridsome?library=false)            | 30         |
+| [harp](./harp?library=false)                    | 25         |
 | [Scully](./%40scullyio%2Fscully?library=false)  | 20         |
 | [Hydrogen](./hydrogen-cli?library=false)        | 6          |
 | [Greenwood](./%40greenwood%2Fcli?library=false) | 5          |
@@ -262,11 +264,12 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 
 ### Misc
 
-| name                                                         | popularity | details                                                   |
-| ------------------------------------------------------------ | ---------- | --------------------------------------------------------- |
-| [es-dev-server](./es-dev-server?library=false)               | 25         | Development server for modern web apps                    |
-| [rawact](./babel-plugin-rawact)                              | 18         | Compiles React.js components into native DOM instructions |
-| [browserslist](https://github.com/browserslist/browserslist) | NA         | Share target browsers between different front-end tools   |
+| name                                                          | popularity | details                                                   |
+| ------------------------------------------------------------- | ---------- | --------------------------------------------------------- |
+| [es-dev-server](./es-dev-server?library=false)                | 25         | Development server for modern web apps                    |
+| [rawact](./babel-plugin-rawact)                               | 18         | Compiles React.js components into native DOM instructions |
+| [browserslist](https://github.com/browserslist/browserslist)  | NA         | Share target browsers between different front-end tools   |
+| [static siteboiler plate](https://staticsiteboilerplate.com/) | NA         | better workflow for building modern static websites       |
 
 ## Further reading
 
@@ -284,3 +287,4 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 - [awesome Jest](https://github.com/jest-community/awesome-jest)
 - [Awesome Rollup](https://github.com/rollup/awesome)
 - [Awesome React Renderer](https://github.com/chentsulin/awesome-react-renderer)
+- [Static Site Generators](https://staticsitegenerators.net/)
