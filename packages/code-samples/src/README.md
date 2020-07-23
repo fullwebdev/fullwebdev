@@ -80,9 +80,11 @@
 
 ### Rendering
 
-#### Introduction
-
-1. Network limitations
-   - [scripts](rendering/limitations/network/scripts/)
-1. Performance API
-   - [paint](rendering/performance-api/index.html)
+1. Introduction
+   - [Network limitations](rendering/limitations/network/scripts/)
+   - [Performance API](rendering/performance-api/index.html)
+   - [DOM Freeze](rendering/limitations/dom-api/heavy-rendering/index.html)
+2. Create Elements
+   - [DOM API](rendering/create-element/dom-api/index.html)
+   - innerHTML
+     - [bad example](rendering/create-element/innerHTML/bad/index.html)
