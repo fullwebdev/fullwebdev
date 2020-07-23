@@ -80,7 +80,9 @@
 
 ### Rendering
 
-#### Limitations
+#### Introduction
 
-1. Network
+1. Network limitations
    - [scripts](rendering/limitations/network/scripts/)
+1. Performance API
+   - [paint](rendering/performance-api/index.html)
