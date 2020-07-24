@@ -84,7 +84,12 @@
    - [Network limitations](rendering/limitations/network/scripts/)
    - [Performance API](rendering/performance-api/index.html)
    - [DOM Freeze](rendering/limitations/dom-api/heavy-rendering/index.html)
-2. Create Elements
-   - [DOM API](rendering/create-element/dom-api/index.html)
-   - innerHTML
-     - [bad example](rendering/create-element/innerHTML/bad/index.html)
+1. DOM API
+   - [simple example](rendering/create-element/dom-api/index.html)
+   - [component](rendering/create-element/dom-api/component/index.html)
+1. innerHTML
+   - [very bad example](rendering/create-element/innerHTML/very-bad/index.html)
+   - [using handlers functions as string (bad practice)](rendering/create-element/innerHTML/bad-handlers/index.html)
+   - [local handlers](rendering/create-element/innerHTML/handlers/local/index.html)
+   - [global handler](rendering/create-element/innerHTML/handlers/global/index.html)
+   - [better example](rendering/create-element/innerHTML/better/index.html)
