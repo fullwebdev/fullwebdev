@@ -23,37 +23,38 @@ Go [edit this page](https://github.com/fullwebdev/fullwebdev/edit/master/docs/in
 
 DOM Manipulation & templating. May also include some libraries requiring specific build tools.
 
-| name                                         | popularity | status                                                   |
-| -------------------------------------------- | ---------- | -------------------------------------------------------- |
-| [react-dom](./react-dom)                     | 93         |                                                          |
-| [jQuery](./jquery)                           | 85         | :warning: not recommended                                |
-| [preact](./preact)                           | 56         | :zap: up-to-date microlib                                |
-| [lit-html](./lit-html)                       | 47         | :zap: up-to-date microlib                                |
-| [posthtml](./posthtml)                       | 47         |                                                          |
-| [hyperapp](./hyperapp)                       | 38         | :zap: up-to-date microlib (with some performance issues) |
-| [inferno](./inferno)                         | 38         |                                                          |
-| [htm](./htm)                                 | 32         | :zap: up-to-date microlib                                |
-| [alpine](./alpinejs)                         | 30         |                                                          |
-| [ractive](./ractive)                         | 30         |                                                          |
-| [nerv](./nervjs)                             | 30         |                                                          |
-| [redom](./redom)                             | 24         | :zap: up-to-date microlib                                |
-| [hyperhtml](./hyperhtml)                     | 24         |                                                          |
-| [nanohtml](./nanohtml)                       | 24         |                                                          |
-| [moon](./moon)                               | 21         | :zap: up-to-date microlib                                |
-| [maquette](./maquette)                       | 18         | :zap: up-to-date microlib                                |
-| [lighterhtml](./lighterhtml)                 | 17         |                                                          |
-| [hyperscript-helpers](./hyperscript-helpers) | 17         |                                                          |
-| [val](./%40skatejs%2Fval)                    | 17         |                                                          |
-| [sinuous](./sinuous)                         | 16         | :zap: up-to-date microlib                                |
-| [domdiff](./domdiff)                         | 15         | :zap: up-to-date microlib                                |
-| [Dyo](./dyo)                                 | 13         |                                                          |
-| [uhtml](./uhtml)                             | 13         | :zap: up-to-date microlib                                |
-| [ivi](./ivi)                                 | 10         |                                                          |
-| [isotope](./%40isotope%2Fcore)               | 9          | :zap: up-to-date microlib                                |
-| [tiny-lit](./%40tiny-lit%2Fcore)             | 7          | :zap: up-to-date microlib                                |
-| [attodom](./attodom)                         | 5          | :zap: up-to-date microlib                                |
-| [stage0](./stage0)                           | 4          |                                                          |
-| [solid](./solid-js)                          | 3          |                                                          |
+Performance indexes from [js-framework-benchmark](https://rawgit.com/krausest/js-framework-benchmark/master/webdriver-ts-results/table.html). Only the slowdown geometric mean of the lower keyed implementation is given if there is multiple implementations for the same library.
+
+| name                             | popularity | syntax                              | perf        | status                    |
+| -------------------------------- | ---------- | ----------------------------------- | ----------- | ------------------------- |
+| [react-dom](./react-dom)         | 93         | JSX                                 | 1.85        |                           |
+| [jQuery](./jquery)               | 85         | DOM manipulation                    |             | :warning: not recommended |
+| [preact](./preact)               | 56         | HyperScript (or JSX-like with htm)  | 1.54        | :zap: up-to-date microlib |
+| [lit-html](./lit-html)           | 47         | Tagged templates                    | 1.34        | :zap: up-to-date microlib |
+| [inferno](./inferno)             | 38         | HyperScript or JSX                  | **1.19**    |                           |
+| [hyperapp](./hyperapp)           | 38         | HyperScript                         | 1.33        | :zap: up-to-date microlib |
+| [htm](./htm)                     | 32         | Tagged templates & HyperScript      |             | :zap: up-to-date microlib |
+| [alpine](./alpinejs)             | 30         | Extended HTML                       |             |                           |
+| [ractive](./ractive)             | 30         | Mustaches                           | 2.37        |                           |
+| [nerv](./nervjs)                 | 30         | JSX                                 | 1.87        |                           |
+| [redom](./redom)                 | 24         | HyperScript                         | 1.23        | :zap: up-to-date microlib |
+| [hyperhtml](./hyperhtml)         | 24         | Tagged templates                    | 1.25        |                           |
+| [nanohtml](./nanohtml)           | 24         | Template Strings                    |             |                           |
+| [moon](./moon)                   | 21         | JSX-like                            | _(NK) 1.15_ | :zap: up-to-date microlib |
+| [maquette](./maquette)           | 18         | HyperScript                         | 2.22        | :zap: up-to-date microlib |
+| [lighterhtml](./lighterhtml)     | 17         | Tagged templates                    | 1.30        |                           |
+| [sinuous](./sinuous)             | 16         | HyperScript, Tagged templates & JSX | **1.05**    | :zap: up-to-date microlib |
+| [domdiff](./domdiff)             | 15         | none                                | **1.12**    | :zap: up-to-date microlib |
+| [Dyo](./dyo)                     | 13         | HyperScript                         | 1.31        |                           |
+| [µhtml](./uhtml)                 | 13         | Tagged templates                    | 1.21        | :zap: up-to-date microlib |
+| [petit-dom](./petit-dom)         | 12         | JSX & HyperScript                   | 1.18        |                           |
+| [ivi](./ivi)                     | 10         | HyperScript                         | **1.17**    |                           |
+| [Tonic](./%40optoolco%2Ftonic)   | 9          | Tagged templates                    |             | :zap: up-to-date microlib |
+| [isotope](./%40isotope%2Fcore)   | 9          | Chaining                            | 1.51        | :zap: up-to-date microlib |
+| [tiny-lit](./%40tiny-lit%2Fcore) | 7          | Tagged templates                    |             | :zap: up-to-date microlib |
+| [attodom](./attodom)             | 5          | HyperScript                         | **1.17**    | :zap: up-to-date microlib |
+| [stage0](./stage0)               | 4          | Tagged templates                    | **1.06**    |                           |
+| [solid](./solid-js)              | 3          | JSX                                 | **1.06**    |                           |
 
 ::: details
 
@@ -129,6 +130,7 @@ DOM Manipulation & templating. May also include some libraries requiring specifi
 | [Modernizr](./modernizr)                  | 24         |                             | detects HTML5 and CSS3 features in the user’s browser |
 | [haunted](./haunted)                      | 22         |                             | Hooks for web components                              |
 | [lit-helpers](./%40open-wc%2Flit-helpers) | 20         | :zap: up-to-date microlib   | Helpers and utils for lit-html and lit-element        |
+| [val](./%40skatejs%2Fval)                 | 17         |                             | VirtualDOM abstraction layer                          |
 | [wicked-elements](wicked-elements)        | 11         | :zap: up-to-date microlib   | handle any element as if it was a Custom Element      |
 | [neverland](./neverland)                  | 9          |                             | React like Hooks for hyperHTML                        |
 | [augmentor](./augmentor)                  | 4          |                             | React like hooks for the masses                       |
@@ -231,7 +233,13 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 | [purescript](./purescript)                                                 | 28         |
 | [imba](./imba?library=false)                                               | 26         |
 
-## Dev Tools
+## Build & Dev Tools
+
+### HTML Generation / transformation
+
+| name                   | popularity | status |
+| ---------------------- | ---------- | ------ |
+| [posthtml](./posthtml) | 47         |        |
 
 ### Linters & Formatters
 
