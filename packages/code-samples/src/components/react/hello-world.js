@@ -1,5 +1,6 @@
 "use strict";
 
+//#region helloworld
 //#region function
 function HelloWorld() {
   return React.createElement("div", null, `Hello World!`);
@@ -12,6 +13,7 @@ ReactDOM.render(
   document.getElementById("hello-world")
 );
 //#endregion render-function
+//#endregion helloworld
 
 //#region class
 class ClassHelloWorld extends React.Component {

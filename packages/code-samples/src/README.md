@@ -93,3 +93,5 @@
    - [local handlers](rendering/create-element/innerHTML/handlers/local/index.html)
    - [global handler](rendering/create-element/innerHTML/handlers/global/index.html)
    - [better example](rendering/create-element/innerHTML/better/index.html)
+1. HyperScript
+   - [minimal component example](rendering/create-element/hyperscript/index.html)
