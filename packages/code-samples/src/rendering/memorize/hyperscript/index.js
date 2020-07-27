@@ -26,8 +26,8 @@ class Counter {
   }
   //#endregion update
 
-  //#region render
   render(container) {
+    //#region render
     const root = el("div", {}, [
       (this._counterEl = el("p", {}, [this._count])),
       el("div", { className: "actions" }, [
@@ -49,6 +49,7 @@ class Counter {
     ]);
 
     container.appendChild(root);
+    //#endregion render
 
     root.addEventListener("click", (e) => {
       const el = e.target;
@@ -59,7 +60,6 @@ class Counter {
       }
     });
   }
-  //#endregion render
 }
 //#endregion component
 
