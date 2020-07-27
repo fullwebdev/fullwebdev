@@ -23,4 +23,7 @@ for: function ({ data }) {
     copy.push(data[i]);
   }
 },
+spread: function ({ data }) {
+  const copy = [...data];
+}
 };
