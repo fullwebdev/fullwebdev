@@ -84,14 +84,25 @@
    - [Network limitations](rendering/limitations/network/scripts/)
    - [Performance API](rendering/performance-api/index.html)
    - [DOM Freeze](rendering/limitations/dom-api/heavy-rendering/index.html)
-1. DOM API
-   - [simple example](rendering/create-element/dom-api/index.html)
-   - [component](rendering/create-element/dom-api/component/index.html)
-1. innerHTML
-   - [very bad example](rendering/create-element/innerHTML/very-bad/index.html)
-   - [using handlers functions as string (bad practice)](rendering/create-element/innerHTML/bad-handlers/index.html)
-   - [local handlers](rendering/create-element/innerHTML/handlers/local/index.html)
-   - [global handler](rendering/create-element/innerHTML/handlers/global/index.html)
-   - [better example](rendering/create-element/innerHTML/better/index.html)
-1. HyperScript
-   - [minimal component example](rendering/create-element/hyperscript/index.html)
+1. create elements
+   1. DOM API
+      - [simple example](rendering/create-element/dom-api/index.html)
+      - [component](rendering/create-element/dom-api/component/index.html)
+      - [DocumentFragment](rendering/create-element/dom-api/fragment/index.html)
+   1. innerHTML
+      - [very bad example](rendering/create-element/innerHTML/very-bad/index.html)
+      - [using handlers functions as string (bad practice)](rendering/create-element/innerHTML/bad-handlers/index.html)
+      - [local handlers](rendering/create-element/innerHTML/handlers/local/index.html)
+      - [global handler](rendering/create-element/innerHTML/handlers/global/index.html)
+      - [better example](rendering/create-element/innerHTML/better/index.html)
+   1. HyperScript
+      - [minimal component example](rendering/create-element/hyperscript/index.html)
+1. Memorization
+   1. child element cache
+      1. [DOM API](rendering/memorize/dom-api/index.html)
+         - [with fragment](rendering/memorize/dom-api/fragment/index.html)
+      1. [innerHTML](rendering/memorize/hyperscript/index.html)
+      1. [HyperScript](rendering/memorize/hyperscript/index.html)
+   1. memoize
+      1. [latest update](rendering/memoize/dom-api/latest-count/index.html)
+      2. [children](rendering/memoize/dom-api/children/index.html)
