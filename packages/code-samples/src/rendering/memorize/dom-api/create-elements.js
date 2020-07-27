@@ -21,7 +21,7 @@
 
     //#region update
     _updateCounter() {
-      this.container.firstElementChild.textContent = this._count;
+      this._counter.textContent = this._count;
     }
     //#endregion update
 
@@ -29,8 +29,7 @@
     render(container) {
       this.container = container;
 
-      const counter = document.createElement("p");
-      counter.classList.add("counter");
+      this._counter = document.createElement("p");
 
       const actions = document.createElement("div");
       const incrementBtn = document.createElement("button");
@@ -45,7 +44,7 @@
       });
       actions.append(incrementBtn, decrementBtn);
 
-      this.container.append(counter, actions);
+      this.container.append(this._counter, actions);
 
       this._updateCounter();
     }

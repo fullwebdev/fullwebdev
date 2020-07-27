@@ -22,14 +22,14 @@ class Counter {
 
   //#region update
   _updateCounter() {
-    this.root.firstElementChild.textContent = this._count;
+    this._counterEl.textContent = this._count;
   }
   //#endregion update
 
   //#region render
   render(container) {
     const root = el("div", {}, [
-      el("p", { className: "counter " }, [this._count]),
+      (this._counterEl = el("p", {}, [this._count])),
       el("div", { className: "actions" }, [
         el(
           "button",
@@ -58,8 +58,6 @@ class Counter {
         this._decrement();
       }
     });
-
-    this.root = root;
   }
   //#endregion render
 }
