@@ -1,13 +1,11 @@
 {
-
   //#region memoization
   const counterChildrenCache = new WeakMap();
 
   function counterChildren() {
-
-    if(counterChildrenCache.has(this)) {
+    if (counterChildrenCache.has(this)) {
       const children = counterChildrenCache.get(this);
-      return children.map(node => node.cloneNode(true));
+      return children.map((node) => node.cloneNode(true));
     }
 
     const children = [];
@@ -30,16 +28,14 @@
       this._decrement();
     });
 
-    actions.append(incrementBtn, decrementBtn)
+    actions.append(incrementBtn, decrementBtn);
     children.push(actions);
-
 
     counterChildrenCache.set(this, children);
 
     return children;
   }
   //#endregion memoization
-
 
   //#region component
   class Counter {

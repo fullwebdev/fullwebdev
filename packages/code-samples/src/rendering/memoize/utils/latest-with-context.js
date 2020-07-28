@@ -16,7 +16,11 @@ export function memLatest(fn) {
   let lastThis, lastArgs, lastResult, calledOnce;
 
   function memoized(...newArgs) {
-    if (calledOnce && lastThis === this && isEqual(newArgs, lastArgs)) {
+    if (
+      calledOnce &&
+      lastThis === this &&
+      isEqual(newArgs, lastArgs)
+    ) {
       return lastResult;
     }
 
@@ -30,4 +34,3 @@ export function memLatest(fn) {
   return memoized;
 }
 //#endregion memoization
-

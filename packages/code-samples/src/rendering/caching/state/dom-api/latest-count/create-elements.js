@@ -17,6 +17,7 @@ class Counter {
     this._updateCounter();
   }
 
+  //#region set
   _set(value) {
     const newValue = Number.parseInt(value);
     if (!isNaN(newValue)) {
@@ -24,6 +25,7 @@ class Counter {
       this._updateCounter();
     }
   }
+  //#endregion set
   //#region actions
 
   //#region update
@@ -54,12 +56,15 @@ class Counter {
       this._decrement();
     });
 
+    //#region input
     const valueInput = document.createElement("input");
     valueInput.type = "number";
     valueInput.addEventListener("change", (event) => {
       this._set(event.target.value);
     });
+
     actions.append(incrementBtn, decrementBtn, valueInput);
+    //#endregion input
 
     this.container.append(this._counter, actions);
 
