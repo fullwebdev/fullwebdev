@@ -162,35 +162,35 @@ Performance indexes from [js-framework-benchmark](https://rawgit.com/krausest/js
 May include some multi-purpose libraries which doesn't define themselves as "frameworks".
 
 <!-- prettier-ignore -->
-| name                                | popularity | status                                     |
-| ----------------------------------- | ---------- | ------------------------------------------ |
-| [Vue](./vue)                        | 84         |                                            |
-| [Angular](./%40angular%2Fcore)      | 79         |                                            |
-| [AngularJS](./angular)              | 66         | :stop_sign: deprecated in favor of Angular |
-| [Next.js](./next)                   | 63         |                                            |
-| [backbone](./backbone)              | 61         | :wavy_dash: low maintenance                |
-| [Nuxt.js](./nuxt)                   | 52         |                                            |
-| [Polymer](./%40polymer%2Fpolymer)   | 52         | :stop_sign: [deprecated in favor of LitElement](https://www.polymer-project.org/blog/2018-05-02-roadmap-faq) |
-| [Ionic](./%40ionic%2Fcore)          | 49         |                                            |
-| [knockout](./knockout)              | 43         |                                            |
-| [mithril](./mithril)                | 40         |                                            |
-| [ember](./ember-cli)                | 39         |                                            |
-| [Mavo](https://mavo.io/)            | NA         |                                            |
-| [Flutter Web](https://flutter.dev/docs/get-started/flutter-for/web-devs) | NA |               |
-| [Meteor](https://www.meteor.com/)   | NA         |                                            |
-| [riot](./riot)                      | 36         |                                            |
-| [Yew](https://yew.rs)               | NA         |                                            |
-| [Marionette](./backbone.marionette) | 35         |                                            |
-| [rax](./rax)                        | 31         |                                            |
-| [Cycle.js](./%40cycle%2Fdom)        | 30         |                                            |
-| [choo](./choo)                      | 28         |                                            |
-| [san](./san)                        | 24         |                                            |
-| [aurelia](./aurelia)                | 18         |                                            |
-| [Dojo](./%40dojo%framework)         | 18         |                                            |
-| [apprun](./apprun)                  | 17         |                                            |
-| [bobril](./bobril)                  | 16         |                                            |
-| [scarletsframe](./scarletsframe)    | 5          |                                            |
-| [sifrr](./%40sifrr%2Fdev)           | 3          |                                            |
+| name                                | popularity   | status                                     |
+| ----------------------------------- | ------------ | ------------------------------------------ |
+| [Vue](./vue)                        | 84           |                                            |
+| [Angular](./%40angular%2Fcore)      | 79           |                                            |
+| [AngularJS](./angular)              | 66           | :stop_sign: deprecated in favor of Angular |
+| [Next.js](./next)                   | 63           |                                            |
+| [backbone](./backbone)              | 61           | :wavy_dash: low maintenance                |
+| [Nuxt.js](./nuxt)                   | 52           |                                            |
+| [Polymer](./%40polymer%2Fpolymer)   | 52           | :stop_sign: [deprecated in favor of LitElement](https://www.polymer-project.org/blog/2018-05-02-roadmap-faq) |
+| [Ionic](./%40ionic%2Fcore)          | 49           |                                            |
+| [knockout](./knockout)              | 43           |                                            |
+| [mithril](./mithril)                | 40           |                                            |
+| [ember](./ember-cli)                | 39           |                                            |
+| [Flutter Web](https://flutter.dev/docs/get-started/flutter-for/web-devs) | NA |                 |
+| [Meteor](https://www.meteor.com/)   | (:star: 42k) |                                            |
+| [riot](./riot)                      | 36           |                                            |
+| [Yew](https://yew.rs)               | (:star: 13k) |                                            |
+| [Marionette](./backbone.marionette) | 35           |                                            |
+| [rax](./rax)                        | 31           |                                            |
+| [Cycle.js](./%40cycle%2Fdom)        | 30           |                                            |
+| [choo](./choo)                      | 28           |                                            |
+| [san](./san)                        | 24           |                                            |
+| [Mavo](https://mavo.io/)            | (:star: 3k)  |                                            |
+| [aurelia](./aurelia)                | 18           |                                            |
+| [Dojo](./%40dojo%2Fframework)       | 18           |                                            |
+| [apprun](./apprun)                  | 17           |                                            |
+| [bobril](./bobril)                  | 16           |                                            |
+| [scarletsframe](./scarletsframe)    | 5            |                                            |
+| [sifrr](./%40sifrr%2Fdev)           | 3            |                                            |
 
 :::details
 
@@ -207,31 +207,31 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 
 ## Static Site Generation
 
-| name                                            | popularity | status |
-| ----------------------------------------------- | ---------- | ------ |
-| [Gatsby](./gatsby?library=false)                | 60         |
-| [hugo](https://gohugo.io/)                      | NA         |
-| [Jekyll](https://jekyllrb.com/)                 | NA         |
-| [vuepress](./vuepress?library=false)            | 43         |
-| [Hexo](./hexo?library=false)                    | 38         |
-| [Eleventy](./%4011ty%2Feleventy?library=false)  | 32         |
-| [gridsome](./gridsome?library=false)            | 30         |
-| [harp](./harp?library=false)                    | 25         |
-| [Scully](./%40scullyio%2Fscully?library=false)  | 20         |
-| [Hydrogen](./hydrogen-cli?library=false)        | 6          |
-| [Greenwood](./%40greenwood%2Fcli?library=false) | 5          |
+| name                                            | popularity   | status |
+| ----------------------------------------------- | ------------ | ------ |
+| [Gatsby](./gatsby?library=false)                | 60           |
+| [hugo](https://gohugo.io/)                      | (:star: 45k) |
+| [Jekyll](https://jekyllrb.com/)                 | (:star: 41k) |
+| [vuepress](./vuepress?library=false)            | 43           |
+| [Hexo](./hexo?library=false)                    | 38           |
+| [Eleventy](./%4011ty%2Feleventy?library=false)  | 32           |
+| [gridsome](./gridsome?library=false)            | 30           |
+| [harp](./harp?library=false)                    | 25           |
+| [Scully](./%40scullyio%2Fscully?library=false)  | 20           |
+| [Hydrogen](./hydrogen-cli?library=false)        | 6            |
+| [Greenwood](./%40greenwood%2Fcli?library=false) | 5            |
 
 ## Languages
 
-| name                                                                       | popularity | status |
-| -------------------------------------------------------------------------- | ---------- | ------ |
-| [typescript](./typescript?library=false)                                   | 67         |
-| [Elm](https://elm-lang.org)                                                | NA         |
-| [Clojure / ClojureScript](https://clojurescript.org/)                      | NA         |
-| [marko](./marko?library=false)                                             | 36         |
-| [Reason](https://reasonml.github.io) _(via [BuncleScript](./bs-platform))_ | 34         |
-| [purescript](./purescript)                                                 | 28         |
-| [imba](./imba?library=false)                                               | 26         |
+| name                                                                       | popularity    | status |
+| -------------------------------------------------------------------------- | ------------- | ------ |
+| [typescript](./typescript?library=false)                                   | 67            |
+| [marko](./marko?library=false)                                             | 36            |
+| [Clojure / ClojureScript](https://clojurescript.org/)                      | (:star: 8.4k) |
+| [Elm](https://elm-lang.org)                                                | (:star: 6k)   |
+| [Reason](https://reasonml.github.io) _(via [BuncleScript](./bs-platform))_ | 34            |
+| [purescript](./purescript)                                                 | 28            |
+| [imba](./imba?library=false)                                               | 26            |
 
 ## Build & Dev Tools
 
@@ -276,12 +276,12 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 
 ### Misc
 
-| name                                                          | popularity | details                                                   |
-| ------------------------------------------------------------- | ---------- | --------------------------------------------------------- |
-| [es-dev-server](./es-dev-server?library=false)                | 25         | Development server for modern web apps                    |
-| [rawact](./babel-plugin-rawact)                               | 18         | Compiles React.js components into native DOM instructions |
-| [browserslist](https://github.com/browserslist/browserslist)  | NA         | Share target browsers between different front-end tools   |
-| [static siteboiler plate](https://staticsiteboilerplate.com/) | NA         | better workflow for building modern static websites       |
+| name                                                          | popularity    | details                                                   |
+| ------------------------------------------------------------- | ------------- | --------------------------------------------------------- |
+| [browserslist](https://github.com/browserslist/browserslist)  | (:star: 8k)   | Share target browsers between different front-end tools   |
+| [static siteboiler plate](https://staticsiteboilerplate.com/) | (:star: 1.4k) | better workflow for building modern static websites       |
+| [es-dev-server](./es-dev-server?library=false)                | 25            | Development server for modern web apps                    |
+| [rawact](./babel-plugin-rawact)                               | 18            | Compiles React.js components into native DOM instructions |
 
 ## Further reading
 
