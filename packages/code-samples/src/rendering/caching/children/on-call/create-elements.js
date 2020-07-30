@@ -3,10 +3,12 @@
   const counterChildrenCache = new WeakMap();
 
   function counterChildren() {
+    //#region get
     if (counterChildrenCache.has(this)) {
       const children = counterChildrenCache.get(this);
       return children.map((node) => node.cloneNode(true));
     }
+    //#endregion get
 
     const children = [];
 
@@ -59,7 +61,7 @@
 
     //#region update
     _updateCounter() {
-      this.container.firstElementChild.textContent = this._count;
+      this._counter.textContent = this._count;
     }
     //#endregion update
 
@@ -68,6 +70,7 @@
       this.container = container;
       const children = counterChildren();
       this.container.append(...children);
+      this._counter = children[0];
       this._updateCounter();
     }
     //#endregion render
