@@ -16,6 +16,7 @@ export class Template {
    * @param {TemplateElOptions} options
    * @param {TemplateElChild[]} children
    */
+  //#region constructor
   constructor(tagName, options, children) {
     /**
      * describe each dynamic part of the template
@@ -26,6 +27,7 @@ export class Template {
     this.root = this._createElement(tagName, options, []);
     this._parseChildren(this.root, children);
   }
+  //#endregion constructor
 
   /**
    * Create a new HTMLElement from the pre-created one,
@@ -36,6 +38,8 @@ export class Template {
    * @param {{ [key: string]: any; }} props
    * @returns {TemplateInstance}
    */
+  //#region render
+  //#region renderInit
   render(props) {
     const root = /** @type {TemplateInstance} */ (this.root.cloneNode(true));
 
@@ -44,7 +48,9 @@ export class Template {
     root._partsCache = {};
     root._stateCache = {};
     root.state = {};
+    //#endregion renderInit
 
+    //#region loopMeta
     const metaKeys = Object.keys(this._partsMeta);
     for (let i = 0; i < metaKeys.length; i++) {
       const key = metaKeys[i];
@@ -68,28 +74,29 @@ export class Template {
             : renderer,
         });
       }
+      //#endregion loopMeta
 
+      //#region proxy
       Object.defineProperty(root.state, key, {
         get: function () {
-          // @ts-ignore
           return this._stateCache[key];
         }.bind(root),
         set: function (data) {
-          // @ts-ignore
           const cache = this._partsCache[key];
           for (let i = 0; i < cache.length; i++) {
             cache[i].renderer(cache[i].node, data);
           }
-          // @ts-ignore
           this._stateCache[key] = data;
         }.bind(root),
       });
 
       root.state[key] = prop;
+      //#endregion proxy
     }
 
     return root;
   }
+  //#endregion render
 
   /**
    * create children elements and store dynamic parts data
@@ -98,6 +105,7 @@ export class Template {
    * @param {TemplateElChild[]} descriptors
    * @param {number[]} childPath
    */
+  //#region parse
   _parseChildren(parent, descriptors, childPath = []) {
     for (let i = 0; i < descriptors.length; i++) {
       const descOrPart = descriptors[i];
@@ -125,6 +133,7 @@ export class Template {
       parent.append(node);
     }
   }
+  //#endregion parse
 
   /**
    * get the associated Node and rendering function from dynamic part metadatas
@@ -185,6 +194,7 @@ export class Template {
    * @param {number[]} path
    * @returns {TemplateInstance}
    */
+  //#region createElement
   _createElement(tagName, { is, classList, attributes = [] }, path) {
     const node = !is
       ? document.createElement(tagName)
@@ -229,6 +239,7 @@ export class Template {
     }
     return node;
   }
+  //#endregion createElement
 }
 
 /**
@@ -240,6 +251,8 @@ export class Template {
  *
  * @return {TemplatePart}
  */
+//#region part
 export function part(key, formatter) {
   return { key, formatter };
 }
+//#endregion part
