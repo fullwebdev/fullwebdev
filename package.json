@@ -32,18 +32,18 @@
     "l": "lerna run"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
-    "@commitlint/prompt-cli": "^8.3.5",
-    "@monocli/cli": "^0.5.0-beta.3",
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.1",
+    "@commitlint/prompt-cli": "^9.1.1",
+    "@monocli/cli": "^0.5.0",
     "concurrently": "^5.2.0",
     "http-server": "^0.12.3",
     "husky": "^4.2.5",
-    "lerna": "^3.21.0",
-    "lint-staged": "^10.2.4",
-    "markdownlint-cli": "~0.23.1",
+    "lerna": "^3.22.1",
+    "lint-staged": "^10.2.11",
+    "markdownlint-cli": "~0.23.2",
     "prettier": "^2.0.5",
-    "standard-version": "^8.0.0",
+    "standard-version": "^8.0.2",
     "vuepress-bar": "^0.3.1"
   },
   "husky": {
