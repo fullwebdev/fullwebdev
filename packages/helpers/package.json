@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/fullwebdev/fullwebdev#readme",
   "devDependencies": {
-    "es-dev-server": "^1.56.1",
-    "typescript": "^3.9.6"
+    "es-dev-server": "^1.57.1",
+    "typescript": "^3.9.7"
   }
 }
