@@ -47,6 +47,14 @@
     {
       "filename": "packages/illustrations/package-lock.json",
       "type": "json"
+    },
+    {
+      "filename": "packages/perf/package.json",
+      "type": "json"
+    },
+    {
+      "filename": "packages/perf/package-lock.json",
+      "type": "json"
     }
   ]
 }
