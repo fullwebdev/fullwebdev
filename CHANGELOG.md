@@ -2,6 +2,46 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.0](https://github.com/fullwebdev/fullwebdev/compare/v0.7.0...v0.8.0) (2020-08-01)
+
+### Features
+
+- **benchmark:** add as submodule ([3e808fa](https://github.com/fullwebdev/fullwebdev/commit/3e808faded39ae25425750e5fb233b7700f592bd))
+- **benchmark:** helpers implementation ([0debb35](https://github.com/fullwebdev/fullwebdev/commit/0debb3513b3dcbd19fdc84826ae4c4a3eed34a4c))
+- **code-samples:** compare bad innerHTML w/ dom api ([52fc68b](https://github.com/fullwebdev/fullwebdev/commit/52fc68bac71f7aa11c182fdaff02402128648c84))
+- **code-samples:** explain rendering performance ([9b79bd7](https://github.com/fullwebdev/fullwebdev/commit/9b79bd7efe6250957125e3582df01104c8b16402))
+- **code-samples:** fragment & element cache ([1456cae](https://github.com/fullwebdev/fullwebdev/commit/1456cae6112ce493bcb7e01cc96f92f026715091))
+- **code-samples:** hyperscript rendering ([74e9e5e](https://github.com/fullwebdev/fullwebdev/commit/74e9e5e877a1e1592e96b422eeb7f5921fc84872))
+- **code-samples:** innerHTML rendering ([bcfaf87](https://github.com/fullwebdev/fullwebdev/commit/bcfaf8711f879da30b351e87a3497f1d293c3343))
+- **code-samples:** loading scripts ([dfa1c3c](https://github.com/fullwebdev/fullwebdev/commit/dfa1c3cf0236dd178ab1da5b921223d75ecbd988))
+- **code-samples:** paint api ([dc4d568](https://github.com/fullwebdev/fullwebdev/commit/dc4d5687653e9407169e3c5de588539e0ac4cd10))
+- **code-samples:** templating ([5c50c91](https://github.com/fullwebdev/fullwebdev/commit/5c50c9117c3ee6705f1de961c724c7a732dd3dff))
+- **docs:** add lit-up and Mavo to inventory ([70e2c4f](https://github.com/fullwebdev/fullwebdev/commit/70e2c4f0703efb482e981daacb6a18e0741379da))
+- **docs:** add new items to inventory ([4708102](https://github.com/fullwebdev/fullwebdev/commit/4708102c2eab7c46ad19537fed9a02c6fac72435))
+- **docs:** add new items to inventory ([9d20adf](https://github.com/fullwebdev/fullwebdev/commit/9d20adfdc96fc1dc7e0dd6800bf8227835b3c784))
+- **docs:** add rendering libs syntax & perf ([5671146](https://github.com/fullwebdev/fullwebdev/commit/567114615634c3e914bb78dde523e6a43b1b84ce))
+- **docs:** add some hyperscript related libs to inventory ([12dcbed](https://github.com/fullwebdev/fullwebdev/commit/12dcbed445c17344f6034e64712e2d179a526fe9))
+- **docs:** add static gen related entries to inventory ([bb060b3](https://github.com/fullwebdev/fullwebdev/commit/bb060b3cbd21cc31fe439f17c806b23a172e3dd2))
+- **docs:** add yst to inventory ([0565d92](https://github.com/fullwebdev/fullwebdev/commit/0565d923456c8d6d06ed6dadd07b9d0f302c0867))
+- **helpers:** createElement helper ([b172c91](https://github.com/fullwebdev/fullwebdev/commit/b172c911bd5473ea8ffdd9dd0a96727984e5f809))
+- **helpers:** dynamic attributes & class ([fd24813](https://github.com/fullwebdev/fullwebdev/commit/fd24813b1f75b06120e375af64f9eadb991aff41))
+- **helpers:** rendering template ([6c67b50](https://github.com/fullwebdev/fullwebdev/commit/6c67b50f6e70138c065937f12be40a11aebe25c4))
+- **illustrations:** explain rendering performance ([3e9e46b](https://github.com/fullwebdev/fullwebdev/commit/3e9e46b767767d300567f571da2290ab31ba83f4))
+- **illustrations:** rendering performance introduction ([8fc5e48](https://github.com/fullwebdev/fullwebdev/commit/8fc5e4843528c4d4048c310da08a30eae755a8b0))
+- **perf:** array loop benchmarks ([2191b42](https://github.com/fullwebdev/fullwebdev/commit/2191b425bd22fe3b26c40e9879b91fc24ad88ff0))
+- **perf:** class vs literrals ([2fa364a](https://github.com/fullwebdev/fullwebdev/commit/2fa364a7225dc44103dd4699cc29ba51dd93ff82))
+- **perf:** compare ways to get an element ([4b7bfd9](https://github.com/fullwebdev/fullwebdev/commit/4b7bfd92c38bd7433aba072beb69928cb7afcce0))
+- **perf:** loop on object ([ab5f47e](https://github.com/fullwebdev/fullwebdev/commit/ab5f47e391250cde585fb4b5ba5d10d2b575bf18))
+- **perf:** wrong rendering benchmark ([1511e66](https://github.com/fullwebdev/fullwebdev/commit/1511e66ad1b9f2290009ba6851a0b32d9578a412))
+
+### Bug Fixes
+
+- **code-samples:** move memorization to another part ([2f53048](https://github.com/fullwebdev/fullwebdev/commit/2f5304846aab2886848611db53d21279646239a7))
+- **docs:** add gh stars instead of NA in inventory ([7628763](https://github.com/fullwebdev/fullwebdev/commit/762876358ec7b7333a999bcf6be58ba55c2f604a))
+- **docs:** hide unmaintained projects ([edc04a2](https://github.com/fullwebdev/fullwebdev/commit/edc04a2aadc2ff22d1e7752c6e54b0a1ac971ad3))
+- **docs:** list libs performance issues ([8825246](https://github.com/fullwebdev/fullwebdev/commit/8825246dbb0db0ba7363cb6cd4092ed1e71c31a3))
+- **perf:** add missing spread test for array loop ([cb56cb9](https://github.com/fullwebdev/fullwebdev/commit/cb56cb9c60e497bc17f54fcf938ace33ff07a270))
+
 ## [0.7.0](https://github.com/fullwebdev/fullwebdev/compare/v0.6.0...v0.7.0) (2020-07-01)
 
 ### Features
