@@ -1,7 +1,7 @@
 const fs = require("fs-extra");
 const { writeFile } = require("fs").promises;
 const path = require("path");
-const { spawn } = require("child_process");
+const { spawn, spawnSync } = require("child_process");
 const { program } = require("commander");
 const chokidar = require("chokidar");
 
@@ -52,18 +52,83 @@ function pandoc(...args) {
   });
 }
 
+// from Vuepress
+// https://github.com/vuejs/vuepress/blob/369c315/packages/%40vuepress/plugin-last-updated/index.js#L22-L32
+function getGitLastUpdatedTimeStamp(filePath) {
+  let lastUpdated;
+  try {
+    lastUpdated =
+      parseInt(
+        spawnSync(
+          "git",
+          ["log", "-1", "--format=%at", path.basename(filePath)],
+          { cwd: path.dirname(filePath) }
+        ).stdout.toString("utf-8")
+      ) * 1000;
+  } catch (e) {
+    /* do not handle for now */
+  }
+  return lastUpdated;
+}
+
 async function buildFile(filePath) {
-  const { output, errors } = await pandoc(filePath, "-t", "html");
+  const { output, errors } = await pandoc(
+    "-f",
+    "markdown+emoji",
+    filePath,
+    "-t",
+    "html"
+  );
+
   if (errors) {
     console.error(`${filePath}: ${errors}`);
     return;
   }
+
   const cleanOutput = output
     .replace(/>\s+</g, "><")
     .replace(/\n/g, "")
     .replace(/`/g, "\\`");
-  const js = `import {html} from "lit-html"; export default () => html\`${cleanOutput}\`;`;
+
+  const lastUpdateTimeStamp = getGitLastUpdatedTimeStamp(filePath);
+
+  const [, lang] = /\/(en|fr)/.exec(filePath);
+
+  let lastUpdate;
+  if (lastUpdateTimeStamp) {
+    lastUpdate = new Date(lastUpdateTimeStamp).toLocaleString(lang || "en");
+  }
+
   const relativeRoot = path.relative(sourceDir, filePath);
+
+  // TODO: minification
+  const js = `
+import {html} from "lit-html";
+export default () => html\`
+<main class="page">
+${cleanOutput}
+<footer class="page-edit">
+  <div class="edit-link">
+    <a
+      href="https://github.com/fullwebdev/fullwebdev/edit/master/docs/pages/${relativeRoot}"
+      target="_blank" rel="noopener noreferrer"
+      >${
+        lang === "fr"
+          ? "Éditer cette page sur GitHub"
+          : "Edit this page on GitHub"
+      }</a>
+  </div>
+  ${
+    lastUpdate
+      ? `<div class="last-updated"><span class="prefix">${
+          lang === "fr" ? "Dernière mise-à-jour" : "Last Updated"
+        }:</span> <span class="time">${lastUpdate}</span></div>`
+      : ""
+  }
+</footer>
+</main>\`;
+`;
+
   const destFilePath = path
     .join(outputDir, relativeRoot)
     .replace(/README\.md/, "index.md")
