@@ -3,8 +3,14 @@
   "version": "0.8.0",
   "private": true,
   "scripts": {
-    "build": "vuepress build .",
-    "start": "vuepress dev . --host localhost --no-clear-screen"
+    "build": "npm run build:clean && npm run build:md && rollup -c rollup.config.js",
+    "build:clean": "rimraf dist",
+    "build:md": "node _scripts_/compile-md.js",
+    "start:md": "npm run build:md -- --watch",
+    "start": "npm run start:clean && concurrently \"npm:start:md\" \"npm:start:server\"",
+    "start:clean": "rimraf ./pages/*/*/*.js",
+    "start:server": "es-dev-server",
+    "start:build": "npm run build && es-dev-server --root-dir dist --app-index index.html --open --compatibility none"
   },
   "repository": {
     "type": "git",
@@ -16,10 +22,16 @@
     "url": "https://github.com/fullwebdev/fullwebdev/issues"
   },
   "devDependencies": {
-    "@vuepress/plugin-google-analytics": "^1.5.0",
-    "@vuepress/plugin-pwa": "^1.5.0",
-    "node-sass": "^4.14.1",
-    "sass-loader": "^8.0.2",
-    "vuepress": "^1.5.0"
+    "@open-wc/building-rollup": "^1.0.0",
+    "chokidar": "^3.4.1",
+    "commander": "^6.0.0",
+    "concurrently": "^5.2.0",
+    "es-dev-server": "^1.57.1",
+    "rimraf": "^2.6.3",
+    "rollup": "^2.3.4"
+  },
+  "dependencies": {
+    "lit-html": "^1.2.1",
+    "vuepress": "^1.5.2"
   }
 }

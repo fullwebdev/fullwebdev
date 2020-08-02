@@ -57,7 +57,7 @@
       "prettier --write",
       "markdownlint --fix"
     ],
-    "*.{js,css,ts,jsx,tsx,html,yml,vue,styl}": [
+    "*.{js,css,ts,jsx,tsx,html,yml,vue}": [
       "prettier --write"
     ]
   }

@@ -1,0 +1,93 @@
+.navbar {
+  padding: 0.7rem 1.5rem;
+  line-height: 2.2rem;
+}
+.navbar a,
+.navbar span,
+.navbar img {
+  display: inline-block;
+}
+.navbar .logo {
+  height: 2.2rem;
+  min-width: 2.2rem;
+  margin-right: 0.8rem;
+  vertical-align: top;
+}
+.navbar .site-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  position: relative;
+}
+.navbar .links {
+  padding-left: 1.5rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  position: absolute;
+  right: 1.5rem;
+  top: 0.7rem;
+  display: flex;
+}
+.navbar .links .search-box {
+  flex: 0 0 auto;
+  vertical-align: top;
+}
+@media (max-width: 719px) {
+  .navbar {
+    padding-left: 4rem;
+  }
+  .navbar .can-hide {
+    display: none;
+  }
+  .navbar .links {
+    padding-left: 1.5rem;
+  }
+  .navbar .site-name {
+    width: calc(100vw - 9.4rem);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+.nav-links {
+  display: inline-block;
+}
+.nav-links a {
+  line-height: 1.4rem;
+  color: inherit;
+}
+.nav-links a:hover,
+.nav-links a.router-link-active {
+  color: #217ff9;
+}
+.nav-links .nav-item {
+  position: relative;
+  display: inline-block;
+  margin-left: 1.5rem;
+  line-height: 2rem;
+}
+.nav-links .nav-item:first-child {
+  margin-left: 0;
+}
+.nav-links .repo-link {
+  margin-left: 1.5rem;
+}
+@media (max-width: 719px) {
+  .nav-links .nav-item,
+  .nav-links .repo-link {
+    margin-left: 0;
+  }
+}
+@media (min-width: 719px) {
+  .nav-links a:hover,
+  .nav-links a.router-link-active {
+    color: #2c3e50;
+  }
+  .nav-item > a:not(.external):hover,
+  .nav-item > a:not(.external).router-link-active {
+    margin-bottom: -2px;
+    border-bottom: 2px solid #3389f9;
+  }
+}

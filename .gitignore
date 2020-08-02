@@ -10,3 +10,4 @@ node_modules
 !/docs/fr/material/README.md
 /docs/.vuepress/public/graphs
 /docs/.vuepress/public/images
+/docs/pages/*/*/**/*.js
