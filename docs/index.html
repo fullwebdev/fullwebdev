@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
     <title>Document</title>
+    <link rel="stylesheet" href="/style/vuepress.css" />
+    <link rel="stylesheet" href="/style/navbar.css" />
+    <link rel="stylesheet" href="/style/page-edit.css" />
+    <link rel="stylesheet" href="/style/sidebar.css" />
+    <link rel="stylesheet" href="/style/index.css" />
+    <script src="js/app-shell.js" type="module"></script>
   </head>
   <body>
-    <a href="/about/">about</a>
-    <a href="/flashcards/webcomponents">about</a>
-    <div id="router-outlet"></div>
+    <div class="theme-container sidebar-open">
+      <div id="app-shell"></div>
+      <div id="router-outlet"></div>
+    </div>
     <script src="js/router.js" type="module"></script>
   </body>
 </html>

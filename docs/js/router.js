@@ -1,6 +1,6 @@
-import { html, render } from "lit-html";
+import { render } from "lit-html";
 
-const langBase = /\/(en|fr)/;
+const langBase = /\/(en|fr)\//;
 
 let lang = "en";
 if (/^fr\b/.test(navigator.language)) {
@@ -60,7 +60,7 @@ const notFound = () => "404 - page not found";
 /**
  * @param {string} path
  */
-export async function navigate(path, redirection = false) {
+export async function navigate(path, redirection = false, update = true) {
   let importPath = path;
   if (path.endsWith("/")) {
     importPath += "index.js";
@@ -78,10 +78,10 @@ export async function navigate(path, redirection = false) {
     page = (await import(`${baseUrl}/pages${importPath}`)).default;
   } catch (err) {
     if (lang !== "en") {
-      importPath = importPath.replace(langBase, "/en");
+      importPath = importPath.replace(langBase, "/en/");
       try {
         page = (await import(`${baseUrl}/pages${importPath}`)).default;
-        path = path.replace(langBase, "/en");
+        path = path.replace(langBase, "/en/");
       } catch (err) {
         page = notFound;
       }
@@ -94,7 +94,7 @@ export async function navigate(path, redirection = false) {
 
   if (redirection) {
     replacePath(path);
-  } else {
+  } else if (update) {
     updatePath(path);
   }
 }

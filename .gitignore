@@ -3,6 +3,7 @@
 !/.vscode/md-import.code-snippets
 !/.vscode/spellright.dict
 /dist
+/build
 node_modules
 /docs/material/*
 !/docs/material/README.md
