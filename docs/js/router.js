@@ -75,12 +75,12 @@ export async function navigate(path, redirection = false, update = true) {
 
   let page;
   try {
-    page = (await import(`${baseUrl}/pages${importPath}`)).default;
+    page = (await import(`${baseUrl}/views${importPath}`)).default;
   } catch (err) {
     if (lang !== "en") {
       importPath = importPath.replace(langBase, "/en/");
       try {
-        page = (await import(`${baseUrl}/pages${importPath}`)).default;
+        page = (await import(`${baseUrl}/views${importPath}`)).default;
         path = path.replace(langBase, "/en/");
       } catch (err) {
         page = notFound;
@@ -100,7 +100,6 @@ export async function navigate(path, redirection = false, update = true) {
 }
 
 document.body.addEventListener("click", (e) => {
-  //#region exclusions
   if (
     e.defaultPrevented ||
     e.button !== 0 ||
@@ -109,7 +108,6 @@ document.body.addEventListener("click", (e) => {
     e.shiftKey
   )
     return;
-  //#endregion exclusions
 
   const anchor = e.target;
 
@@ -117,7 +115,8 @@ document.body.addEventListener("click", (e) => {
     !anchor ||
     anchor.tagName !== "A" ||
     anchor.hasAttribute("download") ||
-    anchor.getAttribute("rel") === "external"
+    anchor.getAttribute("rel") === "external" ||
+    anchor.getAttribute("target") === "_blank"
   )
     return;
 

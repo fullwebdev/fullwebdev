@@ -11,9 +11,9 @@ program.parse(process.argv);
 (() => {
   watchOrBuild(
     program.watch,
-    path.resolve("./docs/"),
-    path.resolve("./build"),
-    ["pages/**/*.md"]
+    path.resolve("./docs/pages/"),
+    path.resolve("./build/views/"),
+    ["**/*.md"]
   );
   watchOrBuild(
     program.watch,

@@ -8,7 +8,7 @@
     "build:md": "node _scripts_/compile-md.js",
     "start:md": "npm run build:md -- --watch",
     "start": "npm run start:clean && concurrently \"npm:start:md\" \"npm:start:server\"",
-    "start:clean": "rimraf ./pages/*/*/*.js",
+    "start:clean": "rimraf ./views",
     "start:server": "es-dev-server",
     "start:build": "npm run build && es-dev-server --root-dir dist --app-index index.html --open --compatibility none"
   },
