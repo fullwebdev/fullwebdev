@@ -1,0 +1,7 @@
+{
+  "name": "livre-build",
+  "main": "index.js",
+  "dependencies": {
+    "static-auth": "^2.0.0"
+  }
+}

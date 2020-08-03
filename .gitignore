@@ -4,6 +4,7 @@
 !/.vscode/spellright.dict
 /dist
 /build
+/livre-build/public
 node_modules
 /docs/material/*
 !/docs/material/README.md

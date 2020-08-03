@@ -26,7 +26,7 @@
     "serve:docs": "http-server dist -o",
     "build:illustrations": "lerna run build --scope=@fullweb/illustrations",
     "prebuild:livre": "npm run build:illustrations",
-    "build:livre": "lerna run build:web --scope=@fullweb/livre-fr",
+    "build:livre": "rimraf ./livre-build/public/ && lerna run build:web --scope=@fullweb/livre-fr && mv ./packages/livre-fr/dist ./livre-build/public",
     "build:code-samples:index": "lerna run build:index --scope=@fullweb/code-samples",
     "commit": "commit",
     "lerna": "lerna",
