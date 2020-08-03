@@ -1,5 +1,13 @@
 main {
   padding-top: 3.6rem;
+}
+
+main:not(.fullwidth) {
   max-width: 740px;
   margin: 0 auto;
+}
+
+main.fullwidth {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
