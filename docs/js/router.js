@@ -1,7 +1,12 @@
 import { render } from "lit-html";
+import appShellTemplate from "../components/app-shell.js";
+import { sidebarState } from "./sidebar.js";
 
 const langBase = /\/(en|fr)\//;
 
+/**
+ * @type {'en' | 'fr'}
+ */
 let lang = "en";
 if (/^fr\b/.test(navigator.language)) {
   lang = "fr";
@@ -48,8 +53,14 @@ function replacePath(path) {
   }
 }
 
-function getPath() {
+export function getPath() {
   return window.location.pathname.replace(baseUrl, "") || "/";
+}
+
+export function getGenericPath() {
+  return (
+    window.location.pathname.replace(baseUrl, "").replace(langBase, "/") || "/"
+  );
 }
 
 const routeContainer = document.getElementById("router-outlet");
@@ -97,6 +108,13 @@ export async function navigate(path, redirection = false, update = true) {
   } else if (update) {
     updatePath(path);
   }
+
+  const genericPath = path.replace(langBase, "/");
+  sidebarState.updateThemeClass(genericPath);
+  render(
+    appShellTemplate({ path: genericPath, lang }),
+    document.getElementById("app-shell")
+  );
 }
 
 document.body.addEventListener("click", (e) => {
@@ -109,7 +127,7 @@ document.body.addEventListener("click", (e) => {
   )
     return;
 
-  const anchor = e.target;
+  const anchor = /** @type {HTMLLinkElement} */ (e.target);
 
   if (
     !anchor ||

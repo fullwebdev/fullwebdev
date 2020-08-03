@@ -48,4 +48,5 @@ async function copyJsViews(root, out) {
   );
 }
 
+//TODO: watch
 copyJsViews(path.resolve(program.root), path.resolve(program.out));

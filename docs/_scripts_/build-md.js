@@ -128,10 +128,7 @@ async function buildFile(filePath, root, outputDir, footer = true, cwd) {
   // TODO: minification
   const js = `
 import {html} from "lit-html";
-export default () => html\`
-<main class="page">
-${cleanOutput}${footerTemplate}
-</main>\`;
+export default () => html\`${cleanOutput}${footerTemplate}\`;
 `;
 
   const destFilePath = path

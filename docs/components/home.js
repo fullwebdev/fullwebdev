@@ -17,7 +17,8 @@ const feature = (data) => html`<div class="feature">
 /**
  * @param {HomeData} data
  */
-export default (data) => html` <style>
+export default (data) => html`
+  <style>
     .home {
       padding: 3.6rem 2rem 0;
       max-width: 960px;
@@ -133,31 +134,30 @@ export default (data) => html` <style>
       }
     }
   </style>
-  <main class="home" aria-labelledby="main-title">
-    <header class="hero">
-      <fwd-logo id="logo"></fwd-logo>
+  <header class="hero">
+    <fwd-logo id="logo"></fwd-logo>
 
-      <h1 id="main-title">
-        ${data.heroText}
-        <span style="display: block;">${data.heroSubText}</span>
-      </h1>
+    <h1 id="main-title">
+      ${data.heroText}
+      <span style="display: block;">${data.heroSubText}</span>
+    </h1>
 
-      <p class="description">
-        ${data.tagline}
-      </p>
+    <p class="description">
+      ${data.tagline}
+    </p>
 
-      <p class="action">
-        <a class="action-button button" href="./about/"
-          >${data.actionText} -&gt;</a
-        >
-      </p>
-    </header>
+    <p class="action">
+      <a class="action-button button" href="./about/"
+        >${data.actionText} -&gt;</a
+      >
+    </p>
+  </header>
 
-    <div class="features">
-      ${data.features ? data.features.map(feature) : ""}
-    </div>
+  <div class="features">
+    ${data.features ? data.features.map(feature) : ""}
+  </div>
 
-    <div class="footer">
-      ${data.footer}
-    </div>
-  </main>`;
+  <div class="footer">
+    ${data.footer}
+  </div>
+`;

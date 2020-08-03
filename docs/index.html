@@ -13,9 +13,13 @@
     <script src="js/app-shell.js" type="module"></script>
   </head>
   <body>
-    <div class="theme-container sidebar-open">
+    <div id="app-root" class="theme-container">
       <div id="app-shell"></div>
-      <div id="router-outlet"></div>
+      <main class="page">
+        <div class="theme-default-content content__default">
+          <div id="router-outlet"></div>
+        </div>
+      </main>
     </div>
     <script src="js/router.js" type="module"></script>
   </body>

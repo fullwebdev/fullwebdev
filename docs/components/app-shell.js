@@ -1,20 +1,148 @@
 import { html } from "lit-html";
+import { repeat } from "lit-html/directives/repeat.js";
+import { classMap } from "lit-html/directives/class-map.js";
+import { sidebarState } from "../js/sidebar";
 
-export default () => html` <header class="navbar">
-    <div class="sidebar-button">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-        role="img"
-        viewBox="0 0 448 512"
-        class="icon"
-      >
-        <path
-          fill="currentColor"
-          d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"
-        ></path>
-      </svg>
-    </div>
+/**
+ * @typedef {{text: {en: string, fr?: string}, link: string}} NavItem
+ */
+
+/**
+ * @param {NavItem & { lang: 'en' | 'fr', path?: string }} data
+ */
+const navLink = (data) => {
+  const classes = { "router-link-active": data.path === data.link };
+  return html`<div class="nav-item">
+    <a href=${data.link} class="nav-link ${classMap(classes)}">
+      ${data.text[data.lang]}
+    </a>
+  </div>`;
+};
+
+/**
+ * @param {NavItem & { lang: 'en' | 'fr', path?: string }} data
+ */
+const sidebarLink = (data) => {
+  const classes = { active: data.path === data.link };
+  return html`<li>
+    <a
+      href=${data.link}
+      aria-current="page"
+      class="sidebar-link ${classMap(classes)}"
+    >
+      ${data.text[data.lang]}
+    </a>
+  </li>`;
+};
+
+const sidebarButton = html`<div
+  class="sidebar-button"
+  @click=${() => sidebarState.toggleSidebar()}
+>
+  <svg
+    class="icon"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    role="img"
+    viewBox="0 0 448 512"
+  >
+    <path
+      fill="currentColor"
+      d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"
+      class=""
+    />
+  </svg>
+</div>`;
+
+/**
+ * @type {NavItem[]}
+ */
+const navbar = [
+  {
+    text: {
+      en: "Home",
+      fr: "Accueil",
+    },
+    link: "/",
+  },
+  {
+    text: {
+      en: "About",
+      fr: "À propos",
+    },
+    link: "/about/",
+  },
+];
+
+/**
+ * @type {NavItem[]}
+ */
+const sidebar = [
+  {
+    text: {
+      en: "About",
+      fr: "À propos",
+    },
+    link: "/about/",
+  },
+  {
+    text: {
+      en: "Conferences",
+      fr: "Conférences",
+    },
+    link: "/conferences/",
+  },
+  {
+    text: {
+      en: "Code Samples",
+      fr: "Code & Démos",
+    },
+    link: "/code-samples/",
+  },
+  {
+    text: {
+      en: "Codelabs",
+      fr: "Codelabs",
+    },
+    link: "/codelabs/",
+  },
+  {
+    text: {
+      en: "Inventory",
+      fr: "Inventaire",
+    },
+    link: "/inventory/",
+  },
+  {
+    text: {
+      en: "Instructional Materials",
+      fr: "Fragments pédagogiques",
+    },
+    link: "/materials/",
+  },
+  {
+    text: {
+      en: "Flashcards",
+      fr: "Flashcards",
+    },
+    link: "/flashcards/",
+  },
+];
+
+const githubLink = () => html` <a
+  href="https://github.com/fullwebdev/fullwebdev"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="repo-link"
+>
+  GitHub
+</a>`;
+
+/**
+ * @param {{ lang: "en" | "fr"; path?: string; }} data
+ */
+export default (data) => html` <header class="navbar">
+    ${sidebarButton}
     <a class="nav-link" href="/">
       <img
         src="/images/favicon/icon-384x384.png"
@@ -23,178 +151,31 @@ export default () => html` <header class="navbar">
       />
       <span class="site-name can-hide">FullWeb.dev</span>
     </a>
-    <aside class="sidebar">
-      <nav class="nav-links">
-        <div class="nav-item">
-          <a href="/" class="nav-link">
-            Home
-          </a>
-        </div>
-        <div class="nav-item">
-          <a
-            href="/about/"
-            class="nav-link router-link-exact-active router-link-active"
-            aria-current="page"
-          >
-            About
-          </a>
-        </div>
-        <!-- <div class="nav-item">
-          <div class="dropdown-wrapper">
-            <button type="button" aria-label="Languages" class="dropdown-title">
-              <span class="title">Languages</span> <span class="arrow right"></span>
-            </button>
-            <ul class="nav-dropdown" style="display: none;">
-              <li class="dropdown-item">
-                <a href="/about/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
-                  English
-                </a>
-              </li>
-              <li class="dropdown-item">
-                <a href="/fr/about/" class="nav-link">
-                  Français
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div> -->
-        <a
-          href="https://github.com/fullwebdev/fullwebdev"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="repo-link"
-        >
-          GitHub
-        </a>
-      </nav>
-      <ul class="sidebar-links">
-        <li><a href="/" aria-current="page" class="sidebar-link">Home</a></li>
-        <li>
-          <a href="/about/" class="active sidebar-link" aria-current="page"
-            >Introduction</a
-          >
-        </li>
-        <li>
-          <a href="/conferences/" class="sidebar-link"
-            >Conferences &amp; Events</a
-          >
-        </li>
-        <li><a href="/codelabs/" class="sidebar-link">Codelabs</a></li>
-        <li><a href="/inventory/" class="sidebar-link">Inventory</a></li>
-        <li><a href="/flashcards/" class="sidebar-link">Flashcards</a></li>
-        <li><a href="/material/" class="sidebar-link">Material</a></li>
-      </ul>
-    </aside>
     <div class="links" style="max-width: 1553px;">
       <nav class="nav-links can-hide">
-        <div class="nav-item">
-          <a href="/" class="nav-link">
-            Home
-          </a>
-        </div>
-        <div class="nav-item">
-          <a
-            href="/about/"
-            class="nav-link router-link-exact-active router-link-active"
-            aria-current="page"
-          >
-            About
-          </a>
-        </div>
-        <!-- <div class="nav-item">
-              <div class="dropdown-wrapper">
-                <button type="button" aria-label="Languages" class="dropdown-title">
-                  <span class="title">Languages</span> <span class="arrow right"></span>
-                </button>
-                <ul class="nav-dropdown" style="display: none;">
-                  <li class="dropdown-item">
-                    <a href="/en/about/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
-                      English
-                    </a>
-                  </li>
-                  <li class="dropdown-item">
-                    <a href="/fr/about/" class="nav-link">
-                      Français
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div> -->
-        <a
-          href="https://github.com/fullwebdev/fullwebdev"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="repo-link"
-        >
-          GitHub
-        </a>
+        ${repeat(
+          navbar,
+          (item) => item.link,
+          (item) => navLink({ ...item, ...data })
+        )}
+        ${githubLink()}
       </nav>
     </div>
   </header>
   <aside class="sidebar">
     <nav class="nav-links">
-      <div class="nav-item">
-        <a href="/" class="nav-link">
-          Home
-        </a>
-      </div>
-      <div class="nav-item">
-        <a
-          href="/about/"
-          class="nav-link router-link-exact-active router-link-active"
-          aria-current="page"
-        >
-          About
-        </a>
-      </div>
-      <div class="nav-item">
-        <div class="dropdown-wrapper">
-          <button type="button" aria-label="Languages" class="dropdown-title">
-            <span class="title">Languages</span>
-            <span class="arrow right"></span>
-          </button>
-          <ul class="nav-dropdown" style="display: none;">
-            <li class="dropdown-item">
-              <a
-                href="/about/"
-                aria-current="page"
-                class="nav-link router-link-exact-active router-link-active"
-              >
-                English
-              </a>
-            </li>
-            <li class="dropdown-item">
-              <a href="/fr/about/" class="nav-link">
-                Français
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <a
-        href="https://github.com/fullwebdev/fullwebdev"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="repo-link"
-      >
-        GitHub
-      </a>
+      ${repeat(
+        navbar,
+        (item) => item.link,
+        (item) => navLink({ ...item, ...data })
+      )}
+      ${githubLink()}
     </nav>
     <ul class="sidebar-links">
-      <li><a href="/" aria-current="page" class="sidebar-link">Home</a></li>
-      <li>
-        <a href="/about/" class="active sidebar-link" aria-current="page"
-          >Introduction</a
-        >
-      </li>
-      <li>
-        <a href="/conferences/" class="sidebar-link"
-          >Conferences &amp; Events</a
-        >
-      </li>
-      <li><a href="/codelabs/" class="sidebar-link">Codelabs</a></li>
-      <li><a href="/inventory/" class="sidebar-link">Inventory</a></li>
-      <li><a href="/flashcards/" class="sidebar-link">Flashcards</a></li>
-      <li><a href="/material/" class="sidebar-link">Material</a></li>
+      ${repeat(
+        sidebar,
+        (item) => item.link,
+        (item) => sidebarLink({ ...item, ...data })
+      )}
     </ul>
   </aside>`;
