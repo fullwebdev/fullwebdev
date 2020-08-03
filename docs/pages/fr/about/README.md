@@ -2,7 +2,7 @@
 
 Ce site web et les divers contenus associés sont actuellement en cours de développement.
 
-Je travaille actuellement intensivement à la production de ce nouveau contenu. Cependant, et contrairement à mes habitudes, il ne me sera pas possible de délivrer publiquement celui-ci au fur et à mesure de mon avancement, à l'exception de certaines parties open source que vous retrouverez à la section ["éléments"](/material/). Ces derniers sont cependant délivrés sans autre contexte, et sont donc surtout destinés à être employés avec mon assistance directe dans le cadre de mon travail.
+Je travaille actuellement intensivement à la production de ce nouveau contenu. Cependant, et contrairement à mes habitudes, il ne me sera pas possible de délivrer publiquement celui-ci au fur et à mesure de mon avancement, à l'exception de certaines parties open source que vous retrouverez à la section [Fragments pédagogiques](/materials/). Ces derniers sont cependant délivrés sans autre contexte, et sont donc surtout destinés à être employés avec mon assistance directe dans le cadre de mon travail.
 
 Afin de rester informé de toute future évolution, vous pouvez souscrire aux parutions de nouvelles versions [sur GitHub](https://github.com/fullwebdev/fullwebdev) (`Watch > releases only`) ainsi que me suivre sur [Twitter](https://twitter.com/noel_mace).
 

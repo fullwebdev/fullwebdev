@@ -30,4 +30,4 @@ En voici les grands thèmes, systématiquement décorrélés d'un framework ou d
 _Pour l'instant, seule une partie de ces élément est publiquement disponible, sur <https://fullweb.dev> :_
 
 - _[liste de mes précédentes confs](https://fullweb.dev/conferences/)_
-- _[code et images extrais de la base de connaissance](https://fullweb.dev/fr/material/)_
+- _[code et images extrais de la base de connaissance](https://fullweb.dev/fr/materials/)_
