@@ -1,10 +1,6 @@
-## Introduction
+# FullWeb.dev - Code Samples
 
-1. [Single Page Applications](minimal-spa/1-fundamentals)
-
-## Essential Parts
-
-### Components
+## Components
 
 1. Intro
    - [JQuery Plugin](components/jquery/range-slider.html)
@@ -29,7 +25,7 @@
    - [With lit-html](components/function/with-lit-html.html)
      (not pure)
 
-#### Web Components
+## Web Components
 
 1. Custom Elements
    - [autonomous](components/custom-elements/autonomous/hello-world.html)
@@ -57,31 +53,32 @@
    - [basics](components/slot/basics/index.html)
    - [named slots](components/slot/named/index.html)
 
-### Routing
+## Routing
 
-1. [Location API](minimal-spa/2-location/)
+1. [Single Page Applications](minimal-spa/1-fundamentals/index.html)
+1. [Location API](minimal-spa/2-location/index.html)
 1. HashRoute
-   - [Update](minimal-spa/3-hashroute/update/)
-   - [Replace](minimal-spa/3-hashroute/replace/)
-1. [History API](minimal-spa/4-history-api/)
+   - [Update](minimal-spa/3-hashroute/update/index.html)
+   - [Replace](minimal-spa/3-hashroute/replace/index.html)
+1. [History API](minimal-spa/4-history-api/index.html)
 1. Routes
-   - [asynchronous](minimal-spa/5-routes/1-async/) (bad
-     practice)
-   - [synchronous](minimal-spa/5-routes/2-sync)
-   - [redirect](minimal-spa/5-routes/3-redirect)
+   - [asynchronous](minimal-spa/5-routes/1-async/index.html)
+     (bad practice)
+   - [synchronous](minimal-spa/5-routes/2-sync/index.html)
+   - [redirect](minimal-spa/5-routes/3-redirect/index.html)
 1. Data
-   - [route parameters](minimal-spa/6-data/1-route-params)
-   - [route parameters with path-to-regexp](minimal-spa/6-data/1b-path-to-regexp)
-   - [query parameters](minimal-spa/6-data/2-query-params)
-   - [history state](minimal-spa/6-data/3-history-state)
+   - [route parameters](minimal-spa/6-data/1-route-params/index.html)
+   - [route parameters with path-to-regexp](minimal-spa/6-data/1b-path-to-regexp/index.html)
+   - [query parameters](minimal-spa/6-data/2-query-params/index.html)
+   - [history state](minimal-spa/6-data/3-history-state/index.html)
 1. Navigation
-   - [`onclick` callback](minimal-spa/7-navigation/1-callback)
-   - [global handling](minimal-spa/7-navigation/2-global)
+   - [`onclick` callback](minimal-spa/7-navigation/1-callback/index.html)
+   - [global handling](minimal-spa/7-navigation/2-global/index.html)
 
-### Rendering
+## Rendering
 
 1. Introduction
-   - [Network limitations](rendering/limitations/network/scripts/)
+   - [Network limitations](rendering/limitations/network/scripts/index.html)
    - [Performance API](rendering/performance-api/index.html)
    - [DOM Freeze](rendering/limitations/dom-api/heavy-rendering/index.html)
 1. create elements
