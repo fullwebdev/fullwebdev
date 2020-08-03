@@ -12,7 +12,7 @@ WARNING="<!--
 "
 
 function build_index() {
-  HTML=$(pandoc -s src/README.md -t html --metadata title="Modern Web Apps - Demos")
+  HTML=$(pandoc -s -t html5 -r markdown+yaml_metadata_block src/README.md)
 
   echo -e "${WARNING}${HTML}" > src/index.html
 }

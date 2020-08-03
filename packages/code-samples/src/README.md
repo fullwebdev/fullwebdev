@@ -1,4 +1,6 @@
-# FullWeb.dev - Code Samples
+---
+title: "Code Samples"
+---
 
 ## Components
 
