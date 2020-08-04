@@ -1,0 +1,9 @@
+.nav-links a:hover,
+.nav-links a.router-link-active {
+  color: #2c3e50;
+}
+.nav-item > a:not(.external):hover,
+.nav-item > a:not(.external).router-link-active {
+  margin-bottom: -2px;
+  border-bottom: 2px solid #3389f9;
+}

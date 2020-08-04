@@ -1,7 +1,0 @@
-main.fullwidth {
-  max-width: none;
-}
-
-main.fullwidth .theme-default-content:not(.custom) {
-  max-width: none;
-}

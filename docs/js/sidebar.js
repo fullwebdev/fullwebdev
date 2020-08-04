@@ -29,6 +29,8 @@ class SidebarState {
       } else {
         appRoot.classList.remove("no-navbar", "no-sidebar");
       }
+      appRoot.classList.remove("sidebar-open");
+      this.isSidebarOpen = false;
     }
     const main = appRoot.querySelector("main");
     if (main) {

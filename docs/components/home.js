@@ -96,7 +96,7 @@ class FwdLogo extends HTMLElement {
           position: relative;
           width: 100px;
           height: 100px;
-          /* animation: spin 40s infinite linear; */
+          animation: spin 40s infinite linear;
           transform-style: preserve-3d;
         }
 
