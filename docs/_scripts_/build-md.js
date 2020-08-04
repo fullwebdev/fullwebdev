@@ -139,7 +139,7 @@ export default () => html\`${cleanOutput}${footerTemplate}\`;
     .join(".")
     .concat(".js");
   await fs.createFile(destFilePath);
-  console.log(destFilePath);
+  console.log(`[build] ${destFilePath} built`);
   await writeFile(destFilePath, js, {
     encoding: "utf8",
   });
@@ -157,7 +157,6 @@ async function buildDirs(globs, root, outputDir, cwd) {
     paths.map(async (filePath) => {
       const stat = await fs.lstat(filePath);
       if (stat.isFile() && path.extname(filePath) === ".md") {
-        console.log(`build: ${filePath}`);
         await buildFile(filePath, root, outputDir, true, cwd);
       } else {
         console.warn(`wrong file: `);
@@ -174,17 +173,29 @@ async function buildDirs(globs, root, outputDir, cwd) {
  */
 async function watchOrBuild(watch = false, rootDir, outputDir, src, cwd) {
   if (watch) {
-    console.log(`watching ${src}`);
+    console.log(`[build] watching ${src}`);
     const watcher = chokidar.watch(src, { cwd: rootDir });
     const log = console.log.bind(console);
     watcher
-      .on("ready", () => log("Initial scan complete. Ready for changes"))
+      .on("ready", () =>
+        log("[build] Initial scan complete. Ready for changes")
+      )
       .on("add", (filePath) => {
-        log(`File ${path.relative(process.cwd(), filePath)} has been added`);
+        log(
+          `[build] File ${path.relative(
+            process.cwd(),
+            filePath
+          )} has been added`
+        );
         buildFile(filePath, rootDir, outputDir, true, cwd);
       })
       .on("change", (filePath) => {
-        log(`File ${path.relative(process.cwd(), filePath)} has been changed`);
+        log(
+          `[build] File ${path.relative(
+            process.cwd(),
+            filePath
+          )} has been changed`
+        );
         buildFile(filePath, rootDir, outputDir, true, cwd);
       })
       .on("unlink", (filePath) => {
