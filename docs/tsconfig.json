@@ -11,5 +11,9 @@
     "noImplicitThis": true,
     "alwaysStrict": true,
     "esModuleInterop": true
-  }
+  },
+  "exclude": [
+    "views",
+    "build"
+  ]
 }
