@@ -12,6 +12,7 @@
   "mount": {},
   "proxy": {},
   "plugins": [
+    "./minify-html-literals.snowpack.js",
     ["@snowpack/plugin-build-script", {"cmd": "postcss", "input": [".css"], "output": [".css"]}]
   ],
   "installOptions": {},
