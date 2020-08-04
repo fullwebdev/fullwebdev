@@ -1,5 +1,3 @@
-import { getGenericPath } from "./router";
-
 class SidebarState {
   constructor() {
     this.isSidebarOpen = false;

@@ -12,6 +12,7 @@ import { sidebarState } from "../js/sidebar";
  */
 const navLink = (data) => {
   const classes = { "router-link-active": data.path === data.link };
+
   return html`<div class="nav-item">
     <a href=${data.link} class="nav-link ${classMap(classes)}">
       ${data.text[data.lang]}
@@ -24,6 +25,7 @@ const navLink = (data) => {
  */
 const sidebarLink = (data) => {
   const classes = { active: data.path === data.link };
+
   return html`<li>
     <a
       href=${data.link}

@@ -32,6 +32,7 @@ const baseUrl = (() => {
     return "";
   }
   const path = new URL(document.baseURI).pathname;
+
   return path.replace(/\/$/, "");
 })();
 
@@ -124,8 +125,9 @@ document.body.addEventListener("click", (e) => {
     e.metaKey ||
     e.ctrlKey ||
     e.shiftKey
-  )
+  ) {
     return;
+  }
 
   const anchor = /** @type {HTMLLinkElement} */ (e.target);
 
@@ -135,14 +137,19 @@ document.body.addEventListener("click", (e) => {
     anchor.hasAttribute("download") ||
     anchor.getAttribute("rel") === "external" ||
     anchor.getAttribute("target") === "_blank"
-  )
+  ) {
     return;
+  }
 
-  let href = anchor.href;
+  const href = anchor.href;
 
-  if (!href || href.includes("mailto:")) return;
+  if (!href || href.includes("mailto:")) {
+    return;
+  }
 
-  if (!href.startsWith(window.location.origin)) return;
+  if (!href.startsWith(window.location.origin)) {
+    return;
+  }
 
   e.preventDefault();
   if (`${baseUrl}${href}` !== window.location.href) {
@@ -150,7 +157,7 @@ document.body.addEventListener("click", (e) => {
   }
 });
 
-window.onpopstate = (event) => {
+window.onpopstate = () => {
   navigate(getPath());
 };
 
