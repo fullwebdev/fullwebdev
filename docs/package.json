@@ -10,7 +10,7 @@
     "start:md": "npm run build:md -- --watch",
     "start": "concurrently \"npm:start:md\" \"npm:start:server\"",
     "start:server": "snowpack dev",
-    "start:build:server": "ws --spa index.html -d build --http2",
+    "start:build:server": "ws --spa index.html -d build --http2 --compress",
     "start:build": "npm run build && npm run start:build:server",
     "lint": "eslint \"{pages,js,components}/**/*.js\""
   },

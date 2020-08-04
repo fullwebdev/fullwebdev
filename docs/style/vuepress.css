@@ -10,7 +10,7 @@
   color: #ec5975;
 }
 .theme-default-content code .token.inserted {
-  color: #217ff9;
+  color: #006dfb;
 }
 .theme-default-content pre,
 .theme-default-content pre[class*="language-"] {
@@ -370,12 +370,12 @@ body {
 }
 a {
   font-weight: 500;
-  color: #217ff9;
+  color: #006dfb;
   text-decoration: none;
 }
 p a code {
   font-weight: 400;
-  color: #217ff9;
+  color: #006dfb;
 }
 kbd {
   background: #eee;

@@ -146,12 +146,7 @@ const githubLink = () => html` <a
 export default (data) => html` <header class="navbar">
     ${sidebarButton}
     <a class="nav-link" href="/">
-      <img
-        src="/images/favicon/icon-384x384.png"
-        alt="FullWeb.dev"
-        class="logo"
-      />
-      <span class="site-name can-hide">FullWeb.dev</span>
+      <span class="site-name">FullWeb.dev</span>
     </a>
     <div class="links" style="max-width: 1553px;">
       <nav class="nav-links can-hide">

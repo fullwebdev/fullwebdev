@@ -64,12 +64,12 @@ a.sidebar-link {
   box-sizing: border-box;
 }
 a.sidebar-link:hover {
-  color: #217ff9;
+  color: #006dfb;
 }
 a.sidebar-link.active {
   font-weight: 600;
-  color: #217ff9;
-  border-left-color: #217ff9;
+  color: #006dfb;
+  border-left-color: #006dfb;
 }
 .sidebar-group a.sidebar-link {
   padding-left: 2rem;
@@ -134,11 +134,11 @@ a.sidebar-link.active {
 }
 .sidebar-heading.clickable.active {
   font-weight: 600;
-  color: #217ff9;
-  border-left-color: #217ff9;
+  color: #006dfb;
+  border-left-color: #006dfb;
 }
 .sidebar-heading.clickable:hover {
-  color: #217ff9;
+  color: #006dfb;
 }
 .sidebar-group-items {
   transition: height 0.1s ease-out;
