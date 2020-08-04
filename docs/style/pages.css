@@ -4,22 +4,6 @@
 .theme-default-content:not(.custom) a:hover {
   text-decoration: underline;
 }
-.theme-default-content:not(.custom) p.demo {
-  padding: 1rem 1.5rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-.theme-default-content:not(.custom) img {
-  max-width: 100%;
-}
-.theme-default-content.custom {
-  padding: 0;
-  margin: 0;
-}
-.theme-default-content.custom img {
-  max-width: 100%;
-}
-
 blockquote {
   font-size: 1rem;
   color: #999;
@@ -37,47 +21,6 @@ ol {
 strong {
   font-weight: 600;
 }
-
-.theme-default-content:not(.custom) > h1,
-.theme-default-content:not(.custom) > h2,
-.theme-default-content:not(.custom) > h3,
-.theme-default-content:not(.custom) > h4,
-.theme-default-content:not(.custom) > h5,
-.theme-default-content:not(.custom) > h6 {
-  margin-top: -3.1rem;
-  padding-top: 4.6rem;
-  margin-bottom: 0;
-}
-.theme-default-content:not(.custom) > h1:first-child,
-.theme-default-content:not(.custom) > h2:first-child,
-.theme-default-content:not(.custom) > h3:first-child,
-.theme-default-content:not(.custom) > h4:first-child,
-.theme-default-content:not(.custom) > h5:first-child,
-.theme-default-content:not(.custom) > h6:first-child {
-  margin-top: -1.5rem;
-  margin-bottom: 1rem;
-}
-.theme-default-content:not(.custom) > h1:first-child + p,
-.theme-default-content:not(.custom) > h2:first-child + p,
-.theme-default-content:not(.custom) > h3:first-child + p,
-.theme-default-content:not(.custom) > h4:first-child + p,
-.theme-default-content:not(.custom) > h5:first-child + p,
-.theme-default-content:not(.custom) > h6:first-child + p,
-.theme-default-content:not(.custom) > h1:first-child + pre,
-.theme-default-content:not(.custom) > h2:first-child + pre,
-.theme-default-content:not(.custom) > h3:first-child + pre,
-.theme-default-content:not(.custom) > h4:first-child + pre,
-.theme-default-content:not(.custom) > h5:first-child + pre,
-.theme-default-content:not(.custom) > h6:first-child + pre,
-.theme-default-content:not(.custom) > h1:first-child + .custom-block,
-.theme-default-content:not(.custom) > h2:first-child + .custom-block,
-.theme-default-content:not(.custom) > h3:first-child + .custom-block,
-.theme-default-content:not(.custom) > h4:first-child + .custom-block,
-.theme-default-content:not(.custom) > h5:first-child + .custom-block,
-.theme-default-content:not(.custom) > h6:first-child + .custom-block {
-  margin-top: 2rem;
-}
-
 code,
 kbd,
 .line-number {
@@ -113,23 +56,12 @@ td {
 .theme-container.sidebar-open .sidebar-mask {
   display: block;
 }
-.theme-container.no-navbar .theme-default-content:not(.custom) > h1,
-.theme-container.no-navbar h2,
-.theme-container.no-navbar h3,
-.theme-container.no-navbar h4,
-.theme-container.no-navbar h5,
-.theme-container.no-navbar h6 {
-  margin-top: 1.5rem;
-  padding-top: 0;
-}
 .theme-container.no-navbar .sidebar {
   top: 0;
 }
-
 .page {
   padding-left: 20rem;
 }
-
 .page-edit {
   max-width: 740px;
   margin: 0 auto;

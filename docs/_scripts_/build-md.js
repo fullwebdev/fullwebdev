@@ -74,6 +74,16 @@ async function buildFile(filePath, root, outputDir, footer = true, cwd) {
       "html",
       "-F",
       "pandoc-import-code",
+      "--lua-filter",
+      path.resolve(
+        __dirname,
+        "..",
+        "..",
+        "scripts",
+        "pandoc-filters",
+        "standard-code.lua"
+      ),
+      "--no-highlight",
     ],
     cwd
   );
@@ -83,10 +93,7 @@ async function buildFile(filePath, root, outputDir, footer = true, cwd) {
     return;
   }
 
-  const cleanOutput = output
-    .replace(/>\s+</g, "><")
-    .replace(/\n/g, "")
-    .replace(/`/g, "\\`");
+  const cleanOutput = output.replace(/`/g, "\\`");
   const relativeRoot = path.relative(root, filePath);
 
   let footerTemplate = "";
@@ -128,7 +135,11 @@ async function buildFile(filePath, root, outputDir, footer = true, cwd) {
   // TODO: minification
   const js = `
 import {html} from "lit-html";
-export default () => html\`${cleanOutput}${footerTemplate}\`;
+
+export default () => html\`
+  ${cleanOutput}
+  ${footerTemplate}
+\`;
 `;
 
   const destFilePath = path

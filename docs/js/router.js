@@ -1,6 +1,7 @@
 import { render } from "lit-html";
 import appShellTemplate from "../components/app-shell.js";
 import { sidebarState } from "./sidebar.js";
+import Prism from "prismjs";
 
 const langBase = /\/(en|fr)\//;
 
@@ -116,6 +117,11 @@ export async function navigate(path, redirection = false, update = true) {
     appShellTemplate({ path: genericPath, lang }),
     document.getElementById("app-shell")
   );
+
+  const codes = routeContainer.querySelectorAll(`pre code[class*="language-"]`);
+  for (let i = 0; i < codes.length; i++) {
+    Prism.highlightElement(codes[i]);
+  }
 }
 
 document.body.addEventListener("click", (e) => {

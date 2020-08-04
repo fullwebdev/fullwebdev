@@ -1,3 +1,5 @@
+@import "prismjs/themes/prism-tomorrow.css";
+
 .theme-default-content code {
   color: #476582;
   padding: 0.25rem 0.5rem;
@@ -194,4 +196,3 @@ div[class~="language-bash"]:before {
 div[class~="language-php"]:before {
   content: "php";
 }
-@import "~prismjs/themes/prism-tomorrow.css";
