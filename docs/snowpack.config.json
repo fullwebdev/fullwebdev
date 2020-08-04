@@ -1,0 +1,20 @@
+{
+  "install": ["lit-html"],
+  "exclude": [
+    "**/node_modules/**/*",
+    "**/__tests__/*",
+    "**/*.@(spec|test).js",
+    "_scripts_/**/*",
+    ".vuepress/**/*",
+    "pages/**/*",
+    "*.!(html)"
+  ],
+  "mount": {},
+  "proxy": {},
+  "plugins": [],
+  "installOptions": {},
+  "devOptions": {},
+  "buildOptions": {
+    "clean": true
+  }
+}

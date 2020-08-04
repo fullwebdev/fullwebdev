@@ -3,14 +3,15 @@
   "version": "0.8.0",
   "private": true,
   "scripts": {
-    "build": "npm run build:clean && npm run build:md && rollup -c rollup.config.js",
-    "build:clean": "rimraf dist",
-    "build:md": "node _scripts_/compile-md.js",
+    "build": "npm run build:md && npm run build:pack",
+    "prebuild:md": "rimraf views",
+    "build:md": "node _scripts_/main.js",
+    "build:pack": "snowpack build",
     "start:md": "npm run build:md -- --watch",
-    "start": "npm run start:clean && concurrently \"npm:start:md\" \"npm:start:server\"",
-    "start:clean": "rimraf ./views",
-    "start:server": "es-dev-server",
-    "start:build": "npm run build && es-dev-server --root-dir dist --app-index index.html --open --compatibility none"
+    "start": "concurrently \"npm:start:md\" \"npm:start:server\"",
+    "start:server": "snowpack dev",
+    "start:build:server": "ws --spa index.html -d build --http2",
+    "start:build": "npm run build && npm run start:build:server"
   },
   "repository": {
     "type": "git",
@@ -22,16 +23,14 @@
     "url": "https://github.com/fullwebdev/fullwebdev/issues"
   },
   "devDependencies": {
-    "@open-wc/building-rollup": "^1.0.0",
     "chokidar": "^3.4.1",
     "commander": "^6.0.0",
     "concurrently": "^5.2.0",
-    "es-dev-server": "^1.57.1",
+    "local-web-server": "^4.2.1",
     "rimraf": "^2.6.3",
-    "rollup": "^2.3.4"
+    "snowpack": "^2.7.5"
   },
   "dependencies": {
-    "lit-html": "^1.2.1",
-    "vuepress": "^1.5.2"
+    "lit-html": "^1.2.1"
   }
 }
