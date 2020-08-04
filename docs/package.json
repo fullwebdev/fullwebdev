@@ -11,7 +11,8 @@
     "start": "concurrently \"npm:start:md\" \"npm:start:server\"",
     "start:server": "snowpack dev",
     "start:build:server": "ws --spa index.html -d build --http2",
-    "start:build": "npm run build && npm run start:build:server"
+    "start:build": "npm run build && npm run start:build:server",
+    "lint": "eslint \"{pages,js,components}/**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,9 @@
     "chokidar": "^3.4.1",
     "commander": "^6.0.0",
     "concurrently": "^5.2.0",
+    "eslint": "^7.6.0",
+    "eslint-plugin-compat": "^3.8.0",
+    "eslint-plugin-import": "^2.22.0",
     "local-web-server": "^4.2.1",
     "rimraf": "^2.6.3",
     "snowpack": "^2.7.5"
