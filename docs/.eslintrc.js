@@ -17,8 +17,7 @@ module.exports = {
     ".vuepress/",
     "node_modules/",
     "build/",
-    ".eslintrc.js",
-    "es-dev-server.config.js",
+    "/*.js",
   ],
   rules: {
     "no-console": "error",

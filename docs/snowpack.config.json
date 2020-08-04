@@ -11,7 +11,9 @@
   ],
   "mount": {},
   "proxy": {},
-  "plugins": [],
+  "plugins": [
+    ["@snowpack/plugin-build-script", {"cmd": "postcss", "input": [".css"], "output": [".css"]}]
+  ],
   "installOptions": {},
   "devOptions": {},
   "buildOptions": {
