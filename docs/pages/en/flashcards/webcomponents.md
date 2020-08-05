@@ -224,9 +224,9 @@ This is specific to CE and required by the spec.
 
 > **references**
 >
-> - [Using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)
->   by [Mozilla Contributors](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements$history)
-> - [Custom Elements v1](https://developers.google.com/web/fundamentals/web-components/customelements)
+> - [Using custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_js/components/Using_custom_elements)
+>   by [Mozilla Contributors](https://developer.mozilla.org/en-US/docs/Web/Web_js/components/Using_custom_elements$history)
+> - [Custom Elements v1](https://developers.google.com/web/fundamentals/web-js/components/customelements)
 >   by [Eric Bidelman](https://developers.google.com/web/resources/contributors/ericbidelman), Google
 
 ## Templates & Slots
@@ -324,7 +324,7 @@ Portions of this flashcards are modifications based on:
 
 - most previously noticed _references_
 - [The HTML Living Standard](https://html.spec.whatwg.org/) by the WHATWG (Apple, Google, Mozilla, Microsoft) ([CC BY 4.0][by4])
-- [Building Components](https://developers.google.com/web/fundamentals/web-components/) by Google ([CC BY 4.0][by4])
+- [Building Components](https://developers.google.com/web/fundamentals/web-js/components/) by Google ([CC BY 4.0][by4])
 - [The MDN Web Docs](https://developer.mozilla.org/en-US/) by Mozilla Contributors ([CC BY-SA 2.5][bysa25])
 
 Copyright © 2019 Noël Macé (noelmace.com). This work is licensed under a

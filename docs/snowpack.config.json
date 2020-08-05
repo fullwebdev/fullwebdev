@@ -9,7 +9,10 @@
     "pages/**/*",
     "*.!(html)"
   ],
-  "mount": {},
+  "mount": {
+    "./": "/",
+    "assets": "/"
+  },
   "proxy": {},
   "plugins": [
     "./minify-html-literals.snowpack.js",

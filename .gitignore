@@ -6,9 +6,9 @@ dist/
 build/
 /livre-build/public
 node_modules
-/docs/material/*
-!/docs/material/README.md
-/docs/fr/material/*
+/docs/pages/en/material/*
+!/docs/pages/en/material/README.md
+/docs/pages/fr/material/*
 !/docs/fr/material/README.md
 /docs/.vuepress/public/graphs
 /docs/.vuepress/public/images

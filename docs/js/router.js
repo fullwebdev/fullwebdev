@@ -1,5 +1,5 @@
 import { render } from "lit-html";
-import appShellTemplate from "../components/app-shell.js";
+import appShellTemplate from "./components/app-shell.js";
 import { sidebarState } from "./sidebar.js";
 import Prism from "prismjs";
 

@@ -1,5 +1,5 @@
-import codesandbox from "../../../components/codesandbox.js";
-import pageFooter from "../../../components/page-footer.js";
+import codesandbox from "../../../js/components/codesandbox.js";
+import pageFooter from "../../../js/components/page-footer.js";
 import { html } from "lit-html";
 
 export default () => html`
