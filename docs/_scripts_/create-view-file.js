@@ -1,7 +1,6 @@
 const { writeFile } = require("fs").promises;
 const fs = require("fs-extra");
 const path = require("path");
-const { htmlToJs } = require("./html-to-js");
 
 /**
  * @param {string} pathToSrcFile

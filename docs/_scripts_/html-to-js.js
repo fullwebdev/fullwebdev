@@ -95,11 +95,16 @@ function pageFooter(filePath, editLink = true) {
  * @param {string} pathToSrcFile
  */
 function htmlToJs(html, pathToSrcFile, editLink = true) {
+  const cleanHtml = html
+    .split("`")
+    .map((text, i) => (i % 2 === 0 ? text : text.replace(/\$/g, "\\$")))
+    .join("\\`");
   return `
 import {html} from "lit-html";
 
 export default () => html\`
-  ${html.replace(/`/g, "\\`")}
+  ${cleanHtml}
+
   ${pageFooter(pathToSrcFile, editLink)}
 \`;
 `;

@@ -50,54 +50,52 @@ async function mdToHTMLByLang(filePath, root, cwd, extract = false) {
   cwd = cwd || root;
   filePath = path.resolve(root, filePath);
 
+  /**
+   * @type {string}
+   */
   let originalContent = fs.readFileSync(filePath, { encoding: "utf8" });
   if (!originalContent) {
     console.log(`can't read ${filePath} for materials extraction`);
     return;
   }
 
-  let contentByLang = ["all", originalContent];
+  let contentByLang = [["all", originalContent]];
   if (extract) {
     contentByLang = extractMaterials(originalContent);
   }
 
-  let rslt = [];
-  try {
-    rslt = await Promise.all(
-      contentByLang.map(async ([lang, content]) => {
-        const { output, errors } = await pandoc(
-          [
-            "-f",
-            "markdown+emoji",
-            "-t",
-            "html",
-            "-F",
-            "pandoc-import-code",
-            "--lua-filter",
-            fromRepoRoot("scripts", "pandoc-filters", "standard-code.lua"),
-            "--no-highlight",
-          ],
-          cwd,
-          content
-        );
-        if (errors) {
-          throw new Error(errors);
-        }
-        return [lang, output];
-      })
-    );
-  } catch (errors) {
-    console.error(
-      [
-        relativeToRepoRoot(filePath),
-        extract ? "direct" : "extracted",
-        `from: ${relativeToRepoRoot(cwd)}`,
-      ].join(" - ")
-    );
-    console.error(errors);
-  }
+  return Promise.all(
+    contentByLang.map(async ([lang, content]) => {
+      const { output, errors } = await pandoc(
+        [
+          "-f",
+          "markdown+emoji",
+          "-t",
+          "html",
+          "-F",
+          "pandoc-import-code",
+          "--lua-filter",
+          fromRepoRoot("scripts", "pandoc-filters", "standard-code.lua"),
+          "--no-highlight",
+        ],
+        cwd,
+        content
+      );
 
-  return rslt;
+      if (errors) {
+        console.warn(
+          [
+            relativeToRepoRoot(filePath),
+            extract ? "direct" : "extracted",
+            `from: ${relativeToRepoRoot(cwd)}`,
+          ].join(" - ")
+        );
+        console.warn(errors);
+      }
+
+      return [lang, output];
+    })
+  );
 }
 
 module.exports = { mdToHTMLByLang };

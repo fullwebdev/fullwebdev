@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "build": "npm run build:md && npm run build:pack",
+    "build:prod": "npm run build:md:prod && npm run build:pack",
     "build:all": "npm run build:all-pkgs && npm run build:pack",
     "prebuild:md": "rimraf views",
     "build:md": "node _scripts_/main.js",
+    "build:md:prod": "npm run build:md -- --materials",
     "build:all-pkgs": "npm run build:md -- --livre --materials",
     "build:pack": "snowpack build",
     "start:md": "npm run build:md -- --watch",

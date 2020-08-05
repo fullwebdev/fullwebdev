@@ -5,7 +5,7 @@
 -- from: https://github.com/a-vrma/pandoc-filters/blob/7d97589/dist/standard-code.lua
 -- see: https://github.com/jgm/pandoc/issues/3858#issuecomment-438457679
 
-local languages = {"abap","abnf","actionscript","ada","al","antlr4","apacheconf","apl","applescript","aql","arduino","arff","asciidoc","asm6502","aspnet","autohotkey","autoit","bash","basic","batch","bbcode","bison","bnf","brainfuck","brightscript","bro","c","cil","clike","clojure","cmake","coffeescript","concurnas","cpp","crystal","csharp","csp","css","css-extras","d","dart","dax","diff","django","dns-zone-file","docker","ebnf","eiffel","ejs","elixir","elm","erb","erlang","etlua","excel-formula","factor","firestore-security-rules","flow","fortran","fsharp","ftl","gcode","gdscript","gedcom","gherkin","git","glsl","gml","go","graphql","groovy","haml","handlebars","haskell","haxe","hcl","hlsl","hpkp","hsts","http","ichigojam","icon","iecst","inform7","ini","io","j","java","javadoc","javadoclike","javascript","javastacktrace","jolie","jq","js-extras","js-templates","jsdoc","json","json5","jsonp","jsx","julia","keyman","kotlin","latex","latte","less","lilypond","liquid","lisp","livescript","llvm","lolcode","lua","makefile","markdown","markup","markup-templating","matlab","mel","meta","mizar","monkey","moonscript","n1ql","n4js","nand2tetris-hdl","nasm","neon","nginx","nim","nix","nsis","objectivec","ocaml","opencl","oz","parigp","parser","pascal","pascaligo","pcaxis","peoplecode","perl","php","php-extras","phpdoc","plsql","powerquery","powershell","processing","prolog","properties","protobuf","pug","puppet","pure","purebasic","python","q","qml","qore","r","racket","reason","regex","renpy","rest","rip","roboconf","robotframework","ruby","rust","sas","sass","scala","scheme","scss","shell-session","smalltalk","smarty","solidity","solution-file","soy","sparql","splunk-spl","sqf","sql","stylus","swift","t4-cs","t4-templating","t4-vb","tap","tcl","textile","toml","tsx","tt2","turtle","twig","typescript","unrealscript","vala","vbnet","velocity","verilog","vhdl","vim","visual-basic","warpscript","wasm","wiki","xeora","xojo","xquery","yaml","zig","html","js"
+local languages = {"abap","abnf","actionscript","ada","al","antlr4","apacheconf","apl","applescript","aql","arduino","arff","asciidoc","asm6502","aspnet","autohotkey","autoit","bash","basic","batch","bbcode","bison","bnf","brainfuck","brightscript","bro","c","cil","clike","clojure","cmake","coffeescript","concurnas","cpp","crystal","csharp","csp","css","css-extras","d","dart","dax","diff","django","dns-zone-file","docker","ebnf","eiffel","ejs","elixir","elm","erb","erlang","etlua","excel-formula","factor","firestore-security-rules","flow","fortran","fsharp","ftl","gcode","gdscript","gedcom","gherkin","git","glsl","gml","go","graphql","groovy","haml","handlebars","haskell","haxe","hcl","hlsl","hpkp","hsts","http","ichigojam","icon","iecst","inform7","ini","io","j","java","javadoc","javadoclike","javascript","javastacktrace","jolie","jq","js-extras","js-templates","jsdoc","json","json5","jsonp","jsx","julia","keyman","kotlin","latex","latte","less","lilypond","liquid","lisp","livescript","llvm","lolcode","lua","makefile","markdown","markup","markup-templating","matlab","mel","meta","mizar","monkey","moonscript","n1ql","n4js","nand2tetris-hdl","nasm","neon","nginx","nim","nix","nsis","objectivec","ocaml","opencl","oz","parigp","parser","pascal","pascaligo","pcaxis","peoplecode","perl","php","php-extras","phpdoc","plsql","powerquery","powershell","processing","prolog","properties","protobuf","pug","puppet","pure","purebasic","python","q","qml","qore","r","racket","reason","regex","renpy","rest","rip","roboconf","robotframework","ruby","rust","sas","sass","scala","scheme","scss","shell-session","smalltalk","smarty","solidity","solution-file","soy","sparql","splunk-spl","sqf","sql","stylus","swift","t4-cs","t4-templating","t4-vb","tap","tcl","textile","toml","tsx","tt2","turtle","twig","typescript","unrealscript","vala","vbnet","velocity","verilog","vhdl","vim","visual-basic","warpscript","wasm","wiki","xeora","xojo","xquery","yaml","zig","html","js","ts"
 }
 
 
@@ -17,7 +17,7 @@ local function checkClassIsLanguage(name)
       return i
     end
   end
-  print("unknown" .. name .. "language");
+  io.stderr:write('unknow language ' .. name .. '\n')
   return -1
 end
 
@@ -51,6 +51,9 @@ local function getCodeClass(classes)
   local classIndex = -1
 
   for i, cl in ipairs(classes) do
+    if cl == 'mjs' then
+      cl = 'js'
+    end
     classIndex = checkClassIsLanguage(cl)
     if classIndex ~= -1 then
       return ' class="language-' .. table.remove(classes, i) .. '"'
