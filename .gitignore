@@ -3,7 +3,8 @@
 !/.vscode/md-import.code-snippets
 !/.vscode/spellright.dict
 dist/
-build/
+/build/
+/docs/build
 /livre-build/public
 node_modules
 /docs/pages/en/material/*
