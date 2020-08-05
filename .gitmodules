@@ -3,4 +3,4 @@
 	url = https://github.com/noelmace/livre-web-apps.git
 [submodule "packages/benchmark"]
 	path = packages/benchmark
-	url = https://@github.com/fullwebdev/benchmark.git
+	url = https://github.com/fullwebdev/benchmark.git

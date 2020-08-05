@@ -14,8 +14,8 @@ function filterFile() {
   const srcRoot = path.join(__dirname, "..", "packages", "livre-fr", "src");
 
   const dest = {
-    fr: path.join(__dirname, "..", "docs", "pages", "fr", "material"),
-    en: path.join(__dirname, "..", "docs", "pages", "en", "material"),
+    fr: path.join(__dirname, "..", "docs", "pages", "fr", "materials"),
+    en: path.join(__dirname, "..", "docs", "pages", "en", "materials"),
   };
 
   for (const lang in dest) {

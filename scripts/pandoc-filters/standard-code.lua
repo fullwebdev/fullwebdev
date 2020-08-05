@@ -17,7 +17,7 @@ local function checkClassIsLanguage(name)
       return i
     end
   end
-  print("unknown" + name + "language");
+  print("unknown" .. name .. "language");
   return -1
 end
 

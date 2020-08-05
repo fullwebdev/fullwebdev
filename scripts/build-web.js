@@ -19,7 +19,7 @@ program.parse(process.argv);
     watchOrBuild(
       program.watch,
       path.resolve("./packages/livre-fr/src/"),
-      path.resolve("./build/pages/fr/livre/"),
+      path.resolve("./views/fr/livre/"),
       ["[0-9]-**/!(TITLE).md"],
       path.resolve("./packages/livre-fr/")
     );
