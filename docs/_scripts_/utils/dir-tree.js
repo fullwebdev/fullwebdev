@@ -41,7 +41,6 @@ function readDirTree(root, ext) {
   };
 
   const rslt = /** @type {DirTree} */ (recurse(root));
-  console.log(rslt);
   return rslt;
 }
 

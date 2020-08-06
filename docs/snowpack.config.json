@@ -7,7 +7,8 @@
     "_scripts_/**/*",
     ".vuepress/**/*",
     "pages/**/*",
-    "*.!(html)"
+    "*.!(html)",
+    "dist/**/*"
   ],
   "mount": {
     "./": "/",
@@ -19,7 +20,10 @@
     ["@snowpack/plugin-build-script", {"cmd": "postcss", "input": [".css"], "output": [".css"]}]
   ],
   "installOptions": {},
-  "devOptions": {},
+  "devOptions": {
+    "open": "none",
+    "out": "dist"
+  },
   "buildOptions": {
     "clean": true
   }

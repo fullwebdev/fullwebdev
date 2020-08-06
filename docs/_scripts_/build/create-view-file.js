@@ -33,7 +33,7 @@ async function writeToView(
     .join(".")
     .concat(".js");
   await fs.createFile(destFilePath);
-  console.log(`[build] ${destFilePath} built`);
+  // console.log(`[build] ${destFilePath} built`);
   await writeFile(destFilePath, js, {
     encoding: "utf8",
   });

@@ -1,17 +1,19 @@
 /**
- * @param {string[]} crumbs
  * @param {import('../utils/tree-node').DirTree} dirTree
  * @param {(path?: string) => Promise<{ [key: string ] : any}>} [asyncViewData]
  */
-async function getMenu(dirTree, crumbs, withSubMenu = true, asyncViewData) {
+async function dirToRoutes(dirTree, asyncViewData) {
   /**
    * @param {string[]} pathStack
-   * @param {boolean} repeat
    */
-  const recurse = async (pathStack, repeat) => {
-    let menu = { entries: [] };
+  const recurse = async (pathStack) => {
+    let menu = { children: {} };
 
     const root = pathStack.reduce((prev, cur) => prev[cur], dirTree);
+
+    if (typeof root === "string" || root["name"]) {
+      return;
+    }
 
     if (root["index.js"]) {
       menu.path = "/" + pathStack.join("/") + "/";
@@ -25,32 +27,39 @@ async function getMenu(dirTree, crumbs, withSubMenu = true, asyncViewData) {
         }
       } else {
         const entry = { name };
-        if (repeat) {
-          const subNode = await recurse(pathStack.concat(name), false);
-          const submenu = subNode.entries;
-          if (submenu && submenu.length > 0) {
-            entry.menu = submenu;
+
+        const subNode = await recurse(pathStack.concat(name));
+        if (subNode) {
+          const submenu = subNode.children;
+          if (submenu && Object.entries(submenu).length > 0) {
+            entry.children = submenu;
           }
         }
-        const potentielPath = menu.path.concat(name);
+
+        const potentielPath = "/" + [...pathStack, name].join("/");
+        let key = name;
 
         if (node["index.js"]) {
           entry.path = potentielPath.concat("/");
+          entry.file = `/views${entry.path}index.js`;
         } else if (name.substr(-3) === ".js") {
+          entry.file = `/views${potentielPath}`;
           entry.path = potentielPath.slice(0, -3);
+          key = entry.path.split("/").pop();
         }
 
         if (asyncViewData && entry.path) {
           const data = await asyncViewData(entry.path);
           Object.assign(entry, data);
         }
-        menu.entries.push(entry);
-      }
-    };
 
+        menu.children[key] = entry;
+      }
+    }
     return menu;
   };
-  return recurse(crumbs, withSubMenu);
+  const rslt = recurse([]);
+  return rslt && (await rslt).children;
 }
 
-module.exports = { getMenu };
+module.exports = { dirToRoutes };

@@ -7,7 +7,7 @@ async function copyFile(root, filePath, out) {
   const fullPath = path.resolve(root, filePath);
   const destFile = path.join(out, path.relative(root, fullPath));
   await fs.copy(fullPath, destFile);
-  console.log(`[copy] ${destFile} created`);
+  // console.log(`[copy] ${destFile} created`);
 }
 
 /**
@@ -22,8 +22,12 @@ async function copy(root, glob, out, watch = false) {
     console.log(`[copy] watching ${glob}`);
     const watcher = chokidar.watch(glob, { cwd: root });
     const log = console.log.bind(console);
-    watcher
-      .on("ready", () => log("[copy] Initial scan complete. Ready for changes"))
+    return new Promise((resolve) => {
+      watcher
+      .on("ready", () => {
+        log("[copy] Initial scan complete. Ready for changes");
+        resolve();
+      })
       .on("add", async (filePath) => {
         log(`[copy] File ${filePath} has been added`);
         await copyFile(root, filePath, out);
@@ -36,6 +40,7 @@ async function copy(root, glob, out, watch = false) {
         // TODO
       })
       .on("error", (error) => log(`Watcher error: ${error}`));
+    })
   } else {
     const paths = await globby(glob, { absolute: true, cwd: root });
     return Promise.all(

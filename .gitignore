@@ -14,3 +14,4 @@ node_modules
 /docs/.vuepress/public/graphs
 /docs/.vuepress/public/images
 /docs/views/
+/docs/js/routes.js

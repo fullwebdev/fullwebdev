@@ -63,6 +63,7 @@ async function watchOrBuild(
   cwd,
   extract = false
 ) {
+  await buildDirs(src, rootDir, outputDir, cwd, extract);
   if (watch) {
     console.log(`[build] watching ${rootDir}/${src}`);
     const watcher = chokidar.watch(src, { cwd: rootDir });
@@ -77,18 +78,19 @@ async function watchOrBuild(
         extract
       );
     };
-    watcher
-      .on("ready", () =>
-        log("[build] Initial scan complete. Ready for changes")
-      )
-      .on("add", build)
-      .on("change", build)
-      .on("unlink", (filePath) => {
-        // TODO
-      })
-      .on("error", (error) => log(`Watcher error: ${error}`));
-  } else {
-    await buildDirs(src, rootDir, outputDir, cwd, extract);
+    return new Promise((resolve) => {
+      watcher
+        .on("ready", () => {
+          log("[build] Initial scan complete. Ready for changes");
+          resolve();
+        })
+        .on("add", build)
+        .on("change", build)
+        .on("unlink", (filePath) => {
+          // TODO
+        })
+        .on("error", (error) => log(`Watcher error: ${error}`));
+    });
   }
 }
 

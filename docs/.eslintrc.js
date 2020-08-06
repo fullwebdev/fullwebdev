@@ -17,6 +17,7 @@ module.exports = {
     ".vuepress/",
     "node_modules/",
     "build/",
+    "dist/",
     "/*.js",
   ],
   rules: {

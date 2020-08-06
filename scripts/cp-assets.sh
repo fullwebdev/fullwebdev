@@ -2,8 +2,8 @@
 
 set -e +x
 
-rm -rf docs/.vuepress/public/graphs
-rm -rf docs/.vuepress/public/images
-mkdir -p docs/.vuepress/public/graphs
-cp -r packages/illustrations/graphs/images docs/images/graphs/images
-cp -r packages/illustrations/images docs/images
+rm -rf docs/assets/graphs
+rm -rf docs/assets/images
+mkdir -p docs/assets/graphs
+cp -r packages/illustrations/graphs/images docs/assets/graphs/images
+cp -r packages/illustrations/images docs/assets/images

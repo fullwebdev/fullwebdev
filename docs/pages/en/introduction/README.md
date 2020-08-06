@@ -1,4 +1,4 @@
-# About
+# Introduction
 
 This website and the associated contents are currently under development.
 

@@ -3,21 +3,10 @@
   "version": "0.8.0",
   "private": true,
   "scripts": {
-    "build": "npm run build:md && npm run build:pack",
-    "build:prod": "npm run build:md:prod && npm run build:pack",
-    "build:all": "npm run build:all-pkgs && npm run build:pack",
-    "prebuild:md": "rimraf views",
-    "build:md": "node _scripts_/build/index.js",
-    "build:md:prod": "npm run build:md -- --materials",
-    "build:all-pkgs": "npm run build:md -- --livre --materials",
-    "build:pack": "snowpack build",
-    "start:md": "npm run build:md -- --watch",
-    "start": "concurrently \"npm:start:md\" \"npm:start:server\"",
-    "start:all-pkgs": "npm run build:md -- --watch --livre --materials",
-    "start:all": "concurrently \"npm:start:all-pkgs\" \"npm:start:server\"",
-    "start:server": "snowpack dev",
-    "start:build:server": "ws --spa index.html -d build --http2 --compress",
-    "start:build": "npm run build && npm run start:build:server",
+    "build": "node _scripts_/cli.js",
+    "start": "node _scripts_/cli.js --dev",
+    "server": "node _scripts_/cli.js --serve",
+    "help": "node _scripts_/cli.js --help",
     "lint": "eslint \"{pages,js,components}/**/*.js\""
   },
   "repository": {
@@ -30,10 +19,10 @@
     "url": "https://github.com/fullwebdev/fullwebdev/issues"
   },
   "devDependencies": {
-    "@popeindustries/lit-html-server": "^3.1.0",
     "@snowpack/plugin-build-script": "^2.0.2",
     "@types/fs-extra": "^9.0.1",
     "@types/puppeteer": "^3.0.1",
+    "@types/rimraf": "^3.0.0",
     "chokidar": "^3.4.1",
     "commander": "^6.0.0",
     "concurrently": "^5.2.0",

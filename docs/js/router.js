@@ -114,7 +114,7 @@ export async function navigate(path, redirection = false, update = true) {
   const genericPath = path.replace(langBase, "/");
   sidebarState.updateThemeClass(genericPath);
   render(
-    appShellTemplate({ path: genericPath, lang }),
+    appShellTemplate({ currentPath: path, lang }),
     document.getElementById("app-shell")
   );
 

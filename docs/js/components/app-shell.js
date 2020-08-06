@@ -2,39 +2,129 @@ import { html } from "lit-html";
 import { repeat } from "lit-html/directives/repeat.js";
 import { classMap } from "lit-html/directives/class-map.js";
 import { sidebarState } from "../sidebar";
+import { routes } from "../routes";
 
 /**
- * @typedef {{text: {en: string, fr?: string}, link: string}} NavItem
+ * @typedef {{title: string, path: string, children?: NavItem[]}} NavItem
+ * @typedef {{ lang: 'en' | 'fr', currentPath?: string }} RouteInfo
+ * @typedef {NavItem & RouteInfo} RoutedNavItem
+ * @typedef {{name?: string, path: string, title:string, file?: string, children?: {[key:string]: Route} }} Route
+ * @typedef {{name?: string, path: string, title:string, file?: string, children?: Route[] }} MenuItem
  */
 
 /**
- * @param {NavItem & { lang: 'en' | 'fr', path?: string }} data
+ * @param {string} path
+ *
+ * @returns {Route[]}
+ */
+const getRoutes = (path, lang = "en") => {
+  let pathElmts = path.split("/").slice(1, -1);
+
+  // TODO: generalize
+  const shouldFollow = pathElmts.length > 2 || pathElmts.includes("materials");
+
+  if (!shouldFollow) {
+    pathElmts = [lang];
+  }
+
+  /**
+   * @type {{ [key:string]: Route }}
+   */
+  const route = pathElmts.reduce((prev, cur) => {
+    const rslt = prev[cur] || (prev.children && prev.children[cur]);
+    if (
+      rslt.children &&
+      Object.values(rslt.children).find((child) => child.children)
+    ) {
+      return rslt.children;
+    } else {
+      return prev;
+    }
+  }, routes);
+
+  let menu = Object.values(route);
+  if (shouldFollow) {
+    // TODO: generalize
+    menu = [routes[pathElmts[0]].children.introduction, ...menu];
+  }
+
+  return menu;
+};
+
+/**
+ * @param {RoutedNavItem} data
  */
 const navLink = (data) => {
-  const classes = { "router-link-active": data.path === data.link };
+  const classes = { "router-link-active": data.currentPath === data.path };
 
   return html`<div class="nav-item">
-    <a href=${data.link} class="nav-link ${classMap(classes)}">
-      ${data.text[data.lang]}
+    <a href=${data.path} class="nav-link ${classMap(classes)}">
+      ${data.title || data.name}
     </a>
   </div>`;
 };
 
 /**
- * @param {NavItem & { lang: 'en' | 'fr', path?: string }} data
+ * @param {RoutedNavItem} data
+ */
+const sidebarItem = (data) => {
+  if (!data.children) {
+    return html`<li>${sidebarLink(data)}</li>`;
+  } else if (!data.path) {
+    return html`<li>
+      <section class="sidebar-group collapsable depth-0">
+        <p class="sidebar-heading open">
+          <span>${data.title || data.name}</span>
+          <span class="arrow down"></span>
+        </p>
+        <ul class="sidebar-links sidebar-group-items" style="">
+          ${repeat(
+            Object.values(data.children),
+            (item) => item.path,
+            (item) =>
+              html`<li>
+                ${sidebarLink({
+                  ...item,
+                  currentPath: data.currentPath,
+                  lang: data.lang,
+                })}
+              </li>`
+          )}
+        </ul>
+      </section>
+    </li>`;
+  } else {
+    return html`<li>
+      ${sidebarLink(data)}
+      <ul class="sidebar-sub-headers">
+        ${repeat(
+          Object.values(data.children),
+          (item) => item.path,
+          (item) =>
+            html`<li class="sidebar-sub-header">
+              ${sidebarLink({
+                ...item,
+                currentPath: data.currentPath,
+                lang: data.lang,
+              })}
+            </li>`
+        )}
+      </ul>
+    </li>`;
+  }
+};
+
+/**
+ * @param {RoutedNavItem} data
  */
 const sidebarLink = (data) => {
-  const classes = { active: data.path === data.link };
+  const classes = { active: data.currentPath === data.path };
 
-  return html`<li>
-    <a
-      href=${data.link}
-      aria-current="page"
-      class="sidebar-link ${classMap(classes)}"
-    >
-      ${data.text[data.lang]}
+  return html`
+    <a href=${data.path} class="sidebar-link ${classMap(classes)}">
+      ${data.title || data.name}
     </a>
-  </li>`;
+  `;
 };
 
 const sidebarButton = html`<div
@@ -57,79 +147,30 @@ const sidebarButton = html`<div
 </div>`;
 
 /**
- * @type {NavItem[]}
+ * @type {{en: NavItem[], fr: NavItem[]}}
  */
-const navbar = [
-  {
-    text: {
-      en: "Home",
-      fr: "Accueil",
+const navbar = {
+  en: [
+    {
+      title: "Home",
+      path: "/",
     },
-    link: "/",
-  },
-  {
-    text: {
-      en: "About",
-      fr: "À propos",
+    {
+      title: "Introduction",
+      path: "/introduction/",
     },
-    link: "/about/",
-  },
-];
-
-/**
- * @type {NavItem[]}
- */
-const sidebar = [
-  {
-    text: {
-      en: "About",
-      fr: "À propos",
+  ],
+  fr: [
+    {
+      title: "Accueil",
+      path: "/",
     },
-    link: "/about/",
-  },
-  {
-    text: {
-      en: "Conferences",
-      fr: "Conférences",
+    {
+      title: "Introduction",
+      path: "/introduction/",
     },
-    link: "/conferences/",
-  },
-  {
-    text: {
-      en: "Code Samples",
-      fr: "Code & Démos",
-    },
-    link: "/code-samples/",
-  },
-  {
-    text: {
-      en: "Codelabs",
-      fr: "Codelabs",
-    },
-    link: "/codelabs/",
-  },
-  {
-    text: {
-      en: "Inventory",
-      fr: "Inventaire",
-    },
-    link: "/inventory/",
-  },
-  {
-    text: {
-      en: "Instructional Materials",
-      fr: "Fragments pédagogiques",
-    },
-    link: "/materials/",
-  },
-  {
-    text: {
-      en: "Flashcards",
-      fr: "Flashcards",
-    },
-    link: "/flashcards/",
-  },
-];
+  ],
+};
 
 const githubLink = () => html` <a
   href="https://github.com/fullwebdev/fullwebdev"
@@ -141,7 +182,7 @@ const githubLink = () => html` <a
 </a>`;
 
 /**
- * @param {{ lang: "en" | "fr"; path?: string; }} data
+ * @param {RouteInfo} data
  */
 export default (data) => html` <header class="navbar">
     ${sidebarButton}
@@ -151,8 +192,8 @@ export default (data) => html` <header class="navbar">
     <div class="links" style="max-width: 1553px;">
       <nav class="nav-links can-hide">
         ${repeat(
-          navbar,
-          (item) => item.link,
+          navbar[data.lang],
+          (item) => item.path,
           (item) => navLink({ ...item, ...data })
         )}
         ${githubLink()}
@@ -162,17 +203,17 @@ export default (data) => html` <header class="navbar">
   <aside class="sidebar">
     <nav class="nav-links">
       ${repeat(
-        navbar,
-        (item) => item.link,
+        navbar[data.lang],
+        (item) => item.path,
         (item) => navLink({ ...item, ...data })
       )}
       ${githubLink()}
     </nav>
     <ul class="sidebar-links">
       ${repeat(
-        sidebar,
-        (item) => item.link,
-        (item) => sidebarLink({ ...item, ...data })
+        getRoutes(data.currentPath || "/en/", data.lang),
+        (item) => item.path,
+        (item) => sidebarItem({ ...item, ...data })
       )}
     </ul>
   </aside>`;

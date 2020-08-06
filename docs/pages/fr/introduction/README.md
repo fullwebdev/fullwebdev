@@ -1,4 +1,4 @@
-# À propos
+# Introduction
 
 Ce site web et les divers contenus associés sont actuellement en cours de développement.
 

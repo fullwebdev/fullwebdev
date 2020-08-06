@@ -1,27 +1,41 @@
+const { writeRoutes } = require("./write-routes");
+const { execFile } = require("child_process");
 const path = require("path");
-const { html } = require("@popeindustries/lit-html-server");
-const fs = require("fs-extra");
 
-// require.extensions['.js'] = require.extensions['.mjs'];
+async function generateAll() {
+  // FIXME: see https://github.com/pikapkg/snowpack/issues/312
+  // - logging data clean the console
+  // - the page is opened in the default browser
+  // - there is no way to know when the server is ready
 
-const repoRoot = path.resolve(__dirname, "..", "..", "..");
+  const snowp = execFile(
+    path.resolve(__dirname, "..", "..", "node_modules", ".bin", "snowpack"),
+    ["dev"],
+    { cwd: path.resolve(__dirname, "..", "..") },
+    (error, stdout) => {
+      if (error) {
+        console.warn(`[snowpack] ${error}`);
+      }
+    }
+  );
 
-const fakeContext = { html };
+  // snowp.stdout.setEncoding("utf8");
+  // snowp.stdout.on("data", (data) => {
+  //   console.log(`[server] ${data}`);
+  // });
 
-async function importView() {
-  const filePath = path.join(repoRoot, "docs", "views", "en", "about", "index");
-  let content = fs.readFileSync(filePath.concat(".js"), { encoding: "utf8" });
-  content = content
-    .split("\n")
-    .filter((line) => !line.match(/import .* from ['"]lit-html['"]/))
-    .join("\n");
-  fs.createFileSync(filePath.concat(".mjs"));
-  fs.writeFileSync(filePath.concat(".mjs"), content);
+  // snowp.stderr.setEncoding("utf8");
+  // snowp.stderr.on("data", (data) => {
+  //   console.error(`[server] ${data}`);
+  // });
 
-  const { default: view } = await import(filePath.concat(".mjs"));
-  const template = view.bind(fakeContext)();
-  const html = template.getHTML();
-  console.log(html);
+  console.log("server started");
+  console.log("generating routes.js file");
+
+  await new Promise(resolve => setTimeout(resolve, 5000));
+
+  await writeRoutes();
+  snowp.kill();
 }
 
-importView();
+module.exports = { generateAll };
