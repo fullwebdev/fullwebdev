@@ -305,3 +305,20 @@ a.sidebar-link.active {
   width: 1.25rem;
   height: 1.25rem;
 }
+
+/* FIXME: use js instead */
+
+details[open] summary ~ * {
+  animation: sweepin 0.1s ease-out;
+}
+
+@keyframes sweepin {
+  0% {
+    opacity: 0;
+    margin-top: -1rem;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}

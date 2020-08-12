@@ -65,35 +65,39 @@ const navLink = (data) => {
 };
 
 /**
+ * @param {{ open: boolean, title: string; path: string; children?: NavItem[]; lang: "en" | "fr"; currentPath?: string; }} data
+ */
+const sidebarGroup = (data) => html`<li>
+  <details class="sidebar-group collapsable depth-0">
+    <summary class="sidebar-heading">${data.title || data.name}</summary>
+    <ul class="sidebar-links sidebar-group-items">
+      ${repeat(
+        Object.values(data.children),
+        (item) => item.path,
+        (item) =>
+          html`<li>
+            ${sidebarLink({
+              ...item,
+              currentPath: data.currentPath,
+              lang: data.lang,
+            })}
+          </li>`
+      )}
+    </ul>
+  </details>
+</li>`;
+
+/**
  * @param {RoutedNavItem} data
  */
 const sidebarItem = (data) => {
-  if (!data.children) {
-    return html`<li>${sidebarLink(data)}</li>`;
-  } else if (!data.path) {
-    return html`<li>
-      <section class="sidebar-group collapsable depth-0">
-        <p class="sidebar-heading open">
-          <span>${data.title || data.name}</span>
-          <span class="arrow down"></span>
-        </p>
-        <ul class="sidebar-links sidebar-group-items" style="">
-          ${repeat(
-            Object.values(data.children),
-            (item) => item.path,
-            (item) =>
-              html`<li>
-                ${sidebarLink({
-                  ...item,
-                  currentPath: data.currentPath,
-                  lang: data.lang,
-                })}
-              </li>`
-          )}
-        </ul>
-      </section>
-    </li>`;
-  } else {
+  if (!data.path) {
+    return sidebarGroup(data);
+  } else if (
+    data.children &&
+    data.path === data.currentPath &&
+    Object.values(data.children).find((child) => child.path)
+  ) {
     return html`<li>
       ${sidebarLink(data)}
       <ul class="sidebar-sub-headers">
@@ -111,6 +115,8 @@ const sidebarItem = (data) => {
         )}
       </ul>
     </li>`;
+  } else {
+    return html`<li>${sidebarLink(data)}</li>`;
   }
 };
 
