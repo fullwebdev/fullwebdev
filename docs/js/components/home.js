@@ -361,7 +361,7 @@ export default (data) => html`
     </p>
 
     <p class="action">
-      <a class="action-button button" href="./introduction/"
+      <a class="action-button button" href="./01-introduction/"
         >${data.actionText} -&gt;</a
       >
     </p>

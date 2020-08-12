@@ -21,7 +21,7 @@ const getRoutes = (path, lang = "en") => {
   let pathElmts = path.split("/").slice(1, -1);
 
   // TODO: generalize
-  const shouldFollow = pathElmts.length > 2 || pathElmts.includes("materials");
+  const shouldFollow = pathElmts.length > 2 || path.includes("materials/");
 
   if (!shouldFollow) {
     pathElmts = [lang];
@@ -45,7 +45,7 @@ const getRoutes = (path, lang = "en") => {
   let menu = Object.values(route);
   if (shouldFollow) {
     // TODO: generalize
-    menu = [routes[pathElmts[0]].children.introduction, ...menu];
+    menu = [routes[pathElmts[0]].children["01-introduction"], ...menu];
   }
 
   return menu;
