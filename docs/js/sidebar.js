@@ -39,7 +39,9 @@ class SidebarState {
       } else {
         main.classList.remove("home");
       }
-      if (genericPath === "/code-samples/") {
+
+      // FIXME: use md meta
+      if (genericPath.includes("code-samples/")) {
         main.classList.add("fullwidth");
       } else {
         main.classList.remove("fullwidth");
