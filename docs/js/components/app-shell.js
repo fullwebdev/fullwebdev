@@ -19,6 +19,17 @@ import { setLang, langBase } from "../lang.js";
  * @returns {Route[]}
  */
 const getRoutes = (path, lang = "en") => {
+  let nbrOfLangs = 0;
+  try {
+    nbrOfLangs = Object.values(routes).length;
+  } catch {
+    // nothing
+  }
+
+  if (!nbrOfLangs) {
+    return [];
+  }
+
   let pathElmts = path.split("/").slice(1, -1);
 
   // TODO: generalize

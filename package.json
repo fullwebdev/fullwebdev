@@ -13,6 +13,7 @@
   "scripts": {
     "prebuild": "npm run prebuild:docs",
     "build": "bash scripts/build.sh -f",
+    "serve": "http-server dist -o",
     "lint": "prettier --write \"./**/*.{js,css,ts,jsx,tsx,html,yml,vue,styl,md}\" && markdownlint . --fix",
     "pretty": "prettier --write \"./**/*.{js,css,ts,jsx,tsx,html,yml,vue,styl,md}\"",
     "grammar": "bash scripts/grammar.sh",
@@ -23,7 +24,6 @@
     "start": "lerna run start --scope=@fullweb/docs",
     "prebuild:docs": "npm run build:illustrations && bash scripts/cp-assets.sh",
     "build:docs": "lerna run build --scope=@fullweb/docs",
-    "serve:docs": "http-server dist -o",
     "build:illustrations": "lerna run build --scope=@fullweb/illustrations",
     "prebuild:livre": "npm run build:illustrations",
     "build:livre": "rimraf ./livre-build/public/ && lerna run build:web --scope=@fullweb/livre-fr && mv ./packages/livre-fr/dist ./livre-build/public",
