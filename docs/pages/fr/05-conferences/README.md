@@ -1,13 +1,5 @@
 # Conférences & Évènements
 
-## En cours...
-
-Pages de présentation de mes possibles futures conférences :
-
-- [Web on FIRE II : reviving the flame](./wof-v3)
-- [Le Web dont vous êtes le héros](./web-hero)
-- [Brace yourself, the Vanilla Web is coming !](./VanillaWeb)
-
 ## Web on FIRE (v2.0)
 
 > Toutes les dernières nouveautés de la Web Platform, leurs apports niveau UX, et des cas concret !\
@@ -168,3 +160,7 @@ Eh bien figure toi que non ! Avec des outils comme PRPL-Server par exemple, rien
 Du coup, ça te dit une démo, un pas à pas, et quelques approfondissements sur les technos sous-jascentes ? Alors on y va !
 
 </details>
+
+## Futur ?
+
+Voir la section [_en cours_](./futur/) pour la présentation de mes possibles futures conférences.
