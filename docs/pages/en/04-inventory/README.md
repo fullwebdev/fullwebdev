@@ -12,11 +12,6 @@ Is your favorite tool or library missing?
 Go [edit this page](https://github.com/fullwebdev/fullwebdev/edit/master/docs/inventory/README.md) or [open an issue](https://github.com/fullwebdev/fullwebdev/issues/new) on GitHub.
 :::
 
-> This presentation is temporary and, well ... hacky.
-> Meaning performance is very poor, and a 404 message may appear before the actual content loads.
-> This will be resolved in the next version of this website which will get rid of Vuepress and process as much data as possible at build time.
-> Be patient, it will take me a long time :wink:
-
 ## Runtime Libraries
 
 ### Rendering
