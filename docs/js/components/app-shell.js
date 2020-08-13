@@ -163,7 +163,7 @@ const navbar = {
     },
     {
       title: "Introduction",
-      path: "/introduction/",
+      path: "/01-introduction/",
     },
   ],
   fr: [
@@ -173,7 +173,7 @@ const navbar = {
     },
     {
       title: "Introduction",
-      path: "/introduction/",
+      path: "/01-introduction/",
     },
   ],
 };
