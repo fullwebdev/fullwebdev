@@ -16,7 +16,7 @@
     "lint": "prettier --write \"./**/*.{js,css,ts,jsx,tsx,html,yml,vue,styl,md}\" && markdownlint . --fix",
     "pretty": "prettier --write \"./**/*.{js,css,ts,jsx,tsx,html,yml,vue,styl,md}\"",
     "grammar": "bash scripts/grammar.sh",
-    "postinstall": "lerna bootstrap",
+    "postinstall": "lerna bootstrap && pip install -r py-requirements.txt",
     "release": "standard-version",
     "release:test": "standard-version --dry-run",
     "update-subtrees": "monocli update",

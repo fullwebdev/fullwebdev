@@ -32,7 +32,7 @@ async function generateAll() {
   console.log("server started");
   console.log("generating routes.js file");
 
-  await new Promise(resolve => setTimeout(resolve, 5000));
+  await new Promise((resolve) => setTimeout(resolve, 8000));
 
   await writeRoutes();
   snowp.kill();

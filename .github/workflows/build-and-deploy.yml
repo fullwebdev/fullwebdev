@@ -9,10 +9,16 @@ jobs:
   build-deploy:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout with submodules
+        uses: actions/checkout@v1
         with:
           submodules: true
           token: ${{ secrets.ACCESS_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: "3.x"
 
       - name: Setup Node
         uses: actions/setup-node@v1
@@ -27,26 +33,15 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
+      - name: Install Pandoc
+        uses: r-lib/actions/setup-pandoc@v1
+
       - name: Install dependencies
         run: npm install
 
-      - name: Download latest build
-        uses: Xotl/cool-github-releases@v1.1.2
-        with:
-          mode: download
-          tag_name: latest
-          assets: www.tar.gz
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Extract latest build
-        run: tar -xvzf www.tar.gz
-
-      - name: Extract material
-        run: node scripts/extract-material.js
-
       - name: Build
         run: |
-          npm run build:docs
+          npm run build
           cp ./CNAME ./dist/CNAME
 
       - name: Deploy to gh pages
