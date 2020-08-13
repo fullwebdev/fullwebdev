@@ -23,7 +23,7 @@ export default () => html`
     <a href="https://github.com/noelmace/pandoc-import-code"
       >pandoc-import-code</a
     >
-    (cf. <a href="/materials/">Fragments pédagogiques</a>).
+    (cf. <a href="/06-materials/">Fragments pédagogiques</a>).
   </p>
 
   ${codesandbox({

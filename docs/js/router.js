@@ -2,23 +2,9 @@ import { render } from "lit-html";
 import appShellTemplate from "./components/app-shell.js";
 import { sidebarState } from "./sidebar.js";
 import Prism from "prismjs";
+import { langBase, getLang } from "./lang.js";
 
-const langBase = /\/(en|fr)\//;
-
-/**
- * @type {'en' | 'fr'}
- */
-let lang = "en";
-if (/^fr\b/.test(navigator.language)) {
-  lang = "fr";
-}
-
-export const setLang = (newLang) => {
-  if (newLang !== lang) {
-    lang = newLang;
-    navigate();
-  }
-};
+import notFound from "./routes/404.js";
 
 const supportHistory = (() => {
   const ua = window.navigator.userAgent;
@@ -74,9 +60,6 @@ export function getGenericPath() {
 
 const routeContainer = document.getElementById("router-outlet");
 
-// TODO: 404 page
-const notFound = () => "404 - page not found";
-
 /**
  * @type {[RegExp, string][]}
  */
@@ -114,7 +97,7 @@ export async function navigate(
   if (route) {
     importPath = route[1];
   } else {
-    let viewRoutePath = path;
+    viewRoutePath = path;
     if (path.endsWith("/")) {
       viewRoutePath += "index.js";
     } else {
@@ -122,6 +105,7 @@ export async function navigate(
     }
 
     if (!langBase.test(path)) {
+      const lang = getLang();
       path = "/" + lang + path;
       viewRoutePath = "/" + lang + viewRoutePath;
     }
@@ -129,24 +113,27 @@ export async function navigate(
     importPath = `${baseUrl}/views${viewRoutePath}`;
   }
 
-  let page;
+  let template;
+
   try {
-    page = (await import(importPath)).default;
-  } catch (err) {
-    if (viewRoutePath && lang !== "en") {
-      viewRoutePath = viewRoutePath.replace(langBase, "/en/");
-      try {
-        page = (await import(`${baseUrl}/views${viewRoutePath}`)).default;
-        path = path.replace(langBase, "/en/");
-      } catch (err) {
-        page = notFound;
+    let page;
+    try {
+      page = (await import(importPath)).default;
+    } catch (err) {
+      if (!viewRoutePath || getLang() === "en") {
+        throw new Error();
       }
-    } else {
-      page = notFound;
+      viewRoutePath = viewRoutePath.replace(langBase, "/en/");
+      // TODO: msg page not translated
+      page = (await import(`${baseUrl}/views${viewRoutePath}`)).default;
+      path = path.replace(langBase, "/en/");
     }
+    template = await page({ routeParams: routeMatch, lang: getLang() });
+  } catch (err) {
+    template = notFound({ lang: getLang() });
   }
 
-  render(await page({ routeParams: routeMatch }), routeContainer);
+  render(template, routeContainer);
   window.scrollTo(0, 0);
 
   if (redirection) {
@@ -158,7 +145,7 @@ export async function navigate(
   const genericPath = path.replace(langBase, "/");
   sidebarState.updateThemeClass(genericPath);
   render(
-    appShellTemplate({ currentPath: path, lang }),
+    appShellTemplate({ currentPath: path, lang: getLang() }),
     document.getElementById("app-shell")
   );
 
@@ -202,8 +189,13 @@ document.body.addEventListener("click", (e) => {
   }
 
   e.preventDefault();
+
+  const hrefAttr = anchor.getAttribute("href");
+  if (!hrefAttr) {
+    return;
+  }
+
   if (`${baseUrl}${fullHref}` !== window.location.href) {
-    const hrefAttr = anchor.getAttribute("href");
     const path = hrefAttr.startsWith("./")
       ? window.location.pathname + hrefAttr.slice(2)
       : new URL(fullHref).pathname;

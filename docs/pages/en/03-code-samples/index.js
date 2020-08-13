@@ -24,7 +24,7 @@ export default () => html`
     <a href="https://github.com/noelmace/pandoc-import-code"
       >pandoc-import-code</a
     >
-    (cf. <a href="/materials/">Instructional Materials</a>).
+    (cf. <a href="/06-materials/">Instructional Materials</a>).
   </p>
 
   ${codesandbox({

@@ -3,6 +3,7 @@ import { repeat } from "lit-html/directives/repeat.js";
 import { classMap } from "lit-html/directives/class-map.js";
 import { sidebarState } from "../sidebar.js";
 import { routes } from "../routes.js";
+import { setLang, langBase } from "../lang.js";
 
 /**
  * @typedef {{title: string, path: string, children?: NavItem[]}} NavItem
@@ -55,7 +56,10 @@ const getRoutes = (path, lang = "en") => {
  * @param {RoutedNavItem} data
  */
 const navLink = (data) => {
-  const classes = { "router-link-active": data.currentPath === data.path };
+  const classes = {
+    "router-link-active":
+      data.currentPath && data.currentPath.replace(langBase, "/") === data.path,
+  };
 
   return html`<div class="nav-item">
     <a href=${data.path} class="nav-link ${classMap(classes)}">
@@ -173,10 +177,11 @@ const navbar = {
 let router;
 
 const selectLang = async (newLang) => {
+  setLang(newLang);
   if (!router) {
     router = await import("../router.js");
   }
-  router.setLang(newLang);
+  router.navigate();
 };
 
 const langSelector = ({ currentLang }) => {
@@ -188,6 +193,7 @@ const langSelector = ({ currentLang }) => {
   return html`<div class="lang-selector">
     <div class="nav-item">
       <a
+        href
         @click=${() => selectLang("en")}
         class="nav-link ${classMap(linkClasses("en"))}"
       >
@@ -196,6 +202,7 @@ const langSelector = ({ currentLang }) => {
     </div>
     <div class="nav-item">
       <a
+        href
         @click=${() => selectLang("fr")}
         class="nav-link ${classMap(linkClasses("fr"))}"
       >
@@ -219,8 +226,8 @@ const githubLink = () => html` <a
  */
 export default (data) => html` <header class="navbar">
     ${sidebarButton}
-    <a class="nav-link" href="/">
-      <span class="site-name">FullWeb.dev</span>
+    <a class="nav-link site-name" href="/">
+      FullWeb.dev
     </a>
     <div class="links" style="max-width: 1553px;">
       <nav class="nav-links can-hide">

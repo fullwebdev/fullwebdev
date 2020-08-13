@@ -12,7 +12,7 @@ Je poste donc ici quelques flashcards qu'il m'est arrivé d'écrire dans un form
 
 ## Topics
 
-- (en) [Web Components](/flashcards/webcomponents)
+- (en) [Web Components](./webcomponents)
 
 ## Template
 
