@@ -44,12 +44,12 @@ jobs:
           npm run build
           cp ./CNAME ./dist/CNAME
 
-      - name: Deploy to gh pages
-        uses: peaceiris/actions-gh-pages@v2.10.1
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
         env:
-          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ./dist
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
       - name: Create archive
         run: |

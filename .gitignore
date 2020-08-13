@@ -15,3 +15,5 @@ node_modules
 /docs/.vuepress/public/images
 /docs/views/
 /docs/js/routes.js
+*.log
+/.firebase
