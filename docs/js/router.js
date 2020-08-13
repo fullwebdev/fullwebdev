@@ -71,29 +71,61 @@ const routeContainer = document.getElementById("router-outlet");
 const notFound = () => "404 - page not found";
 
 /**
+ * @type {[RegExp, string][]}
+ */
+const progRoutes = [
+  [
+    // /<lang>/05-inventory/:npm-package-name
+    /^\/(?:en|fr)\/(?:\d+-)?inventory\/((?:(?:@|%40)[\w-~][\w-.~]*(?:\/|%2F))?[\w-~][\w-.~]+)$/,
+    "/js/routes/inventory-item.js",
+  ],
+];
+
+/**
  * @param {string} path
  */
 export async function navigate(path, redirection = false, update = true) {
-  let importPath = path;
-  if (path.endsWith("/")) {
-    importPath += "index.js";
-  } else {
-    importPath = path.concat(".js");
-  }
+  /**
+   * @type {string[]}
+   */
+  let routeMatch;
+  const route = progRoutes.find(([regex]) => (routeMatch = regex.exec(path)));
 
-  if (!langBase.test(path)) {
-    path = "/" + lang + path;
-    importPath = "/" + lang + importPath;
+  /**
+   * @type {string}
+   */
+  let importPath;
+  /**
+   * @type {string}
+   */
+  let viewRoutePath;
+
+  if (route) {
+    importPath = route[1];
+  } else {
+    let viewRoutePath = path;
+    if (path.endsWith("/")) {
+      viewRoutePath += "index.js";
+    } else {
+      viewRoutePath = path.concat(".js");
+    }
+
+    if (!langBase.test(path)) {
+      path = "/" + lang + path;
+      viewRoutePath = "/" + lang + viewRoutePath;
+    }
+
+    importPath = `${baseUrl}/views${viewRoutePath}`;
   }
 
   let page;
   try {
-    page = (await import(`${baseUrl}/views${importPath}`)).default;
+    page = (await import(importPath)).default;
   } catch (err) {
-    if (lang !== "en") {
-      importPath = importPath.replace(langBase, "/en/");
+    if (viewRoutePath && lang !== "en") {
+      viewRoutePath = viewRoutePath.replace(langBase, "/en/");
       try {
-        page = (await import(`${baseUrl}/views${importPath}`)).default;
+        page = (await import(`${baseUrl}/views${viewRoutePath}`)).default;
         path = path.replace(langBase, "/en/");
       } catch (err) {
         page = notFound;
@@ -103,7 +135,8 @@ export async function navigate(path, redirection = false, update = true) {
     }
   }
 
-  render(page(lang), routeContainer);
+  render(await page({ routeParams: routeMatch }), routeContainer);
+  window.scrollTo(0, 0);
 
   if (redirection) {
     replacePath(path);
@@ -147,19 +180,23 @@ document.body.addEventListener("click", (e) => {
     return;
   }
 
-  const href = anchor.href;
+  const fullHref = anchor.href;
 
-  if (!href || href.includes("mailto:")) {
+  if (!fullHref || fullHref.includes("mailto:")) {
     return;
   }
 
-  if (!href.startsWith(window.location.origin)) {
+  if (!fullHref.startsWith(window.location.origin)) {
     return;
   }
 
   e.preventDefault();
-  if (`${baseUrl}${href}` !== window.location.href) {
-    navigate(new URL(href).pathname);
+  if (`${baseUrl}${fullHref}` !== window.location.href) {
+    const hrefAttr = anchor.getAttribute("href");
+    const path = hrefAttr.startsWith("./")
+      ? window.location.pathname + hrefAttr.slice(2)
+      : new URL(fullHref).pathname;
+    navigate(path);
   }
 });
 
