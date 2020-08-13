@@ -122,7 +122,8 @@ a.header-anchor:hover {
 .nav-links a.router-link-active {
   color: #006dfb;
 }
-.nav-links .nav-item {
+.nav-links .nav-item,
+.lang-selector {
   position: relative;
   display: inline-block;
   margin-left: 1.5rem;
@@ -321,4 +322,16 @@ details[open] summary ~ * {
     opacity: 1;
     margin-top: 0;
   }
+}
+
+.lang-selector a.router-link-active::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid #217ff9;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: -9px;
 }

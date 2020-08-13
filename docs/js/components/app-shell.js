@@ -161,21 +161,48 @@ const navbar = {
       title: "Home",
       path: "/",
     },
-    {
-      title: "Introduction",
-      path: "/01-introduction/",
-    },
   ],
   fr: [
     {
       title: "Accueil",
       path: "/",
     },
-    {
-      title: "Introduction",
-      path: "/01-introduction/",
-    },
   ],
+};
+
+let router;
+
+const selectLang = async (newLang) => {
+  if (!router) {
+    router = await import("../router.js");
+  }
+  router.setLang(newLang);
+};
+
+const langSelector = ({ currentLang }) => {
+  const linkClasses = (lang) => ({
+    "router-link-exact-active": lang === currentLang,
+    "router-link-active": lang === currentLang,
+  });
+
+  return html`<div class="lang-selector">
+    <div class="nav-item">
+      <a
+        @click=${() => selectLang("en")}
+        class="nav-link ${classMap(linkClasses("en"))}"
+      >
+        English
+      </a>
+    </div>
+    <div class="nav-item">
+      <a
+        @click=${() => selectLang("fr")}
+        class="nav-link ${classMap(linkClasses("fr"))}"
+      >
+        Français
+      </a>
+    </div>
+  </div>`;
 };
 
 const githubLink = () => html` <a
@@ -202,7 +229,7 @@ export default (data) => html` <header class="navbar">
           (item) => item.path,
           (item) => navLink({ ...item, ...data })
         )}
-        ${githubLink()}
+        ${langSelector({ currentLang: data.lang })} ${githubLink()}
       </nav>
     </div>
   </header>
@@ -213,7 +240,7 @@ export default (data) => html` <header class="navbar">
         (item) => item.path,
         (item) => navLink({ ...item, ...data })
       )}
-      ${githubLink()}
+      ${langSelector({ currentLang: data.lang })} ${githubLink()}
     </nav>
     <ul class="sidebar-links">
       ${repeat(

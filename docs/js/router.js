@@ -13,6 +13,13 @@ if (/^fr\b/.test(navigator.language)) {
   lang = "fr";
 }
 
+export const setLang = (newLang) => {
+  if (newLang !== lang) {
+    lang = newLang;
+    navigate();
+  }
+};
+
 const supportHistory = (() => {
   const ua = window.navigator.userAgent;
 
@@ -84,7 +91,11 @@ const progRoutes = [
 /**
  * @param {string} path
  */
-export async function navigate(path, redirection = false, update = true) {
+export async function navigate(
+  path = getGenericPath(),
+  redirection = false,
+  update = true
+) {
   /**
    * @type {string[]}
    */
