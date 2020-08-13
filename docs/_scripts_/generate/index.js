@@ -2,6 +2,9 @@ const { writeRoutes } = require("./write-routes");
 const { execFile } = require("child_process");
 const path = require("path");
 
+function rmClear(str) {
+  return str.replace("\x1B[2J\x1B[3J\x1B[H", "");
+}
 async function generateAll() {
   // FIXME: see https://github.com/pikapkg/snowpack/issues/312
   // - logging data clean the console
@@ -13,21 +16,30 @@ async function generateAll() {
     ["dev"],
     { cwd: path.resolve(__dirname, "..", "..") },
     (error, stdout) => {
+      error = rmClear(error);
+      stdout = rmClear(stdout);
       if (error) {
         console.warn(`[snowpack] ${error}`);
       }
+      console.debug(stdout);
     }
   );
 
-  // snowp.stdout.setEncoding("utf8");
-  // snowp.stdout.on("data", (data) => {
-  //   console.log(`[server] ${data}`);
-  // });
+  snowp.stdout.setEncoding("utf8");
+  snowp.stdout.on("data", (data) => {
+    data = rmClear(data);
+    console.debug(`[server] ${data}`);
+  });
 
-  // snowp.stderr.setEncoding("utf8");
-  // snowp.stderr.on("data", (data) => {
-  //   console.error(`[server] ${data}`);
-  // });
+  snowp.stderr.setEncoding("utf8");
+  let previousError;
+  snowp.stderr.on("data", (data) => {
+    data = rmClear(data);
+    if (data !== previousError) {
+      console.debug(`[server error] ${data}`);
+    }
+    previousError = data;
+  });
 
   console.log("server started");
   console.log("generating routes.js file");

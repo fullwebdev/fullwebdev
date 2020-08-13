@@ -21,9 +21,10 @@ async function routesWithTitles() {
         await page.waitForSelector("h1", { timeout: 2000 });
         title = await page.$eval("h1", (el) => el.textContent);
         title = title.replace(/\s{2,}/g, " ");
+        console.log(`[routes - title] ${path} = ${title}`);
       } catch (e) {
-        console.warn(`no title found for ${path}`);
-        // console.warn(e);
+        console.warn(`[routes - title] no title found for ${path}`);
+        console.log(e);
       }
     }
     return { title };

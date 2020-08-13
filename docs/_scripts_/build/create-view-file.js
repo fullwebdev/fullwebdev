@@ -37,6 +37,7 @@ async function writeToView(
   await writeFile(destFilePath, js, {
     encoding: "utf8",
   });
+  console.debug(`[view - built] ${destFilePath}`);
 }
 
 module.exports = { writeToView };

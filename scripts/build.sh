@@ -43,7 +43,7 @@ for (( i=0; i<${NBR_PACKAGES}; i++ )); do
   if [[ $FORCE = true ]] || [[ $HAS_CHANGED -eq 0 ]]; then
     CI_BUILD_FAILED=false
     cd "$pkg"
-    npm run build
+    npm run build -- -v
     # TODO: check for file conflicts (docs)
     rm -rf "${root_dist}"
     mkdir -p "${root_dist}"

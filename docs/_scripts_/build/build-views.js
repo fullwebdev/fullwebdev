@@ -20,9 +20,11 @@ async function buildView(
   cwd,
   extract = false
 ) {
+  console.debug(`[build - html] from ${filePath}`);
   const htmlByLang = await mdToHTMLByLang(filePath, root, cwd, extract);
   return Promise.all(
     htmlByLang.map(async ([lang, html]) => {
+      console.debug(`[build - js] from ${filePath}`);
       const js = htmlToJs(html, filePath, editLink);
       await writeToView(filePath, root, outputDir, lang, js);
     })
