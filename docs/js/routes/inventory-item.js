@@ -290,7 +290,7 @@ export default async ({ routeParams: [, pkgName] }) => {
   await fetchData(pkgName);
 
   return html`
-    <p><a href="/en/04-inventory/">< back to inventory</a></p>
+    <p><a href="/en/04-inventory/">&lt; back to inventory</a></p>
     <main class="inventory-entry" aria-labelledby="main-title">
       <h1>${pkgName}</h1>
 
