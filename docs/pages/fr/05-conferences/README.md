@@ -13,7 +13,8 @@ Pages de présentation de mes possibles futures conférences :
 > Toutes les dernières nouveautés de la Web Platform, leurs apports niveau UX, et des cas concret !\
 > En un talk !
 
-::: details
+<details>
+  <summary>Résumé</summary>
 La Web platform évolue en permanence ! Et ça fait 4 ans qu’on évoque les 4 même technos pour appliquer les 4 grands éléments qui font une bonne web app : Fast, Integrated, Reliable & Engaging !
 
 Il est temps de se mettre à jour ! Prenons quelques minutes pour :
@@ -24,7 +25,8 @@ Il est temps de se mettre à jour ! Prenons quelques minutes pour :
 - découvrir une méthodologie globale pour toujours opérer la transition sereinement
 
 Alors, prêt pour le turfu du web ?!
-:::
+
+</details>
 
 ### :man_technologist: Codelab
 
@@ -35,7 +37,8 @@ Codelab (2h)
 
 :open_book: [pas à pas](/codelabs/doc/modern-data-driven)
 
-::: details
+<details>
+  <summary>Résumé</summary>
 En 2015, le terme Progressive Web Apps faisait son apparition, et avec lui une nouvelle approche des applications web et mobile. Rapidement, le terme F.I.R.E. (Fast Integrated Relaiable & Engaging) a été utilisé pour résumer et globaliser cette approche permettant d’accompagner les développeurs et décideurs dans la mise en place d’applications web modernes.
 
 Alors, prêt de quatre ans plus tard, qu’est ce qui a vraiment changé ?
@@ -43,7 +46,8 @@ Alors, prêt de quatre ans plus tard, qu’est ce qui a vraiment changé ?
 Durant ce workshop, nous verrons ensemble comment cette approche est succeptible de guider la réalisation de toutes nos web apps, notamment en se penchant sur les méthodologies les plus importantes qu’elle a aménée.
 
 Et bien entendu, nous verrons enfin comment les mettre en place (notament grâce aux nombreux outils créés ces dernières années) et continuer à les respecter sur toute la durée de vie de nos projets.
-:::
+
+</details>
 
 ### :microphone: Conférences
 
@@ -82,11 +86,13 @@ Deep Dive (2h)
 
 > Enfin un guide pratique pour utiliser la plateforme Web dans la vraie vie !
 
-::: details
+<details>
+  <summary>Résumé</summary>
 Dans un monde de saveurs complexes et sophistiquées, la guerre du toping fait rage à Web-steros ! Face au champs de bataille, les pronostiques vont bon train pour savoir qui l’emportera entre le crunchy Angulaire, le fondant Reactifs et le décoratif Vue. Durant ce temps, loin de ces vicissitudes, la petite saveur basique vanille avance encore et toujours vers son destin. S’agirait-il du héro de la légende, susceptible de renverser le destin de ce monde sans heurts ?
 
 Sache, voyageur, qu’elle est déjà passée par nos contrées. Viens, et écoute son histoire. Laisse-moi te raconter comment elle nous a permis de renverser notre vieux roi, et tu sauras enfin ce qui se prépare pour ton royaume.
-:::
+
+</details>
 
 ### :microphone: [Paris Open Source Summit](https://2019.opensourcesummit.paris/)
 
@@ -109,7 +115,8 @@ Conférence (30-50min)\
 > Toutes les dernières nouveautés de la Web Platform, leurs apports niveau UX, et des cas concret !\
 > En un talk !
 
-::: details
+<details>
+  <summary>Résumé</summary>
 En 2015, le terme Progressive Web Apps faisait son apparition, et avec lui une nouvelle approche des applications web et mobile. Rapidement, le terme F.I.R.E. (Fast Integrated Relaiable & Engaging) a été utilisé pour résumer et globaliser cette approche permettant d'accompagner les développeurs et décideurs dans la mise en place d'applications web modernes.
 
 Alors, prêt de quatre ans plus tard, qu'est ce qui a vraiment changé ?
@@ -117,7 +124,8 @@ Alors, prêt de quatre ans plus tard, qu'est ce qui a vraiment changé ?
 Durant ce workshop, nous verrons ensemble comment cette approche est succeptible de guider la réalisation de toutes nos web apps, notamment en se penchant sur les méthodologies les plus importantes qu'elle a aménée.
 
 Et bien entendu, nous verrons enfin comment les mettre en place (nottament grâce aux nombreux outils créés ces dernières années) et continuer à les respecter sur toute la durée de vie de nos projets.
-:::
+
+</details>
 
 ### :busts_in_silhouette: table ronde
 
@@ -147,7 +155,8 @@ Language: french
 
 :man_teacher: <a href="/slides/reveal/BoW-PRPL-2019.html" target="_blank">slides</a> - :film_projector: [vidéo](https://youtu.be/YSn8r0BDKTY)
 
-::: details
+<details>
+  <summary>Résumé</summary>
 Le PRPL Pattern, tu connais ?
 
 Non ? Pour faire court, c'est juste LE pattern à mettre en place sur vos Web App pour de bonnes performances, en mettant à profit les dernières technos du web moderne comme l'HTTP/2, preload, les Services Workers ou encore les ES modules.
@@ -157,4 +166,5 @@ Sinon, c'est que tu as sans doute déjà lu un article par ci par là. Tu as peu
 Eh bien figure toi que non ! Avec des outils comme PRPL-Server par exemple, rien de plus simple !
 
 Du coup, ça te dit une démo, un pas à pas, et quelques approfondissements sur les technos sous-jascentes ? Alors on y va !
-:::
+
+</details>

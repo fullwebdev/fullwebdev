@@ -151,7 +151,8 @@ td {
 .danger a {
   color: #2c3e50;
 }
-.details {
+.details,
+.page details {
   display: block;
   position: relative;
   border-radius: 2px;

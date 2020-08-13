@@ -5,7 +5,8 @@
 > The F.I.R.E. safety kit for everyone!\
 > Learn the best new capabilities of the modern web in one shot without burning out!
 
-::: details
+<details>
+  <summary>Abstract</summary>
 The Web platform is constantly evolving...and it's been 4 years now that we are still talking about the same 4 technologies for the 4 key elements that make a great web app: Fast, Integrated, Reliable & Engaging.
 
 It's time to get up to speed!
@@ -18,7 +19,8 @@ Let's take a few minutes to:
 - explore a global methodology to always transition smoothly
 
 So, are you ready for the future of the web?
-:::
+
+</details>
 
 ### :man_technologist: Codelab
 
@@ -66,13 +68,15 @@ Deep Dive (2h)
 
 > Embrace the power of the Web Platform! A real-life practical guide.
 
-::: details
+<details>
+  <summary>Abstract</summary>
 In a world of complex and sophisticated flavors, the battle for toppings among the ice cream families is raging in Web-steros! Who knows who will win between the crunchies of the Angular castle, the hot fudge of the React lands, or the sprinkles of the Vue islands?!
 
 During this time, in another place, the independent Vanilla walks towards his destiny. Could he be the hero from the legend, whom could turn things around?
 
 Hear my story, traveler! My old eyes have seen him in these lands! Let me tell you how he helped us taking down our old king, and you shall learn how he could help you too...
-:::
+
+</details>
 
 ### :microphone: [Paris Open Source Summit](https://2019.opensourcesummit.paris/)
 
@@ -95,11 +99,13 @@ Conference (30-50min)\
 > The F.I.R.E. safety kit for everyone!\
 > Learn the best new capabilities of the modern web in one shot without burning out!
 
-::: details
+<details>
+  <summary>Abstract</summary>
 Four years ago the idea of Progressive Web Apps arrived in the world. This brought a whole new approach to mobile & web apps development, often summarized as F.I.R.E. (Fast Integrated Reliable & Engaging). But the web platform is constantly evolving and mutating, so how has F.I.R.E. technology evolved with it?
 
 Join me to explore four cutting-edge technologies (one for each F.I.R.E. concept) that will help bring your web apps to the next level!
-:::
+
+</details>
 
 ### :busts_in_silhouette: Panel discussion
 
@@ -130,7 +136,8 @@ Conference (30min)
 
 :man_teacher: <a href="/slides/reveal/BoW-PRPL-2019.html" target="_blank">slides</a> - :film_projector: [video (:fr: french)](https://youtu.be/YSn8r0BDKTY)
 
-::: details
+<details>
+  <summary>Abstract</summary>
 Do you know about the PRPL Pattern?
 
 It’s THE pattern to follow when you want good performances with your Web App, using cutting edge, modern web capabilities like HTTP/2, preload, service workers and ES modules.
@@ -140,4 +147,5 @@ Maybe you have heard about it, through a conference or talks post. Maybe it soun
 I have good news for you: it’s not! Using the right tools; like PRPL-Server for example, it couldn't be easier.
 
 How about a demonstration, a step by step tutorial, along with an in-depth presentation? Let’s go then!
-:::
+
+</details>

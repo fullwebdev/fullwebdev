@@ -4,7 +4,7 @@ Inventory of WebDev tools, libraries and frameworks.
 
 Entries are orderred by popularity, based on npmjs.org download statistics.
 
-Open the _"details"_ containers for unmaintained projects with low popularity.
+> Unmaintained projects with low popularity are hidden in dedicated _"Other projects"_ sections.
 
 ::: tip
 Is your favorite tool or library missing?
@@ -51,7 +51,8 @@ Performance indexes from [js-framework-benchmark](https://rawgit.com/krausest/js
 | [stage0](./stage0)               | 4          | Tagged templates                    | **1.06**    |                           |
 | [solid](./solid-js)              | 3          | JSX                                 | **1.06**    |                           |
 
-::: details
+<details>
+  <summary>Other projects</summary>
 
 | name                         | popularity | status                                                    |
 | ---------------------------- | ---------- | --------------------------------------------------------- |
@@ -75,7 +76,7 @@ Performance indexes from [js-framework-benchmark](https://rawgit.com/krausest/js
 | [Datum.js](./Datum)          | 3          | :turtle: performance issues                               |
 | [literaljs](./literaljs)     | 1          | :wavy_dash: low maintenance & :turtle: performance issues |
 
-:::
+</details>
 
 ### Routing
 
@@ -140,7 +141,8 @@ Performance indexes from [js-framework-benchmark](https://rawgit.com/krausest/js
 | [sapper](./sapper?library=false)             | 28         |        |
 | [hybrids](./hybrids)                         | 21         |        |
 
-:::details
+<details>
+  <summary>Other projects</summary>
 
 | name                 | popularity | status                      |
 | -------------------- | ---------- | --------------------------- |
@@ -150,7 +152,7 @@ Performance indexes from [js-framework-benchmark](https://rawgit.com/krausest/js
 | [Heresy](./heresy)   | 12         | :turtle: performance issues |
 | [mimbl](./mimbl)     | 6          | :turtle: performance issues |
 
-:::
+</details>
 
 ## Frameworks
 
@@ -187,7 +189,8 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 | [scarletsframe](./scarletsframe)    | 5            |                                            |
 | [sifrr](./%40sifrr%2Fdev)           | 3            |                                            |
 
-:::details
+<details>
+  <summary>Other projects</summary>
 
 | name                   | popularity | status                                      |
 | ---------------------- | ---------- | ------------------------------------------- |
@@ -198,7 +201,7 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 | [nanochoo](./nanochoo) | 6          | :x: unmaintained                            |
 | [hyperoop](./hyperoop) | 4          | :wavy_dash: low maintenance                 |
 
-:::
+</details>
 
 ## Static Site Generation
 
