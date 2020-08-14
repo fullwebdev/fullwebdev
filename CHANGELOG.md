@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.9.0](https://github.com/fullwebdev/fullwebdev/compare/v0.8.0...v0.9.0) (2020-08-14)
+
+### Features
+
+- **docs:** add code samples ([9b4464d](https://github.com/fullwebdev/fullwebdev/commit/9b4464dde12eabbc154aa2d3372ac424c977e787))
+- **docs:** add gh page footer ([c687bb5](https://github.com/fullwebdev/fullwebdev/commit/c687bb503c3d6139dca910753f329c6942ca7bfb))
+- **docs:** auto-generated routes ([38a4454](https://github.com/fullwebdev/fullwebdev/commit/38a4454ee357ade234eda3ef8d0832f3685eaa5f))
+- **docs:** init app-shell ([b29c705](https://github.com/fullwebdev/fullwebdev/commit/b29c705d840489567608b0d5f62ce3105124c229))
+- **docs:** inventory item ([b47dca7](https://github.com/fullwebdev/fullwebdev/commit/b47dca76dffe7798ec865577611aa8c2262de264))
+- **docs:** lang selector ([7c4b7f2](https://github.com/fullwebdev/fullwebdev/commit/7c4b7f22e8746f21aa75447a7f7effbd07ec32f5))
+- **docs:** navigation state ([4fe07af](https://github.com/fullwebdev/fullwebdev/commit/4fe07af8f7795721f29cebb75e568df26044b667))
+
+### Bug Fixes
+
+- **code-samples:** index ([6f394ae](https://github.com/fullwebdev/fullwebdev/commit/6f394ae20d8b25dcc278b3fa93c142d678709b99))
+- **code-samples:** index title ([6c31df0](https://github.com/fullwebdev/fullwebdev/commit/6c31df0b6f06b339777234601ed0a03505a2fddc))
+- **docs:** bad routes ([d626e32](https://github.com/fullwebdev/fullwebdev/commit/d626e32d2ff11fd3d7fa7b4427a67d9daa5dc985))
+- **docs:** code highlighting ([4215c7f](https://github.com/fullwebdev/fullwebdev/commit/4215c7f370910f2ec8dff185f45430143118cc5c))
+- **docs:** collapsible details ([370e821](https://github.com/fullwebdev/fullwebdev/commit/370e821529c6ce831a2493b3041d127898051fa5))
+- **docs:** collapsible submenus ([c7a9f00](https://github.com/fullwebdev/fullwebdev/commit/c7a9f0022d9148eadb0321a9a6517185b7ae9b5d))
+- **docs:** don't load app-shell css unused media ([687ad4c](https://github.com/fullwebdev/fullwebdev/commit/687ad4c9ec03ebdfe1b0ac41d7f17646fbc77e43))
+- **docs:** don't use whole page name ([eb758c5](https://github.com/fullwebdev/fullwebdev/commit/eb758c5a3f50818d5b7bf43ae0372f2791a71cde))
+- **docs:** futur conferences menu ([631437a](https://github.com/fullwebdev/fullwebdev/commit/631437a753d56da08d1fb05cab64b208aa77c687))
+- **docs:** html encoding ([c4d618e](https://github.com/fullwebdev/fullwebdev/commit/c4d618ec6fce4a676fe46c3c19ee09fb1fd7ae7c))
+- **docs:** loading performance optimisations ([feccd59](https://github.com/fullwebdev/fullwebdev/commit/feccd59bb67bac726bc67b7cbbdc98399777c4cb))
+- **docs:** order of sidebar entries ([a9b3418](https://github.com/fullwebdev/fullwebdev/commit/a9b34189bf88e185b90349d158c7e301bc5e7cb0))
+
 ## [0.8.0](https://github.com/fullwebdev/fullwebdev/compare/v0.7.0...v0.8.0) (2020-08-01)
 
 ### Features
