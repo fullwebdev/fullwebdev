@@ -1,7 +1,7 @@
 # FullWeb.dev
 
 <p align="center">
-<img src="docs/.vuepress/public/favicon/android-icon-144x144.png" alt="logo"></img>
+<img src="docs/assets/favicon/android-icon-144x144.png" alt="logo"></img>
 </p>
 
 <p align="center"><b>A transverse vision of modern web development</b></p>
