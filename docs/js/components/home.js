@@ -266,15 +266,15 @@ export default (data) => html`
       display: inline-block;
       font-size: 1.2rem;
       color: #fff;
-      background-color: #006dfb;
+      background-color: var(--secondary-color);
       padding: 0.8rem 1.6rem;
       border-radius: 4px;
       transition: background-color 0.1s ease;
       box-sizing: border-box;
-      border-bottom: 1px solid #076ff7;
+      border-bottom: 1px solid var(--secondary-color-dark);
     }
     .home .hero .action-button:hover {
-      background-color: #378cfa;
+      background-color: var(--secondary-color-light);
     }
     .home .features {
       border-top: 1px solid #eaecef;

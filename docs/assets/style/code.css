@@ -1,7 +1,7 @@
 @import "prismjs/themes/prism-tomorrow.css";
 
 .theme-default-content code {
-  color: #476582;
+  color: #4d4d4d;
   padding: 0.25rem 0.5rem;
   margin: 0;
   font-size: 0.85em;
@@ -12,7 +12,7 @@
   color: #ec5975;
 }
 .theme-default-content code .token.inserted {
-  color: #006dfb;
+  color: var(--secondary-color);
 }
 .theme-default-content pre,
 .theme-default-content pre[class*="language-"] {
