@@ -103,7 +103,7 @@ async function cli() {
   if (program.start) {
     if (program.skipBuild) {
       console.debug(`[start] snowpack dev server`);
-      execFileSync(
+      execFile(
         path.resolve(__dirname, "..", "node_modules", ".bin", "snowpack"),
         ["dev"],
         { cwd: path.resolve(__dirname, ".."), encoding: "utf-8" }
