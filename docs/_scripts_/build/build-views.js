@@ -71,7 +71,8 @@ async function watchOrBuild(
     const watcher = chokidar.watch(src, { cwd: rootDir });
     const log = console.log.bind(console);
     const build = (filePath) => {
-      buildView(
+      console.log(`[build - watch] ${filePath} changed`);
+      return buildView(
         path.resolve(rootDir, filePath),
         rootDir,
         outputDir,

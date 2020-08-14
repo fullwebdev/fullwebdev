@@ -1,6 +1,6 @@
 /**
  * @param {import('../utils/tree-node').DirTree} dirTree
- * @param {(path?: string) => Promise<{ [key: string ] : any}>} [asyncViewData]
+ * @param {(path?: string) => Promise<{ [key: string ] : any} | null>} [asyncViewData]
  */
 async function dirToRoutes(dirTree, asyncViewData) {
   /**
@@ -26,7 +26,7 @@ async function dirToRoutes(dirTree, asyncViewData) {
           Object.assign(menu, data);
         }
       } else {
-        const entry = { name };
+        let entry = { name };
 
         const subNode = await recurse(pathStack.concat(name));
         if (subNode) {
@@ -50,10 +50,16 @@ async function dirToRoutes(dirTree, asyncViewData) {
 
         if (asyncViewData && entry.path) {
           const data = await asyncViewData(entry.path);
-          Object.assign(entry, data);
+          if (data === null) {
+            entry = null;
+          } else {
+            Object.assign(entry, data);
+          }
         }
 
-        menu.children[key] = entry;
+        if (entry !== null) {
+          menu.children[key] = entry;
+        }
       }
     }
     return menu;
