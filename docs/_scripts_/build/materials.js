@@ -6,6 +6,13 @@ const codeSampleRe = /^<<< @\/\.\.\/([\w-]+)\/(([^#]*)(?:#.*)?)$/;
 //const lineRe = /^(<<< @|#|!\[)/;
 const lineRe = /^(<<< @|## |!\[|<!--en:)/;
 
+const submodulesRepo = [
+  ["benchmark", "https://github.com/fullwebdev/benchmark/tree/main"],
+  ["livre-fr", "https://github.com/noelmace/livre-web-apps/tree/master"],
+];
+
+const rootRepo = "https://github.com/fullwebdev/fullwebdev/tree/master";
+
 /**
  * @param {string} markdown
  */
@@ -28,13 +35,25 @@ function extractMaterials(markdown) {
       };
 
       if (line.startsWith("<<< ")) {
-        const [full, packageName, snippetPath, filePath] = codeSampleRe.exec(
+        let [full, packageName, snippetPath, filePath] = codeSampleRe.exec(
           line
         );
-        // FIXME: path to submodules
-        rsltLine.en = rsltLine.fr = `_[${filePath}](https://github.com/fullwebdev/fullwebdev/tree/master/packages/${packageName}/${filePath}):_
+        const repo = submodulesRepo.find(([name]) => name === packageName);
+        const [projectName, baseUrl] = repo ? repo : [packageName, rootRepo];
 
-<<< @/../${packageName}/${snippetPath}`;
+        let path = filePath;
+        if (!repo) {
+          filePath = `packages/${packageName}/${filePath}`;
+        }
+
+        // FIXME: path to submodules
+        rsltLine.en = rsltLine.fr = `
+<<< @/../${packageName}/${snippetPath}
+
+<p class="code-caption">
+Cf. ${projectName}: <a href="${baseUrl}/${filePath}" target="_blank" rel="noopener noreferrer" aria-label="open on Github">${path}</a>
+</p>
+`;
         materialCount.fr++;
         materialCount.en++;
       } else if (line.startsWith("![")) {

@@ -293,7 +293,8 @@ figure {
   width: 100%;
 }
 
-figcaption {
+figcaption,
+.code-caption {
   text-align: center;
   font-style: italic;
   margin: 1rem 0;
