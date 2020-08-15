@@ -4,7 +4,7 @@ This section collects in sparse order various elements (code samples, illustrati
 
 They are not intended to provide you with sufficient information without the help of these more structured and complete materials.
 
-> You can also check out the [Code Samples]\(/03-code-samples/) section, which better contextualise most of the code samples.
+> You can also check out the [Code Samples](/03-code-samples/) section, which better contextualise most of the code samples.
 
 ::: warning
 This section is under construction and is anticipated to remain that way for several months.

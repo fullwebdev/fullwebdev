@@ -27,7 +27,7 @@ Alors, prêt pour le turfu du web ?!
 14 Février 2020 - 10:00\
 Codelab (2h)
 
-:open_book: [pas à pas]\(/02-codelabs/doc/modern-data-driven)
+:open_book: [pas à pas](/02-codelabs/doc/modern-data-driven)
 
 <details>
   <summary>Résumé</summary>

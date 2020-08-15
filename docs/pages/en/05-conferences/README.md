@@ -29,7 +29,7 @@ So, are you ready for the future of the web?
 February 14th, 2020 - 10:00\
 Codelab (2h)
 
-:open_book: [step-by-step guide]\(/02-codelabs/doc/modern-data-driven)
+:open_book: [step-by-step guide](/02-codelabs/doc/modern-data-driven)
 
 ### :microphone: Conferences
 
