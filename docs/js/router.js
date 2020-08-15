@@ -71,6 +71,8 @@ const progRoutes = [
   ],
 ];
 
+let firstNavigation = true;
+
 /**
  * @param {string} path
  */
@@ -134,7 +136,15 @@ export async function navigate(
   }
 
   render(template, routeContainer);
-  window.scrollTo(0, 0);
+  if (!firstNavigation) {
+    const heading = routeContainer.querySelector("h1");
+    heading.tabIndex = -1;
+    heading.focus();
+    window.scrollTo(0, 0);
+    document.title = `fullweb.dev - ${heading.textContent.trim()}`;
+  } else {
+    firstNavigation = false;
+  }
 
   if (redirection) {
     replacePath(path);
