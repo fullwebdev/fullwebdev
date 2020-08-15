@@ -238,6 +238,7 @@ export default (data) => html`
       padding-top: 3.6rem;
       margin: 0 auto;
       display: block;
+      background-color: #fff;
     }
     .home .hero {
       text-align: center;

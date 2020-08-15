@@ -3,7 +3,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #fff;
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -50,6 +49,8 @@ body {
     0 10px 10px rgba(0, 0, 0, 0.22);
   --elevation-5-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
     0 15px 12px rgba(0, 0, 0, 0.22);
+
+  background-color: var(--neutral-color-100);
 }
 
 a {
