@@ -235,7 +235,7 @@ const feature = (data) => html`<div class="feature">
 export default (data) => html`
   <style>
     .home {
-      padding: 3.6rem 0;
+      padding-top: 3.6rem;
       margin: 0 auto;
       display: block;
     }
@@ -287,6 +287,8 @@ export default (data) => html`
       align-items: flex-start;
       align-content: stretch;
       justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
     }
     .home .feature {
       flex-grow: 1;
@@ -308,7 +310,8 @@ export default (data) => html`
       padding: 2.5rem;
       border-top: 1px solid #eaecef;
       text-align: center;
-      color: #4e6e8e;
+      color: var(--text-on-primary);
+      background-color: var(--primary-color);
     }
     .home .hero #logo {
       margin: 0 auto;
