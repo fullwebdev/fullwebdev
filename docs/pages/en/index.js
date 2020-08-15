@@ -1,11 +1,13 @@
 import home from "../../js/components/home.js";
+import { html } from "lit-html";
 
 export default () =>
   home({
     heroText: "Full Web",
     heroSubText: "Development",
     actionText: "Let's go",
-    footer: "Copyright © 2020 Noël Macé",
+    license: "MIT & CC BY-NC-SA Licensed",
+    copyright: "Copyright © 2020 fullwebdev, Noël Macé",
     tagline: "Mastering the whole Modern Web",
     features: [
       {
@@ -24,4 +26,22 @@ export default () =>
           "Most of our creations are Open-Source, in order to facilitate contributions. However, some of our content may require copyright or paywall. When this is the case, we do our best to never discriminate against anyone.",
       },
     ],
+    content: html`<div class="banner">
+      This project is at a very early stage. And we are by no means infallible,
+      of course. So if you have any questions, ideas, comments or advice, please
+      share them with us via
+      <a
+        href="https://github.com/fullwebdev/fullwebdev/issues/new"
+        target="_blank"
+        rel="noopener noreferrer"
+        >a Github issue</a
+      >
+      or
+      <a
+        href="https://twitter.com/messages/compose?recipient_id=191620154"
+        target="_blank"
+        rel="noopener noreferrer"
+        >a direct message on Twitter</a
+      >. Especially if you think we are failing to meet the above commitments.
+    </div> `,
   });

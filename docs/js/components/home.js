@@ -1,6 +1,7 @@
 /**
  * @typedef {{title: string, details: string}} Feature
- * @typedef {{ heroText: string; heroSubText: string; tagline: string; actionText: string; features: Feature[]; footer: string; }} HomeData
+ * @typedef {import('../../node_modules/lit-html/lib/template-result').TemplateResult} TemplateResult
+ * @typedef {{ heroText: string; heroSubText: string; tagline: string; actionText: string; features?: Feature[]; license: string; copyright: string; content?: TemplateResult }} HomeData
  */
 
 import { html } from "lit-html";
@@ -280,16 +281,18 @@ export default (data) => html`
     .home .hero .action-button:hover {
       background-color: var(--secondary-color-light);
     }
+    .home main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      color: var(--neutral-color-800);
+    }
     .home .features {
-      border-top: 1px solid #eaecef;
-      padding: 1.2rem 2rem;
+      padding: 0 2rem 1.2rem;
       display: flex;
       flex-wrap: wrap;
       align-items: flex-start;
       align-content: stretch;
       justify-content: space-between;
-      max-width: 1200px;
-      margin: 0 auto;
     }
     .home .feature {
       flex-grow: 1;
@@ -301,21 +304,27 @@ export default (data) => html`
       font-weight: 500;
       border-bottom: none;
       padding-bottom: 0;
-      color: #000b;
+      color: var(--neutral-color-900);
     }
-    .home .feature p {
-      color: #000b;
-      text-align: justify;
-    }
+
     .home .footer {
       padding: 2.5rem;
-      border-top: 1px solid #eaecef;
       text-align: center;
       color: var(--text-on-primary);
       background-color: var(--primary-color);
     }
+    .home .footer p {
+      margin: 0;
+    }
     .home .hero #logo {
       margin: 0 auto;
+    }
+    .home .banner {
+      text-align: center;
+      border-top: 1px solid var(--neutral-color-300);
+      border-bottom: 1px solid var(--neutral-color-300);
+      padding: 2rem;
+      margin: 0 1rem;
     }
     @media (max-width: 719px) {
       .home .features {
@@ -370,11 +379,16 @@ export default (data) => html`
     </p>
   </header>
 
-  <div class="features">
-    ${data.features ? data.features.map(feature) : ""}
-  </div>
+  <main>
+    <div class="features">
+      ${data.features ? data.features.map(feature) : ""}
+    </div>
+
+    ${data.content ? data.content : ""}
+  </main>
 
   <div class="footer">
-    ${data.footer}
+    <p>${data.license}</p>
+    <p>${data.copyright}</p>
   </div>
 `;
