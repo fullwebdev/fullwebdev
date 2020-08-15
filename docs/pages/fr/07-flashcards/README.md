@@ -1,7 +1,7 @@
 # Flashcards
 
 Depuis un moment maintenant, il m'arrive d'écrire des
-[flashcards](https://en.wikipedia.org/wiki/Flashcard) pour m'aider à préparer de nouveaux contenus pédagogiques.
+[flashcards](https://en.wikipedia.org/wiki/Flashcard){target="\_blank"} pour m'aider à préparer de nouveaux contenus pédagogiques.
 Cependant, j'ai tendance à réaliser celles-ci à l'anciennes, sur papier, afin de m'aider ensuite à mettre en place
 un plan visuellement.
 

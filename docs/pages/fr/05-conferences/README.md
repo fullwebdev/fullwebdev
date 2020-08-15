@@ -22,7 +22,7 @@ Alors, prêt pour le turfu du web ?!
 
 ### :man_technologist: Codelab
 
-[Devfest Paris](https://devfest.gdgparis.com/sessions/the_web_is_still_on_f_i_r_e_workshop_/)
+[Devfest Paris](https://devfest.gdgparis.com/sessions/the_web_is_still_on_f_i_r_e_workshop_/){target="\_blank"}
 
 14 Février 2020 - 10:00\
 Codelab (2h)
@@ -45,32 +45,32 @@ Et bien entendu, nous verrons enfin comment les mettre en place (notament grâce
 
 (30-50min)
 
-#### [Paris Open Source Summit](https://2019.opensourcesummit.paris/)
+#### [Paris Open Source Summit](https://2019.opensourcesummit.paris/){target="\_blank"}
 
 10 Décembre 2019 - 14:00
 
-:man_teacher: [slides](https://poss19.wof.show/)
+:man_teacher: [slides](https://poss19.wof.show/){target="\_blank"}
 
-#### [Devfest Nantes](https://devfest2019.gdgnantes.com/sessions/the_web_is_on__f_i_r_e________conference_/)
+#### [Devfest Nantes](https://devfest2019.gdgnantes.com/sessions/the_web_is_on__f_i_r_e________conference_/){target="\_blank"}
 
 22 Octobre 2019 - 11:20
 
-:man_teacher: [slides](https://devfestnantes-2019.wof.show/) - :film_projector: [vidéo](https://youtu.be/_byWU9V4fXw)
+:man_teacher: [slides](https://devfestnantes-2019.wof.show/){target="\_blank"} - :film_projector: [vidéo](https://youtu.be/_byWU9V4fXw){target="\_blank"}
 
-#### [ParisWeb](https://www.paris-web.fr/2019/conferences/the-web-is-on-fire.php)
+#### [ParisWeb](https://www.paris-web.fr/2019/conferences/the-web-is-on-fire.php){target="\_blank"}
 
 11 Octobre 2019 - 12:00
 
-:man_teacher: [slides](https://parisweb-2019.wof.show/) - :film_projector: [vidéo](https://vimeo.com/380989996)
+:man_teacher: [slides](https://parisweb-2019.wof.show/){target="\_blank"} - :film_projector: [vidéo](https://vimeo.com/380989996){target="\_blank"}
 
 ### 👨‍🏫 Université
 
-[Devoxx Belgium](https://devoxx.be/speaker-details/?id=50822)
+[Devoxx Belgium](https://devoxx.be/speaker-details/?id=50822){target="\_blank"}
 
 4 Novembre, 2019 - 13:30\
 Deep Dive (2h)
 
-:man_teacher: [slides](https://devoxxbe-2019.wof.show/) - :film_projector: [vidéo (:uk: english)](https://youtu.be/lfubOlz3JLI)
+:man_teacher: [slides](https://devoxxbe-2019.wof.show/){target="\_blank"} - :film_projector: [vidéo (:uk: english)](https://youtu.be/lfubOlz3JLI){target="\_blank"}
 
 ## Vanilla Web (v1.0)
 
@@ -86,19 +86,19 @@ Sache, voyageur, qu’elle est déjà passée par nos contrées. Viens, et écou
 
 </details>
 
-### :microphone: [Paris Open Source Summit](https://2019.opensourcesummit.paris/)
+### :microphone: [Paris Open Source Summit](https://2019.opensourcesummit.paris/){target="\_blank"}
 
 11 Décembre 2019 - 10:00\
 Conférence (30-50min)
 
-:man_teacher: [slides](https://vanilla-poss19.wof.show/)
+:man_teacher: [slides](https://vanilla-poss19.wof.show/){target="\_blank"}
 
-### :microphone: [Devfest Toulouse](https://2019.devfesttoulouse.fr/sessions/brace_yourself__vanilla_is_coming__back__/)
+### :microphone: [Devfest Toulouse](https://2019.devfesttoulouse.fr/sessions/brace_yourself__vanilla_is_coming__back__/){target="\_blank"}
 
 3 Octobre 2019 - 15:30\
 Conférence (30-50min)\
 
-:man_teacher: [slides](https://devfesttls19.wof.show/) - :film_projector: [vidéo](https://youtu.be/-d_Ka7OE4Xk)
+:man_teacher: [slides](https://devfesttls19.wof.show/){target="\_blank"} - :film_projector: [vidéo](https://youtu.be/-d_Ka7OE4Xk){target="\_blank"}
 
 ## Web on FIRE (v1.0)
 
@@ -121,20 +121,20 @@ Et bien entendu, nous verrons enfin comment les mettre en place (nottament grâc
 
 ### :busts_in_silhouette: table ronde
 
-[Best of Web](https://www.bestofweb.paris/2019/)\
+[Best of Web](https://www.bestofweb.paris/2019/){target="\_blank"}\
 6 Juin 2019 - 14:00\
 Panel discussion / Workshop (2h)\
-[Noël Macé](https://twitter.com/noel_mace) & [Wolfgang Goedel](https://twitter.com/wgoedel)
+[Noël Macé](https://twitter.com/noel_mace){target="\_blank"} & [Wolfgang Goedel](https://twitter.com/wgoedel){target="\_blank"}
 
 :man_teacher: <a href="/slides/reveal/BoW-workshop-2019.html" target="_blank">slides</a>
 
 ### :man_teacher: University
 
-[Breizhcamp](https://2019.breizhcamp.org/conference/programme/)\
+[Breizhcamp](https://2019.breizhcamp.org/conference/programme/){target="\_blank"}\
 20 Mars 2019 - 13:30\
 Deep Dive (3h)
 
-:man_teacher: <a href="/slides/reveal/breizhcamp-2019.html" target="_blank">slides</a> - :film_projector: [vidéo](https://youtu.be/OQ-dr-7pLaA)
+:man_teacher: <a href="/slides/reveal/breizhcamp-2019.html" target="_blank">slides</a> - :film_projector: [vidéo](https://youtu.be/OQ-dr-7pLaA){target="\_blank"}
 
 ### :microphone: Sous-thème: PRPL pattern
 
@@ -145,7 +145,7 @@ Best of Web, Paris\
 Conférence (30min)\
 Language: french
 
-:man_teacher: <a href="/slides/reveal/BoW-PRPL-2019.html" target="_blank">slides</a> - :film_projector: [vidéo](https://youtu.be/YSn8r0BDKTY)
+:man_teacher: <a href="/slides/reveal/BoW-PRPL-2019.html" target="_blank">slides</a> - :film_projector: [vidéo](https://youtu.be/YSn8r0BDKTY){target="\_blank"}
 
 <details>
   <summary>Résumé</summary>

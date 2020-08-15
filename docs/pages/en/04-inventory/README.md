@@ -9,7 +9,7 @@ Entries are orderred by popularity, based on npmjs.org download statistics.
 ::: tip
 Is your favorite tool or library missing?
 
-Go [edit this page](https://github.com/fullwebdev/fullwebdev/edit/master/docs/inventory/README.md) or [open an issue](https://github.com/fullwebdev/fullwebdev/issues/new) on GitHub.
+Go [edit this page](https://github.com/fullwebdev/fullwebdev/edit/master/docs/04-inventory/README.md){target="\_blank"} or [open an issue](https://github.com/fullwebdev/fullwebdev/issues/new){target="\_blank"} on GitHub.
 :::
 
 ## Runtime Libraries
@@ -18,7 +18,7 @@ Go [edit this page](https://github.com/fullwebdev/fullwebdev/edit/master/docs/in
 
 DOM Manipulation & templating. May also include some libraries requiring specific build tools.
 
-Performance indexes from [js-framework-benchmark](https://rawgit.com/krausest/js-framework-benchmark/master/webdriver-ts-results/table.html). Only the slowdown geometric mean of the lower keyed implementation is given if there is multiple implementations for the same library.
+Performance indexes from [js-framework-benchmark](https://rawgit.com/krausest/js-framework-benchmark/master/webdriver-ts-results/table.html){target="\_blank"}. Only the slowdown geometric mean of the lower keyed implementation is given if there is multiple implementations for the same library.
 
 | name                             | popularity | syntax                              | perf        | status                    |
 | -------------------------------- | ---------- | ----------------------------------- | ----------- | ------------------------- |
@@ -114,8 +114,8 @@ Performance indexes from [js-framework-benchmark](https://rawgit.com/krausest/js
 
 ### Collections of helpers
 
-- [vanillajstoolkit](https://vanillajstoolkit.com/)
-- Polymer [pwa-helpers](https://github.com/Polymer/pwa-helpers)
+- [vanillajstoolkit](https://vanillajstoolkit.com/){target="\_blank"}
+- Polymer [pwa-helpers](https://github.com/Polymer/pwa-helpers){target="\_blank"}
 
 ### Misc
 
@@ -167,21 +167,21 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 | [Next.js](./next)                   | 63           |                                            |
 | [backbone](./backbone)              | 61           | :wavy_dash: low maintenance                |
 | [Nuxt.js](./nuxt)                   | 52           |                                            |
-| [Polymer](./%40polymer%2Fpolymer)   | 52           | :stop_sign: [deprecated in favor of LitElement](https://www.polymer-project.org/blog/2018-05-02-roadmap-faq) |
+| [Polymer](./%40polymer%2Fpolymer)   | 52           | :stop_sign: [deprecated in favor of LitElement](https://www.polymer-project.org/blog/2018-05-02-roadmap-faq){target="_blank"} |
 | [Ionic](./%40ionic%2Fcore)          | 49           |                                            |
 | [knockout](./knockout)              | 43           |                                            |
 | [mithril](./mithril)                | 40           |                                            |
 | [ember](./ember-cli)                | 39           |                                            |
-| [Flutter Web](https://flutter.dev/docs/get-started/flutter-for/web-devs) | NA |                 |
-| [Meteor](https://www.meteor.com/)   | (:star: 42k) |                                            |
+| [Flutter Web](https://flutter.dev/docs/get-started/flutter-for/web-devs){target="_blank"} | NA |                 |
+| [Meteor](https://www.meteor.com/){target="_blank"}   | (:star: 42k) |                                            |
 | [riot](./riot)                      | 36           |                                            |
-| [Yew](https://yew.rs)               | (:star: 13k) |                                            |
+| [Yew](https://yew.rs){target="_blank"}               | (:star: 13k) |                                            |
 | [Marionette](./backbone.marionette) | 35           |                                            |
 | [rax](./rax)                        | 31           |                                            |
 | [Cycle.js](./%40cycle%2Fdom)        | 30           |                                            |
 | [choo](./choo)                      | 28           |                                            |
 | [san](./san)                        | 24           |                                            |
-| [Mavo](https://mavo.io/)            | (:star: 3k)  |                                            |
+| [Mavo](https://mavo.io/){target="_blank"}            | (:star: 3k)  |                                            |
 | [aurelia](./aurelia)                | 18           |                                            |
 | [Dojo](./%40dojo%2Fframework)       | 18           |                                            |
 | [apprun](./apprun)                  | 17           |                                            |
@@ -205,32 +205,32 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 
 ## Static Site Generation
 
-| name                                            | popularity   | status |
-| ----------------------------------------------- | ------------ | ------ |
-| [Gatsby](./gatsby?library=false)                | 60           |
-| [hugo](https://gohugo.io/)                      | (:star: 45k) |
-| [Jekyll](https://jekyllrb.com/)                 | (:star: 41k) |
-| [vuepress](./vuepress?library=false)            | 43           |
-| [Hexo](./hexo?library=false)                    | 38           |
-| [Eleventy](./%4011ty%2Feleventy?library=false)  | 32           |
-| [gridsome](./gridsome?library=false)            | 30           |
-| [harp](./harp?library=false)                    | 25           |
-| [Scully](./%40scullyio%2Fscully?library=false)  | 20           |
-| [yst](https://github.com/jgm/yst)               | (:star: 300) |
-| [Hydrogen](./hydrogen-cli?library=false)        | 6            |
-| [Greenwood](./%40greenwood%2Fcli?library=false) | 5            |
+| name                                                | popularity   | status |
+| --------------------------------------------------- | ------------ | ------ |
+| [Gatsby](./gatsby?library=false)                    | 60           |
+| [hugo](https://gohugo.io/){target="\_blank"}        | (:star: 45k) |
+| [Jekyll](https://jekyllrb.com/){target="\_blank"}   | (:star: 41k) |
+| [vuepress](./vuepress?library=false)                | 43           |
+| [Hexo](./hexo?library=false)                        | 38           |
+| [Eleventy](./%4011ty%2Feleventy?library=false)      | 32           |
+| [gridsome](./gridsome?library=false)                | 30           |
+| [harp](./harp?library=false)                        | 25           |
+| [Scully](./%40scullyio%2Fscully?library=false)      | 20           |
+| [yst](https://github.com/jgm/yst){target="\_blank"} | (:star: 300) |
+| [Hydrogen](./hydrogen-cli?library=false)            | 6            |
+| [Greenwood](./%40greenwood%2Fcli?library=false)     | 5            |
 
 ## Languages
 
-| name                                                                       | popularity    | status |
-| -------------------------------------------------------------------------- | ------------- | ------ |
-| [typescript](./typescript?library=false)                                   | 67            |
-| [marko](./marko?library=false)                                             | 36            |
-| [Clojure / ClojureScript](https://clojurescript.org/)                      | (:star: 8.4k) |
-| [Elm](https://elm-lang.org)                                                | (:star: 6k)   |
-| [Reason](https://reasonml.github.io) _(via [BuncleScript](./bs-platform))_ | 34            |
-| [purescript](./purescript)                                                 | 28            |
-| [imba](./imba?library=false)                                               | 26            |
+| name                                                                                         | popularity    | status |
+| -------------------------------------------------------------------------------------------- | ------------- | ------ |
+| [typescript](./typescript?library=false)                                                     | 67            |
+| [marko](./marko?library=false)                                                               | 36            |
+| [Clojure / ClojureScript](https://clojurescript.org/){target="\_blank"}                      | (:star: 8.4k) |
+| [Elm](https://elm-lang.org){target="\_blank"}                                                | (:star: 6k)   |
+| [Reason](https://reasonml.github.io){target="_blank"}_(via [BuncleScript](./bs-platform))\_ | 34            |
+| [purescript](./purescript)                                                                   | 28            |
+| [imba](./imba?library=false)                                                                 | 26            |
 
 ## Build & Dev Tools
 
@@ -275,27 +275,27 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 
 ### Misc
 
-| name                                                          | popularity    | details                                                   |
-| ------------------------------------------------------------- | ------------- | --------------------------------------------------------- |
-| [browserslist](https://github.com/browserslist/browserslist)  | (:star: 8k)   | Share target browsers between different front-end tools   |
-| [static siteboiler plate](https://staticsiteboilerplate.com/) | (:star: 1.4k) | better workflow for building modern static websites       |
-| [es-dev-server](./es-dev-server?library=false)                | 25            | Development server for modern web apps                    |
-| [rawact](./babel-plugin-rawact)                               | 18            | Compiles React.js components into native DOM instructions |
+| name                                                                            | popularity    | details                                                   |
+| ------------------------------------------------------------------------------- | ------------- | --------------------------------------------------------- |
+| [browserslist](https://github.com/browserslist/browserslist){target="\_blank"}  | (:star: 8k)   | Share target browsers between different front-end tools   |
+| [static siteboiler plate](https://staticsiteboilerplate.com/){target="\_blank"} | (:star: 1.4k) | better workflow for building modern static websites       |
+| [es-dev-server](./es-dev-server?library=false)                                  | 25            | Development server for modern web apps                    |
+| [rawact](./babel-plugin-rawact)                                                 | 18            | Compiles React.js components into native DOM instructions |
 
 ## Further reading
 
-- [js-framework-benchmark](https://rawgit.com/krausest/js-framework-benchmark/master/webdriver-ts-results/table.html) for performance comparisons
-- [johnpapa/hello-worlds](https://github.com/johnpapa/hello-worlds/) for code samples
-- the [Frontend Developer Roadmap](https://roadmap.sh/frontend) for a step-by-step guide
+- [js-framework-benchmark](https://rawgit.com/krausest/js-framework-benchmark/master/webdriver-ts-results/table.html){target="\_blank"} for performance comparisons
+- [johnpapa/hello-worlds](https://github.com/johnpapa/hello-worlds/){target="\_blank"} for code samples
+- the [Frontend Developer Roadmap](https://roadmap.sh/frontend){target="\_blank"} for a step-by-step guide
 
 ### Other lists
 
-- [Awesome JavaScript](https://github.com/sorrycc/awesome-javascript#testing-frameworks)
-- [Web Component Libraries](https://open-wc.org/guide/component-libraries.html)
-- [awesome lit-html](https://github.com/web-padawan/awesome-lit-html)
-- [awesome Webpack](https://github.com/webpack-contrib/awesome-webpack)
-- [awesome Vue.js](https://github.com/vuejs/awesome-vue)
-- [awesome Jest](https://github.com/jest-community/awesome-jest)
-- [Awesome Rollup](https://github.com/rollup/awesome)
-- [Awesome React Renderer](https://github.com/chentsulin/awesome-react-renderer)
-- [Static Site Generators](https://staticsitegenerators.net/)
+- [Awesome JavaScript](https://github.com/sorrycc/awesome-javascript#testing-frameworks){target="\_blank"}
+- [Web Component Libraries](https://open-wc.org/guide/component-libraries.html){target="\_blank"}
+- [awesome lit-html](https://github.com/web-padawan/awesome-lit-html){target="\_blank"}
+- [awesome Webpack](https://github.com/webpack-contrib/awesome-webpack){target="\_blank"}
+- [awesome Vue.js](https://github.com/vuejs/awesome-vue){target="\_blank"}
+- [awesome Jest](https://github.com/jest-community/awesome-jest){target="\_blank"}
+- [Awesome Rollup](https://github.com/rollup/awesome){target="\_blank"}
+- [Awesome React Renderer](https://github.com/chentsulin/awesome-react-renderer){target="\_blank"}
+- [Static Site Generators](https://staticsitegenerators.net/){target="\_blank"}
