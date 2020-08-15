@@ -2,8 +2,8 @@
   "name": "FullWeb.dev",
   "short_name": "FullWeb",
   "display": "standalone",
-  "theme_color": "#076ff7",
-  "background_color": "#ffffff",
+  "theme_color": "#00796b",
+  "background_color": "#FFF",
   "scope": "/",
   "start_url": "/",
   "icons": [

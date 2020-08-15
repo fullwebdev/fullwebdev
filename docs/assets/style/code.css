@@ -1,7 +1,7 @@
 @import "prismjs/themes/prism-tomorrow.css";
 
 .theme-default-content code {
-  color: #4d4d4d;
+  color: var(--neutral-color-800);
   padding: 0.25rem 0.5rem;
   margin: 0;
   font-size: 0.85em;

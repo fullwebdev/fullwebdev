@@ -86,7 +86,7 @@ class FwdLogo extends HTMLElement {
       <style>
         :host {
           width: 100%;
-          height: 100%;
+          height: 250px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -107,7 +107,7 @@ class FwdLogo extends HTMLElement {
           height: 86.6px;
           width: 100px;
           transform-origin: 50% 0%;
-          background-image: url("data:image/svg+xml,%3Csvg id='triangle' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 336.92 291.75'%3E%3Cpolygon points='334.8,290.5 2.2,290.5 168.5,2.5 334.8,290.5' fill='rgba(255, 255, 255, 0.8)' stroke='%23000000' stroke-width='5'/%3E%3Ccircle cx='169' cy='6' r='10'/%3E%3Ccircle cx='7' cy='289' r='10'/%3E%3Ccircle cx='333' cy='291' r='10'/%3E%3C/svg%3E%0A");
+          background-image: url("data:image/svg+xml,%3Csvg id='triangle' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 336.92 291.75'%3E%3Cpolygon points='334.8,290.5 2.2,290.5 168.5,2.5 334.8,290.5' fill='%23FFF2' stroke='%23FFF' stroke-width='5'/%3E%3C/svg%3E%0A");
         }
 
         .side:nth-child(1) {
@@ -235,13 +235,15 @@ const feature = (data) => html`<div class="feature">
 export default (data) => html`
   <style>
     .home {
-      padding: 3.6rem 2rem 0;
-      max-width: 960px;
+      padding: 3.6rem 0;
       margin: 0 auto;
       display: block;
     }
     .home .hero {
       text-align: center;
+      background-color: var(--primary-color);
+      padding: 3rem;
+      color: var(--text-on-primary);
     }
     .home .hero img {
       max-width: 100%;
@@ -256,6 +258,7 @@ export default (data) => html`
     .home .hero .description,
     .home .hero .action {
       margin: 1.8rem auto;
+      margin-top: 0;
     }
     .home .hero .description {
       max-width: 35rem;
@@ -265,7 +268,7 @@ export default (data) => html`
     .home .hero .action-button {
       display: inline-block;
       font-size: 1.2rem;
-      color: #fff;
+      color: var(--text-on-secondary);
       background-color: var(--secondary-color);
       padding: 0.8rem 1.6rem;
       border-radius: 4px;
@@ -278,8 +281,7 @@ export default (data) => html`
     }
     .home .features {
       border-top: 1px solid #eaecef;
-      padding: 1.2rem 0;
-      margin-top: 2.5rem;
+      padding: 1.2rem 2rem;
       display: flex;
       flex-wrap: wrap;
       align-items: flex-start;
@@ -296,10 +298,11 @@ export default (data) => html`
       font-weight: 500;
       border-bottom: none;
       padding-bottom: 0;
-      color: #3a5169;
+      color: #000b;
     }
     .home .feature p {
-      color: #4e6e8e;
+      color: #000b;
+      text-align: justify;
     }
     .home .footer {
       padding: 2.5rem;
@@ -308,7 +311,7 @@ export default (data) => html`
       color: #4e6e8e;
     }
     .home .hero #logo {
-      margin: 5rem auto;
+      margin: 0 auto;
     }
     @media (max-width: 719px) {
       .home .features {
@@ -316,14 +319,10 @@ export default (data) => html`
       }
       .home .feature {
         max-width: 100%;
-        padding: 0 2.5rem;
+        padding: 0;
       }
     }
     @media (max-width: 419px) {
-      .home {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-      }
       .home .hero img {
         max-height: 210px;
         margin: 2rem auto 1.2rem;

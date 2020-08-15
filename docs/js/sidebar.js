@@ -34,10 +34,13 @@ class SidebarState {
     }
     const main = appRoot.querySelector("main");
     if (main) {
+      const themeContent = main.querySelector(".theme-default-content");
       if (genericPath === "/") {
         main.classList.add("home");
+        themeContent.classList.add("custom");
       } else {
         main.classList.remove("home");
+        themeContent.classList.remove("custom");
       }
 
       // FIXME: use md meta

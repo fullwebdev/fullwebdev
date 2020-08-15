@@ -4,10 +4,13 @@
 .theme-default-content:not(.custom) a:hover {
   text-decoration: underline;
 }
+h1:focus {
+  outline: 1px dashed var(--secondary-color-dark);
+}
 blockquote {
   font-size: 1rem;
-  color: #6c6c6c;
-  border-left: 0.2rem solid #dfe2e5;
+  color: var(--neutral-color-700);
+  border-left: 0.2rem solid var(--neutral-color-300);
   margin: 1rem 0;
   padding: 0.25rem 0 0.25rem 1rem;
 }
@@ -34,23 +37,26 @@ ol {
 }
 hr {
   border: 0;
-  border-top: 1px solid #eaecef;
+  border-top: 1px solid var(--neutral-color-300);
 }
 table {
   border-collapse: collapse;
   margin: 1rem 0;
-  display: block;
   overflow-x: auto;
+  width: 100%;
 }
 tr {
-  border-top: 1px solid #dfe2e5;
+  border-top: 1px solid var(--neutral-color-300);
+}
+tr.header {
+  background-color: var(--neutral-color-200);
 }
 tr:nth-child(2n) {
-  background-color: #f6f8fa;
+  background-color: var(--neutral-color-100);
 }
 th,
 td {
-  border: 1px solid #dfe2e5;
+  border: 1px solid var(--neutral-color-300);
   padding: 0.6em 1em;
 }
 .theme-container.sidebar-open .sidebar-mask {
@@ -87,7 +93,7 @@ td {
   display: inline-block;
 }
 .page-edit .edit-link a {
-  color: #4e6e8e;
+  color: var(--neutral-color-800);
   margin-right: 0.25rem;
 }
 .page-edit .last-updated {
@@ -96,11 +102,11 @@ td {
 }
 .page-edit .last-updated .prefix {
   font-weight: 500;
-  color: #4e6e8e;
+  color: var(--neutral-color-800);
 }
 .page-edit .last-updated .time {
   font-weight: 400;
-  color: #aaa;
+  color: var(--neutral-color-600);
 }
 @media (max-width: 719px) {
   .page-edit .edit-link {
@@ -159,7 +165,7 @@ td {
   border-radius: 2px;
   margin: 1.6em 0;
   padding: 1.6em;
-  background-color: #eee;
+  background-color: var(--neutral-color-200);
 }
 .details h4 {
   margin-top: 0;
@@ -290,5 +296,13 @@ figcaption {
   text-align: center;
   font-style: italic;
   margin: 1rem 0;
-  color: #4d4d4d;
+  color: var(--neutral-color-800);
 }
+
+.page a[target="_blank"]:after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' x='0px' y='0px' viewBox='0 0 100 100' width='15' height='15' class='icon outbound'%3E%3Cpath fill='#424242' d='M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z'%3E%3C/path%3E%3Cpolygon fill='#424242' points='45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9'%3E%3C/polygon%3E%3C/svg%3E");
+  vertical-align: middle;
+  padding-left: 0.2rem;
+}
+
+/* FIXME: tables < 719px */
