@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.9.1](https://github.com/fullwebdev/fullwebdev/compare/v0.9.0...v0.9.1) (2020-08-16)
+
+### Bug Fixes
+
+- **docs:** async routing ([6321eae](https://github.com/fullwebdev/fullwebdev/commit/6321eae15a05f5e0f11f18e4ad09ec1d1f0ae963))
+- **docs:** better color palette ([2cc2ee0](https://github.com/fullwebdev/fullwebdev/commit/2cc2ee007c354f4d9a178bedbd584dc526a9bcd3))
+- **docs:** broken link in materials ([25c73aa](https://github.com/fullwebdev/fullwebdev/commit/25c73aa200a1e23eeb098552a2495c366d903f64))
+- **docs:** broken md links ([d401f55](https://github.com/fullwebdev/fullwebdev/commit/d401f55c22d1e182dcfe182f86f33dde214e071d))
+- **docs:** code a11y colors ([b8135ef](https://github.com/fullwebdev/fullwebdev/commit/b8135ef8d1975c7505f6a876512f7466216a4ad0))
+- **docs:** focus on header after navigation ([2d3f377](https://github.com/fullwebdev/fullwebdev/commit/2d3f3773d173c60d971e58d56152c58a5f74150b))
+- **docs:** home footer color and position ([92aa476](https://github.com/fullwebdev/fullwebdev/commit/92aa476861c88649e6694825b2c25ea088c5be61))
+- **docs:** material caption style ([a077425](https://github.com/fullwebdev/fullwebdev/commit/a077425261b1bfa068d87f2995ec298e09466ab9))
+- **docs:** missing aria-label and aria-current ([4c8d101](https://github.com/fullwebdev/fullwebdev/commit/4c8d101bf53b8fe252046fcda17d6178c79eacff))
+- **docs:** missing feedback on click ([7d02c6c](https://github.com/fullwebdev/fullwebdev/commit/7d02c6c6d09384688670cc9052c873eb4e098f6c))
+- **docs:** missing icon for external links ([f8c18a2](https://github.com/fullwebdev/fullwebdev/commit/f8c18a2a20a5d4c4dbc026a4e271c2f9fd3e56e0))
+- **docs:** missing target \_blank ([347aa93](https://github.com/fullwebdev/fullwebdev/commit/347aa93535c9c18c520210c634b135cae1fa7833))
+- **docs:** navigation history ([45d42fa](https://github.com/fullwebdev/fullwebdev/commit/45d42faafbcaa793fc07b81d8cd6840982097da4))
+- **docs:** pages readability ([627ebd6](https://github.com/fullwebdev/fullwebdev/commit/627ebd67733620117248cca58c5a0dabe0d59f7d))
+- **docs:** readable theme ([e53bc08](https://github.com/fullwebdev/fullwebdev/commit/e53bc08384bb7ef67006cf6906ff2fe7e7cefba6))
+- **docs:** reorg w/ a fundamentals section ([fe73bd9](https://github.com/fullwebdev/fullwebdev/commit/fe73bd91d9a0cdb15b3c7f4bc905a691ceb65636))
+- **docs:** sidebar menu hierarchy ([708358d](https://github.com/fullwebdev/fullwebdev/commit/708358d6da2300d480dedf178d417982e0891aaa))
+
 ## [0.9.0](https://github.com/fullwebdev/fullwebdev/compare/v0.8.0...v0.9.0) (2020-08-14)
 
 ### Features
