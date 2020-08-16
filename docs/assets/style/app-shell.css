@@ -392,3 +392,37 @@ details[open] summary ~ * {
   border-top: 1px solid var(--neutral-color-300);
   margin-top: 1rem;
 }
+
+.button,
+a.sidebar-link,
+.sidebar .nav-item {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+.button:active::after,
+a.sidebar-link:active::after,
+.sidebar .nav-item:active::after {
+  transform: scale(0, 0);
+  opacity: 0.2;
+  transition: 0s;
+}
+.button::after,
+a.sidebar-link::after,
+.sidebar .nav-item::after {
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #000 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform 0.5s, opacity 1s;
+}
