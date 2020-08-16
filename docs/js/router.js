@@ -120,17 +120,29 @@ export async function navigate(
   try {
     let page;
     try {
-      page = (await import(importPath)).default;
+      page = await import(importPath);
     } catch (err) {
       if (!viewRoutePath || getLang() === "en") {
         throw new Error();
       }
       viewRoutePath = viewRoutePath.replace(langBase, "/en/");
       // TODO: msg page not translated
-      page = (await import(`${baseUrl}/views${viewRoutePath}`)).default;
+      page = await import(`${baseUrl}/views${viewRoutePath}`);
       path = path.replace(langBase, "/en/");
     }
-    template = await page({ routeParams: routeMatch, lang: getLang() });
+    let data;
+    if (page.fetchData) {
+      render(
+        page.default({ data, routeParams: routeMatch, lang: getLang() }),
+        routeContainer
+      );
+      try {
+        data = await page.fetchData(routeMatch);
+      } catch (err) {
+        data = { error: err.toString() };
+      }
+    }
+    template = page.default({ data, routeParams: routeMatch, lang: getLang() });
   } catch (err) {
     template = notFound({ lang: getLang() });
   }
