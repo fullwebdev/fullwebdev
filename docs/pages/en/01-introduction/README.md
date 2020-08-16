@@ -1,5 +1,23 @@
 # Introduction
 
+Nowadays, Web Development is becoming more and more specialized, and dogmatic.
+
+_"Which framework should I learn first?" "Which one should I choose for my project?"_ Nobody has a clear answer to those questions. And yet, those are the ones we hear the most.
+
+Developers are pushed to adopt one framework and to stick with it. To start learning web development with one of those, and then to become an "expert" on it. Even though people behind those frameworks are often working together, our community is torn apart by some trolls who never miss an opportunity to tell everyone how any other choice than theirs is wrong.
+
+From this, it's tempting to reject them all. To hope the framework era is close to its end. And to do everything on our own, without any external tool.
+
+We, at FullWeb.dev, think all these approaches can complete each other. That they don't contradict each other.
+
+Opting, or not, for a framework or library, should only be based on context. This requires a full understanding of the consequences of this choice.
+
+:::tip
+**Our goal** : helping everyone to see the whole picture.
+
+**Our method** : studying and explaining each part of modern web development, one after the other. Not through the prism of one framework or library. But with the help of the Web standards. Allowing us to really understand and objectively compare each approach.
+:::
+
 ## What you'll find here
 
 We just started this project, so this website is mostly inclomplete for now.
@@ -18,7 +36,7 @@ First, most instruction materials (e.g. code samples and illustrations) are cont
 
 We also maintain an [inventory](/03-inventory/) of every project we study, use and talk about (mostly libraries and dev tools). Any external contribution can help us, so please do not hesitate to send us a pull request.
 
-We are also creating a bunch of dev tools during this process, and should be presented them here pretty soon.
+On top of that, we are creating a bunch of dev tools during this process, which should be presented here pretty soon.
 
 Finally, you can already study our [codelabs](/04-codelabs/) and the videos of our [conferences](/05-conferences/). Those are 100% publicly available and all the related materials are open sourced on GitHub.
 
