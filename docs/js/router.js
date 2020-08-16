@@ -214,7 +214,7 @@ document.body.addEventListener("click", (e) => {
 });
 
 window.onpopstate = () => {
-  navigate(getPath());
+  navigate(getPath(), false, false);
 };
 
 navigate(getPath());
