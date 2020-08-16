@@ -386,3 +386,9 @@ details[open] summary ~ * {
   top: calc(50% - 2px);
   left: -9px;
 }
+
+.sidebar-link.separator,
+.sidebar-group.separator {
+  border-top: 1px solid var(--neutral-color-300);
+  margin-top: 1rem;
+}

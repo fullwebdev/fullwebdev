@@ -5,13 +5,21 @@ import { sidebarState } from "../sidebar.js";
 import { routes } from "../routes.js";
 import { setLang, langBase } from "../lang.js";
 
+// FIXME: typing
+
 /**
- * @typedef {{title: string, path: string, children?: NavItem[]}} NavItem
- * @typedef {{ lang: 'en' | 'fr', currentPath?: string }} RouteInfo
+ * @typedef {{title: string, path: string, name: string, children?: NavItem[]}} NavItem
+ * @typedef {{ lang: 'en' | 'fr', currentPath?: string, separator?: boolean }} RouteInfo
  * @typedef {NavItem & RouteInfo} RoutedNavItem
  * @typedef {{name?: string, path: string, title:string, file?: string, children?: {[key:string]: Route} }} Route
  * @typedef {{name?: string, path: string, title:string, file?: string, children?: Route[] }} MenuItem
  */
+
+const reduceRoute = (path) => {
+  return path.reduce((prev, cur) => {
+    return prev[cur] || (prev.children && prev.children[cur]);
+  }, routes);
+};
 
 /**
  * @param {string} path
@@ -30,34 +38,31 @@ const getRoutes = (path, lang = "en") => {
     return [];
   }
 
-  let pathElmts = path.split("/").slice(1, -1);
-
-  // TODO: generalize
-  const shouldFollow = pathElmts.length > 2 || path.includes("materials/");
-
-  if (!shouldFollow) {
-    pathElmts = [lang];
-  }
+  const pathElmts = path.split("/").slice(1, -1);
 
   /**
    * @type {{ [key:string]: Route }}
    */
-  const route = pathElmts.reduce((prev, cur) => {
-    const rslt = prev[cur] || (prev.children && prev.children[cur]);
-    if (
-      rslt.children &&
-      Object.values(rslt.children).find((child) => child.children)
-    ) {
-      return rslt.children;
-    } else {
-      return prev;
-    }
-  }, routes);
+  let route = reduceRoute(pathElmts);
 
-  let menu = Object.values(route);
+  // TODO: generalize
+  const shouldFollow = pathElmts.length > 2 && route.children;
+
+  if (!shouldFollow) {
+    route = reduceRoute([lang]);
+  }
+
+  let menu = Object.values(route.children || route);
   if (shouldFollow) {
     // TODO: generalize
-    menu = [routes[pathElmts[0]].children["01-introduction"], ...menu];
+    const firstChild = menu.shift();
+    firstChild.separator = true;
+    menu = [
+      routes[pathElmts[0]].children["01-introduction"],
+      reduceRoute(pathElmts.slice(0, -1)),
+      firstChild,
+      ...menu,
+    ];
   }
 
   return menu;
@@ -80,27 +85,33 @@ const navLink = (data) => {
 };
 
 /**
- * @param {{ open: boolean, title: string; path: string; children?: NavItem[]; lang: "en" | "fr"; currentPath?: string; }} data
+ * @param {{ open: boolean, title: string; path: string; children?: NavItem[]; lang: "en" | "fr"; currentPath?: string; separator: boolean; name: string }} data
  */
-const sidebarGroup = (data) => html`<li>
-  <details class="sidebar-group collapsable depth-0">
-    <summary class="sidebar-heading">${data.title || data.name}</summary>
-    <ul class="sidebar-links sidebar-group-items">
-      ${repeat(
-        Object.values(data.children),
-        (item) => item.path,
-        (item) =>
-          html`<li>
-            ${sidebarLink({
-              ...item,
-              currentPath: data.currentPath,
-              lang: data.lang,
-            })}
-          </li>`
-      )}
-    </ul>
-  </details>
-</li>`;
+const sidebarGroup = (data) => {
+  const classes = { separator: data.separator };
+
+  return html`<li>
+    <details class="sidebar-group collapsable depth-0 ${classMap(classes)}">
+      <summary class="sidebar-heading">${data.title || data.name}</summary>
+      <ul class="sidebar-links sidebar-group-items">
+        ${data.children
+          ? repeat(
+              Object.values(data.children),
+              (item) => item.path,
+              (item) =>
+                html`<li>
+                  ${sidebarLink({
+                    ...item,
+                    currentPath: data.currentPath,
+                    lang: data.lang,
+                  })}
+                </li>`
+            )
+          : ""}
+      </ul>
+    </details>
+  </li>`;
+};
 
 /**
  * @param {RoutedNavItem} data
@@ -110,7 +121,8 @@ const sidebarItem = (data) => {
     return sidebarGroup(data);
   } else if (
     data.children &&
-    data.path === data.currentPath &&
+    data.currentPath &&
+    data.currentPath.includes(data.path) &&
     Object.values(data.children).find((child) => child.path)
   ) {
     return html`<li>
@@ -139,7 +151,10 @@ const sidebarItem = (data) => {
  * @param {RoutedNavItem} data
  */
 const sidebarLink = (data) => {
-  const classes = { active: data.currentPath === data.path };
+  const classes = {
+    active: data.currentPath === data.path,
+    separator: data.separator,
+  };
 
   return html`
     <a href=${data.path} class="sidebar-link ${classMap(classes)}">
