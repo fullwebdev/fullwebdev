@@ -72,13 +72,19 @@ const getRoutes = (path, lang = "en") => {
  * @param {RoutedNavItem} data
  */
 const navLink = (data) => {
+  const isCurrentPage =
+    data.currentPath && data.currentPath.replace(langBase, "/") === data.path;
+
   const classes = {
-    "router-link-active":
-      data.currentPath && data.currentPath.replace(langBase, "/") === data.path,
+    "router-link-active": isCurrentPage,
   };
 
   return html`<div class="nav-item">
-    <a href=${data.path} class="nav-link ${classMap(classes)}">
+    <a
+      href=${data.path}
+      class="nav-link ${classMap(classes)}"
+      aria-current=${isCurrentPage ? "page" : "false"}
+    >
       ${data.title || data.name}
     </a>
   </div>`;
@@ -157,7 +163,11 @@ const sidebarLink = (data) => {
   };
 
   return html`
-    <a href=${data.path} class="sidebar-link ${classMap(classes)}">
+    <a
+      href=${data.path}
+      class="sidebar-link ${classMap(classes)}"
+      aria-current=${data.currentPath === data.path ? "page" : "false"}
+    >
       ${data.title || data.name}
     </a>
   `;
@@ -215,13 +225,18 @@ const langSelector = ({ currentLang }) => {
     "router-link-exact-active": lang === currentLang,
     "router-link-active": lang === currentLang,
   });
+  const ariaCurrent = (lang) => (lang === currentLang) + "";
 
-  return html`<div class="lang-selector">
+  return html`<div
+    class="lang-selector"
+    aria-label="Sélectionner la langue à utiliser"
+  >
     <div class="nav-item">
       <a
         href
         @click=${() => selectLang("en")}
         class="nav-link ${classMap(linkClasses("en"))}"
+        aria-current=${ariaCurrent("en")}
       >
         English
       </a>
@@ -231,6 +246,7 @@ const langSelector = ({ currentLang }) => {
         href
         @click=${() => selectLang("fr")}
         class="nav-link ${classMap(linkClasses("fr"))}"
+        aria-current=${ariaCurrent("fr")}
       >
         Français
       </a>
@@ -238,11 +254,14 @@ const langSelector = ({ currentLang }) => {
   </div>`;
 };
 
-const githubLink = () => html` <a
+const githubLink = (lang) => html` <a
   href="https://github.com/fullwebdev/fullwebdev"
   target="_blank"
   rel="noopener noreferrer"
   class="repo-link"
+  aria-label=${lang === "fr"
+    ? "Aller sur notre dépôt Github"
+    : "Go to our Github repository"}
 >
   GitHub
 </a>`;
@@ -262,7 +281,7 @@ export default (data) => html` <header class="navbar">
           (item) => item.path,
           (item) => navLink({ ...item, ...data })
         )}
-        ${langSelector({ currentLang: data.lang })} ${githubLink()}
+        ${langSelector({ currentLang: data.lang })} ${githubLink(data.lang)}
       </nav>
     </div>
   </header>
@@ -273,7 +292,7 @@ export default (data) => html` <header class="navbar">
         (item) => item.path,
         (item) => navLink({ ...item, ...data })
       )}
-      ${langSelector({ currentLang: data.lang })} ${githubLink()}
+      ${langSelector({ currentLang: data.lang })} ${githubLink(data.lang)}
     </nav>
     <ul class="sidebar-links">
       ${repeat(
