@@ -1,15 +1,33 @@
 # Introduction
 
-This website and the associated contents are currently under development.
+## What you'll find here
 
-I'm putting intensive efforts into the development of this new contents. Before their completion, I can only deliver some very small parts of them publicly. This is why this website itself will stay pretty much as is for a few months. In the meantime, you'll find some of my open-sourced materials in the [Instruction Materials](/06-materials/) section. However, these are delivered with no context. They are therefore mainly intended to be used with my direct assistance as part of my job.
+We just started this project, so this website is mostly inclomplete for now.
 
-If you want to be informed of the latest evolutions, subscribe to (i.e. "watch") this project's releases [on GitHub](https://github.com/fullwebdev/fullwebdev){target="\_blank"} and [follow me on Twitter](https://twitter.com/noel_mace){target="\_blank"}. Contributions are very welcomed too, so do not hesitate to [open an issue](https://github.com/fullwebdev/fullwebdev/issues/new){target="\_blank"} and to fork this repository and send a Pull-Request.
+First, we're focusing on the [fundamentals](/02-fundamentals/) section, in 3 steps:
+
+1. writing a lot of contents, in French (sorry for that)
+2. finalizing, delivering and using this French version
+3. creating and publish shorter contents based on parts of what we previously created, both in French and in english (houray!), step by step
+
+Step 2 should end by the end of this year (2020), and we can't share a lot in the meantime.
+
+Yet, we also create a lot of open-source stuff doing so.
+
+First, most instruction materials (e.g. code samples and illustrations) are continuously delivered in the [Instruction Materials](/02-fundamentals/02-fundamentals/02-materials/) section.
+
+We also maintain an [inventory](/03-inventory/) of every project we study, use and talk about (mostly libraries and dev tools). Any external contribution can help us, so please do not hesitate to send us a pull request.
+
+We are also creating a bunch of dev tools during this process, and should be presented them here pretty soon.
+
+Finally, you can already study our [codelabs](/04-codelabs/) and the videos of our [conferences](/05-conferences/). Those are 100% publicly available and all the related materials are open sourced on GitHub.
+
+## Stay tuned
+
+If you want to be informed of the latest evolutions, subscribe to this project's releases [on GitHub](https://github.com/fullwebdev/fullwebdev){target="\_blank"}.
+
+Contributions are very welcomed too, so do not hesitate to [open an issue](https://github.com/fullwebdev/fullwebdev/issues/new){target="\_blank"} and to fork this repository and send a Pull-Request.
 
 :::tip
 You can directly edit any page of this website by just clicking on the "Edit this page on GitHub" link at its bottom left
 :::
-
-Right now, you can also check out the list of my [conferences and workshops](/05-conferences/). Those are 100% publicly available and all the related materials are open sourced on GitHub.
-
-Finally, I maintain a small and simple list on my other projects and platforms where you can find me on my personal Web page, [noelmace.com](https://noelmace.com){target="\_blank"}.

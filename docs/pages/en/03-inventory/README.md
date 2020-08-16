@@ -9,7 +9,7 @@ Entries are orderred by popularity, based on npmjs.org download statistics.
 ::: tip
 Is your favorite tool or library missing?
 
-Go [edit this page](https://github.com/fullwebdev/fullwebdev/edit/master/docs/04-inventory/README.md){target="\_blank"} or [open an issue](https://github.com/fullwebdev/fullwebdev/issues/new){target="\_blank"} on GitHub.
+Go [edit this page](https://github.com/fullwebdev/fullwebdev/edit/master/docs/03-inventory/README.md){target="\_blank"} or [open an issue](https://github.com/fullwebdev/fullwebdev/issues/new){target="\_blank"} on GitHub.
 :::
 
 ## Runtime Libraries
@@ -222,15 +222,15 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 
 ## Languages
 
-| name                                                                                         | popularity    | status |
-| -------------------------------------------------------------------------------------------- | ------------- | ------ |
-| [typescript](./typescript?library=false)                                                     | 67            |
-| [marko](./marko?library=false)                                                               | 36            |
-| [Clojure / ClojureScript](https://clojurescript.org/){target="\_blank"}                      | (:star: 8.4k) |
-| [Elm](https://elm-lang.org){target="\_blank"}                                                | (:star: 6k)   |
+| name                                                                                        | popularity    | status |
+| ------------------------------------------------------------------------------------------- | ------------- | ------ |
+| [typescript](./typescript?library=false)                                                    | 67            |
+| [marko](./marko?library=false)                                                              | 36            |
+| [Clojure / ClojureScript](https://clojurescript.org/){target="\_blank"}                     | (:star: 8.4k) |
+| [Elm](https://elm-lang.org){target="\_blank"}                                               | (:star: 6k)   |
 | [Reason](https://reasonml.github.io){target="_blank"}_(via [BuncleScript](./bs-platform))\_ | 34            |
-| [purescript](./purescript)                                                                   | 28            |
-| [imba](./imba?library=false)                                                                 | 26            |
+| [purescript](./purescript)                                                                  | 28            |
+| [imba](./imba?library=false)                                                                | 26            |
 
 ## Build & Dev Tools
 

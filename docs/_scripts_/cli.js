@@ -78,7 +78,7 @@ async function cli() {
       await watchOrBuild(
         program.watch,
         livreRoot,
-        path.join(outputDir, "LANG", "06-materials"),
+        path.join(outputDir, "LANG", "02-fundamentals", "02-materials"),
         ["[0-9]-**/!(TITLE).md"],
         path.resolve(livreRoot, ".."),
         true

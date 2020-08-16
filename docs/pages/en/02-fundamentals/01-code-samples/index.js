@@ -1,5 +1,5 @@
-import codesandbox from "../../../js/components/codesandbox.js";
-import pageFooter from "../../../js/components/page-footer.js";
+import codesandbox from "../../../../js/components/codesandbox.js";
+import pageFooter from "../../../../js/components/page-footer.js";
 import { html } from "lit-html";
 
 export default () => html`
@@ -24,7 +24,7 @@ export default () => html`
     <a href="https://github.com/noelmace/pandoc-import-code"
       >pandoc-import-code</a
     >
-    (cf. <a href="/06-materials/">Instructional Materials</a>).
+    (cf. <a href="/02-fundamentals/02-materials/">Instructional Materials</a>).
   </p>
 
   ${codesandbox({
