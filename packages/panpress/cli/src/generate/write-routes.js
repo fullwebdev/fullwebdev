@@ -4,12 +4,12 @@ const path = require("path");
 const { merge } = require("../utils/objects");
 const { writeFile } = require("fs").promises;
 
-async function writeRoutesFile(data) {
+async function writeRoutesFile(data, root) {
   const routes = JSON.stringify(data, null, 2);
   const jsContent = `
     export const routes = ${routes};
   `;
-  const dest = path.join(__dirname, "..", "..", "js", "routes.js");
+  const dest = path.resolve(root, "js", "routes.js");
   await fs.createFile(dest);
   console.log(`[build] ${dest} built`);
   await writeFile(dest, jsContent, {
@@ -17,8 +17,8 @@ async function writeRoutesFile(data) {
   });
 }
 
-async function writeRoutes() {
-  const generatedRoutes = await routesWithTitles();
+async function writeRoutes(root) {
+  const generatedRoutes = await routesWithTitles(root);
 
   // TODO: generalize
   generatedRoutes.fr = merge(
@@ -31,7 +31,7 @@ async function writeRoutes() {
     }
   );
 
-  await writeRoutesFile(generatedRoutes);
+  await writeRoutesFile(generatedRoutes, root);
 }
 
 module.exports = { writeRoutes, writeRoutesFile };

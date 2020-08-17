@@ -1,17 +1,11 @@
 const fs = require("fs");
 const path = require("path");
+const { getConfig } = require("../utils/config");
 
 const codeSampleRe = /^<<< @\/\.\.\/([\w-]+)\/(([^#]*)(?:#.*)?)$/;
 
 //const lineRe = /^(<<< @|#|!\[)/;
 const lineRe = /^(<<< @|## |!\[|<!--en:)/;
-
-const submodulesRepo = [
-  ["benchmark", "https://github.com/fullwebdev/benchmark/tree/main"],
-  ["livre-fr", "https://github.com/noelmace/livre-web-apps/tree/master"],
-];
-
-const rootRepo = "https://github.com/fullwebdev/fullwebdev/tree/master";
 
 /**
  * @param {string} markdown
@@ -38,11 +32,16 @@ function extractMaterials(markdown) {
         let [full, packageName, snippetPath, filePath] = codeSampleRe.exec(
           line
         );
-        const repo = submodulesRepo.find(([name]) => name === packageName);
-        const [projectName, baseUrl] = repo ? repo : [packageName, rootRepo];
+        const submoduleRepo = getConfig().repository.submodules[packageName];
+        const baseUrl = [
+          (submoduleRepo && submoduleRepo.url) || getConfig().repository.url,
+          "tree",
+          (submoduleRepo && submoduleRepo.branch) ||
+            getConfig().repository.branch,
+        ].join("/");
 
         let path = filePath;
-        if (!repo) {
+        if (!submoduleRepo) {
           filePath = `packages/${packageName}/${filePath}`;
         }
 
@@ -51,7 +50,7 @@ function extractMaterials(markdown) {
 <<< @/../${packageName}/${snippetPath}
 
 <p class="code-caption">
-Cf. ${projectName}: <a href="${baseUrl}/${filePath}" target="_blank" rel="noopener noreferrer" aria-label="open on Github">${path}</a>
+Cf. ${packageName}: <a href="${baseUrl}/${filePath}" target="_blank" rel="noopener noreferrer" aria-label="open on Github">${path}</a>
 </p>
 `;
         materialCount.fr++;

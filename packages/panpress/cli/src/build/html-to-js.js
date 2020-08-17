@@ -3,16 +3,7 @@ const { spawnSync } = require("child_process");
 const fs = require("fs-extra");
 const { relativeToRepoRoot } = require("./repo-utils");
 const { getLang } = require("../utils/lang");
-
-/**
- * @type {[string, string][]}
- *
- * TODO: extract from config
- */
-const submodules = [
-  ["packages/livre-fr", "https://github.com/noelmace/livre-web-apps"],
-  ["packages/benchmark", "https://github.com/fullwebdev/benchmark"],
-];
+const { getConfig } = require("../utils/config");
 
 /**
  * @param {string} filePath
@@ -39,10 +30,11 @@ function getGitLastUpdatedTimeStamp(filePath) {
 
 /**
  * @param {string} filePath
- * @param {[string, string][]} submodules
  */
-function githubURL(filePath, submodules = []) {
-  const submodule = submodules.find(([dir]) => filePath.includes(dir));
+function githubURL(filePath) {
+  const submodule = Object.values(
+    getConfig().repository.submodules
+  ).find((value) => filePath.includes(value.path));
   // FIXME: should not be specific to fullwebdev
   const repoUrl = submodule
     ? `${submodule[1]}`
@@ -68,8 +60,7 @@ function pageFooter(filePath, editLink = true) {
       ${editLink
         ? `<div class="edit-link">
           <a href="${githubURL(
-            filePath,
-            submodules
+            filePath
           )}" target="_blank" rel="noopener noreferrer"
             >${
               lang === "fr"

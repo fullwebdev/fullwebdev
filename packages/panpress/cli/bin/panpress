@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+'use strict';
+
+try {
+  process.title = 'panpress ' + Array.from(process.argv).slice(2).join(' ');
+} catch (_) {
+  process.title = 'panpress';
+}
+
+const { cli } = require('../index.js');
+
+cli().then(
+  () => {
+    console.debug(`DONE`);
+  },
+  (err) => {
+    console.error(err);
+    process.exitCode = 1;
+  }
+);

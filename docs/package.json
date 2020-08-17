@@ -3,10 +3,10 @@
   "version": "0.9.1",
   "private": true,
   "scripts": {
-    "build": "node _scripts_/cli.js",
-    "start": "node _scripts_/cli.js --dev",
-    "server": "node _scripts_/cli.js --serve",
-    "help": "node _scripts_/cli.js --help",
+    "build": "panpress",
+    "start": "panpress --dev",
+    "server": "panpress --serve",
+    "help": "panpress --help",
     "lint": "eslint \"{pages,js,components}/**/*.js\""
   },
   "repository": {
@@ -19,24 +19,11 @@
     "url": "https://github.com/fullwebdev/fullwebdev/issues"
   },
   "devDependencies": {
-    "@snowpack/plugin-build-script": "^2.0.2",
-    "@types/fs-extra": "^9.0.1",
-    "@types/puppeteer": "^3.0.1",
-    "@types/rimraf": "^3.0.0",
-    "chokidar": "^3.4.1",
-    "commander": "^6.0.0",
-    "concurrently": "^5.2.0",
-    "cssnano": "^4.1.10",
-    "eslint": "^7.6.0",
-    "eslint-plugin-compat": "^3.8.0",
-    "eslint-plugin-import": "^2.22.0",
-    "local-web-server": "^4.2.1",
-    "minify-html-literals": "^1.3.1",
+    "@panpress/cli": "*",
     "postcss-cli": "^7.1.1",
     "postcss-import": "^12.0.1",
-    "puppeteer": "^5.2.1",
-    "rimraf": "^2.6.3",
-    "snowpack": "^2.7.5"
+    "@snowpack/plugin-build-script": "^2.0.2",
+    "minify-html-literals": "^1.3.1"
   },
   "dependencies": {
     "lit-html": "^1.2.1",

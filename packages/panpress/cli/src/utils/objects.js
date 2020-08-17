@@ -31,7 +31,8 @@ const merge = (target, source, transformer = defaultTransformer) => {
       } else if (isObject(target[key])) {
         output[key] = merge(target[key], {}, transformer);
       } else {
-        const data = transformer(target, source, key) ?? source[key] ?? target[key];
+        const data =
+          transformer(target, source, key) ?? source[key] ?? target[key];
         Object.assign(output, { [key]: data });
       }
     }

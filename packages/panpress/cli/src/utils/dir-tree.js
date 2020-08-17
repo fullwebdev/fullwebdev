@@ -35,7 +35,7 @@ function readDirTree(root, ext) {
       }
 
       fileArray[file] = fileInfo;
-    };
+    }
 
     return fileArray;
   };

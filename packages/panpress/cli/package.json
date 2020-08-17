@@ -1,0 +1,36 @@
+{
+  "name": "@panpress/cli",
+  "version": "0.1.0",
+  "description": "Static site generator powered by Pandoc & lit-html.",
+  "main": "index.js",
+  "bin": {
+    "panpress": "./bin/panpress"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fullwebdev/fullwebdev.git"
+  },
+  "author": "Noël Macé",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fullwebdev/fullwebdev/issues"
+  },
+  "homepage": "https://github.com/fullwebdev/fullwebdev#readme",
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.1",
+    "@types/puppeteer": "^3.0.1",
+    "@types/rimraf": "^3.0.0"
+  },
+  "dependencies": {
+    "chokidar": "^3.4.1",
+    "commander": "^6.0.0",
+    "cssnano": "^4.1.10",
+    "local-web-server": "^4.2.1",
+    "puppeteer": "^5.2.1",
+    "rimraf": "^2.6.3",
+    "snowpack": "^2.7.5"
+  }
+}

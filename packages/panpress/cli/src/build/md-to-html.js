@@ -75,7 +75,8 @@ async function mdToHTMLByLang(filePath, root, cwd, extract = false) {
           "-F",
           "pandoc-import-code",
           "--lua-filter",
-          fromRepoRoot("scripts", "pandoc-filters", "standard-code.lua"),
+          // FIXME
+          path.resolve(__dirname, "..", "..", "filters", "standard-code.lua"),
           "--no-highlight",
         ],
         cwd,

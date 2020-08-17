@@ -3,9 +3,7 @@ const path = require("path");
 const { readDirTree } = require("../utils/dir-tree");
 const { dirToRoutes } = require("./dir-to-routes");
 
-const dirPath = path.resolve(__dirname, "..", "..", "views");
-
-async function routesWithTitles() {
+async function routesWithTitles(root) {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
@@ -35,6 +33,7 @@ async function routesWithTitles() {
     return { title };
   };
 
+  const dirPath = path.resolve(root, "views");
   const dirTree = readDirTree(dirPath, ".js");
   const menu = await dirToRoutes(dirTree, getTitle);
   await browser.close();

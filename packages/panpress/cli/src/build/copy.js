@@ -24,23 +24,23 @@ async function copy(root, glob, out, watch = false) {
     const log = console.log.bind(console);
     return new Promise((resolve) => {
       watcher
-      .on("ready", () => {
-        log("[copy] Initial scan complete. Ready for changes");
-        resolve();
-      })
-      .on("add", async (filePath) => {
-        log(`[copy] File ${filePath} has been added`);
-        await copyFile(root, filePath, out);
-      })
-      .on("change", async (filePath) => {
-        log(`[copy] File ${filePath} has been changed`);
-        await copyFile(root, filePath, out);
-      })
-      .on("unlink", (filePath) => {
-        // TODO
-      })
-      .on("error", (error) => log(`Watcher error: ${error}`));
-    })
+        .on("ready", () => {
+          log("[copy] Initial scan complete. Ready for changes");
+          resolve();
+        })
+        .on("add", async (filePath) => {
+          log(`[copy] File ${filePath} has been added`);
+          await copyFile(root, filePath, out);
+        })
+        .on("change", async (filePath) => {
+          log(`[copy] File ${filePath} has been changed`);
+          await copyFile(root, filePath, out);
+        })
+        .on("unlink", (filePath) => {
+          // TODO
+        })
+        .on("error", (error) => log(`Watcher error: ${error}`));
+    });
   } else {
     const paths = await globby(glob, { absolute: true, cwd: root });
     return Promise.all(

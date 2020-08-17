@@ -15,6 +15,7 @@ module.exports = {
         "reveal",
         "helpers",
         "benchmark",
+        "panpress-cli",
       ],
     ],
   },
