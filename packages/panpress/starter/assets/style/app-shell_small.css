@@ -1,0 +1,36 @@
+.navbar {
+  padding-left: 4rem;
+}
+.navbar .can-hide {
+  display: none;
+}
+.navbar .links {
+  padding-left: 1.5rem;
+}
+.navbar .site-name {
+  width: calc(100vw - 9.4rem);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.sidebar .nav-links {
+  display: block;
+}
+.sidebar
+  .nav-links
+  .dropdown-wrapper
+  .nav-dropdown
+  .dropdown-item
+  a.router-link-active::after {
+  top: calc(1rem - 2px);
+}
+.sidebar > .sidebar-links {
+  padding: 1rem 0;
+}
+.sidebar-button {
+  display: block;
+}
+.nav-links .nav-item,
+.nav-links .repo-link {
+  margin-left: 0;
+}

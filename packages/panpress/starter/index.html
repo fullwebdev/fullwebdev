@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <title>Panpress Starter</title>
+    <link rel="modulepreload" href="/web_modules/lit-html.js" />
+    <link
+      rel="modulepreload"
+      href="/web_modules/lit-html/directives/repeat.js"
+    />
+    <link
+      rel="modulepreload"
+      href="/web_modules/lit-html/directives/class-map.js"
+    />
+    <link rel="modulepreload" href="/js/components/app-shell.js" />
+    <link rel="modulepreload" href="/js/sidebar.js" />
+    <link rel="modulepreload" href="/js/router.js" />
+    <link rel="modulepreload" href="/js/components/home.js" />
+    <link rel="stylesheet" href="/style/app-shell.css" />
+    <link
+      rel="stylesheet"
+      href="/style/app-shell_small.css"
+      media="screen and (max-width: 719px)"
+    />
+    <link
+      rel="stylesheet"
+      href="/style/app-shell_large.css"
+      media="screen and (min-width: 719px)"
+    />
+    <link rel="stylesheet" href="/style/pages.css" defer />
+    <link rel="stylesheet" href="/style/code.css" defer />
+    <script src="js/app-shell.js" type="module"></script>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" />
+    <meta name="description" content="Panpress Starter" />
+    <meta
+      property="og:image"
+      content="https://fullweb.dev/favicon/icon-384x384.png"
+    />
+    <meta property="og:site_name" content="Panpress Starter" />
+    <meta property="og:description" content="Panpress Starter" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://fullweb.dev/social.png" />
+    <meta name="twitter:image:alt" content="TODO" />
+    <meta name="twitter:title" content="panpress" />
+  </head>
+  <body>
+    <div id="app-root" class="theme-container">
+      <div id="app-shell"></div>
+      <main class="page">
+        <div class="theme-default-content content__default">
+          <div id="router-outlet"></div>
+        </div>
+      </main>
+    </div>
+    <script src="js/router.js" type="module"></script>
+  </body>
+</html>

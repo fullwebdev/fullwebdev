@@ -1,0 +1,30 @@
+{
+  "install": ["lit-html", "prismjs"],
+  "exclude": [
+    "**/node_modules/**/*",
+    "**/__tests__/*",
+    "**/*.@(spec|test).js",
+    "_scripts_/**/*",
+    ".vuepress/**/*",
+    "pages/**/*",
+    "*.!(html)",
+    "dist/**/*"
+  ],
+  "mount": {
+    "./": "/",
+    "assets": "/"
+  },
+  "proxy": {},
+  "plugins": [
+    "./minify-html-literals.snowpack.js",
+    ["@snowpack/plugin-build-script", {"cmd": "postcss", "input": [".css"], "output": [".css"]}]
+  ],
+  "installOptions": {},
+  "devOptions": {
+    "open": "none",
+    "out": "dist"
+  },
+  "buildOptions": {
+    "clean": true
+  }
+}
