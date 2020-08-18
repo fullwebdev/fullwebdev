@@ -26,6 +26,11 @@
     {
       "scope": "reveal",
       "directory": "packages/reveal"
+    },
+    {
+      "scope": "panpress-starter",
+      "directory": "packages/panpress/starter",
+      "url": "git@github.com:fullwebdev/panpress-starter.git"
     }
   ]
 }
