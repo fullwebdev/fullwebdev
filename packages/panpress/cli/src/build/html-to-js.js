@@ -35,11 +35,10 @@ function githubURL(filePath) {
   const submodule = Object.values(
     getConfig().repository.submodules
   ).find((value) => filePath.includes(value.path));
-  // FIXME: should not be specific to fullwebdev
-  const repoUrl = submodule
-    ? `${submodule[1]}`
-    : `https://github.com/fullwebdev/fullwebdev`;
-  return `${repoUrl}/edit/master/${relativeToRepoRoot(filePath)}`;
+  const repoUrl = submodule ? `${submodule[1]}` : getConfig().repository.url;
+  return `${repoUrl}/edit/${getConfig().repository.branch}/${relativeToRepoRoot(
+    filePath
+  )}`;
 }
 
 /**
