@@ -1,3 +1,9 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [0.1.0](https://github.com/fullwebdev/fullwebdev/compare/panpress@v0.1.0-rc.2...panpress@v0.1.0) (2020-08-19)
+
 ## [0.1.0-rc.2](https://github.com/fullwebdev/fullwebdev/compare/panpress@v0.1.0-rc.1...panpress@v0.1.0-rc.2) (2020-08-19)
 
 ### Bug Fixes

@@ -1,6 +1,6 @@
 {
   "name": "@panpress/starter",
-  "version": "0.1.0-rc.1",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "build": "panpress",
@@ -12,7 +12,7 @@
   "author": "Noel Macé",
   "license": "MIT",
   "devDependencies": {
-    "@panpress/cli": "0.1.0-rc.1",
+    "@panpress/cli": "0.1.0",
     "postcss-cli": "^7.1.1",
     "postcss-import": "^12.0.1",
     "@snowpack/plugin-build-script": "^2.0.2",
