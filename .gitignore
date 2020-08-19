@@ -17,3 +17,5 @@ node_modules
 /docs/js/routes.js
 *.log
 /.firebase
+/packages/panpress/starter/package-lock.json
+

@@ -20,6 +20,7 @@
     "postinstall": "lerna bootstrap && pip install -r py-requirements.txt",
     "release": "standard-version",
     "release:test": "standard-version --dry-run",
+    "release:panpress": "cd packages/panpress && standard-version",
     "update-subtrees": "monocli update",
     "start": "lerna run start --scope=@fullweb/docs",
     "prebuild:docs": "npm run build:illustrations && bash scripts/cp-assets.sh",

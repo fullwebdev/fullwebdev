@@ -1,0 +1,19 @@
+{
+  "path": ".",
+  "bumpFiles": [
+    {
+      "filename": "cli/package.json",
+      "type": "json"
+    },
+    {
+      "filename": "cli/package-lock.json",
+      "type": "json"
+    },
+    {
+      "filename": "starter/package.json",
+      "updater": "dependency-updater.js"
+    }
+  ],
+  "tag-prefix": "panpress@v",
+  "releaseCommitMessageFormat": "chore: panpress@{{currentTag}}"
+}
