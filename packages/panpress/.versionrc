@@ -12,6 +12,10 @@
     {
       "filename": "starter/package.json",
       "updater": "dependency-updater.js"
+    },
+    {
+      "filename": "starter/package-lock.json",
+      "updater": "lock-dependency-updater.js"
     }
   ],
   "tag-prefix": "panpress@v",
