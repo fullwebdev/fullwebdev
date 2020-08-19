@@ -1,4 +1,4 @@
-# Panpress - Starter Kit
+# Panpress (temporary name) - Starter Kit
 
 Static site generator powered by [Pandoc](https://pandoc.org/) & [lit-html](https://lit-html.polymer-project.org/).
 
@@ -8,9 +8,9 @@ Static site generator powered by [Pandoc](https://pandoc.org/) & [lit-html](http
 
 This project is at a very early stage of development.
 
-It is mosly intended to be used for the [FullWeb.dev](https://fullweb.dev) website (source [here](https://github.com/fullwebdev/fullwebdev/tree/master/docs)). Some customisations may be required for other projects.
+It is mosly intended to be used for the [FullWeb.dev](https://fullweb.dev) website (source [here](https://github.com/fullwebdev/fullwebdev/tree/master/docs)).
 
-Please do not hesitate to [open an issue](https://github.com/fullwebdev/fullwebdev/issues/new) in the fullwebdev monorepo if you have any suggestion or question.
+Please do not hesitate to [open an issue](https://github.com/fullwebdev/fullwebdev/issues/new) in the fullwebdev monorepo if you have any suggestion or question
 
 ## Get started
 
