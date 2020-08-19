@@ -1,6 +1,8 @@
 # Panpress - Starter Kit
 
-> [Template repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) for Panpress.
+Static site generator powered by [Pandoc](https://pandoc.org/) & [lit-html](https://lit-html.polymer-project.org/).
+
+> [Template repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) for [Panpress](https://www.npmjs.com/package/@panpress/cli).
 
 ## Status
 
