@@ -27,6 +27,6 @@
   },
   "dependencies": {
     "lit-html": "^1.2.1",
-    "prismjs": "^1.20.0"
+    "prismjs": "^1.21.0"
   }
 }
