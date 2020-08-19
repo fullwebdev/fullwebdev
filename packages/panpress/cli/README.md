@@ -1,4 +1,4 @@
-# Panpress
+# Panpress (temporary name)
 
 Static site generator powered by [Pandoc](https://pandoc.org/) & [lit-html](https://lit-html.polymer-project.org/).
 
