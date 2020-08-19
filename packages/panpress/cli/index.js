@@ -4,9 +4,9 @@ const { program } = require("commander");
 const { copy } = require("./src/build/copy");
 const { watchOrBuild } = require("./src/build/build-views");
 const { generateAll } = require("./src/generate");
-const { execFile, execFileSync } = require("child_process");
 const rimraf = require("rimraf");
 const { readConfig, getConfig } = require("./src/utils/config");
+const { snowpackSync, snowpack } = require("./src/utils/snowpack");
 
 async function cli() {
   program
@@ -93,21 +93,13 @@ async function cli() {
 
   if (!program.skipBuild) {
     console.debug(`[build] snowpack build`);
-    execFileSync(
-      path.resolve(__dirname, "node_modules", ".bin", "snowpack"),
-      ["build"],
-      { cwd: path.resolve(root), encoding: "utf-8" }
-    );
+    snowpackSync(["build"], root);
   }
 
   if (program.start) {
     if (program.skipBuild) {
       console.debug(`[start] snowpack dev server`);
-      execFile(
-        path.resolve(__dirname, "node_modules", ".bin", "snowpack"),
-        ["dev"],
-        { cwd: path.resolve(root), encoding: "utf-8" }
-      );
+      snowpack(["dev"], root);
     } else {
       console.debug(`[start] local-web-server on dist/`);
       const LocalWebServer = require("local-web-server");
