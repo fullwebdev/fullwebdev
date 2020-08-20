@@ -1,0 +1,26 @@
+{
+  "name": "@modern-helpers/template",
+  "version": "0.1.0",
+  "description": "create pre-rendered elements with an HyperHTML syntax",
+  "main": "index.js",
+  "module": "index.js",
+  "types": "main.d.ts",
+  "keywords": [
+    "modern",
+    "vanilla",
+    "hyperhtml",
+    "DOM",
+    "helper",
+    "template"
+  ],
+  "author": {
+    "name": "Noël Macé",
+    "url": "https://noelmace.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fullwebdev/fullwebdev.git",
+    "directory": "packages/helpers/template"
+  }
+}

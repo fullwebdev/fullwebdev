@@ -2,7 +2,7 @@
  * simple helper to create HTMLElements
  *
  * @param {string} tagName
- * @param {import("./create-element-options").ElOptions} options
+ * @param {import("./main").ElOptions} options
  * @param {(Node | string)[]} children
  *
  * @returns {HTMLElement}

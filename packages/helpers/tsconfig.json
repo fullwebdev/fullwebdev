@@ -12,5 +12,5 @@
     "alwaysStrict": true,
     "esModuleInterop": true
   },
-  "include": ["index.js", "src"]
+  "include": ["**/*"]
 }

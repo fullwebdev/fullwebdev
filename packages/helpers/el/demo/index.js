@@ -1,4 +1,4 @@
-import { el } from "../../../index.js";
+import { el } from "../index.js";
 
 let counter, decrementBtn;
 const incrementEl = el("div", { className: "incrementDemo" }, [

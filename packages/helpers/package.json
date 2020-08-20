@@ -1,10 +1,7 @@
 {
-  "name": "@fullweb/helpers",
+  "name": "modern-helpers",
   "version": "0.1.0",
-  "description": "A library with helpers functions for Modern Web Apps development",
-  "main": "index.js",
-  "module": "index.js",
-  "types": "index.d.ts",
+  "description": "Minimalistic helper functions for Modern Web Apps development.",
   "scripts": {
     "validate-types": "tsc",
     "start": "es-dev-server --compatibility none"
@@ -18,11 +15,6 @@
     "name": "Noël Macé",
     "url": "https://noelmace.com"
   },
-  "files": [
-    "*.d.ts",
-    "*.js",
-    "src"
-  ],
   "keywords": [
     "utils",
     "helpers"

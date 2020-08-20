@@ -1,4 +1,4 @@
-import { Template, part } from "../../../index.js";
+import { Template, part } from "../index.js";
 
 const incrementTemplate = new Template("div", { classList: "incrementDemo" }, [
   [

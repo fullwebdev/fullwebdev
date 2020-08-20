@@ -1,8 +1,8 @@
-/node_modules
+node_modules/
 *.log
-/coverage
+coverage/
 .nyc_output
-/test
+test/
 .eslintrc.js
 .huskyrc
 .lintstagedrc
@@ -11,4 +11,6 @@
 coverage-map.js
 tsconfig.json
 /.vscode
-/demos
+demos/
+/index.html
+.versionrc
