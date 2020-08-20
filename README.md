@@ -27,7 +27,7 @@
 | ------- | ------- | --------- |
 | [website](https://fullweb.dev) | [![release](https://img.shields.io/github/v/tag/fullwebdev/fullwebdev?sort=semver&include_prereleases&label=release)](https://github.com/fullwebdev/fullwebdev/blob/master/CHANGELOG.md) | [/docs](./docs/) |
 | [static site generator](https://www.npmjs.com/package/@panpress/cli) | ![npm](https://img.shields.io/npm/v/@panpress/cli) | [/packages/panpress/](./packages/panpress/) |
-| [helpers](https://www.npmjs.com/package/@fullweb/helpers) | ![npm](https://img.shields.io/npm/v/@fullweb/helpers) | [/packages/helpers/](./packages/helpers/) |
+| [helpers](https://www.npmjs.com/package/modern-helpers) | ![npm](https://img.shields.io/npm/v/modern-helpers) | [/packages/helpers/](./packages/helpers/) |
 
 ## About
 
