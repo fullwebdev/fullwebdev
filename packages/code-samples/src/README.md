@@ -98,10 +98,16 @@ title: "Code Samples"
       - [minimal component example](rendering/create-element/hyperscript/index.html)
 1. Memorization
    1. child element cache
-      1. [DOM API](rendering/memorize/dom-api/index.html)
-         - [with fragment](rendering/memorize/dom-api/fragment/index.html)
-      1. [innerHTML](rendering/memorize/hyperscript/index.html)
-      1. [HyperScript](rendering/memorize/hyperscript/index.html)
+      1. [DOM API](rendering/caching/elements/dom-api/index.html)
+         - [with fragment](rendering/caching/elements/dom-api/fragment/index.html)
+      1. [innerHTML](rendering/caching/elements/innerHTML/index.html)
+      1. [HyperScript](rendering/caching/elements/hyperscript/index.html)
+   1. children
+      1. [deep](rendering/caching/children/deep/index.html)
+      1. [on call](packages/code-samples/src/rendering/caching/children/on-call/index.html)
+      1. [without copy](packages/code-samples/src/rendering/caching/children/without-copy/index.html)
+   1. state
+      1. [DOM API](rendering/caching/state/dom-api/latest-count/index.html)
    1. memoize
       1. [latest update](rendering/memoize/dom-api/latest-count/index.html)
-      2. [children](rendering/memoize/dom-api/children/index.html)
+      1. [children](rendering/memoize/dom-api/children/index.html)
