@@ -27,6 +27,7 @@ async function cli() {
     .option("--skip-views", "don't re-build views")
     .option("--skip-routes", "don't re-build routes")
     .option("--skip-build", "don't build the app for production")
+    .option("-l, --local", "don't build additionnal pages")
     .option("-s, --start", "start an HTTP server after build")
     .option("-v, --verbose", "log everything");
 
@@ -71,18 +72,20 @@ async function cli() {
     console.debug(`[copy] ${rootDir}/**/*.js`);
     await copy(rootDir, "./**/*.js", outputDir, program.watch);
 
-    for (const { src, dest, extract, base } of getConfig().additionnalPages) {
-      // FIXME: make generic
-      const srcGLob = "[0-9]-**/!(TITLE).md";
-      console.debug(`[build] ${src}/${srcGLob}`);
-      await watchOrBuild(
-        program.watch,
-        src,
-        path.join(outputDir, "LANG", dest),
-        [srcGLob],
-        base || src,
-        extract
-      );
+    if (!program.local) {
+      for (const { src, dest, extract, base } of getConfig().additionnalPages) {
+        // FIXME: make generic
+        const srcGLob = "[0-9]-**/!(TITLE).md";
+        console.debug(`[build] ${src}/${srcGLob}`);
+        await watchOrBuild(
+          program.watch,
+          src,
+          path.join(outputDir, "LANG", dest),
+          [srcGLob],
+          base || src,
+          extract
+        );
+      }
     }
   }
 
