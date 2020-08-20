@@ -1,4 +1,4 @@
-import { el } from "https://www.unpkg.com/@fullweb/helpers";
+import { el } from "https://www.unpkg.com/@modern-helpers/el";
 
 //#region component
 class Counter {
