@@ -314,7 +314,7 @@ deckgo-slide-split deckgo-reveal > * {
   margin: 0 auto;
 }
 
-.reveal-list {
+ul.reveal-list {
   list-style: none;
 }
 
@@ -350,6 +350,11 @@ std-toast {
 .quotation:after {
   content: '»';
   margin-left: 0.2em;
+}
+
+.comment {
+  font-style: italic;
+  font-size: .8em;
 }
 
 deckgo-slide-split.split-text > *:not([slot="title"]) {

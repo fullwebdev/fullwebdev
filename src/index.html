@@ -914,8 +914,15 @@
                         <h1 slot="title">Keeping Up!</h1>
                     </deckgo-slide-title>
 
-                    <deckgo-slide-content class="slide-todo">
-                        <h1 slot="title">TODO: technical watch</h1>
+                    <deckgo-slide-content>
+                        <h1 slot="title">Methodology</h1>
+                        <ol slot="content">
+                            <deckgo-reveal>
+                                <li>watch & discuss</li>
+                                <li>experiment & give feedbacks</li>
+                                <li>release (beta) feature</li>
+                            </deckgo-reveal>
+                        </ol>
                     </deckgo-slide-content>
 
                     <!-- #region W3C -->
@@ -1250,6 +1257,66 @@
                     </deckgo-slide-content>
 
                     <!-- #endregion Browsers -->
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">Methodology</h1>
+                        <ol slot="content">
+                            <deckgo-reveal class="reveal-list">
+                                <li>
+                                    watch
+                                    <span style="float: right;">
+                                        <span class="comment">drafts</span>
+                                        <ion-icon
+                                            src="assets/logos/whatwg.svg"
+                                        ></ion-icon>
+                                        <ion-icon
+                                            src="assets/logos/wicg.svg"
+                                        ></ion-icon>
+                                        <ion-icon
+                                            src="assets/logos/tc39.svg"
+                                        ></ion-icon>
+                                    </span>
+                                </li>
+                                <li>
+                                    experiment
+                                    <span style="float: right;">
+                                        <span class="comment">prototype</span>
+                                        <ion-icon
+                                            src="assets/logos/chrome-canary.svg"
+                                        ></ion-icon>
+                                        <ion-icon
+                                            src="assets/logos/firefox-nightly.svg"
+                                        ></ion-icon>
+                                    </span>
+                                </li>
+                                <li>
+                                    &beta; feature
+                                    <span style="float: right;">
+                                        <span class="comment"
+                                            >origin trial</span
+                                        >
+                                        <ion-icon
+                                            src="assets/logos/chrome-canary.svg"
+                                        ></ion-icon>
+                                    </span>
+                                </li>
+                                <li>
+                                    release
+                                    <span style="float: right;">
+                                        <ion-icon
+                                            src="assets/logos/chrome.svg"
+                                        ></ion-icon>
+                                        <ion-icon
+                                            src="assets/logos/firefox.svg"
+                                        ></ion-icon>
+                                        <ion-icon
+                                            src="assets/logos/safari.svg"
+                                        ></ion-icon>
+                                    </span>
+                                </li>
+                            </deckgo-reveal>
+                        </ol>
+                    </deckgo-slide-content>
 
                     <!-- #endregion standardization -->
 
