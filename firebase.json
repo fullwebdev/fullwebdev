@@ -1,0 +1,32 @@
+{
+    "hosting": [
+        {
+            "target": "devfestnantes-2019",
+            "public": "dist"
+        },
+        {
+            "target": "parisweb-2019",
+            "public": "dist"
+        },
+        {
+            "target": "beta",
+            "public": "dist"
+        },
+        {
+            "target": "devoxxbe-2019",
+            "public": "dist"
+        },
+        {
+            "target": "deepdive",
+            "public": "dist"
+        },
+        {
+            "target": "miniconf",
+            "public": "dist"
+        },
+        {
+            "target": "poss19",
+            "public": "dist"
+        }
+    ]
+}

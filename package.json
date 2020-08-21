@@ -1,0 +1,95 @@
+{
+  "name": "slides-wof-conf",
+  "version": "1.3.1",
+  "description": "The F.I.R.E. safety kit for everyone!",
+  "homepage": "https://conf.wof.show",
+  "scripts": {
+    "start": "concurrently --kill-others \"npm run watch\" \"npm run dev\"",
+    "start-no-remote": "concurrently --kill-others \"npm run watch-no-remote\" \"npm run dev\"",
+    "dev": "lite-server",
+    "watch": "webpack --watch --mode development",
+    "watch-no-remote": "webpack --watch --mode development --env.no-remote=true",
+    "build": "webpack --mode production",
+    "local": "concurrently --kill-others \"webpack --watch --mode development --env.local=true\" \"npm run dev\"",
+    "format": "prettier \"**/*.{js,css,html}\" --write",
+    "release": "standard-version",
+    "postrelease": "git push --follow-tags",
+    "github-release": "conventional-github-releaser -p angular"
+  },
+  "author": {
+    "name": "Noël Macé",
+    "email": "contact@noelmace.com",
+    "web": "https://wof.show"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/noelmace/slides-wof-conf.git"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "concurrently": "^4.1.2",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "deckdeckgo-webpack-plugins": "^1.0.0-rc.2-1",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^4.0.0-beta.8",
+    "husky": "^3.0.8",
+    "lint-staged": "^9.4.1",
+    "lite-server": "^2.5.4",
+    "prettier": "^1.18.2",
+    "progress-bar-webpack-plugin": "^1.12.1",
+    "standard-version": "^7.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7",
+    "workbox-webpack-plugin": "^4.3.1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@deckdeckgo/charts": "^1.0.0-rc.1",
+    "@deckdeckgo/core": "^1.0.0-rc.1-3",
+    "@deckdeckgo/highlight-code": "^1.0.0-rc.1-1",
+    "@deckdeckgo/lazy-img": "^1.0.0-rc.1",
+    "@deckdeckgo/qrcode": "^1.0.0-rc.1",
+    "@deckdeckgo/remote": "^1.0.0-rc.2",
+    "@deckdeckgo/slide-author": "^1.0.0-rc.1",
+    "@deckdeckgo/slide-big-img": "^1.0.0-rc.1",
+    "@deckdeckgo/slide-chart": "^1.0.0-rc.1",
+    "@deckdeckgo/slide-code": "^1.0.0-rc.1",
+    "@deckdeckgo/slide-content": "^1.0.0-rc.1",
+    "@deckdeckgo/slide-countdown": "^1.0.0-rc.1",
+    "@deckdeckgo/slide-gif": "^1.0.0-rc.1-1",
+    "@deckdeckgo/slide-qrcode": "^1.0.0-rc.1",
+    "@deckdeckgo/slide-split": "^1.0.0-rc.1",
+    "@deckdeckgo/slide-title": "^1.0.0-rc.1",
+    "@deckdeckgo/slide-video": "^1.0.0-rc.1",
+    "@deckdeckgo/slide-youtube": "^1.0.0-rc.1-1",
+    "@ionic/core": "^4.8.1",
+    "@webcomponents/custom-elements": "^1.2.4",
+    "ionicons": "^4.6.3",
+    "web-social-share": "^6.2.0"
+  },
+  "keywords": [
+    "ionic",
+    "stencil",
+    "stenciljs",
+    "web components",
+    "pwa",
+    "progressive web app",
+    "presentation",
+    "slides",
+    "slideshow",
+    "talk"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,html}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
