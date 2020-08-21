@@ -11,7 +11,13 @@
   --alt-color-group-dark: #195D4D;
 
   --slide-split-title-display: block;
+}
+
+deckgo-slide-split {
   --slide-split-padding-top: 0;
+  --slide-split-padding-bottom: 0;
+  --slide-split-text-align: center;
+  --slide-split-align: center;
 }
 
 deckgo-deck h1,

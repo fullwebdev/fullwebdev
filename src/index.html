@@ -1511,6 +1511,115 @@
                         <h1 slot="title">Web Share Target</h1>
                     </deckgo-slide-title>
 
+                    <deckgo-slide-code
+                        language="javascript"
+                        src="assets/code-samples/app-gap/web-share.js"
+                    >
+                        <h1 slot="title">Web Share API</h1>
+                    </deckgo-slide-code>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">web-share - support</h1>
+                        <div slot="content" class="ciu-wrapper">
+                            <p
+                                class="ciu_embed"
+                                data-feature="web-share"
+                                data-periods="future_1,current,past_1,past_2"
+                                data-accessible-colours="false"
+                            >
+                                <a href="http://caniuse.com/#feat=web-share"
+                                    >Can I Use web-share?</a
+                                >
+                                Data on support for the web-share feature across
+                                the major browsers from caniuse.com.
+                            </p>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">Web Share Target</h1>
+                        <figure slot="content">
+                            <img
+                                src="assets/img/app-gap/webshare.png"
+                                style="max-height:400px"
+                            />
+                            <figcaption>
+                                Share <span class="strong">to</span> a Web App
+                            </figcaption>
+                        </figure>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-split>
+                        <h1 slot="title">Demo</h1>
+                        <div slot="start">
+                            <h2>Step 1</h2>
+                            <ion-button expand="full" id="demo1"
+                                >Copy the tweet</ion-button
+                            >
+                            <h2>Step 2</h2>
+                            <ion-button expand="full" id="demo2"
+                                >Copy the tweet</ion-button
+                            >
+                        </div>
+                        <div slot="end">
+                            <h2>Step 3</h2>
+                            <ion-button expand="full" id="demo3"
+                                >Copy the tweet</ion-button
+                            >
+                            <ion-button expand="full" id="demo-img"
+                                >Copy an image</ion-button
+                            >
+                        </div>
+                        <script>
+                            const tweet1 = `Hey look, I can share my slides with the Twitter #PWA during my talk at #DevoxxBelgium using Async Clipboard & Web Share Target APIs! 🙌 @devoxx #usetheplatform`;
+                            const tweet2 = `Great time at #DevoxxBelgium, sharing a picture with the Twitter #PWA using the Web Share Target API Level 2 😁! @devoxx #usetheplatform`;
+                            const tweet3 = `I can even share an image using the Async Clipboard Level 2 🤯! #DevoxxBelgium @devoxx #usetheplatform`;
+
+                            const copy = (txt) => async () => {
+                                try {
+                                    await navigator.clipboard.writeText(txt);
+                                    console.log('copied');
+                                } catch (e) {
+                                    console.error(e, e.message);
+                                }
+                            };
+
+                            document
+                                .getElementById('demo1')
+                                .addEventListener('click', copy(tweet1));
+                            document
+                                .getElementById('demo2')
+                                .addEventListener('click', copy(tweet2));
+                            document
+                                .getElementById('demo3')
+                                .addEventListener('click', copy(tweet3));
+
+                            document
+                                .getElementById('demo-img')
+                                .addEventListener('click', async () => {
+                                    try {
+                                        const imgURL = '/assets/img/elmo.png';
+                                        const data = await fetch(imgURL);
+                                        const blob = await data.blob();
+                                        const item = new ClipboardItem(
+                                            Object.defineProperty(
+                                                {},
+                                                blob.type,
+                                                {
+                                                    value: blob,
+                                                    enumerable: true
+                                                }
+                                            )
+                                        );
+                                        await navigator.clipboard.write([item]);
+                                        console.log('Image copied.');
+                                    } catch (e) {
+                                        console.error(e, e.message);
+                                    }
+                                });
+                        </script>
+                    </deckgo-slide-split>
+
                     <deckgo-slide-content class="slide-todo">
                         <h1 slot="title">TODO</h1>
                     </deckgo-slide-content>

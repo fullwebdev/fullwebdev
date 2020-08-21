@@ -438,17 +438,20 @@ Now:
 ```js
 /** Write the Chrome logo to the clipboard when clicking "Copy" */
 copy.onclick = async () => {
-  try {
-    const fetched = await fetch(fileName);
-    const blobIawait fetched.blob();
-    const url = 'https://upload.wikimedia.org/wikipedia/commons/5/53/Google_Chrome_Material_Icon-450x450.png';
-    const blobInput = await loadBlob(url);
-    const clipboardItemInput = new ClipboardItem({'image/png' : blobInput});
-    await navigator.clipboard.write([clipboardItemInput]);
-  } catch(e) {
-    log(e);
-  }
-};
+try {
+  const imgURL = '/images/generic/file.png';
+  const data = await fetch(imgURL);
+  const blob = await data.blob();
+  await navigator.clipboard.write([
+    new ClipboardItem(Object.defineProperty({}, blob.type, {
+      value: blob,
+      enumerable: true
+    }))
+  ]);
+  console.log('Image copied.');
+} catch(e) {
+  console.error(e, e.message);
+}
 
 /** Read from clipboard when clicking the Paste button */
 paste.onclick = async () => {
