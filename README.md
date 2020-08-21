@@ -54,7 +54,7 @@ Learn the best new capabilities of the modern web without burning out!
 
 > Go check the [changelog](/CHANGELOG.md) or [releases](https://github.com/noelmace/slides-wof-conf/releases) for more details.
 
-- v1.2: deep-dive (3h) @ [Devoxx Belgium 2019](https://devoxxbe-2019.wof.show)
+- v1.2: [deep-dive](https://deepdive.wof.show) (3h) @ [Devoxx Belgium 2019](https://devoxxbe-2019.wof.show)
 - v1.1: conference (50min) @ [DevFest Nantes 2019](https://devfestnantes-2019.wof.show)
 - v1.0: mini-conf (25min) @ [ParisWeb 2019](https://parisweb-2019.wof.show)
 - _previously: [noelmace/wof-reveal](https://github.com/noelmace/wof-reveal)_
