@@ -449,6 +449,19 @@
                 margin: 0 auto;
             }
 
+            .reveal-list {
+                list-style: none;
+            }
+
+            .reveal-list li {
+                margin: 0.5em 0;
+            }
+
+            .square {
+                border: solid black 3px;
+                box-shadow: 2px 2px 2px black;
+            }
+
             @media (min-width: 992px) {
                 .ciu_embed {
                     width: 800px;
@@ -1058,7 +1071,8 @@
 
                     <deckgo-slide-title>
                         <h1 slot="title">
-                            HTML4 + XHTML1 + DOM2 HTML + way more...
+                            HTML4 + XHTML1 + DOM2 HTML<br />
+                            & more!
                         </h1>
                     </deckgo-slide-title>
 
@@ -1078,6 +1092,12 @@
                         <div slot="notes">Web Hypertext Application Technology Working Group</div>
                     </deckgo-slide-content>
 
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/open.jpg') #111"
+                        class="bg-img"
+                    >
+                    </deckgo-slide-content>
+
                     <deckgo-slide-content>
                         <figure slot="content" class="flex flex-center">
                             <deckgo-reveal
@@ -1094,6 +1114,12 @@
                         <div slot="notes">Web Incubator Community Group</div>
                     </deckgo-slide-content>
 
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/handshake.jpg')"
+                        class="bg-img"
+                    >
+                    </deckgo-slide-content>
+
                     <deckgo-slide-content>
                         <figure slot="content" class="flex flex-center">
                             <deckgo-reveal
@@ -1106,6 +1132,42 @@
                                 alt="TC39 logo"
                             />
                         </figure>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">TC39 Process</h1>
+                        <ul slot="content" class="reveal-list">
+                            <deckgo-reveal>
+                                <li>
+                                    review at TC39 Meeting 👉
+                                    <span class="square"
+                                        >Stage 0: Strawman</span
+                                    >
+                                </li>
+                                <li>
+                                    pick champions 👉
+                                    <span class="square"
+                                        >Stage 1: Proposal</span
+                                    >
+                                </li>
+                                <li>
+                                    first spec text 👉
+                                    <span class="square">Stage 2: Draft</span>
+                                </li>
+                                <li>
+                                    spec complete 👉
+                                    <span class="square"
+                                        >Stage 3: Candidate</span
+                                    >
+                                </li>
+                                <li>
+                                    test 262 👉
+                                    <span class="square"
+                                        >Stage 4: Finished</span
+                                    >
+                                </li>
+                            </deckgo-reveal>
+                        </ul>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
@@ -1126,6 +1188,59 @@
                             </div>
                         </div>
                         <div slot="notes">Chrome & Firefox</div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">Remaining Controversies</h1>
+                        <div slot="content" style="width: 100%">
+                            <deckgo-reveal>
+                                <div style="text-align: center">
+                                    <h2
+                                        style="
+                                                font: 100% sans-serif;
+                                                color: #005A9C;
+                                                font-weight: bold;
+                                                margin: 0;
+                                                padding: 0;
+                                                font-size: 220%;"
+                                    >
+                                        Encrypted Media Extensions
+                                    </h2>
+                                    <h3
+                                        style="
+                                                font: 100% sans-serif;
+                                                line-height: 1.2;
+                                                color: #005A9C;
+                                                font-size: 140%;
+                                                margin-top: 0;
+                                                padding: 0;
+                                                margin-bottom: 1.5em;"
+                                    >
+                                        W3C Recommendation, 14 December 2017
+                                    </h3>
+                                </div>
+                                <div class="imgs-list flex-row">
+                                    <img
+                                        data-src="assets/logos/netflix.svg"
+                                        alt="netflix"
+                                    />
+                                    <img
+                                        data-src="assets/logos/youtube.svg"
+                                        alt="youtube"
+                                    />
+                                </div>
+                                <div class="imgs-list flex-row">
+                                    <img
+                                        data-src="assets/logos/fsf.svg"
+                                        alt="fsf"
+                                    />
+                                    <img
+                                        data-src="assets/logos/eff.svg"
+                                        alt="eff"
+                                    />
+                                </div>
+                            </deckgo-reveal>
+                        </div>
                     </deckgo-slide-content>
 
                     <!-- #endregion standardization -->
