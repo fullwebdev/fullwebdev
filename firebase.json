@@ -20,6 +20,10 @@
         {
             "target": "deepdive",
             "public": "dist"
+        },
+        {
+            "target": "miniconf",
+            "public": "dist"
         }
     ]
 }

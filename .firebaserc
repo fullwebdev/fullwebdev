@@ -19,13 +19,16 @@
         ],
         "deepdive": [
           "wof-deepdive"
+        ],
+        "miniconf": [
+          "miniconf"
         ]
       }
     },
     "wof-show": {
       "hosting": {
-        "deepdive": [
-          "wof-deepdive"
+        "miniconf": [
+          "miniconf"
         ]
       }
     }

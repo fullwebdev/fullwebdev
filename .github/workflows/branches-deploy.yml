@@ -7,6 +7,7 @@ on:
       - devfestnantes-2019
       - devoxxbe-2019
       - deepdive
+      - miniconf
 jobs:
   build:
     name: Build
@@ -37,7 +38,7 @@ jobs:
       - name: Apply target
         uses: w9jds/firebase-action@master
         with:
-          args: target:apply hosting deepdive wof-deepdive
+          args: target:apply hosting miniconf miniconf
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       - name: Deploy to Firebase
