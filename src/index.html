@@ -1521,8 +1521,21 @@
                         <h1 slot="title">Async Clipboard API</h1>
                     </deckgo-slide-title>
 
-                    <deckgo-slide-content class="slide-todo">
-                        <h1 slot="title">TODO</h1>
+                    <deckgo-slide-code
+                        src="assets/code-samples/app-gap/clipboard-sum.js"
+                    >
+                        <h1 slot="title">From specific to generic</h1>
+                    </deckgo-slide-code>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">Current Limitations w/ images</h1>
+                        <ul slot="content" class="reveal-list">
+                            <deckgo-reveal>
+                                <li>Chrome 76+ only</li>
+                                <li>PNG only</li>
+                                <li>only one ClipboardItem</li>
+                            </deckgo-reveal>
+                        </ul>
                     </deckgo-slide-content>
 
                     <!-- #region Web Share Target-->
