@@ -1,39 +1,5 @@
 {
   "projects": {
-    "default": "wof-show"
-  },
-  "targets": {
-    "wof-conf": {
-      "hosting": {
-        "beta": [
-          "beta"
-        ],
-        "devfestnantes-2019": [
-          "devfestnantes-2019"
-        ],
-        "parisweb-2019": [
-          "wof-parisweb-2019"
-        ],
-        "devoxxbe-2019": [
-          "devoxxbe-2019"
-        ],
-        "deepdive": [
-          "wof-deepdive"
-        ],
-        "miniconf": [
-          "miniconf"
-        ],
-        "poss19": [
-          "poss19"
-        ]
-      }
-    },
-    "wof-show": {
-      "hosting": {
-        "poss19": [
-          "poss19"
-        ]
-      }
-    }
+    "default": "parisweb-2019"
   }
 }
