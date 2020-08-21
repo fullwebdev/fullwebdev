@@ -218,6 +218,13 @@
                 color: transparent;
             }
 
+            .icon {
+                margin: 0 var(--ion-margin, 16px);
+                display: block;
+                height: 100%;
+                width: 100%;
+            }
+
             ion-app.loading {
                 display: none;
             }
@@ -439,25 +446,102 @@
                 <deckgo-deck id="slider" pager-percentage="false">
                     <!-- #region Slides -->
 
-                    <deckgo-slide-title class="dark">
+                    <deckgo-slide-content class="dark">
                         <h1 slot="title" style="color:red">
-                            Reading this slides?
+                            Welcome, reader!
                         </h1>
                         <div no-shadow slot="content">
                             <h3>
-                                There is a documentation for that!
+                                Here are some useful links for you before you
+                                start:
                             </h3>
-                            <p style="font-style: italic">
-                                Go read it
-                                <a
-                                    href="https://github.com/noelmace/slides-wof-conf/blob/devfestnantes-2019/src/notes.md"
-                                    >on Github</a
-                                >!
-                            </p>
+
+                            <deckgo-social
+                                github="noelmace/slides-wof-conf"
+                                class="hydrated"
+                                style="margin-left: 32px"
+                                ><ion-icon
+                                    alt="Noël on Github"
+                                    slot="icon"
+                                    name="logo-github"
+                                    margin-start=""
+                                    margin-end=""
+                                    role="img"
+                                    class="md hydrated"
+                                    aria-label="logo twitter"
+                                ></ion-icon>
+                                repository for this slides (and
+                                more)</deckgo-social
+                            >
+                            <deckgo-social
+                                github="noelmace/slides-wof-conf/blob/master/src/notes.md"
+                                class="hydrated"
+                                style="margin-left: 32px"
+                                ><ion-icon
+                                    alt="Noël on Github"
+                                    slot="icon"
+                                    name="document"
+                                    margin-start=""
+                                    margin-end=""
+                                    role="img"
+                                    class="md hydrated"
+                                    aria-label="logo twitter"
+                                ></ion-icon>
+                                notes (resources + some
+                                explanations)</deckgo-social
+                            >
+                            <deckgo-social
+                                twitter="hashtag/WebOnFIRE?f=live"
+                                class="hydrated"
+                                style="margin-left: 32px"
+                                ><ion-icon
+                                    alt="Noël on Twitter"
+                                    slot="icon"
+                                    name="logo-twitter"
+                                    margin-start=""
+                                    margin-end=""
+                                    role="img"
+                                    class="md hydrated"
+                                    aria-label="logo twitter"
+                                ></ion-icon>
+                                discuss on twitter - #WebOnFIRE</deckgo-social
+                            >
+                            <deckgo-social
+                                twitter="noel_mace"
+                                class="hydrated"
+                                style="margin-left: 32px"
+                                ><ion-icon
+                                    alt="Noël on Twitter"
+                                    slot="icon"
+                                    name="logo-twitter"
+                                    margin-start=""
+                                    margin-end=""
+                                    role="img"
+                                    class="md hydrated"
+                                    aria-label="logo twitter"
+                                ></ion-icon>
+                                or follow me - @noel_mace</deckgo-social
+                            >
+                            <deckgo-social
+                                fullUrl="https://dev.to/noelmace"
+                                class="hydrated"
+                                style="margin-left: 32px"
+                            >
+                                <img
+                                    class="icon"
+                                    slot="icon"
+                                    style="width: 1em; pointer-events: none;"
+                                    area-label="Noël on Dev.to"
+                                    slot="icon"
+                                    src="assets/icons/dev-white.svg"
+                                />
+                                stay tuned for my next posts on
+                                dev.to</deckgo-social
+                            >
                         </div>
                         <!-- prettier-ignore -->
                         <div slot="notes" show>INTRO LECTEUR</div>
-                    </deckgo-slide-title>
+                    </deckgo-slide-content>
 
                     <deckgo-slide-countdown
                         until="2019-11-04T13:30:00.000+01:00"
@@ -504,6 +588,59 @@
                             >
                         </div>
                     </deckgo-slide-title>
+
+                    <deckgo-slide-author
+                        img-src="https://avatars3.githubusercontent.com/u/7578400"
+                    >
+                        <h1 slot="title">Noël Macé</h1>
+                        <div slot="author">
+                            <h2>Noël Macé</h2>
+                            <p>
+                                Independent Dev Advocado 🥑 for the Web Platform
+                            </p>
+                        </div>
+                        <div slot="social-link">
+                            <deckgo-social twitter="noel_mace"
+                                ><ion-icon
+                                    alt="Noël on Twitter"
+                                    slot="icon"
+                                    name="logo-twitter"
+                                    margin-start
+                                    margin-end
+                                ></ion-icon>
+                                @noel_mace</deckgo-social
+                            >
+                        </div>
+                        <div slot="social-link">
+                            <deckgo-social linkedin="noelmace/"
+                                ><ion-icon
+                                    alt="Noël on Linkedin"
+                                    slot="icon"
+                                    name="logo-linkedin"
+                                    margin-start
+                                    margin-end
+                                ></ion-icon>
+                                in/noelmace</deckgo-social
+                            >
+                        </div>
+                    </deckgo-slide-author>
+
+                    <deckgo-slide-qrcode
+                        content="https://devoxxbe-2019.wof.show"
+                        style="--deckgo-qrcode-color-fill: black;"
+                    >
+                        <h1 slot="title">Slides</h1>
+                        <div slot="content" class="wof-show">
+                            <a
+                                href="https://devoxxbe-2019.wof.show"
+                                style="font-weight: bold"
+                                target="_blank"
+                                rel="noopener"
+                                ><span class="sub">devoxxbe-2019.</span
+                                >wof.show</a
+                            >
+                        </div>
+                    </deckgo-slide-qrcode>
 
                     <!-- #endregion intro -->
 
