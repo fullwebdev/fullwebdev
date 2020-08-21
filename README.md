@@ -8,18 +8,31 @@
 ![](https://github.com/noelmace/slides-wof-conf/workflows/Branches%20Firebase%20Deploy/badge.svg)
 <!-- END BADGES -->
 
-> a :collision: [***Wof*** show](https://wof.show) by [Noël Macé](https://twitter.com/noel_mace)
+> a :collision: [***Wof*** show](https://wof.show) by [Noël Macé](https://noelmace.com)
 
 The F.I.R.E. safety kit for everyone!
 
 Learn the best new capabilities of the modern web without burning out!
 
 - **:man_teacher: Slides: [conf.wof.show](https://conf.wof.show)**
-  - v1.2: :construction: deep-dive (3h) @ [Devoxx Belgium 2019](https://devoxxbe-2019.wof.show)
-  - v1.1: conference (50min) @ [DevFest Nantes 2019](https://devfestnantes-2019.wof.show)
-  - v1.0: mini-conf (25min) @ [ParisWeb 2019](https://parisweb-2019.wof.show)
-  - _previously: [noelmace/wof-reveal](https://github.com/noelmace/wof-reveal)_
-- **:book: Full doc: [notes.md](./src/notes.md) - WIP :construction:**
+- **:book: Full doc (always a WIP): [notes.md](./src/notes.md)**
+
+## Versions
+
+> Go check the [changelog](/CHANGELOG.md) or [releases](https://github.com/noelmace/slides-wof-conf/releases) for more details.
+
+- v1.2: :construction: deep-dive (3h) @ [Devoxx Belgium 2019](https://devoxxbe-2019.wof.show)
+- v1.1: conference (50min) @ [DevFest Nantes 2019](https://devfestnantes-2019.wof.show)
+- v1.0: mini-conf (25min) @ [ParisWeb 2019](https://parisweb-2019.wof.show)
+- _previously: [noelmace/wof-reveal](https://github.com/noelmace/wof-reveal)_
+
+> Versions are incremented as follow (not exactly semver :man_shrugging:):
+>
+> - Major: redesign (new approach / plan / presentation framework...)
+> - Minor: new talk/event following the same plan & ideas as the previous one
+> - Patch: modifications to a talk that has already been presented
+>
+> Following git-flow, each minor version (i.e. talk/event) has its own branch. For example, [devfestnantes-2019]()
 
 ## Abstract
 
