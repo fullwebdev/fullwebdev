@@ -149,6 +149,8 @@
             :root {
                 background: #ffffff;
                 --ion-background-color: #ffffff;
+                --main-color: #ed6c30;
+                --alt-color: #fcc21b;
             }
 
             deckgo-deck {
@@ -338,6 +340,14 @@
             .twitter-content twitter-widget {
                 margin: 0 auto;
             }
+
+            .title-slide {
+                --background: var(--main-color);
+            }
+
+            .subtitle-slide {
+                --background: var(--alt-color);
+            }
         </style>
     </head>
     <body>
@@ -357,6 +367,21 @@
                     </deckgo-slide-countdown>
 
                     <!-- #region intro -->
+
+                    <deckgo-slide-title class="title-slide">
+                        <h1 slot="title">The Web is on 🔥 F.I.R.E. 🔥</h1>
+                        <div slot="content">
+                            <h3>mini-conf</h3>
+                            <p>
+                                <img
+                                    src="assets/logos/parisweb.svg"
+                                    alt="Paris Web"
+                                    style="vertical-align: middle"
+                                />
+                                2019
+                            </p>
+                        </div>
+                    </deckgo-slide-title>
 
                     <deckgo-slide-author
                         img-src="https://avatars3.githubusercontent.com/u/7578400"
@@ -397,7 +422,63 @@
 
                     <!-- #endregion intro -->
 
+                    <!-- #region standardization -->
+
+                    <deckgo-slide-title class="title-slide">
+                        <h1 slot="title">How the Web evolves</h1>
+                    </deckgo-slide-title>
+
+                    <deckgo-slide-title class="subtitle-slide">
+                        <h1 slot="title">W3C</h1>
+                    </deckgo-slide-title>
+
+                    <deckgo-slide-title class="subtitle-slide">
+                        <h1 slot="title">WICG</h1>
+                    </deckgo-slide-title>
+
+                    <deckgo-slide-title class="subtitle-slide">
+                        <h1 slot="title">WhatWG</h1>
+                    </deckgo-slide-title>
+
+                    <deckgo-slide-title class="subtitle-slide">
+                        <h1 slot="title">TC39</h1>
+                    </deckgo-slide-title>
+
+                    <!-- #endregion standardization -->
+
+                    <!-- #region PWA -->
+
+                    <deckgo-slide-title class="title-slide">
+                        <h1 slot="title">PWA & F.I.R.E.</h1>
+                    </deckgo-slide-title>
+
+                    <!-- #endregion PWA-->
+
+                    <!-- #region news -->
+
+                    <deckgo-slide-title class="title-slide">
+                        <h1 slot="title">What's coming?</h1>
+                    </deckgo-slide-title>
+
+                    <deckgo-slide-title class="subtitle-slide">
+                        <h1 slot="title">An integrated Web</h1>
+                    </deckgo-slide-title>
+
+                    <deckgo-slide-title class="subtitle-slide">
+                        <h1 slot="title">A Modular & adaptive Web</h1>
+                    </deckgo-slide-title>
+
+                    <deckgo-slide-title class="subtitle-slide">
+                        <h1 slot="title">A more efficient Web</h1>
+                    </deckgo-slide-title>
+
+                    <!-- #endregion news-->
+
                     <!-- #region outro -->
+
+                    <deckgo-slide-title class="title-slide">
+                        <h1 slot="title">resources</h1>
+                    </deckgo-slide-title>
 
                     <deckgo-slide-content>
                         <h2
