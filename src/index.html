@@ -218,13 +218,6 @@
                 color: transparent;
             }
 
-            .icon {
-                margin: 0 var(--ion-margin, 16px);
-                display: block;
-                height: 100%;
-                width: 100%;
-            }
-
             ion-app.loading {
                 display: none;
             }
@@ -370,6 +363,10 @@
                 --background: var(--alt-color);
             }
 
+            deckgo-social .link {
+                color: #4c8dff;
+            }
+
             .fire-bg {
                 background: center no-repeat url('assets/img/flames.jpg');
                 background-size: cover;
@@ -472,7 +469,7 @@
                 <deckgo-deck id="slider" pager-percentage="false">
                     <!-- #region Slides -->
 
-                    <deckgo-slide-content class="dark">
+                    <deckgo-slide-content class="dark welcome-slide">
                         <h1 slot="title" style="color:red">
                             Welcome, reader!
                         </h1>
@@ -490,14 +487,14 @@
                                     alt="Noël on Github"
                                     slot="icon"
                                     name="logo-github"
-                                    margin-start=""
-                                    margin-end=""
+                                    margin-start
+                                    margin-end
                                     role="img"
                                     class="md hydrated"
                                     aria-label="logo twitter"
                                 ></ion-icon>
-                                repository for this slides (and
-                                more)</deckgo-social
+                                <span class="link">repository</span>&nbsp;for
+                                this slides (and more)</deckgo-social
                             >
                             <deckgo-social
                                 github="noelmace/slides-wof-conf/blob/master/src/notes.md"
@@ -507,14 +504,14 @@
                                     alt="Noël on Github"
                                     slot="icon"
                                     name="document"
-                                    margin-start=""
-                                    margin-end=""
+                                    margin-start
+                                    margin-end
                                     role="img"
                                     class="md hydrated"
                                     aria-label="logo twitter"
                                 ></ion-icon>
-                                notes (resources + some
-                                explanations)</deckgo-social
+                                <span class="link">notes</span>&nbsp;(resources
+                                + some explanations)</deckgo-social
                             >
                             <deckgo-social
                                 twitter="hashtag/WebOnFIRE?f=live"
@@ -524,13 +521,15 @@
                                     alt="Noël on Twitter"
                                     slot="icon"
                                     name="logo-twitter"
-                                    margin-start=""
-                                    margin-end=""
+                                    margin-start
+                                    margin-end
                                     role="img"
                                     class="md hydrated"
                                     aria-label="logo twitter"
                                 ></ion-icon>
-                                discuss on twitter - #WebOnFIRE</deckgo-social
+                                discuss on twitter&nbsp;<span class="link"
+                                    >#WebOnFIRE</span
+                                ></deckgo-social
                             >
                             <deckgo-social
                                 twitter="noel_mace"
@@ -540,29 +539,35 @@
                                     alt="Noël on Twitter"
                                     slot="icon"
                                     name="logo-twitter"
-                                    margin-start=""
-                                    margin-end=""
+                                    margin-start
+                                    margin-end
                                     role="img"
                                     class="md hydrated"
                                     aria-label="logo twitter"
                                 ></ion-icon>
-                                or follow me - @noel_mace</deckgo-social
+                                or follow me&nbsp;<span class="link"
+                                    >@noel_mace</span
+                                ></deckgo-social
                             >
                             <deckgo-social
                                 full-url="https://dev.to/noelmace"
                                 class="hydrated"
                                 style="margin-left: 32px"
                             >
-                                <img
-                                    class="icon"
+                                <ion-icon
+                                    alt="Noël on Dev.to"
                                     slot="icon"
-                                    style="width: 1em; pointer-events: none;"
-                                    area-label="Noël on Dev.to"
-                                    slot="icon"
-                                    src="assets/icons/dev-white.svg"
-                                />
-                                stay tuned for my next posts on
-                                dev.to</deckgo-social
+                                    src="assets/icons/dev.svg"
+                                    margin-start
+                                    margin-end
+                                    role="img"
+                                    class="md hydrated"
+                                    area-label="logo Dev.to"
+                                ></ion-icon>
+                                stay tuned for my next posts on&nbsp;<span
+                                    class="link"
+                                    >dev.to</span
+                                ></deckgo-social
                             >
                         </div>
                         <!-- prettier-ignore -->
@@ -604,8 +609,8 @@
                                     alt="Noël on Twitter"
                                     slot="icon"
                                     name="logo-twitter"
-                                    margin-start=""
-                                    margin-end=""
+                                    margin-start
+                                    margin-end
                                     role="img"
                                     class="md hydrated"
                                     aria-label="logo twitter"
@@ -753,6 +758,7 @@
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
+                        <h1 slot="title">The rise of PWA</h1>
                         <div slot="content" style="width: 100%">
                             <script
                                 type="text/javascript"
