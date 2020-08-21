@@ -10,7 +10,8 @@
     "watch": "webpack --watch --mode development",
     "watch-no-remote": "webpack --watch --mode development --env.no-remote=true",
     "build": "webpack --mode production",
-    "local": "concurrently --kill-others \"webpack --watch --mode development --env.local=true\" \"npm run dev\""
+    "local": "concurrently --kill-others \"webpack --watch --mode development --env.local=true\" \"npm run dev\"",
+    "format": "prettier \"**/*.{js,css,html}\" --write"
   },
   "author": {
     "name": "Noël Macé",
@@ -29,7 +30,10 @@
     "deckdeckgo-webpack-plugins": "^1.0.0-rc.2-1",
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^4.0.0-beta.8",
+    "husky": "^3.0.8",
+    "lint-staged": "^9.4.1",
     "lite-server": "^2.5.4",
+    "prettier": "^1.18.2",
     "progress-bar-webpack-plugin": "^1.12.1",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.3",
@@ -72,5 +76,16 @@
     "slides",
     "slideshow",
     "talk"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,html}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
 }
