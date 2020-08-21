@@ -675,20 +675,13 @@
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
-                        <h1 slot="title">A2HS Support</h1>
+                        <h1 slot="title">A2HS is supported by</h1>
                         <deckgo-reveal
                             slot="content"
                             class="center"
                             style="font-size: 2em"
                         >
-                            <ion-icon
-                                name="checkbox-outline"
-                                alt="OK"
-                                margin-end
-                            ></ion-icon>
-                            <div
-                                style="display: inline-block; margin-right: .5em"
-                            >
+                            <div>
                                 <ion-icon
                                     alt="Firefox"
                                     slot="icon"
@@ -699,7 +692,7 @@
                                     alt="mobile"
                                 ></ion-icon>
                             </div>
-                            <div style="display: inline-block">
+                            <div>
                                 <ion-icon
                                     alt="Chrome"
                                     slot="icon"
@@ -714,9 +707,7 @@
                                     alt="desktop"
                                 ></ion-icon>
                             </div>
-                            <div
-                                style="display: inline-block; margin-left: .5em"
-                            >
+                            <div>
                                 <ion-icon
                                     alt="edge beta"
                                     slot="icon"
@@ -731,6 +722,16 @@
                                     alt="desktop"
                                 ></ion-icon>
                             </div>
+                        </deckgo-reveal>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">A2HS Support - WIP</h1>
+                        <deckgo-reveal
+                            slot="content"
+                            class="center"
+                            style="font-size: 2em"
+                        >
                             <div style="margin-top: 1em">
                                 <ion-icon
                                     name="bug"
@@ -750,15 +751,17 @@
                             </div>
                             <div>Since oct. '17</div>
                             <div>P3 - Oct. 10, '19</div>
-                            <div style="margin-top: 1em; display: inline-block">
-                                <ion-icon
-                                    alt="skull"
-                                    slot="icon"
-                                    src="assets/icons/skull.svg"
-                                    margin-end
-                                ></ion-icon>
-                            </div>
-                            <div style="margin-top: 1em; display: inline-block">
+                        </deckgo-reveal>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">A2HS Support - 🤦</h1>
+                        <deckgo-reveal
+                            slot="content"
+                            class="center"
+                            style="font-size: 2em"
+                        >
+                            <div>
                                 <ion-icon
                                     alt="Safari"
                                     slot="icon"
@@ -766,7 +769,7 @@
                                     margin-end
                                 ></ion-icon>
                             </div>
-                            <div style="margin-top: 1em; display: inline-block">
+                            <div>
                                 <ion-icon
                                     alt="conspiracy"
                                     slot="icon"
@@ -774,7 +777,7 @@
                                     margin-end
                                 ></ion-icon>
                             </div>
-                            <div style="margin-top: 1em; display: inline-block">
+                            <div>
                                 <ion-icon
                                     alt="Firefox"
                                     slot="icon"
@@ -1010,7 +1013,7 @@
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
-                        <h1 slot="title">XHTML vs HTML</h1>
+                        <h1 slot="title">The end of HTML?</h1>
                         <ul slot="content">
                             <deckgo-reveal>
                                 <li>1997: HTML 3.2 & 4</li>
@@ -1020,7 +1023,14 @@
                                     standard
                                 </li>
                                 <li>1999: HTML 4.01</li>
-                                <li>2000: XHTML 1.0</li>
+                            </deckgo-reveal>
+                        </ul>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">The end of HTML?</h1>
+                        <ul slot="content">
+                            <deckgo-reveal>
                                 <li>2003: XForms</li>
                                 <li class="strong">2004</li>
                                 <li style="margin-left: 2em">
@@ -1363,7 +1373,6 @@
                         >
                             <img
                                 data-src="assets/img/install-promo/a2hs-infobar-cropped.png"
-                                style="margin-top: 2em"
                             />
                             <deckgo-reveal style="font-size: 2em">
                                 <p>interim experience</p>
@@ -1399,7 +1408,7 @@
                         >
                             <img
                                 data-src="assets/img/install-promo/firefox/js13kpwa-icon.png"
-                                style="margin: 2em auto"
+                                style="margin: 0 auto"
                             />
                         </div>
                     </deckgo-slide-content>
@@ -1517,6 +1526,7 @@
                     </deckgo-slide-content>
 
                     <!-- #region Web Share Target-->
+
                     <deckgo-slide-title class="topic-title-slide">
                         <h1 slot="title">Web Share Target</h1>
                     </deckgo-slide-title>
@@ -1633,6 +1643,7 @@
                     <deckgo-slide-content class="slide-todo">
                         <h1 slot="title">TODO</h1>
                     </deckgo-slide-content>
+
                     <!-- #endregion Web Share Target -->
 
                     <!-- #endregion Async Clipboard API -->
@@ -1798,13 +1809,9 @@ Right: the easier-on-the-eyes UA default
 
                     <!-- #region Motion-->
 
-                    <deckgo-slide-content class="topic-title-slide">
-                        <div
-                            slot="content"
-                            style="width: 100%; text-align: center"
-                        >
-                            <img data-src="assets/img/stay-still.jpg" />
-                        </div>
+                    <deckgo-slide-content
+                        style="--background: center / contain no-repeat url('assets/img/stay-still.jpg') #fcc21b"
+                    >
                         <div slot="notes" show>motion</div>
                     </deckgo-slide-content>
 
@@ -2199,30 +2206,19 @@ new range of rendered children.
                     >
                     </deckgo-slide-code>
 
-                    <deckgo-slide-content>
-                        <h1 slot="title">Toast</h1>
-                        <div slot="content" style="height: 100%; width: 100%;">
-                            <deckgo-highlight-code
-                                src="assets/code-samples/toast/toast.mjs"
-                                highlight-lines="3,6"
-                            >
-                            </deckgo-highlight-code>
-
-                            <script
-                                type="module"
-                                src="assets/code-samples/toast/toast.mjs"
-                            ></script>
-
-                            <div
-                                class="demo"
-                                style="text-align: center; padding: 1em"
-                            >
-                                <ion-button id="show-toast" color="primary"
-                                    >show toast</ion-button
-                                >
-                            </div>
-                        </div>
-                    </deckgo-slide-content>
+                    <deckgo-slide-code
+                        src="assets/code-samples/toast/toast.mjs"
+                    >
+                        <h1 slot="title" id="show-toast">
+                            <ion-button color="primary" style="float:left"
+                                >show toast</ion-button
+                            >Toast
+                        </h1>
+                        <script
+                            type="module"
+                            src="assets/code-samples/toast/toast.mjs"
+                        ></script>
+                    </deckgo-slide-code>
 
                     <deckgo-slide-code
                         src="assets/code-samples/toast/toast.html"

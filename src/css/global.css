@@ -11,13 +11,14 @@
   --alt-color-group-dark: #195D4D;
 
   --slide-split-title-display: block;
+  --deckgo-highlight-code-font-size: 28px;
 }
 
 deckgo-slide-split {
   --slide-split-padding-top: 0;
   --slide-split-padding-bottom: 0;
   --slide-split-text-align: center;
-  --slide-split-align: center;
+  --slide-split-align: start;
 }
 
 deckgo-deck h1,
@@ -79,14 +80,12 @@ body {
 
 .flex-center {
   justify-content: center;
-  align-items: center;
   text-align: center;
   flex-direction: column;
 }
 
 .flex-end {
   justify-content: flex-end;
-  align-items: center;
   text-align: center;
   flex-direction: column;
 }
@@ -114,7 +113,6 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  align-items: center;
   text-align: center;
 }
 
@@ -131,7 +129,6 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  align-items: center;
   text-align: center;
   flex-shrink: 1;
   justify-content: space-around;
@@ -149,7 +146,7 @@ body {
 }
 
 .imgs-list img {
-  max-height: 100px;
+  max-height: 8vh;
   margin: 1em;
 }
 
@@ -161,7 +158,7 @@ figure[slot='content'] {
 }
 
 figure[slot='content'] figcaption {
-  font-size: 2em;
+  font-size: 1.4em;
 }
 
 figure[slot='content'] img {
