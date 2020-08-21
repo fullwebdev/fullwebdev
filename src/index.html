@@ -414,6 +414,15 @@
                     width: 800px;
                 }
             }
+
+            .demo {
+                border: 2px red solid;
+            }
+
+            std-toast {
+                font-weight: bold;
+                font-size: 3em;
+            }
         </style>
         <script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script>
     </head>
@@ -830,11 +839,118 @@
                         <div slot="notes" show></div>
                     </deckgo-slide-content>
 
-                    <!-- #endregion modular -->
+                    <deckgo-slide-content>
+                        <h2 slot="title" style="text-align: center">
+                            using built-in modules for new HTML elements
+                        </h2>
+                        <div
+                            slot="content"
+                            style="width: 100%; text-align: center"
+                        >
+                            <img data-src="assets/img/pay-as-you-go.jpg" />
+                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show>DECIDE</div>
+                    </deckgo-slide-content>
 
-                    <deckgo-slide-title class="subtitle-slide">
-                        <h1 slot="title">A more efficient Web</h1>
-                    </deckgo-slide-title>
+                    <deckgo-slide-content>
+                        <h1 slot="title">Virtual Scroller</h1>
+                        <div slot="content" style="height: 100%; width: 100%;">
+                            <iframe
+                                src="https://fergald.github.io/virtual-scroller-demos/demo/loadmore.html"
+                                class="demo"
+                                width="100%"
+                                height="100%"
+                            ></iframe>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-code
+                        src="assets/code-samples/virtual-scroller/virtual-scroller.html"
+                    >
+                        <!-- htmlmin:ignore -->
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show>
+The &lt;virtual-scroller&gt; will manage the
+rendering of its children. It will prioritize
+rendering things that are in the viewport and not
+render children that are far away, such that we are
+only paying as little rendering cost as possible
+while still allowing them to work with find-in-page,
+accessibility features, focus navigation, fragment
+URL navigation, etc.
+                        </div>
+                    </deckgo-slide-code>
+
+                    <deckgo-slide-code
+                        src="assets/code-samples/virtual-scroller/scroll.js"
+                    >
+                        <!-- htmlmin:ignore -->
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show>
+You can add, remove, modify children of the &lt;virtual-scroller&gt; as you would
+a regular element, using DOM APIs.
+
+When the set of actually-rendered children is about to change,
+the &lt;virtual-scroller&gt; will fire a "rangechange" event with the
+new range of rendered children.
+                        </div>
+                    </deckgo-slide-code>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">Switch</h1>
+                        <div slot="content" style="height: 100%; width: 100%;">
+                            <!-- <script type="module">
+                                import 'std:elements/switch';
+                            </script>
+
+                            <std-switch name="something"></std-switch> -->
+
+                            <iframe
+                                src="https://tkent-google.github.io/std-switch/demo.html"
+                                class="demo"
+                                width="100%"
+                                height="100%"
+                            ></iframe>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-code
+                        src="assets/code-samples/std-switch.html"
+                    >
+                    </deckgo-slide-code>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">Toast</h1>
+                        <div slot="content" style="height: 100%; width: 100%;">
+                            <deckgo-highlight-code
+                                src="assets/code-samples/toast/toast.mjs"
+                                highlight-lines="3,6"
+                            >
+                            </deckgo-highlight-code>
+
+                            <script
+                                type="module"
+                                src="assets/code-samples/toast/toast.mjs"
+                            ></script>
+
+                            <div
+                                class="demo"
+                                style="text-align: center; padding: 1em"
+                            >
+                                <ion-button id="show-toast" color="primary"
+                                    >show toast</ion-button
+                                >
+                            </div>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-code
+                        src="assets/code-samples/toast/toast.html"
+                    >
+                    </deckgo-slide-code>
+
+                    <!-- #endregion modular -->
 
                     <!-- #endregion news-->
 

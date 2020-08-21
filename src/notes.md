@@ -19,6 +19,9 @@ Standardization process, involving standardization authorities and integrators (
 
 > World Wide Web Consortium - [w3.org](https://www.w3.org/)
 
+- https://github.com/w3ctag/design-reviews
+- https://github.com/w3ctag/meetings
+
 #### WHATWG
 
 > Web Hypertext Application Technology Working Group - [whatwg.org](https://whatwg.org/)
@@ -143,7 +146,7 @@ Chrome: [Unlocking new capabilities for the web](https://developers.google.com/w
 - [proj-fugu issues](https://bugs.chromium.org/p/chromium/issues/list?q=proj-fugu)
 - [Codelab](https://codelabs.developers.google.com/codelabs/web-capabilities/#0)
 
-## A modular & adaptive Web
+## A modular Web
 
 ### Import Maps & built-in modules
 
@@ -169,19 +172,26 @@ KV Storage:
 
 - whatwg/html: [Introducing new HTML elements that are pay-for-what-you-use #4697](https://github.com/whatwg/html/issues/4697)
 - [Define Web IDL Modules](https://github.com/heycam/webidl/pull/675)
-- current proposals
-  - https://github.com/WICG/virtual-scroller
-  - https://github.com/jackbsteinberg/std-toast
-  - https://github.com/tkent-google/std-switch/
+
+see also:
+
+- https://github.com/drufball/layered-apis ([chrome status](https://www.chromestatus.com/features/6555299569729536))
+
+#### experiments in progress
+
+- https://github.com/WICG/virtual-scroller ([demos](https://github.com/fergald/virtual-scroller-demos) - [Chrome Status](https://www.chromestatus.com/feature/5673195159945216))
+- https://github.com/jackbsteinberg/std-toast ([TAG Review](https://github.com/w3ctag/design-reviews/issues/385) - [Chrome Status](https://www.chromestatus.com/feature/5674896879255552))
+- https://github.com/tkent-google/std-switch/ ([TAG Review](https://github.com/w3ctag/design-reviews/issues/384) - [Chrome Status](https://www.chromestatus.com/feature/6624580116414464))
+
+- see also
+  - https://github.com/WICG/display-locking
+
+## An adaptive Web
 
 ### Media Queries Level 5
 
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
 - https://drafts.csswg.org/mediaqueries-5/
-
-### Misc
-
-- https://web.dev/more-capable-form-controls/
 
 ## A more efficient Web
 
@@ -194,3 +204,5 @@ KV Storage:
 
 - https://github.com/w3c/paint-timing
 - https://github.com/whatwg/html/issues/3534
+- https://web.dev/more-capable-form-controls/
+
