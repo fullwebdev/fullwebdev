@@ -437,6 +437,16 @@
                 font-weight: bold;
                 font-size: 3em;
             }
+
+            .quotation:before {
+                content: '«';
+                margin-right: 0.2em;
+            }
+
+            .quotation:after {
+                content: '»';
+                margin-left: 0.2em;
+            }
         </style>
         <script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script>
     </head>
@@ -651,14 +661,120 @@
                     </deckgo-slide-title>
 
                     <deckgo-slide-content>
+                        <h1 slot="title">June 15, 2015</h1>
+                        <div
+                            slot="content"
+                            style="text-align: center; width: 100%"
+                        >
+                            <p>
+                                <a
+                                    href="https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/"
+                                >
+                                    Escaping Tabs Without Losing Our Soul</a
+                                >
+                            </p>
+                            <figure>
+                                <img
+                                    data-src="assets/img/intro-pwa/alex_russel.png"
+                                    alt="Alex Russel"
+                                />
+                                <figcaption>
+                                    <a
+                                        href="https://infrequently.org/about-me/"
+                                        style="display: block"
+                                        >Alex Russell</a
+                                    >software engineer at Google
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div slot="notes" show>PWA</div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-title>
+                        <div slot="title" class="flex flex-center">
+                            <h1 class="quotation">
+                                There is now another way. An
+                                <span class="strong">evolution</span> has taken
+                                place in browsers.
+                            </h1>
+                        </div>
+                    </deckgo-slide-title>
+
+                    <deckgo-slide-title>
+                        <div slot="title" class="flex flex-center">
+                            <h1 class="quotation">
+                                <span class="strong">Just websites</span> that
+                                took all the right vitamins.
+                            </h1>
+                        </div>
+                    </deckgo-slide-title>
+
+                    <deckgo-slide-title>
+                        <div slot="title" class="flex flex-center">
+                            <h1 class="quotation">
+                                Sites have to
+                                <span class="strong">earn</span> some rights
+                                over time as you use them more and more.
+                            </h1>
+                        </div>
+                    </deckgo-slide-title>
+
+                    <deckgo-slide-title>
+                        <div slot="title" class="flex flex-center">
+                            <h1 class="quotation">
+                                They
+                                <span class="strong">progressively</span> become
+                                “apps”.
+                            </h1>
+                        </div>
+                    </deckgo-slide-title>
+
+                    <deckgo-slide-content>
                         <div slot="content" class="flex flex-center">
                             <img data-src="assets/logos/pwa.svg" alt="pwa" />
                         </div>
                         <div slot="notes" show>PWA</div>
                     </deckgo-slide-content>
 
+                    <deckgo-slide-content>
+                        <div slot="content" style="width: 100%">
+                            <script
+                                type="text/javascript"
+                                src="https://ssl.gstatic.com/trends_nrtr/1982_RC01/embed_loader.js"
+                            ></script>
+                            <script type="text/javascript">
+                                trends.embed.renderExploreWidget(
+                                    'TIMESERIES',
+                                    {
+                                        comparisonItem: [
+                                            {
+                                                keyword: 'Progressive web app',
+                                                geo: '',
+                                                time: '2015-06-01 2019-10-28'
+                                            }
+                                        ],
+                                        category: 0,
+                                        property: ''
+                                    },
+                                    {
+                                        exploreQuery:
+                                            'date=2015-06-01%202019-10-28&q=Progressive%20web%20app',
+                                        guestPath:
+                                            'https://trends.google.com:443/trends/embed/'
+                                    }
+                                );
+                            </script>
+                        </div>
+                    </deckgo-slide-content>
+
                     <deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/small-lego.jpeg')"
+                        class="bg-img"
+                    >
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/business.png')"
                         class="bg-img"
                     >
                     </deckgo-slide-content>
