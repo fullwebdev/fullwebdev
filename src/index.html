@@ -1752,28 +1752,38 @@
                     <deckgo-slide-split>
                         <h1 slot="title">Demo</h1>
                         <div slot="start">
-                            <h2>Step 1</h2>
+                            <h2>Share a text</h2>
                             <ion-button expand="full" id="demo1"
-                                >Copy the tweet</ion-button
-                            >
-                            <h2>Step 2</h2>
+                                >Simple Tweet<ion-icon
+                                    slot="end"
+                                    name="share"
+                                ></ion-icon
+                            ></ion-button>
+                            <h2>Share an image</h2>
                             <ion-button expand="full" id="demo2"
-                                >Copy the tweet</ion-button
-                            >
+                                >text
+                                <ion-icon slot="end" name="copy"></ion-icon
+                            ></ion-button>
                         </div>
                         <div slot="end">
-                            <h2>Step 3</h2>
+                            <h2>Copy an image</h2>
                             <ion-button expand="full" id="demo3"
-                                >Copy the tweet</ion-button
-                            >
+                                >tweet<ion-icon
+                                    slot="end"
+                                    name="share"
+                                ></ion-icon
+                            ></ion-button>
                             <ion-button expand="full" id="demo-img"
-                                >Copy an image</ion-button
-                            >
+                                >image<ion-icon
+                                    slot="end"
+                                    name="copy"
+                                ></ion-icon
+                            ></ion-button>
                         </div>
                         <script>
-                            const tweet1 = `Hey look, I can share my slides with the Twitter #PWA during my talk at #devoxxbe using Async Clipboard & Web Share Target APIs! 🙌 @devoxx #usetheplatform`;
-                            const tweet2 = `Great time at #devoxxbe, sharing a picture with the Twitter #PWA using the Web Share Target API Level 2 😁! @devoxx #usetheplatform`;
-                            const tweet3 = `I can even share an image using the Async Clipboard Level 2 🤯! #devoxxbe @devoxx #usetheplatform`;
+                            const tweet1 = `Hey look, I can share my slides with the Twitter #PWA during my talk at #devoxxbe using the Web Share & Web Share Target APIs! 🙌 @devoxx #usetheplatform`;
+                            const tweet2 = `People at #devoxxbe as I share a picture with the Twitter #PWA using the Web Share Target API Level 2 😁! @devoxx #WebOnFIRE #usetheplatform wof.show`;
+                            const tweet3 = `And I can even share an image using the Async Clipboard Level 2 🤯! #devoxxbe @devoxx #WebOnFIRE #usetheplatform wof.show`;
 
                             const copy = (txt) => async () => {
                                 try {
@@ -1784,15 +1794,37 @@
                                 }
                             };
 
+                            const share = (data) => async () => {
+                                if (navigator.share) {
+                                    try {
+                                        await navigator.share(data);
+                                        console.log('Successful share');
+                                    } catch (error) {
+                                        console.log('Error sharing', error);
+                                    }
+                                } else {
+                                    console.log('web share not supported');
+                                }
+                            };
+
                             document
                                 .getElementById('demo1')
-                                .addEventListener('click', copy(tweet1));
+                                .addEventListener(
+                                    'click',
+                                    share({
+                                        text: tweet1,
+                                        url: 'https://devoxxbe-2019.wof.show'
+                                    })
+                                );
                             document
                                 .getElementById('demo2')
                                 .addEventListener('click', copy(tweet2));
                             document
                                 .getElementById('demo3')
-                                .addEventListener('click', copy(tweet3));
+                                .addEventListener(
+                                    'click',
+                                    share({ text: tweet3 })
+                                );
 
                             document
                                 .getElementById('demo-img')
