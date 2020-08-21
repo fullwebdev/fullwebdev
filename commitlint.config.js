@@ -17,6 +17,7 @@ module.exports = {
         "benchmark",
         "panpress-cli",
         "panpress-starter",
+        "wof-slides",
       ],
     ],
   },
