@@ -6,7 +6,7 @@ on:
       - parisweb-2019
       - devfestnantes-2019
       - devoxxbe-2019
-
+      - deepdive
 jobs:
   build:
     name: Build
@@ -37,12 +37,12 @@ jobs:
       - name: Apply target
         uses: w9jds/firebase-action@master
         with:
-          args: target:apply hosting devoxxbe-2019 devoxxbe-2019
+          args: target:apply hosting deepdive deepdive
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting:devoxxbe-2019
+          args: deploy --only hosting:deepdive
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

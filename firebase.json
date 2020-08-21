@@ -16,6 +16,10 @@
         {
             "target": "devoxxbe-2019",
             "public": "dist"
+        },
+        {
+            "target": "deepdive",
+            "public": "dist"
         }
     ]
 }
