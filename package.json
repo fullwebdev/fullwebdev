@@ -1,8 +1,8 @@
 {
-  "name": "slides-wof-conf",
-  "version": "1.3.1",
-  "description": "The F.I.R.E. safety kit for everyone!",
-  "homepage": "https://conf.wof.show",
+  "name": "deckdeckgo-starter",
+  "version": "1.0.0-rc.2-3",
+  "description": "The Progressive Web App alternative for simple presentations",
+  "homepage": "https://deckdeckgo.com",
   "scripts": {
     "start": "concurrently --kill-others \"npm run watch\" \"npm run dev\"",
     "start-no-remote": "concurrently --kill-others \"npm run watch-no-remote\" \"npm run dev\"",
@@ -10,20 +10,16 @@
     "watch": "webpack --watch --mode development",
     "watch-no-remote": "webpack --watch --mode development --env.no-remote=true",
     "build": "webpack --mode production",
-    "local": "concurrently --kill-others \"webpack --watch --mode development --env.local=true\" \"npm run dev\"",
-    "format": "prettier \"**/*.{js,css,html}\" --write",
-    "release": "standard-version",
-    "postrelease": "git push --follow-tags",
-    "github-release": "conventional-github-releaser -p angular"
+    "local": "concurrently --kill-others \"webpack --watch --mode development --env.local=true\" \"npm run dev\""
   },
   "author": {
-    "name": "Noël Macé",
-    "email": "contact@noelmace.com",
-    "web": "https://wof.show"
+    "name": "David Dal Busco",
+    "email": "david.dalbusco@outlook.com",
+    "web": "https://fluster.io"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/noelmace/slides-wof-conf.git"
+    "url": "git://github.com/deckgo/deckdeckgo-starter.git"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
@@ -33,12 +29,8 @@
     "deckdeckgo-webpack-plugins": "^1.0.0-rc.2-1",
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^4.0.0-beta.8",
-    "husky": "^3.0.8",
-    "lint-staged": "^9.4.1",
     "lite-server": "^2.5.4",
-    "prettier": "^1.18.2",
     "progress-bar-webpack-plugin": "^1.12.1",
-    "standard-version": "^7.0.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
@@ -47,7 +39,7 @@
   "license": "MIT",
   "dependencies": {
     "@deckdeckgo/charts": "^1.0.0-rc.1",
-    "@deckdeckgo/core": "^1.0.0-rc.1-3",
+    "@deckdeckgo/core": "^1.0.0-rc.1-1",
     "@deckdeckgo/highlight-code": "^1.0.0-rc.1-1",
     "@deckdeckgo/lazy-img": "^1.0.0-rc.1",
     "@deckdeckgo/qrcode": "^1.0.0-rc.1",
@@ -80,16 +72,5 @@
     "slides",
     "slideshow",
     "talk"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,css,html}": [
-      "prettier --write",
-      "git add"
-    ]
-  }
+  ]
 }
