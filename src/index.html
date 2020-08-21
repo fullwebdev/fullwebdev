@@ -1753,101 +1753,42 @@
                         <h1 slot="title">Demo</h1>
                         <div slot="start">
                             <h2>Share a text</h2>
-                            <ion-button expand="full" id="demo1"
+                            <ion-button expand="full" class="share-btn-slides"
                                 >Simple Tweet<ion-icon
                                     slot="end"
                                     name="share"
                                 ></ion-icon
                             ></ion-button>
                             <h2>Share an image</h2>
-                            <ion-button expand="full" id="demo2"
+                            <ion-button expand="full" class="copy-btn-camera"
                                 >text
                                 <ion-icon slot="end" name="copy"></ion-icon
+                            ></ion-button>
+                            <ion-button expand="full" class="share-btn-picture"
+                                >Picture<ion-icon
+                                    slot="end"
+                                    name="share"
+                                ></ion-icon
                             ></ion-button>
                         </div>
                         <div slot="end">
                             <h2>Copy an image</h2>
-                            <ion-button expand="full" id="demo3"
+                            <ion-button
+                                expand="full"
+                                class="share-btn-clipboardpic"
                                 >tweet<ion-icon
                                     slot="end"
                                     name="share"
                                 ></ion-icon
                             ></ion-button>
-                            <ion-button expand="full" id="demo-img"
+                            <ion-button expand="full" class="copy-btn-img"
                                 >image<ion-icon
                                     slot="end"
                                     name="copy"
                                 ></ion-icon
                             ></ion-button>
                         </div>
-                        <script>
-                            const tweet1 = `Hey look, I can share my slides with the Twitter #PWA during my talk at #devoxxbe using the Web Share & Web Share Target APIs! 🙌 @devoxx #usetheplatform`;
-                            const tweet2 = `People at #devoxxbe as I share a picture with the Twitter #PWA using the Web Share Target API Level 2 😁! @devoxx #WebOnFIRE #usetheplatform wof.show`;
-                            const tweet3 = `And I can even share an image using the Async Clipboard Level 2 🤯! #devoxxbe @devoxx #WebOnFIRE #usetheplatform wof.show`;
-
-                            const copy = (txt) => async () => {
-                                try {
-                                    await navigator.clipboard.writeText(txt);
-                                    console.log('copied');
-                                } catch (e) {
-                                    console.error(e, e.message);
-                                }
-                            };
-
-                            const share = (data) => async () => {
-                                if (navigator.share) {
-                                    try {
-                                        await navigator.share(data);
-                                        console.log('Successful share');
-                                    } catch (error) {
-                                        console.log('Error sharing', error);
-                                    }
-                                } else {
-                                    console.log('web share not supported');
-                                }
-                            };
-
-                            document.getElementById('demo1').addEventListener(
-                                'click',
-                                share({
-                                    text: tweet1,
-                                    url: 'https://devoxxbe-2019.wof.show'
-                                })
-                            );
-                            document
-                                .getElementById('demo2')
-                                .addEventListener('click', copy(tweet2));
-                            document
-                                .getElementById('demo3')
-                                .addEventListener(
-                                    'click',
-                                    share({ text: tweet3 })
-                                );
-
-                            document
-                                .getElementById('demo-img')
-                                .addEventListener('click', async () => {
-                                    try {
-                                        const imgURL = '/assets/img/elmo.png';
-                                        const data = await fetch(imgURL);
-                                        const blob = await data.blob();
-                                        const item = new ClipboardItem(
-                                            Object.defineProperty(
-                                                {},
-                                                blob.type,
-                                                {
-                                                    value: blob,
-                                                    enumerable: true
-                                                }
-                                            )
-                                        );
-                                        await navigator.clipboard.write([item]);
-                                        console.log('Image copied.');
-                                    } catch (e) {
-                                        console.error(e, e.message);
-                                    }
-                                });
-                        </script>
+                        <script src="assets/code-samples/copy-share-twitter.js"></script>
                     </deckgo-slide-split>
 
                     <deckgo-slide-code
