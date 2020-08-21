@@ -80,8 +80,14 @@ July 2015: [Launch announcement](https://www.w3.org/blog/2015/07/wicg/)
 
 - Chrome Status: [in development](https://chromestatus.com/features#browsers.chrome.status%3A%22In%20development%22)
 - Google Developers, Web: [Updates](https://developers.google.com/web/updates/)
-
 - [Origin Trials](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/README.md)
+
+#### Mozilla
+
+- :octocat: [mozilla/standards-positions](https://github.com/mozilla/standards-positions): Mozilla's Positions on Emerging Web Specifications
+- :bug: https://bugzilla.mozilla.org/describecomponents.cgi
+- :twisted_rightwards_arrows: https://wiki.mozilla.org/Platform/Roadmap
+- :writing_hand: https://hacks.mozilla.org/
 
 ## An integrated Web
 
