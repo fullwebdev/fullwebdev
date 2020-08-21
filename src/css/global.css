@@ -367,3 +367,20 @@ deckgo-slide-split.split-text > *:not([slot="title"]) > * {
   justify-content: start;
   margin: .25em;
 }
+
+.meme-title {
+  font-family: impact;
+  color: white;
+  text-transform: uppercase;
+  font-size: 3em;
+  font-weight: 900;
+  text-shadow:2px 2px 0 #000,
+  -2px -2px 0 #000,
+  2px -2px 0 #000,
+  -2px 2px 0 #000,
+  0px 2px 0 #000,
+  2px 0px 0 #000,
+  0px -2px 0 #000,
+  -2px 0px 0 #000,
+  2px 2px 5px #000;
+}
