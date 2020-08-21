@@ -151,6 +151,7 @@
                 --ion-background-color: #ffffff;
                 --main-color: #ed6c30;
                 --alt-color: #fcc21b;
+                --slide-split-title-display: block;
             }
 
             deckgo-deck {
@@ -256,8 +257,12 @@
 
             .flex-center img,
             .img-row img {
+                max-height: 70vh;
+            }
+
+            .flex-center img,
+            .img-row.fill img {
                 width: 100%;
-                max-height: 80vh;
             }
 
             .img-row {
@@ -356,6 +361,19 @@
 
             .fire-icons .img-container {
                 margin: 1em;
+            }
+
+            deckgo-reveal.compact {
+                text-align: center;
+            }
+
+            deckgo-reveal.compact > * {
+                margin: 0;
+            }
+
+            /* TODO: discuss with deckgo team */
+            deckgo-slide-split deckgo-reveal > * {
+                height: fit-content !important;
             }
         </style>
     </head>
@@ -496,7 +514,7 @@
 
                     <deckgo-slide-content class="fire-bg fire-icons dark">
                         <h1 slot="title" hidden>F.I.R.E.</h1>
-                        <div slot="content" class="img-row">
+                        <div slot="content" class="img-row fill">
                             <div class="img-container">
                                 <img
                                     data-src="assets/icons/fast.svg"
@@ -541,6 +559,55 @@
                     <deckgo-slide-title class="subtitle-slide">
                         <h1 slot="title">An integrated Web</h1>
                     </deckgo-slide-title>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">The mini-infobar</h1>
+                        <div
+                            slot="content"
+                            style="width: 100%; text-align: center"
+                        >
+                            <img
+                                data-src="assets/img/install-promo/a2hs-infobar-cropped.png"
+                                style="margin-top: 2em"
+                            />
+                            <deckgo-reveal style="font-size: 2em">
+                                <p>interim experience</p>
+                                <p>becomes annoying</p>
+                            </deckgo-reveal>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title" hidden>Prevent mini-infobar</h1>
+                        <div slot="content" class="flex flex-center">
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/prevent-infobar.js"
+                                highlight-lines="2,3"
+                            >
+                            </deckgo-highlight-code>
+                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show>Prevent mini-infobar</div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-video
+                        src="assets/img/install-promo/pwa-install-addressbar.webm"
+                    >
+                        <h1 slot="title">Omnibox Button</h1>
+                    </deckgo-slide-video>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">Firefox Mobile</h1>
+                        <div
+                            slot="content"
+                            style="width: 100%; text-align: center"
+                        >
+                            <img
+                                data-src="assets/img/install-promo/firefox/js13kpwa-icon.png"
+                                style="margin: 2em auto"
+                            />
+                        </div>
+                    </deckgo-slide-content>
 
                     <deckgo-slide-content>
                         <h1 slot="title">App Patterns</h1>
@@ -604,6 +671,29 @@
                             </div>
                         </div>
                     </deckgo-slide-content>
+
+                    <deckgo-slide-split>
+                        <h1 slot="title">Closing the App Gapp</h1>
+                        <div slot="start">
+                            <img
+                                data-src="assets/img/capabilities-process.jpg"
+                            />
+                        </div>
+                        <div slot="end">
+                            <deckgo-reveal class="compact">
+                                <h2>Capabilities in flight</h2>
+                                <p>Badging API</p>
+                                <p>Contact Picker API</p>
+                                <p>Get Installed Related Apps API</p>
+                                <p>Native File System API</p>
+                                <p>Shape Detection API</p>
+                                <p>Wake Lock API</p>
+                                <h2>Launched capabilities</h2>
+                                <p>Async Clipboard API (images)</p>
+                                <p>Web Share Target</p>
+                            </deckgo-reveal>
+                        </div>
+                    </deckgo-slide-split>
 
                     <!-- #endregion integrated -->
 
