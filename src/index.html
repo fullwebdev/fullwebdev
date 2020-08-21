@@ -1796,6 +1796,8 @@ Right: the easier-on-the-eyes UA default
 
                     <!-- TODO: differential serving -->
 
+                    <!-- #region import-maps -->
+
                     <deckgo-slide-content>
                         <h1 slot="title">Bare specifiers</h1>
                         <div slot="content">
@@ -1851,6 +1853,24 @@ Right: the easier-on-the-eyes UA default
                         <div slot="notes">Chrome Status</div>
                     </deckgo-slide-content>
 
+                    <!-- #endregion import-maps -->
+
+                    <!-- #region built-in modules -->
+
+                    <deckgo-slide-content class="subchapter-title-slide">
+                        <h2 slot="title" style="text-align: center">
+                            built-in modules
+                        </h2>
+                        <div
+                            slot="content"
+                            style="width: 100%; text-align: center"
+                        >
+                            <img data-src="assets/img/pay-as-you-go.jpg" />
+                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show>BUILT-IN MODULES</div>
+                    </deckgo-slide-content>
+
                     <deckgo-slide-content>
                         <h1 slot="title">KV Storage</h1>
                         <div
@@ -1878,6 +1898,20 @@ Right: the easier-on-the-eyes UA default
                         </div>
                         <div slot="notes" show></div>
                     </deckgo-slide-content>
+
+                    <deckgo-slide-code
+                        src="assets/code-samples/import-maps/polyfil.html"
+                    >
+                        <h1 slot="title">Polyfill</h1>
+                    </deckgo-slide-code>
+
+                    <deckgo-slide-code
+                        src="assets/code-samples/import-maps/polyfil-import.html"
+                    >
+                        <h1 slot="title">Polyfill - Import</h1>
+                    </deckgo-slide-code>
+
+                    <!-- #endregion  built-in modules -->
 
                     <!-- #region Web Components -->
 
