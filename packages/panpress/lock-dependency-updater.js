@@ -11,5 +11,6 @@ module.exports.writeVersion = function (contents, version) {
   let indent = detectIndent(contents).indent;
   let newline = detectNewline(contents);
   json.dependencies["@panpress/cli"].version = version;
+  json.version = version;
   return stringifyPackage(json, indent, newline);
 };
