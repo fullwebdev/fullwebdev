@@ -1004,22 +1004,86 @@ new range of rendered children.
                     </deckgo-slide-code>
 
                     <!-- #endregion modular -->
+                    <!-- #region adaptive -->
+                    <deckgo-slide-title class="subtitle-slide">
+                        <h1 slot="title">An adaptive Web</h1>
+                    </deckgo-slide-title>
 
-                    <!-- #endregion news-->
-
-                    <!-- #region outro -->
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/level5.jpg') #393536"
+                        class="bg-img"
+                    >
+                    </deckgo-slide-content>
 
                     <deckgo-slide-content class="dark">
-                        <h1 slot="title">Aaaand ... That it!</h1>
                         <div
                             slot="content"
                             style="width: 100%; text-align: center"
                         >
-                            <img
-                                data-src="assets/img/well-that-was-quick.jpg"
-                            />
+                            <img data-src="assets/img/hello-darkness.jpg" />
                         </div>
+                        <div slot="notes" show>darkness</div>
                     </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">prefers-color-scheme</h1>
+                        <div slot="content" class="ciu-wrapper">
+                            <p
+                                class="ciu_embed"
+                                data-feature="prefers-color-scheme"
+                                data-periods="future_1,current,past_1,past_2"
+                                data-accessible-colours="false"
+                            >
+                                <a
+                                    href="http://caniuse.com/#feat=prefers-color-scheme"
+                                    >Can I Use prefers-color-scheme?</a
+                                >
+                                Data on support for the prefers-color-scheme
+                                feature across the major browsers from
+                                caniuse.com.
+                            </p>
+                        </div>
+                        <div slot="notes" show></div>
+                    </deckgo-slide-content>
+
+                    <!-- TODO: add prefers-color-scheme example -->
+
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/stay-still.jpg') #000"
+                        class="bg-img"
+                    >
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">prefers-reduced-motion</h1>
+                        <div slot="content" class="ciu-wrapper">
+                            <p
+                                class="ciu_embed"
+                                data-feature="prefers-reduced-motion"
+                                data-periods="future_1,current,past_1,past_2"
+                                data-accessible-colours="false"
+                            >
+                                <a
+                                    href="http://caniuse.com/#feat=prefers-reduced-motion"
+                                    >Can I Use prefers-reduced-motion?</a
+                                >
+                                Data on support for the prefers-reduced-motion
+                                feature across the major browsers from
+                                caniuse.com.
+                            </p>
+                        </div>
+                        <div slot="notes" show></div>
+                    </deckgo-slide-content>
+
+                    <!-- TODO: add prefers-reduced-motion example -->
+
+                    <!-- TODO: add other media queries level 5 -->
+
+                    <!-- #endregion adaptive -->
+
+                    <!-- #endregion news-->
+
+                    <!-- #region outro -->
 
                     <deckgo-slide-title class="title-slide">
                         <h1 slot="title">resources</h1>

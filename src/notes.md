@@ -199,6 +199,44 @@ see also:
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
 - https://drafts.csswg.org/mediaqueries-5/
 
+#### Dark/Light Mode
+
+Read [_Hello darkness my old friend_](https://web.dev/prefers-color-scheme) by Thomas Steiner on Web.dev.
+
+- prefers-color-scheme ([MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme))
+- color-scheme ([csswg draft](https://drafts.csswg.org/css-color-adjust-1/#propdef-color-scheme), [Chrome Status](https://chromestatus.com/feature/5330651267989504))
+
+##### Emulation / DevTools
+
+###### Chrome
+[Issue 977243: DevTool helper for prefers-color-scheme: dark](https://bugs.chromium.org/p/chromium/issues/detail?id=977243)
+
+###### Puppeeteer
+
+[feat: emulate prefers-color-scheme #4906](https://github.com/GoogleChrome/puppeteer/issues/4906)
+
+###### Firefox
+
+_from [stackoverflow](https://stackoverflow.com/questions/56401662/firefox-how-to-test-prefers-color-scheme):_
+1. open about:config
+2. add a ui.systemUsesDarkTheme integer entry set to 1
+3. restart firefox
+
+#### Reduced Motion
+
+[Move Ya! Or maybe, don't, if the user prefers-reduced-motion!](https://developers.google.com/web/updates/2019/03/prefers-reduced-motion)
+
+[MDN](https://developer.mozilla.org/fr/docs/Web/CSS/@media/prefers-reduced-motion)
+
+#### misc
+
+- https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-transparency#
+- https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast
+- https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
+- https://developer.mozilla.org/en-US/docs/Web/CSS/@media/scripting
+- https://developer.mozilla.org/en-US/docs/Web/CSS/@media/light-level
+- https://developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors
+
 ## A more efficient Web
 
 - https://web.dev/native-lazy-loading/
@@ -211,4 +249,3 @@ see also:
 - https://github.com/w3c/paint-timing
 - https://github.com/whatwg/html/issues/3534
 - https://web.dev/more-capable-form-controls/
-
