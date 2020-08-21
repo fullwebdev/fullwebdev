@@ -775,6 +775,195 @@
 
                     <!-- #endregion integrated -->
 
+                    <!-- #region adaptive -->
+                    <deckgo-slide-title class="subtitle-slide">
+                        <h1 slot="title">An adaptive Web</h1>
+                    </deckgo-slide-title>
+
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/level5.jpg') #393536"
+                        class="bg-img"
+                    >
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content class="dark">
+                        <div
+                            slot="content"
+                            style="width: 100%; text-align: center"
+                        >
+                            <img data-src="assets/img/hello-darkness.jpg" />
+                        </div>
+                        <div slot="notes" show>darkness</div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title" hidden>
+                            prefers-color-scheme
+                        </h1>
+                        <div slot="content" class="flex flex-center">
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/mq5/dark/load-css.html"
+                            >
+                            </deckgo-highlight-code>
+                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show>
+Conditionally either load the light or the dark stylesheet. The matching file
+will be downloaded with `highest`, the non-matching file with `lowest`
+priority. If the browser doesn't support `prefers-color-scheme`, the media
+query is unknown and the files are downloaded with `lowest` priority (but
+above I already force `highest` priority for my default light experience).
+                            </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title" hidden>
+                            prefers-color-scheme - variables
+                        </h1>
+                        <div slot="content" class="flex flex-center">
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/mq5/dark/variables.css"
+                            >
+                            </deckgo-highlight-code>
+                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show></div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">prefers-color-scheme - load</h1>
+                        <div slot="content" class="ciu-wrapper">
+                            <p
+                                class="ciu_embed"
+                                data-feature="prefers-color-scheme"
+                                data-periods="future_1,current,past_1,past_2"
+                                data-accessible-colours="false"
+                            >
+                                <a
+                                    href="http://caniuse.com/#feat=prefers-color-scheme"
+                                    >Can I Use prefers-color-scheme?</a
+                                >
+                                Data on support for the prefers-color-scheme
+                                feature across the major browsers from
+                                caniuse.com.
+                            </p>
+                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show>Wrong: enabled in Chrome for Android 76</div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title" hidden>
+                            prefers-color-scheme - fallback
+                        </h1>
+                        <div slot="content" class="flex flex-center">
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/mq5/dark/fallback.html"
+                            >
+                            </deckgo-highlight-code>
+                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show>
+If `prefers-color-scheme` is not supported, fall
+back to light mode. In this case, light.css will be
+downloaded with `highest` priority.
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">color-scheme</h1>
+                        <div slot="content" class="img-row fill">
+                            <div class="img-container">
+                                <img
+                                    data-src="assets/img/color-scheme-avoid-transformation.png"
+                                />
+                            </div>
+                            <div class="img-container">
+                                <img
+                                    data-src="assets/img/color-scheme-ua-default.png"
+                                />
+                            </div>
+                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show>
+Left: glaring and without transformations.
+Right: the easier-on-the-eyes UA default
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/stay-still.jpg') #000"
+                        class="bg-img"
+                    >
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title" hidden>
+                            prefers-reduced-motion - CSS
+                        </h1>
+                        <div slot="content" class="flex flex-center">
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/mq5/motion/reduced-motion.css"
+                            >
+                            </deckgo-highlight-code>
+                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show></div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title" hidden>
+                            prefers-reduced-motion - JS
+                        </h1>
+                        <div slot="content" class="flex flex-center">
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/mq5/motion/reduced-motion.js"
+                            >
+                            </deckgo-highlight-code>
+                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show></div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">prefers-reduced-motion</h1>
+                        <div slot="content" class="ciu-wrapper">
+                            <p
+                                class="ciu_embed"
+                                data-feature="prefers-reduced-motion"
+                                data-periods="future_1,current,past_1,past_2"
+                                data-accessible-colours="false"
+                            >
+                                <a
+                                    href="http://caniuse.com/#feat=prefers-reduced-motion"
+                                    >Can I Use prefers-reduced-motion?</a
+                                >
+                                Data on support for the prefers-reduced-motion
+                                feature across the major browsers from
+                                caniuse.com.
+                            </p>
+                        </div>
+                        <div slot="notes" show></div>
+                    </deckgo-slide-content>
+
+                    <!-- TODO: add prefers-reduced-motion example -->
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">other media queries</h1>
+                        <div slot="content" class="center" style="width: 100%">
+                            <deckgo-reveal style="text-align: center">
+                                <p>prefers-reduced-transparency</p>
+                                <p>prefers-contrast</p>
+                                <p>prefers-color-scheme</p>
+                                <p>scripting</p>
+                                <p>light-level</p>
+                                <p>forced-colors</p>
+                            </deckgo-reveal>
+                        </div>
+                        <div slot="notes" show></div>
+                    </deckgo-slide-content>
+
+                    <!-- #endregion adaptive -->
                     <!-- #region modular -->
 
                     <deckgo-slide-title class="subtitle-slide">
@@ -997,195 +1186,6 @@ new range of rendered children.
                     </deckgo-slide-code>
 
                     <!-- #endregion modular -->
-                    <!-- #region adaptive -->
-                    <deckgo-slide-title class="subtitle-slide">
-                        <h1 slot="title">An adaptive Web</h1>
-                    </deckgo-slide-title>
-
-                    <deckgo-slide-content
-                        style="--background:center no-repeat url('assets/img/level5.jpg') #393536"
-                        class="bg-img"
-                    >
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content class="dark">
-                        <div
-                            slot="content"
-                            style="width: 100%; text-align: center"
-                        >
-                            <img data-src="assets/img/hello-darkness.jpg" />
-                        </div>
-                        <div slot="notes" show>darkness</div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title" hidden>
-                            prefers-color-scheme
-                        </h1>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/mq5/dark/load-css.html"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>
-Conditionally either load the light or the dark stylesheet. The matching file
-will be downloaded with `highest`, the non-matching file with `lowest`
-priority. If the browser doesn't support `prefers-color-scheme`, the media
-query is unknown and the files are downloaded with `lowest` priority (but
-above I already force `highest` priority for my default light experience).
-                            </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title" hidden>
-                            prefers-color-scheme - variables
-                        </h1>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/mq5/dark/variables.css"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show></div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">prefers-color-scheme - load</h1>
-                        <div slot="content" class="ciu-wrapper">
-                            <p
-                                class="ciu_embed"
-                                data-feature="prefers-color-scheme"
-                                data-periods="future_1,current,past_1,past_2"
-                                data-accessible-colours="false"
-                            >
-                                <a
-                                    href="http://caniuse.com/#feat=prefers-color-scheme"
-                                    >Can I Use prefers-color-scheme?</a
-                                >
-                                Data on support for the prefers-color-scheme
-                                feature across the major browsers from
-                                caniuse.com.
-                            </p>
-                        </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>Wrong: enabled in Chrome for Android 76</div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title" hidden>
-                            prefers-color-scheme - fallback
-                        </h1>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/mq5/dark/fallback.html"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>
-If `prefers-color-scheme` is not supported, fall
-back to light mode. In this case, light.css will be
-downloaded with `highest` priority.
-                        </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">color-scheme</h1>
-                        <div slot="content" class="img-row fill">
-                            <div class="img-container">
-                                <img
-                                    data-src="assets/img/color-scheme-avoid-transformation.png"
-                                />
-                            </div>
-                            <div class="img-container">
-                                <img
-                                    data-src="assets/img/color-scheme-ua-default.png"
-                                />
-                            </div>
-                        </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>
-Left: glaring and without transformations.
-Right: the easier-on-the-eyes UA default
-                        </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content
-                        style="--background:center no-repeat url('assets/img/stay-still.jpg') #000"
-                        class="bg-img"
-                    >
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title" hidden>
-                            prefers-reduced-motion - CSS
-                        </h1>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/mq5/motion/reduced-motion.css"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show></div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title" hidden>
-                            prefers-reduced-motion - JS
-                        </h1>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/mq5/motion/reduced-motion.js"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show></div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">prefers-reduced-motion</h1>
-                        <div slot="content" class="ciu-wrapper">
-                            <p
-                                class="ciu_embed"
-                                data-feature="prefers-reduced-motion"
-                                data-periods="future_1,current,past_1,past_2"
-                                data-accessible-colours="false"
-                            >
-                                <a
-                                    href="http://caniuse.com/#feat=prefers-reduced-motion"
-                                    >Can I Use prefers-reduced-motion?</a
-                                >
-                                Data on support for the prefers-reduced-motion
-                                feature across the major browsers from
-                                caniuse.com.
-                            </p>
-                        </div>
-                        <div slot="notes" show></div>
-                    </deckgo-slide-content>
-
-                    <!-- TODO: add prefers-reduced-motion example -->
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">other media queries</h1>
-                        <div slot="content" class="center" style="width: 100%">
-                            <deckgo-reveal style="text-align: center">
-                                <p>prefers-reduced-transparency</p>
-                                <p>prefers-contrast</p>
-                                <p>prefers-color-scheme</p>
-                                <p>scripting</p>
-                                <p>light-level</p>
-                                <p>forced-colors</p>
-                            </deckgo-reveal>
-                        </div>
-                        <div slot="notes" show></div>
-                    </deckgo-slide-content>
-
-                    <!-- #endregion adaptive -->
 
                     <!-- #endregion news-->
 
