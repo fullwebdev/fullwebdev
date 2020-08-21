@@ -38,7 +38,7 @@
     "lite-server": "^2.5.4",
     "prettier": "^1.18.2",
     "progress-bar-webpack-plugin": "^1.12.1",
-    "standard-version": "^7.0.0",
+    "standard-version": "^8.0.1",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
