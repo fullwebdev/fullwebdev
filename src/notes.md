@@ -156,6 +156,7 @@ Import Maps:
 Built-in modules:
 
 - https://github.com/tc39/proposal-javascript-standard-library
+- Stage 1 - last presented on [June 2019](https://github.com/tc39/tc39-notes/blob/master/meetings/2019-06/june-5.md#javascript-standard-library-for-stage-2--part-2-)
 
 KV Storage:
 
