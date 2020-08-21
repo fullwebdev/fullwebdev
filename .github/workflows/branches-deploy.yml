@@ -33,6 +33,12 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: dist
+      - name: Apply target
+        uses: w9jds/firebase-action@master
+        with:
+          args: target:apply hosting devfestnantes-2019 devfestnantes-2019
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
