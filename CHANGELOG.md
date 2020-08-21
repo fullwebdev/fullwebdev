@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/noelmace/slides-wof-conf/compare/v1.2.0-rc.0...v1.2.0) (2019-11-04)
+
+
+### Features
+
+* add ietf ([5fa2928](https://github.com/noelmace/slides-wof-conf/commit/5fa2928c79500a6b7c0fb6528f501617efad4cc8))
+* prefers-color-scheme demo ([7463020](https://github.com/noelmace/slides-wof-conf/commit/74630203d77e7c46b19d24d879d8d895b9ffb892))
+* share demo in slides ([a9ac460](https://github.com/noelmace/slides-wof-conf/commit/a9ac46037ee94269d8223bd45813e9fcd4f0c08f))
+
+
+### Bug Fixes
+
+* "basics" title ([e0c286b](https://github.com/noelmace/slides-wof-conf/commit/e0c286befa6b6c63c73314a2ad2c73355b0ef812))
+* code samples on medium screen ([f3c3d30](https://github.com/noelmace/slides-wof-conf/commit/f3c3d30e89b821e8054ac41e802207d8a7498bfa))
+* executable demos ([5fd9bd7](https://github.com/noelmace/slides-wof-conf/commit/5fd9bd728cec2638fa1a605c8995a9013af5fd44))
+* google trends embed 429 error ([fc42d3f](https://github.com/noelmace/slides-wof-conf/commit/fc42d3f2329c9856e7015905e9bc45ae9d9b6d6e))
+* links overlaping in author slide ([c41af49](https://github.com/noelmace/slides-wof-conf/commit/c41af495bc80d8f767000d6f8f250d6663128c41))
+* standards - add subchapters titles ([b670c81](https://github.com/noelmace/slides-wof-conf/commit/b670c818e6df8a4018a8fa45cfa572b7e6672e25))
+* the birth of WHATWG ([317afd5](https://github.com/noelmace/slides-wof-conf/commit/317afd5f9aa0a6daa1913f11db12f84ea496b25b))
+* tweet hashtag for share api demo ([8d51713](https://github.com/noelmace/slides-wof-conf/commit/8d51713c449d6fc9986381b0b62fe6f566db92d5))
+* w3c process img ([11a64ec](https://github.com/noelmace/slides-wof-conf/commit/11a64ec51812c4e0063fc4437d636ab841ad91a9))
+
 ## [1.2.0-rc.0](https://github.com/noelmace/slides-wof-conf/compare/v1.2.0-alpha.4...v1.2.0-rc.0) (2019-11-02)
 
 
