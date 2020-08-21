@@ -3,8 +3,13 @@
 :root {
   background: #ffffff;
   --ion-background-color: #ffffff;
+
   --main-color: #ed6c30;
   --alt-color: #fcc21b;
+  --alt-color-light: #E8D76D;
+  --alt-color-group-light: #5CA062;
+  --alt-color-group-dark: #195D4D;
+
   --slide-split-title-display: block;
   --slide-split-padding-top: 0;
 }
@@ -159,6 +164,8 @@ figure[slot='content'] img {
   max-height: 100%;
 }
 
+/* #endregion img-org */
+
 .frame {
   background: center no-repeat url('/assets/img/frame-h.png');
   background-size: contain;
@@ -222,12 +229,16 @@ h1 {
   margin: 0 auto;
 }
 
-.title-slide {
+.chapter-title-slide {
   --background: var(--main-color);
 }
 
-.subtitle-slide {
+.subchapter-title-slide {
   --background: var(--alt-color);
+}
+
+.topic-title-slide {
+  --background: var(--alt-color-light);
 }
 
 deckgo-social .link {
@@ -339,4 +350,13 @@ std-toast {
 .quotation:after {
   content: '»';
   margin-left: 0.2em;
+}
+
+deckgo-slide-split.split-text > *:not([slot="title"]) {
+  justify-content: start;
+}
+
+deckgo-slide-split.split-text > *:not([slot="title"]) > * {
+  justify-content: start;
+  margin: .25em;
 }

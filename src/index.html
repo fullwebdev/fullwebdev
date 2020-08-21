@@ -284,8 +284,7 @@
                     </deckgo-slide-countdown>
 
                     <!-- #region intro -->
-
-                    <deckgo-slide-title class="title-slide">
+                    <deckgo-slide-title class="chapter-title-slide">
                         <h1 slot="title">The Web is on 🔥 F.I.R.E. 🔥</h1>
                         <div slot="content">
                             <h3>Deep-dive</h3>
@@ -374,10 +373,24 @@
 
                     <!-- #endregion intro -->
 
+                    <!-- #region Past & Present -->
+                    <deckgo-slide-title class="dark">
+                        <h1 slot="title">Part 1</h1>
+                        <h2 slot="content">
+                            Past & Present
+                        </h2>
+                    </deckgo-slide-title>
+
                     <!-- #region PWA -->
 
-                    <deckgo-slide-title class="title-slide">
-                        <h1 slot="title">On ... F.I.R.E.? 🤨</h1>
+                    <deckgo-slide-title class="chapter-title-slide">
+                        <h1 slot="title">FIRE & PWA</h1>
+                    </deckgo-slide-title>
+
+                    <!-- #region principles -->
+
+                    <deckgo-slide-title class="subchapter-title-slide">
+                        <h1 slot="title">FIRE origins</h1>
                     </deckgo-slide-title>
 
                     <deckgo-slide-content>
@@ -567,8 +580,16 @@
                         </div>
                     </deckgo-slide-content>
 
-                    <!-- TODO: propose a deckgo-hide component & merge this slide with the previous one -->
+                    <!-- #endregion principles -->
+
+                    <!-- #region Basis -->
+
+                    <deckgo-slide-title class="subchapter-title-slide">
+                        <h1 slot="title">Ya basic!</h1>
+                    </deckgo-slide-title>
+
                     <deckgo-slide-content class="fire-icons">
+                        <!-- TODO: propose a deckgo-hide component & merge this slide with the previous one -->
                         <h1 slot="title" hidden>F.I.R.E.</h1>
                         <div slot="content" class="img-row fill">
                             <figure>
@@ -618,6 +639,8 @@
                         </div>
                     </deckgo-slide-content>
 
+                    <!-- #region App Shell -->
+
                     <deckgo-slide-content>
                         <h1 slot="title" hidden>App Shell</h1>
                         <figure slot="content">
@@ -627,6 +650,10 @@
                             />
                         </figure>
                     </deckgo-slide-content>
+
+                    <!-- #endregion App Shell -->
+
+                    <!-- #region A2HS -->
 
                     <deckgo-slide-content>
                         <h1 slot="title">Manifest</h1>
@@ -773,6 +800,10 @@
                         </deckgo-reveal>
                     </deckgo-slide-content>
 
+                    <!-- #endregion A2HS -->
+
+                    <!-- #region SW -->
+
                     <deckgo-slide-content>
                         <h1 slot="title">SW support</h1>
                         <div slot="content" class="ciu-wrapper">
@@ -803,6 +834,10 @@
                         class="bg-img"
                     >
                     </deckgo-slide-content>
+
+                    <!-- #endregion SW -->
+
+                    <!-- #region Push Notifications -->
 
                     <deckgo-slide-content>
                         <h1 slot="title">Push API</h1>
@@ -858,6 +893,10 @@
                     >
                     </deckgo-slide-content>
 
+                    <!-- #endregion Push Notifications -->
+
+                    <!-- #endregion Basis -->
+
                     <deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/cleaning-confetti.jpg')"
                         class="bg-img"
@@ -871,9 +910,15 @@
 
                     <!-- #region standardization -->
 
-                    <deckgo-slide-title class="title-slide">
-                        <h1 slot="title">How the Web evolves</h1>
+                    <deckgo-slide-title class="chapter-title-slide">
+                        <h1 slot="title">Keeping Up!</h1>
                     </deckgo-slide-title>
+
+                    <deckgo-slide-content class="slide-todo">
+                        <h1 slot="title">TODO: technical watch</h1>
+                    </deckgo-slide-content>
+
+                    <!-- #region W3C -->
 
                     <deckgo-slide-content>
                         <figure slot="content" class="flex flex-center">
@@ -982,6 +1027,10 @@
                         </ul>
                     </deckgo-slide-content>
 
+                    <!-- #endregion W3C -->
+
+                    <!-- #region WHATWG -->
+
                     <deckgo-slide-content>
                         <h1 slot="title">Web Specs need to:</h1>
                         <ul slot="content">
@@ -1031,6 +1080,10 @@
                     >
                     </deckgo-slide-content>
 
+                    <!-- #endregion WHATWG -->
+
+                    <!-- #region W3C w/ WHATWG -->
+
                     <deckgo-slide-content>
                         <figure slot="content" class="flex flex-center">
                             <deckgo-reveal
@@ -1052,6 +1105,75 @@
                         class="bg-img"
                     >
                     </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">Controversies</h1>
+                        <div slot="content" style="width: 100%">
+                            <deckgo-reveal>
+                                <div style="text-align: center">
+                                    <h2
+                                        style="
+                                                    font: 100% sans-serif;
+                                                    color: #005A9C;
+                                                    font-weight: bold;
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    font-size: 220%;"
+                                    >
+                                        Encrypted Media Extensions
+                                    </h2>
+                                    <h3
+                                        style="
+                                                    font: 100% sans-serif;
+                                                    color: #005A9C;
+                                                    font-size: 140%;
+                                                    margin: 0;
+                                                    padding: 0;"
+                                    >
+                                        W3C Recommendation, 14 December 2017
+                                    </h3>
+                                </div>
+                                <div class="img-small-line">
+                                    <figure>
+                                        <img
+                                            data-src="assets/logos/netflix.svg"
+                                            alt="netflix"
+                                        />
+                                    </figure>
+                                    <figure>
+                                        <img
+                                            data-src="assets/logos/youtube.svg"
+                                            alt="youtube"
+                                        />
+                                    </figure>
+                                </div>
+                                <div class="img-small-line">
+                                    <figure>
+                                        <img
+                                            data-src="assets/logos/mozilla.svg"
+                                            alt="mozilla"
+                                        />
+                                    </figure>
+                                    <figure>
+                                        <img
+                                            data-src="assets/logos/fsf.svg"
+                                            alt="fsf"
+                                        />
+                                    </figure>
+                                    <figure>
+                                        <img
+                                            data-src="assets/logos/eff.svg"
+                                            alt="eff"
+                                        />
+                                    </figure>
+                                </div>
+                            </deckgo-reveal>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <!-- #endregion W3C w/ WHATWG -->
+
+                    <!-- #region TC39 -->
 
                     <deckgo-slide-content>
                         <figure slot="content" class="flex flex-center">
@@ -1103,6 +1225,10 @@
                         </ul>
                     </deckgo-slide-content>
 
+                    <!-- #endregion TC39 -->
+
+                    <!-- #region Browsers -->
+
                     <deckgo-slide-content>
                         <h1 slot="title" hidden>Integrators</h1>
                         <div slot="content" class="img-row fill">
@@ -1123,83 +1249,33 @@
                         <div slot="notes">Chrome & Firefox</div>
                     </deckgo-slide-content>
 
-                    <deckgo-slide-content>
-                        <h1 slot="title">Controversies</h1>
-                        <div slot="content" style="width: 100%">
-                            <deckgo-reveal>
-                                <div style="text-align: center">
-                                    <h2
-                                        style="
-                                                font: 100% sans-serif;
-                                                color: #005A9C;
-                                                font-weight: bold;
-                                                margin: 0;
-                                                padding: 0;
-                                                font-size: 220%;"
-                                    >
-                                        Encrypted Media Extensions
-                                    </h2>
-                                    <h3
-                                        style="
-                                                font: 100% sans-serif;
-                                                color: #005A9C;
-                                                font-size: 140%;
-                                                margin: 0;
-                                                padding: 0;"
-                                    >
-                                        W3C Recommendation, 14 December 2017
-                                    </h3>
-                                </div>
-                                <div class="img-small-line">
-                                    <figure>
-                                        <img
-                                            data-src="assets/logos/netflix.svg"
-                                            alt="netflix"
-                                        />
-                                    </figure>
-                                    <figure>
-                                        <img
-                                            data-src="assets/logos/youtube.svg"
-                                            alt="youtube"
-                                        />
-                                    </figure>
-                                </div>
-                                <div class="img-small-line">
-                                    <figure>
-                                        <img
-                                            data-src="assets/logos/mozilla.svg"
-                                            alt="mozilla"
-                                        />
-                                    </figure>
-                                    <figure>
-                                        <img
-                                            data-src="assets/logos/fsf.svg"
-                                            alt="fsf"
-                                        />
-                                    </figure>
-                                    <figure>
-                                        <img
-                                            data-src="assets/logos/eff.svg"
-                                            alt="eff"
-                                        />
-                                    </figure>
-                                </div>
-                            </deckgo-reveal>
-                        </div>
-                    </deckgo-slide-content>
+                    <!-- #endregion Browsers -->
 
                     <!-- #endregion standardization -->
 
-                    <!-- #region news -->
+                    <!-- #endregion Past & Present -->
 
-                    <deckgo-slide-title class="title-slide">
-                        <h1 slot="title">What's hot?</h1>
+                    <!-- #region Future -->
+
+                    <deckgo-slide-title class="dark">
+                        <h1 slot="title">Part 2</h1>
+                        <h2 slot="content">The future 🧙‍♂️🔮</h2>
                     </deckgo-slide-title>
+
+                    <deckgo-slide-content class="slide-todo">
+                        <h1 slot="title">TODO</h1>
+                    </deckgo-slide-content>
 
                     <!-- #region integrated -->
 
-                    <deckgo-slide-title class="subtitle-slide">
+                    <deckgo-slide-title class="chapter-title-slide">
                         <h1 slot="title">An integrated Web</h1>
+                    </deckgo-slide-title>
+
+                    <!-- #region A2HS -->
+                    <deckgo-slide-title class="subchapter-title-slide">
+                        <h1 slot="title">A2HS</h1>
+                        <h2 slot="content">a new approach</h2>
                     </deckgo-slide-title>
 
                     <deckgo-slide-content>
@@ -1314,10 +1390,14 @@
                         </div>
                     </deckgo-slide-content>
 
+                    <!-- #endregion A2HS -->
+
                     <!-- #region app-gap -->
+                    <deckgo-slide-title class="subchapter-title-slide">
+                        <h1 slot="title">Closing the App Gap</h1>
+                    </deckgo-slide-title>
 
                     <deckgo-slide-content>
-                        <h1 slot="title">Closing the App Gapp</h1>
                         <div slot="content" class="img-row">
                             <img
                                 data-src="assets/img/capabilities-process.jpg"
@@ -1325,12 +1405,94 @@
                         </div>
                     </deckgo-slide-content>
 
+                    <deckgo-slide-split class="split-text">
+                        <h1 slot="title">New Capabilities</h1>
+                        <deckgo-reveal
+                            slot="start"
+                            style="justify-content: start;"
+                        >
+                            <h2>🚀 Launched</h2>
+                            <p>Web Share Target</p>
+                            <p>Async Clipboard API (images)</p>
+                        </deckgo-reveal>
+                        <deckgo-reveal
+                            slot="end"
+                            style="justify-content: start;"
+                        >
+                            <h2>🚧 in flight</h2>
+                            <p>Badging API</p>
+                            <p>Shape Detection API</p>
+                            <p>Contact Picker API</p>
+                            <p>Get Installed Related Apps API</p>
+                            <p>Native File System API</p>
+                            <p>Wake Lock API</p>
+                        </deckgo-reveal>
+                    </deckgo-slide-split>
+
+                    <!-- #region Web Share Target-->
+                    <deckgo-slide-title class="topic-title-slide">
+                        <h1 slot="title">Web Share Target</h1>
+                    </deckgo-slide-title>
+
+                    <deckgo-slide-content class="slide-todo">
+                        <h1 slot="title">TODO</h1>
+                    </deckgo-slide-content>
+                    <!-- #endregion Web Share Target -->
+
+                    <!-- #region Async Clipboard API -->
+
+                    <deckgo-slide-title class="topic-title-slide">
+                        <h1 slot="title">Async Clipboard API</h1>
+                    </deckgo-slide-title>
+
+                    <deckgo-slide-content class="slide-todo">
+                        <h1 slot="title">TODO</h1>
+                    </deckgo-slide-content>
+
+                    <!-- #endregion Async Clipboard API -->
+
+                    <!-- #region Badging API -->
+
+                    <deckgo-slide-title class="topic-title-slide">
+                        <h1 slot="title">Badging API</h1>
+                    </deckgo-slide-title>
+
+                    <deckgo-slide-content class="slide-todo">
+                        <h1 slot="title">TODO</h1>
+                    </deckgo-slide-content>
+
+                    <!-- #endregion Badging API -->
+
+                    <!-- #region Shape Detection API -->
+
+                    <deckgo-slide-title class="topic-title-slide">
+                        <h1 slot="title">Shape Detection API</h1>
+                    </deckgo-slide-title>
+
+                    <deckgo-slide-content class="slide-todo">
+                        <h1 slot="title">TODO</h1>
+                    </deckgo-slide-content>
+
+                    <!-- #endregion Shape Detection API -->
+
+                    <!-- #region Contacts Picker API -->
+
+                    <deckgo-slide-title class="topic-title-slide">
+                        <h1 slot="title">Contacts Picker API</h1>
+                    </deckgo-slide-title>
+
+                    <deckgo-slide-content class="slide-todo">
+                        <h1 slot="title">TODO</h1>
+                    </deckgo-slide-content>
+
+                    <!-- #endregion Contacts Picker API -->
+
                     <!-- #endregion app-gap -->
 
                     <!-- #endregion integrated -->
 
                     <!-- #region adaptive -->
-                    <deckgo-slide-title class="subtitle-slide">
+                    <deckgo-slide-title class="chapter-title-slide">
                         <h1 slot="title">An adaptive Web</h1>
                     </deckgo-slide-title>
 
@@ -1340,7 +1502,8 @@
                     >
                     </deckgo-slide-content>
 
-                    <deckgo-slide-content class="dark">
+                    <!-- #region Dark Mode -->
+                    <deckgo-slide-content class="topic-title-slide">
                         <div
                             slot="content"
                             style="width: 100%; text-align: center"
@@ -1445,10 +1608,18 @@ Right: the easier-on-the-eyes UA default
                         </div>
                     </deckgo-slide-content>
 
-                    <deckgo-slide-content
-                        style="--background:center no-repeat url('assets/img/stay-still.jpg') #000"
-                        class="bg-img"
-                    >
+                    <!-- #endregion Dark Mode -->
+
+                    <!-- #region Motion-->
+
+                    <deckgo-slide-content class="topic-title-slide">
+                        <div
+                            slot="content"
+                            style="width: 100%; text-align: center"
+                        >
+                            <img data-src="assets/img/stay-still.jpg" />
+                        </div>
+                        <div slot="notes" show>motion</div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
@@ -1517,10 +1688,13 @@ Right: the easier-on-the-eyes UA default
                         <div slot="notes" show></div>
                     </deckgo-slide-content>
 
+                    <!-- #endregion Motion -->
+
                     <!-- #endregion adaptive -->
+
                     <!-- #region modular -->
 
-                    <deckgo-slide-title class="subtitle-slide">
+                    <deckgo-slide-title class="chapter-title-slide">
                         <h1 slot="title">A Modular Web</h1>
                     </deckgo-slide-title>
 
@@ -1627,6 +1801,8 @@ Right: the easier-on-the-eyes UA default
                         </div>
                         <div slot="notes" show></div>
                     </deckgo-slide-content>
+
+                    <!-- #region Built-in elements -->
 
                     <deckgo-slide-content>
                         <h2 slot="title" style="text-align: center">
@@ -1739,11 +1915,19 @@ new range of rendered children.
                     >
                     </deckgo-slide-code>
 
+                    <!-- #endregion Built-in elements -->
+
                     <!-- #endregion modular -->
 
-                    <!-- #endregion news-->
+                    <!-- #endregion Future -->
 
                     <!-- #region outro -->
+
+                    <!-- #region Conclusion -->
+
+                    <deckgo-slide-title class="chapter-title-slide">
+                        <h1 slot="title">Conclusion</h1>
+                    </deckgo-slide-title>
 
                     <deckgo-slide-content>
                         <h1 slot="title">Let's "wrap" this up</h1>
@@ -1754,45 +1938,13 @@ new range of rendered children.
                         </div>
                     </deckgo-slide-content>
 
-                    <deckgo-slide-title class="title-slide">
+                    <!-- #endregion Conclusion -->
+
+                    <!-- #region Resources -->
+
+                    <deckgo-slide-title class="subchapter-title-slide">
                         <h1 slot="title">resources</h1>
                     </deckgo-slide-title>
-
-                    <deckgo-slide-author
-                        img-src="https://avatars3.githubusercontent.com/u/7578400"
-                    >
-                        <h1 slot="title">Noël Macé</h1>
-                        <div slot="author">
-                            <h2>Noël Macé</h2>
-                            <p>
-                                Independent Dev Advocado 🥑 for the Web Platform
-                            </p>
-                        </div>
-                        <div slot="social-link">
-                            <deckgo-social twitter="noel_mace"
-                                ><ion-icon
-                                    alt="Noël on Twitter"
-                                    slot="icon"
-                                    name="logo-twitter"
-                                    margin-start
-                                    margin-end
-                                ></ion-icon>
-                                @noel_mace</deckgo-social
-                            >
-                        </div>
-                        <div slot="social-link">
-                            <deckgo-social linkedin="noelmace/"
-                                ><ion-icon
-                                    alt="Noël on Linkedin"
-                                    slot="icon"
-                                    name="logo-linkedin"
-                                    margin-start
-                                    margin-end
-                                ></ion-icon>
-                                in/noelmace</deckgo-social
-                            >
-                        </div>
-                    </deckgo-slide-author>
 
                     <deckgo-slide-content>
                         <h2
@@ -1861,6 +2013,10 @@ new range of rendered children.
                         <div slot="notes" show></div>
                     </deckgo-slide-content>
 
+                    <!-- #endregion Resources -->
+
+                    <!-- #region end -->
+
                     <deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/question.jpeg')"
                         class="bg-img"
@@ -1883,6 +2039,8 @@ new range of rendered children.
                             >
                         </div>
                     </deckgo-slide-qrcode>
+
+                    <!-- #endregion end -->
 
                     <!-- #endregion outro -->
 
