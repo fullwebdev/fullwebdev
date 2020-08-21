@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0-alpha.2](https://github.com/noelmace/slides-wof-conf/compare/v1.2.0-alpha.1...v1.2.0-alpha.2) (2019-10-29)
+
+
+### Features
+
+* deeper intro to F.I.R.E. ([8291213](https://github.com/noelmace/slides-wof-conf/commit/82912133a326bb9a4e2b6aa4c202eb57411246c7))
+* intro for a long session ([23f6458](https://github.com/noelmace/slides-wof-conf/commit/23f64584e7a20711de196ed177186048b860d6b0))
+* more details in intro ([e399357](https://github.com/noelmace/slides-wof-conf/commit/e399357c07aa8e8cbbac8c5156fe4cd86b853c3d))
+
+
+### Bug Fixes
+
+* link to dev.to in welcome slide ([23737e2](https://github.com/noelmace/slides-wof-conf/commit/23737e292ff274a4c163954fcabf34b011446359))
+* social icons in welcome slide ([4ce787a](https://github.com/noelmace/slides-wof-conf/commit/4ce787a478f04da69a537f5f2cd8811ca6c12f4f))
+
 # [1.2.0-alpha.1](https://github.com/noelmace/slides-wof-conf/compare/v1.1.0...v1.2.0-alpha.1) (2019-10-28)
 
 Init Devoxx Belgium 2019
