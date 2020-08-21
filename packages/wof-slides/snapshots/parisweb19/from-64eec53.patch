@@ -1,0 +1,65 @@
+diff --git a/src/assets/code-samples/copy-share-twitter.js b/src/assets/code-samples/copy-share-twitter.js
+index a89827b..081747f 100644
+--- a/src/assets/code-samples/copy-share-twitter.js
++++ b/src/assets/code-samples/copy-share-twitter.js
+@@ -1,8 +1,8 @@
+ const tweets = {
+-    slides: `Hey look, I can share my slides with the Twitter #PWA using the Web Share & Web Share Target APIs! 🙌 #usetheplatform #WebOnFIRE wof.show`,
+-    camera: `I can share a picture with the Twitter #PWA from the Camera App using the Web Share Target API Level 2 😁! #WebOnFIRE #usetheplatform wof.show`,
+-    picture: `I can also share a picture from my own app using the Web Share & Web Share Target API Level 2! #WebOnFIRE #usetheplatform wof.show`,
+-    clipboardPic: `And I can even share an image using the Async Clipboard Level 2 🤯! #WebOnFIRE #usetheplatform wof.show`
++    slides: `Hey look, I can share my slides with the Twitter #PWA using the Web Share & Web Share Target APIs! 🙌 #usetheplatform #WebOnFIRE `,
++    camera: `I can share a picture with the Twitter #PWA from the Camera App using the Web Share Target API Level 2 😁! #WebOnFIRE #usetheplatform `,
++    picture: `I can also share a picture from my own app using the Web Share & Web Share Target API Level 2! #WebOnFIRE #usetheplatform `,
++    clipboardPic: `And I can even share an image using the Async Clipboard Level 2 🤯! #WebOnFIRE #usetheplatform `
+ };
+ 
+ const getImgFile = async (url) => {
+diff --git a/src/index.html b/src/index.html
+index 257732c..d08149f 100644
+--- a/src/index.html
++++ b/src/index.html
+@@ -27,10 +27,10 @@
+         />
+         <meta property="og:site_name" content="The Web is on F.I.R.E." />
+         <meta property="og:type" content="website" />
+-        <meta property="og:url" content="https://conf.wof.show" />
++        <meta property="og:url" content="https://fullweb.dev/slides/wof/parisweb19/" />
+         <meta
+             property="og:image"
+-            content="https://conf.wof.show/assets/favicon/icon-512x512.png"
++            content="https://fullweb.dev/slides/wof/parisweb19/assets/favicon/icon-512x512.png"
+         />
+         <meta property="og:image:type" content="image/png" />
+ 
+@@ -42,7 +42,7 @@
+         />
+         <meta
+             name="twitter:image:src"
+-            content="https://conf.wof.show/assets/favicon/icon-512x512.png"
++            content="https://fullweb.dev/slides/wof/parisweb19/assets/favicon/icon-512x512.png"
+         />
+         <meta name="twitter:card" content="summary" />
+ 
+@@ -1084,18 +1084,17 @@ new range of rendered children.
+                     </deckgo-slide-content>
+ 
+                     <deckgo-slide-qrcode
+-                        content="https://parisweb-2019.wof.show"
++                        content="https://fullweb.dev/slides/wof/parisweb19/"
+                         style="--deckgo-qrcode-color-fill: black;"
+                     >
+                         <h1 slot="title">Slides</h1>
+                         <div slot="content" class="wof-show">
+                             <a
+-                                href="https://conf.wof.show"
++                                href="https://fullweb.dev/slides/wof/parisweb19/"
+                                 style="font-weight: bold"
+                                 target="_blank"
+                                 rel="noopener"
+-                                ><span class="sub">parisweb-2019.</span
+-                                >wof.show</a
++                                >fullweb.dev/slides/wof/parisweb19/</a
+                             >
+                         </div>
+                     </deckgo-slide-qrcode>

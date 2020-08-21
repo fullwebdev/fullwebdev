@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "./std-switch-polyfill/std-switch.mjs": [
+      "std:elements/switch",
+      "./std-switch-polyfill/std-switch.mjs"
+    ]
+  }
+}
