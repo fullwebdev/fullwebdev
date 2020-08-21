@@ -6,7 +6,7 @@ The F.I.R.E. safety kit for everyone!
 
 Learn the best new capabilities of the modern web without burning out!
 
-- **:man_teacher: Slides: [conf.wof.show](https://modern-vanilla.wof.show)**
+- **:man_teacher: Slides: [conf.wof.show](https://conf.wof.show)**
 - **:book: Full doc: [notes.md](./src/notes.md) - WIP :construction:**
 
 ## Abstract
