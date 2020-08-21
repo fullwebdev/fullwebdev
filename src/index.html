@@ -1,193 +1,402 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+        />
 
-    <base href="/"/>
+        <base href="/" />
 
-    <title>The Web is on F.I.R.E.</title>
+        <title>The Web is on F.I.R.E.</title>
 
-    <meta property="og:site_name" content="The Web is on F.I.R.E.">
-    <meta property="og:title" content="The Web is on F.I.R.E.">
+        <meta property="og:site_name" content="The Web is on F.I.R.E." />
+        <meta property="og:title" content="The Web is on F.I.R.E." />
 
-    <meta name="author" content="Noël Macé">
+        <meta name="author" content="Noël Macé" />
 
-    <meta name="description" content="The F.I.R.E. safety kit for everyone! Learn the best new capabilities of the modern web without burning out!">
+        <meta
+            name="description"
+            content="The F.I.R.E. safety kit for everyone! Learn the best new capabilities of the modern web without burning out!"
+        />
 
-    <meta property="og:description" content="The F.I.R.E. safety kit for everyone! Learn the best new capabilities of the modern web without burning out!">
-    <meta property="og:site_name" content="The Web is on F.I.R.E.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://conf.wof.show">
-    <meta property="og:image" content="https://conf.wof.show/assets/favicon/icon-512x512.png">
-    <meta property="og:image:type" content="image/png">
+        <meta
+            property="og:description"
+            content="The F.I.R.E. safety kit for everyone! Learn the best new capabilities of the modern web without burning out!"
+        />
+        <meta property="og:site_name" content="The Web is on F.I.R.E." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://conf.wof.show" />
+        <meta
+            property="og:image"
+            content="https://conf.wof.show/assets/favicon/icon-512x512.png"
+        />
+        <meta property="og:image:type" content="image/png" />
 
-    <meta name="twitter:site" content="@noel_mace">
-    <meta name="twitter:title" content="The Web is on F.I.R.E.">
-    <meta name="twitter:description" content="The F.I.R.E. safety kit for everyone! Learn the best new capabilities of the modern web without burning out!">
-    <meta name="twitter:image:src" content="https://conf.wof.show/assets/favicon/icon-512x512.png">
-    <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@noel_mace" />
+        <meta name="twitter:title" content="The Web is on F.I.R.E." />
+        <meta
+            name="twitter:description"
+            content="The F.I.R.E. safety kit for everyone! Learn the best new capabilities of the modern web without burning out!"
+        />
+        <meta
+            name="twitter:image:src"
+            content="https://conf.wof.show/assets/favicon/icon-512x512.png"
+        />
+        <meta name="twitter:card" content="summary" />
 
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#ed6c30">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ed6c30">
+        <!-- Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="57x57"
+            href="assets/favicon/apple-icon-57x57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="60x60"
+            href="assets/favicon/apple-icon-60x60.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="assets/favicon/apple-icon-72x72.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="assets/favicon/apple-icon-76x76.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="assets/favicon/apple-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="assets/favicon/apple-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="assets/favicon/apple-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="assets/favicon/apple-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="assets/favicon/apple-icon-180x180.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="assets/favicon/android-icon-192x192.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="assets/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="assets/favicon/favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="assets/favicon/favicon-16x16.png"
+        />
+        <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+        <meta name="msapplication-TileColor" content="#ed6c30" />
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+        <meta
+            name="msapplication-config"
+            content="assets/favicon/browserconfig.xml"
+        />
+        <meta name="theme-color" content="#ed6c30" />
 
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', async () => {
-                try {
-                    await navigator.serviceWorker.register('service-worker.js');
-                } catch (e) {
-                    console.warn('No service worker registered');
-                }
-            });
-        }
-    </script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', async () => {
+                    try {
+                        await navigator.serviceWorker.register(
+                            'service-worker.js'
+                        );
+                    } catch (e) {
+                        console.warn('No service worker registered');
+                    }
+                });
+            }
+        </script>
 
-    <link rel="manifest" href="manifest.json">
+        <link rel="manifest" href="manifest.json" />
 
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="msapplication-tap-highlight" content="no">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="msapplication-tap-highlight" content="no" />
 
-    <style>
-        :root {
-            background: #ffffff;
-            --ion-background-color: #ffffff;
-        }
+        <style>
+            :root {
+                background: #ffffff;
+                --ion-background-color: #ffffff;
+            }
 
-        deckgo-deck {
-            color: black;
-            --color: black;
-            --ion-text-color: black;
-        }
+            deckgo-deck {
+                color: black;
+                --color: black;
+                --ion-text-color: black;
+            }
 
-        /* Until Web Components are loaded, don't display content */
-        body {
-            background: #ffffff;
-        }
+            /* Until Web Components are loaded, don't display content */
+            body {
+                background: #ffffff;
+            }
 
-        ion-app.loading, ion-app.loading a {
-            color: transparent;
-        }
+            ion-app.loading,
+            ion-app.loading a {
+                color: transparent;
+            }
 
-        ion-app.loading a {
-            color: transparent;
-        }
+            ion-app.loading a {
+                color: transparent;
+            }
 
-        ion-app.loading {
-            display: none;
-        }
-    </style>
+            ion-app.loading {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <ion-app class="loading">
+            <ion-content force-overscroll="false" scroll-y="false">
+                <deckgo-deck id="slider" pager-percentage="false">
+                    <!-- #region Slides -->
 
-</head>
-<body>
+                    <deckgo-slide-countdown
+                        until="2019-10-11T12:00:00.000+02:00"
+                    >
+                        <h2 slot="title">Lighting F.I.R.E. in</h2>
+                        <span slot="days">Days</span>
+                        <span slot="hours">Hours</span>
+                        <span slot="minutes">Minutes</span>
+                        <span slot="seconds">Seconds</span>
+                    </deckgo-slide-countdown>
 
-<ion-app class="loading">
-    <ion-content force-overscroll="false" scroll-y="false">
-        <deckgo-deck id="slider" pager-percentage="false">
+                    <deckgo-slide-author
+                        img-src="https://secure.meetupstatic.com/photos/member/9/c/4/2/member_272620002.jpeg"
+                    >
+                        <h1 slot="title">Templates</h1>
+                        <div slot="author">
+                            <h2>Templates</h2>
+                            <p>
+                                Use predefined slides for quick editing ⚡ Like
+                                this template to introduce the author of the
+                                talk 🎤
+                            </p>
+                        </div>
+                        <div slot="social-link">
+                            <deckgo-social twitter="daviddalbusco"
+                                ><ion-icon
+                                    alt="David on Twitter"
+                                    slot="icon"
+                                    name="logo-twitter"
+                                    margin-start
+                                    margin-end
+                                ></ion-icon>
+                                twitter</deckgo-social
+                            >
+                        </div>
+                        <div slot="social-link">
+                            <deckgo-social linkedin="david-dal-busco/"
+                                ><ion-icon
+                                    alt="David on Linkedin"
+                                    slot="icon"
+                                    name="logo-linkedin"
+                                    margin-start
+                                    margin-end
+                                ></ion-icon>
+                                linkedin</deckgo-social
+                            >
+                        </div>
+                        <div slot="social-link">
+                            <deckgo-social medium="david.dalbusco"
+                                ><img
+                                    style="width: 1em;"
+                                    alt="David on Medium"
+                                    slot="icon"
+                                    src="https://deckdeckgo.com/assets/icons/medium.svg"
+                                    margin-start
+                                    margin-end
+                                />
+                                medium</deckgo-social
+                            >
+                        </div>
+                    </deckgo-slide-author>
 
-            <!-- #region Slides -->
+                    <deckgo-slide-qrcode
+                        content="https://deckdeckgo.com"
+                        style="--deckgo-qrcode-color-fill: black;"
+                    >
+                        <h1 slot="title">QR Code</h1>
+                        <p slot="content">
+                            Display a QR code to let your audience get your
+                            slides as a PWA without any delay
+                        </p>
+                    </deckgo-slide-qrcode>
 
-            <deckgo-slide-countdown until="2019-10-11T12:00:00.000+02:00">
-                <h2 slot="title">Lighting F.I.R.E. in</h2>
-                <span slot="days">Days</span>
-                <span slot="hours">Hours</span>
-                <span slot="minutes">Minutes</span>
-                <span slot="seconds">Seconds</span>
-            </deckgo-slide-countdown>
+                    <!-- #endregion Slides -->
 
-            <deckgo-slide-author img-src="https://secure.meetupstatic.com/photos/member/9/c/4/2/member_272620002.jpeg">
-                <h1 slot="title">Templates</h1>
-                <div slot="author">
-                    <h2>Templates</h2>
-                    <p>Use predefined slides for quick editing ⚡ Like this template to introduce the author of the talk 🎤</p>
-                </div>
-                <div slot="social-link"><deckgo-social twitter="daviddalbusco"><ion-icon alt="David on Twitter" slot="icon" name="logo-twitter" margin-start margin-end></ion-icon> twitter</deckgo-social></div>
-                <div slot="social-link"><deckgo-social linkedin="david-dal-busco/"><ion-icon alt="David on Linkedin" slot="icon" name="logo-linkedin" margin-start margin-end></ion-icon> linkedin</deckgo-social></div>
-                <div slot="social-link"><deckgo-social medium="david.dalbusco"><img style="width: 1em;" alt="David on Medium" slot="icon" src="https://deckdeckgo.com/assets/icons/medium.svg" margin-start margin-end/> medium</deckgo-social></div>
-            </deckgo-slide-author>
+                    <a
+                        href="#"
+                        onclick="openMenu(event)"
+                        slot="actions"
+                        style="color: inherit;"
+                        ><ion-icon name="more"></ion-icon
+                    ></a>
+                </deckgo-deck>
 
-            <deckgo-slide-qrcode content="https://deckdeckgo.com" style="--deckgo-qrcode-color-fill: black;">
-                <h1 slot="title">QR Code</h1>
-                <p slot="content">Display a QR code to let your audience get your slides as a PWA without any delay</p>
-            </deckgo-slide-qrcode>
+                <deckgo-remote></deckgo-remote>
+            </ion-content>
 
-            <!-- #endregion Slides -->
+            <ion-fab
+                vertical="bottom"
+                horizontal="end"
+                slot="fixed"
+                id="navigation"
+            >
+                <button
+                    id="play"
+                    onclick="playPause('play', true)"
+                    class="navigation ion-activatable"
+                    style="display: none;"
+                >
+                    <ion-ripple-effect></ion-ripple-effect>
+                    <ion-icon
+                        name="play"
+                        aria-label="Play video"
+                        style="font-size: 1.4em;"
+                    ></ion-icon>
+                </button>
 
-            <a href="#" onclick="openMenu(event)" slot="actions" style="color: inherit;"><ion-icon name="more"></ion-icon></a>
+                <button
+                    id="pause"
+                    onclick="playPause('pause', true)"
+                    class="navigation ion-activatable"
+                    style="display: none;"
+                >
+                    <ion-ripple-effect></ion-ripple-effect>
+                    <ion-icon
+                        name="pause"
+                        aria-label="Pause video"
+                        style="font-size: 1.4em;"
+                    ></ion-icon>
+                </button>
 
-        </deckgo-deck>
+                <button
+                    onclick="previousSlide()"
+                    class="navigation ion-activatable"
+                >
+                    <ion-ripple-effect></ion-ripple-effect>
+                    <ion-icon
+                        name="arrow-back"
+                        aria-label="Previous slide"
+                        style="font-size: 1.4em;"
+                    ></ion-icon>
+                </button>
 
-        <deckgo-remote></deckgo-remote>
+                <button
+                    onclick="nextSlide()"
+                    class="navigation ion-activatable"
+                >
+                    <ion-ripple-effect></ion-ripple-effect>
+                    <ion-icon
+                        name="arrow-forward"
+                        aria-label="Next slide"
+                        style="font-size: 1.4em;"
+                    ></ion-icon>
+                </button>
 
-    </ion-content>
+                <button
+                    onclick="presentSlidePicker()"
+                    class="navigation ion-activatable"
+                >
+                    <ion-ripple-effect></ion-ripple-effect>
+                    <ion-icon
+                        name="list"
+                        md="md-list"
+                        ios="md-list"
+                        aria-label="Jump to a particular slide"
+                        style="font-size: 1.4em;"
+                    ></ion-icon>
+                </button>
 
-    <ion-fab vertical="bottom" horizontal="end" slot="fixed" id="navigation">
-        <button id="play" onclick="playPause('play', true)" class="navigation ion-activatable" style="display: none;">
-            <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon name="play" aria-label="Play video" style="font-size: 1.4em;"></ion-icon>
-        </button>
+                <button
+                    onclick="toggleFullScreen()"
+                    class="navigation ion-activatable hide-on-mobile"
+                >
+                    <ion-ripple-effect></ion-ripple-effect>
+                    <ion-icon
+                        name="expand"
+                        aria-label="Full screen"
+                        style="font-size: 1.4em;"
+                    ></ion-icon>
+                </button>
+            </ion-fab>
 
-        <button id="pause" onclick="playPause('pause', true)" class="navigation ion-activatable" style="display: none;">
-            <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon name="pause" aria-label="Pause video" style="font-size: 1.4em;"></ion-icon>
-        </button>
+            <!-- Ionic components anchors -->
+            <ion-popover-controller></ion-popover-controller>
+            <ion-modal-controller></ion-modal-controller>
+            <ion-alert-controller></ion-alert-controller>
 
-        <button onclick="previousSlide()" class="navigation ion-activatable">
-            <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon name="arrow-back" aria-label="Previous slide" style="font-size: 1.4em;"></ion-icon>
-        </button>
+            <web-social-share
+                show="false"
+                style="--web-social-share-backdrop-opacity: 0.5;"
+            >
+                <ion-icon
+                    name="logo-twitter"
+                    aria-label="Twitter"
+                    slot="twitter"
+                    style="color: #00aced; font-size: 1.6rem; display: block;"
+                ></ion-icon>
+                <ion-icon
+                    name="logo-reddit"
+                    aria-label="Reddit"
+                    slot="reddit"
+                    style="font-size: 1.6rem; display: block;"
+                ></ion-icon>
+                <ion-icon
+                    name="logo-linkedin"
+                    aria-label="Linkedin"
+                    slot="linkedin"
+                    style="color: #0077b5; font-size: 1.6rem; display: block;"
+                ></ion-icon>
+                <ion-icon
+                    name="mail"
+                    slot="email"
+                    aria-label="Email"
+                    style="color: #ff8ea3; font-size: 1.6rem; display: block;"
+                ></ion-icon>
+                <ion-icon
+                    name="logo-whatsapp"
+                    aria-label="WhatsApp"
+                    slot="whatsapp"
+                    style="color: #25D366; font-size: 1.6rem; display: block;"
+                ></ion-icon>
+            </web-social-share>
+        </ion-app>
 
-        <button onclick="nextSlide()" class="navigation ion-activatable">
-            <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon name="arrow-forward" aria-label="Next slide" style="font-size: 1.4em;"></ion-icon>
-        </button>
-
-        <button onclick="presentSlidePicker()" class="navigation ion-activatable">
-            <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon name="list" md="md-list" ios="md-list" aria-label="Jump to a particular slide" style="font-size: 1.4em;"></ion-icon>
-        </button>
-
-        <button onclick="toggleFullScreen()" class="navigation ion-activatable hide-on-mobile">
-            <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon name="expand" aria-label="Full screen" style="font-size: 1.4em;"></ion-icon>
-        </button>
-    </ion-fab>
-
-    <!-- Ionic components anchors -->
-    <ion-popover-controller></ion-popover-controller>
-    <ion-modal-controller></ion-modal-controller>
-    <ion-alert-controller></ion-alert-controller>
-
-    <web-social-share show="false" style="--web-social-share-backdrop-opacity: 0.5;">
-        <ion-icon name="logo-twitter" aria-label="Twitter" slot="twitter" style="color: #00aced; font-size: 1.6rem; display: block;"></ion-icon>
-        <ion-icon name="logo-reddit" aria-label="Reddit" slot="reddit" style="font-size: 1.6rem; display: block;"></ion-icon>
-        <ion-icon name="logo-linkedin" aria-label="Linkedin" slot="linkedin" style="color: #0077b5; font-size: 1.6rem; display: block;"></ion-icon>
-        <ion-icon name="mail" slot="email" aria-label="Email" style="color: #ff8ea3; font-size: 1.6rem; display: block;"></ion-icon>
-        <ion-icon name="logo-whatsapp" aria-label="WhatsApp" slot="whatsapp" style="color: #25D366; font-size: 1.6rem; display: block;"></ion-icon>
-    </web-social-share>
-</ion-app>
-
-<noscript>
-    Please enable Javascript to access this presentation.
-</noscript>
-
-</body>
+        <noscript>
+            Please enable Javascript to access this presentation.
+        </noscript>
+    </body>
 </html>
