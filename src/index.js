@@ -13,6 +13,7 @@ import './css/alert.css';
 import './css/img.css';
 import './css/button.css';
 import './css/global.css';
+import './assets/code-samples/mq5/dark/demos.css';
 
 import '@webcomponents/custom-elements';
 

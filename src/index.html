@@ -1807,15 +1807,13 @@
                                 }
                             };
 
-                            document
-                                .getElementById('demo1')
-                                .addEventListener(
-                                    'click',
-                                    share({
-                                        text: tweet1,
-                                        url: 'https://devoxxbe-2019.wof.show'
-                                    })
-                                );
+                            document.getElementById('demo1').addEventListener(
+                                'click',
+                                share({
+                                    text: tweet1,
+                                    url: 'https://devoxxbe-2019.wof.show'
+                                })
+                            );
                             document
                                 .getElementById('demo2')
                                 .addEventListener('click', copy(tweet2));
@@ -1972,6 +1970,37 @@ priority. If the browser doesn't support `prefers-color-scheme`, the media
 query is unknown and the files are downloaded with `lowest` priority (but
 above I already force `highest` priority for my default light experience).
                             </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">
+                            prefers-color-scheme - demo
+                        </h1>
+                        <div class="dark-demo" slot="content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title" hidden>
+                            prefers-color-scheme - demo
+                        </h1>
+                        <div slot="content" class="flex flex-center">
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/mq5/dark/demos.css"
+                            >
+                            </deckgo-highlight-code>
+                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show></div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
