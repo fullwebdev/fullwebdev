@@ -1675,8 +1675,56 @@
                         <h1 slot="title">Badging API</h1>
                     </deckgo-slide-title>
 
-                    <deckgo-slide-content class="slide-todo">
-                        <h1 slot="title">TODO</h1>
+                    <deckgo-slide-split>
+                        <h1 slot="title">Behavior</h1>
+                        <div slot="start" style="width: 100%;">
+                            <h2>Initial/Clear</h2>
+                            <img
+                                src="assets/img/app-gap/badge-clear.png"
+                                height="200px"
+                            />
+                        </div>
+                        <div slot="end" style="width: 100%;">
+                            <h2>Set</h2>
+                            <img
+                                src="assets/img/app-gap/badge.png"
+                                height="200px"
+                            />
+                        </div>
+                    </deckgo-slide-split>
+
+                    <deckgo-slide-code
+                        src="assets/code-samples/app-gap/badge-v1.js"
+                    >
+                        <h1 slot="title">API</h1>
+                    </deckgo-slide-code>
+
+                    <deckgo-slide-code
+                        src="assets/code-samples/app-gap/set-badge-v2.js"
+                    >
+                        <h1 slot="title">V2 - set</h1>
+                    </deckgo-slide-code>
+
+                    <deckgo-slide-code
+                        src="assets/code-samples/app-gap/clear-badge-v2.js"
+                    >
+                        <h1 slot="title">V2 - clear</h1>
+                    </deckgo-slide-code>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">⚠️ Support</h1>
+                        <ul slot="content" class="reveal-list">
+                            <deckgo-reveal>
+                                <li>Only available in Chrome</li>
+                                <li>
+                                    behind
+                                    <code
+                                        >#enable-experimental-web-platform-features</code
+                                    >
+                                </li>
+                                <li>on Windows & macOS</li>
+                            </deckgo-reveal>
+                        </ul>
                     </deckgo-slide-content>
 
                     <!-- #endregion Badging API -->
