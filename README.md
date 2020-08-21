@@ -54,7 +54,10 @@ Learn the best new capabilities of the modern web without burning out!
 
 > Go check the [changelog](/CHANGELOG.md) or [releases](https://github.com/noelmace/slides-wof-conf/releases) for more details.
 
-- v1.2: [deep-dive](https://deepdive.wof.show) (3h) @ [Devoxx Belgium 2019](https://devoxxbe-2019.wof.show)
+- v1.3: [mini-conf](https://miniconf.wof.show) (20-30min)
+  - @ [POSS 2019](https://poss19.wof.show)
+- v1.2: [deep-dive](https://deepdive.wof.show) (2-3h)
+  - @ [Devoxx Belgium 2019](https://devoxxbe-2019.wof.show)
 - v1.1: conference (50min) @ [DevFest Nantes 2019](https://devfestnantes-2019.wof.show)
 - v1.0: mini-conf (25min) @ [ParisWeb 2019](https://parisweb-2019.wof.show)
 - _previously: [noelmace/wof-reveal](https://github.com/noelmace/wof-reveal)_
@@ -65,7 +68,7 @@ Learn the best new capabilities of the modern web without burning out!
 > - Minor: new talk/event following the same plan & ideas as the previous one
 > - Patch: modifications to a talk that has already been presented
 >
-> Following git-flow, each minor version (i.e. talk/event) has its own [branch](https://github.com/noelmace/slides-wof-conf/branches). For example, [devfestnantes-2019](https://github.com/noelmace/slides-wof-conf/tree/devfestnantes-2019)
+> Each minor version has its own [branch](https://github.com/noelmace/slides-wof-conf/branches). For example, [devfestnantes-2019](https://github.com/noelmace/slides-wof-conf/tree/devfestnantes-2019)
 
 ## Abstract
 
