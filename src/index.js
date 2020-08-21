@@ -40,7 +40,7 @@ import { defineCustomElements as ioniconsElements } from 'ionicons/dist/loader';
 ioniconsElements(window);
 
 // Init DeckDeckGo elements
-import { defineCustomElements as deckDeckGoElements } from '@wof-show/deckdeckgo-core/dist/loader';
+import { defineCustomElements as deckDeckGoElements } from '@deckdeckgo/core/dist/loader';
 
 import { defineCustomElements as deckDeckGoSlideTitleElements } from '@deckdeckgo/slide-title/dist/loader';
 import { defineCustomElements as deckDeckGoSlideContentElements } from '@deckdeckgo/slide-content/dist/loader';
