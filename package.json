@@ -23,6 +23,7 @@
     "release:test": "standard-version --dry-run",
     "release:panpress": "cd packages/panpress && standard-version",
     "release:helpers": "cd packages/helpers && standard-version",
+    "release:wof-slides": "cd packages/wof-slides && standard-version",
     "update-subtrees": "monocli update",
     "start": "lerna run start --scope=@fullweb/docs",
     "prebuild:docs": "npm run build:illustrations && bash scripts/cp-assets.sh",
