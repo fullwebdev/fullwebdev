@@ -8,7 +8,6 @@ on:
       - devoxxbe-2019
       - deepdive
       - miniconf
-      - poss19
 jobs:
   build:
     name: Build
@@ -39,12 +38,12 @@ jobs:
       - name: Apply target
         uses: w9jds/firebase-action@master
         with:
-          args: target:apply hosting poss19 poss19
+          args: target:apply hosting miniconf miniconf
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting:poss19
+          args: deploy --only hosting:miniconf
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

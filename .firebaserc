@@ -22,16 +22,13 @@
         ],
         "miniconf": [
           "miniconf"
-        ],
-        "poss19": [
-          "poss19"
         ]
       }
     },
     "wof-show": {
       "hosting": {
-        "poss19": [
-          "poss19"
+        "miniconf": [
+          "miniconf"
         ]
       }
     }
