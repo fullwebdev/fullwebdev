@@ -139,12 +139,42 @@ Chrome: [Unlocking new capabilities for the web](https://developers.google.com/w
 
 ## A modular & adaptive Web
 
-- https://github.com/whatwg/html/issues/4697
-- https://github.com/jackbsteinberg/std-toast
+### Import Maps & built-in modules
+
+Import Maps:
+
+- https://wicg.github.io/import-maps/
+- https://chromestatus.com/feature/5315286962012160
+- https://github.com/mozilla/standards-positions/issues/146
+
+Built-in modules:
+
+- https://github.com/tc39/proposal-javascript-standard-library
+
+KV Storage:
+
+- https://developers.google.com/web/updates/2019/03/kv-storage
+- https://chromestatus.com/features/6428344899862528
+- https://wicg.github.io/kv-storage/
+- https://github.com/mozilla/standards-positions/issues/145
+
+### HTML Elements provided as build-in modules
+
+- whatwg/html: [Introducing new HTML elements that are pay-for-what-you-use #4697](https://github.com/whatwg/html/issues/4697)
+- [Define Web IDL Modules](https://github.com/heycam/webidl/pull/675)
+- current proposals
+  - https://github.com/WICG/virtual-scroller
+  - https://github.com/jackbsteinberg/std-toast
+  - https://github.com/tkent-google/std-switch/
+
+### Media Queries Level 5
+
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+- https://drafts.csswg.org/mediaqueries-5/
+
+### Misc
+
 - https://web.dev/more-capable-form-controls/
-- Media Queries Level 5
-  - https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
-  - https://drafts.csswg.org/mediaqueries-5/
 
 ## A more efficient Web
 
