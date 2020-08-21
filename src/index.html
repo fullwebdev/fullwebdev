@@ -368,57 +368,6 @@
                         <div slot="notes" show>PWA</div>
                     </deckgo-slide-content>
 
-                    <deckgo-slide-content class="fire-icons">
-                        <!-- TODO: propose a deckgo-hide component & merge this slide with the previous one -->
-                        <h1 slot="title" hidden>F.I.R.E.</h1>
-                        <div slot="content" class="img-row fill">
-                            <figure>
-                                <img
-                                    data-src="assets/icons/fast.svg"
-                                    style="background: #dd311f"
-                                />
-                                <figcaption>
-                                    <deckgo-reveal>
-                                        <span>App Shell</span>
-                                    </deckgo-reveal>
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <img
-                                    data-src="assets/icons/add_to_home_screen.svg"
-                                    style="background: #249f5a"
-                                />
-                                <figcaption>
-                                    <deckgo-reveal>
-                                        <span>Manifest</span>
-                                    </deckgo-reveal>
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <img
-                                    data-src="assets/icons/check_circle_outline.svg"
-                                    style="background: #314ffe"
-                                />
-                                <figcaption>
-                                    <deckgo-reveal>
-                                        <span>Service Worker</span>
-                                    </deckgo-reveal>
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <img
-                                    data-src="assets/icons/touch.svg"
-                                    style="background: #773f9b"
-                                />
-                                <figcaption>
-                                    <deckgo-reveal>
-                                        <span>Push API</span>
-                                    </deckgo-reveal>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </deckgo-slide-content>
-
                     <deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/small-lego.jpeg')"
                         class="bg-img"
@@ -682,19 +631,12 @@
 
                     <!-- #region Future -->
 
-                    <deckgo-slide-content>
+                    <deckgo-slide-title
+                        style="--background:center no-repeat url('assets/img/futur.jpeg') #000"
+                        class="bg-img dark"
+                    >
                         <h1 slot="title">tendencies</h1>
-                        <ol slot="content" class="reveal-list">
-                            <deckgo-reveal>
-                                <li>🏆 put an end to native apps</li>
-                                <li>👐 adapt to user preferences</li>
-                                <li>
-                                    🦸 reduce the need for libraries /
-                                    frameworks
-                                </li>
-                            </deckgo-reveal>
-                        </ol>
-                    </deckgo-slide-content>
+                    </deckgo-slide-title>
 
                     <!-- #region integrated -->
 
@@ -942,48 +884,6 @@ above I already force `highest` priority for my default light experience).
                                 Data on support for the es6-module feature
                                 across the major browsers from caniuse.com.
                             </p>
-                        </div>
-                        <div slot="notes" show></div>
-                    </deckgo-slide-content>
-
-                    <!-- TODO: differential serving -->
-
-                    <!-- #region import-maps -->
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">Bare specifiers</h1>
-                        <div slot="content">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/import-maps/bare.js"
-                            >
-                            </deckgo-highlight-code>
-                            <deckgo-reveal>
-                                <p class="whatwg note">
-                                    This restriction is in place so that in the
-                                    future we can allow custom module loaders to
-                                    give special meaning to "bare" import
-                                    specifiers, like
-                                    <code>import "jquery"</code> or
-                                    <code>import "web/crypto"</code>. For now
-                                    any such imports will fail, instead of being
-                                    treated as relative URLs.
-                                </p>
-                            </deckgo-reveal>
-                        </div>
-                        <div slot="notes" show></div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">Import Maps</h1>
-                        <div slot="content">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/import-maps/map.html"
-                            >
-                            </deckgo-highlight-code>
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/import-maps/bare-equivalent.js"
-                            >
-                            </deckgo-highlight-code>
                         </div>
                         <div slot="notes" show></div>
                     </deckgo-slide-content>
