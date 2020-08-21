@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/noelmace/slides-wof-conf/compare/v1.2.0...v1.2.1) (2019-11-05)
+
+
+### Bug Fixes
+
+* Web Share demo - add missing lvl2 ([16bd0a1](https://github.com/noelmace/slides-wof-conf/commit/16bd0a1609398cc0dce6ccfc539ed5b597c27b94))
+
 ## [1.2.0](https://github.com/noelmace/slides-wof-conf/compare/v1.2.0-rc.0...v1.2.0) (2019-11-04)
 
 
