@@ -1,0 +1,21 @@
+name: GH Release
+
+on:
+  push: 
+    branches: 
+      - refs/tags/*
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@master
+    - name: Install conventional-github-releaser
+      run: npm install -g conventional-github-releaser
+    - name: Release
+      run: conventional-github-releaser -p angular
+      env:
+        CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{ secrets.CONVENTIONAL_GITHUB_RELEASER_TOKEN }}
