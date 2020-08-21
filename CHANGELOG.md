@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0-rc.0](https://github.com/noelmace/slides-wof-conf/compare/v1.2.0-alpha.4...v1.2.0-rc.0) (2019-11-02)
+
+
+### Features
+
+* add a web components chapter ([dbf116a](https://github.com/noelmace/slides-wof-conf/commit/dbf116a86e67de8d01f9fa4389fec1649adf9186))
+* async clipboard - part 1 ([d842ce6](https://github.com/noelmace/slides-wof-conf/commit/d842ce6c9a19fe5bcc68fbaeb85f1b8f3bbe2168))
+* badging api ([0755888](https://github.com/noelmace/slides-wof-conf/commit/075588881f1c0a25ea6e1546751543a4229bc89f))
+* badging api demo ([3643146](https://github.com/noelmace/slides-wof-conf/commit/3643146682e17f5d3ee6c6a27e2cfc3372bdc214))
+* more details about built-in modules ([1c7255e](https://github.com/noelmace/slides-wof-conf/commit/1c7255ea5b9905a4ceca69542f2d763887608313))
+* part 1 - questions & break ([9db736a](https://github.com/noelmace/slides-wof-conf/commit/9db736a1779aaeaf1e762ab195d22b587a78f846))
+* part 2 - intro ([54cd77a](https://github.com/noelmace/slides-wof-conf/commit/54cd77a699b228efaa240ae4b344873248ef5030))
+* requirements ([e078e1d](https://github.com/noelmace/slides-wof-conf/commit/e078e1d301353f3293ecc061576b2104045d62f2))
+* technical watch methodology ([315b744](https://github.com/noelmace/slides-wof-conf/commit/315b74431dd3055f1fc5bbd15687644b0ab5954f))
+* wc browser support from webcomponents.org ([b832064](https://github.com/noelmace/slides-wof-conf/commit/b832064aa889e251c932e94defde5e4809eb84aa))
+* web share target api - code samples ([51d511f](https://github.com/noelmace/slides-wof-conf/commit/51d511f91c302e2fcd076323704904708c19755e))
+* web share target api - part 1 ([f148ceb](https://github.com/noelmace/slides-wof-conf/commit/f148ceb0e8cef5f3a0e21ec47993aee89edda3fd))
+
+
+### Bug Fixes
+
+* built-in elements chapter title was too long ([a266f17](https://github.com/noelmace/slides-wof-conf/commit/a266f178029d44cd02ff53d8c7ea146999be79c9))
+* closing the app-gap intro slide alone ([842974b](https://github.com/noelmace/slides-wof-conf/commit/842974babf972bb437b556037048169c6a74d040))
+* move Async Clipboard before Web Share ([733e762](https://github.com/noelmace/slides-wof-conf/commit/733e7629c907bec4d6da55d8f5be7fb8b66c5250))
+* several style & pres issues with 1024x720 ([ce06fde](https://github.com/noelmace/slides-wof-conf/commit/ce06fde357104df7a971251d553286e2b25ef1b7))
+* web share api - spacing ([bbd121e](https://github.com/noelmace/slides-wof-conf/commit/bbd121eec0273fae97e8c3ecb831797d55092ed7))
+
 ## [1.2.0-alpha.4](https://github.com/noelmace/slides-wof-conf/compare/v1.2.0-alpha.3...v1.2.0-alpha.4) (2019-10-30)
 
 
