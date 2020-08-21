@@ -1,14 +1,11 @@
 # The Web is on F.I.R.E. - Conference Edition
 
-<!-- BADGES -->
-![](https://img.shields.io/github/v/tag/noelmace/slides-wof-conf)
-[![follow on Twitter](https://img.shields.io/twitter/follow/noel_mace?style=social)](https://twitter.com/intent/follow?screen_name=noel_mace)
-[![deckdeckgo](https://img.shields.io/github/package-json/dependency-version/noelmace/slides-wof-conf/@deckdeckgo/core)](https://docs.deckdeckgo.com/)
-![](https://github.com/noelmace/slides-wof-conf/workflows/Build%20and%20Deploy/badge.svg)
-![](https://github.com/noelmace/slides-wof-conf/workflows/Branches%20Firebase%20Deploy/badge.svg)
-<!-- END BADGES -->
-
-> a :collision: [***Wof*** show](https://wof.show) by [Noël Macé](https://noelmace.com)
+<p align="center">A <a href="https://wof.show" rel="nofollow"><strong>WoF</strong> Show</a> by <a href="https://twitter.com/noel_mace" rel="nofollow">Noël Macé</a>.</p>
+<p align="center">
+<a href="https://twitter.com/intent/follow?screen_name=noel_mace">
+    <img src="https://img.shields.io/twitter/follow/noel_mace?style=social" alt="follow on Twitter">
+  </a>
+</p>
 
 The F.I.R.E. safety kit for everyone!
 
@@ -16,6 +13,42 @@ Learn the best new capabilities of the modern web without burning out!
 
 - **:man_teacher: Slides: [conf.wof.show](https://conf.wof.show)**
 - **:book: Full doc (always a WIP): [notes.md](./src/notes.md)**
+
+## 
+
+<p>
+  <a href="https://github.com/noelmace/slides-wof-conf/releases/latest">
+    <img src="https://img.shields.io/github/v/release/noelmace/slides-wof-conf?sort=semver" alt="release">
+  </a>
+  <a href="https://github.com/noelmace/slides-wof-conf/releases/latest">
+    <img src="https://img.shields.io/github/release-date/noelmace/slides-wof-conf?sort=semver" alt="stable release date">
+  </a>
+  <a href="https://github.com/noelmace/slides-wof-conf/actions?workflow=Build+and+Deploy">
+    <img src="https://github.com/noelmace/slides-wof-conf/workflows/Build%20and%20Deploy/badge.svg" alt="build & deploy">
+  </a>
+</p>
+<p>
+  <a href="https://github.com/noelmace/slides-wof-conf/releases">
+    <img src="https://img.shields.io/github/v/release/noelmace/slides-wof-conf?sort=semver&include_prereleases&label=pre-release" alt="pre-release">
+  </a>
+  <a href="https://github.com/noelmace/slides-wof-conf/releases">
+    <img src="https://img.shields.io/github/release-date-pre/noelmace/slides-wof-conf?label=pre-release date" alt="pre-release date">
+  </a>
+  <a href="https://github.com/noelmace/slides-wof-conf/actions?workflow=Branches+Firebase+Deploy">
+    <img src="https://github.com/noelmace/slides-wof-conf/workflows/Branches%20Firebase%20Deploy/badge.svg" alt="branches deploy">
+  </a>
+</p>
+<p>
+  <a href="https://github.com/noelmace/slides-wof-conf/actions?workflow=GH+Release">
+    <img src="https://github.com/noelmace/slides-wof-conf/workflows/GH%20Release/badge.svg" alt="branches deploy">
+  </a>
+  <a href="https://docs.deckdeckgo.com/">
+    <img src="https://img.shields.io/github/package-json/dependency-version/noelmace/slides-wof-conf/@deckdeckgo/core" alt="deckdeckgo">
+  </a>
+  <a href="https://conventionalcommits.org">
+    <img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg" alt="Conventional Commits">
+  </a>
+</p>
 
 ## Versions
 
@@ -32,7 +65,7 @@ Learn the best new capabilities of the modern web without burning out!
 > - Minor: new talk/event following the same plan & ideas as the previous one
 > - Patch: modifications to a talk that has already been presented
 >
-> Following git-flow, each minor version (i.e. talk/event) has its own branch. For example, [devfestnantes-2019]()
+> Following git-flow, each minor version (i.e. talk/event) has its own [branch](https://github.com/noelmace/slides-wof-conf/branches). For example, [devfestnantes-2019](https://github.com/noelmace/slides-wof-conf/tree/devfestnantes-2019)
 
 ## Abstract
 
