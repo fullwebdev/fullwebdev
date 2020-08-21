@@ -36,12 +36,12 @@ jobs:
       - name: Apply target
         uses: w9jds/firebase-action@master
         with:
-          args: target:apply hosting devfestnantes-2019 devfestnantes-2019
+          args: target:apply hosting parisweb-2019 wof-parisweb-2019
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting:devfestnantes-2019
+          args: deploy --only hosting:parisweb-2019
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

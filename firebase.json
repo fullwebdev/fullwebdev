@@ -1,16 +1,17 @@
+ 
 {
-    "hosting": [
-        {
-            "target": "devfestnantes-2019",
-            "public": "dist"
-        },
-        {
-            "target": "parisweb-2019",
-            "public": "dist"
-        },
-        {
-            "target": "beta",
-            "public": "dist"
-        }
-    ]
+  "hosting": [
+      {
+          "target": "devfestnantes-2019",
+          "public": "dist"
+      },
+      {
+          "target": "parisweb-2019",
+          "public": "dist"
+      },
+      {
+          "target": "beta",
+          "public": "dist"
+      }
+  ]
 }
