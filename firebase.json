@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "target": "parisweb-2019",
+    "target": "devfestnantes-2019",
     "public": "dist",
     "ignore": [
       "firebase.json",
