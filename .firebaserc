@@ -18,7 +18,14 @@
           "devoxxbe-2019"
         ],
         "deepdive": [
-          "deepdive"
+          "wof-deepdive"
+        ]
+      }
+    },
+    "wof-show": {
+      "hosting": {
+        "deepdive": [
+          "wof-deepdive"
         ]
       }
     }
