@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## version numbering scheme
+
+Even if close, this project doesn't exactly follow semver change significance.
+Instead, versions are incremented as follow:
+
+- Major: redesign (new approach / plan / presentation framework...)
+- Minor: new talk/event following the same plan & ideas as the previous one
+- Patch: modifications to a talk that has already been presented
+
 # [1.2.0-alpha.1](https://github.com/noelmace/slides-wof-conf/compare/v1.1.0...v1.2.0-alpha.1) (2019-10-28)
 
 Init Devoxx Belgium 2019
