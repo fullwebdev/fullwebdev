@@ -482,44 +482,21 @@
                                     style="vertical-align: middle"
                                 />
                             </p>
-                        </div>
-                    </deckgo-slide-title>
-
-                    <deckgo-slide-author
-                        img-src="https://avatars3.githubusercontent.com/u/7578400"
-                    >
-                        <h1 slot="title">Noël Macé</h1>
-                        <div slot="author">
-                            <h2>Noël Macé</h2>
-                            <p>
-                                Independent Dev Advocado 🥑 for the Web Platform
-                            </p>
-                        </div>
-                        <div slot="social-link">
-                            <deckgo-social twitter="noel_mace"
+                            <deckgo-social twitter="noel_mace" class="hydrated"
                                 ><ion-icon
                                     alt="Noël on Twitter"
                                     slot="icon"
                                     name="logo-twitter"
-                                    margin-start
-                                    margin-end
+                                    margin-start=""
+                                    margin-end=""
+                                    role="img"
+                                    class="md hydrated"
+                                    aria-label="logo twitter"
                                 ></ion-icon>
                                 @noel_mace</deckgo-social
                             >
                         </div>
-                        <div slot="social-link">
-                            <deckgo-social linkedin="noelmace/"
-                                ><ion-icon
-                                    alt="Noël on Linkedin"
-                                    slot="icon"
-                                    name="logo-linkedin"
-                                    margin-start
-                                    margin-end
-                                ></ion-icon>
-                                in/noelmace</deckgo-social
-                            >
-                        </div>
-                    </deckgo-slide-author>
+                    </deckgo-slide-title>
 
                     <!-- #endregion intro -->
 
@@ -1214,9 +1191,54 @@ Right: the easier-on-the-eyes UA default
 
                     <!-- #region outro -->
 
+                    <deckgo-slide-content>
+                        <h1 slot="title">Let's "wrap" this up</h1>
+                        <div slot="content" class="img-row">
+                            <div class="img-container">
+                                <img data-src="assets/img/wrapup.jpg" />
+                            </div>
+                        </div>
+                    </deckgo-slide-content>
+
                     <deckgo-slide-title class="title-slide">
                         <h1 slot="title">resources</h1>
                     </deckgo-slide-title>
+
+                    <deckgo-slide-author
+                        img-src="https://avatars3.githubusercontent.com/u/7578400"
+                    >
+                        <h1 slot="title">Noël Macé</h1>
+                        <div slot="author">
+                            <h2>Noël Macé</h2>
+                            <p>
+                                Independent Dev Advocado 🥑 for the Web Platform
+                            </p>
+                        </div>
+                        <div slot="social-link">
+                            <deckgo-social twitter="noel_mace"
+                                ><ion-icon
+                                    alt="Noël on Twitter"
+                                    slot="icon"
+                                    name="logo-twitter"
+                                    margin-start
+                                    margin-end
+                                ></ion-icon>
+                                @noel_mace</deckgo-social
+                            >
+                        </div>
+                        <div slot="social-link">
+                            <deckgo-social linkedin="noelmace/"
+                                ><ion-icon
+                                    alt="Noël on Linkedin"
+                                    slot="icon"
+                                    name="logo-linkedin"
+                                    margin-start
+                                    margin-end
+                                ></ion-icon>
+                                in/noelmace</deckgo-social
+                            >
+                        </div>
+                    </deckgo-slide-author>
 
                     <deckgo-slide-content>
                         <h2
