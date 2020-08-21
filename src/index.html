@@ -1997,6 +1997,14 @@ Right: the easier-on-the-eyes UA default
                         <div slot="notes" show>HTML TEMPLATE</div>
                     </deckgo-slide-content>
 
+                    <deckgo-slide-content>
+                        <h1 slot="title">Browser Support</h1>
+                        <wc-browser-table
+                            slot="content"
+                            style="width: 100%; max-height: 100%;"
+                        ></wc-browser-table>
+                    </deckgo-slide-content>
+
                     <!-- #endregion Web Components -->
 
                     <!-- #region Built-in elements -->
@@ -2381,6 +2389,460 @@ new range of rendered children.
                 ></ion-icon>
             </web-social-share>
         </ion-app>
+
+        <template id="wc-browser-table">
+            <style>
+                a {
+                    text-decoration: none;
+                }
+                #container {
+                    display: flex;
+                    flex-direction: column;
+                    text-transform: uppercase;
+                    padding: 0 24px;
+                    color: var(--theme-blue-grey, #697785);
+                    font-size: 14px;
+                    width: calc(100% - 48px);
+                    max-width: 1080px;
+                    margin: 0 auto;
+                    border-radius: 4px;
+                    overflow: hidden;
+                    background: white;
+                    box-shadow: 0 1px 4px 0
+                            var(--shadow-color, hsla(0, 0%, 0%, 0.1)),
+                        0 0px 4px 0 var(--shadow-color, hsla(0, 0%, 0%, 0.1));
+                }
+                /* Header row */
+                .header {
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 1px solid #ededed;
+                }
+                .header .row [label] {
+                    display: none;
+                }
+                .header .row {
+                    flex: 1 0;
+                    border-bottom: none;
+                }
+                .header h1 {
+                    flex: 0 0 170px;
+                    text-transform: none;
+                    font-size: 24px;
+                    font-weight: normal;
+                    margin: 0 16px 0 0;
+                    color: var(--theme-black, #2d2f31);
+                }
+                .header img {
+                    width: 24px;
+                    margin-right: 8px;
+                }
+                /* Spec label */
+                div[label] {
+                    flex: 0 0 170px;
+                    margin-right: 16px;
+                    display: flex;
+                    align-items: center;
+                }
+                div[label] svg {
+                    width: 26px;
+                    margin-right: 8px;
+                    fill: var(--theme-blue-grey, #697785);
+                }
+                div[label]:after {
+                    content: attr(label);
+                    display: inline-block;
+                }
+                /* Browser row */
+                .row {
+                    display: flex;
+                    height: 100px;
+                    border-bottom: 1px solid #ededed;
+                    align-items: center;
+                }
+                .row > :not([label]) {
+                    flex: 1 1 60px;
+                    padding: 8px 0;
+                    font-weight: bold;
+                }
+                div.header > div.row > div:not([label]),
+                div.row [title] {
+                    display: flex;
+                    align-items: center;
+                    margin: 8px 0;
+                }
+                div:not(.header) > div.row [title]:before {
+                    content: '';
+                    width: 22px;
+                    height: 22px;
+                    flex: 0 0 22px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    background-repeat: no-repeat;
+                    margin-right: 8px;
+                }
+                div:not(.header) > div.row > :not([title]):not([label]) {
+                    flex-direction: column;
+                }
+                [title='Stable']:before,
+                [title='Polyfill']:before {
+                    background: url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 22 22%27 version=%271.1%27 aria-hidden=%27true%27><path fill-rule=%27evenodd%27 fill=%27white%27 d=%27M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z%27></path></svg>'),
+                        #8edb69;
+                    background-position: 5px 3px;
+                }
+                [title='Developing']:before {
+                    background: url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 22 22%27 version=%271.1%27 aria-hidden=%27true%27><circle fill=%27white%27 cx=%2750%%27 cy=%2750%%27 r=%272%27></circle></svg>'),
+                        #f5a623;
+                }
+                [title='On hold']:before,
+                [title='Under consideration']:before {
+                    background: url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 22 22%27 version=%271.1%27 aria-hidden=%27true%27><circle fill=%27white%27 cx=%2750%%27 cy=%2750%%27 r=%272%27></circle></svg>'),
+                        #aaa;
+                }
+                [title='Stable']:after {
+                    color: hsla(101, 61%, 32%, 1);
+                    content: 'stable';
+                }
+                [title='Polyfill']:after {
+                    color: hsla(101, 61%, 32%, 1);
+                    content: 'Polyfill';
+                }
+                [title='On hold']:after {
+                    color: hsla(0, 0%, 46%, 1);
+                    content: 'on hold';
+                }
+                [title='Developing']:after {
+                    color: hsla(37, 91%, 34%, 1);
+                    content: 'Developing';
+                }
+                [title='Under consideration']:after {
+                    color: hsla(0, 0%, 46%, 1);
+                    content: 'Considering';
+                }
+                @media (max-width: 900px) {
+                    #container {
+                        margin: 0 24px;
+                        width: auto;
+                    }
+
+                    [title='Stable']:after,
+                    [title='Polyfill']:after,
+                    [title='On hold']:after,
+                    [title='Developing']:after,
+                    [title='Under consideration']:after {
+                        content: none !important;
+                    }
+                    .header span {
+                        display: none;
+                    }
+                }
+                @media (max-width: 500px) {
+                    .header {
+                        flex-direction: column;
+                    }
+                    .header h1 {
+                        margin-top: 24px;
+                        flex-basis: auto;
+                    }
+                    .header .row [label] {
+                        display: block;
+                    }
+                    .header .row {
+                        width: 100%;
+                    }
+                    .row :last-child {
+                        flex: 0 0 30px !important;
+                    }
+                    div[label] {
+                        flex: 1 0 40px !important;
+                    }
+                    div[label]:after {
+                        position: absolute;
+                        margin-top: -51px;
+                        padding-right: 8px;
+                        background: white;
+                    }
+                }
+            </style>
+
+            <div id="container" class="style-scope browser-table">
+                <div class="header style-scope browser-table">
+                    <h1 label="" class="style-scope browser-table"></h1>
+                    <div class="row style-scope browser-table">
+                        <div class="style-scope browser-table">
+                            <img
+                                src="/assets/logos/chrome.svg"
+                                class="style-scope browser-table"
+                            />
+                            <span class="style-scope browser-table"
+                                >Chrome</span
+                            >
+                        </div>
+                        <div class="style-scope browser-table">
+                            <img
+                                src="/assets/logos/opera-icon.svg"
+                                class="style-scope browser-table"
+                            />
+                            <span class="style-scope browser-table">Opera</span>
+                        </div>
+                        <div class="style-scope browser-table">
+                            <img
+                                src="/assets/logos/safari.svg"
+                                class="style-scope browser-table"
+                            />
+                            <span class="style-scope browser-table"
+                                >Safari</span
+                            >
+                        </div>
+                        <div class="style-scope browser-table">
+                            <img
+                                src="/assets/logos/firefox.svg"
+                                class="style-scope browser-table"
+                            />
+                            <span class="style-scope browser-table"
+                                >Firefox</span
+                            >
+                        </div>
+                        <div class="style-scope browser-table">
+                            <img
+                                src="/assets/logos/edge.svg"
+                                class="style-scope browser-table"
+                            />
+                            <span class="style-scope browser-table">Edge</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row style-scope browser-table">
+                    <a
+                        spec=""
+                        href="https://html.spec.whatwg.org/multipage/scripting.html#the-template-element"
+                        target="_blank"
+                        rel="noopener"
+                        class="style-scope browser-table"
+                    >
+                        <div
+                            label="HTML Templates"
+                            class="style-scope browser-table"
+                        >
+                            <svg
+                                viewBox="0 0 26 22"
+                                class="style-scope browser-table"
+                            >
+                                <use
+                                    xlink:href="/sprite.octicons.svg#template"
+                                    class="style-scope browser-table"
+                                ></use>
+                            </svg>
+                        </div>
+                    </a>
+                    <a
+                        title="Stable"
+                        href="https://www.chromestatus.com/feature/5207287069147136"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://www.chromestatus.com/feature/5207287069147136"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://webkit.org/status/#feature-template-element"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://platform-status.mozilla.org/#html-templates"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/templateelement/"
+                        class="style-scope browser-table"
+                    ></a>
+                </div>
+                <div class="row style-scope browser-table">
+                    <a
+                        spec=""
+                        href="https://html.spec.whatwg.org/multipage/custom-elements.html"
+                        target="_blank"
+                        rel="noopener"
+                        class="style-scope browser-table"
+                    >
+                        <div
+                            label="Custom Elements"
+                            class="style-scope browser-table"
+                        >
+                            <svg
+                                viewBox="0 0 26 22"
+                                class="style-scope browser-table"
+                            >
+                                <use
+                                    xlink:href="/sprite.octicons.svg#element"
+                                    class="style-scope browser-table"
+                                ></use>
+                            </svg>
+                        </div>
+                    </a>
+                    <a
+                        title="Stable"
+                        href="https://www.chromestatus.com/feature/4696261944934400"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://www.chromestatus.com/feature/4696261944934400"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://webkit.org/status/#feature-custom-elements"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/63"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/customelements/"
+                        class="style-scope browser-table"
+                    >
+                        <div
+                            title="Polyfill"
+                            class="style-scope browser-table"
+                        ></div>
+                        <div
+                            title="Developing"
+                            class="style-scope browser-table"
+                        ></div>
+                    </a>
+                </div>
+                <div class="row style-scope browser-table">
+                    <a
+                        spec=""
+                        href="https://dom.spec.whatwg.org/#shadow-trees"
+                        target="_blank"
+                        rel="noopener"
+                        class="style-scope browser-table"
+                    >
+                        <div
+                            label="Shadow DOM"
+                            class="style-scope browser-table"
+                        >
+                            <svg
+                                viewBox="0 0 26 22"
+                                class="style-scope browser-table"
+                            >
+                                <use
+                                    xlink:href="/sprite.octicons.svg#shadow"
+                                    class="style-scope browser-table"
+                                ></use>
+                            </svg>
+                        </div>
+                    </a>
+                    <a
+                        title="Stable"
+                        href="https://www.chromestatus.com/feature/4667415417847808"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://www.chromestatus.com/feature/4667415417847808"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://webkit.org/status/#feature-shadow-dom"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/63"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/shadowdom/"
+                        class="style-scope browser-table"
+                    >
+                        <div
+                            title="Polyfill"
+                            class="style-scope browser-table"
+                        ></div>
+                        <div
+                            title="Developing"
+                            class="style-scope browser-table"
+                        ></div>
+                    </a>
+                </div>
+                <div class="row style-scope browser-table">
+                    <a
+                        spec=""
+                        href="https://html.spec.whatwg.org/multipage/webappapis.html#integration-with-the-javascript-module-system"
+                        target="_blank"
+                        rel="noopener"
+                        class="style-scope browser-table"
+                    >
+                        <div
+                            label="ES Modules"
+                            class="style-scope browser-table"
+                        >
+                            <svg
+                                viewBox="0 0 26 22"
+                                class="style-scope browser-table"
+                            >
+                                <use
+                                    xlink:href="/sprite.octicons.svg#import"
+                                    class="style-scope browser-table"
+                                ></use>
+                            </svg>
+                        </div>
+                    </a>
+                    <a
+                        title="Stable"
+                        href="https://www.chromestatus.com/feature/5365692190687232"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://www.chromestatus.com/feature/5684934484164608"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://webkit.org/status/#feature-modules"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://platform-status.mozilla.org/#javascript-modules"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/moduleses6/"
+                        class="style-scope browser-table"
+                    ></a>
+                </div>
+            </div>
+        </template>
+
+        <script>
+            (function() {
+                var template = document.currentScript.ownerDocument.querySelector(
+                    'template#wc-browser-table'
+                );
+                var prototype = Object.create(HTMLElement.prototype);
+                prototype.createdCallback = function() {
+                    this.createShadowRoot().appendChild(
+                        document.importNode(template.content, true)
+                    );
+                };
+                document.registerElement('wc-browser-table', {
+                    prototype: prototype
+                });
+            })();
+        </script>
 
         <noscript>
             Please enable Javascript to access this presentation.
