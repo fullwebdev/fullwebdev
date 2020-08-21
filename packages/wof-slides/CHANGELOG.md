@@ -4,13 +4,19 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.3.2](https://github.com/fullwebdev/fullwebdev/compare/wof-slides@v1.3.1...wof-slides@v1.3.2) (2020-08-21)
 
+> migration to the fullwebdev monorepo
+
 ### [1.3.1](https://github.com/fullwebdev/fullwebdev/compare/wof-slides@v1.3.0...wof-slides@v1.3.1) (2019-12-10)
+
+> Paris Open Source Summit 2019 (miniconf)
 
 ### Bug Fixes
 
 -   too long for poss19 ([5b039a8](https://github.com/fullwebdev/fullwebdev/commit/5b039a8))
 
 ## [1.3.0](https://github.com/fullwebdev/fullwebdev/compare/wof-slides@v1.3.0-rc.1...wof-slides@v1.3.0) (2019-12-07)
+
+> miniconf
 
 ### Features
 
@@ -25,11 +31,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.3.0-rc.1](https://github.com/fullwebdev/fullwebdev/compare/wof-slides@v1.2.2...wof-slides@v1.3.0-rc.1) (2019-12-06)
 
+> from deepdive to miniconf
+
 ### Features
 
 -   summarize for miniconfs ([81b11f8](https://github.com/fullwebdev/fullwebdev/commit/81b11f8))
 
 ### [1.2.2](https://github.com/fullwebdev/fullwebdev/compare/wof-slides@v1.2.1...wof-slides@v1.2.2) (2019-12-06)
+
+> generic deepdive
 
 ### Bug Fixes
 
@@ -37,11 +47,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.2.1](https://github.com/fullwebdev/fullwebdev/compare/wof-slides@v1.2.0...wof-slides@v1.2.1) (2019-11-05)
 
+> Last updates before Devoxx Belgium 2019
+
 ### Bug Fixes
 
 -   Web Share demo - add missing lvl2 ([162d41d](https://github.com/fullwebdev/fullwebdev/commit/162d41d))
 
 ## [1.2.0](https://github.com/fullwebdev/fullwebdev/compare/wof-slides@v1.2.0-rc.0...wof-slides@v1.2.0) (2019-11-04)
+
+> Devoxx Belgium 2019
 
 ### Features
 
@@ -62,6 +76,8 @@ All notable changes to this project will be documented in this file. See [standa
 -   w3c process img ([f4039ae](https://github.com/fullwebdev/fullwebdev/commit/f4039ae))
 
 ## [1.2.0-rc.0](https://github.com/fullwebdev/fullwebdev/compare/wof-slides@v1.2.0-alpha.4...wof-slides@v1.2.0-rc.0) (2019-11-02)
+
+> Prepare Devoxx Belgium 2019
 
 ### Features
 
@@ -88,6 +104,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.2.0-alpha.4](https://github.com/fullwebdev/fullwebdev/compare/wof-slides@v1.2.0-alpha.3...wof-slides@v1.2.0-alpha.4) (2019-10-30)
 
+> Prepare Devoxx Belgium 2019
+
 ### Features
 
 -   PWA basis ([8e51935](https://github.com/fullwebdev/fullwebdev/commit/8e51935))
@@ -102,6 +120,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.2.0-alpha.3](https://github.com/fullwebdev/fullwebdev/compare/wof-slides@v1.2.0-alpha.2...wof-slides@v1.2.0-alpha.3) (2019-10-29)
 
+> Prepare Devoxx Belgium 2019
+
 ### Features
 
 -   details about W3C ([d98e850](https://github.com/fullwebdev/fullwebdev/commit/d98e850))
@@ -113,6 +133,8 @@ All notable changes to this project will be documented in this file. See [standa
 -   missing standardisation orgs names ([3743ea1](https://github.com/fullwebdev/fullwebdev/commit/3743ea1))
 
 ## [1.2.0-alpha.2](https://github.com/fullwebdev/fullwebdev/compare/wof-slides@v1.2.0-alpha.1...wof-slides@v1.2.0-alpha.2) (2019-10-29)
+
+> Prepare Devoxx Belgium 2019
 
 ### Features
 
@@ -127,7 +149,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 # [1.2.0-alpha.1](https://github.com/fullwebdev/fullwebdev/compare/wof-slides@v1.1.0...wof-slides@v1.2.0-alpha.1) (2019-10-28)
 
-Init Devoxx Belgium 2019
+> Init Devoxx Belgium 2019
 
 ### Features
 
@@ -136,7 +158,7 @@ Init Devoxx Belgium 2019
 
 ## [1.1.1](https://github.com/fullwebdev/fullwebdev/compare/wof-slides@v1.1.0...wof-slides@v1.1.1) (2019-10-28)
 
-After DevFest Nantes 2019
+> After DevFest Nantes 2019
 
 ### Features
 
@@ -144,7 +166,7 @@ After DevFest Nantes 2019
 
 # [1.1.0](https://github.com/fullwebdev/fullwebdev/compare/wof-slides@v1.1.0-rc.1...wof-slides@v1.1.0) (2019-10-22)
 
-DevFest Nantes 2019
+> DevFest Nantes 2019
 
 ### Bug Fixes
 
@@ -156,7 +178,7 @@ DevFest Nantes 2019
 
 # [1.1.0-rc.1](https://github.com/fullwebdev/fullwebdev/compare/wof-slides@v1.1.0-beta.1...wof-slides@v1.1.0-rc.1) (2019-10-19)
 
-DevFest Nantes 2019 - RC 1
+> DevFest Nantes 2019 - RC 1
 
 ### Features
 
@@ -165,7 +187,7 @@ DevFest Nantes 2019 - RC 1
 
 # [1.1.0-beta.1](https://github.com/fullwebdev/fullwebdev/compare/wof-slides@v1.0.0...wof-slides@v1.1.0-beta.1) (2019-10-19)
 
-DevFest Nantes 2019 - Beta 1
+> DevFest Nantes 2019 - Beta 1
 
 ### Bug Fixes
 
@@ -182,7 +204,7 @@ DevFest Nantes 2019 - Beta 1
 
 ## [1.0.1](https://github.com/fullwebdev/fullwebdev/compare/wof-slides@v1.0.0...wof-slides@v1.0.1) (2019-10-29)
 
-After ParisWeb 2019
+> After ParisWeb 2019
 
 ### Features
 
@@ -191,7 +213,7 @@ After ParisWeb 2019
 
 # [1.0.0](https://github.com/fullwebdev/fullwebdev/compare/5705d5892afda7631f64eb2e21bdf8bc872b2a53...wof-slides@v1.0.0) (2019-10-18)
 
-ParisWeb 2019
+> ParisWeb 2019
 
 ### Bug Fixes
 
