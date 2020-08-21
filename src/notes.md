@@ -22,6 +22,12 @@ Standardization process, involving standardization authorities and integrators (
 - https://github.com/w3ctag/design-reviews
 - https://github.com/w3ctag/meetings
 
+##### How it works
+
+- https://www.w3.org/2019/Process-20190301/#Organization
+- https://www.w3.org/Consortium/fees
+- https://www.w3.org/community/
+
 #### WHATWG
 
 > Web Hypertext Application Technology Working Group - [whatwg.org](https://whatwg.org/)
