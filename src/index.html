@@ -400,7 +400,22 @@
                 content: 'Note';
                 font: 1em/1.45 Helvetica Neue, sans-serif, Droid Sans Fallback;
             }
+
+            .ciu-wrapper {
+                width: 100%;
+            }
+
+            .ciu_embed {
+                margin: 0 auto;
+            }
+
+            @media (min-width: 992px) {
+                .ciu_embed {
+                    width: 800px;
+                }
+            }
         </style>
+        <script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script>
     </head>
     <body>
         <ion-app class="loading">
@@ -727,6 +742,27 @@
                     <deckgo-slide-title class="subtitle-slide">
                         <h1 slot="title">A Modular Web</h1>
                     </deckgo-slide-title>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">ES Modules</h1>
+                        <div slot="content" class="ciu-wrapper">
+                            <p
+                                class="ciu_embed"
+                                data-feature="es6-module"
+                                data-periods="future_1,current,past_1,past_2"
+                                data-accessible-colours="false"
+                            >
+                                <a href="http://caniuse.com/#feat=es6-module"
+                                    >Can I Use es6-module?</a
+                                >
+                                Data on support for the es6-module feature
+                                across the major browsers from caniuse.com.
+                            </p>
+                        </div>
+                        <div slot="notes" show></div>
+                    </deckgo-slide-content>
+
+                    <!-- TODO: differential serving -->
 
                     <deckgo-slide-content>
                         <h1 slot="title">Bare specifiers</h1>
