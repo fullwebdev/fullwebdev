@@ -290,7 +290,8 @@
                 text-align: center;
             }
 
-            .img-row .img-container {
+            .img-row .img-container,
+            .img-row figure {
                 flex: 1 1;
             }
 
@@ -374,8 +375,23 @@
                 background-size: cover;
             }
 
-            .fire-icons .img-container {
+            .fire-icons figure {
                 margin: 1em;
+            }
+
+            .fire-icons .img-row {
+                align-items: start;
+                margin-top: 1em;
+            }
+
+            .fire-icons figcaption {
+                font-size: 1.4em;
+                font-weight: bold;
+            }
+
+            .fire-icons figcaption:not(:first-of-type) {
+                margin-top: 1em;
+                font-size: 1.2em;
             }
 
             deckgo-reveal.compact {
@@ -779,38 +795,111 @@
                     >
                     </deckgo-slide-content>
 
-                    <deckgo-slide-content class="fire-bg fire-icons dark">
+                    <deckgo-slide-content class="fire-icons">
                         <h1 slot="title" hidden>F.I.R.E.</h1>
                         <div slot="content" class="img-row fill">
-                            <div class="img-container">
+                            <figure>
                                 <img
                                     data-src="assets/icons/fast.svg"
                                     style="background: #dd311f"
                                 />
-                                <h2>F.</h2>
-                            </div>
-                            <div class="img-container">
+                                <figcaption>
+                                    F<deckgo-reveal
+                                        ><span>ast</span>
+                                    </deckgo-reveal>
+                                </figcaption>
+                            </figure>
+                            <figure>
                                 <img
                                     data-src="assets/icons/add_to_home_screen.svg"
                                     style="background: #249f5a"
                                 />
-                                <h2>I.</h2>
-                            </div>
-                            <div class="img-container">
+                                <figcaption>
+                                    I<deckgo-reveal
+                                        ><span>ntegrated</span>
+                                    </deckgo-reveal>
+                                </figcaption>
+                            </figure>
+                            <figure>
                                 <img
                                     data-src="assets/icons/check_circle_outline.svg"
                                     style="background: #314ffe"
                                 />
-                                <h2>R.</h2>
-                            </div>
-                            <div class="img-container">
+                                <figcaption>
+                                    R<deckgo-reveal
+                                        ><span>eliable</span>
+                                    </deckgo-reveal>
+                                </figcaption>
+                            </figure>
+                            <figure>
                                 <img
                                     data-src="assets/icons/touch.svg"
                                     style="background: #773f9b"
                                 />
-                                <h2>E.</h2>
-                            </div>
+                                <figcaption>
+                                    E<deckgo-reveal
+                                        ><span>ngaging</span>
+                                    </deckgo-reveal>
+                                </figcaption>
+                            </figure>
                         </div>
+                    </deckgo-slide-content>
+
+                    <!-- TODO: propose a deckgo-hide component & merge this slide with the previous one -->
+                    <deckgo-slide-content class="fire-icons">
+                        <h1 slot="title" hidden>F.I.R.E.</h1>
+                        <div slot="content" class="img-row fill">
+                            <figure>
+                                <img
+                                    data-src="assets/icons/fast.svg"
+                                    style="background: #dd311f"
+                                />
+                                <figcaption>
+                                    <deckgo-reveal>
+                                        <span>App Shell (and more...)</span>
+                                    </deckgo-reveal>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img
+                                    data-src="assets/icons/add_to_home_screen.svg"
+                                    style="background: #249f5a"
+                                />
+                                <figcaption>
+                                    <deckgo-reveal>
+                                        <span>Manifest</span>
+                                    </deckgo-reveal>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img
+                                    data-src="assets/icons/check_circle_outline.svg"
+                                    style="background: #314ffe"
+                                />
+                                <figcaption>
+                                    <deckgo-reveal>
+                                        <span>Service Worker</span>
+                                    </deckgo-reveal>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img
+                                    data-src="assets/icons/touch.svg"
+                                    style="background: #773f9b"
+                                />
+                                <figcaption>
+                                    <deckgo-reveal>
+                                        <span>Push API (and UX)</span>
+                                    </deckgo-reveal>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/cleaning-confetti.jpg')"
+                        class="bg-img"
+                    >
                     </deckgo-slide-content>
 
                     <!-- #endregion PWA-->
