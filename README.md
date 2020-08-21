@@ -1,5 +1,13 @@
 # The Web is on F.I.R.E. - Conference Edition
 
+<!-- BADGES -->
+![](https://img.shields.io/github/v/tag/noelmace/slides-wof-conf)
+[![follow on Twitter](https://img.shields.io/twitter/follow/noel_mace?style=social)](https://twitter.com/intent/follow?screen_name=noel_mace)
+[![deckdeckgo](https://img.shields.io/github/package-json/dependency-version/noelmace/slides-wof-conf/@deckdeckgo/core)](https://docs.deckdeckgo.com/)
+![](https://github.com/noelmace/slides-wof-conf/workflows/Build%20and%20Deploy/badge.svg)
+![](https://github.com/noelmace/slides-wof-conf/workflows/Branches%20Firebase%20Deploy/badge.svg)
+<!-- END BADGES -->
+
 > a :collision: [***Wof*** show](https://wof.show) by [Noël Macé](https://twitter.com/noel_mace)
 
 The F.I.R.E. safety kit for everyone!
