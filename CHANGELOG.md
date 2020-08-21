@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/noelmace/slides-wof-conf/compare/v1.3.0...v1.3.1) (2019-12-10)
+
+
+### Bug Fixes
+
+* too long for poss19 ([f1effc1](https://github.com/noelmace/slides-wof-conf/commit/f1effc15a6500f612f22250de2fc6a7fa73fa905))
+
 ## [1.3.0](https://github.com/noelmace/slides-wof-conf/compare/v1.3.0-rc.1...v1.3.0) (2019-12-07)
 
 
