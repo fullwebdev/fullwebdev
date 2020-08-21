@@ -31,6 +31,10 @@
       "scope": "panpress-starter",
       "directory": "packages/panpress/starter",
       "url": "git@github.com:fullwebdev/panpress-starter.git"
+    },
+    {
+      "scope": "wof-slides",
+      "directory": "packages/wof-slides"
     }
   ]
 }
