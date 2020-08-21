@@ -1,0 +1,16 @@
+ion-popover {
+    --ion-background-color: white;
+    --ion-item-text-color: var(--ion-color-dark);
+}
+
+ion-popover ion-list-header {
+    --color: var(--ion-color-dark);
+}
+
+ion-popover ion-item {
+    --color: var(--ion-color-dark);
+}
+
+ion-popover[class*="sc-ion-popover"] {
+    --width: 280px;
+}
