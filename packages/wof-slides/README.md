@@ -14,7 +14,11 @@ Learn the best new capabilities of the modern web without burning out!
 - **:man_teacher: Slides: [conf.wof.show](https://conf.wof.show)**
 - **:book: Notes, Resources & Comments: [notes.md](./src/notes.md)**
 
-## 
+<!-- markdownlint-disable header-style -->
+
+##
+
+<!-- markdownlint-enable header-style -->
 
 <p>
   <a href="https://github.com/noelmace/slides-wof-conf/releases/latest">
@@ -91,7 +95,7 @@ _So, are you ready for the future of the web?_
 
 To develop and run this starter kit locally, proceed as following:
 
-```
+```bash
 git clone https://github.com/noelmace/slides-wof-conf
 cd slides-wof-conf
 npm install
@@ -114,4 +118,4 @@ MIT © [Noël Macé](mailto:contact@noelmace.com)
 
 MIT © [Noël Macé](mailto:contact@noelmace.com), [David Dal Busco](mailto:david.dalbusco@outlook.com) and [Nicolas Mattia](nicolas@nmattia.com)
 
-[DeckDeckGo]: https://deckdeckgo.com
+[deckdeckgo]: https://deckdeckgo.com
