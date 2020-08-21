@@ -23,8 +23,8 @@ Learn the best new capabilities of the modern web without burning out!
   <a href="https://github.com/noelmace/slides-wof-conf/releases/latest">
     <img src="https://img.shields.io/github/release-date/noelmace/slides-wof-conf?sort=semver" alt="stable release date">
   </a>
-  <a href="https://github.com/noelmace/slides-wof-conf/actions?workflow=Build+and+Deploy">
-    <img src="https://github.com/noelmace/slides-wof-conf/workflows/Build%20and%20Deploy/badge.svg" alt="build & deploy">
+  <a href="https://github.com/noelmace/slides-wof-conf/actions?workflow=Deploy+Master">
+    <img src="https://github.com/noelmace/slides-wof-conf/workflows/Deploy%20Master/badge.svg" alt="deploy master">
   </a>
 </p>
 <p>
@@ -34,8 +34,8 @@ Learn the best new capabilities of the modern web without burning out!
   <a href="https://github.com/noelmace/slides-wof-conf/releases">
     <img src="https://img.shields.io/github/release-date-pre/noelmace/slides-wof-conf?label=pre-release%20date" alt="pre-release date">
   </a>
-  <a href="https://github.com/noelmace/slides-wof-conf/actions?workflow=Branches+Firebase+Deploy">
-    <img src="https://github.com/noelmace/slides-wof-conf/workflows/Branches%20Firebase%20Deploy/badge.svg" alt="branches deploy">
+  <a href="https://github.com/noelmace/slides-wof-conf/actions?workflow=Deploy+branches">
+    <img src="https://github.com/noelmace/slides-wof-conf/workflows/Deploy%20branches/badge.svg" alt="deploy branches">
   </a>
 </p>
 <p>
