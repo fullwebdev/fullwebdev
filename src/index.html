@@ -174,6 +174,171 @@
             ion-app.loading {
                 display: none;
             }
+
+            :root {
+                background: #ffffff;
+                --ion-background-color: #ffffff;
+            }
+
+            deckgo-deck {
+                color: black;
+                --color: black;
+                --ion-text-color: black;
+                --deckgo-highlight-code-line-background: yellow;
+            }
+
+            /* Until Web Components are loaded, don't display content */
+            body {
+                background: #ffffff;
+
+                --react-color: #61dafb;
+                --preact-color: #673ab8;
+                --redux-color: #764abc;
+                --lit-element-color: #2196f3;
+                --jquery-color: #d18f4f;
+            }
+
+            ion-app.loading,
+            ion-app.loading a {
+                color: transparent;
+            }
+
+            ion-app.loading a {
+                color: transparent;
+            }
+
+            ion-app.loading {
+                display: none;
+            }
+
+            .dark {
+                --background: #000;
+                --color: #fff;
+            }
+
+            .full {
+                width: 100%;
+                height: 100%;
+            }
+
+            .big {
+                font-size: 5em;
+            }
+
+            .flex {
+                width: 100%;
+                height: 100%;
+                display: flex;
+            }
+
+            .flex-center {
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-direction: column;
+            }
+
+            .flex-end {
+                justify-content: flex-end;
+                align-items: center;
+                text-align: center;
+                flex-direction: column;
+            }
+
+            .flex-row {
+                display: flex;
+                justify-content: space-around;
+                flex-direction: row;
+                width: 100%;
+            }
+
+            .flex-center img,
+            .img-row img {
+                width: 100%;
+                max-height: 80vh;
+            }
+
+            .img-row {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                align-items: center;
+                text-align: center;
+            }
+
+            .img-row .img-container {
+                flex: 1 1;
+            }
+
+            .img-row img {
+                padding: 1em 1em;
+            }
+
+            .frame {
+                background: center no-repeat url('assets/img/frame-h.png');
+                background-size: contain;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .bg-img {
+                background-size: contain;
+            }
+
+            .frame * {
+                font-size: 2em;
+            }
+
+            .small-code {
+                --slide-padding-top: 8em;
+            }
+
+            .strong {
+                font-weight: bold;
+            }
+
+            .slide-todo {
+                --background: #f00;
+                color: #000;
+            }
+
+            .wof-show > a {
+                color: red;
+                text-decoration: none;
+                font-size: 2em;
+                text-shadow: 1px 1px 2px #000;
+            }
+
+            .wof-show .sub {
+                color: black;
+                text-shadow: 1px 1px 2px #fff;
+                display: inline-block;
+                font-size: 0.8em;
+            }
+
+            .center {
+                text-align: center;
+            }
+
+            .lib-chart {
+                --deckgo-chart-fill-color-1: var(--react-color);
+                --deckgo-chart-fill-color-2: var(--preact-color);
+                --deckgo-chart-fill-color-3: var(--redux-color);
+                --deckgo-chart-fill-color-4: var(--lit-element-color);
+                --deckgo-chart-fill-color-5: var(--jquery-color);
+            }
+
+            .twitter-content {
+                width: 100%;
+            }
+
+            .twitter-content twitter-widget {
+                margin: 0 auto;
+            }
         </style>
     </head>
     <body>
@@ -192,67 +357,134 @@
                         <span slot="seconds">Seconds</span>
                     </deckgo-slide-countdown>
 
+                    <!-- #region outro -->
+
                     <deckgo-slide-author
-                        img-src="https://secure.meetupstatic.com/photos/member/9/c/4/2/member_272620002.jpeg"
+                        img-src="https://avatars3.githubusercontent.com/u/7578400"
                     >
-                        <h1 slot="title">Templates</h1>
+                        <h1 slot="title">Noël Macé</h1>
                         <div slot="author">
-                            <h2>Templates</h2>
+                            <h2>Noël Macé</h2>
+                            <p>Freelance WebDev Consultant & Teacher</p>
                             <p>
-                                Use predefined slides for quick editing ⚡ Like
-                                this template to introduce the author of the
-                                talk 🎤
+                                Independent Dev Advocado 🥑 for the Web Platform
                             </p>
                         </div>
                         <div slot="social-link">
-                            <deckgo-social twitter="daviddalbusco"
+                            <deckgo-social twitter="noel_mace"
                                 ><ion-icon
-                                    alt="David on Twitter"
+                                    alt="Noël on Twitter"
                                     slot="icon"
                                     name="logo-twitter"
                                     margin-start
                                     margin-end
                                 ></ion-icon>
-                                twitter</deckgo-social
+                                @noel_mace</deckgo-social
                             >
                         </div>
                         <div slot="social-link">
-                            <deckgo-social linkedin="david-dal-busco/"
+                            <deckgo-social linkedin="noelmace/"
                                 ><ion-icon
-                                    alt="David on Linkedin"
+                                    alt="Noël on Linkedin"
                                     slot="icon"
                                     name="logo-linkedin"
                                     margin-start
                                     margin-end
                                 ></ion-icon>
-                                linkedin</deckgo-social
-                            >
-                        </div>
-                        <div slot="social-link">
-                            <deckgo-social medium="david.dalbusco"
-                                ><img
-                                    style="width: 1em;"
-                                    alt="David on Medium"
-                                    slot="icon"
-                                    src="https://deckdeckgo.com/assets/icons/medium.svg"
-                                    margin-start
-                                    margin-end
-                                />
-                                medium</deckgo-social
+                                in/noelmace</deckgo-social
                             >
                         </div>
                     </deckgo-slide-author>
 
+                    <deckgo-slide-content>
+                        <h2
+                            slot="title"
+                            style="text-align: center; font-size: 3em"
+                        >
+                            @noel_mace
+                        </h2>
+                        <div slot="content" class="flex flex-center">
+                            <img
+                                src="assets/icons/twitter.svg"
+                                alt="Github"
+                                style="padding: 2em"
+                                height="500"
+                                width="500"
+                            />
+                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show></div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h2
+                            slot="title"
+                            style="text-align: center; font-size: 3em"
+                        >
+                            dev.to/noelmace
+                        </h2>
+                        <div slot="content" class="flex flex-center">
+                            <img
+                                src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg"
+                                alt="Noël Macé's DEV Profile"
+                                style="padding: 2em"
+                                height="500"
+                                width="500"
+                            />
+                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show></div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h2
+                            slot="title"
+                            style="text-align: center; font-size: 3em"
+                        >
+                            noelmace/slides-wof-conf
+                        </h2>
+                        <div slot="content" class="flex flex-center">
+                            <img
+                                src="assets/icons/github.svg"
+                                alt="Github"
+                                style="padding: 2em"
+                                height="500"
+                                width="500"
+                            />
+                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show></div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('https://console.wof.show/assets/img/share-large.png')"
+                        class="bg-img"
+                    >
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/question.jpeg')"
+                        class="bg-img"
+                    >
+                    </deckgo-slide-content>
+
                     <deckgo-slide-qrcode
-                        content="https://deckdeckgo.com"
+                        content="https://conf.wof.show"
                         style="--deckgo-qrcode-color-fill: black;"
                     >
-                        <h1 slot="title">QR Code</h1>
-                        <p slot="content">
-                            Display a QR code to let your audience get your
-                            slides as a PWA without any delay
-                        </p>
+                        <h1 slot="title">Slides</h1>
+                        <div slot="content" class="wof-show">
+                            <a
+                                href="https://modern-vanilla.wof.show"
+                                style="font-weight: bold"
+                                target="_blank"
+                                rel="noopener"
+                                ><span class="sub">conf.</span>wof.show</a
+                            >
+                        </div>
                     </deckgo-slide-qrcode>
+
+                    <!-- #endregion outro -->
 
                     <!-- #endregion Slides -->
 
