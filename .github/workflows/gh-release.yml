@@ -2,8 +2,8 @@ name: GH Release
 
 on:
   push: 
-    branches: 
-      - refs/tags/*
+    tags: 
+      - '*'
 
 jobs:
   build:
