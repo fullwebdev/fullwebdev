@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0-alpha.3](https://github.com/noelmace/slides-wof-conf/compare/v1.2.0-alpha.2...v1.2.0-alpha.3) (2019-10-29)
+
+
+### Features
+
+* details about W3C ([86c32c7](https://github.com/noelmace/slides-wof-conf/commit/86c32c720f1c66178b7a1e420fa4ea21e8b278c0))
+* details about WHATWG, TC39 & W3C ([ada44dc](https://github.com/noelmace/slides-wof-conf/commit/ada44dc5b044f3d89ebed2caddee39be947cb6b9))
+* transition between W3C & WHATWG ([aa395cc](https://github.com/noelmace/slides-wof-conf/commit/aa395cce5699f9bd0c848e82487f9be34e170324))
+
+
+### Bug Fixes
+
+* missing standardisation orgs names ([5a398a3](https://github.com/noelmace/slides-wof-conf/commit/5a398a34c74758e20264b3a58a91ad2b4c1e13a6))
+
 ## [1.2.0-alpha.2](https://github.com/noelmace/slides-wof-conf/compare/v1.2.0-alpha.1...v1.2.0-alpha.2) (2019-10-29)
 
 
