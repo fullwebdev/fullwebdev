@@ -1,6 +1,15 @@
 # The Web is on :fire: FIRE :fire:
 
-> **:construction: Work In Progress :construction:**
+> **:construction: WIP :construction:**
+>
+> Since I rarely have the time to proofread these notes, their quality isn't as high as I would like, especially with regards to phrasing and syntax.
+>
+> Yet, I intend to use them as a foundation for some better content (blog posts especially) I'll write in the near future.
+>
+> :wave:**You can easily help me** work faster, if you're are impatient to read them.
+> [**Open an issue**](https://github.com/noelmace/slides-wof-conf/issues/new)
+> telling me what you think is missing in this document.
+> Or, even better, [**send me a PR**](https://github.com/noelmace/slides-wof-conf/edit/master/src/notes.md), even if it only fixes a typo :wink:
 
 ## Introduction: PWA vs FIRE
 

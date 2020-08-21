@@ -12,7 +12,7 @@ The F.I.R.E. safety kit for everyone!
 Learn the best new capabilities of the modern web without burning out!
 
 - **:man_teacher: Slides: [conf.wof.show](https://conf.wof.show)**
-- **:book: Full doc (always a WIP): [notes.md](./src/notes.md)**
+- **:book: Notes, Resources & Comments: [notes.md](./src/notes.md)**
 
 ## 
 
