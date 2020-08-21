@@ -32,7 +32,7 @@ Learn the best new capabilities of the modern web without burning out!
     <img src="https://img.shields.io/github/v/release/noelmace/slides-wof-conf?sort=semver&include_prereleases&label=pre-release" alt="pre-release">
   </a>
   <a href="https://github.com/noelmace/slides-wof-conf/releases">
-    <img src="https://img.shields.io/github/release-date-pre/noelmace/slides-wof-conf?label=pre-release date" alt="pre-release date">
+    <img src="https://img.shields.io/github/release-date-pre/noelmace/slides-wof-conf?label=pre-release%20date" alt="pre-release date">
   </a>
   <a href="https://github.com/noelmace/slides-wof-conf/actions?workflow=Branches+Firebase+Deploy">
     <img src="https://github.com/noelmace/slides-wof-conf/workflows/Branches%20Firebase%20Deploy/badge.svg" alt="branches deploy">
@@ -40,7 +40,7 @@ Learn the best new capabilities of the modern web without burning out!
 </p>
 <p>
   <a href="https://github.com/noelmace/slides-wof-conf/actions?workflow=GH+Release">
-    <img src="https://github.com/noelmace/slides-wof-conf/workflows/GH%20Release/badge.svg" alt="branches deploy">
+    <img src="https://github.com/noelmace/slides-wof-conf/workflows/GH%20Release/badge.svg" alt="Github release">
   </a>
   <a href="https://docs.deckdeckgo.com/">
     <img src="https://img.shields.io/github/package-json/dependency-version/noelmace/slides-wof-conf/@deckdeckgo/core" alt="deckdeckgo">
