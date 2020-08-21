@@ -11,7 +11,8 @@
     "watch-no-remote": "webpack --watch --mode development --env.no-remote=true",
     "build": "webpack --mode production",
     "local": "concurrently --kill-others \"webpack --watch --mode development --env.local=true\" \"npm run dev\"",
-    "format": "prettier \"**/*.{js,css,html}\" --write"
+    "format": "prettier \"**/*.{js,css,html}\" --write",
+    "github-release": "conventional-github-releaser -p angular"
   },
   "author": {
     "name": "Noël Macé",
