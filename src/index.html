@@ -292,6 +292,10 @@
                 padding: 1em 1em;
             }
 
+            figure[slot='content'] figcaption {
+                font-size: 2em;
+            }
+
             .frame {
                 background: center no-repeat url('assets/img/frame-h.png');
                 background-size: contain;
@@ -917,46 +921,63 @@
                     </deckgo-slide-title>
 
                     <deckgo-slide-content>
-                        <div slot="notes">World Wide Web Consortium</div>
-                        <div slot="content" class="flex flex-center">
+                        <figure slot="content" class="flex flex-center">
+                            <deckgo-reveal
+                                ><figcaption>
+                                    World Wide Web Consortium
+                                </figcaption></deckgo-reveal
+                            >
                             <img
                                 data-src="assets/logos/w3c.svg"
                                 alt="w3c logo"
                             />
-                        </div>
+                        </figure>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
-                        <div slot="content" class="flex flex-center">
+                        <figure slot="content" class="flex flex-center">
+                            <deckgo-reveal
+                                ><figcaption>
+                                    WHATWG
+                                </figcaption></deckgo-reveal
+                            >
                             <img
                                 data-src="assets/logos/whatwg.svg"
                                 alt="WHATWG logo"
                             />
-                        </div>
+                        </figure>
                         <!-- prettier-ignore -->
                         <div slot="notes">Web Hypertext Application Technology Working Group</div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
-                        <div slot="content" class="flex flex-center">
+                        <figure slot="content" class="flex flex-center">
+                            <deckgo-reveal
+                                ><figcaption>
+                                    WICG
+                                </figcaption></deckgo-reveal
+                            >
                             <img
                                 data-src="assets/logos/wicg.svg"
                                 alt="WICG logo"
                             />
-                        </div>
+                        </figure>
                         <!-- prettier-ignore -->
                         <div slot="notes">Web Incubator Community Group</div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
-                        <div slot="content" class="flex flex-center">
+                        <figure slot="content" class="flex flex-center">
+                            <deckgo-reveal
+                                ><figcaption>
+                                    Ecma International, Technical Committee 39
+                                </figcaption></deckgo-reveal
+                            >
                             <img
                                 data-src="assets/logos/tc39.svg"
                                 alt="TC39 logo"
                             />
-                        </div>
-                        <!-- prettier-ignore-->
-                        <div slot="notes">Ecma International, Technical Committee 39 -ECMAScript</div>
+                        </figure>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
