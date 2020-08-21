@@ -44,6 +44,6 @@ jobs:
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting:deepdive
+          args: deploy --only hosting:miniconf
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
