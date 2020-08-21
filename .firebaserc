@@ -1,5 +1,14 @@
 {
   "projects": {
-    "default": "parisweb-2019"
+    "default": "wof-show"
+  },
+  "targets": {
+    "wof-conf": {
+      "hosting": {
+        "beta": [
+          "beta"
+        ]
+      }
+    }
   }
 }
