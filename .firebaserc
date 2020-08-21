@@ -5,8 +5,8 @@
   "targets": {
     "wof-conf": {
       "hosting": {
-        "beta": [
-          "beta"
+        "parisweb-2019": [
+          "wof-parisweb-2019"
         ]
       }
     }

@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "target": "beta",
+    "target": "parisweb-2019",
     "public": "dist",
     "ignore": [
       "firebase.json",
