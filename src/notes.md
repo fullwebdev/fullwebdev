@@ -339,7 +339,321 @@ Chrome: [Unlocking new capabilities for the web](https://developers.google.com/w
 
 - [API Tracker](https://docs.google.com/spreadsheets/d/1de0ZYDOcafNXXwMcg4EZhT0346QM-QFvZfoD8ZffHeA/edit?usp=sharing)
 - [proj-fugu issues](https://bugs.chromium.org/p/chromium/issues/list?q=proj-fugu)
-- [Codelab](https://codelabs.developers.google.com/codelabs/web-capabilities/#0)
+- [Codelab](https://codelabs.developers.google.com/codelabs/web-capabilities/)
+
+#### Web Share Target API
+
+> :rocket: _Launched Capability_
+
+> :warning: Should not be confused with the [Web Share API](https://caniuse.com/#feat=web-share),
+> which permits to share data **from** a web page, as follow:
+>
+> ```js
+> navigator.share({title: 'Example Page', url: 'https://example.com'});
+> ```
+
+##### Manifest
+
+```json
+{
+  "name": "Web Share Target Test App",
+  [...]
+  "share_target": {
+    "action": "sharetarget.html",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  [...]
+}
+```
+
+##### handling the incoming content
+
+Data is passed using get param.
+
+`?title=hello&text=world`
+
+```js
+window.addEventListener('DOMContentLoaded', () => {
+  const parsedUrl = new URL(window.location);
+  // searchParams.get() will properly handle decoding the values.
+  console.log('Title shared: ' + parsedUrl.searchParams.get('title'));
+  console.log('Text shared: ' + parsedUrl.searchParams.get('text'));
+  console.log('URL shared: ' + parsedUrl.searchParams.get('url'));
+});
+```
+
+##### Level 2
+
+Permits to share/receive images.
+
+<!-- TODO -->
+
+- [Web Share - draft CG](https://w3c.github.io/web-share/level-2/)
+- [Target - draft CG](https://wicg.github.io/web-share-target/level-2/)
+
+##### Support
+
+> The Web Share API itself is only supported by Chrome Android and ... Safari :tada: (see [caniuse](https://caniuse.com/#feat=web-share)).
+>
+> :heavy_plus_sign: Firefox 72 should support the Web Share API too
+> (see :beetle: [1402369](https://bugzilla.mozilla.org/show_bug.cgi?id=1402369) & [1312422](https://bugzilla.mozilla.org/show_bug.cgi?id=1312422)).
+> Yet, Firefox Nightly doesn't for now (tested on 72.0a1 (2019-10-30), see Fenix [#328](https://github.com/mozilla-mobile/fenix/issues/328), [android-components #3486](https://github.com/mozilla-mobile/android-components/issues/3486), [780](https://github.com/mozilla-mobile/fenix/issues/780)).
+
+Level 1 is only supported by Chrome 71+.
+
+Mozilla expressed its support ([#176](https://github.com/mozilla/standards-positions/issues/176) & [PR#183](https://github.com/mozilla/standards-positions/pull/183)) and prioritized the related issues (Fenix [#4637](https://github.com/mozilla-mobile/android-components/issues/4637), [#5783](https://github.com/mozilla-mobile/fenix/issues/5783) & :beetle: [1476515](https://bugzilla.mozilla.org/show_bug.cgi?id=1476515)).
+
+Level 2 is supported by Chrome for Android 76 (see [status](https://www.chromestatus.com/features/6124071381106688)), while the Web Share API level 2 is supported by Chrome for Android 75+ (see [status](https://www.chromestatus.com/feature/4777349178458112)).
+
+##### resources
+
+- [Registering as a Share Target with the Web Share Target API](https://developers.google.com/web/updates/2018/12/web-share-target)
+- [codelab](https://codelabs.developers.google.com/codelabs/web-capabilities/#3)
+- [MDN - navigator.share](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share)
+- [Mozilla public support](https://github.com/mozilla/standards-positions/issues/27)
+
+#### Async Clipboard API (images)
+
+> :rocket: _Launched Capability (Chrome 76)_
+
+```js
+/** Write contents of the textarea to the clipboard when clicking "Copy" */
+copy.onclick = async () => {
+  await navigator.clipboard.writeText(out.value)
+};
+
+/** Read from clipboard when clicking the Paste button */
+paste.onclick = async () => {
+  const text = await navigator.clipboard.readText()
+  return text;
+};
+```
+
+Now:
+
+```js
+/** Write the Chrome logo to the clipboard when clicking "Copy" */
+copy.onclick = async () => {
+  try {
+    const fetched = await fetch(fileName);
+    const blobIawait fetched.blob();
+    const url = 'https://upload.wikimedia.org/wikipedia/commons/5/53/Google_Chrome_Material_Icon-450x450.png';
+    const blobInput = await loadBlob(url);
+    const clipboardItemInput = new ClipboardItem({'image/png' : blobInput});
+    await navigator.clipboard.write([clipboardItemInput]);
+  } catch(e) {
+    log(e);
+  }
+};
+
+/** Read from clipboard when clicking the Paste button */
+paste.onclick = async () => {
+  try {
+    const clipboardItems = await navigator.clipboard.read();
+    const blobOutput = await clipboardItems[0].getType('image/png');
+    document.getElementById('image-field').src =
+      window.URL.createObjectURL(blobOutput);
+  } catch(e) {
+    log('Failed to read clipboard');
+  }
+};
+
+/** Watch for pastes */
+navigator.clipboard.addEventListener('clipboardchange', async e => {
+  const text = await navigator.clipboard.getText();
+  log('Updated clipboard contents: '+text)
+});
+```
+
+##### Support
+
+The clipboard API is (partially) supported by [Chome 66+](https://www.chromestatus.com/feature/5861289330999296),
+Firefox63+ and Opera 53+.
+
+However:
+
+- the async part is supported by
+  - Chrome 66+
+  - Firefox 63+ behind the `dom.events.asyncClipboard.dataTransfer` flag, but there is still some issues (see the Mozilla Standards Positions about this in [89](https://github.com/mozilla/standards-positions/issues/89) & [206](https://github.com/mozilla/standards-positions/issues/206))
+- this is because there is still some ongoing discussions about this [in W3C TAG](https://github.com/w3ctag/design-reviews/issues/406)
+- the support for images (what we're talking about here) was added by [Chrome 76](https://www.chromestatus.com/features/5074658793619456).
+
+##### resources
+
+- [Image support for the async clipboard API](https://web.dev/image-support-for-async-clipboard/)
+- [MDN - Clipboard API]()
+- [codelab](https://codelabs.developers.google.com/codelabs/web-capabilities/#6)
+- [Demo](https://fiddle.jshell.net/0794oysr/2/show/light/)
+- [Related chapter in the Cliboard API Draft](https://www.w3.org/TR/clipboard-apis/#async-clipboard-api)
+
+#### Badging API
+
+:warning: Only available in Chrome, behind `#enable-experimental-web-platform-features`, on Windows and macOS.
+
+> No GNU/Linux nor ChromeOS support here. This is why I need to use a Windows VM for that :man_shrugging:.
+
+A new shape for this API [was decided in september](https://github.com/WICG/badging/issues/55), and added to Chrome in Oct '19, but not released in Canary yet (see [comment](https://bugs.chromium.org/p/chromium/issues/detail?id=719176#c87)) and the specs [are behing updated](https://github.com/WICG/badging/issues/45).
+
+```js
+navigator.setAppBadge(42);
+navigator.setExperimentalAppBadge(42);
+navigator.setClientBadge(42, { client });
+```
+
+![badge](assets/img/app-gap/badge.png)
+
+```js
+navigator.clearAppBadge();
+navigator.clearExperimentalAppBadge();
+navigator.clearClientBadge();
+```
+
+![badge](assets/img/app-gap/badge-clear.png)
+
+##### resources
+
+- [W3C - Draft CG](https://wicg.github.io/badging/)
+- [WICG repo](https://github.com/WICG/badging)
+- [Web.dev post](https://web.dev/badging-api/)
+- [Codelab](https://codelabs.developers.google.com/codelabs/web-capabilities/#1)
+- Demos: [Badging API Demi](https://badging-api.glitch.me/), [Google - AirHorn](https://github.com/GoogleChromeLabs/airhorn/blob/master/app/scripts/main.min.js)
+
+#### Shape Detection API
+
+##### face detection
+
+```js
+const faceDetector = new FaceDetector({
+  // (Optional) Hint to try and limit the amount of detected faces
+  // on the scene to this maximum number.
+  maxDetectedFaces: 5,
+  // (Optional) Hint to try and prioritize speed over accuracy
+  // by, e.g., operating on a reduced scale or looking for large features.
+  fastMode: false
+});
+try {
+  const faces = await faceDetector.detect(image);
+  faces.forEach(face => drawMustache(face));
+} catch (e) {
+  console.error('Face detection failed:', e);
+}
+```
+
+##### barecode detection
+
+```js
+const barcodeDetector = new BarcodeDetector({
+  // (Optional) A series of barcode formats to search for.
+  // Not all formats may be supported on all platforms
+  formats: [
+    'aztec',
+    'code_128',
+    'code_39',
+    'code_93',
+    'codabar',
+    'data_matrix',
+    'ean_13',
+    'ean_8',
+    'itf',
+    'pdf417',
+    'qr_code',
+    'upc_a',
+    'upc_e'
+  ]
+});
+try {
+  const barcodes = await barcodeDetector.detect(image);
+  barcodes.forEach(barcode => searchProductDatabase(barcode));
+} catch (e) {
+  console.error('Barcode detection failed:', e);
+}
+```
+
+##### text detection
+
+```js
+const textDetector = new TextDetector();
+try {
+  const texts = await textDetector.detect(image);
+  texts.forEach(text => textToSpeech(text));
+} catch (e) {
+  console.error('Text detection failed:', e);
+}
+```
+
+##### support
+
+This API ***highly*** depends on hardware acceleration, and most devices doesn't support it for now.
+Using it on some devices could give you some better performances. Yet, you should absolutely add a fallback (see "Best Practices" below).
+Due to a combination of hardware (old computers, notebooks & Samsung Galaxy S8)
+and software (ArchLinux being the only host OS I have on my Dell XPS) limitations, I myself wasn't able to use this API yet.
+
+[Chrome Status](https://www.chromestatus.com/feature/4757990523535360)
+> Support for this API is dependant on hardware acceleration features that vary by operating system.
+>
+> - BarcodeDetector: Android\*, macOS (improved accuracy in 10.13+)
+> - FaceDetector: Android, macOS (improved accuracy in 10.13+), Windows 10
+> - TextDetector: Android\*, macOS 10.11+, Windows 10
+>
+> \* Requires a device with the Play support libraries installed.
+
+[Best Practices](https://web.dev/shape-detection/#bestpractices)
+> **Caution**: This API is an optimization and not something guaranteed to be available from the platform for every user.
+> Developers are expected to combine this with their own [image recognition code](https://github.com/mjyc/opencv) and
+> take advantage of the native optimization when it is available.
+
+_Here, the given example is [opencv.js](https://www.npmjs.com/package/opencv.js), but you could use any other vision & ML library, like
+[face-api.js](https://github.com/justadudewhohacks/face-api.js/) for face detection for example._
+
+##### resources
+
+- [public explainer](https://docs.google.com/document/d/1QeCDBOoxkElAB0x7ZpM3VN3TQjS1ub1mejevd2Ik1gQ/edit)
+- [a picture is worth a thousand words, faces, and barcodes](https://web.dev/shape-detection/)
+- [Accelerated Shape Detection in Images - Draft CG](https://wicg.github.io/shape-detection-api/)
+- [Codelab](https://codelabs.developers.google.com/codelabs/web-capabilities/#2)
+- Demos: [glitch](https://shape-detection-demo.glitch.me/), [from codelab](https://codelab-face-detection.glitch.me/)
+
+#### Contacts Picker API
+
+> :warning: Unofficial Proposal Draft
+
+```js
+getContactsButton.addEventListener('click', async () => {
+  const contacts = await navigator.contacts.select(
+      ['name', 'email'],
+      {multiple: true});
+  if (!contacts.length) {
+    // No contacts were selected, or picker couldn't be opened.
+    return;
+  }
+  console.log(contacts);
+});
+```
+
+##### Support
+
+only on Chrome 77+ on Android M or later
+
+- [Mozilla Position](https://github.com/mozilla/standards-positions/issues/153) - ongoing discussion
+
+##### resources
+
+- [A contact picker for the web](https://web.dev/contact-picker/)
+- [codelab](https://codelabs.developers.google.com/codelabs/web-capabilities/#5)
+- [Unofficial Proposal Draft](https://wicg.github.io/contact-api/spec/)
+- [proposal repo](https://wicg.github.io/contact-api/spec/)
+
+#### And more...
+
+<!-- TODO -->
+
+- Get Installed Related Apps
+- Native File System
+- Wake Lock API
 
 ## A modular Web
 
