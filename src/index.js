@@ -12,6 +12,7 @@ import './css/print.css';
 import './css/alert.css';
 import './css/img.css';
 import './css/button.css';
+import './css/global.css';
 
 import '@webcomponents/custom-elements';
 
