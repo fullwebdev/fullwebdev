@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0-alpha.4](https://github.com/noelmace/slides-wof-conf/compare/v1.2.0-alpha.3...v1.2.0-alpha.4) (2019-10-30)
+
+
+### Features
+
+* PWA basis ([ba6987f](https://github.com/noelmace/slides-wof-conf/commit/ba6987f30835b0d0fac3e2cb940edcbcfc502704))
+
+
+### Bug Fixes
+
+* add Frances Berriman ([8e5315a](https://github.com/noelmace/slides-wof-conf/commit/8e5315a7b4ee084ce5bed633985f7b5a31ef058f))
+* images in "Standardization" Controversies slide ([88c50d0](https://github.com/noelmace/slides-wof-conf/commit/88c50d02b928d026eb3699ec51b144ae3fb018d8))
+* missing note for PWA basis conclusion ([6f77ae2](https://github.com/noelmace/slides-wof-conf/commit/6f77ae2b066f0faa6541f50fefec33ea4f4d21eb))
+* too long titles in PWA-FIRE slide ([2c13f8d](https://github.com/noelmace/slides-wof-conf/commit/2c13f8dabd2f67088936b374c79df7fcfb25ded9))
+* wrong title for prefers-color-scheme ciu ([6121b80](https://github.com/noelmace/slides-wof-conf/commit/6121b80197fcad5cfa8987b9567ac97093a5a4ef))
+
 ## [1.2.0-alpha.3](https://github.com/noelmace/slides-wof-conf/compare/v1.2.0-alpha.2...v1.2.0-alpha.3) (2019-10-29)
 
 
