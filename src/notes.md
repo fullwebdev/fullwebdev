@@ -230,7 +230,7 @@ _from [stackoverflow](https://stackoverflow.com/questions/56401662/firefox-how-t
 
 #### misc
 
-- https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-transparency#
+- https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-transparency
 - https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast
 - https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
 - https://developer.mozilla.org/en-US/docs/Web/CSS/@media/scripting
