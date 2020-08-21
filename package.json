@@ -13,6 +13,7 @@
     "local": "concurrently --kill-others \"webpack --watch --mode development --env.local=true\" \"npm run dev\"",
     "format": "prettier \"**/*.{js,css,html}\" --write",
     "release": "standard-version",
+    "postrelease": "git push --follow-tags",
     "github-release": "conventional-github-releaser -p angular"
   },
   "author": {
