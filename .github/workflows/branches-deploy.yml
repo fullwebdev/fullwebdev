@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - parisweb-2019
-      - devfestparis-2019
+      - devfestnantes-2019
 
 jobs:
   build:
