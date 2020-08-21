@@ -480,129 +480,13 @@
                         </div>
                     </deckgo-slide-author>
 
-                    <deckgo-slide-qrcode
-                        content="https://conf.wof.show"
-                        style="--deckgo-qrcode-color-fill: black;"
-                    >
-                        <h1 slot="title">Slides</h1>
-                        <div slot="content" class="wof-show">
-                            <a
-                                href="https://conf.wof.show"
-                                style="font-weight: bold"
-                                target="_blank"
-                                rel="noopener"
-                                ><span class="sub">conf.</span>wof.show</a
-                            >
-                        </div>
-                    </deckgo-slide-qrcode>
-
                     <!-- #endregion intro -->
 
                     <!-- #region Past & Present -->
-                    <deckgo-slide-title class="dark">
-                        <h1 slot="title">Part 1</h1>
-                        <h2 slot="content">
-                            Past & Present
-                        </h2>
-                    </deckgo-slide-title>
 
                     <!-- #region PWA -->
 
-                    <deckgo-slide-title class="chapter-title-slide">
-                        <h1 slot="title">FIRE & PWA</h1>
-                    </deckgo-slide-title>
-
                     <!-- #region principles -->
-
-                    <deckgo-slide-title class="subchapter-title-slide">
-                        <h1 slot="title">FIRE origins</h1>
-                    </deckgo-slide-title>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">June 15, 2015</h1>
-                        <div
-                            slot="content"
-                            style="text-align: center; width: 100%"
-                        >
-                            <p>
-                                <a
-                                    href="https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/"
-                                >
-                                    Escaping Tabs Without Losing Our Soul</a
-                                >
-                            </p>
-                            <div class="img-row" style="height: unset">
-                                <figure style="margin-top: 0">
-                                    <img
-                                        data-src="assets/img/intro-pwa/alex_russel.png"
-                                        alt="Alex Russel"
-                                        style="max-height: 250px"
-                                    />
-                                    <figcaption>
-                                        <a
-                                            href="https://infrequently.org/about-me/"
-                                            style="display: block"
-                                            >Alex Russell</a
-                                        >software engineer at Google
-                                    </figcaption>
-                                </figure>
-                                <figure style="margin-top: 0">
-                                    <img
-                                        data-src="assets/img/intro-pwa/frances-berriman.jpg"
-                                        alt="Frances Berriman"
-                                        style="max-height: 250px"
-                                    />
-                                    <figcaption>
-                                        <a
-                                            href="https://fberriman.com/about/"
-                                            style="display: block"
-                                            >Frances Berriman</a
-                                        >Freelance designer & front-end engineer
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                        <div slot="notes" show>PWA</div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-title>
-                        <div slot="title" class="flex flex-center">
-                            <h1 class="quotation">
-                                There is now another way. An
-                                <span class="strong">evolution</span> has taken
-                                place in browsers.
-                            </h1>
-                        </div>
-                    </deckgo-slide-title>
-
-                    <deckgo-slide-title>
-                        <div slot="title" class="flex flex-center">
-                            <h1 class="quotation">
-                                <span class="strong">Just websites</span> that
-                                took all the right vitamins.
-                            </h1>
-                        </div>
-                    </deckgo-slide-title>
-
-                    <deckgo-slide-title>
-                        <div slot="title" class="flex flex-center">
-                            <h1 class="quotation">
-                                Sites have to
-                                <span class="strong">earn</span> some rights
-                                over time as you use them more and more.
-                            </h1>
-                        </div>
-                    </deckgo-slide-title>
-
-                    <deckgo-slide-title>
-                        <div slot="title" class="flex flex-center">
-                            <h1 class="quotation">
-                                They
-                                <span class="strong">progressively</span> become
-                                “apps”.
-                            </h1>
-                        </div>
-                    </deckgo-slide-title>
 
                     <deckgo-slide-content>
                         <div slot="content" class="flex flex-center">
@@ -611,20 +495,59 @@
                         <div slot="notes" show>PWA</div>
                     </deckgo-slide-content>
 
-                    <deckgo-slide-content
-                        style="--background:center no-repeat url('assets/img/pwa-trend.png')"
-                        class="bg-img"
-                    >
+                    <deckgo-slide-content class="fire-icons">
+                        <!-- TODO: propose a deckgo-hide component & merge this slide with the previous one -->
+                        <h1 slot="title" hidden>F.I.R.E.</h1>
+                        <div slot="content" class="img-row fill">
+                            <figure>
+                                <img
+                                    data-src="assets/icons/fast.svg"
+                                    style="background: #dd311f"
+                                />
+                                <figcaption>
+                                    <deckgo-reveal>
+                                        <span>App Shell</span>
+                                    </deckgo-reveal>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img
+                                    data-src="assets/icons/add_to_home_screen.svg"
+                                    style="background: #249f5a"
+                                />
+                                <figcaption>
+                                    <deckgo-reveal>
+                                        <span>Manifest</span>
+                                    </deckgo-reveal>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img
+                                    data-src="assets/icons/check_circle_outline.svg"
+                                    style="background: #314ffe"
+                                />
+                                <figcaption>
+                                    <deckgo-reveal>
+                                        <span>Service Worker</span>
+                                    </deckgo-reveal>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img
+                                    data-src="assets/icons/touch.svg"
+                                    style="background: #773f9b"
+                                />
+                                <figcaption>
+                                    <deckgo-reveal>
+                                        <span>Push API</span>
+                                    </deckgo-reveal>
+                                </figcaption>
+                            </figure>
+                        </div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/small-lego.jpeg')"
-                        class="bg-img"
-                    >
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content
-                        style="--background:center no-repeat url('assets/img/business.png')"
                         class="bg-img"
                     >
                     </deckgo-slide-content>
@@ -681,330 +604,6 @@
 
                     <!-- #endregion principles -->
 
-                    <!-- #region Basis -->
-
-                    <deckgo-slide-title class="subchapter-title-slide">
-                        <div slot="content">
-                            <img
-                                slot="title"
-                                src="assets/img/basics.jpeg"
-                                height="500px"
-                            />
-                        </div>
-                    </deckgo-slide-title>
-
-                    <deckgo-slide-content class="fire-icons">
-                        <!-- TODO: propose a deckgo-hide component & merge this slide with the previous one -->
-                        <h1 slot="title" hidden>F.I.R.E.</h1>
-                        <div slot="content" class="img-row fill">
-                            <figure>
-                                <img
-                                    data-src="assets/icons/fast.svg"
-                                    style="background: #dd311f"
-                                />
-                                <figcaption>
-                                    <deckgo-reveal>
-                                        <span>App Shell</span>
-                                    </deckgo-reveal>
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <img
-                                    data-src="assets/icons/add_to_home_screen.svg"
-                                    style="background: #249f5a"
-                                />
-                                <figcaption>
-                                    <deckgo-reveal>
-                                        <span>Manifest</span>
-                                    </deckgo-reveal>
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <img
-                                    data-src="assets/icons/check_circle_outline.svg"
-                                    style="background: #314ffe"
-                                />
-                                <figcaption>
-                                    <deckgo-reveal>
-                                        <span>Service Worker</span>
-                                    </deckgo-reveal>
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <img
-                                    data-src="assets/icons/touch.svg"
-                                    style="background: #773f9b"
-                                />
-                                <figcaption>
-                                    <deckgo-reveal>
-                                        <span>Push API</span>
-                                    </deckgo-reveal>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </deckgo-slide-content>
-
-                    <!-- #region App Shell -->
-
-                    <deckgo-slide-content>
-                        <h1 slot="title" hidden>App Shell</h1>
-                        <figure slot="content">
-                            <img
-                                data-src="assets/img/basis/appshell.png"
-                                alt="Application Shell architecture"
-                            />
-                        </figure>
-                    </deckgo-slide-content>
-
-                    <!-- #endregion App Shell -->
-
-                    <!-- #region A2HS -->
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">Manifest</h1>
-                        <div slot="content" class="ciu-wrapper">
-                            <p
-                                class="ciu_embed"
-                                data-feature="web-app-manifest"
-                                data-periods="future_1,current,past_1,past_2"
-                                data-accessible-colours="false"
-                            >
-                                <a
-                                    href="http://caniuse.com/#feat=web-app-manifest"
-                                    >Can I Use web-app-manifest?</a
-                                >
-                                Data on support for the web-app-manifest feature
-                                across the major browsers from caniuse.com.
-                            </p>
-                        </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">A2HS is supported by</h1>
-                        <deckgo-reveal
-                            slot="content"
-                            class="center"
-                            style="font-size: 2em"
-                        >
-                            <div>
-                                <ion-icon
-                                    alt="Firefox"
-                                    slot="icon"
-                                    src="assets/logos/firefox.svg"
-                                ></ion-icon
-                                ><ion-icon
-                                    name="phone-portrait"
-                                    alt="mobile"
-                                ></ion-icon>
-                            </div>
-                            <div>
-                                <ion-icon
-                                    alt="Chrome"
-                                    slot="icon"
-                                    src="assets/logos/chrome.svg"
-                                ></ion-icon
-                                ><ion-icon
-                                    name="phone-portrait"
-                                    alt="mobile"
-                                ></ion-icon>
-                                <ion-icon
-                                    name="desktop"
-                                    alt="desktop"
-                                ></ion-icon>
-                            </div>
-                            <div>
-                                <ion-icon
-                                    alt="edge beta"
-                                    slot="icon"
-                                    src="assets/logos/edge-beta.svg"
-                                ></ion-icon
-                                ><ion-icon
-                                    name="phone-portrait"
-                                    alt="mobile"
-                                ></ion-icon>
-                                <ion-icon
-                                    name="desktop"
-                                    alt="desktop"
-                                ></ion-icon>
-                            </div>
-                        </deckgo-reveal>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">A2HS Support - WIP</h1>
-                        <deckgo-reveal
-                            slot="content"
-                            class="center"
-                            style="font-size: 2em"
-                        >
-                            <div style="margin-top: 1em">
-                                <ion-icon
-                                    name="bug"
-                                    alt="bug"
-                                    margin-end
-                                ></ion-icon>
-                                <ion-icon
-                                    alt="Firefox"
-                                    slot="icon"
-                                    src="assets/logos/firefox.svg"
-                                ></ion-icon
-                                ><ion-icon
-                                    name="desktop"
-                                    alt="desktop"
-                                    margin-end
-                                ></ion-icon>
-                            </div>
-                            <div>Since oct. '17</div>
-                            <div>P3 - Oct. 10, '19</div>
-                        </deckgo-reveal>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">A2HS Support - 🤦</h1>
-                        <deckgo-reveal
-                            slot="content"
-                            class="center"
-                            style="font-size: 2em"
-                        >
-                            <div>
-                                <ion-icon
-                                    alt="Safari"
-                                    slot="icon"
-                                    src="assets/logos/safari.svg"
-                                    margin-end
-                                ></ion-icon>
-                            </div>
-                            <div>
-                                <ion-icon
-                                    alt="conspiracy"
-                                    slot="icon"
-                                    src="assets/icons/illuminati.svg"
-                                    margin-end
-                                ></ion-icon>
-                            </div>
-                            <div>
-                                <ion-icon
-                                    alt="Firefox"
-                                    slot="icon"
-                                    src="assets/logos/firefox.svg"
-                                ></ion-icon>
-                                <ion-icon
-                                    alt="iOS"
-                                    slot="icon"
-                                    src="assets/logos/ios.svg"
-                                    margin-end
-                                ></ion-icon>
-                                <ion-icon
-                                    alt="Chrome"
-                                    slot="icon"
-                                    src="assets/logos/chrome.svg"
-                                ></ion-icon>
-                                <ion-icon
-                                    alt="iOS"
-                                    slot="icon"
-                                    src="assets/logos/ios.svg"
-                                ></ion-icon>
-                            </div>
-                        </deckgo-reveal>
-                    </deckgo-slide-content>
-
-                    <!-- #endregion A2HS -->
-
-                    <!-- #region SW -->
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">SW support</h1>
-                        <div slot="content" class="ciu-wrapper">
-                            <p
-                                class="ciu_embed"
-                                data-feature="serviceworkers"
-                                data-periods="future_1,current,past_1,past_2"
-                                data-accessible-colours="false"
-                            >
-                                <a
-                                    href="http://caniuse.com/#feat=serviceworkers"
-                                    >Can I Use serviceworkers?</a
-                                >
-                                Data on support for the serviceworkers feature
-                                across the major browsers from caniuse.com.
-                            </p>
-                            <p style="text-align: center">
-                                <a
-                                    href="https://jakearchibald.github.io/isserviceworkerready/"
-                                    >Is Service Worker Ready ?</a
-                                >
-                            </p>
-                        </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content
-                        style="--background:center no-repeat url('assets/img/basis/service-worker.svg')"
-                        class="bg-img"
-                    >
-                    </deckgo-slide-content>
-
-                    <!-- #endregion SW -->
-
-                    <!-- #region Push Notifications -->
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">Push API</h1>
-                        <div slot="content" class="ciu-wrapper">
-                            <p
-                                class="ciu_embed"
-                                data-feature="push-api"
-                                data-periods="future_1,current,past_1,past_2"
-                                data-accessible-colours="false"
-                            >
-                                <a href="http://caniuse.com/#feat=push-api"
-                                    >Can I Use push-api?</a
-                                >
-                                Data on support for the push-api feature across
-                                the major browsers from caniuse.com.
-                            </p>
-                        </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">Notification API</h1>
-                        <div slot="content" class="ciu-wrapper">
-                            <p
-                                class="ciu_embed"
-                                data-feature="notifications"
-                                data-periods="future_1,current,past_1,past_2"
-                                data-accessible-colours="false"
-                            >
-                                <a href="http://caniuse.com/#feat=notifications"
-                                    >Can I Use notifications?</a
-                                >
-                                Data on support for the notifications feature
-                                across the major browsers from caniuse.com.
-                            </p>
-                        </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content
-                        style="--background:center no-repeat url('assets/img/basis/push/browser-to-server.svg')"
-                        class="bg-img"
-                    >
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content
-                        style="--background:center no-repeat url('assets/img/basis/push/server-to-push-service.svg')"
-                        class="bg-img"
-                    >
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content
-                        style="--background:center no-repeat url('assets/img/basis/push/push-service-to-sw-event.svg')"
-                        class="bg-img"
-                    >
-                    </deckgo-slide-content>
-
-                    <!-- #endregion Push Notifications -->
-
-                    <!-- #endregion Basis -->
-
                     <deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/cleaning-confetti.jpg')"
                         class="bg-img"
@@ -1017,21 +616,6 @@
                     <!-- #endregion PWA-->
 
                     <!-- #region standardization -->
-
-                    <deckgo-slide-title class="chapter-title-slide">
-                        <h1 slot="title">Keeping Up!</h1>
-                    </deckgo-slide-title>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">Methodology</h1>
-                        <ol slot="content">
-                            <deckgo-reveal>
-                                <li>watch & discuss</li>
-                                <li>experiment & give feedbacks</li>
-                                <li>release (beta) feature</li>
-                            </deckgo-reveal>
-                        </ol>
-                    </deckgo-slide-content>
 
                     <!-- #region W3C -->
 
@@ -1049,157 +633,9 @@
                         </figure>
                     </deckgo-slide-content>
 
-                    <deckgo-slide-content>
-                        <h1 slot="title">W3C Process</h1>
-                        <div slot="content" style="width: 100%;">
-                            <img
-                                src="assets/img/w3c-process.svg"
-                                width="100%"
-                                style="max-width: 1400px"
-                                ;
-                            />
-                        </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <div slot="content" class="flex-row imgs-list">
-                            <img
-                                data-src="assets/logos/mozilla.svg"
-                                alt="mozilla"
-                            />
-                            <img
-                                data-src="assets/logos/google.svg"
-                                alt="google"
-                            />
-                            <img
-                                data-src="assets/logos/apple.svg"
-                                alt="apple"
-                            />
-                            <img
-                                data-src="assets/logos/opera.svg"
-                                alt="opera"
-                            />
-                            <img data-src="assets/logos/ibm.svg" alt="ibm" />
-                            <img
-                                data-src="assets/logos/oracle.svg"
-                                alt="oracle"
-                            />
-                            <img
-                                data-src="assets/logos/microsoft.svg"
-                                alt="microsoft"
-                            />
-                            <img
-                                data-src="assets/logos/univ-lyon.png"
-                                alt="université de lyon"
-                            />
-                            <img data-src="assets/logos/sony.svg" alt="sony" />
-                            <img
-                                data-src="assets/logos/netflix.svg"
-                                alt="netflix"
-                            />
-                            <img
-                                data-src="assets/logos/facebook.svg"
-                                alt="facebook"
-                            />
-                            <img
-                                data-src="assets/logos/adobe.svg"
-                                alt="adobe"
-                            />
-                            <img
-                                data-src="assets/logos/paypal.svg"
-                                alt="paypal"
-                            />
-                            <img
-                                data-src="assets/logos/amazon.svg"
-                                alt="amazon"
-                            />
-                        </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-title
-                        style="--background:center no-repeat url('assets/img/so-it-begins.jpg')"
-                        class="bg-img subchapter-title-slide"
-                    >
-                        <h1 slot="title" class="meme-title">So it begins</h1>
-                    </deckgo-slide-title>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">1997-1999</h1>
-                        <ul slot="content">
-                            <deckgo-reveal>
-                                <li>HTML 3.2 & 4</li>
-                                <li>W3C stops HTML evolution</li>
-                                <li>HTML 4.01</li>
-                            </deckgo-reveal>
-                        </ul>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">1998 - 2004</h1>
-                        <ul slot="content">
-                            <deckgo-reveal>
-                                <li>un-standardized HTML APIs</li>
-                                <li>
-                                    👉 DOM standard
-                                </li>
-                            </deckgo-reveal>
-                        </ul>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">2003: XForms</h1>
-                        <figure slot="content">
-                            <img src="assets/img/yahoo-xforms.png" />
-                        </figure>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">2004</h1>
-                        <ul slot="content">
-                            <deckgo-reveal>
-                                <li>
-                                    W3C close DOM WG
-                                </li>
-                                <li>
-                                    W3C reject the proposal to reopen HTML's
-                                    evolution
-                                </li>
-                            </deckgo-reveal>
-                        </ul>
-                    </deckgo-slide-content>
-
                     <!-- #endregion W3C -->
 
                     <!-- #region WHATWG -->
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">What was needed</h1>
-                        <ul slot="content">
-                            <deckgo-reveal>
-                                <li>backward compatibility</li>
-                                <li>matching implementations</li>
-                                <li>details</li>
-                            </deckgo-reveal>
-                        </ul>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-title>
-                        <h1
-                            slot="title"
-                            style="color: #005A9C; font: sans-serif; text-decoration: line-through red"
-                        >
-                            XHTML™ 2.0
-                        </h1>
-                    </deckgo-slide-title>
-
-                    <deckgo-slide-title>
-                        <h1 slot="title">
-                            HTML4 + XHTML1 + DOM2 HTML
-                        </h1>
-                        <h2 slot="content">
-                            & more!
-                        </h2>
-                    </deckgo-slide-title>
 
                     <deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/open.jpg')"
@@ -1249,83 +685,9 @@
                     >
                     </deckgo-slide-content>
 
-                    <deckgo-slide-content>
-                        <h1 slot="title">Controversies</h1>
-                        <div slot="content" style="width: 100%">
-                            <deckgo-reveal>
-                                <div style="text-align: center">
-                                    <h2
-                                        style="
-                                                    font: 100% sans-serif;
-                                                    color: #005A9C;
-                                                    font-weight: bold;
-                                                    margin: 0;
-                                                    padding: 0;
-                                                    font-size: 220%;"
-                                    >
-                                        Encrypted Media Extensions
-                                    </h2>
-                                    <h3
-                                        style="
-                                                    font: 100% sans-serif;
-                                                    color: #005A9C;
-                                                    font-size: 140%;
-                                                    margin: 0;
-                                                    padding: 0;"
-                                    >
-                                        W3C Recommendation, 14 December 2017
-                                    </h3>
-                                </div>
-                                <div class="img-small-line">
-                                    <figure>
-                                        <img
-                                            data-src="assets/logos/netflix.svg"
-                                            alt="netflix"
-                                        />
-                                    </figure>
-                                    <figure>
-                                        <img
-                                            data-src="assets/logos/youtube.svg"
-                                            alt="youtube"
-                                        />
-                                    </figure>
-                                </div>
-                                <div class="img-small-line">
-                                    <figure>
-                                        <img
-                                            data-src="assets/logos/mozilla.svg"
-                                            alt="mozilla"
-                                        />
-                                    </figure>
-                                    <figure>
-                                        <img
-                                            data-src="assets/logos/fsf.svg"
-                                            alt="fsf"
-                                        />
-                                    </figure>
-                                    <figure>
-                                        <img
-                                            data-src="assets/logos/eff.svg"
-                                            alt="eff"
-                                        />
-                                    </figure>
-                                </div>
-                            </deckgo-reveal>
-                        </div>
-                    </deckgo-slide-content>
-
                     <!-- #endregion W3C w/ WHATWG -->
 
                     <!-- #region TC39 -->
-
-                    <deckgo-slide-title
-                        class="subchapter-title-slide bg-img"
-                        style="--background:center no-repeat url('assets/img/columbo.jpeg') #fcc21b"
-                    >
-                        <h1 slot="title" class="meme-title">
-                            Ohh... just one more thing...
-                        </h1>
-                    </deckgo-slide-title>
 
                     <deckgo-slide-content>
                         <figure slot="content" class="flex flex-center">
@@ -1339,42 +701,6 @@
                                 alt="TC39 logo"
                             />
                         </figure>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">TC39 Process</h1>
-                        <ul slot="content" class="reveal-list">
-                            <deckgo-reveal>
-                                <li>
-                                    review at TC39 Meeting 👉
-                                    <span class="square"
-                                        >Stage 0: Strawman</span
-                                    >
-                                </li>
-                                <li>
-                                    pick champions 👉
-                                    <span class="square"
-                                        >Stage 1: Proposal</span
-                                    >
-                                </li>
-                                <li>
-                                    first spec text 👉
-                                    <span class="square">Stage 2: Draft</span>
-                                </li>
-                                <li>
-                                    spec complete 👉
-                                    <span class="square"
-                                        >Stage 3: Candidate</span
-                                    >
-                                </li>
-                                <li>
-                                    test 262 👉
-                                    <span class="square"
-                                        >Stage 4: Finished</span
-                                    >
-                                </li>
-                            </deckgo-reveal>
-                        </ul>
                     </deckgo-slide-content>
 
                     <!-- #endregion TC39 -->
@@ -1416,12 +742,6 @@
                     </deckgo-slide-content>
 
                     <!-- #endregion Browsers -->
-
-                    <deckgo-slide-title
-                        class="subchapter-title-slide bg-img"
-                        style="--background:center no-repeat url('assets/img/in-conclusion.jpg') #fcc21b"
-                    >
-                    </deckgo-slide-title>
 
                     <deckgo-slide-content>
                         <h1 slot="title">Methodology</h1>
@@ -1485,25 +805,9 @@
 
                     <!-- #endregion standardization -->
 
-                    <deckgo-slide-content
-                        style="--background:center no-repeat url('assets/img/question.jpeg')"
-                        class="bg-img"
-                    >
-                    </deckgo-slide-content>
-                    <deckgo-slide-content
-                        style="--background:center no-repeat url('assets/img/break.jpeg')"
-                        class="bg-img"
-                    >
-                    </deckgo-slide-content>
-
                     <!-- #endregion Past & Present -->
 
                     <!-- #region Future -->
-
-                    <deckgo-slide-title class="dark">
-                        <h1 slot="title">Part 2</h1>
-                        <h2 slot="content">The future 🧙‍♂️🔮</h2>
-                    </deckgo-slide-title>
 
                     <deckgo-slide-content>
                         <h1 slot="title">tendencies</h1>
@@ -1526,10 +830,6 @@
                     </deckgo-slide-title>
 
                     <!-- #region A2HS -->
-                    <deckgo-slide-title class="subchapter-title-slide">
-                        <h1 slot="title">A2HS</h1>
-                        <h2 slot="content">a new approach</h2>
-                    </deckgo-slide-title>
 
                     <deckgo-slide-content>
                         <h1 slot="title">The mini-infobar</h1>
@@ -1545,19 +845,6 @@
                                 <p>becomes annoying</p>
                             </deckgo-reveal>
                         </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title" hidden>Prevent mini-infobar</h1>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/prevent-infobar.js"
-                                highlight-lines="2,3"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>Prevent mini-infobar</div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-video
@@ -1580,8 +867,8 @@
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
-                        <h1 slot="title">App Patterns</h1>
-                        <div slot="content" class="img-row">
+                        <h1 slot="title">Patterns</h1>
+                        <deckgo-reveal slot="content" class="img-row">
                             <div class="img-container">
                                 <img
                                     data-src="assets/img/install-promo/header.png"
@@ -1594,28 +881,7 @@
                             </div>
                             <div class="img-container">
                                 <img
-                                    data-src="assets/img/install-promo/landing.png"
-                                />
-                            </div>
-                            <div class="img-container">
-                                <img
-                                    data-src="assets/img/install-promo/banner.png"
-                                />
-                            </div>
-                        </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">Inline Patterns</h1>
-                        <div slot="content" class="img-row">
-                            <div class="img-container">
-                                <img
                                     data-src="assets/img/install-promo/in-feed.png"
-                                />
-                            </div>
-                            <div class="img-container">
-                                <img
-                                    data-src="assets/img/install-promo/journey.png"
                                 />
                             </div>
                             <div class="img-container">
@@ -1623,33 +889,15 @@
                                     data-src="assets/img/install-promo/sign-up.png"
                                 />
                             </div>
-                        </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">Special Patterns</h1>
-                        <div slot="content" class="img-row">
-                            <div class="img-container">
-                                <img
-                                    data-src="assets/img/install-promo/plp.png"
-                                />
-                            </div>
-                            <div class="img-container">
-                                <img
-                                    data-src="assets/img/install-promo/game-over.png"
-                                />
-                            </div>
-                        </div>
+                        </deckgo-reveal>
                     </deckgo-slide-content>
 
                     <!-- #endregion A2HS -->
 
                     <!-- #region app-gap -->
-                    <deckgo-slide-title class="subchapter-title-slide">
-                        <h1 slot="title">Closing the App Gap</h1>
-                    </deckgo-slide-title>
 
                     <deckgo-slide-content>
+                        <h1 slot="title">Closing the App Gap</h1>
                         <div slot="content" class="img-row">
                             <img
                                 data-src="assets/img/capabilities-process.jpg"
@@ -1680,191 +928,6 @@
                             <p>Wake Lock API</p>
                         </deckgo-reveal>
                     </deckgo-slide-split>
-
-                    <!-- #region Async Clipboard API -->
-
-                    <deckgo-slide-title class="topic-title-slide">
-                        <h1 slot="title">Async Clipboard API</h1>
-                    </deckgo-slide-title>
-
-                    <deckgo-slide-code
-                        src="assets/code-samples/app-gap/clipboard-sum.js"
-                    >
-                        <h1 slot="title">From specific to generic</h1>
-                    </deckgo-slide-code>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">Current Limitations w/ images</h1>
-                        <ul slot="content" class="reveal-list">
-                            <deckgo-reveal>
-                                <li>Chrome 76+ only</li>
-                                <li>PNG only</li>
-                                <li>only one ClipboardItem</li>
-                            </deckgo-reveal>
-                        </ul>
-                    </deckgo-slide-content>
-
-                    <!-- #region Web Share Target-->
-
-                    <deckgo-slide-title class="topic-title-slide">
-                        <h1 slot="title">Web Share Target</h1>
-                    </deckgo-slide-title>
-
-                    <deckgo-slide-code
-                        language="javascript"
-                        src="assets/code-samples/app-gap/web-share.js"
-                    >
-                        <h1 slot="title">Web Share API</h1>
-                    </deckgo-slide-code>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">web-share - support</h1>
-                        <div slot="content" class="ciu-wrapper">
-                            <p
-                                class="ciu_embed"
-                                data-feature="web-share"
-                                data-periods="future_1,current,past_1,past_2"
-                                data-accessible-colours="false"
-                            >
-                                <a href="http://caniuse.com/#feat=web-share"
-                                    >Can I Use web-share?</a
-                                >
-                                Data on support for the web-share feature across
-                                the major browsers from caniuse.com.
-                            </p>
-                        </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">Web Share Target</h1>
-                        <figure slot="content">
-                            <img
-                                src="assets/img/app-gap/webshare.png"
-                                style="max-height:300px"
-                            />
-                            <figcaption>
-                                Share <span class="strong">to</span> a Web App
-                            </figcaption>
-                        </figure>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-split>
-                        <h1 slot="title">Demo</h1>
-                        <div slot="start">
-                            <h2>Share a text</h2>
-                            <ion-button expand="full" class="share-btn-slides"
-                                >Simple Tweet<ion-icon
-                                    slot="end"
-                                    name="share"
-                                ></ion-icon
-                            ></ion-button>
-                            <h2>Share an image</h2>
-                            <ion-button expand="full" class="copy-btn-camera"
-                                >text
-                                <ion-icon slot="end" name="copy"></ion-icon
-                            ></ion-button>
-                            <ion-button expand="full" class="share-btn-picture"
-                                >Picture<ion-icon
-                                    slot="end"
-                                    name="share"
-                                ></ion-icon
-                            ></ion-button>
-                        </div>
-                        <div slot="end">
-                            <h2>Copy an image</h2>
-                            <ion-button
-                                expand="full"
-                                class="share-btn-clipboardpic"
-                                >tweet<ion-icon
-                                    slot="end"
-                                    name="share"
-                                ></ion-icon
-                            ></ion-button>
-                            <ion-button expand="full" class="copy-btn-img"
-                                >image<ion-icon
-                                    slot="end"
-                                    name="copy"
-                                ></ion-icon
-                            ></ion-button>
-                        </div>
-                        <script src="assets/code-samples/copy-share-twitter.js"></script>
-                    </deckgo-slide-split>
-
-                    <deckgo-slide-code
-                        src="assets/code-samples/app-gap/share-target-manifest.json"
-                    >
-                        <h1 slot="title">Manifest</h1>
-                    </deckgo-slide-code>
-
-                    <deckgo-slide-code
-                        src="assets/code-samples/app-gap/share-target-handling.js"
-                    >
-                        <h1 slot="title">Handling</h1>
-                    </deckgo-slide-code>
-
-                    <!-- #endregion Web Share Target -->
-
-                    <!-- #endregion Async Clipboard API -->
-
-                    <!-- #region Badging API -->
-
-                    <deckgo-slide-title class="topic-title-slide">
-                        <h1 slot="title">Badging API</h1>
-                    </deckgo-slide-title>
-
-                    <deckgo-slide-split>
-                        <h1 slot="title">Behavior</h1>
-                        <div slot="start" style="width: 100%;">
-                            <h2>Initial/Clear</h2>
-                            <img
-                                src="assets/img/app-gap/badge-clear.png"
-                                height="200px"
-                            />
-                        </div>
-                        <div slot="end" style="width: 100%;">
-                            <h2>Set</h2>
-                            <img
-                                src="assets/img/app-gap/badge.png"
-                                height="200px"
-                            />
-                        </div>
-                    </deckgo-slide-split>
-
-                    <deckgo-slide-code
-                        src="assets/code-samples/app-gap/badge-v1.js"
-                    >
-                        <h1 slot="title">API</h1>
-                    </deckgo-slide-code>
-
-                    <deckgo-slide-code
-                        src="assets/code-samples/app-gap/set-badge-v2.js"
-                    >
-                        <h1 slot="title">V2 - set</h1>
-                    </deckgo-slide-code>
-
-                    <deckgo-slide-code
-                        src="assets/code-samples/app-gap/clear-badge-v2.js"
-                    >
-                        <h1 slot="title">V2 - clear</h1>
-                    </deckgo-slide-code>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">⚠️ Support</h1>
-                        <ul slot="content" class="reveal-list">
-                            <deckgo-reveal>
-                                <li>Only available in Chrome</li>
-                                <li>
-                                    behind
-                                    <code
-                                        >#enable-experimental-web-platform-features</code
-                                    >
-                                </li>
-                                <li>on Windows & macOS</li>
-                            </deckgo-reveal>
-                        </ul>
-                    </deckgo-slide-content>
-
-                    <!-- #endregion Badging API -->
 
                     <!-- #endregion app-gap -->
 
@@ -1913,37 +976,6 @@ above I already force `highest` priority for my default light experience).
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
-                        <h1 slot="title">
-                            prefers-color-scheme - demo
-                        </h1>
-                        <div class="dark-demo" slot="content">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore
-                            eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum.
-                        </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title" hidden>
-                            prefers-color-scheme - demo
-                        </h1>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/mq5/dark/demos.css"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show></div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
                         <h1 slot="title" hidden>
                             prefers-color-scheme - variables
                         </h1>
@@ -1955,67 +987,6 @@ above I already force `highest` priority for my default light experience).
                         </div>
                         <!-- prettier-ignore -->
                         <div slot="notes" show></div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">prefers-color-scheme - support</h1>
-                        <div slot="content" class="ciu-wrapper">
-                            <p
-                                class="ciu_embed"
-                                data-feature="prefers-color-scheme"
-                                data-periods="future_1,current,past_1,past_2"
-                                data-accessible-colours="false"
-                            >
-                                <a
-                                    href="http://caniuse.com/#feat=prefers-color-scheme"
-                                    >Can I Use prefers-color-scheme?</a
-                                >
-                                Data on support for the prefers-color-scheme
-                                feature across the major browsers from
-                                caniuse.com.
-                            </p>
-                        </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>Wrong: enabled in Chrome for Android 76</div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title" hidden>
-                            prefers-color-scheme - fallback
-                        </h1>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/mq5/dark/fallback.html"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>
-If `prefers-color-scheme` is not supported, fall
-back to light mode. In this case, light.css will be
-downloaded with `highest` priority.
-                        </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">color-scheme</h1>
-                        <div slot="content" class="img-row fill">
-                            <div class="img-container">
-                                <img
-                                    data-src="assets/img/color-scheme-avoid-transformation.png"
-                                />
-                            </div>
-                            <div class="img-container">
-                                <img
-                                    data-src="assets/img/color-scheme-ua-default.png"
-                                />
-                            </div>
-                        </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>
-Left: glaring and without transformations.
-Right: the easier-on-the-eyes UA default
-                        </div>
                     </deckgo-slide-content>
 
                     <!-- #endregion Dark Mode -->
@@ -2056,40 +1027,19 @@ Right: the easier-on-the-eyes UA default
                         <div slot="notes" show></div>
                     </deckgo-slide-content>
 
-                    <deckgo-slide-content>
-                        <h1 slot="title">prefers-reduced-motion</h1>
-                        <div slot="content" class="ciu-wrapper">
-                            <p
-                                class="ciu_embed"
-                                data-feature="prefers-reduced-motion"
-                                data-periods="future_1,current,past_1,past_2"
-                                data-accessible-colours="false"
-                            >
-                                <a
-                                    href="http://caniuse.com/#feat=prefers-reduced-motion"
-                                    >Can I Use prefers-reduced-motion?</a
-                                >
-                                Data on support for the prefers-reduced-motion
-                                feature across the major browsers from
-                                caniuse.com.
-                            </p>
-                        </div>
-                        <div slot="notes" show></div>
-                    </deckgo-slide-content>
-
                     <!-- TODO: add prefers-reduced-motion example -->
 
                     <deckgo-slide-content>
                         <h1 slot="title">other media queries</h1>
                         <div slot="content" class="center" style="width: 100%">
-                            <deckgo-reveal style="text-align: center">
+                            <div style="text-align: center">
                                 <p>prefers-reduced-transparency</p>
                                 <p>prefers-contrast</p>
                                 <p>prefers-color-scheme</p>
                                 <p>scripting</p>
                                 <p>light-level</p>
                                 <p>forced-colors</p>
-                            </deckgo-reveal>
+                            </div>
                         </div>
                         <div slot="notes" show></div>
                     </deckgo-slide-content>
@@ -2165,280 +1115,15 @@ Right: the easier-on-the-eyes UA default
                         <div slot="notes" show></div>
                     </deckgo-slide-content>
 
-                    <deckgo-slide-content>
-                        <h1 slot="title">Chrome Status</h1>
-                        <div slot="content" class="img-row fill">
-                            <div class="img-container">
-                                <img
-                                    data-src="assets/img/chromestatus/import-maps.png"
-                                />
-                            </div>
-                            <div class="img-container">
-                                <img
-                                    data-src="assets/img/chromestatus/import-maps-consensus.png"
-                                />
-                            </div>
-                        </div>
-                        <div slot="notes">Chrome Status</div>
-                    </deckgo-slide-content>
+                    <deckgo-slide-title class="dark">
+                        <h1 slot="title">One more thing...</h1>
+                    </deckgo-slide-title>
 
-                    <!-- #endregion import-maps -->
-
-                    <!-- #region built-in modules -->
-
-                    <deckgo-slide-content class="subchapter-title-slide">
-                        <h2 slot="title" style="text-align: center">
-                            built-in modules
-                        </h2>
-                        <div
-                            slot="content"
-                            style="width: 100%; text-align: center"
-                        >
-                            <img data-src="assets/img/pay-as-you-go.jpg" />
-                        </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>BUILT-IN MODULES</div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">KV Storage</h1>
-                        <div
-                            slot="content"
-                            style="width: 100%; text-align: center"
-                        >
-                            <deckgo-highlight-code language="javascript">
-                                <!-- prettier-ignore -->
-                                <code slot="code">
-                                    import storage, {StorageArea} from 'std:kv-storage';
-                                </code>
-                            </deckgo-highlight-code>
-                            <deckgo-reveal>
-                                <p>faster than localStorage API...</p>
-                                <p>easier than IndexDB</p>
-                                <p>
-                                    closer to Map & Chromium
-                                    <a
-                                        href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea"
-                                        >storage</a
-                                    >
-                                    API
-                                </p>
-                            </deckgo-reveal>
-                        </div>
-                        <div slot="notes" show></div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-code
-                        src="assets/code-samples/import-maps/polyfil.html"
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/cliffhanger.jpg')"
+                        class="bg-img"
                     >
-                        <h1 slot="title">Polyfill</h1>
-                    </deckgo-slide-code>
-
-                    <deckgo-slide-code
-                        src="assets/code-samples/import-maps/polyfil-import.html"
-                    >
-                        <h1 slot="title">Polyfill - Import</h1>
-                    </deckgo-slide-code>
-
-                    <!-- #endregion  built-in modules -->
-
-                    <!-- #region Web Components -->
-
-                    <deckgo-slide-content class="subchapter-title-slide">
-                        <figure slot="content" class="flex flex-center">
-                            <img
-                                src="assets/logos/wc.svg"
-                                alt="Web Components"
-                            />
-                            <deckgo-reveal>
-                                <figcaption>
-                                    Web Components
-                                </figcaption>
-                            </deckgo-reveal>
-                        </figure>
                     </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title" hidden>Custom Elements</h1>
-                        <figure slot="content" class="flex flex-center">
-                            <img
-                                data-src="assets/icons/web-components/custom-element.svg"
-                                alt="Custom Element"
-                            />
-                            <deckgo-reveal>
-                                <figcaption>
-                                    Custom Elements
-                                </figcaption>
-                            </deckgo-reveal>
-                        </figure>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>CUSTOM ELEMENTS</div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title" hidden>Shadow DOM</h1>
-                        <figure slot="content" class="flex flex-center">
-                            <img
-                                data-src="assets/icons/web-components/shadow-dom.svg"
-                                alt="Shadow DOM"
-                            />
-                            <deckgo-reveal>
-                                <figcaption>
-                                    Shadow DOM
-                                </figcaption>
-                            </deckgo-reveal>
-                        </figure>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>SHADOW DOM</div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title" hidden>ES Modules</h1>
-                        <figure slot="content" class="flex flex-center">
-                            <img
-                                data-src="assets/icons/web-components/es-module.svg"
-                                alt="ES Module"
-                            />
-                            <deckgo-reveal>
-                                <figcaption>
-                                    ES Modules
-                                </figcaption>
-                            </deckgo-reveal>
-                        </figure>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>ES MODULES</div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title" hidden>HTML Template</h1>
-                        <figure slot="content" class="flex flex-center">
-                            <img
-                                data-src="assets/icons/web-components/html-template.svg"
-                                alt="HTML Template"
-                            />
-                            <deckgo-reveal>
-                                <figcaption>
-                                    HTML Template
-                                </figcaption>
-                            </deckgo-reveal>
-                        </figure>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>HTML TEMPLATE</div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">Browser Support</h1>
-                        <wc-browser-table
-                            slot="content"
-                            style="width: 100%; max-height: 100%;"
-                        ></wc-browser-table>
-                    </deckgo-slide-content>
-
-                    <!-- #endregion Web Components -->
-
-                    <!-- #region Built-in elements -->
-
-                    <deckgo-slide-content>
-                        <h2 slot="title" style="text-align: center">
-                            built-in elements
-                        </h2>
-                        <div
-                            slot="content"
-                            style="width: 100%; text-align: center"
-                        >
-                            <img data-src="assets/img/pay-as-you-go.jpg" />
-                        </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>DECIDE</div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">Virtual Scroller</h1>
-                        <div slot="content" style="height: 100%; width: 100%;">
-                            <iframe
-                                src="https://fergald.github.io/virtual-scroller-demos/demo/loadmore.html"
-                                class="demo"
-                                width="100%"
-                                height="100%"
-                            ></iframe>
-                        </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-code
-                        src="assets/code-samples/virtual-scroller/virtual-scroller.html"
-                    >
-                        <!-- htmlmin:ignore -->
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>
-The &lt;virtual-scroller&gt; will manage the
-rendering of its children. It will prioritize
-rendering things that are in the viewport and not
-render children that are far away, such that we are
-only paying as little rendering cost as possible
-while still allowing them to work with find-in-page,
-accessibility features, focus navigation, fragment
-URL navigation, etc.
-                        </div>
-                    </deckgo-slide-code>
-
-                    <deckgo-slide-code
-                        src="assets/code-samples/virtual-scroller/scroll.js"
-                    >
-                        <!-- htmlmin:ignore -->
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>
-You can add, remove, modify children of the &lt;virtual-scroller&gt; as you would
-a regular element, using DOM APIs.
-
-When the set of actually-rendered children is about to change,
-the &lt;virtual-scroller&gt; will fire a "rangechange" event with the
-new range of rendered children.
-                        </div>
-                    </deckgo-slide-code>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">Switch</h1>
-                        <div slot="content" style="height: 100%; width: 100%;">
-                            <!-- <script type="module">
-                                import 'std:elements/switch';
-                            </script>
-
-                            <std-switch name="something"></std-switch> -->
-
-                            <iframe
-                                src="https://tkent-google.github.io/std-switch/demo.html"
-                                class="demo"
-                                width="100%"
-                                height="100%"
-                            ></iframe>
-                        </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-code
-                        src="assets/code-samples/std-switch.html"
-                    >
-                    </deckgo-slide-code>
-
-                    <deckgo-slide-code
-                        src="assets/code-samples/toast/toast.mjs"
-                    >
-                        <h1 slot="title" id="show-toast">
-                            <ion-button color="primary" style="float:left"
-                                >show toast</ion-button
-                            >Toast
-                        </h1>
-                        <script
-                            type="module"
-                            src="assets/code-samples/toast/toast.mjs"
-                        ></script>
-                    </deckgo-slide-code>
-
-                    <deckgo-slide-code
-                        src="assets/code-samples/toast/toast.html"
-                    >
-                    </deckgo-slide-code>
-
-                    <!-- #endregion Built-in elements -->
 
                     <!-- #endregion modular -->
 
@@ -2447,19 +1132,6 @@ new range of rendered children.
                     <!-- #region outro -->
 
                     <!-- #region Conclusion -->
-
-                    <deckgo-slide-title class="chapter-title-slide">
-                        <h1 slot="title">Conclusion</h1>
-                    </deckgo-slide-title>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title">Let's "wrap" this up</h1>
-                        <div slot="content" class="img-row">
-                            <div class="img-container">
-                                <img data-src="assets/img/wrapup.jpg" />
-                            </div>
-                        </div>
-                    </deckgo-slide-content>
 
                     <!-- #endregion Conclusion -->
 
