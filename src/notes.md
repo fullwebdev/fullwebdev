@@ -32,12 +32,20 @@ Standardization process, involving standardization authorities and integrators (
 
 > Web Hypertext Application Technology Working Group - [whatwg.org](https://whatwg.org/)
 
+##### Why it was created
+
+- [HTML living standard - History](https://html.spec.whatwg.org/multipage/introduction.html#history-2)
+- [XHTML™ 2.0 - introduction](https://www.w3.org/TR/2010/NOTE-xhtml2-20101216/introduction.html#s_intro)
+- [XForms archive on MDN](https://developer.mozilla.org/en-US/docs/Archive/Web/XForms)
+
 ##### How it works
 
 - [FAQ](https://whatwg.org/faq)
 - [Working Mode](https://whatwg.org/working-mode)
 - [Workstream Policy](https://whatwg.org/workstream-policy)
 - [Participate](https://github.com/whatwg/participate.whatwg.org)
+- [HTML Standard Contributor Guidelines](https://github.com/whatwg/html/blob/master/CONTRIBUTING.md)
+- [Contributor Guidelines](https://github.com/whatwg/meta/blob/master/CONTRIBUTING.md)
 
 Since May 2019, the [war is over](https://www.theregister.co.uk/2019/05/29/w3c_whatwg_working_on_one_html_dom_spec/)
 between the W3C and WHATWG!
@@ -74,7 +82,8 @@ July 2015: [Launch announcement](https://www.w3.org/blog/2015/07/wicg/)
 
 ##### How it works
 
-[Process](https://tc39.es/process-document/)
+- [Process](https://tc39.es/process-document/)
+- [Test 262](https://github.com/tc39/test262)
 
 ##### Contribute
 
