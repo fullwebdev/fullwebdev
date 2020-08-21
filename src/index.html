@@ -292,6 +292,23 @@
                 padding: 1em 1em;
             }
 
+            .img-small-line {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                align-items: center;
+                text-align: center;
+                flex-shrink: 1;
+                justify-content: space-around;
+                max-height: 200px;
+                margin: 1em;
+            }
+
+            .img-small-line > * {
+                flex: 0 1 300px;
+                margin: 0.5em;
+            }
+
             .imgs-list {
                 flex-wrap: wrap;
             }
@@ -1191,7 +1208,7 @@
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
-                        <h1 slot="title">Remaining Controversies</h1>
+                        <h1 slot="title">Controversies</h1>
                         <div slot="content" style="width: 100%">
                             <deckgo-reveal>
                                 <div style="text-align: center">
@@ -1209,35 +1226,47 @@
                                     <h3
                                         style="
                                                 font: 100% sans-serif;
-                                                line-height: 1.2;
                                                 color: #005A9C;
                                                 font-size: 140%;
-                                                margin-top: 0;
-                                                padding: 0;
-                                                margin-bottom: 1.5em;"
+                                                margin: 0;
+                                                padding: 0;"
                                     >
                                         W3C Recommendation, 14 December 2017
                                     </h3>
                                 </div>
-                                <div class="imgs-list flex-row">
-                                    <img
-                                        data-src="assets/logos/netflix.svg"
-                                        alt="netflix"
-                                    />
-                                    <img
-                                        data-src="assets/logos/youtube.svg"
-                                        alt="youtube"
-                                    />
+                                <div class="img-small-line">
+                                    <figure>
+                                        <img
+                                            data-src="assets/logos/netflix.svg"
+                                            alt="netflix"
+                                        />
+                                    </figure>
+                                    <figure>
+                                        <img
+                                            data-src="assets/logos/youtube.svg"
+                                            alt="youtube"
+                                        />
+                                    </figure>
                                 </div>
-                                <div class="imgs-list flex-row">
-                                    <img
-                                        data-src="assets/logos/fsf.svg"
-                                        alt="fsf"
-                                    />
-                                    <img
-                                        data-src="assets/logos/eff.svg"
-                                        alt="eff"
-                                    />
+                                <div class="img-small-line">
+                                    <figure>
+                                        <img
+                                            data-src="assets/logos/mozilla.svg"
+                                            alt="mozilla"
+                                        />
+                                    </figure>
+                                    <figure>
+                                        <img
+                                            data-src="assets/logos/fsf.svg"
+                                            alt="fsf"
+                                        />
+                                    </figure>
+                                    <figure>
+                                        <img
+                                            data-src="assets/logos/eff.svg"
+                                            alt="eff"
+                                        />
+                                    </figure>
                                 </div>
                             </deckgo-reveal>
                         </div>
