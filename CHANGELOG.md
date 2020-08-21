@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/noelmace/slides-wof-conf/compare/v1.3.0-rc.1...v1.3.0) (2019-12-07)
+
+
+### Features
+
+* add poss19 url and title ([c12c033](https://github.com/noelmace/slides-wof-conf/commit/c12c033c3a79552a6b501e915db135821bacde32))
+* countdown for poss19 ([201e146](https://github.com/noelmace/slides-wof-conf/commit/201e146554b31c6918080fb484db6a1938b8b20e))
+* summarize conclusion ([9ec05a9](https://github.com/noelmace/slides-wof-conf/commit/9ec05a91aba574c11e850dbd8d5f389ccd75060b))
+
+
+### Bug Fixes
+
+* remove useless requirements from deepdive ([a1eb080](https://github.com/noelmace/slides-wof-conf/commit/a1eb080f0dad4bdbd659b7a12c78b47acaa4ca30))
+* useless title-slide styles ([83c74da](https://github.com/noelmace/slides-wof-conf/commit/83c74da9c2a351d8324c0836e18d048557c1caa7))
+
 ## [1.3.0-rc.1](https://github.com/noelmace/slides-wof-conf/compare/v1.2.2...v1.3.0-rc.1) (2019-12-06)
 
 
