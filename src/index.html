@@ -288,15 +288,21 @@
                         <h1 slot="title">The Web is on 🔥 F.I.R.E. 🔥</h1>
                         <div slot="content">
                             <h3>Deep-dive</h3>
-                            <div style="margin-bottom: 1em">
+                            <!-- <div>
                                 <img
-                                    src="assets/logos/poss19.png"
-                                    alt="Paris Open Source Summit"
-                                    style="vertical-align: middle;"
+                                    src="assets/logos/[event-logo]"
+                                    alt="[event name]"
+                                    style="vertical-align: middle; margin-bottom: 0"
                                     height="100px"
                                 />
-                            </div>
-                            <deckgo-social twitter="noel_mace" class="hydrated"
+                                <p style="margin-top: 0; font-style: italic">
+                                    [event comment]
+                                </p>
+                            </div> -->
+                            <deckgo-social
+                                twitter="noel_mace"
+                                class="hydrated"
+                                style="margin-left: 32px"
                                 ><ion-icon
                                     alt="Noël on Twitter"
                                     slot="icon"
@@ -1007,7 +1013,7 @@ above I already force `highest` priority for my default light experience).
                     </deckgo-slide-content>
 
                     <deckgo-slide-qrcode
-                        content="https://poss19.wof.show"
+                        content="https://miniconf.wof.show"
                         style="--deckgo-qrcode-color-fill: black;"
                         class="resources-slide"
                     >
@@ -1029,7 +1035,7 @@ above I already force `highest` priority for my default light experience).
                                 @noel_mace</deckgo-social
                             >
                             <deckgo-social
-                                full-url="https://poss19.wof.show"
+                                full-url="https://miniconf.wof.show"
                                 class="hydrated"
                                 style="margin-left: 32px"
                                 ><ion-icon
@@ -1042,7 +1048,7 @@ above I already force `highest` priority for my default light experience).
                                     class="md hydrated"
                                     aria-label="logo twitter"
                                 ></ion-icon>
-                                poss19.wof.show</deckgo-social
+                                miniconf.wof.show</deckgo-social
                             >
                             <deckgo-social
                                 github="noelmace/slides-wof-conf"
