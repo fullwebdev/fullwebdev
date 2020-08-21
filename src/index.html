@@ -318,8 +318,21 @@
                 margin: 1em;
             }
 
+            figure[slot='content'] {
+                text-align: center;
+                margin: 0;
+                width: 100%;
+                padding: 1em;
+                max-height: 100%;
+            }
+
             figure[slot='content'] figcaption {
                 font-size: 2em;
+            }
+
+            figure[slot='content'] img {
+                max-width: 100%;
+                max-height: 100%;
             }
 
             .frame {
@@ -943,6 +956,246 @@
                                 </figcaption>
                             </figure>
                         </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title" hidden>App Shell</h1>
+                        <figure slot="content">
+                            <img
+                                data-src="assets/img/basis/appshell.png"
+                                alt="Application Shell architecture"
+                            />
+                        </figure>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">Manifest</h1>
+                        <div slot="content" class="ciu-wrapper">
+                            <p
+                                class="ciu_embed"
+                                data-feature="web-app-manifest"
+                                data-periods="future_1,current,past_1,past_2"
+                                data-accessible-colours="false"
+                            >
+                                <a
+                                    href="http://caniuse.com/#feat=web-app-manifest"
+                                    >Can I Use web-app-manifest?</a
+                                >
+                                Data on support for the web-app-manifest feature
+                                across the major browsers from caniuse.com.
+                            </p>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">A2HS Support</h1>
+                        <deckgo-reveal
+                            slot="content"
+                            class="center"
+                            style="font-size: 2em"
+                        >
+                            <ion-icon
+                                name="checkbox-outline"
+                                alt="OK"
+                                margin-end
+                            ></ion-icon>
+                            <div
+                                style="display: inline-block; margin-right: .5em"
+                            >
+                                <ion-icon
+                                    alt="Firefox"
+                                    slot="icon"
+                                    src="assets/logos/firefox.svg"
+                                ></ion-icon
+                                ><ion-icon
+                                    name="phone-portrait"
+                                    alt="mobile"
+                                ></ion-icon>
+                            </div>
+                            <div style="display: inline-block">
+                                <ion-icon
+                                    alt="Chrome"
+                                    slot="icon"
+                                    src="assets/logos/chrome.svg"
+                                ></ion-icon
+                                ><ion-icon
+                                    name="phone-portrait"
+                                    alt="mobile"
+                                ></ion-icon>
+                                <ion-icon
+                                    name="desktop"
+                                    alt="desktop"
+                                ></ion-icon>
+                            </div>
+                            <div
+                                style="display: inline-block; margin-left: .5em"
+                            >
+                                <ion-icon
+                                    alt="edge beta"
+                                    slot="icon"
+                                    src="assets/logos/edge-beta.svg"
+                                ></ion-icon
+                                ><ion-icon
+                                    name="phone-portrait"
+                                    alt="mobile"
+                                ></ion-icon>
+                                <ion-icon
+                                    name="desktop"
+                                    alt="desktop"
+                                ></ion-icon>
+                            </div>
+                            <div style="margin-top: 1em">
+                                <ion-icon
+                                    name="bug"
+                                    alt="bug"
+                                    margin-end
+                                ></ion-icon>
+                                <ion-icon
+                                    alt="Firefox"
+                                    slot="icon"
+                                    src="assets/logos/firefox.svg"
+                                ></ion-icon
+                                ><ion-icon
+                                    name="desktop"
+                                    alt="desktop"
+                                    margin-end
+                                ></ion-icon>
+                            </div>
+                            <div>Since oct. '17</div>
+                            <div>P3 - Oct. 10, '19</div>
+                            <div style="margin-top: 1em; display: inline-block">
+                                <ion-icon
+                                    alt="skull"
+                                    slot="icon"
+                                    src="assets/icons/skull.svg"
+                                    margin-end
+                                ></ion-icon>
+                            </div>
+                            <div style="margin-top: 1em; display: inline-block">
+                                <ion-icon
+                                    alt="Safari"
+                                    slot="icon"
+                                    src="assets/logos/safari.svg"
+                                    margin-end
+                                ></ion-icon>
+                            </div>
+                            <div style="margin-top: 1em; display: inline-block">
+                                <ion-icon
+                                    alt="conspiracy"
+                                    slot="icon"
+                                    src="assets/icons/illuminati.svg"
+                                    margin-end
+                                ></ion-icon>
+                            </div>
+                            <div style="margin-top: 1em; display: inline-block">
+                                <ion-icon
+                                    alt="Firefox"
+                                    slot="icon"
+                                    src="assets/logos/firefox.svg"
+                                ></ion-icon>
+                                <ion-icon
+                                    alt="iOS"
+                                    slot="icon"
+                                    src="assets/logos/ios.svg"
+                                    margin-end
+                                ></ion-icon>
+                                <ion-icon
+                                    alt="Chrome"
+                                    slot="icon"
+                                    src="assets/logos/chrome.svg"
+                                ></ion-icon>
+                                <ion-icon
+                                    alt="iOS"
+                                    slot="icon"
+                                    src="assets/logos/ios.svg"
+                                ></ion-icon>
+                            </div>
+                        </deckgo-reveal>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">SW support</h1>
+                        <div slot="content" class="ciu-wrapper">
+                            <p
+                                class="ciu_embed"
+                                data-feature="serviceworkers"
+                                data-periods="future_1,current,past_1,past_2"
+                                data-accessible-colours="false"
+                            >
+                                <a
+                                    href="http://caniuse.com/#feat=serviceworkers"
+                                    >Can I Use serviceworkers?</a
+                                >
+                                Data on support for the serviceworkers feature
+                                across the major browsers from caniuse.com.
+                            </p>
+                            <p style="text-align: center">
+                                <a
+                                    href="https://jakearchibald.github.io/isserviceworkerready/"
+                                    >Is Service Worker Ready ?</a
+                                >
+                            </p>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/basis/service-worker.svg')"
+                        class="bg-img"
+                    >
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">Push API</h1>
+                        <div slot="content" class="ciu-wrapper">
+                            <p
+                                class="ciu_embed"
+                                data-feature="push-api"
+                                data-periods="future_1,current,past_1,past_2"
+                                data-accessible-colours="false"
+                            >
+                                <a href="http://caniuse.com/#feat=push-api"
+                                    >Can I Use push-api?</a
+                                >
+                                Data on support for the push-api feature across
+                                the major browsers from caniuse.com.
+                            </p>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">Notification API</h1>
+                        <div slot="content" class="ciu-wrapper">
+                            <p
+                                class="ciu_embed"
+                                data-feature="notifications"
+                                data-periods="future_1,current,past_1,past_2"
+                                data-accessible-colours="false"
+                            >
+                                <a href="http://caniuse.com/#feat=notifications"
+                                    >Can I Use notifications?</a
+                                >
+                                Data on support for the notifications feature
+                                across the major browsers from caniuse.com.
+                            </p>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/basis/push/browser-to-server.svg')"
+                        class="bg-img"
+                    >
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/basis/push/server-to-push-service.svg')"
+                        class="bg-img"
+                    >
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/basis/push/push-service-to-sw-event.svg')"
+                        class="bg-img"
+                    >
                     </deckgo-slide-content>
 
                     <deckgo-slide-content

@@ -1,13 +1,149 @@
-# The Web is on :fire: F.I.R.E. :fire:
+# The Web is on :fire: FIRE :fire:
 
 > **:construction: Work In Progress :construction:**
 
-## F.I.R.E.
+## Introduction: PWA vs FIRE
 
-1. Fast
-2. Integrated
-3. Reliable
-4. Engaging
+Since the first list of what Progressive Web Apps (aka PWA) are [Alex Russel](https://infrequently.org/about-me/)
+introduced in his now famous blog post,
+[Progressive Web Apps:
+Escaping Tabs Without Losing Our Soul](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/),
+was to complicated to remember (see below), those where quickly reduced to just 4, and then 3 principles and technologies.
+
+> On Google Developers, when the PWA home page was created [in December 2015](https://web.archive.org/web/20151218101024/https://developers.google.com/web/progressive-web-apps/),
+> it included this long list of "what PWAs are" from Alex Russel's blog post:
+>
+> - Progressive - Work for every user, regardless of browser choice because they’re built with progressive enhancement as a core tenet.
+> - Responsive - Fit any form factor: desktop, mobile, tablet, or whatever is next.
+> - Connectivity independent - Enhanced with service workers to work offline or on low quality networks.
+> - App-like - Feel like an app to the user with app-style interactions and navigation because it's built on the app shell model.
+> - Fresh - Always up-to-date thanks to the service worker update process.
+> - Safe - Served via HTTPS to prevent snooping and ensure content hasn’t been tampered with.
+> - Discoverable - Are identifiable as “applications” thanks to W3C manifests and service worker registration scope allowing search engines to find them.
+> - Re-engageable - Make re-engagement easy through features like push notifications.
+Installable - Allow users to “keep” apps they find most useful on their home screen without the hassle of an app store.
+> - Linkable - Easily share via URL and not require complex installation.
+
+These 4 topics were (and still are):
+
+- the App Shell approach, for better [First Miningful Paint](https://developers.google.com/web/tools/lighthouse/audits/first-meaningful-paint) score
+- Web App Manifests, for [a2hs](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen) & discoverability
+- Service Workers, for network reliability
+- Push Notifications, for re-engagement
+
+In order to help people remember those four topics, Google used for some times the acronym "FIRE" as a mnemonic of the
+4 pillars of PWAs and Web Apps quality (check out, for example, the [PWA Roadshow playlist on Youtube](https://www.youtube.com/playlist?list=PLNYkxOF6rcICnIOm4cfylT0-cEfytBtYt)).
+
+> FIRE stand for:
+>
+> 1. Fast
+> 2. Integrated
+> 3. Reliable
+> 4. Engaging
+
+This helped advocate for a wider range of technologies and methods.
+
+Today, most people from the Chrome Team still use "PWA" as a synonym of "Quality/Good Web App".
+But due to the simplification I talked about previously, this isn't what most people think when they hear "PWA".
+
+PWAs tends to be confused with "Installable Web Apps", reducing it to a2hs only.
+
+Now, there is two ways to look at PWAs:
+
+1. from a "Business" perspective, they are a good alternative to native apps
+2. from a developer perspective, making a Web App "Progressive" means raising the quality level for users,
+using the latests innovations of the Web Platform
+
+For all these reasons, I now prefer to make a clear distinction between those two perspectives,
+using respectively "PWA" and "FIRE app" to talk about them.
+
+### resources
+
+- [Progressive Web Apps on MDN](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
+- [Google Codelab - Your First Progressive Web App](https://codelabs.developers.google.com/codelabs/your-first-pwapp/#0)
+- [PWA Training Videos by Google Chrome Developers](https://www.youtube.com/playlist?list=PLNYkxOF6rcIB2xHBZ7opgc2Mv009X87Hh)
+
+## FIRE basis
+
+### Fast: App Shell
+
+- [The App Shell Model](https://developers.google.com/web/fundamentals/architecture/app-shell)
+
+### Integrated: Manifest & a2hs
+
+Web App Manifest and a2hs are well supported by Firefox Mobile,
+and by Edge Beta 78 (aka [Edgium](https://www.microsoftedgeinsider.com/en-us/), apparently [soon to be released as stable](https://techdows.com/2019/10/seems-microsofts-chromium-based-edge-stable-release-is-around-the-corner.html)) and Chrome on all there supported OS.
+
+#### Firefox Desktop
+
+A2HS isn't yet supported by Firefox Desktop, but mozillians are working on it.
+The related Meta Issue priority has been recently (october 10, 19) set to P3, meaning it was
+[added to the backlog](https://mozilla.github.io/bug-handling/triage-bugzilla).
+
+The [--app option](https://bugzilla.mozilla.org/show_bug.cgi?id=1283670),
+permitting to run web applications in "app mode" and therefor blocking the Meta issue,
+isn't prioritized, even if it was created two years ago.
+
+Yet, [Dave Townsend (aka Mossop)](https://mozillians.org/en-US/u/Mossop/),
+the lead architect for Firefox front-end,
+[commented in september](https://bugzilla.mozilla.org/show_bug.cgi?id=1283670#c58):
+
+> "We're in the process of planning out a feature similar to this.
+> We likely wouldn't accept a patch here until we're done with the current investigations
+> (mostly at the research stage right now)."
+
+### Safari
+
+Well, with Apple, it's a different kettle of fish.
+
+> **TL;DR:**
+>
+> Pretty much everything about PWA in Safari is about finding the right workaround.
+> There even are some kind of weird libraries for that, like [a2hs.js](https://github.com/koddr/a2hs.js) for example.
+
+It's now the only browser builder who rejects the usage of the term
+(they prefer ["HTML5 apps" apparently](https://developer.apple.com/news/?id=09062019b) 🤷‍♂).
+
+> Safari was even [the latest](https://caniuse.com/#feat=serviceworkers) major browser to support service worker (the freaking March 29, 2018, more than 3 years after Chrome, Firefox and Opera, with [Safari 11.1](https://github.com/mdn/browser-compat-data/pull/1881) & [iOS 11.3](https://github.com/mdn/browser-compat-data/pull/4835))!
+
+Apple is constantly making the a2hs related UX a nightmare (see the capture below) while
+[rejecting "HTML 5 apps" from the AppStore](https://developer.apple.com/app-store/review/guidelines/#third-party-software).
+And most related features are undocumented.
+
+![Apple a2hs](assets/img/basis/a2hs-ios13.png)
+
+All of this makes
+[some people](https://stackoverflow.com/questions/51160348/pwa-how-to-programmatically-trigger-add-to-homescreen-on-ios-safari#comment89306055_51160938)
+suspicious about this strategy being driven by fear of loosing money,
+against all Safari (or even iOS) user interest.
+
+Currently, the best resources to dive into this issues are written
+by [Maximiliano Flirtman](https://medium.com/@firt).
+Go check [its last blog post](https://medium.com/@firt/iphone-11-ipados-and-ios-13-for-pwas-and-web-development-5d5d9071cc49)
+about this, in which he goes in details into PWA & web dev limitations in iOS 13 & iPadOS.
+
+### resources
+
+- [MDN - Add to Home Screen](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen)
+- [Web Fundamentals - Add to Home Screen](https://developers.google.com/web/fundamentals/app-install-banners)
+- [Web App Manifest W3C Living Document](https://w3c.github.io/manifest/)
+
+### Reliable: Service Worker
+
+- [browser support](https://caniuse.com/#feat=serviceworkers)
+- [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/primers/service-workers)
+- [MDN - Using Service Workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [MDN - Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+- [Service Workers WD](https://www.w3.org/TR/service-workers/)
+
+### Engaging: Push Notifications
+
+- [browser support](https://caniuse.com/#feat=push-api)
+- [safari push notifications](https://developer.apple.com/notifications/safari-push-notifications/) :man_facepalming:
+- [Web Push Notifications: Timely, Relevant, and Precise](https://developers.google.com/web/fundamentals/push-notifications/)
+- [How Push Works](https://developers.google.com/web/fundamentals/push-notifications/how-push-works)
+- [Push API WD](https://www.w3.org/TR/push-api/)
+- [Notifications API Living Standard](https://notifications.spec.whatwg.org/)
 
 ## How the Web evolves
 
@@ -27,6 +163,7 @@ Standardization process, involving standardization authorities and integrators (
 - https://www.w3.org/2019/Process-20190301/#Organization
 - https://www.w3.org/Consortium/fees
 - https://www.w3.org/community/
+- https://www.w3.org/wiki/Evergreen_Standards
 
 #### WHATWG
 
