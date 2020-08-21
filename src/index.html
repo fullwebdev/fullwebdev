@@ -998,85 +998,6 @@ above I already force `highest` priority for my default light experience).
 
                     <!-- #region outro -->
 
-                    <!-- #region Conclusion -->
-
-                    <!-- #endregion Conclusion -->
-
-                    <!-- #region Resources -->
-
-                    <deckgo-slide-title class="subchapter-title-slide">
-                        <h1 slot="title">resources</h1>
-                    </deckgo-slide-title>
-
-                    <deckgo-slide-content>
-                        <h2
-                            slot="title"
-                            style="text-align: center; font-size: 3em"
-                        >
-                            @noel_mace
-                        </h2>
-                        <div slot="content" class="flex flex-center">
-                            <img
-                                src="assets/icons/twitter.svg"
-                                alt="Github"
-                                style="padding: 2em"
-                                height="500"
-                                width="500"
-                            />
-                        </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show></div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h2
-                            slot="title"
-                            style="text-align: center; font-size: 3em"
-                        >
-                            dev.to/noelmace
-                        </h2>
-                        <div slot="content" class="flex flex-center">
-                            <img
-                                src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg"
-                                alt="Noël Macé's DEV Profile"
-                                style="padding: 2em"
-                                height="500"
-                                width="500"
-                            />
-                        </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show></div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h2
-                            slot="title"
-                            style="text-align: center; font-size: 3em"
-                        >
-                            noelmace/slides-wof-conf
-                        </h2>
-                        <div slot="content" class="flex flex-center">
-                            <img
-                                src="assets/icons/github.svg"
-                                alt="Github"
-                                style="padding: 2em"
-                                height="500"
-                                width="500"
-                            />
-                            <h3>
-                                branch:
-                                <a
-                                    href="https://github.com/noelmace/slides-wof-conf/tree/devfestnantes-2019"
-                                    >devfestnantes-2019</a
-                                >
-                            </h3>
-                        </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show></div>
-                    </deckgo-slide-content>
-
-                    <!-- #endregion Resources -->
-
                     <!-- #region end -->
 
                     <deckgo-slide-content
@@ -1086,17 +1007,75 @@ above I already force `highest` priority for my default light experience).
                     </deckgo-slide-content>
 
                     <deckgo-slide-qrcode
-                        content="https://devfestnantes-2019.wof.show"
+                        content="https://poss19.wof.show"
                         style="--deckgo-qrcode-color-fill: black;"
+                        class="resources-slide"
                     >
-                        <h1 slot="title">Slides</h1>
                         <div slot="content" class="wof-show">
-                            <a
-                                href="https://devfestnantes-2019.wof.show"
-                                style="font-weight: bold"
-                                target="_blank"
-                                rel="noopener"
-                                ><span class="sub">poss19.</span>wof.show</a
+                            <deckgo-social
+                                twitter="noel_mace"
+                                class="hydrated"
+                                style="margin-left: 32px"
+                                ><ion-icon
+                                    alt="Noël on Twitter"
+                                    slot="icon"
+                                    name="logo-twitter"
+                                    margin-start
+                                    margin-end
+                                    role="img"
+                                    class="md hydrated"
+                                    aria-label="logo twitter"
+                                ></ion-icon>
+                                @noel_mace</deckgo-social
+                            >
+                            <deckgo-social
+                                full-url="https://poss19.wof.show"
+                                class="hydrated"
+                                style="margin-left: 32px"
+                                ><ion-icon
+                                    alt="Noël on Github"
+                                    slot="icon"
+                                    name="book"
+                                    margin-start
+                                    margin-end
+                                    role="img"
+                                    class="md hydrated"
+                                    aria-label="logo twitter"
+                                ></ion-icon>
+                                poss19.wof.show</deckgo-social
+                            >
+                            <deckgo-social
+                                github="noelmace/slides-wof-conf"
+                                class="hydrated"
+                                style="margin-left: 32px"
+                                ><ion-icon
+                                    alt="Noël on Github"
+                                    slot="icon"
+                                    name="logo-github"
+                                    margin-start
+                                    margin-end
+                                    role="img"
+                                    class="md hydrated"
+                                    aria-label="logo slides"
+                                ></ion-icon>
+                                noelmace/slides-wof-conf</deckgo-social
+                            >
+                            <deckgo-social
+                                full-url="https://dev.to/noelmace"
+                                class="hydrated"
+                                style="margin-left: 32px"
+                            >
+                                <ion-icon
+                                    alt="Noël on Dev.to"
+                                    slot="icon"
+                                    src="assets/icons/dev.svg"
+                                    margin-start
+                                    margin-end
+                                    role="img"
+                                    class="md hydrated"
+                                    area-label="logo Dev.to"
+                                ></ion-icon>
+                                dev.to/noelmace</deckgo-social
                             >
                         </div>
                     </deckgo-slide-qrcode>

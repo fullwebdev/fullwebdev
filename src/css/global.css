@@ -384,3 +384,8 @@ deckgo-slide-split.split-text > *:not([slot="title"]) > * {
   -2px 0px 0 #000,
   2px 2px 5px #000;
 }
+
+.resources-slide deckgo-social {
+  margin-bottom: 1em;
+  font-size: 2em;
+}
