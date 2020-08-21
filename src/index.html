@@ -766,6 +766,34 @@
                         <div slot="notes" show></div>
                     </deckgo-slide-content>
 
+                    <deckgo-slide-content>
+                        <h1 slot="title">KV Storage</h1>
+                        <div
+                            slot="content"
+                            style="width: 100%; text-align: center"
+                        >
+                            <deckgo-highlight-code language="javascript">
+                                <!-- prettier-ignore -->
+                                <code slot="code">
+                                    import storage, {StorageArea} from 'std:kv-storage';
+                                </code>
+                            </deckgo-highlight-code>
+                            <deckgo-reveal>
+                                <p>faster than localStorage API...</p>
+                                <p>easier than IndexDB</p>
+                                <p>
+                                    closer to Map & Chromium
+                                    <a
+                                        href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea"
+                                        >storage</a
+                                    >
+                                    API
+                                </p>
+                            </deckgo-reveal>
+                        </div>
+                        <div slot="notes" show></div>
+                    </deckgo-slide-content>
+
                     <!-- #endregion modular -->
 
                     <deckgo-slide-title class="subtitle-slide">
