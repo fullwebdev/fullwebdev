@@ -53,7 +53,7 @@ import {defineCustomElements as deckDeckGoSlideQRCodeElements } from '@deckdeckg
 // TODO: replace by @deckdeckgo once released
 import {defineCustomElements as deckDeckGoSlideBigImg } from '@wof-show/deckdeckgo-slide-big-img/dist/loader';
 // TODO: release
-import {defineCustomElements as deckDeckGoSlideVideo } from '@deckdeckgo/slide-video/dist/loader';
+import {defineCustomElements as deckDeckGoSlideVideo } from '@wof-show/deckdeckgo-slide-video/dist/loader';
 
 import { defineCustomElements as deckDeckGoRemoteElements } from '@deckdeckgo/remote/dist/loader';
 import { defineCustomElements as deckDeckGoChartsElements } from '@deckdeckgo/charts/dist/loader';
