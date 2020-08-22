@@ -15,8 +15,105 @@ index a89827b..081747f 100644
  };
  
  const getImgFile = async (url) => {
+diff --git a/src/css/google-fonts.css b/src/css/google-fonts.css
+index 27bcba7..26149e9 100644
+--- a/src/css/google-fonts.css
++++ b/src/css/google-fonts.css
+@@ -2,14 +2,14 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: url(/assets/fonts/KFOmCnqEu92Fr1Mu4mxO.eot);
++  src: url(/slides/wof/devfestnantes19/assets/fonts/KFOmCnqEu92Fr1Mu4mxO.eot);
+ }
+ /* cyrillic-ext */
+ @font-face {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/devfestnantes19/assets/fonts/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
+   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+ }
+ /* cyrillic */
+@@ -17,7 +17,7 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/devfestnantes19/assets/fonts/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');
+   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+ }
+ /* greek-ext */
+@@ -25,7 +25,7 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/devfestnantes19/assets/fonts/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');
+   unicode-range: U+1F00-1FFF;
+ }
+ /* greek */
+@@ -33,7 +33,7 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/devfestnantes19/assets/fonts/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
+   unicode-range: U+0370-03FF;
+ }
+ /* vietnamese */
+@@ -41,7 +41,7 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/devfestnantes19/assets/fonts/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
+   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+ }
+ /* latin-ext */
+@@ -49,7 +49,7 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/devfestnantes19/assets/fonts/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
+   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+ }
+ /* latin */
+@@ -57,26 +57,26 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/devfestnantes19/assets/fonts/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+ }
+ @font-face {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu4mxM.woff) format('woff');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/devfestnantes19/assets/fonts/KFOmCnqEu92Fr1Mu4mxM.woff) format('woff');
+ }
+ @font-face {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu4mxPKTU1Kg.ttf) format('truetype');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/devfestnantes19/assets/fonts/KFOmCnqEu92Fr1Mu4mxPKTU1Kg.ttf) format('truetype');
+ }
+ @font-face {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu4mxN) format('svg');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/devfestnantes19/assets/fonts/KFOmCnqEu92Fr1Mu4mxN) format('svg');
+ }
+ 
+ :root {
 diff --git a/src/index.html b/src/index.html
-index 45f0320..4787bbc 100644
+index 45f0320..7474b9a 100644
 --- a/src/index.html
 +++ b/src/index.html
 @@ -7,7 +7,7 @@
@@ -71,6 +168,83 @@ index 45f0320..4787bbc 100644
          <link rel="manifest" href="manifest.json" />
  
          <meta name="apple-mobile-web-app-capable" content="yes" />
+@@ -649,7 +635,7 @@
+                         <h1 slot="title" hidden>Prevent mini-infobar</h1>
+                         <div slot="content" class="flex flex-center">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/prevent-infobar.js"
++                                src="assets/code-samples/prevent-infobar.js"
+                                 highlight-lines="2,3"
+                             >
+                             </deckgo-highlight-code>
+@@ -792,7 +778,7 @@
+                         </h1>
+                         <div slot="content" class="flex flex-center">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/mq5/dark/load-css.html"
++                                src="assets/code-samples/mq5/dark/load-css.html"
+                             >
+                             </deckgo-highlight-code>
+                         </div>
+@@ -812,7 +798,7 @@ above I already force `highest` priority for my default light experience).
+                         </h1>
+                         <div slot="content" class="flex flex-center">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/mq5/dark/variables.css"
++                                src="assets/code-samples/mq5/dark/variables.css"
+                             >
+                             </deckgo-highlight-code>
+                         </div>
+@@ -848,7 +834,7 @@ above I already force `highest` priority for my default light experience).
+                         </h1>
+                         <div slot="content" class="flex flex-center">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/mq5/dark/fallback.html"
++                                src="assets/code-samples/mq5/dark/fallback.html"
+                             >
+                             </deckgo-highlight-code>
+                         </div>
+@@ -893,7 +879,7 @@ Right: the easier-on-the-eyes UA default
+                         </h1>
+                         <div slot="content" class="flex flex-center">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/mq5/motion/reduced-motion.css"
++                                src="assets/code-samples/mq5/motion/reduced-motion.css"
+                             >
+                             </deckgo-highlight-code>
+                         </div>
+@@ -907,7 +893,7 @@ Right: the easier-on-the-eyes UA default
+                         </h1>
+                         <div slot="content" class="flex flex-center">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/mq5/motion/reduced-motion.js"
++                                src="assets/code-samples/mq5/motion/reduced-motion.js"
+                             >
+                             </deckgo-highlight-code>
+                         </div>
+@@ -985,7 +971,7 @@ Right: the easier-on-the-eyes UA default
+                         <h1 slot="title">Bare specifiers</h1>
+                         <div slot="content">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/import-maps/bare.js"
++                                src="assets/code-samples/import-maps/bare.js"
+                             >
+                             </deckgo-highlight-code>
+                             <deckgo-reveal>
+@@ -1008,11 +994,11 @@ Right: the easier-on-the-eyes UA default
+                         <h1 slot="title">Import Maps</h1>
+                         <div slot="content">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/import-maps/map.html"
++                                src="assets/code-samples/import-maps/map.html"
+                             >
+                             </deckgo-highlight-code>
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/import-maps/bare-equivalent.js"
++                                src="assets/code-samples/import-maps/bare-equivalent.js"
+                             >
+                             </deckgo-highlight-code>
+                         </div>
 @@ -1304,18 +1290,17 @@ new range of rendered children.
                      </deckgo-slide-content>
  
@@ -109,7 +283,7 @@ index e8e34e7..218270d 100644
      {
        "src": "assets/favicon/android-icon-36x36.png",
 diff --git a/webpack.config.js b/webpack.config.js
-index c48949f..aa5941d 100644
+index c48949f..5f68114 100644
 --- a/webpack.config.js
 +++ b/webpack.config.js
 @@ -5,8 +5,6 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
@@ -121,7 +295,17 @@ index c48949f..aa5941d 100644
  const webpack = require('webpack');
  
  const path = require('path');
-@@ -57,9 +55,6 @@ module.exports = (env, argv) => {
+@@ -31,6 +29,9 @@ const config = {
+ };
+ 
+ const plugins = [
++    new webpack.DefinePlugin({
++        'process.env.ASSET_PATH': '/slides/wof/devfestnantes19/',
++    }),
+     new CleanWebpackPlugin({
+         cleanStaleWebpackAssets: false
+     }),
+@@ -57,9 +58,6 @@ module.exports = (env, argv) => {
      }
  
      if (argv.mode === 'production') {
