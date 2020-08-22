@@ -1,44 +1,31 @@
-# DeckDeckGo - Starter Kit
+# Brace youself, :icecream: Vanilla is coming ... back :dark_sunglasses:!
 
-Create a PWA presentation using Web Components, [Ionic](http://ionicframework.com) components and HTML or Markdown 🚀
+> a :collision: ***Wof*** show by [Noël Macé](https://twitter.com/noel_mace)
 
-Cherry on the cake 🍒🎂 [DeckDeckGo] comes with a [Progressive Web App](https://deckdeckgo.app) to remote control your slides 📱
+Embrace the power of the Web Platform! A real-life practical guide.
 
-## Table of contents
+**:rocket: [modern-vanilla.wof.show](https://modern-vanilla.wof.show)**
 
-- [Stater Kit](#stater-kit)
-- [Getting Started](#getting-started)
-- [Example](#example)
-- [Develop](#develop)
-- [License](#license)
+## Abstract
 
-## Stater Kit
+_In a world of complex and sophisticated flavors, the battle for toppings among the ice cream families is raging in Web-steros! Who knows who will win between the crunchies of the Angular castle, the hot fudge of the React lands, or the sprinkles of the Vue islands?!_
 
-This project is the starter kit of [DeckDeckGo].
+_During this time, in another place, the independent Vanilla walks towards his destiny. Could he be the hero from the legend, whom could turn things around?_
 
-Its master branch contains the `HTML` starter kit. The markdown branch is the `Markdown` one.
-
-## Getting Started
-
-Start you new presentation by following the quick  👉 [Getting Started guide](https://docs.deckdeckgo.com/docs) 👈
-
-## Example
-   
-The [DeckDeckGo website](https://github.com/deckgo/deckdeckgo-website) is a full featured presentation developed with [DeckDeckGo].
+_Hear my story, traveler! My old eyes have seen him in these lands! Let me tell you how he helped us taking down our old king, and you shall learn how he could help you too..._
 
 ## Develop
 
-To develop and run this starter kit locally, proceed as following:
+Created with [DeckDeckGo].
+
+To develop and run  locally, proceed as following:
 
 ```
-git clone https://github.com/deckgo/deckdeckgo-starter
-cd deckdeckgo-starter
+git clone https://github.com/noelmace/slides-modern-vanilla
+cd slides-modern-vanilla
 npm install
 npm run start
 ```
 
-## License
-
-MIT © [David Dal Busco](mailto:david.dalbusco@outlook.com) and [Nicolas Mattia](nicolas@nmattia.com)
 
 [DeckDeckGo]: https://deckdeckgo.com
