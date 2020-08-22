@@ -35,6 +35,11 @@
     {
       "scope": "wof-slides",
       "directory": "packages/wof-slides"
+    },
+    {
+      "scope": "slides-vanilla",
+      "directory": "packages/slides/vanilla-1",
+      "url": "git@github.com:noelmace/slides-vanilla-1.git"
     }
   ]
 }
