@@ -1178,7 +1178,8 @@
                         class="bg-img dark"
                     >
                         <div slot="title" class="flex flex-center got">
-                            <h1>BLoC</h1>
+                            <h1>State Management</h1>
+                            <h2>Big BloC vs Reusability</h2>
                         </div>
                         <div slot="notes" show>
                             <!-- TODO -->
@@ -1201,34 +1202,50 @@
                         </div>
                     </deckgo-slide-content>
 
+                    <deckgo-slide-content>
+                        <div slot="content" class="flex flex-center">
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/bloc/bloc-class.js"
+                            >
+                            </deckgo-highlight-code>
+                        </div>
+                        <div slot="notes" show>
+                            BLoC design pattern with Angular, by Suguru Inatomi.
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <div slot="content" class="flex flex-center">
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/bloc/bloc-rx.js"
+                            >
+                            </deckgo-highlight-code>
+                        </div>
+                        <div slot="notes" show></div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <div slot="content" class="flex flex-center">
+                            <img
+                                data-src="assets/img/logos/rxjs.svg"
+                                alt="RxJS"
+                            />
+                        </div>
+                        <div slot="notes" show>
+                            Object.observed removed 2016. TC39 Observable
+                            proposal stuck since 2017. WHATWG/DOM - no
+                            implementers interest. RxJS ~30kB minified.
+                        </div>
+                    </deckgo-slide-content>
+
                     <deckgo-slide-content
-                        style="--background:center no-repeat url('assets/img/streams-bloc.png')"
+                        style="--background:center no-repeat url('assets/img/castle.jpg')"
                         class="bg-img dark"
                     >
                         <div slot="notes" show>
                             <!-- TODO -->
-                            <p>
-                                Image from
-                                <a
-                                    href="https://www.didierboelens.com/2018/08/reactive-programming---streams---bloc/"
-                                    >Reactive Programming - Streams - BLoC
-                                </a>
-                                by didierboelens
-                            </p>
                         </div>
                     </deckgo-slide-content>
-
-                    <deckgo-slide-title class="slide-todo">
-                        <div slot="title">
-                            TODO: bloc class
-                        </div>
-                    </deckgo-slide-title>
-
-                    <deckgo-slide-title class="slide-todo">
-                        <div slot="title">
-                            TODO: "stream" & RxJS
-                        </div>
-                    </deckgo-slide-title>
 
                     <!-- #endregion state management & interactions -->
 

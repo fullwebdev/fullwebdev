@@ -11,7 +11,6 @@ class SearchBloc {
             )
         );
     }
-    // DeckDeckGo
     get results$() {
         return this._results$;
     }
