@@ -293,6 +293,10 @@
                 display: inline-block;
                 font-size: 0.8em;
             }
+
+            .center {
+                text-align: center;
+            }
         </style>
     </head>
     <body>
@@ -1357,17 +1361,172 @@
                         </div>
                     </deckgo-slide-content>
                     <!-- #endregion SSR -->
+                    <!-- #region state management & interactions -->
+
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/check-hands.png')"
+                        class="bg-img dark"
+                    >
+                        <div slot="content" class="flex flex-center got">
+                            <h1>Interactions</h1>
+                        </div>
+                        <div slot="notes" show>
+                            <!-- TODO-->
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/thormund-kiss.jpg')"
+                        class="bg-img dark"
+                    >
+                        <div slot="content" class="flex flex-end got">
+                            <h1 class="kiss">
+                                K.I.S.S.
+                            </h1>
+                            <h2 style="margin-top: 0">(again)</h2>
+                        </div>
+                        <div slot="notes" show>
+                            <!-- TODO -->
+                        </div>
+                    </deckgo-slide-content>
 
                     <deckgo-slide-title class="slide-todo">
                         <div slot="title">
-                            TODO: state management & interactions
+                            TODO: custom elements best practices
                         </div>
-                        <div slot="notes" show></div>
+                        <div slot="notes" show>
+                            <ul>
+                                <li>
+                                    <a
+                                        href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#reflecting-content-attributes-in-idl-attributes"
+                                    >
+                                        WHATWG - 2.7.1 Reflecting content
+                                        attributes in IDL attributes</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://developers.google.com/web/fundamentals/web-components/best-practices#always-accept-primitive-data-strings,-numbers,-booleans-as-either-attributes-or-properties."
+                                        >Always accept primitive data (strings,
+                                        numbers, booleans) as either attributes
+                                        or properties.
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://developers.google.com/web/fundamentals/web-components/best-practices#aim-to-keep-primitive-data-attributes-and-properties-in-sync,-reflecting-from-property-to-attribute,-and-vice-versa."
+                                        >Aim to keep primitive data attributes
+                                        and properties in sync, reflecting from
+                                        property to attribute, and vice versa.
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://developers.google.com/web/fundamentals/web-components/best-practices#aim-to-only-accept-rich-data-objects,-arrays-as-properties."
+                                        >Aim to only accept rich data (objects,
+                                        arrays) as properties.
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://developers.google.com/web/fundamentals/web-components/best-practices#do-not-reflect-rich-data-properties-to-attributes."
+                                        >Do not reflect rich data properties to
+                                        attributes.
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://developers.google.com/web/fundamentals/web-components/best-practices#do-not-self-apply-classes."
+                                        >Do not self-apply classes.
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://developers.google.com/web/fundamentals/web-components/best-practices#dispatch-events-in-response-to-internal-component-activity."
+                                        >Dispatch events in response to internal
+                                        component activity.
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://developers.google.com/web/fundamentals/web-components/best-practices#do-not-dispatch-events-in-response-to-the-host-setting-a-property-downward-data-flow."
+                                        >Do not dispatch events in response to
+                                        the host setting a property (downward
+                                        data flow).
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </deckgo-slide-title>
 
                     <deckgo-slide-title class="slide-todo">
                         <div slot="title">
-                            TODO: modularity
+                            TODO: shadow dom styling
+                        </div>
+                    </deckgo-slide-title>
+
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/ice-block.png')"
+                        class="bg-img dark"
+                    >
+                        <div slot="title" class="flex flex-center got">
+                            <h1>BLoC</h1>
+                        </div>
+                        <div slot="notes" show>
+                            <!-- TODO -->
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/bloc-pattern.png')"
+                        class="bg-img dark"
+                    >
+                        <div slot="notes" show>
+                            <!-- TODO -->
+                            <p>
+                                Image from
+                                <a
+                                    href="https://github.com/felangel/bloc/blob/master/packages/bloc/README.md"
+                                    >felangel/bloc</a
+                                >
+                            </p>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/streams-bloc.png')"
+                        class="bg-img dark"
+                    >
+                        <div slot="notes" show>
+                            <!-- TODO -->
+                            <p>
+                                Image from
+                                <a
+                                    href="https://www.didierboelens.com/2018/08/reactive-programming---streams---bloc/"
+                                    >Reactive Programming - Streams - BLoC
+                                </a>
+                                by didierboelens
+                            </p>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-title class="slide-todo">
+                        <div slot="title">
+                            TODO: bloc class
+                        </div>
+                    </deckgo-slide-title>
+
+                    <deckgo-slide-title class="slide-todo">
+                        <div slot="title">
+                            TODO: "stream" & RxJS
+                        </div>
+                    </deckgo-slide-title>
+
+                    <!-- #endregion state management & interactions -->
+
+                    <deckgo-slide-title class="slide-todo">
+                        <div slot="title">
+                            TODO: modularity & PRPL
                         </div>
                         <div slot="notes" show></div>
                     </deckgo-slide-title>
