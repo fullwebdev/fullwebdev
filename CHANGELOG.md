@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-beta.1](https://github.com/noelmace/slides-modern-vanilla/compare/v1.0.0...v1.1.0-beta.1) (2019-12-07)
+
+
+### Features
+
+* update for poss ([90adee2](https://github.com/noelmace/slides-modern-vanilla/commit/90adee291ee4b4e08f931a0809997b0eafdfe8dd))
+
 ## [1.0.0](https://github.com/noelmace/slides-modern-vanilla/compare/v0.0.0...v1.0.0) (2019-12-07)
 
 ### Features
@@ -74,4 +81,3 @@ All notable changes to this project will be documented in this file. See [standa
 * wrong animated tag selection ([b87cdf0](https://github.com/noelmace/slides-modern-vanilla/commit/b87cdf0e187eb4aecc6cccec772a63914d88d9a6))
 * **wof:** favicons ([5c12b9d](https://github.com/noelmace/slides-modern-vanilla/commit/5c12b9db032790066c0d176a2141e0f19e3f9957))
 * **wof:** remove default slides ([d19fd12](https://github.com/noelmace/slides-modern-vanilla/commit/d19fd12fb1f8db632ac0e707ccbae91da0624f20))
-
