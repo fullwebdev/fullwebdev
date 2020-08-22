@@ -117,6 +117,7 @@
             href="assets/favicon/favicon-16x16.png"
         />
         <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+        <link rel="stylesheet" hre="css/google-fonts.css" />
         <meta name="msapplication-TileColor" content="#ed6c30" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta
@@ -124,20 +125,6 @@
             content="assets/favicon/browserconfig.xml"
         />
         <meta name="theme-color" content="#ed6c30" />
-
-        <script>
-            if ('serviceWorker' in navigator) {
-                window.addEventListener('load', async () => {
-                    try {
-                        await navigator.serviceWorker.register(
-                            'service-worker.js'
-                        );
-                    } catch (e) {
-                        console.warn('No service worker registered');
-                    }
-                });
-            }
-        </script>
 
         <link rel="manifest" href="manifest.json" />
 
