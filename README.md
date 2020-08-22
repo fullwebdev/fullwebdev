@@ -4,7 +4,8 @@
 
 Embrace the power of the Web Platform! A real-life practical guide.
 
-**:rocket: [modern-vanilla.wof.show](https://modern-vanilla.wof.show)**
+- **:man_teacher: Slides: [modern-vanilla.wof.show](https://modern-vanilla.wof.show)**
+- **:book: Full doc: [notes.md](./notes.md) - WIP :construction:**
 
 ## Abstract
 

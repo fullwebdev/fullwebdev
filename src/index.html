@@ -162,6 +162,8 @@
                 background: #ffffff;
 
                 --react-color: #61dafb;
+                --preact-color: #673ab8;
+                --redux-color: #764abc;
                 --lit-element-color: #2196f3;
                 --jquery-color: #d18f4f;
             }
@@ -297,6 +299,14 @@
             .center {
                 text-align: center;
             }
+
+            .lib-chart {
+                --deckgo-chart-fill-color-1: var(--react-color);
+                --deckgo-chart-fill-color-2: var(--preact-color);
+                --deckgo-chart-fill-color-3: var(--redux-color);
+                --deckgo-chart-fill-color-4: var(--lit-element-color);
+                --deckgo-chart-fill-color-5: var(--jquery-color);
+            }
         </style>
     </head>
     <body>
@@ -309,10 +319,14 @@
                         </h1>
                         <div no-shadow slot="content">
                             <h3>
-                                Open the speaker notes!
+                                There is a documentation for that!
                             </h3>
                             <p style="font-style: italic">
-                                Clic on the menu on the top right.
+                                Go read it
+                                <a
+                                    href="https://github.com/noelmace/slides-modern-vanilla/blob/master/notes.md"
+                                    >on Github</a
+                                >!
                             </p>
                         </div>
                     </deckgo-slide-title>
@@ -374,83 +388,20 @@
                         reverse
                     >
                         <div slot="notes" show>
-                            <p>
-                                So, let's start with our land and the kindoms
-                                which splits it into pieces.
-                            </p>
                             <ol>
                                 <li>
-                                    <h2>The Sunny Lands</h2>
-                                    <p>
-                                        Here, the life looks easy from the
-                                        outside. And it can be!
-                                    </p>
-                                    <p>
-                                        But don't full yourself. It can also
-                                        become a deadly trap if you don't watch
-                                        youself.
-                                    </p>
+                                    The Sunny Lands
                                 </li>
                                 <li>
-                                    <h2>The Isolated Lands</h2>
-                                    <p>Something went wrong here!</p>
-                                    <p>
-                                        The
-                                        <span class="strong"
-                                            >&nbsp;JQuery&nbsp;</span
-                                        >
-                                        Kindom has been isolated on its islands
-                                        for too long, and they don't understand
-                                        this world anymore!
-                                    </p>
-                                    <p>
-                                        Unfortunatly, they continue to attack us
-                                        from time to time. But for the most of
-                                        it, we can ignore them.
-                                    </p>
-                                    <p>
-                                        <span class="strong"
-                                            >Polymerians&nbsp;</span
-                                        >
-                                        came close to live the same destiny as
-                                        JQuerians. Yet, recently, the concil
-                                        chose to challenge their rules. It saved
-                                        the kingdom!
-                                    </p>
+                                    The Isolated Lands
                                 </li>
                                 <li>
-                                    <h2>The reactive north</h2>
-                                    <p>
-                                        Those people have their own rules and
-                                        gods!
-                                    </p>
-                                    <p>
-                                        Yet, they stay open to the other
-                                        kingdoms, and are pretty efficient.
-                                    </p>
+                                    The reactive north
                                 </li>
                                 <li>
-                                    <h2>Behind the Web</h2>
-                                    <p>
-                                        Behind a wall kept by the PWA watch,
-                                        hides a great danger: the native
-                                        walkers! They don't know how to work
-                                        together!
-                                    </p>
-                                    <p>This could be the end of Websteros!</p>
-                                    <p>
-                                        Yet, some people from the web lands are
-                                        helping to preserve the peace with those
-                                        strangers ... whom, after all, are just
-                                        like us, but with diffent goals.
-                                    </p>
+                                    Behind the Web
                                 </li>
                             </ol>
-                            <p>
-                                There is still some battles between this
-                                kingdoms. Yet, we manage to have peace. But we
-                                need to preserve it!
-                            </p>
                         </div>
                     </deckgo-slide-big-img>
 
@@ -461,12 +412,13 @@
                         <div slot="notes" show>
                             <p>This is our goal!</p>
                             <p>
-                                We, the unaligned, neutral people, may love some
-                                kingdoms more than some others.
+                                We, the unaligned, neutral people
                             </p>
                             <p>
-                                Yet, we love them and avoid them all at the same
-                                time.
+                                may love some kingdoms more than some others.
+                            </p>
+                            <p>
+                                we love them and avoid them all
                             </p>
                         </div>
                     </deckgo-slide-content>
@@ -486,20 +438,16 @@
                         <div slot="notes" show>
                             <p>We are the vanilla people!</p>
                             <p>There is a lot of ways to join us!</p>
-                            <!-- TODO: more details about the definition of "Vanilla" -->
-                            <!-- TODO: about PWA -->
+                            <p>Vanilla definition</p>
                             <p>
-                                Yet, today, in order to keep it simple, I will
-                                mainly speak about the most famous of our
-                                tribes: the Web Components!
+                                the most famous of our tribes: Web Components!
                             </p>
                             <p>
-                                Because there was too many wrong things said
-                                about them!
+                                too many wrong things said about them
                             </p>
                             <p>
-                                So, for those who come from SysthoryOS, here is
-                                a quick reminder.
+                                here is a quick reminder who come from
+                                SysthoryOS
                             </p>
                         </div>
                     </deckgo-slide-content>
@@ -575,18 +523,7 @@
                         class="bg-img"
                     >
                         <div slot="notes" show>
-                            <p>Back to our Kindoms</p>
-                            <p>There is two kinds of them:</p>
-                            <ol>
-                                <li>Frameworks</li>
-                                <li>Libraries</li>
-                            </ol>
-                            <p>
-                                Why are they here? Why are they so important?
-                            </p>
-                            <p>
-                                Let's go to the roots of these questions.
-                            </p>
+                            Let's get at the root of these!
                         </div>
                     </deckgo-slide-content>
 
@@ -609,11 +546,7 @@
                             </div>
                         </div>
                         <div slot="notes" show>
-                            <p>
-                                We talking about frameworks, we first think
-                                about the big Kingdoms of the Sunny Lands.
-                            </p>
-                            <p>They are self sufficient, and very powerfull.</p>
+                            the Sunny Lands
                         </div>
                     </deckgo-slide-content>
 
@@ -631,16 +564,14 @@
                         </div>
                         <div slot="notes" show>
                             <p>
-                                Yet, there is some smaller kindoms which you
-                                should also know.
+                                smaller kingdoms
                             </p>
                             <p>
-                                Those follow the rules of bigger Kingdoms, like
-                                React (for Gatsby & NextJs), or Vue (for Nuxt).
+                                follow the rules of bigger Kingdoms, like React
+                                (for Gatsby & NextJs), or Vue (for Nuxt).
                             </p>
                             <p>
-                                Being small or big, the question remain: why
-                                some of our people are following them?
+                                but why following them?
                             </p>
                         </div>
                     </deckgo-slide-content>
@@ -651,10 +582,9 @@
                     >
                         <div slot="notes" show>
                             <p>
-                                Most of us will say that this is because with
-                                them, you're going faster!
+                                you're going faster!
                             </p>
-                            <p>And these is true ... at first!</p>
+                            <p>these is true ... at first!</p>
                         </div>
                     </deckgo-slide-content>
 
@@ -664,17 +594,14 @@
                     >
                         <div slot="notes" show>
                             <p>
-                                You see, this kingdoms have stronger opinions
-                                than the others.
+                                opinionated
                             </p>
                             <p>
-                                The rules are more strict, and people have less
-                                freedom.
+                                rules more strict, less freedom.
                             </p>
-                            <p>Don't get me wrong: this is for the best!</p>
+                            <p>for the best!</p>
                             <p>
-                                Because an opinionated approach brings order,
-                                which leads to efficiency.
+                                brings order, leads to efficiency.
                             </p>
                         </div>
                     </deckgo-slide-content>
@@ -685,22 +612,17 @@
                     >
                         <div slot="notes" show>
                             <p>
-                                But too strong opinions can lead to dictats &
-                                ... prison.
+                                too strong -> dictatorship / prison
                             </p>
                             <p>
                                 See, when a framework is born, all opinions have
                                 to be right, or it quickly die.
                             </p>
                             <p>
-                                But stronger are these opinions, and the most
-                                time go by, the more inacurrate (or even, wrong)
-                                they can get. And the more challenging it
-                                becomes to change them.
+                                strong opinions + time = more inaccurate/wrong
                             </p>
                             <p>
-                                Then, what was liberty become a (beautiful) sky
-                                cell!
+                                Then,liberty become a (beautiful) sky cell!
                             </p>
                         </div>
                     </deckgo-slide-content>
@@ -711,16 +633,14 @@
                     >
                         <div slot="notes" show>
                             <p>
-                                Challenging this opinions, and making the
-                                required changes, take time. This is the main
-                                reason why you are going faster: you are
-                                creating a technical debt.
+                                Challenging them take time. going faster $lt;-
+                                technical debt.
                             </p>
                             <p>
-                                But that's ok, because most frameworks will help
-                                you with that!
+                                But that's ok = frameworks will help you with
+                                that!
                             </p>
-                            <p>Yet, remember: a WebDev always pay is debts!</p>
+                            <p>a WebDev always pay is debts!</p>
                         </div>
                     </deckgo-slide-content>
 
@@ -739,16 +659,6 @@
                                     mythologique pour galériens de l’IT</a
                                 >, Quentin Adam, CEO Clever Cloud
                             </p>
-                            <p>
-                                See
-                                <a
-                                    href="https://twitter.com/noel_mace/status/1177934427470651394"
-                                    tagret="_blank"
-                                    rel="noopener"
-                                    >Twitter</a
-                                >
-                                for context.
-                            </p>
                         </div>
                     </deckgo-slide-content>
 
@@ -758,10 +668,7 @@
                     >
                         <div slot="notes" show>
                             <p>
-                                There is also one misconception about frameworks
-                                you should care about: people think using a
-                                frameworks can solve everything! They couldn't
-                                be more wrong!
+                                using a frameworks can solve everything"
                             </p>
                             <p>Because:</p>
                             <ol>
@@ -775,15 +682,11 @@
                                 </li>
                             </ol>
                             <p>
-                                This is why, for complexe projects, you HAVE to
-                                only use a framework you perfectly know! You'll
-                                need to invest a lot in it specifically,
-                                especially for technical watch.
+                                only use a framework you perfectly know! invest
+                                a lot in it
                             </p>
                             <p>
-                                This is especially why non IT centric companies
-                                need so much to hire (as consultants) Vue or
-                                Angular experts.
+                                👋 Angular consultants / teachers
                             </p>
                         </div>
                     </deckgo-slide-content>
@@ -793,24 +696,9 @@
                         class="bg-img"
                     >
                         <div slot="notes" show>
-                            <p>So, should we kill the frameworks?</p>
-                            <p>No, of course!</p>
                             <p>
-                                When you need to quickly deliver a project, and
-                                don't have to make a lot of changes after a
-                                small period, go for it! Frameworks are what you
-                                need!
-                            </p>
-                            <p>
-                                This is why I love Angular so much. This
-                                definition covers most projects who needs
-                                consultants.
-                            </p>
-                            <p>
-                                This is also why I love Gatsby! I think I
-                                created one project using Gatsby each month of
-                                these year, in just a few days, just to let them
-                                become legathy after that.
+                                quickly deliver a project + few changes after
+                                that
                             </p>
                         </div>
                     </deckgo-slide-content>
@@ -851,12 +739,7 @@
                         <div slot="content" class="frame flex flex-center got">
                             <h1>Libraries</h1>
                         </div>
-                        <div slot="notes" show>
-                            <p>
-                                Now that we're done with frameworks, let's talk
-                                about libraries.
-                            </p>
-                        </div>
+                        <div slot="notes" show></div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
@@ -865,19 +748,13 @@
                         </div>
                         <div slot="notes" show>
                             <p>
-                                Of course, after frameworks, w/ VueJS and
-                                Angular, the first "library" we have to talk
-                                about here is React!
+                                Reminder: "React Frameworks" exists! e.g. Gatsby
+                                or NextJS.
                             </p>
                             <p>
-                                We already saw that "React Frameworks" exists,
-                                e.g. Gatsby or NextJS. Some may need those
-                                because React itself is, indeed, just a library.
-                            </p>
-                            <p>
-                                It only deals with one thing: rendering. With a
-                                strongly opinionated "functional" & "one
-                                direction dataflow" approach.
+                                React = just a rendering lib w/ opinionated
+                                "functional" & "one direction dataflow"
+                                approach.
                             </p>
                         </div>
                     </deckgo-slide-content>
@@ -888,8 +765,6 @@
                     >
                         <div slot="notes" show>
                             <p>And it's not (only) about the Web Platform.</p>
-                            <p>The Web Platform is just one plateform!</p>
-                            <p>React can address others, like:</p>
                             <ul>
                                 <li>SSR (react-dom/server)</li>
                                 <li>Mobile (react-native)</li>
@@ -898,21 +773,9 @@
                                 <li>emails (oy)</li>
                                 <li>documents (reactpdf, redocx)</li>
                                 <li>Even IoT & robotic 🤯 (react-hardware)</li>
-                                <li style="font-style: italic">
-                                    Go check
-                                    <a
-                                        href="https://github.com/chentsulin/awesome-react-renderer"
-                                        >awesome-react-renderer</a
-                                    >
-                                    for more examples...
-                                </li>
                             </ul>
                             <p>
-                                This justify, of course, abstractions on top of
-                                the Web Platform.
-                            </p>
-                            <p style="font-style: italic">
-                                BTW, it's the same with Angular, or even Ionic.
+                                This justify, abstractions on top
                             </p>
                             <p class="strong">
                                 "Vanilla" is the opposite! It's about embracing
@@ -931,21 +794,7 @@
                             />
                         </div>
                         <div slot="notes" show>
-                            <p>
-                                So of course, if you're using React when
-                                developing a web app, you need a web renderer.
-                                React-dom being the by default choice.
-                            </p>
-                            <h1>
-                                How this graph was generated:
-                            </h1>
-                            <!-- prettier-ignore -->
-                            <code>
-                                $ npx create-react-app my-app
-                                $ cd my-app
-                                $ npm i -g dependency-cruiser
-                                $ depcruise --exclude "App.test.js" --output-type dot src | dot -T svg > dependencygraph.svg
-                            </code>
+                            you need a web renderer (React-dom by default)
                         </div>
                     </deckgo-slide-content>
 
@@ -984,13 +833,11 @@
                         class="bg-img"
                     >
                         <div slot="notes" show>
-                            <p>So, there kind of is two sides to "React":</p>
                             <ul>
                                 <li>
-                                    a rich echosystem for
-                                    multi-platform/complexe UI development
+                                    a rich ecosystem
                                 </li>
-                                <li>a (sometime) usefull rendering library</li>
+                                <li>a rendering library</li>
                             </ul>
                         </div>
                     </deckgo-slide-content>
@@ -1010,70 +857,7 @@
                             <p>... it just need some tricks (/ boilerplate).</p>
                             <p>
                                 The community is discussing some solutions
-                                (since 2016):
-                            </p>
-                            <ul>
-                                <li>
-                                    <a
-                                        href="https://github.com/facebook/react/issues/7249"
-                                        >Attributes and properties for Custom
-                                        Components #7249</a
-                                    >
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://github.com/facebook/react/issues/7901"
-                                        >Bypass synthetic event system for Web
-                                        Component events #7901</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/react-in-wc.js"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
-                        <div slot="notes" show>
-                            <p>
-                                It can also be usefull for rendering, as itself.
-                            </p>
-                        </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/react-in-wc.js"
-                                highlight-lines="1,1 11,11"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
-                        <div slot="notes" show>
-                            <p>
-                                Here, we're using the standard HTMLElement and
-                                use customElement.define, like every Custom
-                                Element.
-                            </p>
-                        </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/react-in-wc.js"
-                                highlight-lines="4,4"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
-                        <div slot="notes" show>
-                            <p>
-                                And we use the standard in order to attach a
-                                shadow root.
+                                (since 2016)
                             </p>
                         </div>
                     </deckgo-slide-content>
@@ -1087,10 +871,8 @@
                             </deckgo-highlight-code>
                         </div>
                         <div slot="notes" show>
-                            <p>
-                                and finally, we can use React to render the
-                                template.
-                            </p>
+                            It can also be useful for rendering, as itself. All
+                            the other parts are just WC standards.
                         </div>
                     </deckgo-slide-content>
 
@@ -1099,11 +881,7 @@
                         class="bg-img"
                     >
                         <div slot="notes" show>
-                            <p>
-                                So, we talked about React. Yet, now, the real
-                                question is: how to decide if you need a library
-                                or not.
-                            </p>
+                            how to decide if you need a library or not
                         </div>
                     </deckgo-slide-content>
 
@@ -1112,14 +890,9 @@
                         class="bg-img"
                     >
                         <div slot="notes" show>
-                            <p>
-                                When adopting a "Vanilla" approach, the first
-                                question you need to ask youself is:
-                            </p>
                             <p class="strong">
                                 Is it related to a Web Platform concerne?
                             </p>
-                            <p>In other worlds:</p>
                             <ul>
                                 <li>Is it close to standards?</li>
                                 <li>
@@ -1136,37 +909,18 @@
                         type="bar"
                         animation="true"
                         src="/assets/charts/libs-weight.csv"
-                        style="--deckgo-chart-fill-color-1: var(--react-color);--deckgo-chart-fill-color-2: var(--lit-element-color);--deckgo-chart-fill-color-3: var(--jquery-color)"
+                        class="lib-chart"
                     >
                         <div slot="title" class="flex-row">
                             <div>react</div>
+                            <div>preact</div>
+                            <div>redux</div>
                             <div>lit-element</div>
                             <div>jquery</div>
                         </div>
                         <div slot="notes" show>
-                            <p>
-                                Then, you need to care about the
-                                <a
-                                    href="https://v8.dev/blog/cost-of-javascript-2019"
-                                    >cost of JS</a
-                                >.
-                            </p>
-                            <p>
-                                Here, to illustrating, I'll talk about 3 really
-                                different libraries (but this isn't a
-                                comparison).
-                            </p>
-                            <p>
-                                React illustrate the fact that a "small" library
-                                can hide really heavy and complexe dependencies
-                                (here react-dom).
-                            </p>
-                            <p>
-                                Lit-element is, IMO, a good example of a light
-                                library: it only reliese on a really small
-                                dependency, lit-html.
-                            </p>
-                            <p>And finally, we have JQuery ...</p>
+                            cost of JS / hidden complexity (react-dom, x,
+                            react-redux, lit-html)
                         </div>
                     </deckgo-slide-chart>
 
@@ -1175,19 +929,11 @@
                             <source src="assets/gif/meh.mp4" type="video/mp4" />
                         </video>
                         <div slot="notes" show>
+                            <p class="strong">Is this library usefull?</p>
                             <p>
-                                ... which illustrate another question you
-                                absolutly need to ask yourself:
-                            </p>
-                            <p class="strong">Is this library usefull.</p>
-                            <p>
-                                I can't see any example where you could say
-                                "yes" to that question when it comes to JQuery,
-                                given the evolutions of the Web Platform.
+                                JQuery 🤷‍♂️
                             </p>
                             <p>
-                                This isn't new! And this is why most big
-                                companies (like, for example,
                                 <a
                                     href="https://github.blog/2018-09-06-removing-jquery-from-github-frontend/"
                                     >Github</a
@@ -1195,14 +941,11 @@
                                 or
                                 <a href="https://youtu.be/uFxVH5mFAKg"
                                     >Clever Cloud</a
-                                >) did or are still making an effort to move
-                                away from JQuery.
+                                >
                             </p>
                             <p>
-                                This is yet another good example of why adding
-                                an abstration over the Web Platform can be a
-                                good choice at some time, but which needs to be
-                                regularly challenged.
+                                abstraction can be a good choice at some time,
+                                but needs to be regularly challenged
                             </p>
                         </div>
                     </deckgo-slide-video>
@@ -1214,17 +957,17 @@
                         <div slot="notes" show>
                             <p>So, should we avoid all libraries?</p>
                             <p>
-                                Of course not! Even if the standardisation
-                                process goes way faster now, the Web Platform
-                                will always have its limitations.
+                                No! Web Platform will always have its
+                                limitations
                             </p>
                             <p>
-                                In its time, JQuery was answering the lack of a
-                                good DOM manipulation API. The fact that
-                                querySelector and other things made it obsolete
-                                doesn't make it retrospectivly useless! It only
-                                means that you need to prepare yourself to drop
-                                any library you're using any time soon!
+                                JQuery &lt;- no good DOM manipulation API -&gt;
+                                querySelector and other things
+                            </p>
+                            <p>
+                                X retrospectively useless! Just: prepare
+                                yourself to drop any library you're using any
+                                time soon!
                             </p>
                         </div>
                     </deckgo-slide-content>
@@ -1259,8 +1002,7 @@
                         class="bg-img"
                     >
                         <div slot="notes" show>
-                            The same goes with your tooling.
-                            <!-- TODO: stencil, reasonml, typescript, etc... -->
+                            same with tooling
                         </div>
                     </deckgo-slide-content>
 
@@ -1331,35 +1073,6 @@
                         </div>
                     </deckgo-slide-content>
 
-                    <deckgo-slide-content>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/ssr-puppeteer.js"
-                                highlight-lines="3,3"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/ssr-puppeteer.js"
-                                highlight-lines="4,5"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/ssr-puppeteer.js"
-                                highlight-lines="6,8"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
-                    </deckgo-slide-content>
                     <!-- #endregion SSR -->
                     <!-- #region state management & interactions -->
 
@@ -1392,7 +1105,8 @@
 
                     <deckgo-slide-title class="slide-todo">
                         <div slot="title">
-                            TODO: custom elements best practices
+                            TODO: custom elements best practices & shadow dom
+                            styling
                         </div>
                         <div slot="notes" show>
                             <ul>
@@ -1459,12 +1173,6 @@
                         </div>
                     </deckgo-slide-title>
 
-                    <deckgo-slide-title class="slide-todo">
-                        <div slot="title">
-                            TODO: shadow dom styling
-                        </div>
-                    </deckgo-slide-title>
-
                     <deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/ice-block.png')"
                         class="bg-img dark"
@@ -1523,13 +1231,6 @@
                     </deckgo-slide-title>
 
                     <!-- #endregion state management & interactions -->
-
-                    <deckgo-slide-title class="slide-todo">
-                        <div slot="title">
-                            TODO: modularity & PRPL
-                        </div>
-                        <div slot="notes" show></div>
-                    </deckgo-slide-title>
 
                     <deckgo-slide-title class="slide-todo">
                         <div slot="title">
@@ -1592,7 +1293,7 @@
                         <h1 slot="title">Noël Macé</h1>
                         <div slot="author">
                             <h2>Noël Macé</h2>
-                            <p>Freelance WebDev Consultant</p>
+                            <p>Freelance WebDev Consultant & Teacher</p>
                             <p>
                                 Independant Dev Advocado 🥑 for the Web Platform
                             </p>

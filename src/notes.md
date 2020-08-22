@@ -338,7 +338,7 @@ Does those make React a "Vanilla" library? Let's see...
 
 When adopting a "Vanilla" approach, the first question you need to ask yourself is:
 
-:question: **Is it related to a Web Platform concern?**
+**Is it related to a Web Platform concern?**
 
 In other words:
 
@@ -346,7 +346,7 @@ In other words:
 - Is it adding an unnecessary abstraction on top of it?
 - Will you be able to replace it easily?
 
-:question: **Is it heavy?**
+**Is it heavy?**
 
 Would this library add too much JS to load?
 
@@ -381,7 +381,7 @@ dependency, lit-html.
 
 And finally, we have JQuery, leading us to the next question (behold, troll ahead)...
 
-:question: **Is it useful?**
+**Is it useful?**
 
 ![shrug](https://media.giphy.com/media/QmPLxW7gNUas/giphy.gif)
 
@@ -507,62 +507,27 @@ Here are those related to interactions:
 And the related spec you should absolutely read:
 - [WHATWG - 2.7.1 Reflecting content attributes in IDL attributes](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#reflecting-content-attributes-in-idl-attributes)
 
-### State Management: Big BLoC vs Reusability
+### BLoC
 
-Talking about Web App State Management often means talking about variations around MVVM.
-Defining business logic outside the View, for one page, or one app module (ie for several components).
-
-Google introduced (for flutter & AngularDart) a trendier term for that in 2018: the BLoC pattern.
-My purpose here is just to introduce the idea to you in a "Vanilla" context, not to give you the full details.
-Basically, you could think "reactive MVVM" :wink: It's kind of similar to most State Management approaches like Redux.
+> ***TODO: BLoC Pattern***
 
 ![BLoC pattern - simple](assets/img/bloc-pattern.png)
 
-You could write a BLoC like a ViewModel with VanillaJS.
-
-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/bloc/bloc-class.js
-
-Yet, we would miss the point doing so. Using Dart, implementing the BLoC pattern relies on Dart streams most of the time.
-
 ![BLoC pattern - full](assets/img/streams-bloc.png)
 
-Some are also using RxDart in order to make it simpler. Let's use RxJS instead.
-
-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/bloc/bloc-rx.js
-
-> These examples where taken from [BLoC design pattern with Angular](https://medium.com/lacolaco-blog/bloc-design-pattern-with-angular-1c2f0339f6a3),
-> by Suguru Inatomi. I just transpiled them.
-
-> ***TODO:*** BLoC/MVVM vs independant WCs
-
-#### Streams/Observables
-
-Back to VanillaJS.
-
-[`Object.observe`](https://github.com/tc39/tc39-notes/blob/master/meetings/2017-05/may-25.md#17iiia-observable-proposal-to-stage-2) is dead (removed in [Chrome 50](https://www.chromestatus.com/feature/6147094632988672)) as the proposal was [withdrawn](https://esdiscuss.org/topic/an-update-on-object-observe) in 2016.
-
-The TC39 [Observable proposal](https://github.com/tc39/proposal-observable) is stuck at stage 1 since 2017.
-Lots of discussion, but no edit [since October 2017](https://github.com/tc39/proposal-observable/commit/bf4d87144b6189e793593868e3c022eb51a7d292)
-and last presentation was during [May 2017](https://github.com/tc39/tc39-notes/blob/master/meetings/2017-05/may-25.md#17iiia-observable-proposal-to-stage-2).
-Following it, a new thread was added by Ben Lesh in WHATWG/DOM but implementers didn't express interests.
-
-> FYI, the TC39 [pipeline proposal(s)](https://github.com/tc39/proposal-pipeline-operator)
-> could enhance readability when using
-> [RxJS like "pipes"](https://dev.to/zakhenry/tc39-pipeline-proposal-comparison-rxjs-case-study-1nk0),
-> but has nothing to do with Observables.
-
-So yeah, reactive programming still require a library. RxJS is the defacto standard.
-It's three shakable and only weight ~30kB minified.
-Reactive programming can both solve and create a lot of problems.
-Use it very carefully! But if you need to, IMO, you should choose RxJS for now.
+> ***TODO: bloc class, stream & RxJS***
 
 ### Typings
 
-> ***:construction: WIP*** - See https://github.com/noelmace/devcards/blob/master/dev-doc/type-js.md
+> ***TODO***
 
-### Unit Tests & Tooling
+https://github.com/noelmace/devcards/blob/master/dev-doc/testing.md
 
-> ***:construction: WIP*** - See https://github.com/noelmace/devcards/blob/master/dev-doc/testing.md & https://open-wc.org/guide/
+### Unit Tests
+
+> ***TODO***
+
+https://github.com/noelmace/devcards/blob/master/dev-doc/type-js.md
 
 ## PWA - The Web is on F.I.R.E.
 

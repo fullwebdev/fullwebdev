@@ -16,5 +16,4 @@ export const navigate = (path) => {
     }
 };
 
-// DeckDeckGo
 installRouter((location) => navigate(decodeURIComponent(location.pathname)));
