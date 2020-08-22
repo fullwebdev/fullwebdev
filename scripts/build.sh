@@ -44,7 +44,7 @@ for (( i=0; i<${NBR_PACKAGES}; i++ )); do
     CI_BUILD_FAILED=false
     echo "[cd] $pkg"
     cd "$pkg"
-    npm run build -- -v
+    npm run build
     # TODO: check for file conflicts (docs)
     rm -rf "${root_dist}"
     mkdir -p "${root_dist}"
