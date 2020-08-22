@@ -1249,16 +1249,59 @@
 
                     <!-- #endregion state management & interactions -->
 
-                    <deckgo-slide-title class="slide-todo">
-                        <div slot="title">
-                            TODO: TU
+                    <deckgo-slide-content>
+                        <div slot="title" class="flex flex-center got">
+                            <h1>Typings</h1>
+                        </div>
+                        <div slot="content" class="flex flex-center">
+                            <!-- TODO: oh this is wrong -->
+                            <img
+                                style="height: 100%; max-width: 100%; width: auto; max-height: auto;"
+                                data-src="assets/img/logos/typescript.svg"
+                                alt="RxJS"
+                            />
+                        </div>
+                        <div slot="notes" show>
+                            You don't need typescript!
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <div slot="content" class="flex flex-center">
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/typing/card.js"
+                            >
+                            </deckgo-highlight-code>
                         </div>
                         <div slot="notes" show></div>
-                    </deckgo-slide-title>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <div slot="content" class="flex flex-center">
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/typing/import.js"
+                            >
+                            </deckgo-highlight-code>
+                        </div>
+                        <div slot="notes" show></div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <div slot="title">
+                            <h1 class="got">VS Code</h1>
+                        </div>
+                        <div slot="content" class="flex flex-center">
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/typing/vs-code.json"
+                            >
+                            </deckgo-highlight-code>
+                        </div>
+                        <div slot="notes" show></div>
+                    </deckgo-slide-content>
 
                     <deckgo-slide-title class="slide-todo">
                         <div slot="title">
-                            TODO: Typing
+                            TODO: TU
                         </div>
                         <div slot="notes" show></div>
                     </deckgo-slide-title>
