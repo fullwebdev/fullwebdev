@@ -303,7 +303,37 @@
                 </div>
             </deckgo-slide-content>
 
-            <!-- TODO: compatibility with other platforms -->
+            <deckgo-slide-content>
+                <div slot="content" class="center">
+                    <img data-src="assets/img/create-react-app-dependencygraph.svg">
+                </div>
+                <div slot="notes" show>
+                    <h1>Dependency graph of a create-react-app hello world.</h1>
+                    <code>
+$ npx create-react-app my-app
+$ cd my-app
+$ npm i -g dependency-cruiser
+$ depcruise --exclude "App.test.js" --output-type dot src | dot -T svg > dependencygraph.svg
+                    </code>
+                </div>
+            </deckgo-slide-content>
+
+            <deckgo-slide-big-img img-src="assets/img/branches.jpg">
+                <div slot="notes" show>
+                    <p>The Web Platform is just one plateform!</p>
+                    <p>React can address others, like:</p>
+                    <ul>
+                        <li>SSR (react-dom/server)</li>
+                        <li>Mobile (react-native)</li>
+                        <li>Desktop (proton-native)</li>
+                        <li>CLI (ink)</li>
+                        <li>emails (oy)</li>
+                        <li>documents (reactpdf, redocx)</li>
+                        <li>Even IoT & robotic 🤯 (react-hardware)</li>
+                    </ul>
+                    <p>Go check out <a href="https://github.com/chentsulin/awesome-react-renderer">awesome-react-renderer</a></p>
+                </div>
+            </deckgo-slide-big-img>
             
             <!-- TODO: close to standards ? -->
             
