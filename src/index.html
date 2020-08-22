@@ -734,24 +734,25 @@ faites le pour le PLAISIR, R&D et les AUTRES
                             <h1>Libraries</h1>
                         </div>
                         <!-- prettier-ignore -->
-                        <div slot="notes"></div>
+                        <div slot="notes">🛑 LIBRARIES 🛑</div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
+                        <h1 slot="title" hidden>React</h1>
+
                         <div slot="content" class="flex flex-center">
                             <img data-src="assets/img/logos/react.svg" />
                         </div>
                         <!-- prettier-ignore -->
                         <div slot="notes">
-                            <p>
-                                Reminder: "React Frameworks" exists! e.g. Gatsby
-                                or NextJS.
-                            </p>
-                            <p>
-                                React = just a rendering lib w/ opinionated
-                                "functional" & "one direction dataflow"
-                                approach.
-                            </p>
+⚛ REACT
+
+RAPPEL: react frameworks
+
+📿 opinionated rendering lib
+
+"functional"
+"one direction dataflow"
                         </div>
                     </deckgo-slide-content>
 
@@ -759,30 +760,31 @@ faites le pour le PLAISIR, R&D et les AUTRES
                         style="--background:center no-repeat url('assets/img/branches.jpg')"
                         class="bg-img"
                     >
+                        <h1 slot="title" hidden>React branches</h1>
                         <!-- prettier-ignore -->
                         <div slot="notes">
-                            <p>And it's not (only) about the Web Platform.</p>
-                            <ul>
-                                <li>SSR (react-dom/server)</li>
-                                <li>Mobile (react-native)</li>
-                                <li>Desktop (proton-native)</li>
-                                <li>CLI (ink)</li>
-                                <li>emails (oy)</li>
-                                <li>documents (reactpdf, redocx)</li>
-                                <li>Even IoT & robotic 🤯 (react-hardware)</li>
-                            </ul>
-                            <p>
-                                This justify, abstractions on top
-                            </p>
-                            <p class="strong">
-                                "Vanilla" is the opposite! It's about embracing
-                                <span class="strong">one</span> platform in
-                                order to use it at its full power!
-                            </p>
+🌳🌳 BRANCHES
+
+💡⚠ pas SEULEMENT le 🕸 Web
+
+- SSR (react-dom/server)
+- Mobile (react-native)
+- Desktop (proton-native)
+- CLI (ink)
+- emails (oy)
+- documents (reactpdf, redocx)
+- Even IoT & robotic 🤯 (react-hardware)
+
+ABSTRACTION 👍
+
+❌ PAS 🍦 VANILLA 
+⬅ 🕸 Web Platform
+⬅ SUPER POUVOIRS
                         </div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
+                        <h1 slot="title" hidden>Dependency Graph</h1>
                         <div slot="content" class="flex flex-center">
                             <img
                                 data-src="assets/img/create-react-app-dependencygraph.svg"
@@ -792,7 +794,12 @@ faites le pour le PLAISIR, R&D et les AUTRES
                         </div>
                         <!-- prettier-ignore -->
                         <div slot="notes">
-                            you need a web renderer (React-dom by default)
+DEPENDENCY GRAPH
+
+(create-react-app)
+
+REACT-DOM
+
                         </div>
                     </deckgo-slide-content>
 
@@ -801,29 +808,18 @@ faites le pour le PLAISIR, R&D et les AUTRES
                         img-divisions="333;774;1178"
                         axis="y"
                     >
+                        <h1 slot="title" hidden>Big Dependency Graph</h1>
                         <!-- prettier-ignore -->
                         <div slot="notes">
-                            <p>
-                                And React having a strong "philosophy", it also
-                                leads most project to fully embrace it. For
-                                that, we need
-                            </p>
-                            <p>
-                                Here, this project (Pokedex) use Redux (no,
-                                we'll NOT talk about react context app), but we
-                                could also think about react-router-dom,
-                                react-tooltip, etc...
-                            </p>
-                            <h1>
-                                How this graph was generated:
-                            </h1>
-                            <!-- prettier-ignore -->
-                            <code>
-                            $ git clone git@github.com:alik0211/pokedex.git
-                            $ cd pokedex
-                            $ npm i
-                            $ depcruise --output-type dot src | dot -T png > dependencygraph.png
-                        </code>
+BIG DEPENDENCY GRAPH
+
+📿 Dogme ➡ pleine adoption
+🌍 tout un univers
+
+react-router-dom, react-tooltip
+
+(Pokedex)
+Redux + Hardtack
                         </div>
                     </deckgo-slide-big-img>
 
@@ -831,14 +827,15 @@ faites le pour le PLAISIR, R&D et les AUTRES
                         style="--background:center no-repeat url('assets/img/coin-sides.jpg')"
                         class="bg-img"
                     >
+                        <h1 slot="title" hidden>Coin Sides</h1>
                         <!-- prettier-ignore -->
                         <div slot="notes">
-                            <ul>
-                                <li>
-                                    a rich ecosystem
-                                </li>
-                                <li>a rendering library</li>
-                            </ul>
+TWO SIDES (valar morgulis)
+
+- a rich ecosystem
+- a rendering library
+
+ET SI VOUS LA COMPRENEZ MAL, VOUS MOURREZ
                         </div>
                     </deckgo-slide-content>
 
@@ -848,14 +845,11 @@ faites le pour le PLAISIR, R&D et les AUTRES
                         <h1 slot="title">WC in React</h1>
                         <!-- prettier-ignore -->
                         <div slot="notes">
-                            <p>
-                                So, react can connect to the "vanilla" world ...
-                            </p>
-                            <p>... it just need some tricks (/ boilerplate).</p>
-                            <p>
-                                The community is discussing some solutions
-                                (since 2016)
-                            </p>
+WC in REACT
+
+... tricks (/ boilerplate)
+
+The community is discussing some solutions (since 2016)
                         </div>
                     </deckgo-slide-code>
 
@@ -869,39 +863,32 @@ faites le pour le PLAISIR, R&D et les AUTRES
                             </deckgo-highlight-code>
                         </div>
                         <!-- prettier-ignore -->
-                        <div slot="notes">
-                            It can also be useful for rendering, as itself. All
-                            the other parts are just WC standards.
-                        </div>
+                        <div slot="notes">REACT in WC</div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/crossroads.jpg')"
                         class="bg-img"
                     >
+                        <h1 slot="title" hidden>Crossroad</h1>
                         <!-- prettier-ignore -->
-                        <div slot="notes">
-                            how to decide if you need a library or not
-                        </div>
+                        <div slot="notes">DECIDE</div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/web.jpg')"
                         class="bg-img"
                     >
+                        <h1 slot="title" hidden>Web</h1>
                         <!-- prettier-ignore -->
                         <div slot="notes">
-                            <p class="strong">
-                                Is it related to a Web Platform concern?
-                            </p>
-                            <ul>
-                                <li>Is it close to standards?</li>
-                                <li>
-                                    Is it adding an unnecessary abstraction on
-                                    top of it?
-                                </li>
-                                <li>Will you be able to replace it easily?</li>
-                            </ul>
+🕸 WEB
+
+résoud un problème LIÉ au WEB
+
+❓ proche des STANDARDS
+❓ ABSTRACTION INUTILE
+❓ FACILE a REMPLACER
                         </div>
                     </deckgo-slide-content>
 
@@ -921,35 +908,24 @@ faites le pour le PLAISIR, R&D et les AUTRES
                         </div>
                         <!-- prettier-ignore -->
                         <div slot="notes">
-                            cost of JS / hidden complexity (react-dom, x,
-                            react-redux, lit-html)
+📊 POIDS
+
+2 - react-dom, x, react-redux, lit-html
                         </div>
                     </deckgo-slide-chart>
 
                     <deckgo-slide-video>
+                        <h1 slot="title">Well...</h1>
                         <video autoplay muted playsinline>
                             <source src="assets/gif/meh.mp4" type="video/mp4" />
                         </video>
                         <!-- prettier-ignore -->
                         <div slot="notes">
-                            <p class="strong">Is this library useful?</p>
-                            <p>
-                                JQuery 🤷‍♂️
-                            </p>
-                            <p>
-                                <a
-                                    href="https://github.blog/2018-09-06-removing-jquery-from-github-frontend/"
-                                    >Github</a
-                                >
-                                or
-                                <a href="https://youtu.be/uFxVH5mFAKg"
-                                    >Clever Cloud</a
-                                >
-                            </p>
-                            <p>
-                                abstraction can be a good choice at some time,
-                                but needs to be regularly challenged
-                            </p>
+UTILE ❓
+
+JQuery 🤷‍♂️
+
+Github, Clever Cloud
                         </div>
                     </deckgo-slide-video>
 
@@ -957,22 +933,20 @@ faites le pour le PLAISIR, R&D et les AUTRES
                         style="--background:center no-repeat url('assets/img/execution.jpg')"
                         class="bg-img"
                     >
+                        <h1 slot="title" hidden>Execution</h1>
                         <!-- prettier-ignore -->
                         <div slot="notes">
-                            <p>So, should we avoid all libraries?</p>
-                            <p>
-                                No! Web Platform will always have its
-                                limitations
-                            </p>
-                            <p>
-                                JQuery &lt;- no good DOM manipulation API -&gt;
-                                querySelector and other things
-                            </p>
-                            <p>
-                                X retrospectively useless! Just: prepare
-                                yourself to drop any library you're using any
-                                time soon!
-                            </p>
+🪓 EXECUTION
+
+❌ Non
+
+🕸 WEB - Limitations
+JQuery ⬅ ❌ 👍 DOM manipulation API
+➡ querySelector and other things
+
+❌ pas INUTILE RETROSPECTIVEMENT
+
+vous devez vous préparer à abandonner vos libs
                         </div>
                     </deckgo-slide-content>
 
@@ -980,25 +954,18 @@ faites le pour le PLAISIR, R&D et les AUTRES
                         style="--background:center no-repeat url('assets/img/carriage.png')"
                         class="bg-img"
                     >
+                        <h1 slot="title" hidden>Carriage on fire</h1>
                         <!-- prettier-ignore -->
-                        <div slot="notes">
-                            Just don't let the libraries you use "drive" your
-                            project.
-                        </div>
+                        <div slot="notes">LIBS ❌ 🚓 conduire vos projet</div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/logos/lit-element.jpeg')"
                         class="bg-img"
                     >
+                        <h1 slot="title" hidden>lit-element</h1>
                         <!-- prettier-ignore -->
-                        <div slot="notes">
-                            For example, you can use lit-html or even
-                            lit-element. It will add some opinionated
-                            abstractions on top of your Web Components, but it's
-                            simple and light enough to permit to get rid of it
-                            pretty easily if you need to.
-                        </div>
+                        <div slot="notes">LIT-ELEMENT/HTML</div>
                     </deckgo-slide-content>
 
                     <!-- #endregion Libraries -->
@@ -1007,10 +974,9 @@ faites le pour le PLAISIR, R&D et les AUTRES
                         style="--background:center no-repeat url('assets/img/throne-zoom.jpg')"
                         class="bg-img"
                     >
+                        <h1 slot="title" hidden>Tools</h1>
                         <!-- prettier-ignore -->
-                        <div slot="notes">
-                            same with tooling
-                        </div>
+                        <div slot="notes">TOOLING</div>
                     </deckgo-slide-content>
 
                     <!-- #region Needs -->
