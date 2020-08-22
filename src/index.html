@@ -97,6 +97,20 @@
         ion-app.loading {
             display: none;
         }
+
+        .dark {
+            --background: #000;
+            --color: #fff;
+        }
+
+        .full {
+            width: 100%;
+            height: 100%;
+        }
+
+        .big {
+            font-size: 5em;
+        }
     </style>
 
 </head>
@@ -116,23 +130,36 @@
                 <span slot="seconds">Seconds</span>
             </deckgo-slide-countdown>
 
-            <deckgo-slide-title style="--background: #000">
+            <deckgo-slide-title class="dark">
                 <h1 slot="title" style="color:red">Disclaimer</h1>
-                <div no-shadow slot="content" style="color: white">
+                <div no-shadow slot="content">
                     <h3>Any resemblance to existing TV Shows, books or real persons, living or dead, is purely coincidential.</h3>
                     <p style="font-style: italic">You don't need to worry about spoilers...</p>
                 </div>
             </deckgo-slide-title>
 
             <!-- TODO: own video, autoplay and fullscreen -->
-            <deckgo-slide-youtube src="https://youtu.be/k0ceNkb44Lk" style="--background: #000">
-                <h1 slot="title" style="color: #FFF">Not the right intro...</h1>
+            <deckgo-slide-youtube src="https://youtu.be/k0ceNkb44Lk"class="dark">
+                <h1 slot="title">Not the right intro...</h1>
             </deckgo-slide-youtube>
 
-            <deckgo-slide-content style="--background: #000">
+            <deckgo-slide-content class="dark">
             </deckgo-slide-content>
 
             <deckgo-slide-big-img img-src="assets/img/websteros-map.jpg" img-divisions="500;975;1500" axis="y" reverse></deckgo-slide-big-img>
+
+            <deckgo-slide-big-img img-src="assets/img/neutral-heroes.jpg">
+            </deckgo-slide-big-img>
+
+            <deckgo-slide-video class="dark">
+                <video muted playsinline>
+                    <source src="assets/gif/fire-explosion.mp4" type="video/mp4">
+                </video>
+            </deckgo-slide-video>
+
+            <deckgo-slide-title>
+                <div class="big" slot="title">🔥 F. I. R. E. 🔥</div>
+            </deckgo-slide-title>
 
             <deckgo-slide-gif style="background: white;" src="https://media.giphy.com/media/26DOMeaD2gdGE44LK/giphy.gif" alt="Thank ewe!" fullscreen="true">
             </deckgo-slide-gif>

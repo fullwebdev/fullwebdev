@@ -33,3 +33,5 @@ Thumbs.db
 UserInterfaceState.xcuserstate
 
 dist
+
+report.*.json

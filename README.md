@@ -18,7 +18,7 @@ _Hear my story, traveler! My old eyes have seen him in these lands! Let me tell 
 
 Created with [DeckDeckGo].
 
-To develop and run  locally, proceed as following:
+To develop and run locally, proceed as following:
 
 ```
 git clone https://github.com/noelmace/slides-modern-vanilla

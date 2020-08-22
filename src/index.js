@@ -52,6 +52,8 @@ import {defineCustomElements as deckDeckGoSlideGifElements } from '@deckdeckgo/s
 import {defineCustomElements as deckDeckGoSlideQRCodeElements } from '@deckdeckgo/slide-qrcode/dist/loader';
 // TODO: replace by @deckdeckgo once released
 import {defineCustomElements as deckDeckGoSlideBigImg } from '@wof-show/deckdeckgo-slide-big-img/dist/loader';
+// TODO: release
+import {defineCustomElements as deckDeckGoSlideVideo } from '@deckdeckgo/slide-video/dist/loader';
 
 import { defineCustomElements as deckDeckGoRemoteElements } from '@deckdeckgo/remote/dist/loader';
 import { defineCustomElements as deckDeckGoChartsElements } from '@deckdeckgo/charts/dist/loader';
@@ -81,6 +83,7 @@ deckDeckGoElements(window).then(async () => {
     promises.push(deckDeckGoSlideGifElements(window));
     promises.push(deckDeckGoSlideQRCodeElements(window));
     promises.push(deckDeckGoSlideBigImg(window));
+    promises.push(deckDeckGoSlideVideo(window));
 
     await Promise.all(promises);
 
