@@ -820,14 +820,10 @@
                         </div>
                     </deckgo-slide-content>
 
-                    <!-- TODO: fix centering, mobile and (step by step) highlight in deckdeckgo -->
-                    <deckgo-slide-content>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/wc-in-react.js"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
+                    <deckgo-slide-code
+                        src="/assets/code-samples/wc-in-react.js"
+                    >
+                        <h1 slot="title">WC in React</h1>
                         <div slot="notes" show>
                             <p>
                                 So, react can connect to the "vanilla" world ...
@@ -838,9 +834,10 @@
                                 (since 2016)
                             </p>
                         </div>
-                    </deckgo-slide-content>
+                    </deckgo-slide-code>
 
                     <deckgo-slide-content>
+                        <h1 slot="title">React in WC</h1>
                         <div slot="content" class="flex flex-center">
                             <deckgo-highlight-code
                                 src="/assets/code-samples/react-in-wc.js"
@@ -1013,20 +1010,18 @@
                         </div>
                     </deckgo-slide-content>
 
-                    <deckgo-slide-content>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/pwa-helpers-routing.js"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
+                    <deckgo-slide-code
+                        src="/assets/code-samples/pwa-helpers-routing.js"
+                    >
+                        <h1 slot="title">PWA Helpers</h1>
                         <div slot="notes" show>
-                            <p>pwa-helpers/router.min.js is 589 bytes only!</p>
+                            pwa-helpers/router.min.js is 589 bytes only!
                         </div>
-                    </deckgo-slide-content>
+                    </deckgo-slide-code>
 
                     <!-- #endregion routing -->
                     <!-- #region SSR -->
+
                     <deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/datacenter.jpg')"
                         class="bg-img dark"
@@ -1042,14 +1037,10 @@
                         </div>
                     </deckgo-slide-content>
 
-                    <deckgo-slide-content>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/ssr-puppeteer.js"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
-                    </deckgo-slide-content>
+                    <deckgo-slide-code
+                        src="/assets/code-samples/ssr-puppeteer.js"
+                    >
+                    </deckgo-slide-code>
 
                     <!-- #endregion SSR -->
                     <!-- #region state management & interactions -->
@@ -1103,27 +1094,18 @@
                         </div>
                     </deckgo-slide-content>
 
-                    <deckgo-slide-content>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/bloc/bloc-class.js"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
+                    <deckgo-slide-code
+                        src="/assets/code-samples/bloc/bloc-class.js"
+                    >
                         <div slot="notes" show>
                             BLoC design pattern with Angular, by Suguru Inatomi.
                         </div>
-                    </deckgo-slide-content>
+                    </deckgo-slide-code>
 
-                    <deckgo-slide-content>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/bloc/bloc-rx.js"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
-                        <div slot="notes" show></div>
-                    </deckgo-slide-content>
+                    <deckgo-slide-code
+                        src="/assets/code-samples/bloc/bloc-rx.js"
+                    >
+                    </deckgo-slide-code>
 
                     <deckgo-slide-content>
                         <div slot="content" class="flex flex-center">
@@ -1166,38 +1148,20 @@
                         </div>
                     </deckgo-slide-content>
 
-                    <deckgo-slide-content>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/typing/card.js"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
-                        <div slot="notes" show></div>
-                    </deckgo-slide-content>
+                    <deckgo-slide-code
+                        src="/assets/code-samples/typing/card.js"
+                    >
+                    </deckgo-slide-code>
 
-                    <deckgo-slide-content>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/typing/import.js"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
-                        <div slot="notes" show></div>
-                    </deckgo-slide-content>
+                    <deckgo-slide-code
+                        src="/assets/code-samples/typing/import.js"
+                    >
+                    </deckgo-slide-code>
 
-                    <deckgo-slide-content>
-                        <div slot="title">
-                            <h1 class="got">VS Code</h1>
-                        </div>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/typing/vs-code.json"
-                            >
-                            </deckgo-highlight-code>
-                        </div>
-                        <div slot="notes" show></div>
-                    </deckgo-slide-content>
+                    <deckgo-slide-code
+                        src="/assets/code-samples/typing/vs-code.json"
+                    >
+                    </deckgo-slide-code>
 
                     <!-- #endregion Typings -->
                     <!-- #region Tooling -->
