@@ -279,6 +279,20 @@
                 --background: #f00;
                 color: #000;
             }
+
+            .wof-show > a {
+                color: red;
+                text-decoration: none;
+                font-size: 2em;
+                text-shadow: 1px 1px 2px #000;
+            }
+
+            .wof-show .sub {
+                color: black;
+                text-shadow: 1px 1px 2px #fff;
+                display: inline-block;
+                font-size: 0.8em;
+            }
         </style>
     </head>
     <body>
@@ -1419,7 +1433,10 @@
                         <h1 slot="title">Noël Macé</h1>
                         <div slot="author">
                             <h2>Noël Macé</h2>
-                            <p>Developer Relation & Community focused 🥑</p>
+                            <p>Freelance WebDev Consultant</p>
+                            <p>
+                                Independant Dev Advocado 🥑 for the Web Platform
+                            </p>
                         </div>
                         <div slot="social-link">
                             <deckgo-social twitter="noel_mace"
@@ -1471,14 +1488,17 @@
                         content="https://modern-vanilla.wof.show"
                         style="--deckgo-qrcode-color-fill: black;"
                     >
-                        <h1 slot="title">Slides and more</h1>
-                        <!-- TODO: change url and add more info-->
-                        <p slot="content">
-                            Go check
-                            <a href="https://wof.show" style="font-weight: bold"
+                        <h1 slot="title">Slides</h1>
+                        <div slot="content" class="wof-show">
+                            <a
+                                href="https://slides-modern-vanilla.wof.show"
+                                style="font-weight: bold"
+                                target="_blank"
+                                rel="noopener"
+                                ><span class="sub">modern-vanilla.</span
                                 >wof.show</a
-                            >!
-                        </p>
+                            >
+                        </div>
                     </deckgo-slide-qrcode>
 
                     <deckgo-slide-content
