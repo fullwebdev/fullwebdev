@@ -2,7 +2,7 @@
   "name": "@wof/slides-reveal",
   "version": "1.0.0",
   "description": "Web on FIRE Slides made with Reveal.js",
-  "homepage": "https://fullweb.dev/slides/wof/s1/",
+  "homepage": "https://fullweb.dev/slides/wof1/",
   "private": true,
   "main": "index.html",
   "scripts": {

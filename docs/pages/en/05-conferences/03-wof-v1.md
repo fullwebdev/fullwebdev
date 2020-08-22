@@ -15,14 +15,14 @@ Join me to explore four cutting-edge technologies (one for each F.I.R.E. concept
 
 March 20, 2019, from 1:30 to 4:30 pm, at [Breizhcamp](https://2019.breizhcamp.org/conference/programme/){target="\_blank"}.
 
-- <a href="/slides/wof/s1/breizhcamp-2019.html" target="_blank">slides</a>
+- <a href="/slides/wof1/breizhcamp-2019.html" target="_blank">slides</a>
 - [(fr) video](https://youtu.be/OQ-dr-7pLaA){target="\_blank"}
 
 ## Sub-topic: PRPL pattern
 
 June 7, 2019, from 5:20 to 5:50 pm, at Best of Web, Paris.
 
-- <a href="/slides/wof/s1/BoW-PRPL-2019.html" target="_blank">slides</a>
+- <a href="/slides/wof1/BoW-PRPL-2019.html" target="_blank">slides</a>
 - [(fr) video](https://youtu.be/YSn8r0BDKTY){target="\_blank"}
 
 ### Abstract
@@ -45,4 +45,4 @@ How about a demonstration, a step by step tutorial, along with an in-depth prese
 
 A panel discussion with [Wolfgang Goedel](https://twitter.com/wgoedel){target="\_blank"} at [Best of Web](https://www.bestofweb.paris/2019/){target="\_blank"} on June 06, 2019, from 2:00 to 4:00 pm.
 
-Here are the <a href="/slides/wof/s1/BoW-workshop-2019.html" target="_blank">slides</a>, but we barely used those.
+Here are the <a href="/slides/wof1/BoW-workshop-2019.html" target="_blank">slides</a>, but we barely used those.

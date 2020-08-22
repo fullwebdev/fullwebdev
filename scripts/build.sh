@@ -5,7 +5,7 @@
 ## TODO: move to monocli
 
 PACKAGES=('docs' 'packages/codelabs' 'packages/slides/wof-2' 'packages/slides/wof-1' 'packages/slides/vanilla-1' )
-ROOT_DISTS=('' 'codelabs/doc' 'slides/wof/' 'slides/wof/s1' 'slides/vanilla1/' )
+ROOT_DISTS=('' 'codelabs/doc' 'slides/wof' 'slides/wof1' 'slides/vanilla1' )
 
 NBR_PACKAGES=${#PACKAGES[@]}
 NBR_ROOT_DISTS=${#ROOT_DISTS[@]}
