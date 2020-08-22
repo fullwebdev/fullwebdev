@@ -13,7 +13,7 @@
   "scripts": {
     "prebuild": "npm run prebuild:docs",
     "build": "bash scripts/build.sh -f",
-    "serve": "http-server dist -o",
+    "serve": "cd dist && ws --spa index.html",
     "lint": "prettier --write \"./**/*.{js,css,ts,jsx,tsx,html,yml,vue,styl,md}\" && markdownlint . --fix",
     "pretty": "prettier --write \"./**/*.{js,css,ts,jsx,tsx,html,yml,vue,styl,md}\"",
     "grammar": "bash scripts/grammar.sh",
@@ -46,6 +46,7 @@
     "husky": "^4.2.5",
     "lerna": "^3.22.1",
     "lint-staged": "^10.2.11",
+    "local-web-server": "^4.2.1",
     "markdownlint-cli": "~0.23.2",
     "prettier": "^2.0.5",
     "rimraf": "^2.6.3",
