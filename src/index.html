@@ -162,8 +162,8 @@
                 background: #ffffff;
 
                 --react-color: #61dafb;
-                --lit-element-color: #2196F3;
-                --jquery-color: #D18F4F;
+                --lit-element-color: #2196f3;
+                --jquery-color: #d18f4f;
             }
 
             ion-app.loading,
@@ -521,14 +521,21 @@
                         </div>
                     </deckgo-slide-chart>
 
-                    <!-- TODO: useful ? -->
-                    <!-- TODO: JQuery -->
+                    <deckgo-slide-video>
+                        <video loop muted playsinline>
+                            <source src="assets/gif/meh.mp4" type="video/mp4" />
+                        </video>
+                    </deckgo-slide-video>
 
-                    <!-- TODO: lit-element etc... -->
+                    <deckgo-slide-big-img img-src="assets/img/execution.jpg">
+                        <div slot="notes" show>
+                            So, should we avoid all libraries?
+                        </div>
+                    </deckgo-slide-big-img>
 
                     <!-- #endregion Libraries -->
                     <!-- #region Needs -->
-
+                    
                     <deckgo-slide-content>
                         <div slot="content" class="frame center">
                             <h1>What you<br />can do!</h1>
