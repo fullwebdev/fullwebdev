@@ -4,10 +4,12 @@ class MenuList extends HTMLElement {
     }
 
     async connectedCallback() {
-
         const menuListActions = await buildMenuListActions();
 
-        this.innerHTML = '<ion-content><ion-list no-margin>' + menuListActions + '</ion-list></ion-content>';
+        this.innerHTML =
+            '<ion-content><ion-list no-margin>' +
+            menuListActions +
+            '</ion-list></ion-content>';
     }
 }
 
@@ -15,10 +17,14 @@ buildMenuListActions = () => {
     return new Promise(async (resolve) => {
         let result = '';
 
-        result += '<ion-item ion-item button detail="false" onclick="displaySlideNotes()" color="primary" style="--border-style: none;"><ion-icon name="clipboard" aria-label="Display slide notes" slot="end"></ion-icon><ion-label>Display slide notes</ion-label></ion-item>';
-        result += '<ion-item ion-item button detail="false" onclick="displayRemoteControl()" color="primary" style="--border-style: none;"><ion-icon name="phone-portrait" aria-label="Remote control" slot="end"></ion-icon><ion-label>Remote control</ion-label></ion-item>';
-        result += '<ion-item ion-item button detail="false" onclick="openShare()" color="primary" style="--border-style: none;"><ion-icon name="share" aria-label="Share this presentation" slot="end"></ion-icon><ion-label>Share</ion-label></ion-item>';
-        result += '<ion-item ion-item button detail="false" onclick="openLink(\'https://deckdeckgo.com\')" style="--border-style: none; --ion-item-background: white;"><ion-icon src="/assets/icons/deckdeckgo.svg" aria-label="DeckDeckGo" slot="end"></ion-icon><ion-label>Created with DeckDeckGo</ion-label></ion-item>';
+        result +=
+            '<ion-item ion-item button detail="false" onclick="displaySlideNotes()" color="primary" style="--border-style: none;"><ion-icon name="clipboard" aria-label="Display slide notes" slot="end"></ion-icon><ion-label>Display slide notes</ion-label></ion-item>';
+        result +=
+            '<ion-item ion-item button detail="false" onclick="displayRemoteControl()" color="primary" style="--border-style: none;"><ion-icon name="phone-portrait" aria-label="Remote control" slot="end"></ion-icon><ion-label>Remote control</ion-label></ion-item>';
+        result +=
+            '<ion-item ion-item button detail="false" onclick="openShare()" color="primary" style="--border-style: none;"><ion-icon name="share" aria-label="Share this presentation" slot="end"></ion-icon><ion-label>Share</ion-label></ion-item>';
+        result +=
+            '<ion-item ion-item button detail="false" onclick="openLink(\'https://deckdeckgo.com\')" style="--border-style: none; --ion-item-background: white;"><ion-icon src="assets/icons/deckdeckgo.svg" aria-label="DeckDeckGo" slot="end"></ion-icon><ion-label>Created with DeckDeckGo</ion-label></ion-item>';
 
         resolve(result);
     });
@@ -40,7 +46,7 @@ openMenu = async (ev) => {
     const popover = await popoverController.create({
         component: 'menu-list',
         translucent: true,
-        event: ev
+        event: ev,
     });
 
     await popover.present();
@@ -50,7 +56,6 @@ openLink = async (link) => {
     window.open(link, '_blank');
     await document.querySelector('ion-popover-controller').dismiss();
 };
-
 
 openShare = async () => {
     if (navigator && navigator.share) {
@@ -87,31 +92,37 @@ function shareDesktop() {
 
         const share = {
             displayNames: true,
-            config: [{
-                twitter: {
-                    socialShareUrl: shareUrl,
-                    socialSharePopupWidth: 300,
-                    socialSharePopupHeight: 400
-                }
-            },{
-                reddit: {
-                    socialShareUrl: shareUrl,
-                    socialSharePopupWidth: 300,
-                    socialSharePopupHeight: 500
-                }
-            },{
-                linkedin: {
-                    socialShareUrl: shareUrl
-                }
-            },{
-                email: {
-                    socialShareBody: shareUrl
-                }
-            }, {
-                whatsapp: {
-                    socialShareUrl: shareUrl
-                }
-            }]
+            config: [
+                {
+                    twitter: {
+                        socialShareUrl: shareUrl,
+                        socialSharePopupWidth: 300,
+                        socialSharePopupHeight: 400,
+                    },
+                },
+                {
+                    reddit: {
+                        socialShareUrl: shareUrl,
+                        socialSharePopupWidth: 300,
+                        socialSharePopupHeight: 500,
+                    },
+                },
+                {
+                    linkedin: {
+                        socialShareUrl: shareUrl,
+                    },
+                },
+                {
+                    email: {
+                        socialShareBody: shareUrl,
+                    },
+                },
+                {
+                    whatsapp: {
+                        socialShareUrl: shareUrl,
+                    },
+                },
+            ],
         };
 
         webSocialShare.share = share;

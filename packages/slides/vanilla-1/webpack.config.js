@@ -29,6 +29,9 @@ const config = {
 };
 
 const plugins = [
+    new webpack.DefinePlugin({
+        'process.env.ASSET_PATH': '/slides/wof/latest/',
+    }),
     new CleanWebpackPlugin({
         cleanStaleWebpackAssets: false,
     }),
