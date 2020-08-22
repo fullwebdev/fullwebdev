@@ -1,512 +1,725 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-
-    <base href="/"/>
-
-    <title>Vanilla is coming back</title>
-
-
-    <meta property="og:site_name" content="Vanilla is coming back">
-    <meta property="og:title" content="Vanilla is coming back">
-
-    <meta name="author" content="Noël Macé">
-
-    <meta name="description" content="Embrace the power of the Web Platform! A real-life practical guide.">
-    <meta property="og:description" content="Embrace the power of the Web Platform! A real-life practical guide.">
-
-    <meta property="og:description" content="{{DECKDECKGO_DESCRIPTION}}">
-    <meta property="og:site_name" content="{{DECKDECKGO_TITLE}}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://modern-vanilla.wof.show">
-
-    <meta property="og:image" content="https://modern-vanilla.wof.show/assets/img/vanilla.png">
-    <meta property="og:image:type" content="image/png">
-
-    <meta name="twitter:site" content="@deckdeckgo">
-    <meta name="twitter:title" content="{{DECKDECKGO_TITLE}}">
-    <meta name="twitter:description" content="{{DECKDECKGO_DESCRIPTION}}">
-    <meta name="twitter:image:src" content="https://deckdeckgo.com/assets/img/deckdeckgo.png">
-    <meta name="twitter:card" content="summary">
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#f3e5ab">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#f3e5ab">
-
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', async () => {
-                try {
-                    await navigator.serviceWorker.register('service-worker.js');
-                } catch (e) {
-                    console.warn('No service worker registered');
-                }
-            });
-        }
-    </script>
-
-    <link rel="manifest" href="manifest.json">
-
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="msapplication-tap-highlight" content="no">
-
-    <style>
-
-        @font-face {
-            font-family: 'Game of Thrones';
-            src: url('assets/fonts/got/GameofThrones.eot');
-            src: url('assets/fonts/got/GameofThrones.eot?#iefix') format('embedded-opentype'),
-                url('assets/fonts/got/GameofThrones.woff') format('woff'),
-                url('assets/fonts/got/GameofThrones.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        :root {
-            background: #ffffff;
-            --ion-background-color: #ffffff;
-        }
-
-        deckgo-deck {
-            color: black;
-            --color: black;
-            --ion-text-color: black;
-            --deckgo-highlight-code-line-background: yellow;
-        }
-
-        /* Until Web Components are loaded, don't display content */
-        body {
-            background: #ffffff;
-        }
-
-        ion-app.loading, ion-app.loading a {
-            color: transparent;
-        }
-
-        ion-app.loading a {
-            color: transparent;
-        }
-
-        ion-app.loading {
-            display: none;
-        }
-
-        .dark {
-            --background: #000;
-            --color: #fff;
-        }
-
-        .full {
-            width: 100%;
-            height: 100%;
-        }
-
-        .big {
-            font-size: 5em;
-        }
-
-        .center {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .center img, .img-row img {
-            width: 100%;
-            max-height: 100%;
-        }
-
-        .img-row {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            flex-direction: row;
-            align-items: center;
-            text-align: center;
-        }
-
-        .img-row .img-container {
-            flex: 1 1;
-        }
-
-        .img-row img {
-            padding: 1em 1em;
-        }
-
-        .frame {
-            background: center no-repeat url('assets/img/frame-h.png');
-            font-family: 'Game of Thrones';
-            background-size: contain;
-        }
-
-        .frame * {
-            font-size: 2em;
-        }
-
-        .small-code {
-            --slide-padding-top: 8em;
-        }
-    </style>
-
-</head>
-<body>
-
-<ion-app class="loading">
-    <ion-content force-overscroll="false" scroll-y="false">
-        <deckgo-deck id="slider" pager-percentage="false">
-
-            <deckgo-slide-countdown until="2019-10-03T15:30:00.000+02:00">
-                <h2 slot="title">Brace yourself</h2>
-                <span slot="days">Days</span>
-                <span slot="hours">Hours</span>
-                <span slot="minutes">Minutes</span>
-                <span slot="seconds">Seconds</span>
-            </deckgo-slide-countdown>
-
-            <!-- #region Intro -->
-
-            <deckgo-slide-title class="dark">
-                <h1 slot="title" style="color:red">Disclaimer</h1>
-                <div no-shadow slot="content">
-                    <h3>Any resemblance to existing TV Shows, books or real persons, living or dead, is purely coincidential.</h3>
-                    <p style="font-style: italic">You don't need to worry about spoilers...</p>
-                </div>
-            </deckgo-slide-title>
-
-            <!-- TODO: own video, autoplay and fullscreen -->
-            <deckgo-slide-youtube src="https://youtu.be/k0ceNkb44Lk"class="dark">
-                <h1 slot="title">Not the right intro...</h1>
-            </deckgo-slide-youtube>
-
-            <deckgo-slide-content class="dark">
-            </deckgo-slide-content>
-
-            <deckgo-slide-big-img img-src="assets/img/websteros-map.jpg" img-divisions="500;975;1500" axis="y" reverse></deckgo-slide-big-img>
-
-            <deckgo-slide-big-img img-src="assets/img/neutral-heroes.jpg">
-            </deckgo-slide-big-img>
-
-            <deckgo-slide-content>
-                <div slot="content" class="img-row">
-                    <div class="img-container">
-                        <img data-src="assets/img/logos/js.svg">
-                    </div>
-                    <div class="img-container">
-                        <img data-src="assets/img/logos/wc.svg">
-                    </div>
-                    <div class="img-container">
-                        <img data-src="assets/img/logos/pwa.svg">
-                    </div>
-                </div>
-            </deckgo-slide-content>
-
-            <deckgo-slide-big-img img-src="assets/img/roots.jpg">
-                <div slot="notes" show>
-                    But why are Web Frameworks & Libraries so important? Let's go to the root of these!
-                </div>
-            </deckgo-slide-big-img>
-
-            <!-- #endregion Intro -->
-            <!-- #region Frameworks -->
-
-            <deckgo-slide-content>
-                <div slot="content" class="frame center">
-                    <h1>Frameworks</h1>
-                </div>
-            </deckgo-slide-content>
-
-            <deckgo-slide-content>
-                <div slot="content" class="img-row">
-                    <div class="img-container">
-                        <img data-src="assets/img/logos/angular.svg">
-                    </div>
-                    <div class="img-container">
-                        <img data-src="assets/img/logos/vuejs.svg">
-                    </div>
-                </div>
-            </deckgo-slide-content>
-
-            <deckgo-slide-content>
-                <div slot="content" class="img-row">
-                    <div class="img-container">
-                        <img data-src="assets/img/logos/gatsby.svg">
-                    </div>
-                    <div class="img-container">
-                        <img data-src="assets/img/logos/next-js.svg">
-                    </div>
-                    <div class="img-container">
-                        <img data-src="assets/img/logos/nuxt.svg">
-                    </div>
-                </div>
-            </deckgo-slide-content>
-
-            <deckgo-slide-big-img img-src="assets/img/boats.png">
-                <div slot="notes" show>
-                    Faster?
-                </div>
-            </deckgo-slide-big-img>
-
-            <deckgo-slide-big-img img-src="assets/img/order.jpg">
-                <div slot="notes" show>
-                    Opinionated approach brings order
-                </div>
-            </deckgo-slide-big-img>
-
-            <deckgo-slide-big-img img-src="assets/img/skycell.jpg">
-                <div slot="notes" show>
-                    But to much order can lead to dictats & ... prison.
-                </div>
-            </deckgo-slide-big-img>
-
-            <deckgo-slide-big-img img-src="assets/img/execution.jpg">
-                <div slot="notes" show>
-                    So, should we kill the frameworks?
-                </div>
-            </deckgo-slide-big-img>
-
-            <deckgo-slide-big-img img-src="assets/img/door.jpg">
-                <div slot="notes" show>
-                    Don't let your company create its own framework!
-                </div>
-            </deckgo-slide-big-img>
-
-            <!-- #endregion Frameworks -->
-            <!-- #region Libraries -->
-
-            <deckgo-slide-content>
-                <div slot="content" class="frame center">
-                    <h1>Libraries</h1>
-                </div>
-            </deckgo-slide-content>
-
-            <deckgo-slide-content>
-                <div slot="content" class="center">
-                    <img data-src="assets/img/logos/react.svg">
-                </div>
-            </deckgo-slide-content>
-
-            <deckgo-slide-content>
-                <div slot="content" class="center">
-                    <img data-src="assets/img/create-react-app-dependencygraph.svg">
-                </div>
-                <div slot="notes" show>
-                    <h1>Dependency graph of a create-react-app hello world.</h1>
-                    <code>
-$ npx create-react-app my-app
-$ cd my-app
-$ npm i -g dependency-cruiser
-$ depcruise --exclude "App.test.js" --output-type dot src | dot -T svg > dependencygraph.svg
-                    </code>
-                </div>
-            </deckgo-slide-content>
-
-            <deckgo-slide-big-img img-src="assets/img/branches.jpg">
-                <div slot="notes" show>
-                    <p>The Web Platform is just one plateform!</p>
-                    <p>React can address others, like:</p>
-                    <ul>
-                        <li>SSR (react-dom/server)</li>
-                        <li>Mobile (react-native)</li>
-                        <li>Desktop (proton-native)</li>
-                        <li>CLI (ink)</li>
-                        <li>emails (oy)</li>
-                        <li>documents (reactpdf, redocx)</li>
-                        <li>Even IoT & robotic 🤯 (react-hardware)</li>
-                    </ul>
-                    <p>Go check out <a href="https://github.com/chentsulin/awesome-react-renderer">awesome-react-renderer</a></p>
-                </div>
-            </deckgo-slide-big-img>
-
-            <!-- TODO: fix centering, mobile and (step by step) highlight in deckdeckgo -->
-            <deckgo-slide-content>
-                <div slot="content" class="center">
-                    <deckgo-highlight-code src="/assets/code-samples/wc-in-react.js">
-                    </deckgo-highlight-code>
-                </div>
-            </deckgo-slide-content>
-
-            <deckgo-slide-content>
-                <div slot="content" class="center">
-                    <deckgo-highlight-code src="/assets/code-samples/react-in-wc.js">
-                    </deckgo-highlight-code>
-                </div>
-            </deckgo-slide-content>
-
-            <deckgo-slide-content>
-                <div slot="content" class="center">
-                    <deckgo-highlight-code src="/assets/code-samples/react-in-wc.js" highlight-lines="1,1">
-                    </deckgo-highlight-code>
-                </div>
-            </deckgo-slide-content>
-
-            <deckgo-slide-content>
-                <div slot="content" class="center">
-                    <deckgo-highlight-code src="/assets/code-samples/react-in-wc.js" highlight-lines="4,4 10,10">
-                    </deckgo-highlight-code>
-                </div>
-            </deckgo-slide-content>
-
-            <deckgo-slide-content>
-                <div slot="content" class="center">
-                    <deckgo-highlight-code src="/assets/code-samples/react-in-wc.js" highlight-lines="7,7">
-                    </deckgo-highlight-code>
-                </div>
-            </deckgo-slide-content>
-            
-            <!-- TODO: close to standards ? -->
-            
-            <!-- TODO: weight graph (react, lit-element, stencil-one) -->
-
-            <!-- TODO: useful ? -->
-            <!-- TODO: JQuery -->
-
-            <!-- TODO: lit-element etc... -->
-
-            <!-- #endregion Libraries -->
-            <!-- #region Needs -->
-
-            <deckgo-slide-content>
-                <div slot="content" class="frame center">
-                    <h1>What you<br/>can do!</h1>
-                </div>
-            </deckgo-slide-content>
-
-            <!-- TODO: routing -->
-            <!-- TODO: SSR -->
-            <deckgo-slide-big-img img-src="assets/img/datacenter.jpg">
-            </deckgo-slide-big-img>
-            <!-- TODO: state management -->
-            <!-- TODO: modularity -->
-
-            <!-- #endregion Needs -->
-            <!-- #region FIRE -->
-
-            <deckgo-slide-content>
-                <div slot="content" class="frame center">
-                    <h1>A song of ice...<br/>...and fire!</h1>
-                </div>
-            </deckgo-slide-content>
-
-            <deckgo-slide-video class="dark">
-                <video muted playsinline>
-                    <source src="assets/gif/fire-explosion.mp4" type="video/mp4">
-                </video>
-            </deckgo-slide-video>
-
-            <deckgo-slide-title>
-                <div class="big" slot="title">🔥 F. I. R. E. 🔥</div>
-            </deckgo-slide-title>
-
-            <!-- #endregion Libraries -->
-            <!-- #region outro -->
-
-            <deckgo-slide-gif style="background: white;" src="https://media.giphy.com/media/26DOMeaD2gdGE44LK/giphy.gif" alt="Thank ewe!" fullscreen="true">
-            </deckgo-slide-gif>
-
-            <deckgo-slide-author img-src="https://avatars3.githubusercontent.com/u/7578400">
-                <h1 slot="title">Noël Macé</h1>
-                <div slot="author">
-                    <h2>Noël Macé</h2>
-                    <p>Developer Relation & Community focused 🥑</p>
-                </div>
-                <div slot="social-link"><deckgo-social twitter="noel_mace"><ion-icon alt="Noël on Twitter" slot="icon" name="logo-twitter" margin-start margin-end></ion-icon> @noel_mace</deckgo-social></div>
-                <div slot="social-link"><deckgo-social linkedin="noelmace/"><ion-icon alt="Noël on Linkedin" slot="icon" name="logo-linkedin" margin-start margin-end></ion-icon> in/noelmace</deckgo-social></div>
-                <div slot="social-link"><deckgo-social dev="noelmace"><img style="width: 1em;" alt="Noël on dev.to" slot="icon" src="assets/icons/dev.svg" margin-start margin-end/> @noelmace</deckgo-social></div>
-            </deckgo-slide-author>
-
-            <deckgo-slide-qrcode content="https://modern-vanilla.wof.show" style="--deckgo-qrcode-color-fill: black;">
-                <h1 slot="title">Slides and more</h1>
-                <!-- TODO: replace by logo-->
-                <p slot="content">
-                    Go check <a href="https://wof.show" style="font-weight: bold">wof.show</a>!
-                </p>
-            </deckgo-slide-qrcode>
-
-            <deckgo-slide-big-img img-src="http://questionsgems.com/wp-content/uploads/2019/03/images-99.jpeg">
-            </deckgo-slide-big-img>
-
-            <!-- #endregion FIRE -->
-
-            <a href="#" onclick="openMenu(event)" slot="actions" style="color: inherit;"><ion-icon name="more"></ion-icon></a>
-
-        </deckgo-deck>
-
-        <deckgo-remote></deckgo-remote>
-
-    </ion-content>
-
-    <ion-fab vertical="bottom" horizontal="end" slot="fixed" id="navigation">
-        <button id="play" onclick="playPause('play', true)" class="navigation ion-activatable" style="display: none;">
-            <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon name="play" aria-label="Play video" style="font-size: 1.4em;"></ion-icon>
-        </button>
-
-        <button id="pause" onclick="playPause('pause', true)" class="navigation ion-activatable" style="display: none;">
-            <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon name="pause" aria-label="Pause video" style="font-size: 1.4em;"></ion-icon>
-        </button>
-
-        <button onclick="previousSlide()" class="navigation ion-activatable">
-            <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon name="arrow-back" aria-label="Previous slide" style="font-size: 1.4em;"></ion-icon>
-        </button>
-
-        <button onclick="nextSlide()" class="navigation ion-activatable">
-            <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon name="arrow-forward" aria-label="Next slide" style="font-size: 1.4em;"></ion-icon>
-        </button>
-
-        <button onclick="presentSlidePicker()" class="navigation ion-activatable">
-            <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon name="list" md="md-list" ios="md-list" aria-label="Jump to a particular slide" style="font-size: 1.4em;"></ion-icon>
-        </button>
-
-        <button onclick="toggleFullScreen()" class="navigation ion-activatable hide-on-mobile">
-            <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon name="expand" aria-label="Full screen" style="font-size: 1.4em;"></ion-icon>
-        </button>
-    </ion-fab>
-
-    <!-- Ionic components anchors -->
-    <ion-popover-controller></ion-popover-controller>
-    <ion-modal-controller></ion-modal-controller>
-    <ion-alert-controller></ion-alert-controller>
-
-    <web-social-share show="false" style="--web-social-share-backdrop-opacity: 0.5;">
-        <ion-icon name="logo-twitter" aria-label="Twitter" slot="twitter" style="color: #00aced; font-size: 1.6rem; display: block;"></ion-icon>
-        <ion-icon name="logo-reddit" aria-label="Reddit" slot="reddit" style="font-size: 1.6rem; display: block;"></ion-icon>
-        <ion-icon name="logo-linkedin" aria-label="Linkedin" slot="linkedin" style="color: #0077b5; font-size: 1.6rem; display: block;"></ion-icon>
-        <ion-icon name="mail" slot="email" aria-label="Email" style="color: #ff8ea3; font-size: 1.6rem; display: block;"></ion-icon>
-        <ion-icon name="logo-whatsapp" aria-label="WhatsApp" slot="whatsapp" style="color: #25D366; font-size: 1.6rem; display: block;"></ion-icon>
-    </web-social-share>
-</ion-app>
-
-<noscript>
-    Please enable Javascript to access this presentation.
-</noscript>
-
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+        />
+
+        <base href="/" />
+
+        <title>Vanilla is coming back</title>
+
+        <meta property="og:site_name" content="Vanilla is coming back" />
+        <meta property="og:title" content="Vanilla is coming back" />
+
+        <meta name="author" content="Noël Macé" />
+
+        <meta
+            name="description"
+            content="Embrace the power of the Web Platform! A real-life practical guide."
+        />
+        <meta
+            property="og:description"
+            content="Embrace the power of the Web Platform! A real-life practical guide."
+        />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://modern-vanilla.wof.show" />
+
+        <meta
+            property="og:image"
+            content="https://modern-vanilla.wof.show/assets/img/vanilla.png"
+        />
+        <meta property="og:image:type" content="image/png" />
+
+        <!-- Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="57x57"
+            href="assets/favicon/apple-icon-57x57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="60x60"
+            href="assets/favicon/apple-icon-60x60.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="assets/favicon/apple-icon-72x72.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="assets/favicon/apple-icon-76x76.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="assets/favicon/apple-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="assets/favicon/apple-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="assets/favicon/apple-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="assets/favicon/apple-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="assets/favicon/apple-icon-180x180.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="assets/favicon/android-icon-192x192.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="assets/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="assets/favicon/favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="assets/favicon/favicon-16x16.png"
+        />
+        <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+        <meta name="msapplication-TileColor" content="#f3e5ab" />
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+        <meta
+            name="msapplication-config"
+            content="assets/favicon/browserconfig.xml"
+        />
+        <meta name="theme-color" content="#f3e5ab" />
+
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', async () => {
+                    try {
+                        await navigator.serviceWorker.register(
+                            'service-worker.js'
+                        );
+                    } catch (e) {
+                        console.warn('No service worker registered');
+                    }
+                });
+            }
+        </script>
+
+        <link rel="manifest" href="manifest.json" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="msapplication-tap-highlight" content="no" />
+
+        <style>
+            @font-face {
+                font-family: 'Game of Thrones';
+                src: url('assets/fonts/got/GameofThrones.eot');
+                src: url('assets/fonts/got/GameofThrones.eot?#iefix')
+                        format('embedded-opentype'),
+                    url('assets/fonts/got/GameofThrones.woff') format('woff'),
+                    url('assets/fonts/got/GameofThrones.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            :root {
+                background: #ffffff;
+                --ion-background-color: #ffffff;
+            }
+
+            deckgo-deck {
+                color: black;
+                --color: black;
+                --ion-text-color: black;
+                --deckgo-highlight-code-line-background: yellow;
+            }
+
+            /* Until Web Components are loaded, don't display content */
+            body {
+                background: #ffffff;
+            }
+
+            ion-app.loading,
+            ion-app.loading a {
+                color: transparent;
+            }
+
+            ion-app.loading a {
+                color: transparent;
+            }
+
+            ion-app.loading {
+                display: none;
+            }
+
+            .dark {
+                --background: #000;
+                --color: #fff;
+            }
+
+            .full {
+                width: 100%;
+                height: 100%;
+            }
+
+            .big {
+                font-size: 5em;
+            }
+
+            .center {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            .center img,
+            .img-row img {
+                width: 100%;
+                max-height: 100%;
+            }
+
+            .img-row {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                align-items: center;
+                text-align: center;
+            }
+
+            .img-row .img-container {
+                flex: 1 1;
+            }
+
+            .img-row img {
+                padding: 1em 1em;
+            }
+
+            .frame {
+                background: center no-repeat url('assets/img/frame-h.png');
+                font-family: 'Game of Thrones';
+                background-size: contain;
+            }
+
+            .frame * {
+                font-size: 2em;
+            }
+
+            .small-code {
+                --slide-padding-top: 8em;
+            }
+        </style>
+    </head>
+    <body>
+        <ion-app class="loading">
+            <ion-content force-overscroll="false" scroll-y="false">
+                <deckgo-deck id="slider" pager-percentage="false">
+                    <deckgo-slide-countdown
+                        until="2019-10-03T15:30:00.000+02:00"
+                    >
+                        <h2 slot="title">Brace yourself</h2>
+                        <span slot="days">Days</span>
+                        <span slot="hours">Hours</span>
+                        <span slot="minutes">Minutes</span>
+                        <span slot="seconds">Seconds</span>
+                    </deckgo-slide-countdown>
+
+                    <!-- #region Intro -->
+
+                    <deckgo-slide-title class="dark">
+                        <h1 slot="title" style="color:red">Disclaimer</h1>
+                        <div no-shadow slot="content">
+                            <h3>
+                                Any resemblance to existing TV Shows, books or
+                                real persons, living or dead, is purely
+                                coincidential.
+                            </h3>
+                            <p style="font-style: italic">
+                                You don't need to worry about spoilers...
+                            </p>
+                        </div>
+                    </deckgo-slide-title>
+
+                    <!-- TODO: own video, autoplay and fullscreen -->
+                    <deckgo-slide-youtube
+                        src="https://youtu.be/k0ceNkb44Lk"
+                        class="dark"
+                    >
+                        <h1 slot="title">Not the right intro...</h1>
+                    </deckgo-slide-youtube>
+
+                    <deckgo-slide-content class="dark"> </deckgo-slide-content>
+
+                    <deckgo-slide-big-img
+                        img-src="assets/img/websteros-map.jpg"
+                        img-divisions="500;975;1500"
+                        axis="y"
+                        reverse
+                    ></deckgo-slide-big-img>
+
+                    <deckgo-slide-big-img
+                        img-src="assets/img/neutral-heroes.jpg"
+                    >
+                    </deckgo-slide-big-img>
+
+                    <deckgo-slide-content>
+                        <div slot="content" class="img-row">
+                            <div class="img-container">
+                                <img data-src="assets/img/logos/js.svg" />
+                            </div>
+                            <div class="img-container">
+                                <img data-src="assets/img/logos/wc.svg" />
+                            </div>
+                            <div class="img-container">
+                                <img data-src="assets/img/logos/pwa.svg" />
+                            </div>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-big-img img-src="assets/img/roots.jpg">
+                        <div slot="notes" show>
+                            But why are Web Frameworks & Libraries so important?
+                            Let's go to the root of these!
+                        </div>
+                    </deckgo-slide-big-img>
+
+                    <!-- #endregion Intro -->
+                    <!-- #region Frameworks -->
+
+                    <deckgo-slide-content>
+                        <div slot="content" class="frame center">
+                            <h1>Frameworks</h1>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <div slot="content" class="img-row">
+                            <div class="img-container">
+                                <img data-src="assets/img/logos/angular.svg" />
+                            </div>
+                            <div class="img-container">
+                                <img data-src="assets/img/logos/vuejs.svg" />
+                            </div>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <div slot="content" class="img-row">
+                            <div class="img-container">
+                                <img data-src="assets/img/logos/gatsby.svg" />
+                            </div>
+                            <div class="img-container">
+                                <img data-src="assets/img/logos/next-js.svg" />
+                            </div>
+                            <div class="img-container">
+                                <img data-src="assets/img/logos/nuxt.svg" />
+                            </div>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-big-img img-src="assets/img/boats.png">
+                        <div slot="notes" show>
+                            Faster?
+                        </div>
+                    </deckgo-slide-big-img>
+
+                    <deckgo-slide-big-img img-src="assets/img/order.jpg">
+                        <div slot="notes" show>
+                            Opinionated approach brings order
+                        </div>
+                    </deckgo-slide-big-img>
+
+                    <deckgo-slide-big-img img-src="assets/img/skycell.jpg">
+                        <div slot="notes" show>
+                            But to much order can lead to dictats & ... prison.
+                        </div>
+                    </deckgo-slide-big-img>
+
+                    <deckgo-slide-big-img img-src="assets/img/execution.jpg">
+                        <div slot="notes" show>
+                            So, should we kill the frameworks?
+                        </div>
+                    </deckgo-slide-big-img>
+
+                    <deckgo-slide-big-img img-src="assets/img/door.jpg">
+                        <div slot="notes" show>
+                            Don't let your company create its own framework!
+                        </div>
+                    </deckgo-slide-big-img>
+
+                    <!-- #endregion Frameworks -->
+                    <!-- #region Libraries -->
+
+                    <deckgo-slide-content>
+                        <div slot="content" class="frame center">
+                            <h1>Libraries</h1>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <div slot="content" class="center">
+                            <img data-src="assets/img/logos/react.svg" />
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <div slot="content" class="center">
+                            <img
+                                data-src="assets/img/create-react-app-dependencygraph.svg"
+                            />
+                        </div>
+                        <div slot="notes" show>
+                            <h1>
+                                Dependency graph of a create-react-app hello
+                                world.
+                            </h1>
+                            <code>
+                                $ npx create-react-app my-app $ cd my-app $ npm
+                                i -g dependency-cruiser $ depcruise --exclude
+                                "App.test.js" --output-type dot src | dot -T svg
+                                > dependencygraph.svg
+                            </code>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-big-img img-src="assets/img/branches.jpg">
+                        <div slot="notes" show>
+                            <p>The Web Platform is just one plateform!</p>
+                            <p>React can address others, like:</p>
+                            <ul>
+                                <li>SSR (react-dom/server)</li>
+                                <li>Mobile (react-native)</li>
+                                <li>Desktop (proton-native)</li>
+                                <li>CLI (ink)</li>
+                                <li>emails (oy)</li>
+                                <li>documents (reactpdf, redocx)</li>
+                                <li>Even IoT & robotic 🤯 (react-hardware)</li>
+                            </ul>
+                            <p>
+                                Go check out
+                                <a
+                                    href="https://github.com/chentsulin/awesome-react-renderer"
+                                    >awesome-react-renderer</a
+                                >
+                            </p>
+                        </div>
+                    </deckgo-slide-big-img>
+
+                    <!-- TODO: fix centering, mobile and (step by step) highlight in deckdeckgo -->
+                    <deckgo-slide-content>
+                        <div slot="content" class="center">
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/wc-in-react.js"
+                            >
+                            </deckgo-highlight-code>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <div slot="content" class="center">
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/react-in-wc.js"
+                            >
+                            </deckgo-highlight-code>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <div slot="content" class="center">
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/react-in-wc.js"
+                                highlight-lines="1,1"
+                            >
+                            </deckgo-highlight-code>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <div slot="content" class="center">
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/react-in-wc.js"
+                                highlight-lines="4,4 10,10"
+                            >
+                            </deckgo-highlight-code>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <div slot="content" class="center">
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/react-in-wc.js"
+                                highlight-lines="7,7"
+                            >
+                            </deckgo-highlight-code>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <!-- TODO: close to standards ? -->
+
+                    <!-- TODO: weight graph (react, lit-element, stencil-one) -->
+
+                    <!-- TODO: useful ? -->
+                    <!-- TODO: JQuery -->
+
+                    <!-- TODO: lit-element etc... -->
+
+                    <!-- #endregion Libraries -->
+                    <!-- #region Needs -->
+
+                    <deckgo-slide-content>
+                        <div slot="content" class="frame center">
+                            <h1>What you<br />can do!</h1>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <!-- TODO: routing -->
+                    <!-- TODO: SSR -->
+                    <deckgo-slide-big-img img-src="assets/img/datacenter.jpg">
+                    </deckgo-slide-big-img>
+                    <!-- TODO: state management -->
+                    <!-- TODO: modularity -->
+
+                    <!-- #endregion Needs -->
+                    <!-- #region FIRE -->
+
+                    <deckgo-slide-content>
+                        <div slot="content" class="frame center">
+                            <h1>A song of ice...<br />...and fire!</h1>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-video class="dark">
+                        <video muted playsinline>
+                            <source
+                                src="assets/gif/fire-explosion.mp4"
+                                type="video/mp4"
+                            />
+                        </video>
+                    </deckgo-slide-video>
+
+                    <deckgo-slide-title>
+                        <div class="big" slot="title">🔥 F. I. R. E. 🔥</div>
+                    </deckgo-slide-title>
+
+                    <!-- #endregion Libraries -->
+                    <!-- #region outro -->
+
+                    <deckgo-slide-gif
+                        style="background: white;"
+                        src="https://media.giphy.com/media/26DOMeaD2gdGE44LK/giphy.gif"
+                        alt="Thank ewe!"
+                        fullscreen="true"
+                    >
+                    </deckgo-slide-gif>
+
+                    <deckgo-slide-author
+                        img-src="https://avatars3.githubusercontent.com/u/7578400"
+                    >
+                        <h1 slot="title">Noël Macé</h1>
+                        <div slot="author">
+                            <h2>Noël Macé</h2>
+                            <p>Developer Relation & Community focused 🥑</p>
+                        </div>
+                        <div slot="social-link">
+                            <deckgo-social twitter="noel_mace"
+                                ><ion-icon
+                                    alt="Noël on Twitter"
+                                    slot="icon"
+                                    name="logo-twitter"
+                                    margin-start
+                                    margin-end
+                                ></ion-icon>
+                                @noel_mace</deckgo-social
+                            >
+                        </div>
+                        <div slot="social-link">
+                            <deckgo-social linkedin="noelmace/"
+                                ><ion-icon
+                                    alt="Noël on Linkedin"
+                                    slot="icon"
+                                    name="logo-linkedin"
+                                    margin-start
+                                    margin-end
+                                ></ion-icon>
+                                in/noelmace</deckgo-social
+                            >
+                        </div>
+                        <div slot="social-link">
+                            <deckgo-social dev="noelmace"
+                                ><img
+                                    style="width: 1em;"
+                                    alt="Noël on dev.to"
+                                    slot="icon"
+                                    src="assets/icons/dev.svg"
+                                    margin-start
+                                    margin-end
+                                />
+                                @noelmace</deckgo-social
+                            >
+                        </div>
+                    </deckgo-slide-author>
+
+                    <deckgo-slide-qrcode
+                        content="https://modern-vanilla.wof.show"
+                        style="--deckgo-qrcode-color-fill: black;"
+                    >
+                        <h1 slot="title">Slides and more</h1>
+                        <!-- TODO: replace by logo-->
+                        <p slot="content">
+                            Go check
+                            <a href="https://wof.show" style="font-weight: bold"
+                                >wof.show</a
+                            >!
+                        </p>
+                    </deckgo-slide-qrcode>
+
+                    <deckgo-slide-big-img
+                        img-src="http://questionsgems.com/wp-content/uploads/2019/03/images-99.jpeg"
+                    >
+                    </deckgo-slide-big-img>
+
+                    <!-- #endregion FIRE -->
+
+                    <a
+                        href="#"
+                        onclick="openMenu(event)"
+                        slot="actions"
+                        style="color: inherit;"
+                        ><ion-icon name="more"></ion-icon
+                    ></a>
+                </deckgo-deck>
+
+                <deckgo-remote></deckgo-remote>
+            </ion-content>
+
+            <ion-fab
+                vertical="bottom"
+                horizontal="end"
+                slot="fixed"
+                id="navigation"
+            >
+                <button
+                    onclick="previousSlide()"
+                    class="navigation ion-activatable"
+                >
+                    <ion-ripple-effect></ion-ripple-effect>
+                    <ion-icon
+                        name="arrow-back"
+                        aria-label="Previous slide"
+                        style="font-size: 1.4em;"
+                    ></ion-icon>
+                </button>
+
+                <button
+                    onclick="nextSlide()"
+                    class="navigation ion-activatable"
+                >
+                    <ion-ripple-effect></ion-ripple-effect>
+                    <ion-icon
+                        name="arrow-forward"
+                        aria-label="Next slide"
+                        style="font-size: 1.4em;"
+                    ></ion-icon>
+                </button>
+
+                <button
+                    onclick="presentSlidePicker()"
+                    class="navigation ion-activatable"
+                >
+                    <ion-ripple-effect></ion-ripple-effect>
+                    <ion-icon
+                        name="list"
+                        md="md-list"
+                        ios="md-list"
+                        aria-label="Jump to a particular slide"
+                        style="font-size: 1.4em;"
+                    ></ion-icon>
+                </button>
+
+                <button
+                    onclick="toggleFullScreen()"
+                    class="navigation ion-activatable hide-on-mobile"
+                >
+                    <ion-ripple-effect></ion-ripple-effect>
+                    <ion-icon
+                        name="expand"
+                        aria-label="Full screen"
+                        style="font-size: 1.4em;"
+                    ></ion-icon>
+                </button>
+            </ion-fab>
+
+            <!-- Ionic components anchors -->
+            <ion-popover-controller></ion-popover-controller>
+            <ion-modal-controller></ion-modal-controller>
+            <ion-alert-controller></ion-alert-controller>
+
+            <web-social-share
+                show="false"
+                style="--web-social-share-backdrop-opacity: 0.5;"
+            >
+                <ion-icon
+                    name="logo-twitter"
+                    aria-label="Twitter"
+                    slot="twitter"
+                    style="color: #00aced; font-size: 1.6rem; display: block;"
+                ></ion-icon>
+                <ion-icon
+                    name="logo-reddit"
+                    aria-label="Reddit"
+                    slot="reddit"
+                    style="font-size: 1.6rem; display: block;"
+                ></ion-icon>
+                <ion-icon
+                    name="logo-linkedin"
+                    aria-label="Linkedin"
+                    slot="linkedin"
+                    style="color: #0077b5; font-size: 1.6rem; display: block;"
+                ></ion-icon>
+                <ion-icon
+                    name="mail"
+                    slot="email"
+                    aria-label="Email"
+                    style="color: #ff8ea3; font-size: 1.6rem; display: block;"
+                ></ion-icon>
+                <ion-icon
+                    name="logo-whatsapp"
+                    aria-label="WhatsApp"
+                    slot="whatsapp"
+                    style="color: #25D366; font-size: 1.6rem; display: block;"
+                ></ion-icon>
+            </web-social-share>
+        </ion-app>
+
+        <noscript>
+            Please enable Javascript to access this presentation.
+        </noscript>
+    </body>
 </html>
