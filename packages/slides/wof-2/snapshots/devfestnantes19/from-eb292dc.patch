@@ -16,9 +16,18 @@ index a89827b..081747f 100644
  
  const getImgFile = async (url) => {
 diff --git a/src/index.html b/src/index.html
-index 45f0320..d4b8713 100644
+index 45f0320..4787bbc 100644
 --- a/src/index.html
 +++ b/src/index.html
+@@ -7,7 +7,7 @@
+             content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+         />
+ 
+-        <base href="/" />
++        <base href="/slides/wof/devfestnantes19/" />
+ 
+         <title>The Web is on F.I.R.E.</title>
+ 
 @@ -27,10 +27,10 @@
          />
          <meta property="og:site_name" content="The Web is on F.I.R.E." />
@@ -41,7 +50,28 @@ index 45f0320..d4b8713 100644
          />
          <meta name="twitter:card" content="summary" />
  
-@@ -1304,18 +1304,17 @@ new range of rendered children.
+@@ -125,20 +125,6 @@
+         />
+         <meta name="theme-color" content="#ed6c30" />
+ 
+-        <script>
+-            if ('serviceWorker' in navigator) {
+-                window.addEventListener('load', async () => {
+-                    try {
+-                        await navigator.serviceWorker.register(
+-                            'service-worker.js'
+-                        );
+-                    } catch (e) {
+-                        console.warn('No service worker registered');
+-                    }
+-                });
+-            }
+-        </script>
+-
+         <link rel="manifest" href="manifest.json" />
+ 
+         <meta name="apple-mobile-web-app-capable" content="yes" />
+@@ -1304,18 +1290,17 @@ new range of rendered children.
                      </deckgo-slide-content>
  
                      <deckgo-slide-qrcode
@@ -63,3 +93,41 @@ index 45f0320..d4b8713 100644
                              >
                          </div>
                      </deckgo-slide-qrcode>
+diff --git a/src/manifest.json b/src/manifest.json
+index e8e34e7..218270d 100644
+--- a/src/manifest.json
++++ b/src/manifest.json
+@@ -4,8 +4,8 @@
+   "display": "standalone",
+   "theme_color": "#ed6c30",
+   "background_color": "#ffffff",
+-  "scope": "/",
+-  "start_url": "/",
++  "scope": "/slides/wof/devfestnantes19/",
++  "start_url": "/slides/wof/devfestnantes19/index.html",
+   "icons": [
+     {
+       "src": "assets/favicon/android-icon-36x36.png",
+diff --git a/webpack.config.js b/webpack.config.js
+index c48949f..aa5941d 100644
+--- a/webpack.config.js
++++ b/webpack.config.js
+@@ -5,8 +5,6 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+ 
+ const {DeckDeckGoInfoPlugin, DeckDeckGoRemoveNotesPlugin} = require('deckdeckgo-webpack-plugins');
+ 
+-const {GenerateSW} = require('workbox-webpack-plugin');
+-
+ const webpack = require('webpack');
+ 
+ const path = require('path');
+@@ -57,9 +55,6 @@ module.exports = (env, argv) => {
+     }
+ 
+     if (argv.mode === 'production') {
+-        plugins.push(new GenerateSW({
+-            ignoreURLParametersMatching: [/./]
+-        }));
+         plugins.push(new DeckDeckGoInfoPlugin());
+ 
+         if (!argv.notes) {

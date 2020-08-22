@@ -4,8 +4,8 @@
   "display": "standalone",
   "theme_color": "#ed6c30",
   "background_color": "#ffffff",
-  "scope": "/",
-  "start_url": "/",
+  "scope": "/slides/wof/devfestnantes19/",
+  "start_url": "/slides/wof/devfestnantes19/index.html",
   "icons": [
     {
       "src": "assets/favicon/android-icon-36x36.png",
