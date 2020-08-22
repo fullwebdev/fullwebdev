@@ -1,9 +1,9 @@
 {
   "projects": {
-    "default": "modern-vanilla"
+    "default": "wof-show"
   },
   "targets": {
-    "modern-vanilla": {
+    "wof-show": {
       "hosting": {
         "devfesttls19": [
           "vanilla-devfesttls19"
