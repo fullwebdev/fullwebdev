@@ -200,6 +200,7 @@
                 justify-content: center;
                 align-items: center;
                 text-align: center;
+                flex-direction: column;
             }
 
             .flex-row {
@@ -558,9 +559,32 @@
                         </div>
                     </deckgo-slide-content>
 
-                    <!-- TODO: routing -->
+                    <!-- #region routing -->
+
+                    <deckgo-slide-content style="--background:center no-repeat url('assets/img/roads.jpg')" class="bg-img dark">
+                        <div slot="content" class="center got">
+                            <h1>Routing</h1>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <div slot="content" class="center">
+                            <deckgo-highlight-code
+                                src="/assets/charts/pwa-helpers-routing.js"
+                            >
+                            </deckgo-highlight-code>
+                        </div>
+                        <div slot="notes" show>
+                            <p>pwa-helpers/router.min.js is 589 bytes only!</p>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <!-- #endregion routing -->
                     <!-- #region SSR -->
-                    <deckgo-slide-content style="--background:center no-repeat url('assets/img/datacenter.jpg')" class="bg-img">
+                    <deckgo-slide-content style="--background:center no-repeat url('assets/img/datacenter.jpg')" class="bg-img dark">
+                        <div slot="content" class="center got">
+                            <h1>SSR</h1>
+                        </div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
