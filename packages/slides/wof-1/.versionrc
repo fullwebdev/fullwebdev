@@ -1,0 +1,5 @@
+{
+  "path": ".",
+  "tag-prefix": "reveal-slides@v",
+  "releaseCommitMessageFormat": "chore: reveal-slides@{{currentTag}}"
+}
