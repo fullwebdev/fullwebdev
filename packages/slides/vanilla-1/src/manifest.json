@@ -4,8 +4,8 @@
   "display": "standalone",
   "theme_color": "#f3e5ab",
   "background_color": "#ffffff",
-  "scope": "/",
-  "start_url": "/",
+  "scope": "/slides/vanilla1/latest/",
+  "start_url": "/slides/vanilla1/latest/index.html",
   "icons": [
     {
       "src": "assets/favicon/icon-72x72.png",
