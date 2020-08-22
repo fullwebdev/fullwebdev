@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-beta.2](https://github.com/noelmace/slides-modern-vanilla/compare/v1.1.0-beta.1...v1.1.0-beta.2) (2019-12-08)
+
+
+### Features
+
+* new plan ([d6fcaaa](https://github.com/noelmace/slides-modern-vanilla/commit/d6fcaaabc36ea805fe61a3c200b2234956d15ac4))
+
 ## [1.1.0-beta.1](https://github.com/noelmace/slides-modern-vanilla/compare/v1.0.0...v1.1.0-beta.1) (2019-12-07)
 
 
