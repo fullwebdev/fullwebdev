@@ -2,7 +2,7 @@
   "name": "slides-wof-conf",
   "version": "1.3.2",
   "description": "The F.I.R.E. safety kit for everyone!",
-  "homepage": "https://conf.wof.show",
+  "homepage": "https://fullweb.dev/slides/wof/latest/",
   "private": true,
   "scripts": {
     "start": "concurrently --kill-others \"npm run watch\" \"npm run dev\"",
@@ -13,8 +13,7 @@
     "build": "webpack --mode production",
     "local": "concurrently --kill-others \"webpack --watch --mode development --env.local=true\" \"npm run dev\"",
     "format": "prettier \"**/*.{js,css,html}\" --write",
-    "release": "standard-version",
-    "github-release": "conventional-github-releaser -p angular"
+    "release": "standard-version"
   },
   "author": {
     "name": "Noël Macé",
@@ -24,7 +23,7 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/fullwebdev/fullwebdev",
-    "directory": "packages/wof-slides"
+    "directory": "packages/slides/wof-2"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
