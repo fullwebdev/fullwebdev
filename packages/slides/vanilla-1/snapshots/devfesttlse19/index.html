@@ -1,0 +1,196 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,viewport-fit=cover"><base href="/"><title>Vanilla is coming back</title><meta property="og:site_name" content="Vanilla is coming back"><meta property="og:title" content="Vanilla is coming back"><meta name="author" content="Noël Macé"><meta name="description" content="Embrace the power of the Web Platform! A real-life practical guide."><meta property="og:description" content="Embrace the power of the Web Platform! A real-life practical guide."><meta property="og:type" content="website"><meta property="og:url" content="https://fullweb.dev/slides/vanilla1/devfesttlse19/"><meta property="og:image" content="https://fullweb.dev/slides/vanilla1/devfesttlse19/assets/img/vanilla.png"><meta property="og:image:type" content="image/png"><link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png"><link rel="shortcut icon" href="assets/favicon/favicon.ico"><meta name="msapplication-TileColor" content="#f3e5ab"><meta name="msapplication-TileImage" content="/ms-icon-144x144.png"><meta name="msapplication-config" content="assets/favicon/browserconfig.xml"><meta name="theme-color" content="#f3e5ab"><script>if ('serviceWorker' in navigator) {
+                window.addEventListener('load', async () => {
+                    try {
+                        await navigator.serviceWorker.register(
+                            'service-worker.js'
+                        );
+                    } catch (e) {
+                        console.warn('No service worker registered');
+                    }
+                });
+            }</script><link rel="manifest" href="manifest.json"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="msapplication-tap-highlight" content="no"><style>@font-face {
+                font-family: 'Game of Thrones';
+                src: url('assets/fonts/got/GameofThrones.eot');
+                src: url('assets/fonts/got/GameofThrones.eot?#iefix')
+                        format('embedded-opentype'),
+                    url('assets/fonts/got/GameofThrones.woff') format('woff'),
+                    url('assets/fonts/got/GameofThrones.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            :root {
+                background: #ffffff;
+                --ion-background-color: #ffffff;
+            }
+
+            deckgo-deck {
+                color: black;
+                --color: black;
+                --ion-text-color: black;
+                --deckgo-highlight-code-line-background: yellow;
+            }
+
+            /* Until Web Components are loaded, don't display content */
+            body {
+                background: #ffffff;
+
+                --react-color: #61dafb;
+                --preact-color: #673ab8;
+                --redux-color: #764abc;
+                --lit-element-color: #2196f3;
+                --jquery-color: #d18f4f;
+            }
+
+            ion-app.loading,
+            ion-app.loading a {
+                color: transparent;
+            }
+
+            ion-app.loading a {
+                color: transparent;
+            }
+
+            ion-app.loading {
+                display: none;
+            }
+
+            .dark {
+                --background: #000;
+                --color: #fff;
+            }
+
+            .full {
+                width: 100%;
+                height: 100%;
+            }
+
+            .big {
+                font-size: 5em;
+            }
+
+            .flex {
+                width: 100%;
+                height: 100%;
+                display: flex;
+            }
+
+            .flex-center {
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-direction: column;
+            }
+
+            .flex-end {
+                justify-content: flex-end;
+                align-items: center;
+                text-align: center;
+                flex-direction: column;
+            }
+
+            .flex-row {
+                display: flex;
+                justify-content: space-around;
+                flex-direction: row;
+                width: 100%;
+            }
+
+            .flex-center img,
+            .img-row img {
+                width: 100%;
+                max-height: 80vh;
+            }
+
+            .img-row {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                align-items: center;
+                text-align: center;
+            }
+
+            .img-row .img-container {
+                flex: 1 1;
+            }
+
+            .img-row img {
+                padding: 1em 1em;
+            }
+
+            .frame {
+                background: center no-repeat url('assets/img/frame-h.png');
+                background-size: contain;
+            }
+
+            .got,
+            h1 {
+                font-family: 'Game of Thrones';
+                text-shadow: 2px 2px 3px #333;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .bg-img {
+                background-size: contain;
+            }
+
+            .frame * {
+                font-size: 2em;
+            }
+
+            .small-code {
+                --slide-padding-top: 8em;
+            }
+
+            .kiss {
+                color: #ffcaf2;
+                font-weight: bold;
+            }
+
+            .strong {
+                font-weight: bold;
+            }
+
+            .slide-todo {
+                --background: #f00;
+                color: #000;
+            }
+
+            .wof-show > a {
+                color: red;
+                text-decoration: none;
+                font-size: 2em;
+                text-shadow: 1px 1px 2px #000;
+            }
+
+            .wof-show .sub {
+                color: black;
+                text-shadow: 1px 1px 2px #fff;
+                display: inline-block;
+                font-size: 0.8em;
+            }
+
+            .center {
+                text-align: center;
+            }
+
+            .lib-chart {
+                --deckgo-chart-fill-color-1: var(--react-color);
+                --deckgo-chart-fill-color-2: var(--preact-color);
+                --deckgo-chart-fill-color-3: var(--redux-color);
+                --deckgo-chart-fill-color-4: var(--lit-element-color);
+                --deckgo-chart-fill-color-5: var(--jquery-color);
+            }
+
+            .twitter-content {
+                width: 100%;
+            }
+
+            .twitter-content twitter-widget {
+                margin: 0 auto;
+            }</style></head><body><ion-app class="loading"><ion-content force-overscroll="false" scroll-y="false"><deckgo-deck id="slider" pager-percentage="false"><deckgo-slide-title class="dark"><h1 slot="title" style="color:red">Reading this slides?</h1><div no-shadow="" slot="content"><h3>There is a documentation for that!</h3><p style="font-style: italic">Go read it <a href="https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/notes.md">on Github</a>!</p></div><div slot="notes" show="">INTRO LECTEUR</div></deckgo-slide-title><deckgo-slide-countdown until="2019-10-03T15:30:00.000+02:00"><h2 slot="title">Brace yourself</h2><span slot="days">Days</span> <span slot="hours">Hours</span> <span slot="minutes">Minutes</span> <span slot="seconds">Seconds</span><div slot="notes" show="">COUNTDOWN</div></deckgo-slide-countdown><deckgo-slide-title class="dark"><h1 slot="title" style="color:red">Disclaimer</h1><div no-shadow="" slot="content"><h3>Any resemblance to existing TV Shows, books or real persons, living or dead, is purely coincidental.</h3><p style="font-style: italic">You don't need to worry about spoilers...</p></div><div slot="notes" show="">DISCLAIMER</div></deckgo-slide-title><deckgo-slide-big-img img-src="assets/img/websteros-map.jpg" img-divisions="500;975;1500" axis="y" reverse=""><h1 slot="title" hidden="">Map of Websteros</h1><div slot="notes" show="">🗺️ BIENVENUE A WEBSTEROS histoire la raison d'être de nos royaumes ☮️ batailles / ⚔️ paix / alliances ⚠️ peuples 🗽 libres / non-alignés ☀️ Terres ensoleillées 🏝️ Terres isolées ❄️ nord ⚛️ réactif 🧱 au dela du 🕸️ Web ⚔️ guerre entre 👑 royaumes maintenir ☮️ paix</div></deckgo-slide-big-img><deckgo-slide-content style="--background:center no-repeat url('assets/img/neutral-heroes.jpg')" class="bg-img"><h1 slot="title" hidden="">neutral heroes</h1><div slot="notes" show="">👨‍👨‍👧‍👦 NON-ALIGNÉS 🤷‍♂️ certains 🙇‍♂️ allégeance 👑 royaumes Nous tous 💚 aimons &amp; 🤚 restons à distance des 👑 royaumes</div></deckgo-slide-content><deckgo-slide-content><h1 slot="title" hidden="">Vanilla Logos</h1><div slot="content" class="img-row"><div class="img-container"><img data-src="assets/img/logos/js.svg"></div><div class="img-container"><img data-src="assets/img/logos/wc.svg"></div><div class="img-container"><img data-src="assets/img/logos/pwa.svg"></div></div><div slot="notes" show="">🍦 LOGOS Nombreuses façons de nous rejoindre 📕 Def. 🍦 Vanilla Web 🕸️ 🟨 🍦Vanilla JS 🧊 Web Components 🗣️🤦‍♂️ Trop de mauvaises infos RAPPEL pour SysthoryOS</div></deckgo-slide-content><deckgo-slide-content style="--background:center no-repeat url('assets/img/world-map.jpeg')" class="bg-img"><h1 slot="title" hidden="">World Map</h1><div slot="notes" show="">🌏 CARTE DU MONDE</div></deckgo-slide-content><deckgo-slide-content><h1 slot="title" hidden="">Custom Elements</h1><div slot="content" class="flex flex-center"><img data-src="assets/icons/custom-element.svg" alt="Custom Element"></div><div slot="notes" show="">CUSTOM ELEMENTS</div></deckgo-slide-content><deckgo-slide-content><h1 slot="title" hidden="">Shadow DOM</h1><div slot="content" class="flex flex-center"><img data-src="assets/icons/shadow-dom.svg" alt="Custom Element"></div><div slot="notes" show="">SHADOW DOM</div></deckgo-slide-content><deckgo-slide-content><h1 slot="title" hidden="">ES Modules</h1><div slot="content" class="flex flex-center"><img data-src="assets/icons/es-module.svg" alt="Custom Element"></div><div slot="notes" show="">ES MODULES</div></deckgo-slide-content><deckgo-slide-content><h1 slot="title" hidden="">HTML Template</h1><div slot="content" class="flex flex-center"><img data-src="assets/icons/html-template.svg" alt="Custom Element"></div><div slot="notes" show="">HTML TEMPLATE</div></deckgo-slide-content><deckgo-slide-content style="--background:center no-repeat url('assets/img/roots.jpg')" class="bg-img"><h1 slot="title" hidden="">Roots</h1><div slot="notes" show="">🌳 RACINES</div></deckgo-slide-content><deckgo-slide-content><div slot="content" class="frame flex flex-center got"><h1>Frameworks</h1></div><div slot="notes" show="">🛑 FRAMEWORKS 🛑</div></deckgo-slide-content><deckgo-slide-content><h1 slot="title" hidden="">Sunny Lands</h1><div slot="content" class="img-row"><div class="img-container"><img data-src="assets/img/logos/angular.svg"></div><div class="img-container"><img data-src="assets/img/logos/vuejs.svg"></div></div><div slot="notes" show="">☀️ TERRES ENSOLEILLÉES</div></deckgo-slide-content><deckgo-slide-content><h1 slot="title" hidden="">Other Frameworks</h1><div slot="content" class="img-row"><div class="img-container"><img data-src="assets/img/logos/gatsby.svg"></div><div class="img-container"><img data-src="assets/img/logos/next-js.svg"></div><div class="img-container"><img data-src="assets/img/logos/nuxt.svg"></div></div><div slot="notes" show="">▪👑 PETITS ROYAUMES 🙇 allégeance à d'autres royaumes 👑 Gatsby &amp; Next ➡ ⚛ React Nuxt ➡ Vue ❓ pourquoi 👨👩 les suivents</div></deckgo-slide-content><deckgo-slide-content style="--background:center no-repeat url('assets/img/boats.png')" class="bg-img"><h1 slot="title" hidden="">Going faster</h1><div slot="notes" show="">⛵ PLUS RAPIDE ... mais seulement au début 📿 DOGMATIQUE</div></deckgo-slide-content><deckgo-slide-content style="--background:center no-repeat url('assets/img/order.jpg')" class="bg-img"><h1 slot="title" hidden="">Order</h1><div slot="notes" show="">⚔ ORDRE dogma ➡ ➕ strict / ➖ liberté 👍 Bien ...la plupart du temps...</div></deckgo-slide-content><deckgo-slide-content style="--background:center no-repeat url('assets/img/skycell.jpg')" class="bg-img"><h1 slot="title" hidden="">Skycell</h1><div slot="notes" show="">🌥 SKYCELL Car 📿 dogme ➡ 👮 dictature &amp; prison 👶🍼 naissance frameworks 📿 dogmes doivent être ✅ JUSTES MAIS 📿 dogme ➕ ⏳ temps = + faux ET c'est là qu'on est en 👮 prison CAR challenger une opinion est complexe</div></deckgo-slide-content><deckgo-slide-content style="--background:center no-repeat url('assets/img/coins.jpg')" class="bg-img"><h1 slot="title" hidden="">Depts</h1><div slot="notes" show="">💰 DETTE ⛑ heureusement, les frameworks aident vous créez de la 🏦 dette technique ET UN DEVELOPER PAYE TOUJOURS SES DETTES</div></deckgo-slide-content><deckgo-slide-content style="--background:center no-repeat url('assets/img/ben-hur-waxzce.jpg')" class="bg-img"><h1 slot="title" hidden="">Depts</h1><div slot="notes" show="">QUENTIN ADAM CEO Clever Cloud "La dette technique: une supercherie mythologique pour galériens de l’IT"</div></deckgo-slide-content><deckgo-slide-content><div slot="content" class="frame flex flex-center got"><h1>Libraries</h1></div><div slot="notes" show="">🛑 LIBRARIES 🛑</div></deckgo-slide-content><deckgo-slide-content><h1 slot="title" hidden="">React</h1><div slot="content" class="flex flex-center"><img data-src="assets/img/logos/react.svg"></div><div slot="notes" show="">⚛ REACT RAPPEL: react frameworks 📿 opinionated rendering lib "functional" "one direction dataflow"</div></deckgo-slide-content><deckgo-slide-content style="--background:center no-repeat url('assets/img/branches.jpg')" class="bg-img"><h1 slot="title" hidden="">React branches</h1><div slot="notes" show="">🌳🌳 BRANCHES 💡⚠ pas SEULEMENT le 🕸 Web - SSR (react-dom/server) - Mobile (react-native) - Desktop (proton-native) - CLI (ink) - emails (oy) - documents (reactpdf, redocx) - Even IoT &amp; robotic 🤯 (react-hardware) ABSTRACTION 👍 ❌ PAS 🍦 VANILLA ⬅ 🕸 Web Platform ⬅ SUPER POUVOIRS</div></deckgo-slide-content><deckgo-slide-content style="--background:center no-repeat url('assets/img/coin-sides.jpg')" class="bg-img"><h1 slot="title" hidden="">Coin Sides</h1><div slot="notes" show="">TWO SIDES (valar morgulis) - a rich ecosystem - a rendering library ET SI VOUS LA COMPRENEZ MAL, VOUS MOURREZ</div></deckgo-slide-content><deckgo-slide-code src="/assets/code-samples/wc-in-react.js"><h1 slot="title">WC in React</h1><div slot="notes" show="">WC in REACT ... tricks (/ boilerplate) The community is discussing some solutions (since 2016)</div></deckgo-slide-code><deckgo-slide-content><h1 slot="title">React in WC</h1><div slot="content" class="flex flex-center"><deckgo-highlight-code src="/assets/code-samples/react-in-wc.js" highlight-lines="8,8"></deckgo-highlight-code></div><div slot="notes" show="">REACT in WC</div></deckgo-slide-content><deckgo-slide-content style="--background:center no-repeat url('assets/img/crossroads.jpg')" class="bg-img"><h1 slot="title" hidden="">Crossroad</h1><div slot="notes" show="">DECIDE</div></deckgo-slide-content><deckgo-slide-content style="--background:center no-repeat url('assets/img/web.jpg')" class="bg-img"><h1 slot="title" hidden="">Web</h1><div slot="notes" show="">🕸 WEB ❓ résoud un problème LIÉ au WEB ❓ proche des STANDARDS ❓ ABSTRACTION INUTILE ❓ FACILE a REMPLACER</div></deckgo-slide-content><deckgo-slide-chart type="bar" animation="true" src="/assets/charts/libs-weight.csv" class="lib-chart"><div slot="title" class="flex-row"><div>react</div><div>preact</div><div>redux</div><div>lit-element</div><div>jquery</div></div><div slot="notes" show="">📊 POIDS ❓ 2 - react-dom, x, react-redux, lit-html</div></deckgo-slide-chart><deckgo-slide-video><h1 slot="title">Well...</h1><video autoplay="" muted="" playsinline=""><source src="assets/gif/meh.mp4" type="video/mp4"></video><div slot="notes" show="">UTILE ❓ JQuery 🤷‍♂️ Github, Clever Cloud</div></deckgo-slide-video><deckgo-slide-content style="--background:center no-repeat url('assets/img/execution.jpg')" class="bg-img"><h1 slot="title" hidden="">Execution</h1><div slot="notes" show="">🪓 EXECUTION ❌ Non 🕸 WEB - Limitations JQuery ⬅ ❌ 👍 DOM manipulation API ➡ querySelector and other things ❌ pas INUTILE RETROSPECTIVEMENT vous devez vous préparer à abandonner vos libs</div></deckgo-slide-content><deckgo-slide-content style="--background:center no-repeat url('assets/img/carriage.png')" class="bg-img"><h1 slot="title" hidden="">Carriage on fire</h1><div slot="notes" show="">LIBS ❌ 🚓 conduire vos projet</div></deckgo-slide-content><deckgo-slide-content><div slot="content" class="frame flex flex-center got"><h1>What you<br>can do!</h1></div><div slot="notes" show="">WHAT YOU CAN DO</div></deckgo-slide-content><deckgo-slide-content style="--background:center no-repeat url('assets/img/thormund-kiss.jpg')" class="bg-img dark"><div slot="content" class="flex flex-end got"><h1 class="kiss">K.I.S.S.</h1></div><h1 slot="title" hidden="">KISS</h1></deckgo-slide-content><deckgo-slide-content style="--background:center no-repeat url('assets/img/roads.jpg')" class="bg-img dark"><div slot="content" class="flex flex-center got"><h1>Routing</h1></div><h1 slot="title" hidden="">ROUTING</h1></deckgo-slide-content><deckgo-slide-code src="/assets/code-samples/pwa-helpers-routing.js"><h1 slot="title">PWA Helpers</h1><div slot="notes" show="">pwa-helpers/router.min.js is 589 bytes only!</div></deckgo-slide-code><deckgo-slide-content style="--background:center no-repeat url('assets/img/datacenter.jpg')" class="bg-img dark"><div slot="content" class="flex flex-center got"><h1>SSR</h1></div><div slot="notes" show="">SSR</div></deckgo-slide-content><deckgo-slide-content><h1 slot="title" hidden="">Puppeteer</h1><div slot="content" class="flex flex-center"><img data-src="assets/img/logos/puppeteer.svg"></div><div slot="notes" show="">PUPPETEER</div></deckgo-slide-content><deckgo-slide-content style="--background:center no-repeat url('assets/img/check-hands.png')" class="bg-img dark"><div slot="content" class="flex flex-center got"><h1>Working Together</h1></div><div slot="notes" show=""></div></deckgo-slide-content><deckgo-slide-content style="--background:center no-repeat url('assets/img/thormund-kiss.jpg')" class="bg-img dark"><div slot="content" class="flex flex-end got"><h1 class="kiss">K.I.S.S.</h1><h2 style="margin-top: 0">(again)</h2></div><div slot="notes" show=""></div></deckgo-slide-content><deckgo-slide-content style="--background:center no-repeat url('assets/img/ice-block.png')" class="bg-img dark"><div slot="title" class="flex flex-center got"><h1>State Management</h1><h2>Big BloC vs Reusability</h2></div><div slot="notes" show=""></div></deckgo-slide-content><deckgo-slide-content style="--background:center no-repeat url('assets/img/bloc-pattern.png')" class="bg-img dark"><div slot="notes" show=""><p>Image from <a href="https://github.com/felangel/bloc/blob/master/packages/bloc/README.md">felangel/bloc</a></p></div></deckgo-slide-content><deckgo-slide-content><div slot="content" class="flex flex-center"><img data-src="assets/img/logos/rxjs.svg" alt="RxJS"></div><div slot="notes" show="">Object.observed removed 2016 TC39 Observable proposal stuck since 2017 WHATWG/DOM no implementers interest RxJS ~30kB minified.</div></deckgo-slide-content><deckgo-slide-content><div slot="title" class="flex flex-center got"><h1>Typings</h1></div><div slot="content" class="flex flex-center"><img style="height: 100%; max-width: 100%; width: auto; max-height: auto;" data-src="assets/img/logos/typescript.svg" alt="RxJS"></div><div slot="notes" show="">You don't need typescript!</div></deckgo-slide-content><deckgo-slide-code src="/assets/code-samples/typing/card.js"><h1 slot="title">You don't need TS</h1></deckgo-slide-code><deckgo-slide-code src="/assets/code-samples/typing/import.js"><h1 slot="title">You don't need TS</h1></deckgo-slide-code><deckgo-slide-code src="/assets/code-samples/typing/vs-code.json"><h1 slot="title">VS Code</h1></deckgo-slide-code><deckgo-slide-title class="flex flex-center got"><div slot="title"><h1>Tooling</h1></div><div slot="notes" show=""></div></deckgo-slide-title><deckgo-slide-content style="--background:center no-repeat url('assets/img/logos/open-wc.png')" class="bg-img"><div slot="notes" show=""></div></deckgo-slide-content><deckgo-slide-content><div slot="content" class="flex flex-center"><img data-src="assets/img/logos/karma.svg" alt="RxJS"></div><div slot="notes" show=""></div></deckgo-slide-content><deckgo-slide-title class="flex flex-center"><div slot="title"><h2>@open-wc/karma-esm</h2></div><div slot="notes" show=""></div></deckgo-slide-title><deckgo-slide-content><div slot="content" class="img-row"><div class="img-container"><img data-src="assets/img/logos/rollup.svg"></div><div class="img-container"><img data-src="assets/img/logos/webpack.svg"></div></div></deckgo-slide-content><deckgo-slide-content><div slot="content" class="flex flex-center"><img data-src="assets/img/logos/storybook.svg" alt="RxJS"></div><div slot="notes" show=""></div></deckgo-slide-content><deckgo-slide-content><div slot="content" class="frame flex flex-center got"><h1>A song of ice...<br>...and fire!</h1></div></deckgo-slide-content><deckgo-slide-video class="dark"><video muted="" playsinline=""><source src="assets/gif/fire-explosion.mp4" type="video/mp4"></video></deckgo-slide-video><deckgo-slide-title><div class="big" slot="title">🔥 F. I. R. E. 🔥</div></deckgo-slide-title><deckgo-slide-content style="--background:center no-repeat url('assets/img/ice-and-fire.jpg')" class="got bg-img dark"><div slot="content" class="flex flex-center"><h1>But that's another story...</h1></div></deckgo-slide-content><deckgo-slide-author img-src="https://avatars3.githubusercontent.com/u/7578400"><h1 slot="title">Noël Macé</h1><div slot="author"><h2>Noël Macé</h2><p>Freelance WebDev Consultant &amp; Teacher</p><p>Independent Dev Advocado 🥑 for the Web Platform</p></div><div slot="social-link"><deckgo-social twitter="noel_mace"><ion-icon alt="Noël on Twitter" slot="icon" name="logo-twitter" margin-start="" margin-end=""></ion-icon>@noel_mace</deckgo-social></div><div slot="social-link"><deckgo-social linkedin="noelmace/"><ion-icon alt="Noël on Linkedin" slot="icon" name="logo-linkedin" margin-start="" margin-end=""></ion-icon>in/noelmace</deckgo-social></div></deckgo-slide-author><deckgo-slide-content><h2 slot="title" style="text-align: center; font-size: 3em">@noel_mace</h2><div slot="content" class="flex flex-center"><img src="assets/icons/twitter.svg" alt="Github" style="padding: 2em" height="500" width="500"></div><div slot="notes" show=""></div></deckgo-slide-content><deckgo-slide-content><h2 slot="title" style="text-align: center; font-size: 3em">dev.to/noelmace</h2><div slot="content" class="flex flex-center"><img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Noël Macé's DEV Profile" style="padding: 2em" height="500" width="500"></div><div slot="notes" show=""></div></deckgo-slide-content><deckgo-slide-content><h2 slot="title" style="text-align: center; font-size: 3em">noelmace/slides-modern-vanilla</h2><div slot="content" class="flex flex-center"><img src="assets/icons/github.svg" alt="Github" style="padding: 2em" height="500" width="500"></div><div slot="notes" show=""></div></deckgo-slide-content><deckgo-slide-content style="--background:center no-repeat url('assets/img/question-not-now.jpeg')" class="bg-img"></deckgo-slide-content><deckgo-slide-qrcode content="https://fullweb.dev/slides/vanilla1/devfesttlse19/" style="--deckgo-qrcode-color-fill: black;"><h1 slot="title">Slides</h1><div slot="content" class="wof-show"><a href="https://fullweb.dev/slides/vanilla1/devfesttlse19/" style="font-weight: bold" target="_blank" rel="noopener"><span class="sub">modern-vanilla.</span>fullweb.dev/slides/vanilla1/devfesttlse19/</a></div></deckgo-slide-qrcode><a href="#" onclick="openMenu(event)" slot="actions" style="color: inherit;"><ion-icon name="more"></ion-icon></a></deckgo-deck><deckgo-remote></deckgo-remote></ion-content><ion-fab vertical="bottom" horizontal="end" slot="fixed" id="navigation"><button onclick="previousSlide()" class="navigation ion-activatable"><ion-ripple-effect></ion-ripple-effect><ion-icon name="arrow-back" aria-label="Previous slide" style="font-size: 1.4em;"></ion-icon></button> <button onclick="nextSlide()" class="navigation ion-activatable"><ion-ripple-effect></ion-ripple-effect><ion-icon name="arrow-forward" aria-label="Next slide" style="font-size: 1.4em;"></ion-icon></button> <button onclick="presentSlidePicker()" class="navigation ion-activatable"><ion-ripple-effect></ion-ripple-effect><ion-icon name="list" md="md-list" ios="md-list" aria-label="Jump to a particular slide" style="font-size: 1.4em;"></ion-icon></button> <button onclick="toggleFullScreen()" class="navigation ion-activatable hide-on-mobile"><ion-ripple-effect></ion-ripple-effect><ion-icon name="expand" aria-label="Full screen" style="font-size: 1.4em;"></ion-icon></button></ion-fab><ion-popover-controller></ion-popover-controller><ion-modal-controller></ion-modal-controller><ion-alert-controller></ion-alert-controller><web-social-share show="false" style="--web-social-share-backdrop-opacity: 0.5;"><ion-icon name="logo-twitter" aria-label="Twitter" slot="twitter" style="color: #00aced; font-size: 1.6rem; display: block;"></ion-icon><ion-icon name="logo-reddit" aria-label="Reddit" slot="reddit" style="font-size: 1.6rem; display: block;"></ion-icon><ion-icon name="logo-linkedin" aria-label="Linkedin" slot="linkedin" style="color: #0077b5; font-size: 1.6rem; display: block;"></ion-icon><ion-icon name="mail" slot="email" aria-label="Email" style="color: #ff8ea3; font-size: 1.6rem; display: block;"></ion-icon><ion-icon name="logo-whatsapp" aria-label="WhatsApp" slot="whatsapp" style="color: #25D366; font-size: 1.6rem; display: block;"></ion-icon></web-social-share></ion-app><noscript>Please enable Javascript to access this presentation.</noscript><script src="main.0b83ba340d7286c08df2.js?dfc406c6e90aa1a1e87c"></script></body></html>

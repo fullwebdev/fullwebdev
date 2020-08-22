@@ -1,0 +1,263 @@
+diff --git a/src/assets/code-samples/copy-share-twitter.js b/src/assets/code-samples/copy-share-twitter.js
+index a89827b..dadcf40 100644
+--- a/src/assets/code-samples/copy-share-twitter.js
++++ b/src/assets/code-samples/copy-share-twitter.js
+@@ -1,8 +1,8 @@
+ const tweets = {
+-    slides: `Hey look, I can share my slides with the Twitter #PWA using the Web Share & Web Share Target APIs! 🙌 #usetheplatform #WebOnFIRE wof.show`,
+-    camera: `I can share a picture with the Twitter #PWA from the Camera App using the Web Share Target API Level 2 😁! #WebOnFIRE #usetheplatform wof.show`,
+-    picture: `I can also share a picture from my own app using the Web Share & Web Share Target API Level 2! #WebOnFIRE #usetheplatform wof.show`,
+-    clipboardPic: `And I can even share an image using the Async Clipboard Level 2 🤯! #WebOnFIRE #usetheplatform wof.show`
++    slides: `Hey look, I can share my slides with the Twitter #PWA using the Web Share & Web Share Target APIs! 🙌 #usetheplatform #WebOnFIRE`,
++    camera: `I can share a picture with the Twitter #PWA from the Camera App using the Web Share Target API Level 2 😁! #WebOnFIRE #usetheplatform`,
++    picture: `I can also share a picture from my own app using the Web Share & Web Share Target API Level 2! #WebOnFIRE #usetheplatform`,
++    clipboardPic: `And I can even share an image using the Async Clipboard Level 2 🤯! #WebOnFIRE #usetheplatform`
+ };
+ 
+ const getImgFile = async (url) => {
+diff --git a/src/index.html b/src/index.html
+index 891d6dd..61d5d95 100644
+--- a/src/index.html
++++ b/src/index.html
+@@ -26,11 +26,11 @@
+         />
+ 
+         <meta property="og:type" content="website" />
+-        <meta property="og:url" content="https://modern-vanilla.wof.show" />
++        <meta property="og:url" content="https://fullweb.dev/slides/vanilla1/devfesttlse19/" />
+ 
+         <meta
+             property="og:image"
+-            content="https://modern-vanilla.wof.show/assets/img/vanilla.png"
++            content="https://fullweb.dev/slides/vanilla1/devfesttlse19/assets/img/vanilla.png"
+         />
+         <meta property="og:image:type" content="image/png" />
+ 
+@@ -337,7 +337,7 @@
+                             <p style="font-style: italic">
+                                 Go read it
+                                 <a
+-                                    href="https://github.com/noelmace/slides-modern-vanilla/blob/master/src/notes.md"
++                                    href="https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/notes.md"
+                                     >on Github</a
+                                 >!
+                             </p>
+@@ -396,10 +396,10 @@ la raison d'être de nos royaumes
+ 
+ ☀️ Terres ensoleillées
+ 🏝️ Terres isolées
+-❄️ nord ⚛️ réactif 
+-🧱 au dela du 🕸️ Web 
++❄️ nord ⚛️ réactif
++🧱 au dela du 🕸️ Web
+ 
+-⚔️ guerre entre 👑 royaumes 
++⚔️ guerre entre 👑 royaumes
+ maintenir ☮️ paix
+                         </div>
+                     </deckgo-slide-big-img>
+@@ -413,7 +413,7 @@ maintenir ☮️ paix
+                         <div slot="notes" show>
+ 👨‍👨‍👧‍👦 NON-ALIGNÉS
+ 
+-🤷‍♂️ certains 🙇‍♂️ allégeance 👑 royaumes 
++🤷‍♂️ certains 🙇‍♂️ allégeance 👑 royaumes
+ 
+ Nous tous 💚 aimons & 🤚 restons à distance des 👑 royaumes
+                         </div>
+@@ -443,7 +443,7 @@ Nombreuses façons de nous rejoindre
+ 🟨 🍦Vanilla JS
+ 🧊 Web Components
+ 
+-🗣️🤦‍♂️ Trop de mauvaises infos 
++🗣️🤦‍♂️ Trop de mauvaises infos
+ RAPPEL pour SysthoryOS
+                         </div>
+                     </deckgo-slide-content>
+@@ -656,7 +656,7 @@ CEO Clever Cloud
+                         class="bg-img"
+                     >
+                         <h1 slot="title" hidden>Easy game</h1>
+-                         prettier-ignore 
++                         prettier-ignore
+                         <div slot="notes" show>
+ 🎮👶 JEUX D'ENFANT
+ 
+@@ -697,7 +697,7 @@ CONNAISSANCE, VEILLE
+                         class="bg-img"
+                     >
+                         <h1 slot="title" hidden>Closed door</h1>
+-                         prettier-ignore 
++                         prettier-ignore
+                         <div slot="notes" show>
+ 🚪 PORTE FERMÉE
+ 
+@@ -759,7 +759,7 @@ RAPPEL: react frameworks
+ 
+ ABSTRACTION 👍
+ 
+-❌ PAS 🍦 VANILLA 
++❌ PAS 🍦 VANILLA
+ ⬅ 🕸 Web Platform
+ ⬅ SUPER POUVOIRS
+                         </div>
+@@ -774,7 +774,7 @@ ABSTRACTION 👍
+                                 world"
+                             />
+                         </div>
+-                         prettier-ignore 
++                         prettier-ignore
+                         <div slot="notes" show>
+ DEPENDENCY GRAPH
+ 
+@@ -791,7 +791,7 @@ REACT-DOM
+                         axis="y"
+                     >
+                         <h1 slot="title" hidden>Big Dependency Graph</h1>
+-                         prettier-ignore 
++                         prettier-ignore
+                         <div slot="notes" show>
+ BIG DEPENDENCY GRAPH
+ 
+@@ -946,7 +946,7 @@ vous devez vous préparer à abandonner vos libs
+                         class="bg-img"
+                     >
+                         <h1 slot="title" hidden>lit-element</h1>
+-                         prettier-ignore 
++                         prettier-ignore
+                         <div slot="notes" show>LIT-ELEMENT/HTML</div>
+                     </deckgo-slide-content>-->
+ 
+@@ -957,7 +957,7 @@ vous devez vous préparer à abandonner vos libs
+                         class="bg-img"
+                     >
+                         <h1 slot="title" hidden>Tools</h1>
+-                         prettier-ignore 
++                         prettier-ignore
+                         <div slot="notes" show>TOOLING</div>
+                     </deckgo-slide-content>-->
+ 
+@@ -1090,7 +1090,7 @@ pwa-helpers/router.min.js is 589 bytes only!
+                         src="/assets/code-samples/bloc/bloc-class.js"
+                     >
+                         <h1 slot="title">Pseudo BLoC Class</h1>
+-                         prettier-ignore 
++                         prettier-ignore
+                         <div slot="notes" show>
+                             BLoC design pattern with Angular, by Suguru Inatomi.
+                         </div>
+@@ -1128,7 +1128,7 @@ RxJS ~30kB minified.
+                         style="--background:center no-repeat url('assets/img/castle.jpg')"
+                         class="bg-img dark"
+                     >
+-                         prettier-ignore 
++                         prettier-ignore
+                         <div slot="notes" show>
+ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+                         </div>
+@@ -1373,12 +1373,6 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+                         <div slot="notes" show></div>
+                     </deckgo-slide-content>
+ 
+-                    <deckgo-slide-content
+-                        style="--background:center no-repeat url('https://console.wof.show/assets/img/share-large.png')"
+-                        class="bg-img"
+-                    >
+-                    </deckgo-slide-content>
+-
+                     <deckgo-slide-content
+                         style="--background:center no-repeat url('assets/img/question-not-now.jpeg')"
+                         class="bg-img"
+@@ -1386,18 +1380,18 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+                     </deckgo-slide-content>
+ 
+                     <deckgo-slide-qrcode
+-                        content="https://modern-vanilla.wof.show"
++                        content="https://fullweb.dev/slides/vanilla1/devfesttlse19/"
+                         style="--deckgo-qrcode-color-fill: black;"
+                     >
+                         <h1 slot="title">Slides</h1>
+                         <div slot="content" class="wof-show">
+                             <a
+-                                href="https://modern-vanilla.wof.show"
++                                href="https://fullweb.dev/slides/vanilla1/devfesttlse19/"
+                                 style="font-weight: bold"
+                                 target="_blank"
+                                 rel="noopener"
+                                 ><span class="sub">modern-vanilla.</span
+-                                >wof.show</a
++                                >fullweb.dev/slides/vanilla1/devfesttlse19/</a
+                             >
+                         </div>
+                     </deckgo-slide-qrcode>
+diff --git a/src/notes.md b/src/notes.md
+index 0021ad6..78ee822 100644
+--- a/src/notes.md
++++ b/src/notes.md
+@@ -303,7 +303,7 @@ It just need some tricks.
+ 
+ Here is an example using a Web Component inside a React component:
+ 
+-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/wc-in-react.js
++https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/wc-in-react.js
+ 
+ > Using a complex web component inside a React App still need a bunch of boilerplate code.
+ > The community is discussing some solutions of that since 2016:
+@@ -312,25 +312,25 @@ https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-sa
+ 
+ And as React is a rendering library, you can even use it inside your Web Components in order to handle the rendering. Here is an example from the documentation:
+ 
+-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/react-in-wc.js
++https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/react-in-wc.js
+ 
+ Here, we're using the standard HTMLElement...
+ 
+-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/react-in-wc.js#L1
++https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/react-in-wc.js#L1
+ 
+ ...and use customElement.define...
+ 
+-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/react-in-wc.js#L12
++https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/react-in-wc.js#L12
+ 
+ ...like every Custom Element.
+ 
+ And we use the standard in order to attach a shadow root.
+ 
+-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/react-in-wc.js#L4
++https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/react-in-wc.js#L4
+ 
+ Finally, we can use React to render the template.
+ 
+-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/react-in-wc.js#L9
++https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/react-in-wc.js#L9
+ 
+ Does those make React a "Vanilla" library? Let's see...
+ 
+@@ -449,7 +449,7 @@ You could use for example the minimalist helpers the Polymer project provides: [
+ 
+ It includes the "router.js" utility, which only weights 589 bytes once minified!
+ 
+-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/pwa-helpers-routing.js
++https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/pwa-helpers-routing.js
+ 
+ You can find an example in https://github.com/noelmace/prpl-demo/tree/master/common/app (using Redux, lit-element & pwa-helpers).
+ 
+@@ -520,7 +520,7 @@ Basically, you could think "reactive MVVM" :wink: It's kind of similar to most S
+ 
+ You could write a BLoC like a ViewModel with VanillaJS.
+ 
+-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/bloc/bloc-class.js
++https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/bloc/bloc-class.js
+ 
+ Yet, we would miss the point doing so. Using Dart, implementing the BLoC pattern relies on Dart streams most of the time.
+ 
+@@ -528,7 +528,7 @@ Yet, we would miss the point doing so. Using Dart, implementing the BLoC pattern
+ 
+ Some are also using RxDart in order to make it simpler. Let's use RxJS instead.
+ 
+-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/bloc/bloc-rx.js
++https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/bloc/bloc-rx.js
+ 
+ > These examples where taken from [BLoC design pattern with Angular](https://medium.com/lacolaco-blog/bloc-design-pattern-with-angular-1c2f0339f6a3),
+ > by Suguru Inatomi. I just transpiled them.
