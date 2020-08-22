@@ -193,11 +193,21 @@
                 font-size: 5em;
             }
 
-            .center {
+            .flex {
                 width: 100%;
                 height: 100%;
                 display: flex;
+            }
+
+            .flex-center {
                 justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-direction: column;
+            }
+
+            .flex-end {
+                justify-content: flex-end;
                 align-items: center;
                 text-align: center;
                 flex-direction: column;
@@ -210,7 +220,7 @@
                 width: 100%;
             }
 
-            .center img,
+            .flex-center img,
             .img-row img {
                 width: 100%;
                 max-height: 100%;
@@ -335,7 +345,7 @@
                     <!-- #region Frameworks -->
 
                     <deckgo-slide-content>
-                        <div slot="content" class="frame center got">
+                        <div slot="content" class="frame flex flex-center got">
                             <h1>Frameworks</h1>
                         </div>
                     </deckgo-slide-content>
@@ -407,19 +417,19 @@
                     <!-- #region Libraries -->
 
                     <deckgo-slide-content>
-                        <div slot="content" class="frame center got">
+                        <div slot="content" class="frame flex flex-center got">
                             <h1>Libraries</h1>
                         </div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
-                        <div slot="content" class="center">
+                        <div slot="content" class="flex flex-center">
                             <img data-src="assets/img/logos/react.svg" />
                         </div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
-                        <div slot="content" class="center">
+                        <div slot="content" class="flex flex-center">
                             <img
                                 data-src="assets/img/create-react-app-dependencygraph.svg"
                             />
@@ -463,7 +473,7 @@
 
                     <!-- TODO: fix centering, mobile and (step by step) highlight in deckdeckgo -->
                     <deckgo-slide-content>
-                        <div slot="content" class="center">
+                        <div slot="content" class="flex flex-center">
                             <deckgo-highlight-code
                                 src="/assets/code-samples/wc-in-react.js"
                             >
@@ -472,7 +482,7 @@
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
-                        <div slot="content" class="center">
+                        <div slot="content" class="flex flex-center">
                             <deckgo-highlight-code
                                 src="/assets/code-samples/react-in-wc.js"
                             >
@@ -481,7 +491,7 @@
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
-                        <div slot="content" class="center">
+                        <div slot="content" class="flex flex-center">
                             <deckgo-highlight-code
                                 src="/assets/code-samples/react-in-wc.js"
                                 highlight-lines="1,1"
@@ -491,7 +501,7 @@
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
-                        <div slot="content" class="center">
+                        <div slot="content" class="flex flex-center">
                             <deckgo-highlight-code
                                 src="/assets/code-samples/react-in-wc.js"
                                 highlight-lines="4,4 11,11"
@@ -501,7 +511,7 @@
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
-                        <div slot="content" class="center">
+                        <div slot="content" class="flex flex-center">
                             <deckgo-highlight-code
                                 src="/assets/code-samples/react-in-wc.js"
                                 highlight-lines="8,8"
@@ -554,7 +564,7 @@
                     <!-- #endregion Libraries -->
                     <!-- #region Needs -->
                     <deckgo-slide-content>
-                        <div slot="content" class="frame center got">
+                        <div slot="content" class="frame flex flex-center got">
                             <h1>What you<br />can do!</h1>
                         </div>
                     </deckgo-slide-content>
@@ -562,13 +572,13 @@
                     <!-- #region routing -->
 
                     <deckgo-slide-content style="--background:center no-repeat url('assets/img/roads.jpg')" class="bg-img dark">
-                        <div slot="content" class="center got">
+                        <div slot="content" class="flex flex-center got">
                             <h1>Routing</h1>
                         </div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
-                        <div slot="content" class="center">
+                        <div slot="content" class="flex flex-center">
                             <deckgo-highlight-code
                                 src="/assets/charts/pwa-helpers-routing.js"
                             >
@@ -582,19 +592,19 @@
                     <!-- #endregion routing -->
                     <!-- #region SSR -->
                     <deckgo-slide-content style="--background:center no-repeat url('assets/img/datacenter.jpg')" class="bg-img dark">
-                        <div slot="content" class="center got">
+                        <div slot="content" class="flex flex-center got">
                             <h1>SSR</h1>
                         </div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
-                        <div slot="content" class="center">
+                        <div slot="content" class="flex flex-center">
                             <img data-src="assets/img/logos/puppeteer.svg" />
                         </div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
-                        <div slot="content" class="center">
+                        <div slot="content" class="flex flex-center">
                             <deckgo-highlight-code
                                 src="/assets/code-samples/ssr-puppeteer.js"
                             >
@@ -603,7 +613,7 @@
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
-                        <div slot="content" class="center">
+                        <div slot="content" class="flex flex-center">
                             <deckgo-highlight-code
                                 src="/assets/code-samples/ssr-puppeteer.js"
                                 highlight-lines="3,3"
@@ -613,7 +623,7 @@
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
-                        <div slot="content" class="center">
+                        <div slot="content" class="flex flex-center">
                             <deckgo-highlight-code
                                 src="/assets/code-samples/ssr-puppeteer.js"
                                 highlight-lines="4,5"
@@ -623,7 +633,7 @@
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
-                        <div slot="content" class="center">
+                        <div slot="content" class="flex flex-center">
                             <deckgo-highlight-code
                                 src="/assets/code-samples/ssr-puppeteer.js"
                                 highlight-lines="6,8"
@@ -640,7 +650,7 @@
                     <!-- #region FIRE -->
 
                     <deckgo-slide-content>
-                        <div slot="content" class="frame center got">
+                        <div slot="content" class="frame flex flex-center got">
                             <h1>A song of ice...<br />...and fire!</h1>
                         </div>
                     </deckgo-slide-content>
@@ -659,7 +669,7 @@
                     </deckgo-slide-title>
 
                     <deckgo-slide-content style="--background:center no-repeat url('assets/img/ice-and-fire.jpg')" class="got bg-img dark">
-                        <div slot="content" class="center">
+                        <div slot="content" class="flex flex-center">
                             <h1>But that's another story...</h1>
                         </div>
                     </deckgo-slide-content>
