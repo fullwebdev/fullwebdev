@@ -2,7 +2,8 @@
   "name": "slides-modern-vanilla",
   "version": "1.1.0-beta.2",
   "description": "Embrace the power of the Web Platform!",
-  "homepage": "https://modern-vanilla.wof.show",
+  "private": true,
+  "homepage": "https://fullweb.dev/slides/vanilla1/latest/",
   "scripts": {
     "start": "concurrently --kill-others \"npm run watch\" \"npm run dev\"",
     "start-no-remote": "concurrently --kill-others \"npm run watch-no-remote\" \"npm run dev\"",
@@ -11,10 +12,7 @@
     "watch-no-remote": "webpack --watch --mode development --env.no-remote=true",
     "build": "webpack --mode production",
     "local": "concurrently --kill-others \"webpack --watch --mode development --env.local=true\" \"npm run dev\"",
-    "format": "prettier \"**/*.{js,css,html}\" --write",
-    "release": "standard-version",
-    "postrelease": "git push --follow-tags",
-    "github-release": "conventional-github-releaser -p angular"
+    "format": "prettier \"**/*.{js,css,html}\" --write"
   },
   "author": {
     "name": "Noël Macé",
@@ -23,7 +21,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/noelmace/slides-modern-vanilla.git"
+    "url": "git://github.com/fullwebdev/fullwebdev.git",
+    "directory": "packages/slides/vanilla-1"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
@@ -33,12 +32,9 @@
     "deckdeckgo-webpack-plugins": "^1.0.0-rc.2-1",
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^4.0.0-beta.8",
-    "husky": "^3.0.5",
-    "lint-staged": "^9.2.5",
     "lite-server": "^2.5.4",
     "prettier": "^1.18.2",
     "progress-bar-webpack-plugin": "^1.12.1",
-    "standard-version": "^7.0.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
@@ -81,16 +77,5 @@
     "slides",
     "slideshow",
     "talk"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,css,html}": [
-      "prettier --write",
-      "git add"
-    ]
-  }
+  ]
 }
