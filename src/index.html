@@ -270,6 +270,10 @@
                 color: #ffcaf2;
                 font-weight: bold;
             }
+
+            .strong {
+                font-weight: bold;
+            }
         </style>
     </head>
     <body>
@@ -311,19 +315,123 @@
                         <h1 slot="title">Not the right intro...</h1>
                     </deckgo-slide-youtube>
 
-                    <deckgo-slide-content class="dark"> </deckgo-slide-content>
+                    <deckgo-slide-content class="dark">
+                        <div slot="notes" show>
+                            <h1>Welcome to Websteros!</h1>
+                            <p>
+                                Today, I'll tell you the story of our land. Why
+                                our kindoms exists. Why there is peace, war and
+                                aliances between them.
+                            </p>
+                            <p>
+                                Especially, I'll tell you the story of our
+                                unaligned and free company!
+                            </p>
+                        </div>
+                    </deckgo-slide-content>
 
                     <deckgo-slide-big-img
                         img-src="assets/img/websteros-map.jpg"
                         img-divisions="500;975;1500"
                         axis="y"
                         reverse
-                    ></deckgo-slide-big-img>
+                    >
+                        <div slot="notes" show>
+                            <p>
+                                So, let's start with our land and the kindoms
+                                which splits it into pieces.
+                            </p>
+                            <ol>
+                                <li>
+                                    <h2>The Sunny Lands</h2>
+                                    <p>
+                                        Here, the life looks easy from the
+                                        outside. And it can be!
+                                    </p>
+                                    <p>
+                                        But don't full yourself. It can also
+                                        become a deadly trap if you don't watch
+                                        youself.
+                                    </p>
+                                </li>
+                                <li>
+                                    <h2>The Isolated Lands</h2>
+                                    <p>Something went wrong here!</p>
+                                    <p>
+                                        The
+                                        <span class="strong"
+                                            >&nbsp;JQuery&nbsp;</span
+                                        >
+                                        Kindom has been isolated on its islands
+                                        for too long, and they don't understand
+                                        this world anymore!
+                                    </p>
+                                    <p>
+                                        Unfortunatly, they continue to attack us
+                                        from time to time. But for the most of
+                                        it, we can ignore them.
+                                    </p>
+                                    <p>
+                                        <span class="strong"
+                                            >Polymerians&nbsp;</span
+                                        >
+                                        came close to live the same destiny as
+                                        JQuerians. Yet, recently, the concil
+                                        chose to challenge their rules. It saved
+                                        the kingdom!
+                                    </p>
+                                </li>
+                                <li>
+                                    <h2>The reactive north</h2>
+                                    <p>
+                                        Those people have their own rules and
+                                        gods!
+                                    </p>
+                                    <p>
+                                        Yet, they stay open to the other
+                                        kingdoms, and are pretty efficient.
+                                    </p>
+                                </li>
+                                <li>
+                                    <h2>Behind the Web</h2>
+                                    <p>
+                                        Behind a wall kept by the PWA watch,
+                                        hides a great danger: the native
+                                        walkers! They don't know how to work
+                                        together!
+                                    </p>
+                                    <p>This could be the end of Websteros!</p>
+                                    <p>
+                                        Yet, some people from the web lands are
+                                        helping to preserve the peace with those
+                                        strangers ... whom, after all, are just
+                                        like us, but with diffent goals.
+                                    </p>
+                                </li>
+                            </ol>
+                            <p>
+                                There is still some battles between this
+                                kingdoms. Yet, we manage to have peace. But we
+                                need to preserve it!
+                            </p>
+                        </div>
+                    </deckgo-slide-big-img>
 
                     <deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/neutral-heroes.jpg')"
                         class="bg-img"
                     >
+                        <div slot="notes" show>
+                            <p>This is our goal!</p>
+                            <p>
+                                We, the unaligned, neutral people, may love some
+                                kingdoms more than some others.
+                            </p>
+                            <p>
+                                Yet, we love them and avoid them all at the same
+                                time.
+                            </p>
+                        </div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
@@ -338,6 +446,19 @@
                                 <img data-src="assets/img/logos/pwa.svg" />
                             </div>
                         </div>
+                        <div slot="notes">
+                            <p>We are the vanilla people!</p>
+                            <p>There is a lot of ways to join us!</p>
+                            <p>
+                                Yet, today, in order to keep it simple, I will
+                                mainly speak about the most famous of our
+                                tribes: the Web Components!
+                            </p>
+                            <p>
+                                Because there was too many wrong things said
+                                about them!
+                            </p>
+                        </div>
                     </deckgo-slide-content>
 
                     <!-- TODO: breve intro WC -->
@@ -347,8 +468,18 @@
                         class="bg-img"
                     >
                         <div slot="notes" show>
-                            But why are Web Frameworks & Libraries so important?
-                            Let's go to the root of these!
+                            <p>Back to our Kindoms</p>
+                            <p>There is two kinds of them:</p>
+                            <ol>
+                                <li>Frameworks</li>
+                                <li>Libraries</li>
+                            </ol>
+                            <p>
+                                Why are they here? Why are they so important?
+                            </p>
+                            <p>
+                                Let's go to the roots of these questions.
+                            </p>
                         </div>
                     </deckgo-slide-content>
 
