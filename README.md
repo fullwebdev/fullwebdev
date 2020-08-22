@@ -52,8 +52,7 @@ Embrace the power of the Web Platform! A real-life practical guide.
 > Go check the [changelog](/CHANGELOG.md) or [releases](https://github.com/noelmace/slides-modern-vanilla/releases) for more details.
 
 - v1.1: conference (40min) @ [POSS 2019](https://vanilla-poss19.wof.show)
-- v1.0: conference (25min) @ [DevFest Toulouse 2019](https://devfesttls19.wof.show)
-- _previously: [noelmace/wof-reveal](https://github.com/noelmace/wof-reveal)_
+- v1.0: conference (40min) @ [DevFest Toulouse 2019](https://devfesttls19.wof.show)
 
 > Versions are incremented as follow (not exactly semver :man_shrugging:):
 >
