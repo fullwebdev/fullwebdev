@@ -32,5 +32,6 @@ $RECYCLE.BIN/
 Thumbs.db
 UserInterfaceState.xcuserstate
 
-dist
+/dist
+/build
 .firebase/

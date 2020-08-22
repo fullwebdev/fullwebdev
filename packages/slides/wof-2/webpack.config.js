@@ -1,11 +1,12 @@
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
-const {DeckDeckGoInfoPlugin, DeckDeckGoRemoveNotesPlugin} = require('deckdeckgo-webpack-plugins');
-
-const {GenerateSW} = require('workbox-webpack-plugin');
+const {
+    DeckDeckGoInfoPlugin,
+    DeckDeckGoRemoveNotesPlugin,
+} = require('deckdeckgo-webpack-plugins');
 
 const webpack = require('webpack');
 
@@ -15,51 +16,44 @@ const config = {
     entry: path.resolve(__dirname, 'src', 'index.js'),
     output: {
         filename: '[name].[chunkhash].js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'build'),
     },
     module: {
         rules: [
             {
                 test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader'
-                ]
-            }
-        ]
-    }
+                use: ['style-loader', 'css-loader'],
+            },
+        ],
+    },
 };
 
 const plugins = [
     new CleanWebpackPlugin({
-        cleanStaleWebpackAssets: false
+        cleanStaleWebpackAssets: false,
     }),
     new HtmlWebpackPlugin({
         hash: true,
         inject: true,
         template: path.resolve(__dirname, 'src', 'index.html'),
-        path: path.join(__dirname, '../dist/'),
-        filename: 'index.html'
+        path: path.join(__dirname, '../build/'),
+        filename: 'index.html',
     }),
     new CopyWebpackPlugin([
-        {from: 'src/assets/', to: 'assets'},
-        {from: 'src/manifest.json', to: ''},
-        {from: 'src/robots.txt', to: ''},
-        {from: 'node_modules/ionicons/dist/ionicons/svg/', to: 'svg'}
+        { from: 'src/assets/', to: 'assets' },
+        { from: 'src/manifest.json', to: '' },
+        { from: 'src/robots.txt', to: '' },
+        { from: 'node_modules/ionicons/dist/ionicons/svg/', to: 'svg' },
     ]),
-    new ProgressBarPlugin()
+    new ProgressBarPlugin(),
 ];
 
 module.exports = (env, argv) => {
-
     if (argv.mode === 'development' || argv.mode === 'local') {
         config.devtool = 'source-map';
     }
 
     if (argv.mode === 'production') {
-        plugins.push(new GenerateSW({
-            ignoreURLParametersMatching: [/./]
-        }));
         plugins.push(new DeckDeckGoInfoPlugin());
 
         if (!argv.notes) {
@@ -74,14 +68,14 @@ module.exports = (env, argv) => {
     if (env && env.local) {
         processEnv = {
             'process.env': {
-                SIGNALING_SERVER: JSON.stringify('http://localhost:3002')
-            }
+                SIGNALING_SERVER: JSON.stringify('http://localhost:3002'),
+            },
         };
     } else {
         processEnv = {
             'process.env': {
-                SIGNALING_SERVER: JSON.stringify('https://api.deckdeckgo.com')
-            }
+                SIGNALING_SERVER: JSON.stringify('https://api.deckdeckgo.com'),
+            },
         };
     }
 
@@ -89,11 +83,10 @@ module.exports = (env, argv) => {
         processEnv['process.env']['NO_REMOTE'] = true;
     }
 
-    processEnv['process.env']['KEEP_HISTORY'] = argv.mode === 'development' || argv.mode === 'local';
+    processEnv['process.env']['KEEP_HISTORY'] =
+        argv.mode === 'development' || argv.mode === 'local';
 
-    plugins.push(
-        new webpack.DefinePlugin(processEnv)
-    );
+    plugins.push(new webpack.DefinePlugin(processEnv));
 
     return config;
 };
