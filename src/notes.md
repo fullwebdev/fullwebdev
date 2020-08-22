@@ -558,11 +558,11 @@ Use it very carefully! But if you need to, IMO, you should choose RxJS for now.
 
 ### Typings
 
-> ***:construction: WIP*** - See https://github.com/noelmace/devcards/blob/master/dev-doc/testing.md
-
-### Unit Tests
-
 > ***:construction: WIP*** - See https://github.com/noelmace/devcards/blob/master/dev-doc/type-js.md
+
+### Unit Tests & Tooling
+
+> ***:construction: WIP*** - See https://github.com/noelmace/devcards/blob/master/dev-doc/testing.md & https://open-wc.org/guide/
 
 ## PWA - The Web is on F.I.R.E.
 
