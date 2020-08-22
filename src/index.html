@@ -70,6 +70,17 @@
     <meta name="msapplication-tap-highlight" content="no">
 
     <style>
+
+        @font-face {
+            font-family: 'Game of Thrones';
+            src: url('assets/fonts/got/GameofThrones.eot');
+            src: url('assets/fonts/got/GameofThrones.eot?#iefix') format('embedded-opentype'),
+                url('assets/fonts/got/GameofThrones.woff') format('woff'),
+                url('assets/fonts/got/GameofThrones.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         :root {
             background: #ffffff;
             --ion-background-color: #ffffff;
@@ -111,6 +122,40 @@
         .big {
             font-size: 5em;
         }
+
+        .center {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .img-row {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            text-align: center;
+        }
+
+        .img-row > img {
+            height: 100%;
+            margin: 1em 1em;
+        }
+
+        .frame {
+            background: center no-repeat url('assets/img/frame-h.png');
+            font-family: 'Game of Thrones';
+            background-size: contain;
+        }
+
+        .frame * {
+            font-size: 2em;
+        }
     </style>
 
 </head>
@@ -120,8 +165,6 @@
     <ion-content force-overscroll="false" scroll-y="false">
         <deckgo-deck id="slider" pager-percentage="false">
 
-            <!-- BEGIN: Edit your slides -->
-
             <deckgo-slide-countdown until="2019-10-03T15:30:00.000+02:00">
                 <h2 slot="title">Brace yourself</h2>
                 <span slot="days">Days</span>
@@ -129,6 +172,8 @@
                 <span slot="minutes">Minutes</span>
                 <span slot="seconds">Seconds</span>
             </deckgo-slide-countdown>
+
+            <!-- #region Intro -->
 
             <deckgo-slide-title class="dark">
                 <h1 slot="title" style="color:red">Disclaimer</h1>
@@ -148,8 +193,79 @@
 
             <deckgo-slide-big-img img-src="assets/img/websteros-map.jpg" img-divisions="500;975;1500" axis="y" reverse></deckgo-slide-big-img>
 
+            <deckgo-slide-big-img img-src="assets/img/roots.jpg">
+                <div slot="notes" show>
+                    But Why? Let's go to the root of these!
+                </div>
+            </deckgo-slide-big-img>
+
+            <!-- #endregion Intro -->
+            <!-- #region Frameworks -->
+
+            <deckgo-slide-content>
+                <div slot="content" class="frame center">
+                    <h1>Frameworks</h1>
+                </div>
+            </deckgo-slide-content>
+
+            <deckgo-slide-content>
+                <div slot="content" class="img-row">
+                    <img data-src="assets/img/logos/angular.svg">
+                    <img data-src="assets/img/logos/vuejs.svg">
+                </div>
+            </deckgo-slide-content>
+
+            <deckgo-slide-content>
+                <div slot="content" class="img-row">
+                    <img data-src="assets/img/logos/gatsby.svg">
+                    <img data-src="assets/img/logos/next-js.svg">
+                    <img data-src="assets/img/logos/nuxt.svg">
+                </div>
+            </deckgo-slide-content>
+
+            <deckgo-slide-big-img img-src="assets/img/boats.png">
+                <div slot="notes" show>
+                    Faster?
+                </div>
+            </deckgo-slide-big-img>
+
+            <deckgo-slide-big-img img-src="assets/img/order.jpg">
+                <div slot="notes" show>
+                    Opinionated approach brings order
+                </div>
+            </deckgo-slide-big-img>
+
+            <deckgo-slide-big-img img-src="assets/img/skycell.jpg">
+                <div slot="notes" show>
+                    But to much order can lead to dictats & ... prison.
+                </div>
+            </deckgo-slide-big-img>
+
+            <deckgo-slide-big-img img-src="assets/img/execution.jpg">
+                <div slot="notes" show>
+                    But to much order can lead to dictats & ... prison.
+                </div>
+            </deckgo-slide-big-img>
+
+            <!-- #endregion Frameworks -->
+            <!-- #region Libraries -->
+
+            <deckgo-slide-content>
+                <div slot="content" class="frame center">
+                    <h1>Libraries</h1>
+                </div>
+            </deckgo-slide-content>
+
+            <!-- TODO: close to standards ? -->
+            <!-- TODO: useful ? -->
+            
             <deckgo-slide-big-img img-src="assets/img/neutral-heroes.jpg">
             </deckgo-slide-big-img>
+
+            <!-- TODO: lit-element etc... -->
+
+            <!-- #endregion Libraries -->
+            <!-- #region FIRE -->
 
             <deckgo-slide-video class="dark">
                 <video muted playsinline>
@@ -160,6 +276,9 @@
             <deckgo-slide-title>
                 <div class="big" slot="title">🔥 F. I. R. E. 🔥</div>
             </deckgo-slide-title>
+
+            <!-- #endregion Libraries -->
+            <!-- #region outro -->
 
             <deckgo-slide-gif style="background: white;" src="https://media.giphy.com/media/26DOMeaD2gdGE44LK/giphy.gif" alt="Thank ewe!" fullscreen="true">
             </deckgo-slide-gif>
@@ -187,7 +306,7 @@
             <deckgo-slide-big-img img-src="http://questionsgems.com/wp-content/uploads/2019/03/images-99.jpeg">
             </deckgo-slide-big-img>
 
-            <!-- END: Edit your slides -->
+            <!-- #endregion FIRE -->
 
             <a href="#" onclick="openMenu(event)" slot="actions" style="color: inherit;"><ion-icon name="more"></ion-icon></a>
 
