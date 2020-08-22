@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "wof-show"
+  },
+  "targets": {
+    "wof-show": {
+      "hosting": {
+        "devfesttls19": [
+          "vanilla-devfesttls19"
+        ],
+        "poss19": [
+          "vanilla-poss19"
+        ]
+      }
+    }
+  }
+}

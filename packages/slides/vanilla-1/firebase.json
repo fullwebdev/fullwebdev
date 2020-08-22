@@ -1,0 +1,12 @@
+{
+    "hosting": [
+        {
+            "target": "devfesttls19",
+            "public": "dist"
+        },
+        {
+            "target": "poss19",
+            "public": "dist"
+        }
+    ]
+}
