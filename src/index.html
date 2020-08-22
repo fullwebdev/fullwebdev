@@ -320,6 +320,11 @@
             .twitter-content twitter-widget {
                 margin: 0 auto;
             }
+
+            .resources-slide deckgo-social {
+                margin-bottom: 1em;
+                font-size: 1.5em;
+            }
         </style>
     </head>
     <body>
@@ -346,9 +351,8 @@
                         <div slot="notes" show>INTRO LECTEUR</div>
                     </deckgo-slide-title>
 
-                    <!-- TODO: live countdown during the last hour -->
                     <deckgo-slide-countdown
-                        until="2019-10-03T15:30:00.000+02:00"
+                        until="2019-12-11T09:30:00.000+01:00"
                     >
                         <h2 slot="title">Brace yourself</h2>
                         <span slot="days">Days</span>
@@ -1282,7 +1286,6 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
                         <h1 slot="title">Noël Macé</h1>
                         <div slot="author">
                             <h2>Noël Macé</h2>
-                            <p>Freelance WebDev Consultant & Teacher</p>
                             <p>
                                 Independent Dev Advocado 🥑 for the Web Platform
                             </p>
@@ -1374,30 +1377,81 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
                     </deckgo-slide-content>
 
                     <deckgo-slide-content
-                        style="--background:center no-repeat url('https://console.wof.show/assets/img/share-large.png')"
-                        class="bg-img"
-                    >
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content
-                        style="--background:center no-repeat url('assets/img/question-not-now.jpeg')"
+                        style="--background:center no-repeat url('assets/img/question.jpeg')"
                         class="bg-img"
                     >
                     </deckgo-slide-content>
 
                     <deckgo-slide-qrcode
-                        content="https://modern-vanilla.wof.show"
+                        content="https://vanilla-poss19.wof.show"
                         style="--deckgo-qrcode-color-fill: black;"
+                        class="resources-slide"
                     >
-                        <h1 slot="title">Slides</h1>
                         <div slot="content" class="wof-show">
-                            <a
-                                href="https://modern-vanilla.wof.show"
-                                style="font-weight: bold"
-                                target="_blank"
-                                rel="noopener"
-                                ><span class="sub">modern-vanilla.</span
-                                >wof.show</a
+                            <deckgo-social
+                                twitter="noel_mace"
+                                class="hydrated"
+                                style="margin-left: 32px"
+                                ><ion-icon
+                                    alt="Noël on Twitter"
+                                    slot="icon"
+                                    name="logo-twitter"
+                                    margin-start
+                                    margin-end
+                                    role="img"
+                                    class="md hydrated"
+                                    aria-label="logo twitter"
+                                ></ion-icon>
+                                @noel_mace</deckgo-social
+                            >
+                            <deckgo-social
+                                full-url="https://vanilla-poss19.wof.show"
+                                class="hydrated"
+                                style="margin-left: 32px"
+                                ><ion-icon
+                                    alt="Noël on Github"
+                                    slot="icon"
+                                    name="book"
+                                    margin-start
+                                    margin-end
+                                    role="img"
+                                    class="md hydrated"
+                                    aria-label="logo twitter"
+                                ></ion-icon>
+                                poss19.wof.show</deckgo-social
+                            >
+                            <deckgo-social
+                                github="noelmace/slides-modern-vanilla"
+                                class="hydrated"
+                                style="margin-left: 32px"
+                                ><ion-icon
+                                    alt="Noël on Github"
+                                    slot="icon"
+                                    name="logo-github"
+                                    margin-start
+                                    margin-end
+                                    role="img"
+                                    class="md hydrated"
+                                    aria-label="logo slides"
+                                ></ion-icon>
+                                noelmace/slides-modern-vanilla</deckgo-social
+                            >
+                            <deckgo-social
+                                full-url="https://dev.to/noelmace"
+                                class="hydrated"
+                                style="margin-left: 32px"
+                            >
+                                <ion-icon
+                                    alt="Noël on Dev.to"
+                                    slot="icon"
+                                    src="assets/icons/dev.svg"
+                                    margin-start
+                                    margin-end
+                                    role="img"
+                                    class="md hydrated"
+                                    area-label="logo Dev.to"
+                                ></ion-icon>
+                                dev.to/noelmace</deckgo-social
                             >
                         </div>
                     </deckgo-slide-qrcode>
