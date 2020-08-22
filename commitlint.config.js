@@ -18,6 +18,7 @@ module.exports = {
         "panpress-starter",
         "slides-wof-1",
         "slides-wof-2",
+        "slides-vanilla-1",
       ],
     ],
   },

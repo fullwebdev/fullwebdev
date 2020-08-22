@@ -2,6 +2,7 @@
   "packages": [
     "packages/*",
     "packages/panpress/*",
+    "packages/slides/*",
     "docs"
   ],
   "version": "independent"
