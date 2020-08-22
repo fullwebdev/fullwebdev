@@ -62,7 +62,6 @@
     "@deckdeckgo/slide-youtube": "^1.0.0-rc.1-1",
     "@ionic/core": "^4.8.1",
     "@webcomponents/custom-elements": "^1.2.4",
-    "@deckdeckgo/slide-big-img": "^1.0.0-rc.1",
     "@wof-show/deckdeckgo-slide-video": "~0.0.0-alpha.1",
     "ionicons": "^4.6.3",
     "web-social-share": "^6.2.0"
