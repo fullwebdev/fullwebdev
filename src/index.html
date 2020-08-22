@@ -160,6 +160,10 @@
             /* Until Web Components are loaded, don't display content */
             body {
                 background: #ffffff;
+
+                --react-color: #61dafb;
+                --lit-element-color: #2196F3;
+                --jquery-color: #D18F4F;
             }
 
             ion-app.loading,
@@ -196,6 +200,13 @@
                 justify-content: center;
                 align-items: center;
                 text-align: center;
+            }
+
+            .flex-row {
+                display: flex;
+                justify-content: space-around;
+                flex-direction: row;
+                width: 100%;
             }
 
             .center img,
@@ -499,19 +510,16 @@
                     <!-- TODO: see https://github.com/deckgo/deckdeckgo/issues/340 -->
                     <deckgo-slide-chart
                         type="bar"
-                        animation="false"
-                        src="/assets/charts/libs-weight-self.csv"
-                        style="--deckgo-chart-fill-color-1: var(--ion-color-secondary)"
-                    ></deckgo-slide-chart>
-
-                    <deckgo-slide-chart
-                        type="bar"
-                        animation="false"
-                        src="/assets/charts/libs-weight-w-dependencies.csv"
-                        style="--deckgo-chart-fill-color-1: var(--ion-color-secondary)"
-                    ></deckgo-slide-chart>
-
-                    <!-- TODO: weight graph (react, lit-element, stencil-one) -->
+                        animation="true"
+                        src="/assets/charts/libs-weight.csv"
+                        style="--deckgo-chart-fill-color-1: var(--react-color);--deckgo-chart-fill-color-2: var(--lit-element-color);--deckgo-chart-fill-color-3: var(--jquery-color)"
+                    >
+                        <div slot="title" class="flex-row">
+                            <div>react</div>
+                            <div>lit-element</div>
+                            <div>jquery</div>
+                        </div>
+                    </deckgo-slide-chart>
 
                     <!-- TODO: useful ? -->
                     <!-- TODO: JQuery -->
