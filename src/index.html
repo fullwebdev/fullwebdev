@@ -90,6 +90,7 @@
             color: black;
             --color: black;
             --ion-text-color: black;
+            --deckgo-highlight-code-line-background: yellow;
         }
 
         /* Until Web Components are loaded, don't display content */
@@ -163,6 +164,10 @@
 
         .frame * {
             font-size: 2em;
+        }
+
+        .small-code {
+            --slide-padding-top: 8em;
         }
     </style>
 
@@ -334,6 +339,42 @@ $ depcruise --exclude "App.test.js" --output-type dot src | dot -T svg > depende
                     <p>Go check out <a href="https://github.com/chentsulin/awesome-react-renderer">awesome-react-renderer</a></p>
                 </div>
             </deckgo-slide-big-img>
+
+            <!-- TODO: fix centering, mobile and (step by step) highlight in deckdeckgo -->
+            <deckgo-slide-content>
+                <div slot="content" class="center">
+                    <deckgo-highlight-code src="/assets/code-samples/wc-in-react.js">
+                    </deckgo-highlight-code>
+                </div>
+            </deckgo-slide-content>
+
+            <deckgo-slide-content>
+                <div slot="content" class="center">
+                    <deckgo-highlight-code src="/assets/code-samples/react-in-wc.js">
+                    </deckgo-highlight-code>
+                </div>
+            </deckgo-slide-content>
+
+            <deckgo-slide-content>
+                <div slot="content" class="center">
+                    <deckgo-highlight-code src="/assets/code-samples/react-in-wc.js" highlight-lines="1,1">
+                    </deckgo-highlight-code>
+                </div>
+            </deckgo-slide-content>
+
+            <deckgo-slide-content>
+                <div slot="content" class="center">
+                    <deckgo-highlight-code src="/assets/code-samples/react-in-wc.js" highlight-lines="4,4 10,10">
+                    </deckgo-highlight-code>
+                </div>
+            </deckgo-slide-content>
+
+            <deckgo-slide-content>
+                <div slot="content" class="center">
+                    <deckgo-highlight-code src="/assets/code-samples/react-in-wc.js" highlight-lines="7,7">
+                    </deckgo-highlight-code>
+                </div>
+            </deckgo-slide-content>
             
             <!-- TODO: close to standards ? -->
             
