@@ -51,7 +51,7 @@ import {defineCustomElements as deckDeckGoSlideCountdownElements } from '@deckde
 import {defineCustomElements as deckDeckGoSlideGifElements } from '@deckdeckgo/slide-gif/dist/loader';
 import {defineCustomElements as deckDeckGoSlideQRCodeElements } from '@deckdeckgo/slide-qrcode/dist/loader';
 // TODO: replace by @deckdeckgo once released
-import {defineCustomElements as deckDeckGoSlideBigImg } from '@wof-show/deckdeckgo-slide-big-img/dist/loader';
+import {defineCustomElements as deckDeckGoSlideBigImg } from '@deckdeckgo/slide-big-img/dist/loader';
 // TODO: release
 import {defineCustomElements as deckDeckGoSlideVideo } from '@wof-show/deckdeckgo-slide-video/dist/loader';
 
