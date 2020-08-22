@@ -251,14 +251,9 @@
                 background-size: contain;
             }
 
-            .got,
-            h1 {
+            .got {
                 font-family: 'Game of Thrones';
                 text-shadow: 2px 2px 3px #333;
-            }
-
-            h1 {
-                text-align: center;
             }
 
             .bg-img {
@@ -325,7 +320,21 @@
                 margin-bottom: 1em;
                 font-size: 1.5em;
             }
+
+            std-toast {
+                font-weight: bold;
+                font-size: 3em;
+            }
+
+            .ciu-wrapper {
+                width: 100%;
+            }
+
+            .ciu_embed {
+                margin: 0 auto;
+            }
         </style>
+        <script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script>
     </head>
     <body>
         <ion-app class="loading">
@@ -409,18 +418,19 @@ maintenir ☮️ paix
                     </deckgo-slide-big-img>
 
                     <deckgo-slide-content
-                        style="--background:center no-repeat url('assets/img/neutral-heroes.jpg')"
+                        style="--background:center no-repeat url('assets/img/forget-it.png')"
                         class="bg-img"
                     >
-                        <h1 slot="title" hidden>neutral heroes</h1>
                         <!-- prettier-ignore -->
                         <div slot="notes" show>
-👨‍👨‍👧‍👦 NON-ALIGNÉS
-
-🤷‍♂️ certains 🙇‍♂️ allégeance 👑 royaumes 
-
-Nous tous 💚 aimons & 🤚 restons à distance des 👑 royaumes
+There is no war!
                         </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/icons/ice-cream.svg')"
+                        class="bg-img"
+                    >
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
@@ -450,72 +460,6 @@ Nombreuses façons de nous rejoindre
 🗣️🤦‍♂️ Trop de mauvaises infos 
 RAPPEL pour SysthoryOS
                         </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content
-                        style="--background:center no-repeat url('assets/img/world-map.jpeg')"
-                        class="bg-img"
-                    >
-                        <h1 slot="title" hidden>World Map</h1>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>🌏 CARTE DU MONDE</div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title" hidden>Custom Elements</h1>
-                        <div slot="content" class="flex flex-center">
-                            <img
-                                data-src="assets/icons/custom-element.svg"
-                                alt="Custom Element"
-                            />
-                        </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>CUSTOM ELEMENTS</div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title" hidden>Shadow DOM</h1>
-                        <div slot="content" class="flex flex-center">
-                            <img
-                                data-src="assets/icons/shadow-dom.svg"
-                                alt="Custom Element"
-                            />
-                        </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>SHADOW DOM</div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title" hidden>ES Modules</h1>
-                        <div slot="content" class="flex flex-center">
-                            <img
-                                data-src="assets/icons/es-module.svg"
-                                alt="Custom Element"
-                            />
-                        </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>ES MODULES</div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <h1 slot="title" hidden>HTML Template</h1>
-                        <div slot="content" class="flex flex-center">
-                            <img
-                                data-src="assets/icons/html-template.svg"
-                                alt="Custom Element"
-                            />
-                        </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>HTML TEMPLATE</div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content
-                        style="--background:center no-repeat url('assets/img/roots.jpg')"
-                        class="bg-img"
-                    >
-                        <h1 slot="title" hidden>Roots</h1>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>🌳 RACINES</div>
                     </deckgo-slide-content>
 
                     <!-- #endregion Intro -->
@@ -769,46 +713,6 @@ ABSTRACTION 👍
                         </div>
                     </deckgo-slide-content>
 
-                    <!--<deckgo-slide-content>
-                        <h1 slot="title" hidden>Dependency Graph</h1>
-                        <div slot="content" class="flex flex-center">
-                            <img
-                                data-src="assets/img/create-react-app-dependencygraph.svg"
-                                alt="Dependency graph of a create-react-app hello
-                                world"
-                            />
-                        </div>
-                         prettier-ignore 
-                        <div slot="notes" show>
-DEPENDENCY GRAPH
-
-(create-react-app)
-
-REACT-DOM
-
-                        </div>
-                    </deckgo-slide-content>-->
-
-                    <!--<deckgo-slide-big-img
-                        img-src="assets/img/react-pokedex-dependencygraph.png"
-                        img-divisions="333;774;1178"
-                        axis="y"
-                    >
-                        <h1 slot="title" hidden>Big Dependency Graph</h1>
-                         prettier-ignore 
-                        <div slot="notes" show>
-BIG DEPENDENCY GRAPH
-
-📿 Dogme ➡ pleine adoption
-🌍 tout un univers
-
-react-router-dom, react-tooltip
-
-(Pokedex)
-Redux + Hardtack
-                        </div>
-                    </deckgo-slide-big-img>-->
-
                     <deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/coin-sides.jpg')"
                         class="bg-img"
@@ -825,40 +729,13 @@ ET SI VOUS LA COMPRENEZ MAL, VOUS MOURREZ
                         </div>
                     </deckgo-slide-content>
 
-                    <deckgo-slide-code
-                        src="/assets/code-samples/wc-in-react.js"
-                    >
-                        <h1 slot="title">WC in React</h1>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>
-WC in REACT
-
-... tricks (/ boilerplate)
-
-The community is discussing some solutions (since 2016)
-                        </div>
-                    </deckgo-slide-code>
-
                     <deckgo-slide-content>
-                        <h1 slot="title">React in WC</h1>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/react-in-wc.js"
-                                highlight-lines="8,8"
-                            >
-                            </deckgo-highlight-code>
+                        <div slot="content" class="frame flex flex-center got">
+                            <h1>
+                                Do you need<br />
+                                a library?
+                            </h1>
                         </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>REACT in WC</div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content
-                        style="--background:center no-repeat url('assets/img/crossroads.jpg')"
-                        class="bg-img"
-                    >
-                        <h1 slot="title" hidden>Crossroad</h1>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>DECIDE</div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content
@@ -915,36 +792,6 @@ Github, Clever Cloud
                         </div>
                     </deckgo-slide-video>
 
-                    <deckgo-slide-content
-                        style="--background:center no-repeat url('assets/img/execution.jpg')"
-                        class="bg-img"
-                    >
-                        <h1 slot="title" hidden>Execution</h1>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>
-🪓 EXECUTION
-
-❌ Non
-
-🕸 WEB - Limitations
-JQuery ⬅ ❌ 👍 DOM manipulation API
-➡ querySelector and other things
-
-❌ pas INUTILE RETROSPECTIVEMENT
-
-vous devez vous préparer à abandonner vos libs
-                        </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content
-                        style="--background:center no-repeat url('assets/img/carriage.png')"
-                        class="bg-img"
-                    >
-                        <h1 slot="title" hidden>Carriage on fire</h1>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show>LIBS ❌ 🚓 conduire vos projet</div>
-                    </deckgo-slide-content>
-
                     <!--<deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/logos/lit-element.jpeg')"
                         class="bg-img"
@@ -956,21 +803,22 @@ vous devez vous préparer à abandonner vos libs
 
                     <!-- #endregion Libraries -->
 
-                    <!--<deckgo-slide-content
-                        style="--background:center no-repeat url('assets/img/throne-zoom.jpg')"
-                        class="bg-img"
-                    >
-                        <h1 slot="title" hidden>Tools</h1>
-                         prettier-ignore 
-                        <div slot="notes" show>TOOLING</div>
-                    </deckgo-slide-content>-->
+                    <!-- #region platform -->
 
-                    <!-- #region Needs -->
                     <deckgo-slide-content>
                         <div slot="content" class="frame flex flex-center got">
-                            <h1>What you<br />can do!</h1>
+                            <h1>Use the platform</h1>
                         </div>
-                        <div slot="notes" show>WHAT YOU CAN DO</div>
+                    </deckgo-slide-content>
+
+                    <!-- #region principles -->
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/carriage.png')"
+                        class="bg-img"
+                    >
+                        <h1 slot="title" hidden>Carriage on fire</h1>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show>LIBS ❌ 🚓 conduire vos projet</div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content
@@ -983,6 +831,381 @@ vous devez vous préparer à abandonner vos libs
                             </h1>
                         </div>
                         <h1 slot="title" hidden>KISS</h1>
+                    </deckgo-slide-content>
+                    <!-- #endregion principles -->
+
+                    <!-- #region Web Components -->
+
+                    <deckgo-slide-content class="subchapter-title-slide">
+                        <figure slot="content" class="flex flex-center">
+                            <img
+                                src="assets/logos/wc.svg"
+                                alt="Web Components"
+                            />
+                            <deckgo-reveal>
+                                <figcaption>
+                                    Web Components
+                                </figcaption>
+                            </deckgo-reveal>
+                        </figure>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/recycling.svg')"
+                        class="bg-img"
+                    >
+                        <h1 slot="title" hidden>Web</h1>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show>Reusability</div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title" hidden>Custom Elements</h1>
+                        <figure slot="content" class="flex flex-center">
+                            <img
+                                data-src="assets/icons/web-components/custom-element.svg"
+                                alt="Custom Element"
+                            />
+                            <deckgo-reveal>
+                                <figcaption>
+                                    Custom Elements
+                                </figcaption>
+                            </deckgo-reveal>
+                        </figure>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show>CUSTOM ELEMENTS</div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title" hidden>Shadow DOM</h1>
+                        <figure slot="content" class="flex flex-center">
+                            <img
+                                data-src="assets/icons/web-components/shadow-dom.svg"
+                                alt="Shadow DOM"
+                            />
+                            <deckgo-reveal>
+                                <figcaption>
+                                    Shadow DOM
+                                </figcaption>
+                            </deckgo-reveal>
+                        </figure>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show>SHADOW DOM</div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title" hidden>ES Modules</h1>
+                        <figure slot="content" class="flex flex-center">
+                            <img
+                                data-src="assets/icons/web-components/es-module.svg"
+                                alt="ES Module"
+                            />
+                            <deckgo-reveal>
+                                <figcaption>
+                                    ES Modules
+                                </figcaption>
+                            </deckgo-reveal>
+                        </figure>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show>ES MODULES</div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title" hidden>HTML Template</h1>
+                        <figure slot="content" class="flex flex-center">
+                            <img
+                                data-src="assets/icons/web-components/html-template.svg"
+                                alt="HTML Template"
+                            />
+                            <deckgo-reveal>
+                                <figcaption>
+                                    HTML Template
+                                </figcaption>
+                            </deckgo-reveal>
+                        </figure>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show>HTML TEMPLATE</div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">Browser Support</h1>
+                        <wc-browser-table
+                            slot="content"
+                            style="width: 100%; max-height: 100%;"
+                        ></wc-browser-table>
+                    </deckgo-slide-content>
+
+                    <!-- #region react-wc -->
+
+                    <deckgo-slide-code
+                        src="/assets/code-samples/wc-in-react.js"
+                    >
+                        <h1 slot="title">WC in React</h1>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show>
+WC in REACT
+
+... tricks (/ boilerplate)
+
+The community is discussing some solutions (since 2016)
+                </div>
+                    </deckgo-slide-code>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">React in WC</h1>
+                        <div slot="content" class="flex flex-center">
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/react-in-wc.js"
+                                highlight-lines="8,8"
+                            >
+                            </deckgo-highlight-code>
+                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show>REACT in WC</div>
+                    </deckgo-slide-content>
+
+                    <!-- #endregion react-wc -->
+
+                    <!-- #endregion Web Components -->
+
+                    <!-- #region modular -->
+
+                    <deckgo-slide-title class="chapter-title-slide">
+                        <h1 slot="title">A Modular Web</h1>
+                    </deckgo-slide-title>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">ES Modules</h1>
+                        <div slot="content" class="ciu-wrapper">
+                            <p
+                                class="ciu_embed"
+                                data-feature="es6-module"
+                                data-periods="future_1,current,past_1,past_2"
+                                data-accessible-colours="false"
+                            >
+                                <a href="http://caniuse.com/#feat=es6-module"
+                                    >Can I Use es6-module?</a
+                                >
+                                Data on support for the es6-module feature
+                                across the major browsers from caniuse.com.
+                            </p>
+                        </div>
+                        <div slot="notes" show></div>
+                    </deckgo-slide-content>
+
+                    <!-- TODO: differential serving -->
+
+                    <!-- #region import-maps -->
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">Bare specifiers</h1>
+                        <div slot="content">
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/import-maps/bare.js"
+                            >
+                            </deckgo-highlight-code>
+                            <deckgo-reveal>
+                                <p class="whatwg note">
+                                    This restriction is in place so that in the
+                                    future we can allow custom module loaders to
+                                    give special meaning to "bare" import
+                                    specifiers, like
+                                    <code>import "jquery"</code> or
+                                    <code>import "web/crypto"</code>. For now
+                                    any such imports will fail, instead of being
+                                    treated as relative URLs.
+                                </p>
+                            </deckgo-reveal>
+                        </div>
+                        <div slot="notes" show></div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">Import Maps</h1>
+                        <div slot="content">
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/import-maps/map.html"
+                            >
+                            </deckgo-highlight-code>
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/import-maps/bare-equivalent.js"
+                            >
+                            </deckgo-highlight-code>
+                        </div>
+                        <div slot="notes" show></div>
+                    </deckgo-slide-content>
+
+                    <!-- #region built-in modules -->
+
+                    <deckgo-slide-content class="subchapter-title-slide">
+                        <h2 slot="title" style="text-align: center">
+                            built-in modules
+                        </h2>
+                        <div
+                            slot="content"
+                            style="width: 100%; text-align: center"
+                        >
+                            <img data-src="assets/img/pay-as-you-go.jpg" />
+                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show>BUILT-IN MODULES</div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">KV Storage</h1>
+                        <div
+                            slot="content"
+                            style="width: 100%; text-align: center"
+                        >
+                            <deckgo-highlight-code language="javascript">
+                                <!-- prettier-ignore -->
+                                <code slot="code">
+                                    import storage, {StorageArea} from 'std:kv-storage';
+                                </code>
+                            </deckgo-highlight-code>
+                            <deckgo-reveal>
+                                <p>faster than localStorage API...</p>
+                                <p>easier than IndexDB</p>
+                                <p>
+                                    closer to Map & Chromium
+                                    <a
+                                        href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea"
+                                        >storage</a
+                                    >
+                                    API
+                                </p>
+                            </deckgo-reveal>
+                        </div>
+                        <div slot="notes" show></div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-code
+                        src="assets/code-samples/import-maps/polyfil.html"
+                    >
+                        <h1 slot="title">Polyfill</h1>
+                    </deckgo-slide-code>
+
+                    <deckgo-slide-code
+                        src="assets/code-samples/import-maps/polyfil-import.html"
+                    >
+                        <h1 slot="title">Polyfill - Import</h1>
+                    </deckgo-slide-code>
+
+                    <!-- #endregion  built-in modules -->
+
+                    <!-- #region Built-in elements -->
+
+                    <deckgo-slide-content>
+                        <h2 slot="title" style="text-align: center">
+                            built-in elements
+                        </h2>
+                        <div
+                            slot="content"
+                            style="width: 100%; text-align: center"
+                        >
+                            <img data-src="assets/img/pay-as-you-go.jpg" />
+                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show>DECIDE</div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">Virtual Scroller</h1>
+                        <div slot="content" style="height: 100%; width: 100%;">
+                            <iframe
+                                src="https://fergald.github.io/virtual-scroller-demos/demo/loadmore.html"
+                                class="demo"
+                                width="100%"
+                                height="100%"
+                            ></iframe>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-code
+                        src="assets/code-samples/virtual-scroller/virtual-scroller.html"
+                    >
+                        <!-- htmlmin:ignore -->
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show>
+                    The &lt;virtual-scroller&gt; will manage the
+                    rendering of its children. It will prioritize
+                    rendering things that are in the viewport and not
+                    render children that are far away, such that we are
+                    only paying as little rendering cost as possible
+                    while still allowing them to work with find-in-page,
+                    accessibility features, focus navigation, fragment
+                    URL navigation, etc.
+                                            </div>
+                    </deckgo-slide-code>
+
+                    <deckgo-slide-code
+                        src="assets/code-samples/virtual-scroller/scroll.js"
+                    >
+                        <!-- htmlmin:ignore -->
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show>
+                    You can add, remove, modify children of the &lt;virtual-scroller&gt; as you would
+                    a regular element, using DOM APIs.
+                    
+                    When the set of actually-rendered children is about to change,
+                    the &lt;virtual-scroller&gt; will fire a "rangechange" event with the
+                    new range of rendered children.
+                                            </div>
+                    </deckgo-slide-code>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title">Switch</h1>
+                        <div slot="content" style="height: 100%; width: 100%;">
+                            <!-- <script type="module">
+                                                    import 'std:elements/switch';
+                                                </script>
+                                                <std-switch name="something"></std-switch> -->
+
+                            <iframe
+                                src="https://tkent-google.github.io/std-switch/demo.html"
+                                class="demo"
+                                width="100%"
+                                height="100%"
+                            ></iframe>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-code
+                        src="assets/code-samples/std-switch.html"
+                    >
+                    </deckgo-slide-code>
+
+                    <deckgo-slide-code
+                        src="assets/code-samples/toast/toast.mjs"
+                    >
+                        <h1 slot="title" id="show-toast">
+                            <ion-button color="primary" style="float:left"
+                                >show toast</ion-button
+                            >Toast
+                        </h1>
+                        <script
+                            type="module"
+                            src="assets/code-samples/toast/toast.mjs"
+                        ></script>
+                    </deckgo-slide-code>
+
+                    <deckgo-slide-code
+                        src="assets/code-samples/toast/toast.html"
+                    >
+                    </deckgo-slide-code>
+
+                    <!-- #endregion Built-in elements -->
+
+                    <!-- #endregion modular -->
+
+                    <!-- #endregion platform-->
+
+                    <!-- #region problems -->
+
+                    <deckgo-slide-content>
+                        <div slot="content" class="frame flex flex-center got">
+                            <h1>Common problems</h1>
+                        </div>
                     </deckgo-slide-content>
 
                     <!-- #region routing -->
@@ -1037,15 +1260,14 @@ pwa-helpers/router.min.js is 589 bytes only!
                     <!-- #endregion SSR -->
                     <!-- #region state management & interactions -->
 
-                    <deckgo-slide-content
+                    <!-- <deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/check-hands.png')"
                         class="bg-img dark"
                     >
                         <div slot="content" class="flex flex-center got">
                             <h1>Working Together</h1>
                         </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show></div>
+
                     </deckgo-slide-content>
 
                     <deckgo-slide-content
@@ -1058,9 +1280,7 @@ pwa-helpers/router.min.js is 589 bytes only!
                             </h1>
                             <h2 style="margin-top: 0">(again)</h2>
                         </div>
-                        <!-- prettier-ignore -->
-                        <div slot="notes" show></div>
-                    </deckgo-slide-content>
+                    </deckgo-slide-content> -->
 
                     <deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/ice-block.png')"
@@ -1239,7 +1459,10 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
 
                     <!-- #endregion Tooling -->
 
+                    <!-- #enregion problems-->
+
                     <!-- #endregion Needs -->
+
                     <!-- #region FIRE -->
 
                     <deckgo-slide-content>
@@ -1269,7 +1492,9 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
                             <h1>But that's another story...</h1>
                         </div>
                     </deckgo-slide-content>
+
                     <!-- #endregion FIRE -->
+
                     <!-- #region outro -->
 
                     <!-- <deckgo-slide-gif
@@ -1287,7 +1512,10 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
                         <div slot="author">
                             <h2>Noël Macé</h2>
                             <p>
-                                Independent Dev Advocado 🥑 for the Web Platform
+                                Dev Advocado / WebDev on a hiatus
+                            </p>
+                            <p>
+                                Open to job opportunities
                             </p>
                         </div>
                         <div slot="social-link">
@@ -1568,6 +1796,463 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
                 ></ion-icon>
             </web-social-share>
         </ion-app>
+
+        <template id="wc-browser-table">
+            <style>
+                a {
+                    text-decoration: none;
+                }
+                #container {
+                    display: flex;
+                    flex-direction: column;
+                    text-transform: uppercase;
+                    padding: 0 24px;
+                    color: var(--theme-blue-grey, #697785);
+                    font-size: 14px;
+                    width: calc(100% - 48px);
+                    max-width: 1080px;
+                    margin: 0 auto;
+                    border-radius: 4px;
+                    overflow: hidden;
+                    background: white;
+                    box-shadow: 0 1px 4px 0
+                            var(--shadow-color, hsla(0, 0%, 0%, 0.1)),
+                        0 0px 4px 0 var(--shadow-color, hsla(0, 0%, 0%, 0.1));
+                }
+                /* Header row */
+                .header {
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 1px solid #ededed;
+                }
+                .header .row [label] {
+                    display: none;
+                }
+                .header .row {
+                    flex: 1 0;
+                    border-bottom: none;
+                }
+                .header h1 {
+                    flex: 0 0 170px;
+                    text-transform: none;
+                    font-size: 24px;
+                    font-weight: normal;
+                    margin: 0 16px 0 0;
+                    color: var(--theme-black, #2d2f31);
+                }
+                .header img {
+                    width: 24px;
+                    margin-right: 8px;
+                }
+                /* Spec label */
+                div[label] {
+                    flex: 0 0 170px;
+                    margin-right: 16px;
+                    display: flex;
+                    align-items: center;
+                }
+                div[label] svg {
+                    width: 26px;
+                    margin-right: 8px;
+                    fill: var(--theme-blue-grey, #697785);
+                }
+                div[label]:after {
+                    content: attr(label);
+                    display: inline-block;
+                }
+                /* Browser row */
+                .row {
+                    display: flex;
+                    height: 100px;
+                    border-bottom: 1px solid #ededed;
+                    align-items: center;
+                }
+                .row > :not([label]) {
+                    flex: 1 1 60px;
+                    padding: 8px 0;
+                    font-weight: bold;
+                }
+                div.header > div.row > div:not([label]),
+                div.row [title] {
+                    display: flex;
+                    align-items: center;
+                    margin: 8px 0;
+                }
+                div:not(.header) > div.row [title]:before {
+                    content: '';
+                    width: 22px;
+                    height: 22px;
+                    flex: 0 0 22px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    background-repeat: no-repeat;
+                    margin-right: 8px;
+                }
+                div:not(.header) > div.row > :not([title]):not([label]) {
+                    flex-direction: column;
+                }
+                [title='Stable']:before,
+                [title='Polyfill']:before {
+                    background: url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 22 22%27 version=%271.1%27 aria-hidden=%27true%27><path fill-rule=%27evenodd%27 fill=%27white%27 d=%27M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z%27></path></svg>'),
+                        #8edb69;
+                    background-position: 5px 3px;
+                }
+                [title='Developing']:before {
+                    background: url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 22 22%27 version=%271.1%27 aria-hidden=%27true%27><circle fill=%27white%27 cx=%2750%%27 cy=%2750%%27 r=%272%27></circle></svg>'),
+                        #f5a623;
+                }
+                [title='On hold']:before,
+                [title='Under consideration']:before {
+                    background: url('data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 22 22%27 version=%271.1%27 aria-hidden=%27true%27><circle fill=%27white%27 cx=%2750%%27 cy=%2750%%27 r=%272%27></circle></svg>'),
+                        #aaa;
+                }
+                [title='Stable']:after {
+                    color: hsla(101, 61%, 32%, 1);
+                    content: 'stable';
+                }
+                [title='Polyfill']:after {
+                    color: hsla(101, 61%, 32%, 1);
+                    content: 'Polyfill';
+                }
+                [title='On hold']:after {
+                    color: hsla(0, 0%, 46%, 1);
+                    content: 'on hold';
+                }
+                [title='Developing']:after {
+                    color: hsla(37, 91%, 34%, 1);
+                    content: 'Developing';
+                }
+                [title='Under consideration']:after {
+                    color: hsla(0, 0%, 46%, 1);
+                    content: 'Considering';
+                }
+                @media (max-width: 900px) {
+                    #container {
+                        margin: 0 24px;
+                        width: auto;
+                    }
+
+                    [title='Stable']:after,
+                    [title='Polyfill']:after,
+                    [title='On hold']:after,
+                    [title='Developing']:after,
+                    [title='Under consideration']:after {
+                        content: none !important;
+                    }
+                    .header span {
+                        display: none;
+                    }
+                }
+                @media (max-width: 500px) {
+                    .header {
+                        flex-direction: column;
+                    }
+                    .header h1 {
+                        margin-top: 24px;
+                        flex-basis: auto;
+                    }
+                    .header .row [label] {
+                        display: block;
+                    }
+                    .header .row {
+                        width: 100%;
+                    }
+                    .row :last-child {
+                        flex: 0 0 30px !important;
+                    }
+                    div[label] {
+                        flex: 1 0 40px !important;
+                    }
+                    div[label]:after {
+                        position: absolute;
+                        margin-top: -51px;
+                        padding-right: 8px;
+                        background: white;
+                    }
+                }
+            </style>
+
+            <div id="container" class="style-scope browser-table">
+                <div class="header style-scope browser-table">
+                    <h1 label="" class="style-scope browser-table"></h1>
+                    <div class="row style-scope browser-table">
+                        <div class="style-scope browser-table">
+                            <img
+                                src="/assets/logos/chrome.svg"
+                                class="style-scope browser-table"
+                            />
+                            <span class="style-scope browser-table"
+                                >Chrome</span
+                            >
+                        </div>
+                        <div class="style-scope browser-table">
+                            <img
+                                src="/assets/logos/opera-icon.svg"
+                                class="style-scope browser-table"
+                            />
+                            <span class="style-scope browser-table">Opera</span>
+                        </div>
+                        <div class="style-scope browser-table">
+                            <img
+                                src="/assets/logos/safari.svg"
+                                class="style-scope browser-table"
+                            />
+                            <span class="style-scope browser-table"
+                                >Safari</span
+                            >
+                        </div>
+                        <div class="style-scope browser-table">
+                            <img
+                                src="/assets/logos/firefox.svg"
+                                class="style-scope browser-table"
+                            />
+                            <span class="style-scope browser-table"
+                                >Firefox</span
+                            >
+                        </div>
+                        <div class="style-scope browser-table">
+                            <img
+                                src="/assets/logos/edge.svg"
+                                class="style-scope browser-table"
+                            />
+                            <span class="style-scope browser-table">Edge</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row style-scope browser-table">
+                    <a
+                        spec=""
+                        href="https://html.spec.whatwg.org/multipage/scripting.html#the-template-element"
+                        target="_blank"
+                        rel="noopener"
+                        class="style-scope browser-table"
+                    >
+                        <div
+                            label="HTML Templates"
+                            class="style-scope browser-table"
+                        >
+                            <svg
+                                viewBox="0 0 26 22"
+                                class="style-scope browser-table"
+                            >
+                                <use
+                                    xlink:href="/sprite.octicons.svg#template"
+                                    class="style-scope browser-table"
+                                ></use>
+                            </svg>
+                        </div>
+                    </a>
+                    <a
+                        title="Stable"
+                        href="https://www.chromestatus.com/feature/5207287069147136"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://www.chromestatus.com/feature/5207287069147136"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://webkit.org/status/#feature-template-element"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://platform-status.mozilla.org/#html-templates"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/templateelement/"
+                        class="style-scope browser-table"
+                    ></a>
+                </div>
+                <div class="row style-scope browser-table">
+                    <a
+                        spec=""
+                        href="https://html.spec.whatwg.org/multipage/custom-elements.html"
+                        target="_blank"
+                        rel="noopener"
+                        class="style-scope browser-table"
+                    >
+                        <div
+                            label="Custom Elements"
+                            class="style-scope browser-table"
+                        >
+                            <svg
+                                viewBox="0 0 26 22"
+                                class="style-scope browser-table"
+                            >
+                                <use
+                                    xlink:href="/sprite.octicons.svg#element"
+                                    class="style-scope browser-table"
+                                ></use>
+                            </svg>
+                        </div>
+                    </a>
+                    <a
+                        title="Stable"
+                        href="https://www.chromestatus.com/feature/4696261944934400"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://www.chromestatus.com/feature/4696261944934400"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://webkit.org/status/#feature-custom-elements"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/63"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/customelements/"
+                        class="style-scope browser-table"
+                    >
+                        <div
+                            title="Polyfill"
+                            class="style-scope browser-table"
+                        ></div>
+                        <div
+                            title="Developing"
+                            class="style-scope browser-table"
+                        ></div>
+                    </a>
+                </div>
+                <div class="row style-scope browser-table">
+                    <a
+                        spec=""
+                        href="https://dom.spec.whatwg.org/#shadow-trees"
+                        target="_blank"
+                        rel="noopener"
+                        class="style-scope browser-table"
+                    >
+                        <div
+                            label="Shadow DOM"
+                            class="style-scope browser-table"
+                        >
+                            <svg
+                                viewBox="0 0 26 22"
+                                class="style-scope browser-table"
+                            >
+                                <use
+                                    xlink:href="/sprite.octicons.svg#shadow"
+                                    class="style-scope browser-table"
+                                ></use>
+                            </svg>
+                        </div>
+                    </a>
+                    <a
+                        title="Stable"
+                        href="https://www.chromestatus.com/feature/4667415417847808"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://www.chromestatus.com/feature/4667415417847808"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://webkit.org/status/#feature-shadow-dom"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/63"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/shadowdom/"
+                        class="style-scope browser-table"
+                    >
+                        <div
+                            title="Polyfill"
+                            class="style-scope browser-table"
+                        ></div>
+                        <div
+                            title="Developing"
+                            class="style-scope browser-table"
+                        ></div>
+                    </a>
+                </div>
+                <div class="row style-scope browser-table">
+                    <a
+                        spec=""
+                        href="https://html.spec.whatwg.org/multipage/webappapis.html#integration-with-the-javascript-module-system"
+                        target="_blank"
+                        rel="noopener"
+                        class="style-scope browser-table"
+                    >
+                        <div
+                            label="ES Modules"
+                            class="style-scope browser-table"
+                        >
+                            <svg
+                                viewBox="0 0 26 22"
+                                class="style-scope browser-table"
+                            >
+                                <use
+                                    xlink:href="/sprite.octicons.svg#import"
+                                    class="style-scope browser-table"
+                                ></use>
+                            </svg>
+                        </div>
+                    </a>
+                    <a
+                        title="Stable"
+                        href="https://www.chromestatus.com/feature/5365692190687232"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://www.chromestatus.com/feature/5684934484164608"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://webkit.org/status/#feature-modules"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://platform-status.mozilla.org/#javascript-modules"
+                        class="style-scope browser-table"
+                    ></a>
+                    <a
+                        title="Stable"
+                        href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/moduleses6/"
+                        class="style-scope browser-table"
+                    ></a>
+                </div>
+            </div>
+        </template>
+
+        <script>
+            (function() {
+                var template = document.currentScript.ownerDocument.querySelector(
+                    'template#wc-browser-table'
+                );
+                class BrowserTable extends HTMLElement {
+                    constructor() {
+                        super();
+
+                        const shadowRoot = this.attachShadow({ mode: 'open' });
+                        shadowRoot.appendChild(
+                            document.importNode(template.content, true)
+                        );
+                    }
+                }
+
+                customElements.define('wc-browser-table', BrowserTable);
+            })();
+        </script>
 
         <noscript>
             Please enable Javascript to access this presentation.
