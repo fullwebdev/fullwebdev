@@ -738,31 +738,34 @@
                         <div slot="content" class="frame flex flex-center got">
                             <h1>Libraries</h1>
                         </div>
+                        <div slot="notes" show>
+                            <p>
+                                Now that we're done with frameworks, let's talk
+                                about libraries.
+                            </p>
+                        </div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
                         <div slot="content" class="flex flex-center">
                             <img data-src="assets/img/logos/react.svg" />
                         </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <div slot="content" class="flex flex-center">
-                            <img
-                                data-src="assets/img/create-react-app-dependencygraph.svg"
-                            />
-                        </div>
                         <div slot="notes" show>
-                            <h1>
-                                Dependency graph of a create-react-app hello
-                                world.
-                            </h1>
-                            <code>
-                                $ npx create-react-app my-app $ cd my-app $ npm
-                                i -g dependency-cruiser $ depcruise --exclude
-                                "App.test.js" --output-type dot src | dot -T svg
-                                > dependencygraph.svg
-                            </code>
+                            <p>
+                                Of course, after frameworks, w/ VueJS and
+                                Angular, the first "library" we have to talk
+                                about here is React!
+                            </p>
+                            <p>
+                                We already saw that "React Frameworks" exists,
+                                e.g. Gatsby or NextJS. Some may need those
+                                because React itself is, indeed, just a library.
+                            </p>
+                            <p>
+                                It only deals with one thing: rendering. With a
+                                strongly opinionated "functional" & "one
+                                direction dataflow" approach.
+                            </p>
                         </div>
                     </deckgo-slide-content>
 
@@ -771,6 +774,7 @@
                         class="bg-img"
                     >
                         <div slot="notes" show>
+                            <p>And it's not (only) about the Web Platform.</p>
                             <p>The Web Platform is just one plateform!</p>
                             <p>React can address others, like:</p>
                             <ul>
@@ -781,14 +785,100 @@
                                 <li>emails (oy)</li>
                                 <li>documents (reactpdf, redocx)</li>
                                 <li>Even IoT & robotic 🤯 (react-hardware)</li>
+                                <li style="font-style: italic">
+                                    Go check
+                                    <a
+                                        href="https://github.com/chentsulin/awesome-react-renderer"
+                                        >awesome-react-renderer</a
+                                    >
+                                    for more examples...
+                                </li>
                             </ul>
                             <p>
-                                Go check out
-                                <a
-                                    href="https://github.com/chentsulin/awesome-react-renderer"
-                                    >awesome-react-renderer</a
-                                >
+                                This justify, of course, abstractions on top of
+                                the Web Platform.
                             </p>
+                            <p style="font-style: italic">
+                                BTW, it's the same with Angular, or even Ionic.
+                            </p>
+                            <p class="strong">
+                                "Vanilla" is the opposite! It's about embracing
+                                <span class="strong">one</span> platform in
+                                order to use it at its full power!
+                            </p>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <div slot="content" class="flex flex-center">
+                            <img
+                                data-src="assets/img/create-react-app-dependencygraph.svg"
+                                alt="Dependency graph of a create-react-app hello
+                                world"
+                            />
+                        </div>
+                        <div slot="notes" show>
+                            <p>
+                                So of course, if you're using React when
+                                developing a web app, you need a web renderer.
+                                React-dom being the by default choice.
+                            </p>
+                            <h1>
+                                How this graph was generated:
+                            </h1>
+                            <!-- prettier-ignore -->
+                            <code>
+                                $ npx create-react-app my-app
+                                $ cd my-app
+                                $ npm i -g dependency-cruiser
+                                $ depcruise --exclude "App.test.js" --output-type dot src | dot -T svg > dependencygraph.svg
+                            </code>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-big-img
+                        img-src="assets/img/react-pokedex-dependencygraph.png"
+                        img-divisions="333;774;1178"
+                        axis="y"
+                    >
+                        <div slot="notes" show>
+                            <p>
+                                And React having a strong "philosophy", it also
+                                leads most project to fully embrace it. For
+                                that, we need
+                            </p>
+                            <p>
+                                Here, this project (Pokedex) use Redux (no,
+                                we'll NOT talk about react context app), but we
+                                could also think about react-router-dom,
+                                react-tooltip, etc...
+                            </p>
+                            <h1>
+                                How this graph was generated:
+                            </h1>
+                            <!-- prettier-ignore -->
+                            <code>
+                            $ git clone git@github.com:alik0211/pokedex.git
+                            $ cd pokedex
+                            $ npm i
+                            $ depcruise --output-type dot src | dot -T png > dependencygraph.png
+                        </code>
+                        </div>
+                    </deckgo-slide-big-img>
+
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/coin-sides.jpg')"
+                        class="bg-img"
+                    >
+                        <div slot="notes" show>
+                            <p>So, there kind of is two sides to "React":</p>
+                            <ul>
+                                <li>
+                                    a rich echosystem for
+                                    multi-platform/complexe UI development
+                                </li>
+                                <li>a (sometime) usefull rendering library</li>
+                            </ul>
                         </div>
                     </deckgo-slide-content>
 
@@ -800,6 +890,32 @@
                             >
                             </deckgo-highlight-code>
                         </div>
+                        <div slot="notes" show>
+                            <p>
+                                So, react can connect to the "vanilla" world ...
+                            </p>
+                            <p>... it just need some tricks (/ boilerplate).</p>
+                            <p>
+                                The community is discussing some solutions
+                                (since 2016):
+                            </p>
+                            <ul>
+                                <li>
+                                    <a
+                                        href="https://github.com/facebook/react/issues/7249"
+                                        >Attributes and properties for Custom
+                                        Components #7249</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://github.com/facebook/react/issues/7901"
+                                        >Bypass synthetic event system for Web
+                                        Component events #7901</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
@@ -809,15 +925,10 @@
                             >
                             </deckgo-highlight-code>
                         </div>
-                    </deckgo-slide-content>
-
-                    <deckgo-slide-content>
-                        <div slot="content" class="flex flex-center">
-                            <deckgo-highlight-code
-                                src="/assets/code-samples/react-in-wc.js"
-                                highlight-lines="1,1"
-                            >
-                            </deckgo-highlight-code>
+                        <div slot="notes" show>
+                            <p>
+                                It can also be usefull for rendering, as itself.
+                            </p>
                         </div>
                     </deckgo-slide-content>
 
@@ -825,9 +936,32 @@
                         <div slot="content" class="flex flex-center">
                             <deckgo-highlight-code
                                 src="/assets/code-samples/react-in-wc.js"
-                                highlight-lines="4,4 11,11"
+                                highlight-lines="1,1 11,11"
                             >
                             </deckgo-highlight-code>
+                        </div>
+                        <div slot="notes" show>
+                            <p>
+                                Here, we're using the standard HTMLElement and
+                                use customElement.define, like every Custom
+                                Element.
+                            </p>
+                        </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <div slot="content" class="flex flex-center">
+                            <deckgo-highlight-code
+                                src="/assets/code-samples/react-in-wc.js"
+                                highlight-lines="4,4"
+                            >
+                            </deckgo-highlight-code>
+                        </div>
+                        <div slot="notes" show>
+                            <p>
+                                And we use the standard in order to attach a
+                                shadow root.
+                            </p>
                         </div>
                     </deckgo-slide-content>
 
@@ -839,6 +973,12 @@
                             >
                             </deckgo-highlight-code>
                         </div>
+                        <div slot="notes" show>
+                            <p>
+                                and finally, we can use React to render the
+                                template.
+                            </p>
+                        </div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content
@@ -846,7 +986,11 @@
                         class="bg-img"
                     >
                         <div slot="notes" show>
-                            How to decide if you need a library or not.
+                            <p>
+                                So, we talked about React. Yet, now, the real
+                                question is: how to decide if you need a library
+                                or not.
+                            </p>
                         </div>
                     </deckgo-slide-content>
 
@@ -855,10 +999,22 @@
                         class="bg-img"
                     >
                         <div slot="notes" show>
-                            Is it related to a Web Platform concerne? Is it
-                            close to standards? Is it adding an unecessary
-                            abstraction on top of it? Will you be hable to
-                            replace it easily?
+                            <p>
+                                When adopting a "Vanilla" approach, the first
+                                question you need to ask youself is:
+                            </p>
+                            <p class="strong">
+                                Is it related to a Web Platform concerne?
+                            </p>
+                            <p>In other worlds:</p>
+                            <ul>
+                                <li>Is it close to standards?</li>
+                                <li>
+                                    Is it adding an unecessary abstraction on
+                                    top of it?
+                                </li>
+                                <li>Will you be hable to replace it easily?</li>
+                            </ul>
                         </div>
                     </deckgo-slide-content>
 
@@ -874,12 +1030,68 @@
                             <div>lit-element</div>
                             <div>jquery</div>
                         </div>
+                        <div slot="notes" show>
+                            <p>
+                                Then, you need to care about the
+                                <a
+                                    href="https://v8.dev/blog/cost-of-javascript-2019"
+                                    >cost of JS</a
+                                >.
+                            </p>
+                            <p>
+                                Here, to illustrating, I'll talk about 3 really
+                                different libraries (but this isn't a
+                                comparison).
+                            </p>
+                            <p>
+                                React illustrate the fact that a "small" library
+                                can hide really heavy and complexe dependencies
+                                (here react-dom).
+                            </p>
+                            <p>
+                                Lit-element is, IMO, a good example of a light
+                                library: it only reliese on a really small
+                                dependency, lit-html.
+                            </p>
+                            <p>And finally, we have JQuery ...</p>
+                        </div>
                     </deckgo-slide-chart>
 
                     <deckgo-slide-video>
                         <video loop muted playsinline>
                             <source src="assets/gif/meh.mp4" type="video/mp4" />
                         </video>
+                        <div slot="notes" show>
+                            <p>
+                                ... which illustrate another question you
+                                absolutly need to ask yourself:
+                            </p>
+                            <p class="strong">Is this library usefull.</p>
+                            <p>
+                                I can't see any example where you could say
+                                "yes" to that question when it comes to JQuery,
+                                given the evolutions of the Web Platform.
+                            </p>
+                            <p>
+                                This isn't new! And this is why most big
+                                companies (like, for example,
+                                <a
+                                    href="https://github.blog/2018-09-06-removing-jquery-from-github-frontend/"
+                                    >Github</a
+                                >
+                                or
+                                <a href="https://youtu.be/uFxVH5mFAKg"
+                                    >Clever Cloud</a
+                                >) did or are still making an effort to move
+                                away from JQuery.
+                            </p>
+                            <p>
+                                This is yet another good example of why adding
+                                an abstration over the Web Platform can be a
+                                good choice at some time, but which needs to be
+                                regularly challenged.
+                            </p>
+                        </div>
                     </deckgo-slide-video>
 
                     <deckgo-slide-content
@@ -887,7 +1099,20 @@
                         class="bg-img"
                     >
                         <div slot="notes" show>
-                            So, should we avoid all libraries?
+                            <p>So, should we avoid all libraries?</p>
+                            <p>
+                                Of course not! Even if the standardisation
+                                process goes way faster now, the Web Platform
+                                will always have its limitations.
+                            </p>
+                            <p>
+                                In its time, JQuery was answering the lack of a
+                                good DOM manipulation API. The fact that
+                                querySelector and other things made it obsolete
+                                doesn't make it retrospectivly useless! It only
+                                means that you need to prepare yourself to drop
+                                any library you're using any time soon!
+                            </p>
                         </div>
                     </deckgo-slide-content>
 
