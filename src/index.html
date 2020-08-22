@@ -274,6 +274,11 @@
             .strong {
                 font-weight: bold;
             }
+
+            .slide-todo {
+                --background: #f00;
+                color: #000;
+            }
         </style>
     </head>
     <body>
@@ -460,7 +465,7 @@
                                 <img data-src="assets/img/logos/pwa.svg" />
                             </div>
                         </div>
-                        <div slot="notes">
+                        <div slot="notes" show>
                             <p>We are the vanilla people!</p>
                             <p>There is a lot of ways to join us!</p>
                             <p>
@@ -515,6 +520,13 @@
                                 <img data-src="assets/img/logos/vuejs.svg" />
                             </div>
                         </div>
+                        <div slot="notes" show>
+                            <p>
+                                We talking about frameworks, we first think
+                                about the big Kingdoms of the Sunny Lands.
+                            </p>
+                            <p>They are self sufficient, and very powerfull.</p>
+                        </div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
@@ -529,6 +541,20 @@
                                 <img data-src="assets/img/logos/nuxt.svg" />
                             </div>
                         </div>
+                        <div slot="notes" show>
+                            <p>
+                                Yet, there is some smaller kindoms which you
+                                should also know.
+                            </p>
+                            <p>
+                                Those follow the rules of bigger Kingdoms, like
+                                React (for Gatsby & NextJs), or Vue (for Nuxt).
+                            </p>
+                            <p>
+                                Being small or big, the question remain: why
+                                some of our people are following them?
+                            </p>
+                        </div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content
@@ -536,7 +562,11 @@
                         class="bg-img"
                     >
                         <div slot="notes" show>
-                            Faster?
+                            <p>
+                                Most of us will say that this is because with
+                                them, you're going faster!
+                            </p>
+                            <p>And these is true ... at first!</p>
                         </div>
                     </deckgo-slide-content>
 
@@ -545,7 +575,19 @@
                         class="bg-img"
                     >
                         <div slot="notes" show>
-                            Opinionated approach brings order
+                            <p>
+                                You see, this kingdoms have stronger opinions
+                                than the others.
+                            </p>
+                            <p>
+                                The rules are more strict, and people have less
+                                freedom.
+                            </p>
+                            <p>Don't get me wrong: this is for the best!</p>
+                            <p>
+                                Because an opinionated approach brings order,
+                                which leads to efficiency.
+                            </p>
                         </div>
                     </deckgo-slide-content>
 
@@ -554,7 +596,24 @@
                         class="bg-img"
                     >
                         <div slot="notes" show>
-                            But to much order can lead to dictats & ... prison.
+                            <p>
+                                But too strong opinions can lead to dictats &
+                                ... prison.
+                            </p>
+                            <p>
+                                See, when a framework is born, all opinions have
+                                to be right, or it quickly die.
+                            </p>
+                            <p>
+                                But stronger are these opinions, and the most
+                                time go by, the more inacurrate (or even, wrong)
+                                they can get. And the more challenging it
+                                becomes to change them.
+                            </p>
+                            <p>
+                                Then, what was liberty become a (beautiful) sky
+                                cell!
+                            </p>
                         </div>
                     </deckgo-slide-content>
 
@@ -564,8 +623,10 @@
                     >
                         <div slot="notes" show>
                             <p>
-                                You're going faster only because you're creating
-                                technical debt.
+                                Challenging this opinions, and making the
+                                required changes, take time. This is the main
+                                reason why you are going faster: you are
+                                creating a technical debt.
                             </p>
                             <p>
                                 But that's ok, because most frameworks will help
@@ -575,12 +636,66 @@
                         </div>
                     </deckgo-slide-content>
 
+                    <deckgo-slide-title class="slide-todo">
+                        <div slot="title">
+                            TODO: hidden complexity & framework knowledge
+                        </div>
+                        <div slot="notes" show>
+                            <p>
+                                There is also one misconception about frameworks
+                                you should care about: people think using a
+                                frameworks can solve everything! They couldn't
+                                be more wrong!
+                            </p>
+                            <p>Because:</p>
+                            <ol>
+                                <li>
+                                    they require to perfectly know those
+                                    opinions
+                                </li>
+                                <li>
+                                    they do NOT covers
+                                    <span class="strong">all</span> opinions
+                                </li>
+                            </ol>
+                            <p>
+                                This is why, for complexe projects, you HAVE to
+                                only use a framework you perfectly know! You'll
+                                need to invest a lot in it specifically,
+                                especially for technical watch.
+                            </p>
+                            <p>
+                                This is especially why non IT centric companies
+                                need so much to hire (as consultants) Vue or
+                                Angular experts.
+                            </p>
+                        </div>
+                    </deckgo-slide-title>
+
                     <deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/execution.jpg')"
                         class="bg-img"
                     >
                         <div slot="notes" show>
-                            So, should we kill the frameworks?
+                            <p>So, should we kill the frameworks?</p>
+                            <p>No, of course!</p>
+                            <p>
+                                When you need to quickly deliver a project, and
+                                don't have to make a lot of changes after a
+                                small period, go for it! Frameworks are what you
+                                need!
+                            </p>
+                            <p>
+                                This is why I love Angular so much. This
+                                definition covers most projects who needs
+                                consultants.
+                            </p>
+                            <p>
+                                This is also why I love Gatsby! I think I
+                                created one project using Gatsby each month of
+                                these year, in just a few days, just to let them
+                                become legathy after that.
+                            </p>
                         </div>
                     </deckgo-slide-content>
 
@@ -589,11 +704,27 @@
                         class="bg-img"
                     >
                         <div slot="notes" show>
-                            Don't let your company create its own framework!
+                            <p>One last thing about frameworks:</p>
+                            <p class="strong">
+                                don't let your company create its own framework
+                                just to "speed up" your projects!
+                            </p>
+                            <p>It won't!</p>
+                            <p>
+                                Create an
+                                <span class="strong">Open Source</span>
+                                framework in order to help the community, and
+                                learn! That it!
+                            </p>
                         </div>
                     </deckgo-slide-content>
 
-                    <!-- TODO: Open WC (+ others ?) -->
+                    <deckgo-slide-title class="slide-todo">
+                        <div slot="title">
+                            TODO: WC "frameworks", like Open WC
+                        </div>
+                        <div slot="notes" show></div>
+                    </deckgo-slide-title>
 
                     <!-- #endregion Frameworks -->
                     <!-- #region Libraries -->
