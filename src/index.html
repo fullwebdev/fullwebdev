@@ -235,12 +235,15 @@
 
             .frame {
                 background: center no-repeat url('assets/img/frame-h.png');
-                font-family: 'Game of Thrones';
                 background-size: contain;
             }
 
             .got {
                 font-family: 'Game of Thrones';
+                text-shadow: 1px 1px 2px #000;
+            }
+
+            .bg-img {
                 background-size: contain;
             }
 
@@ -300,10 +303,11 @@
                         reverse
                     ></deckgo-slide-big-img>
 
-                    <deckgo-slide-big-img
-                        img-src="assets/img/neutral-heroes.jpg"
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('assets/img/neutral-heroes.jpg')"
+                        class="bg-img"
                     >
-                    </deckgo-slide-big-img>
+                    </deckgo-slide-content>
 
                     <deckgo-slide-content>
                         <div slot="content" class="img-row">
@@ -319,18 +323,18 @@
                         </div>
                     </deckgo-slide-content>
 
-                    <deckgo-slide-big-img img-src="assets/img/roots.jpg">
+                    <deckgo-slide-content style="--background:center no-repeat url('assets/img/roots.jpg')" class="bg-img">
                         <div slot="notes" show>
                             But why are Web Frameworks & Libraries so important?
                             Let's go to the root of these!
                         </div>
-                    </deckgo-slide-big-img>
+                    </deckgo-slide-content>
 
                     <!-- #endregion Intro -->
                     <!-- #region Frameworks -->
 
                     <deckgo-slide-content>
-                        <div slot="content" class="frame center">
+                        <div slot="content" class="frame center got">
                             <h1>Frameworks</h1>
                         </div>
                     </deckgo-slide-content>
@@ -360,49 +364,49 @@
                         </div>
                     </deckgo-slide-content>
 
-                    <deckgo-slide-big-img img-src="assets/img/boats.png">
+                    <deckgo-slide-content style="--background:center no-repeat url('assets/img/boats.png')" class="bg-img">
                         <div slot="notes" show>
                             Faster?
                         </div>
-                    </deckgo-slide-big-img>
+                    </deckgo-slide-content>
 
-                    <deckgo-slide-big-img img-src="assets/img/order.jpg">
+                    <deckgo-slide-content style="--background:center no-repeat url('assets/img/order.jpg')" class="bg-img">
                         <div slot="notes" show>
                             Opinionated approach brings order
                         </div>
-                    </deckgo-slide-big-img>
+                    </deckgo-slide-content>
 
-                    <deckgo-slide-big-img img-src="assets/img/skycell.jpg">
+                    <deckgo-slide-content style="--background:center no-repeat url('assets/img/skycell.jpg')" class="bg-img">
                         <div slot="notes" show>
                             But to much order can lead to dictats & ... prison.
                         </div>
-                    </deckgo-slide-big-img>
+                    </deckgo-slide-content>
 
-                    <deckgo-slide-big-img img-src="assets/img/coins.jpg">
+                    <deckgo-slide-content style="--background:center no-repeat url('assets/img/coins.jpg')" class="bg-img">
                         <div slot="notes" show>
                             <p>You're going faster only because you're creating technical debt.</p>
                             <p>But that's ok, because most frameworks will help you with that!</p>
                             <p>Yet, remember: a WebDev always pay is debts!</p>
                         </div>
-                    </deckgo-slide-big-img>
+                    </deckgo-slide-content>
 
-                    <deckgo-slide-big-img img-src="assets/img/execution.jpg">
+                    <deckgo-slide-content style="--background:center no-repeat url('assets/img/execution.jpg')" class="bg-img">
                         <div slot="notes" show>
                             So, should we kill the frameworks?
                         </div>
-                    </deckgo-slide-big-img>
+                    </deckgo-slide-content>
 
-                    <deckgo-slide-big-img img-src="assets/img/door.jpg">
+                    <deckgo-slide-content style="--background:center no-repeat url('assets/img/door.jpg')" class="bg-img">
                         <div slot="notes" show>
                             Don't let your company create its own framework!
                         </div>
-                    </deckgo-slide-big-img>
+                    </deckgo-slide-content>
 
                     <!-- #endregion Frameworks -->
                     <!-- #region Libraries -->
 
                     <deckgo-slide-content>
-                        <div slot="content" class="frame center">
+                        <div slot="content" class="frame center got">
                             <h1>Libraries</h1>
                         </div>
                     </deckgo-slide-content>
@@ -433,7 +437,7 @@
                         </div>
                     </deckgo-slide-content>
 
-                    <deckgo-slide-big-img img-src="assets/img/branches.jpg">
+                    <deckgo-slide-content style="--background:center no-repeat url('assets/img/branches.jpg')" class="bg-img">
                         <div slot="notes" show>
                             <p>The Web Platform is just one plateform!</p>
                             <p>React can address others, like:</p>
@@ -454,7 +458,7 @@
                                 >
                             </p>
                         </div>
-                    </deckgo-slide-big-img>
+                    </deckgo-slide-content>
 
                     <!-- TODO: fix centering, mobile and (step by step) highlight in deckdeckgo -->
                     <deckgo-slide-content>
@@ -505,20 +509,20 @@
                         </div>
                     </deckgo-slide-content>
 
-                    <deckgo-slide-big-img img-src="assets/img/crossroads.jpg">
+                    <deckgo-slide-content style="--background:center no-repeat url('assets/img/crossroads.jpg')" class="bg-img">
                         <div slot="notes" show>
                             How to decide if you need a library or not.
                         </div>
-                    </deckgo-slide-big-img>
+                    </deckgo-slide-content>
 
-                    <deckgo-slide-big-img img-src="assets/img/web.jpg">
+                    <deckgo-slide-content style="--background:center no-repeat url('assets/img/web.jpg')" class="bg-img">
                         <div slot="notes" show>
                             Is it related to a Web Platform concerne? Is it
                             close to standards? Is it adding an unecessary
                             abstraction on top of it? Will you be hable to
                             replace it easily?
                         </div>
-                    </deckgo-slide-big-img>
+                    </deckgo-slide-content>
 
                     <!-- TODO: see https://github.com/deckgo/deckdeckgo/issues/340 -->
                     <deckgo-slide-chart
@@ -540,24 +544,24 @@
                         </video>
                     </deckgo-slide-video>
 
-                    <deckgo-slide-big-img img-src="assets/img/execution.jpg">
+                    <deckgo-slide-content style="--background:center no-repeat url('assets/img/execution.jpg')" class="bg-img">
                         <div slot="notes" show>
                             So, should we avoid all libraries?
                         </div>
-                    </deckgo-slide-big-img>
+                    </deckgo-slide-content>
 
                     <!-- #endregion Libraries -->
                     <!-- #region Needs -->
                     <deckgo-slide-content>
-                        <div slot="content" class="frame center">
+                        <div slot="content" class="frame center got">
                             <h1>What you<br />can do!</h1>
                         </div>
                     </deckgo-slide-content>
 
                     <!-- TODO: routing -->
                     <!-- #region SSR -->
-                    <deckgo-slide-big-img img-src="assets/img/datacenter.jpg">
-                    </deckgo-slide-big-img>
+                    <deckgo-slide-content style="--background:center no-repeat url('assets/img/datacenter.jpg')" class="bg-img">
+                    </deckgo-slide-content>
 
                     <deckgo-slide-content>
                         <div slot="content" class="center">
@@ -612,7 +616,7 @@
                     <!-- #region FIRE -->
 
                     <deckgo-slide-content>
-                        <div slot="content" class="frame center">
+                        <div slot="content" class="frame center got">
                             <h1>A song of ice...<br />...and fire!</h1>
                         </div>
                     </deckgo-slide-content>
@@ -630,7 +634,7 @@
                         <div class="big" slot="title">🔥 F. I. R. E. 🔥</div>
                     </deckgo-slide-title>
 
-                    <deckgo-slide-content style="--background:center no-repeat url('assets/img/ice-and-fire.jpg')" class="got dark">
+                    <deckgo-slide-content style="--background:center no-repeat url('assets/img/ice-and-fire.jpg')" class="got bg-img dark">
                         <div slot="content" class="center">
                             <h1>But that's another story...</h1>
                         </div>
@@ -707,10 +711,10 @@
                         </p>
                     </deckgo-slide-qrcode>
 
-                    <deckgo-slide-big-img
-                        img-src="http://questionsgems.com/wp-content/uploads/2019/03/images-99.jpeg"
+                    <deckgo-slide-content
+                        style="--background:center no-repeat url('http://questionsgems.com/wp-content/uploads/2019/03/images-99.jpeg')" class="bg-img"
                     >
-                    </deckgo-slide-big-img>
+                    </deckgo-slide-content>
 
                     <!-- #endregion outro -->
 
