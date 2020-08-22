@@ -312,6 +312,14 @@
                 --deckgo-chart-fill-color-4: var(--lit-element-color);
                 --deckgo-chart-fill-color-5: var(--jquery-color);
             }
+
+            .twitter-content {
+                width: 100%;
+            }
+
+            .twitter-content twitter-widget {
+                margin: 0 auto;
+            }
         </style>
     </head>
     <body>
@@ -334,6 +342,8 @@
                                 >!
                             </p>
                         </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">INTRO LECTEUR</div>
                     </deckgo-slide-title>
 
                     <!-- TODO: live countdown during the last hour -->
@@ -345,6 +355,8 @@
                         <span slot="hours">Hours</span>
                         <span slot="minutes">Minutes</span>
                         <span slot="seconds">Seconds</span>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">COUNTDOWN</div>
                     </deckgo-slide-countdown>
 
                     <!-- #region Intro -->
@@ -361,22 +373,9 @@
                                 You don't need to worry about spoilers...
                             </p>
                         </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">DISCLAIMER</div>
                     </deckgo-slide-title>
-
-                    <deckgo-slide-content class="dark">
-                        <div slot="notes" show>
-                            <h1>Welcome to Websteros!</h1>
-                            <p>
-                                Today, I'll tell you the story of our land. Why
-                                our kingdoms exists. Why there is peace, war and
-                                alliances between them.
-                            </p>
-                            <p>
-                                Especially, I'll tell you the story of our
-                                unaligned and free company!
-                            </p>
-                        </div>
-                    </deckgo-slide-content>
 
                     <deckgo-slide-big-img
                         img-src="assets/img/websteros-map.jpg"
@@ -384,21 +383,24 @@
                         axis="y"
                         reverse
                     >
-                        <div slot="notes" show>
-                            <ol>
-                                <li>
-                                    The Sunny Lands
-                                </li>
-                                <li>
-                                    The Isolated Lands
-                                </li>
-                                <li>
-                                    The reactive north
-                                </li>
-                                <li>
-                                    Behind the Web
-                                </li>
-                            </ol>
+                        <h1 slot="title" hidden>Map of Websteros</h1>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
+🗺️ BIENVENUE A WEBSTEROS
+
+histoire
+
+la raison d'être de nos royaumes
+☮️ batailles / ⚔️ paix / alliances
+⚠️ peuples 🗽 libres / non-alignés
+
+☀️ Terres ensoleillées
+🏝️ Terres isolées
+❄️ nord ⚛️ réactif 
+🧱 au dela du 🕸️ Web 
+
+⚔️ guerre entre 👑 royaumes 
+maintenir ☮️ paix
                         </div>
                     </deckgo-slide-big-img>
 
@@ -406,21 +408,19 @@
                         style="--background:center no-repeat url('assets/img/neutral-heroes.jpg')"
                         class="bg-img"
                     >
-                        <div slot="notes" show>
-                            <p>This is our goal!</p>
-                            <p>
-                                We, the unaligned, neutral people
-                            </p>
-                            <p>
-                                may love some kingdoms more than some others.
-                            </p>
-                            <p>
-                                we love them and avoid them all
-                            </p>
+                        <h1 slot="title" hidden>neutral heroes</h1>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
+👨‍👨‍👧‍👦 NON-ALIGNÉS
+
+🤷‍♂️ certains 🙇‍♂️ allégeance 👑 royaumes 
+
+Nous tous 💚 aimons & 🤚 restons à distance des 👑 royaumes
                         </div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
+                        <h1 slot="title" hidden>Vanilla Logos</h1>
                         <div slot="content" class="img-row">
                             <div class="img-container">
                                 <img data-src="assets/img/logos/js.svg" />
@@ -432,20 +432,19 @@
                                 <img data-src="assets/img/logos/pwa.svg" />
                             </div>
                         </div>
-                        <div slot="notes" show>
-                            <p>We are the vanilla people!</p>
-                            <p>There is a lot of ways to join us!</p>
-                            <p>Vanilla definition</p>
-                            <p>
-                                the most famous of our tribes: Web Components!
-                            </p>
-                            <p>
-                                too many wrong things said about them
-                            </p>
-                            <p>
-                                here is a quick reminder who come from
-                                SysthoryOS
-                            </p>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
+🍦 LOGOS
+
+Nombreuses façons de nous rejoindre
+
+📕 Def. 🍦 Vanilla Web 🕸️
+
+🟨 🍦Vanilla JS
+🧊 Web Components
+
+🗣️🤦‍♂️ Trop de mauvaises infos 
+RAPPEL pour SysthoryOS
                         </div>
                     </deckgo-slide-content>
 
@@ -453,71 +452,66 @@
                         style="--background:center no-repeat url('assets/img/world-map.jpeg')"
                         class="bg-img"
                     >
-                        <div slot="notes" show>
-                            <p class="strong">(</p>
-                            <p>
-                                Yeah, because here we care about WebSteros, but
-                                there is other lands beyond the seas, remember?!
-                            </p>
-                            <p class="strong">)</p>
-                        </div>
+                        <h1 slot="title" hidden>World Map</h1>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">🌏 CARTE DU MONDE</div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
+                        <h1 slot="title" hidden>Custom Elements</h1>
                         <div slot="content" class="flex flex-center">
                             <img
                                 data-src="assets/icons/custom-element.svg"
                                 alt="Custom Element"
                             />
                         </div>
-                        <div slot="notes" show>
-                            Custom Element
-                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">CUSTOM ELEMENTS</div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
+                        <h1 slot="title" hidden>Shadow DOM</h1>
                         <div slot="content" class="flex flex-center">
                             <img
                                 data-src="assets/icons/shadow-dom.svg"
                                 alt="Custom Element"
                             />
                         </div>
-                        <div slot="notes" show>
-                            Shadow DOM
-                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">SHADOW DOM</div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
+                        <h1 slot="title" hidden>ES Modules</h1>
                         <div slot="content" class="flex flex-center">
                             <img
                                 data-src="assets/icons/es-module.svg"
                                 alt="Custom Element"
                             />
                         </div>
-                        <div slot="notes" show>
-                            <h1>ES Modules</h1>
-                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">ES MODULES</div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
+                        <h1 slot="title" hidden>HTML Template</h1>
                         <div slot="content" class="flex flex-center">
                             <img
                                 data-src="assets/icons/html-template.svg"
                                 alt="Custom Element"
                             />
                         </div>
-                        <div slot="notes" show>
-                            HTML Template
-                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">HTML TEMPLATE</div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/roots.jpg')"
                         class="bg-img"
                     >
-                        <div slot="notes" show>
-                            Let's get at the root of these!
-                        </div>
+                        <h1 slot="title" hidden>Roots</h1>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">🌳 RACINES</div>
                     </deckgo-slide-content>
 
                     <!-- #endregion Intro -->
@@ -527,9 +521,12 @@
                         <div slot="content" class="frame flex flex-center got">
                             <h1>Frameworks</h1>
                         </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">🛑 FRAMEWORKS 🛑</div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
+                        <h1 slot="title" hidden>Sunny Lands</h1>
                         <div slot="content" class="img-row">
                             <div class="img-container">
                                 <img data-src="assets/img/logos/angular.svg" />
@@ -538,12 +535,14 @@
                                 <img data-src="assets/img/logos/vuejs.svg" />
                             </div>
                         </div>
-                        <div slot="notes" show>
-                            the Sunny Lands
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
+☀️ TERRES ENSOLEILLÉES
                         </div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
+                        <h1 slot="title" hidden>Other Frameworks</h1>
                         <div slot="content" class="img-row">
                             <div class="img-container">
                                 <img data-src="assets/img/logos/gatsby.svg" />
@@ -555,17 +554,15 @@
                                 <img data-src="assets/img/logos/nuxt.svg" />
                             </div>
                         </div>
-                        <div slot="notes" show>
-                            <p>
-                                smaller kingdoms
-                            </p>
-                            <p>
-                                follow the rules of bigger Kingdoms, like React
-                                (for Gatsby & NextJs), or Vue (for Nuxt).
-                            </p>
-                            <p>
-                                but why following them?
-                            </p>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
+▪👑 PETITS ROYAUMES
+
+🙇 allégeance à d'autres royaumes 👑
+Gatsby & Next ➡ ⚛ React
+Nuxt ➡ Vue
+
+❓ pourquoi 👨👩 les suivents
                         </div>
                     </deckgo-slide-content>
 
@@ -573,11 +570,14 @@
                         style="--background:center no-repeat url('assets/img/boats.png')"
                         class="bg-img"
                     >
-                        <div slot="notes" show>
-                            <p>
-                                you're going faster!
-                            </p>
-                            <p>these is true ... at first!</p>
+                        <h1 slot="title" hidden>Going faster</h1>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
+⛵ PLUS RAPIDE
+
+... mais seulement au début
+
+📿 DOGMATIQUE
                         </div>
                     </deckgo-slide-content>
 
@@ -585,17 +585,16 @@
                         style="--background:center no-repeat url('assets/img/order.jpg')"
                         class="bg-img"
                     >
-                        <div slot="notes" show>
-                            <p>
-                                opinionated
-                            </p>
-                            <p>
-                                rules more strict, less freedom.
-                            </p>
-                            <p>for the best!</p>
-                            <p>
-                                brings order, leads to efficiency.
-                            </p>
+                        <h1 slot="title" hidden>Order</h1>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
+⚔ ORDRE
+
+dogma ➡ ➕ strict / ➖ liberté
+
+👍 Bien
+
+...la plupart du temps...
                         </div>
                     </deckgo-slide-content>
 
@@ -603,20 +602,21 @@
                         style="--background:center no-repeat url('assets/img/skycell.jpg')"
                         class="bg-img"
                     >
-                        <div slot="notes" show>
-                            <p>
-                                too strong -> dictatorship / prison
-                            </p>
-                            <p>
-                                See, when a framework is born, all opinions have
-                                to be right, or it quickly die.
-                            </p>
-                            <p>
-                                strong opinions + time = more inaccurate/wrong
-                            </p>
-                            <p>
-                                Then,liberty become a (beautiful) sky cell!
-                            </p>
+                        <h1 slot="title" hidden>Skycell</h1>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
+🌥 SKYCELL
+
+Car 📿 dogme ➡ 👮 dictature & prison
+
+👶🍼 naissance frameworks
+📿 dogmes doivent être ✅ JUSTES
+
+MAIS 📿 dogme ➕ ⏳ temps = + faux
+
+ET c'est là qu'on est en 👮 prison
+
+CAR challenger une opinion est complexe
                         </div>
                     </deckgo-slide-content>
 
@@ -624,16 +624,16 @@
                         style="--background:center no-repeat url('assets/img/coins.jpg')"
                         class="bg-img"
                     >
-                        <div slot="notes" show>
-                            <p>
-                                Challenging them take time. going faster $lt;-
-                                technical debt.
-                            </p>
-                            <p>
-                                But that's ok = frameworks will help you with
-                                that!
-                            </p>
-                            <p>a WebDev always pay is debts!</p>
+                        <h1 slot="title" hidden>Depts</h1>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
+💰 DETTE
+
+⛑ heureusement, les frameworks aident
+
+vous créez de la 🏦 dette technique
+
+ET UN DEVELOPER PAYE TOUJOURS SES DETTES
                         </div>
                     </deckgo-slide-content>
 
@@ -641,16 +641,13 @@
                         style="--background:center no-repeat url('assets/img/ben-hur-waxzce.jpg')"
                         class="bg-img"
                     >
-                        <div slot="notes" show>
-                            <p>
-                                <a
-                                    href="https://medium.com/@waxzce/la-dette-technique-une-supercherie-mythologique-pour-gal%C3%A9riens-de-lit-7ed0dfbf39c7"
-                                    target="_blank"
-                                    rel="noopener"
-                                    >La dette technique: une supercherie
-                                    mythologique pour galériens de l’IT</a
-                                >, Quentin Adam, CEO Clever Cloud
-                            </p>
+                        <h1 slot="title" hidden>Depts</h1>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
+QUENTIN ADAM
+
+CEO Clever Cloud
+"La dette technique: une supercherie mythologique pour galériens de l’IT"
                         </div>
                     </deckgo-slide-content>
 
@@ -658,28 +655,14 @@
                         style="--background:center no-repeat url('assets/img/throne-play.jpg')"
                         class="bg-img"
                     >
-                        <div slot="notes" show>
-                            <p>
-                                using a frameworks can solve everything"
-                            </p>
-                            <p>Because:</p>
-                            <ol>
-                                <li>
-                                    they require to perfectly know those
-                                    opinions
-                                </li>
-                                <li>
-                                    they do NOT covers
-                                    <span class="strong">all</span> opinions
-                                </li>
-                            </ol>
-                            <p>
-                                only use a framework you perfectly know! invest
-                                a lot in it
-                            </p>
-                            <p>
-                                👋 Angular consultants / teachers
-                            </p>
+                        <h1 slot="title" hidden>Easy game</h1>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
+🎮👶 JEUX D'ENFANT
+
+CONNAISSANCE, VEILLE
+
+👋 Angular consultants / 👨‍🏫 teachers
                         </div>
                     </deckgo-slide-content>
 
@@ -687,31 +670,59 @@
                         style="--background:center no-repeat url('assets/img/execution.jpg')"
                         class="bg-img"
                     >
-                        <div slot="notes" show>
-                            <p>
-                                quickly deliver a project + few changes after
-                                that
-                            </p>
+                        <h1 slot="title" hidden>Execution</h1>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
+🪓 EXECUTION
+
+❌ Non
+
+court terme
+OU
+parfaite connaissance
                         </div>
+                    </deckgo-slide-content>
+
+                    <deckgo-slide-content>
+                        <h1 slot="title" hidden>"No one uses Angular"</h1>
+                        <div slot="content" class="twitter-content">
+                            <blockquote class="twitter-tweet">
+                                <p lang="en" dir="ltr">
+                                    “No one uses Angular”
+                                    <a href="https://t.co/5x5jOSaHVF"
+                                        >pic.twitter.com/5x5jOSaHVF</a
+                                    >
+                                </p>
+                                &mdash; Mike &quot;Wisdom Beard&quot; Hartington
+                                (@mhartington)
+                                <a
+                                    href="https://twitter.com/mhartington/status/1174612741388218368?ref_src=twsrc%5Etfw"
+                                    >September 19, 2019</a
+                                >
+                            </blockquote>
+                            <script
+                                async
+                                src="https://platform.twitter.com/widgets.js"
+                                charset="utf-8"
+                            ></script>
+                        </div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">🐦 "no ones uses Angular</div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/door.jpg')"
                         class="bg-img"
                     >
-                        <div slot="notes" show>
-                            <p>One last thing about frameworks:</p>
-                            <p class="strong">
-                                don't let your company create its own framework
-                                just to "speed up" your projects!
-                            </p>
-                            <p>It won't!</p>
-                            <p>
-                                Create an
-                                <span class="strong">Open Source</span>
-                                framework in order to help the community, and
-                                learn! That it!
-                            </p>
+                        <h1 slot="title" hidden>Closed door</h1>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
+🚪 PORTE FERMÉE
+
+⚠ votre propre 👑 pour le pouvoir et ⛵ rapidité
+NE MARCHE PAS
+
+faites le pour le PLAISIR, R&D et les AUTRES
                         </div>
                     </deckgo-slide-content>
 
@@ -722,14 +733,16 @@
                         <div slot="content" class="frame flex flex-center got">
                             <h1>Libraries</h1>
                         </div>
-                        <div slot="notes" show></div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes"></div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
                         <div slot="content" class="flex flex-center">
                             <img data-src="assets/img/logos/react.svg" />
                         </div>
-                        <div slot="notes" show>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
                             <p>
                                 Reminder: "React Frameworks" exists! e.g. Gatsby
                                 or NextJS.
@@ -746,7 +759,8 @@
                         style="--background:center no-repeat url('assets/img/branches.jpg')"
                         class="bg-img"
                     >
-                        <div slot="notes" show>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
                             <p>And it's not (only) about the Web Platform.</p>
                             <ul>
                                 <li>SSR (react-dom/server)</li>
@@ -776,7 +790,8 @@
                                 world"
                             />
                         </div>
-                        <div slot="notes" show>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
                             you need a web renderer (React-dom by default)
                         </div>
                     </deckgo-slide-content>
@@ -786,7 +801,8 @@
                         img-divisions="333;774;1178"
                         axis="y"
                     >
-                        <div slot="notes" show>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
                             <p>
                                 And React having a strong "philosophy", it also
                                 leads most project to fully embrace it. For
@@ -815,7 +831,8 @@
                         style="--background:center no-repeat url('assets/img/coin-sides.jpg')"
                         class="bg-img"
                     >
-                        <div slot="notes" show>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
                             <ul>
                                 <li>
                                     a rich ecosystem
@@ -829,7 +846,8 @@
                         src="/assets/code-samples/wc-in-react.js"
                     >
                         <h1 slot="title">WC in React</h1>
-                        <div slot="notes" show>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
                             <p>
                                 So, react can connect to the "vanilla" world ...
                             </p>
@@ -850,7 +868,8 @@
                             >
                             </deckgo-highlight-code>
                         </div>
-                        <div slot="notes" show>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
                             It can also be useful for rendering, as itself. All
                             the other parts are just WC standards.
                         </div>
@@ -860,7 +879,8 @@
                         style="--background:center no-repeat url('assets/img/crossroads.jpg')"
                         class="bg-img"
                     >
-                        <div slot="notes" show>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
                             how to decide if you need a library or not
                         </div>
                     </deckgo-slide-content>
@@ -869,7 +889,8 @@
                         style="--background:center no-repeat url('assets/img/web.jpg')"
                         class="bg-img"
                     >
-                        <div slot="notes" show>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
                             <p class="strong">
                                 Is it related to a Web Platform concern?
                             </p>
@@ -898,7 +919,8 @@
                             <div>lit-element</div>
                             <div>jquery</div>
                         </div>
-                        <div slot="notes" show>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
                             cost of JS / hidden complexity (react-dom, x,
                             react-redux, lit-html)
                         </div>
@@ -908,7 +930,8 @@
                         <video autoplay muted playsinline>
                             <source src="assets/gif/meh.mp4" type="video/mp4" />
                         </video>
-                        <div slot="notes" show>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
                             <p class="strong">Is this library useful?</p>
                             <p>
                                 JQuery 🤷‍♂️
@@ -934,7 +957,8 @@
                         style="--background:center no-repeat url('assets/img/execution.jpg')"
                         class="bg-img"
                     >
-                        <div slot="notes" show>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
                             <p>So, should we avoid all libraries?</p>
                             <p>
                                 No! Web Platform will always have its
@@ -956,7 +980,8 @@
                         style="--background:center no-repeat url('assets/img/carriage.png')"
                         class="bg-img"
                     >
-                        <div slot="notes" show>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
                             Just don't let the libraries you use "drive" your
                             project.
                         </div>
@@ -966,7 +991,8 @@
                         style="--background:center no-repeat url('assets/img/logos/lit-element.jpeg')"
                         class="bg-img"
                     >
-                        <div slot="notes" show>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
                             For example, you can use lit-html or even
                             lit-element. It will add some opinionated
                             abstractions on top of your Web Components, but it's
@@ -981,7 +1007,8 @@
                         style="--background:center no-repeat url('assets/img/throne-zoom.jpg')"
                         class="bg-img"
                     >
-                        <div slot="notes" show>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
                             same with tooling
                         </div>
                     </deckgo-slide-content>
@@ -1019,7 +1046,8 @@
                         src="/assets/code-samples/pwa-helpers-routing.js"
                     >
                         <h1 slot="title">PWA Helpers</h1>
-                        <div slot="notes" show>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
                             pwa-helpers/router.min.js is 589 bytes only!
                         </div>
                     </deckgo-slide-code>
@@ -1058,7 +1086,8 @@
                         <div slot="content" class="flex flex-center got">
                             <h1>Interactions</h1>
                         </div>
-                        <div slot="notes" show></div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes"></div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content
@@ -1071,7 +1100,8 @@
                             </h1>
                             <h2 style="margin-top: 0">(again)</h2>
                         </div>
-                        <div slot="notes" show></div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes"></div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content
@@ -1082,14 +1112,16 @@
                             <h1>State Management</h1>
                             <h2>Big BloC vs Reusability</h2>
                         </div>
-                        <div slot="notes" show></div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes"></div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/bloc-pattern.png')"
                         class="bg-img dark"
                     >
-                        <div slot="notes" show>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
                             <p>
                                 Image from
                                 <a
@@ -1104,7 +1136,8 @@
                         src="/assets/code-samples/bloc/bloc-class.js"
                     >
                         <h1 slot="title">Pseudo BLoC Class</h1>
-                        <div slot="notes" show>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
                             BLoC design pattern with Angular, by Suguru Inatomi.
                         </div>
                     </deckgo-slide-code>
@@ -1122,7 +1155,8 @@
                                 alt="RxJS"
                             />
                         </div>
-                        <div slot="notes" show>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
                             Object.observed removed 2016. TC39 Observable
                             proposal stuck since 2017. WHATWG/DOM - no
                             implementers interest. RxJS ~30kB minified.
@@ -1133,7 +1167,8 @@
                         style="--background:center no-repeat url('assets/img/castle.jpg')"
                         class="bg-img dark"
                     >
-                        <div slot="notes" show></div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes"></div>
                     </deckgo-slide-content>
 
                     <!-- #endregion state management & interactions -->
@@ -1151,7 +1186,8 @@
                                 alt="RxJS"
                             />
                         </div>
-                        <div slot="notes" show>
+                        <!-- prettier-ignore -->
+                        <div slot="notes">
                             You don't need typescript!
                         </div>
                     </deckgo-slide-content>
@@ -1181,14 +1217,16 @@
                         <div slot="title">
                             <h1>Tooling</h1>
                         </div>
-                        <div slot="notes" show></div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes"></div>
                     </deckgo-slide-title>
 
                     <deckgo-slide-content
                         style="--background:center no-repeat url('assets/img/logos/open-wc.png')"
                         class="bg-img"
                     >
-                        <div slot="notes" show></div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes"></div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
@@ -1198,14 +1236,16 @@
                                 alt="RxJS"
                             />
                         </div>
-                        <div slot="notes" show></div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes"></div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-title class="flex flex-center">
                         <div slot="title">
                             <h2>@open-wc/karma-esm</h2>
                         </div>
-                        <div slot="notes" show></div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes"></div>
                     </deckgo-slide-title>
 
                     <deckgo-slide-content>
@@ -1226,7 +1266,8 @@
                                 alt="RxJS"
                             />
                         </div>
-                        <div slot="notes" show></div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes"></div>
                     </deckgo-slide-content>
 
                     <!-- #endregion Tooling -->
@@ -1325,7 +1366,8 @@
                                 width="500"
                             />
                         </div>
-                        <div slot="notes" show></div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes"></div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
@@ -1344,7 +1386,8 @@
                                 width="500"
                             />
                         </div>
-                        <div slot="notes" show></div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes"></div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content>
@@ -1363,7 +1406,8 @@
                                 width="500"
                             />
                         </div>
-                        <div slot="notes" show></div>
+                        <!-- prettier-ignore -->
+                        <div slot="notes"></div>
                     </deckgo-slide-content>
 
                     <deckgo-slide-content
