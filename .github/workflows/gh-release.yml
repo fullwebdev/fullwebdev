@@ -18,4 +18,4 @@ jobs:
     - name: Release
       run: npm run github-release
       env:
-        CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{ secrets.CONVENTIONAL_GITHUB_RELEASER_TOKEN }}
+        CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{ secrets.ACCESS_TOKEN }}
