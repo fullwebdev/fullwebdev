@@ -280,6 +280,20 @@
         <ion-app class="loading">
             <ion-content force-overscroll="false" scroll-y="false">
                 <deckgo-deck id="slider" pager-percentage="false">
+                    <deckgo-slide-title class="dark">
+                        <h1 slot="title" style="color:red">
+                            Reading this slides?
+                        </h1>
+                        <div no-shadow slot="content">
+                            <h3>
+                                Open the speaker notes!
+                            </h3>
+                            <p style="font-style: italic">
+                                Clic on the menu on the top right.
+                            </p>
+                        </div>
+                    </deckgo-slide-title>
+
                     <!-- TODO: live countdown during the last hour -->
                     <deckgo-slide-countdown
                         until="2019-10-03T15:30:00.000+02:00"
