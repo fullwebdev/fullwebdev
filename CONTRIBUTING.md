@@ -138,7 +138,8 @@ Any line of the commit message cannot be longer than 100 characters.
   │       │             └─⫸ Summary in present tense. Not capitalized. No period at the end.
   │       │
   │       └─⫸ Commit Scope: docs|code-samples|codelabs|data-driven-pwa|illustrations|
-  │                          livre-fr|perf|reveal|helpers|benchmark|panpress-cli|panpress-starter
+  │                          livre-fr|perf|slides-(vanilla-1|wof-1|wof-2)|helpers|
+  │                          benchmark|panpress-(cli|starter)
   │
   └─⫸ Commit Type: build|ci|docs|feat|fix|perf|refactor|style|test
 ```
