@@ -20,15 +20,15 @@ Alors, prêt pour le turfu du web ?!
 
 Présentée le 22 octobre 2019 à 11:20 au [Devfest Nantes](https://devfest2019.gdgnantes.com/sessions/the_web_is_on__f_i_r_e________conference_/){target="\_blank"}
 
-- [slides](/slides/wof/devfestnantes19/){target="\_blank"}
+- [slides](/slides/wof/devfestnantes19/index.html){target="\_blank"}
 - [vidéo](https://youtu.be/_byWU9V4fXw){target="\_blank"}
 
 ### Autres présentations
 
-| date       | heure | évènement                                                                                      | slides                                                        | vidéo                                                  |
-| ---------- | ----- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------ |
-| 2019-12-10 | 14:00 | [Paris Open Source Summit](https://2019.opensourcesummit.paris/){target="\_blank"}             | [poss19](/slides/wof/poss19/){target="\_blank"}        |                                                        |
-| 2019-10-11 | 12:00 | [ParisWeb](https://www.paris-web.fr/2019/conferences/the-web-is-on-fire.php){target="\_blank"} | [parisweb19](/slides/wof/parisweb19/){target="\_blank"} | [vimeo](https://vimeo.com/380989996){target="\_blank"} |
+| date       | heure | évènement                                                                                      | slides                                                            | vidéo                                                  |
+| ---------- | ----- | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | ------------------------------------------------------ |
+| 2019-12-10 | 14:00 | [Paris Open Source Summit](https://2019.opensourcesummit.paris/){target="\_blank"}             | [poss19](/slides/wof/poss19/index.html){target="\_blank"}         |                                                        |
+| 2019-10-11 | 12:00 | [ParisWeb](https://www.paris-web.fr/2019/conferences/the-web-is-on-fire.php){target="\_blank"} | [parisweb19](/slides/wof/parisweb19/index.html){target="\_blank"} | [vimeo](https://vimeo.com/380989996){target="\_blank"} |
 
 ## Codelab
 
@@ -40,5 +40,5 @@ Vous pouvez suivre la [pas à pas](/04-codelabs/doc/modern-data-driven){target="
 
 Présentée le 4 novembre 2019 à 13:30 au [Devoxx Belgium](https://devoxx.be/speaker-details/?id=50822){target="\_blank"}
 
-- [slides](/slides/wof/devoxxbe19/){target="\_blank"}
+- [slides](/slides/wof/devoxxbe19/index.html){target="\_blank"}
 - [(en) vidéo](https://youtu.be/lfubOlz3JLI){target="\_blank"}
