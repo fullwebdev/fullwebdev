@@ -24,8 +24,8 @@
       "directory": "packages/codelabs"
     },
     {
-      "scope": "reveal",
-      "directory": "packages/reveal"
+      "scope": "slides-wof-1",
+      "directory": "packages/slides/wof-1"
     },
     {
       "scope": "panpress-starter",
@@ -33,8 +33,8 @@
       "url": "git@github.com:fullwebdev/panpress-starter.git"
     },
     {
-      "scope": "wof-slides",
-      "directory": "packages/wof-slides"
+      "scope": "slides-wof-2",
+      "directory": "packages/slides/wof-2"
     },
     {
       "scope": "slides-vanilla",
