@@ -30,7 +30,7 @@ const config = {
 
 const plugins = [
     new webpack.DefinePlugin({
-        'process.env.ASSET_PATH': '/slides/wof/latest/',
+        'process.env.ASSET_PATH': '/slides/vanilla1/latest/',
     }),
     new CleanWebpackPlugin({
         cleanStaleWebpackAssets: false,
