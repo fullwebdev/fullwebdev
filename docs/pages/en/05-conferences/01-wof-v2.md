@@ -24,8 +24,9 @@ So, are you ready for the future of the web?
 
 October 22, 2019, 11:20 at [Devfest Nantes](https://devfest2019.gdgnantes.com/sessions/the_web_is_on__f_i_r_e________conference_/){target="\_blank"}.
 
-- [slides](/slides/wof/devfestnantes19/index.html){target="\_blank"}
-- [(fr) video](https://youtu.be/_byWU9V4fXw){target="\_blank"}
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_byWU9V4fXw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> [slides](/slides/wof/devfestnantes19/index.html){target="\_blank"}
 
 ### Other presentations
 

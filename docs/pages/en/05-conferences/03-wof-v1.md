@@ -15,8 +15,9 @@ Join me to explore four cutting-edge technologies (one for each F.I.R.E. concept
 
 March 20, 2019, from 1:30 to 4:30 pm, at [Breizhcamp](https://2019.breizhcamp.org/conference/programme/){target="\_blank"}.
 
-- <a href="/slides/wof1/breizhcamp-2019.html" target="_blank">slides</a>
-- [(fr) video](https://youtu.be/OQ-dr-7pLaA){target="\_blank"}
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/OQ-dr-7pLaA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> <a href="/slides/wof1/breizhcamp-2019.html" target="_blank">slides</a>
 
 ## Sub-topic: PRPL pattern
 

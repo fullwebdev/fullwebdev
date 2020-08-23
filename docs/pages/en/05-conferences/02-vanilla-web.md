@@ -16,8 +16,9 @@ Hear my story, traveler! My old eyes have seen him in these lands! Let me tell y
 
 October 03, 2019 at 3:30 pm.
 
-- [slides](/slides/vanilla1/devfesttlse19/index.html){target="\_blank"}
-- [(fr) video](https://youtu.be/-d_Ka7OE4Xk){target="\_blank"}
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-d_Ka7OE4Xk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> [slides](/slides/vanilla1/devfesttlse19/index.html){target="\_blank"}
 
 ## [Paris Open Source Summit](https://2019.opensourcesummit.paris/){target="\_blank"}
 

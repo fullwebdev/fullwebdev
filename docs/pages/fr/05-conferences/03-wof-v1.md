@@ -1,4 +1,4 @@
-# Web on FIRE - v1
+# Web on FIRE, saison 1
 
 > Toutes les dernières nouveautés de la Web Platform, leurs apports niveau UX, et des cas concret !\
 > En un talk !
@@ -17,8 +17,9 @@ Et bien entendu, nous verrons enfin comment les mettre en place (nottament grâc
 
 Présentée le 20 Mars 2019 de 13:30 à 16:30 au [Breizhcamp](https://2019.breizhcamp.org/conference/programme/){target="\_blank"}.
 
-- <a href="/slides/wof1/breizhcamp-2019.html" target="_blank">slides</a>
-- [vidéo](https://youtu.be/OQ-dr-7pLaA){target="\_blank"}
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/OQ-dr-7pLaA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> <a href="/slides/wof1/breizhcamp-2019.html" target="_blank">slides</a>
 
 ## Sous-thème: PRPL pattern
 

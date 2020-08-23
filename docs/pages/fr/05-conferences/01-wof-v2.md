@@ -1,4 +1,4 @@
-# Web On FIRE - v2
+# Web On FIRE, saison 2
 
 > Toutes les dernières nouveautés de la Web Platform, leurs apports niveau UX, et des cas concret !\
 > En un talk !
@@ -20,8 +20,9 @@ Alors, prêt pour le turfu du web ?!
 
 Présentée le 22 octobre 2019 à 11:20 au [Devfest Nantes](https://devfest2019.gdgnantes.com/sessions/the_web_is_on__f_i_r_e________conference_/){target="\_blank"}
 
-- [slides](/slides/wof/devfestnantes19/index.html){target="\_blank"}
-- [vidéo](https://youtu.be/_byWU9V4fXw){target="\_blank"}
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_byWU9V4fXw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> [slides](/slides/wof/devfestnantes19/index.html){target="\_blank"}
 
 ### Autres présentations
 
