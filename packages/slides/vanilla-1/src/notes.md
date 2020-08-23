@@ -1,5 +1,7 @@
 # Brace yourself, Vanilla is coming ... back!
 
+<!-- markdownlint-disable no-bare-urls -->
+
 ## Welcome to Websteros!
 
 Today, I'll tell you the story of our land. Why
@@ -97,19 +99,19 @@ a quick reminder.
 
 ### ![custom element](./assets/icons/custom-element.svg) Custom Elements
 
-> ***TODO***
+> **_TODO_**
 
 ### ![shadow dom](./assets/icons/shadow-dom.svg) Shadow DOM
 
-> ***TODO***
+> **_TODO_**
 
 ### ![ES Modules](./assets/icons/es-module.svg) ES Modules
 
-> ***TODO***
+> **_TODO_**
 
 ### ![HTML Template](./assets/icons/html-template.svg) HTML Templates
 
-> ***TODO***
+> **_TODO_**
 
 ## Explaining the power of the Kingdoms
 
@@ -183,9 +185,9 @@ be more wrong!
 Because:
 
 1. they require to perfectly know those
-opinions
+   opinions
 2. they do NOT covers
-**all** opinions
+   **all** opinions
 
 This is why, for complex projects, you HAVE to
 only use a framework you perfectly know! You'll
@@ -261,17 +263,18 @@ the Web Platform. _BTW, it's the same with Angular, or even Ionic._
 
 In order to illustrate that, let see what we got if we just create a blank react app using create-react-app...
 
-```
-$ npx create-react-app my-app
+```bash
+npx create-react-app my-app
 ```
 
 ...and generate its dependency graph using dependency-cruiser...
 
+```bash
+cd my-app
+npm i -g dependency-cruiser
+depcruise --exclude "App.test.js" --output-type dot src | dot -T svg > dependencygraph.svg
 ```
-$ cd my-app
-$ npm i -g dependency-cruiser
-$ depcruise --exclude "App.test.js" --output-type dot src | dot -T svg > dependencygraph.svg
-```
+
 ![dependency graph](assets/img/create-react-app-dependencygraph.svg)
 
 So yeah, of course, when using React when
@@ -303,34 +306,35 @@ It just need some tricks.
 
 Here is an example using a Web Component inside a React component:
 
-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/wc-in-react.js
+https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/wc-in-react.js
 
 > Using a complex web component inside a React App still need a bunch of boilerplate code.
 > The community is discussing some solutions of that since 2016:
+>
 > - [Attributes and properties for Custom Components #7249](https://github.com/facebook/react/issues/7249)
 > - [Bypass synthetic event system for Web Component events #7901](https://github.com/facebook/react/issues/7901)
 
 And as React is a rendering library, you can even use it inside your Web Components in order to handle the rendering. Here is an example from the documentation:
 
-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/react-in-wc.js
+https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/react-in-wc.js
 
 Here, we're using the standard HTMLElement...
 
-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/react-in-wc.js#L1
+https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/react-in-wc.js#L1
 
 ...and use customElement.define...
 
-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/react-in-wc.js#L12
+https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/react-in-wc.js#L12
 
 ...like every Custom Element.
 
 And we use the standard in order to attach a shadow root.
 
-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/react-in-wc.js#L4
+https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/react-in-wc.js#L4
 
 Finally, we can use React to render the template.
 
-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/react-in-wc.js#L9
+https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/react-in-wc.js#L9
 
 Does those make React a "Vanilla" library? Let's see...
 
@@ -432,7 +436,7 @@ The same goes with tooling (e.g. stencil, reasonml, typescript, etc...).
 When embracing the "Vanilla Web" approach, there is one principle you have to follow above all: _Y.A.G.N.I._!
 Do you really need to write this abstraction/utility right now? Are you sure you'll use it in the short term? No?
 
-***Then don't to it! Keep It Simple, Stupid!***
+**_Then don't to it! Keep It Simple, Stupid!_**
 
 When you're used to Angular, Vue or React, it's pretty easy to think, for example, that you'll always need a router!
 Guess what? Lots of apps don't! Vanilla approach makes you free!
@@ -449,7 +453,7 @@ You could use for example the minimalist helpers the Polymer project provides: [
 
 It includes the "router.js" utility, which only weights 589 bytes once minified!
 
-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/pwa-helpers-routing.js
+https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/pwa-helpers-routing.js
 
 You can find an example in https://github.com/noelmace/prpl-demo/tree/master/common/app (using Redux, lit-element & pwa-helpers).
 
@@ -480,22 +484,23 @@ It's often a better choice than SSR for performance.
 Remember: Web Components are all about reusability.
 Nobody said that you have too use all the related features/standards for every part of your app!
 
-**Custom Element = reusability through HTML**
+#### Custom Element = reusability through HTML
 
 You only need to use this component once, in your app? Then just write a function for that.
 
-**Shadow DOM = styling isolation (reusability, again)**
+#### Shadow DOM = styling isolation (reusability, again)
 
 If your components is used only in a context where you have full control of styling,
 there is other ways to guaranty a good maintainability and readability.
 
-**ES Modules = lazy loading and independence (reusability, again)**
+#### ES Modules = lazy loading and independence (reusability, again)
 
 If your component is always related to another one, write it in the same es module (ie file).
 
 In all cases, there are good practices you should follow when writing your own Web Components!
 
 Here are those related to interactions:
+
 - [Always accept primitive data (strings, numbers, booleans) as either attributes or properties.](https://developers.google.com/web/fundamentals/web-components/best-practices#always-accept-primitive-data-strings,-numbers,-booleans-as-either-attributes-or-properties.)
 - [Aim to keep primitive data attributes and properties in sync, reflecting from property to attribute, and vice versa](https://developers.google.com/web/fundamentals/web-components/best-practices#aim-to-keep-primitive-data-attributes-and-properties-in-sync,-reflecting-from-property-to-attribute,-and-vice-versa.)
 - [Aim to only accept rich data (objects, arrays) as properties.](https://developers.google.com/web/fundamentals/web-components/best-practices#aim-to-only-accept-rich-data-objects,-arrays-as-properties.)
@@ -505,6 +510,7 @@ Here are those related to interactions:
 - [Do not dispatch events in response to the host setting a property (downward data flow).](https://developers.google.com/web/fundamentals/web-components/best-practices#do-not-dispatch-events-in-response-to-the-host-setting-a-property-downward-data-flow.)
 
 And the related spec you should absolutely read:
+
 - [WHATWG - 2.7.1 Reflecting content attributes in IDL attributes](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#reflecting-content-attributes-in-idl-attributes)
 
 ### State Management: Big BLoC vs Reusability
@@ -520,7 +526,7 @@ Basically, you could think "reactive MVVM" :wink: It's kind of similar to most S
 
 You could write a BLoC like a ViewModel with VanillaJS.
 
-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/bloc/bloc-class.js
+https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/bloc/bloc-class.js
 
 Yet, we would miss the point doing so. Using Dart, implementing the BLoC pattern relies on Dart streams most of the time.
 
@@ -528,12 +534,12 @@ Yet, we would miss the point doing so. Using Dart, implementing the BLoC pattern
 
 Some are also using RxDart in order to make it simpler. Let's use RxJS instead.
 
-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/bloc/bloc-rx.js
+https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/bloc/bloc-rx.js
 
 > These examples where taken from [BLoC design pattern with Angular](https://medium.com/lacolaco-blog/bloc-design-pattern-with-angular-1c2f0339f6a3),
 > by Suguru Inatomi. I just transpiled them.
 
-> ***TODO:*** BLoC/MVVM vs independant WCs
+_**TODO:** BLoC/MVVM vs independant WCs_
 
 #### Streams/Observables
 
@@ -558,11 +564,11 @@ Use it very carefully! But if you need to, IMO, you should choose RxJS for now.
 
 ### Typings
 
-> ***:construction: WIP*** - See https://github.com/noelmace/devcards/blob/master/dev-doc/type-js.md
+> See https://github.com/noelmace/devcards/blob/master/dev-doc/type-js.md
 
 ### Unit Tests & Tooling
 
-> ***:construction: WIP*** - See https://github.com/noelmace/devcards/blob/master/dev-doc/testing.md & https://open-wc.org/guide/
+> See https://github.com/noelmace/devcards/blob/master/dev-doc/testing.md & https://open-wc.org/guide/
 
 ## PWA - The Web is on F.I.R.E.
 
@@ -571,4 +577,4 @@ And rendez-vous at the next Devfest Nantes & Devoxx Belgium.
 
 ## Conclusion
 
-> ***TODO***
+> **_TODO_**

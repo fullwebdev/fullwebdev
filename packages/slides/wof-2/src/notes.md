@@ -1,19 +1,8 @@
 # The Web is on :fire: FIRE :fire: <!-- omit in toc -->
 
-> **:construction: WIP :construction:**
->
-> Since I rarely have the time to proofread these notes, their quality isn't as high as I would like, especially with regards to phrasing and syntax.
->
-> Yet, I intend to use them as a foundation for some better content (blog posts especially) I'll write in the near future.
->
-> :wave:**You can easily help me** work faster, if you're are impatient to read them.
-> [**Open an issue**](https://github.com/noelmace/slides-wof-conf/issues/new)
-> telling me what you think is missing in this document.
-> Or, even better, [**send me a PR**](https://github.com/noelmace/slides-wof-conf/edit/master/src/notes.md), even if it only fixes a typo :wink:
-
 ## Table des matières
 
-- [Table des matières](#table-des-mati%c3%a8res)
+- [Table des matières](#table-des-matières)
 - [Introduction: PWA vs FIRE](#introduction-pwa-vs-fire)
   - [resources](#resources)
 - [FIRE basis](#fire-basis)
@@ -90,6 +79,9 @@
     - [misc](#misc)
 - [A more efficient Web](#a-more-efficient-web)
 - [Misc](#misc-1)
+
+<!-- markdownlint-disable no-bare-urls-->
+
 ## Introduction: PWA vs FIRE
 
 Since the first list of what Progressive Web Apps (aka PWA) are [Alex Russel](https://infrequently.org/about-me/)
@@ -109,7 +101,7 @@ was to complicated to remember (see below), those where quickly reduced to just 
 > - Safe - Served via HTTPS to prevent snooping and ensure content hasn’t been tampered with.
 > - Discoverable - Are identifiable as “applications” thanks to W3C manifests and service worker registration scope allowing search engines to find them.
 > - Re-engageable - Make re-engagement easy through features like push notifications.
-Installable - Allow users to “keep” apps they find most useful on their home screen without the hassle of an app store.
+>   Installable - Allow users to “keep” apps they find most useful on their home screen without the hassle of an app store.
 > - Linkable - Easily share via URL and not require complex installation.
 
 These 4 topics were (and still are):
@@ -140,7 +132,7 @@ Now, there is two ways to look at PWAs:
 
 1. from a "Business" perspective, they are a good alternative to native apps
 2. from a developer perspective, making a Web App "Progressive" means raising the quality level for users,
-using the latests innovations of the Web Platform
+   using the latests innovations of the Web Platform
 
 For all these reasons, I now prefer to make a clear distinction between those two perspectives,
 using respectively "PWA" and "FIRE app" to talk about them.
@@ -346,7 +338,14 @@ Youtube & Netflix quickly adopted EME, while moving away from, respectively, Fla
 Regarding Youtube, we can simply notice that the "Embed a playlist" documentation still gives today the following example:
 
 ```html
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/videoseries?list=PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG"
+  frameborder="0"
+  allow="autoplay; encrypted-media"
+  allowfullscreen
+></iframe>
 ```
 
 Where [encrypted-media](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy/encrypted-media)
@@ -423,12 +422,11 @@ Chrome: [Unlocking new capabilities for the web](https://developers.google.com/w
 #### Web Share Target API
 
 > :rocket: _Launched Capability_
-
 > :warning: Should not be confused with the [Web Share API](https://caniuse.com/#feat=web-share),
 > which permits to share data **from** a web page, as follow:
 >
 > ```js
-> navigator.share({title: 'Example Page', url: 'https://example.com'});
+> navigator.share({ title: "Example Page", url: "https://example.com" });
 > ```
 
 ##### Manifest
@@ -456,12 +454,12 @@ Data is passed using get param.
 `?title=hello&text=world`
 
 ```js
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("DOMContentLoaded", () => {
   const parsedUrl = new URL(window.location);
   // searchParams.get() will properly handle decoding the values.
-  console.log('Title shared: ' + parsedUrl.searchParams.get('title'));
-  console.log('Text shared: ' + parsedUrl.searchParams.get('text'));
-  console.log('URL shared: ' + parsedUrl.searchParams.get('url'));
+  console.log("Title shared: " + parsedUrl.searchParams.get("title"));
+  console.log("Text shared: " + parsedUrl.searchParams.get("text"));
+  console.log("URL shared: " + parsedUrl.searchParams.get("url"));
 });
 ```
 
@@ -502,12 +500,12 @@ Level 2 is supported by Chrome for Android 76 (see [status](https://www.chromest
 ```js
 /** Write contents of the textarea to the clipboard when clicking "Copy" */
 copy.onclick = async () => {
-  await navigator.clipboard.writeText(out.value)
+  await navigator.clipboard.writeText(out.value);
 };
 
 /** Read from clipboard when clicking the Paste button */
 paste.onclick = async () => {
-  const text = await navigator.clipboard.readText()
+  const text = await navigator.clipboard.readText();
   return text;
 };
 ```
@@ -567,7 +565,7 @@ However:
 ##### resources
 
 - [Image support for the async clipboard API](https://web.dev/image-support-for-async-clipboard/)
-- [MDN - Clipboard API]()
+- [MDN - Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API)
 - [codelab](https://codelabs.developers.google.com/codelabs/web-capabilities/#6)
 - [Demo](https://fiddle.jshell.net/0794oysr/2/show/light/)
 - [Related chapter in the Cliboard API Draft](https://www.w3.org/TR/clipboard-apis/#async-clipboard-api)
@@ -615,13 +613,13 @@ const faceDetector = new FaceDetector({
   maxDetectedFaces: 5,
   // (Optional) Hint to try and prioritize speed over accuracy
   // by, e.g., operating on a reduced scale or looking for large features.
-  fastMode: false
+  fastMode: false,
 });
 try {
   const faces = await faceDetector.detect(image);
-  faces.forEach(face => drawMustache(face));
+  faces.forEach((face) => drawMustache(face));
 } catch (e) {
-  console.error('Face detection failed:', e);
+  console.error("Face detection failed:", e);
 }
 ```
 
@@ -632,26 +630,26 @@ const barcodeDetector = new BarcodeDetector({
   // (Optional) A series of barcode formats to search for.
   // Not all formats may be supported on all platforms
   formats: [
-    'aztec',
-    'code_128',
-    'code_39',
-    'code_93',
-    'codabar',
-    'data_matrix',
-    'ean_13',
-    'ean_8',
-    'itf',
-    'pdf417',
-    'qr_code',
-    'upc_a',
-    'upc_e'
-  ]
+    "aztec",
+    "code_128",
+    "code_39",
+    "code_93",
+    "codabar",
+    "data_matrix",
+    "ean_13",
+    "ean_8",
+    "itf",
+    "pdf417",
+    "qr_code",
+    "upc_a",
+    "upc_e",
+  ],
 });
 try {
   const barcodes = await barcodeDetector.detect(image);
-  barcodes.forEach(barcode => searchProductDatabase(barcode));
+  barcodes.forEach((barcode) => searchProductDatabase(barcode));
 } catch (e) {
-  console.error('Barcode detection failed:', e);
+  console.error("Barcode detection failed:", e);
 }
 ```
 
@@ -661,20 +659,21 @@ try {
 const textDetector = new TextDetector();
 try {
   const texts = await textDetector.detect(image);
-  texts.forEach(text => textToSpeech(text));
+  texts.forEach((text) => textToSpeech(text));
 } catch (e) {
-  console.error('Text detection failed:', e);
+  console.error("Text detection failed:", e);
 }
 ```
 
 ##### support
 
-This API ***highly*** depends on hardware acceleration, and most devices doesn't support it for now.
+This API **_highly_** depends on hardware acceleration, and most devices doesn't support it for now.
 Using it on some devices could give you some better performances. Yet, you should absolutely add a fallback (see "Best Practices" below).
 Due to a combination of hardware (old computers, notebooks & Samsung Galaxy S8)
 and software (ArchLinux being the only host OS I have on my Dell XPS) limitations, I myself wasn't able to use this API yet.
 
 [Chrome Status](https://www.chromestatus.com/feature/4757990523535360)
+
 > Support for this API is dependant on hardware acceleration features that vary by operating system.
 >
 > - BarcodeDetector: Android\*, macOS (improved accuracy in 10.13+)
@@ -684,6 +683,7 @@ and software (ArchLinux being the only host OS I have on my Dell XPS) limitation
 > \* Requires a device with the Play support libraries installed.
 
 [Best Practices](https://web.dev/shape-detection/#bestpractices)
+
 > **Caution**: This API is an optimization and not something guaranteed to be available from the platform for every user.
 > Developers are expected to combine this with their own [image recognition code](https://github.com/mjyc/opencv) and
 > take advantage of the native optimization when it is available.
@@ -704,10 +704,10 @@ _Here, the given example is [opencv.js](https://www.npmjs.com/package/opencv.js)
 > :warning: Unofficial Proposal Draft
 
 ```js
-getContactsButton.addEventListener('click', async () => {
-  const contacts = await navigator.contacts.select(
-      ['name', 'email'],
-      {multiple: true});
+getContactsButton.addEventListener("click", async () => {
+  const contacts = await navigator.contacts.select(["name", "email"], {
+    multiple: true,
+  });
   if (!contacts.length) {
     // No contacts were selected, or picker couldn't be opened.
     return;
@@ -794,6 +794,7 @@ Read [_Hello darkness my old friend_](https://web.dev/prefers-color-scheme) by T
 ##### Emulation / DevTools
 
 ###### Chrome
+
 [Issue 977243: DevTool helper for prefers-color-scheme: dark](https://bugs.chromium.org/p/chromium/issues/detail?id=977243)
 
 ###### Puppeeteer
@@ -803,6 +804,7 @@ Read [_Hello darkness my old friend_](https://web.dev/prefers-color-scheme) by T
 ###### Firefox
 
 _from [stackoverflow](https://stackoverflow.com/questions/56401662/firefox-how-to-test-prefers-color-scheme):_
+
 1. open about:config
 2. add a ui.systemUsesDarkTheme integer entry set to 1
 3. restart firefox
