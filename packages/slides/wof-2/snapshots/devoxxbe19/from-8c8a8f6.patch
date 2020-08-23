@@ -1,5 +1,5 @@
 diff --git a/src/assets/code-samples/copy-share-twitter.js b/src/assets/code-samples/copy-share-twitter.js
-index a89827b..fa4c8b3 100644
+index a89827b..008acc3 100644
 --- a/src/assets/code-samples/copy-share-twitter.js
 +++ b/src/assets/code-samples/copy-share-twitter.js
 @@ -1,8 +1,8 @@
@@ -24,10 +24,169 @@ index a89827b..fa4c8b3 100644
      })
  );
  
+@@ -49,7 +49,7 @@ document
+     .addEventListener('click', () => copy(tweets.camera));
+ 
+ (async () => {
+-    const imgFile = await getImgFile('/assets/img/usetheplatform.png');
++    const imgFile = await getImgFile('assets/img/usetheplatform.png');
+     const shareData = {
+         text: tweets.picture,
+         files: [imgFile]
+@@ -65,7 +65,7 @@ document
+ 
+ document.querySelector('.copy-btn-img').addEventListener('click', async () => {
+     try {
+-        const imgURL = '/assets/img/elmo.png';
++        const imgURL = 'assets/img/elmo.png';
+         const data = await fetch(imgURL);
+         const blob = await data.blob();
+         const item = new ClipboardItem(
+diff --git a/src/css/global.css b/src/css/global.css
+index e854bd3..16d407b 100644
+--- a/src/css/global.css
++++ b/src/css/global.css
+@@ -168,11 +168,6 @@ figure[slot='content'] img {
+ 
+ /* #endregion img-org */
+ 
+-.frame {
+-  background: center no-repeat url('/assets/img/frame-h.png');
+-  background-size: contain;
+-}
+-
+ h1 {
+   text-align: center;
+ }
+@@ -247,11 +242,6 @@ deckgo-social .link {
+   color: #4c8dff;
+ }
+ 
+-.fire-bg {
+-  background: center no-repeat url('/assets/img/flames.jpg');
+-  background-size: cover;
+-}
+-
+ .fire-icons figure {
+   margin: 1em;
+ }
+@@ -383,4 +373,4 @@ deckgo-slide-split.split-text > *:not([slot="title"]) > * {
+   0px -2px 0 #000,
+   -2px 0px 0 #000,
+   2px 2px 5px #000;
+-}
+\ No newline at end of file
++}
+diff --git a/src/css/google-fonts.css b/src/css/google-fonts.css
+index 27bcba7..d745721 100644
+--- a/src/css/google-fonts.css
++++ b/src/css/google-fonts.css
+@@ -2,14 +2,14 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: url(/assets/fonts/KFOmCnqEu92Fr1Mu4mxO.eot);
++  src: url(/slides/wof/devoxxbe19/assets/fonts/KFOmCnqEu92Fr1Mu4mxO.eot);
+ }
+ /* cyrillic-ext */
+ @font-face {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/devoxxbe19/assets/fonts/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
+   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+ }
+ /* cyrillic */
+@@ -17,7 +17,7 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/devoxxbe19/assets/fonts/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');
+   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+ }
+ /* greek-ext */
+@@ -25,7 +25,7 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/devoxxbe19/assets/fonts/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');
+   unicode-range: U+1F00-1FFF;
+ }
+ /* greek */
+@@ -33,7 +33,7 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/devoxxbe19/assets/fonts/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
+   unicode-range: U+0370-03FF;
+ }
+ /* vietnamese */
+@@ -41,7 +41,7 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/devoxxbe19/assets/fonts/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
+   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+ }
+ /* latin-ext */
+@@ -49,7 +49,7 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/devoxxbe19/assets/fonts/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
+   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+ }
+ /* latin */
+@@ -57,26 +57,26 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/devoxxbe19/assets/fonts/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+ }
+ @font-face {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu4mxM.woff) format('woff');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/devoxxbe19/assets/fonts/KFOmCnqEu92Fr1Mu4mxM.woff) format('woff');
+ }
+ @font-face {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu4mxPKTU1Kg.ttf) format('truetype');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/devoxxbe19/assets/fonts/KFOmCnqEu92Fr1Mu4mxPKTU1Kg.ttf) format('truetype');
+ }
+ @font-face {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu4mxN) format('svg');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/devoxxbe19/assets/fonts/KFOmCnqEu92Fr1Mu4mxN) format('svg');
+ }
+ 
+ :root {
 diff --git a/src/index.html b/src/index.html
-index e7ede3c..2e98791 100644
+index e7ede3c..34a25c8 100644
 --- a/src/index.html
 +++ b/src/index.html
+@@ -7,7 +7,7 @@
+             content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+         />
+ 
+-        <base href="/" />
++        <base href="" />
+ 
+         <title>The Web is on F.I.R.E.</title>
+ 
 @@ -27,10 +27,10 @@
          />
          <meta property="og:site_name" content="The Web is on F.I.R.E." />
@@ -50,7 +209,46 @@ index e7ede3c..2e98791 100644
          />
          <meta name="twitter:card" content="summary" />
  
-@@ -481,18 +481,17 @@
+@@ -125,20 +125,6 @@
+         />
+         <meta name="theme-color" content="#ed6c30" />
+ 
+-        <script>
+-            if ('serviceWorker' in navigator) {
+-                window.addEventListener('load', async () => {
+-                    try {
+-                        await navigator.serviceWorker.register(
+-                            'service-worker.js'
+-                        );
+-                    } catch (e) {
+-                        console.warn('No service worker registered');
+-                    }
+-                });
+-            }
+-        </script>
+-
+         <link rel="manifest" href="manifest.json" />
+ 
+         <meta name="apple-mobile-web-app-capable" content="yes" />
+@@ -179,7 +165,7 @@
+                             </h3>
+ 
+                             <deckgo-social
+-                                github="noelmace/slides-wof-conf"
++                                github="fullwebdev/fullwebdev"
+                                 class="hydrated"
+                                 style="margin-left: 32px"
+                                 ><ion-icon
+@@ -196,7 +182,7 @@
+                                 this slides (and more)</deckgo-social
+                             >
+                             <deckgo-social
+-                                github="noelmace/slides-wof-conf/blob/master/src/notes.md"
++                                github="fullwebdev/fullwebdev/blob/master/packages/slides/wof-2//src/notes.md"
+                                 class="hydrated"
+                                 style="margin-left: 32px"
+                                 ><ion-icon
+@@ -481,18 +467,17 @@
                      </deckgo-slide-author>
  
                      <deckgo-slide-qrcode
@@ -72,7 +270,93 @@ index e7ede3c..2e98791 100644
                              >
                          </div>
                      </deckgo-slide-qrcode>
-@@ -2510,33 +2509,6 @@ new range of rendered children.
+@@ -1552,7 +1537,7 @@
+                         <h1 slot="title" hidden>Prevent mini-infobar</h1>
+                         <div slot="content" class="flex flex-center">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/prevent-infobar.js"
++                                src="assets/code-samples/prevent-infobar.js"
+                                 highlight-lines="2,3"
+                             >
+                             </deckgo-highlight-code>
+@@ -1899,7 +1884,7 @@
+                         </h1>
+                         <div slot="content" class="flex flex-center">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/mq5/dark/load-css.html"
++                                src="assets/code-samples/mq5/dark/load-css.html"
+                             >
+                             </deckgo-highlight-code>
+                         </div>
+@@ -1936,7 +1921,7 @@ above I already force `highest` priority for my default light experience).
+                         </h1>
+                         <div slot="content" class="flex flex-center">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/mq5/dark/demos.css"
++                                src="assets/code-samples/mq5/dark/demos.css"
+                             >
+                             </deckgo-highlight-code>
+                         </div>
+@@ -1950,7 +1935,7 @@ above I already force `highest` priority for my default light experience).
+                         </h1>
+                         <div slot="content" class="flex flex-center">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/mq5/dark/variables.css"
++                                src="assets/code-samples/mq5/dark/variables.css"
+                             >
+                             </deckgo-highlight-code>
+                         </div>
+@@ -1986,7 +1971,7 @@ above I already force `highest` priority for my default light experience).
+                         </h1>
+                         <div slot="content" class="flex flex-center">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/mq5/dark/fallback.html"
++                                src="assets/code-samples/mq5/dark/fallback.html"
+                             >
+                             </deckgo-highlight-code>
+                         </div>
+@@ -2035,7 +2020,7 @@ Right: the easier-on-the-eyes UA default
+                         </h1>
+                         <div slot="content" class="flex flex-center">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/mq5/motion/reduced-motion.css"
++                                src="assets/code-samples/mq5/motion/reduced-motion.css"
+                             >
+                             </deckgo-highlight-code>
+                         </div>
+@@ -2049,7 +2034,7 @@ Right: the easier-on-the-eyes UA default
+                         </h1>
+                         <div slot="content" class="flex flex-center">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/mq5/motion/reduced-motion.js"
++                                src="assets/code-samples/mq5/motion/reduced-motion.js"
+                             >
+                             </deckgo-highlight-code>
+                         </div>
+@@ -2132,7 +2117,7 @@ Right: the easier-on-the-eyes UA default
+                         <h1 slot="title">Bare specifiers</h1>
+                         <div slot="content">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/import-maps/bare.js"
++                                src="assets/code-samples/import-maps/bare.js"
+                             >
+                             </deckgo-highlight-code>
+                             <deckgo-reveal>
+@@ -2155,11 +2140,11 @@ Right: the easier-on-the-eyes UA default
+                         <h1 slot="title">Import Maps</h1>
+                         <div slot="content">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/import-maps/map.html"
++                                src="assets/code-samples/import-maps/map.html"
+                             >
+                             </deckgo-highlight-code>
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/import-maps/bare-equivalent.js"
++                                src="assets/code-samples/import-maps/bare-equivalent.js"
+                             >
+                             </deckgo-highlight-code>
+                         </div>
+@@ -2510,33 +2495,6 @@ new range of rendered children.
                          <div slot="notes" show></div>
                      </deckgo-slide-content>
  
@@ -106,7 +390,7 @@ index e7ede3c..2e98791 100644
                      <!-- #endregion Resources -->
  
                      <!-- #region end -->
-@@ -2548,18 +2520,17 @@ new range of rendered children.
+@@ -2548,18 +2506,17 @@ new range of rendered children.
                      </deckgo-slide-content>
  
                      <deckgo-slide-qrcode
@@ -128,3 +412,167 @@ index e7ede3c..2e98791 100644
                              >
                          </div>
                      </deckgo-slide-qrcode>
+@@ -2890,7 +2847,7 @@ new range of rendered children.
+                     <div class="row style-scope browser-table">
+                         <div class="style-scope browser-table">
+                             <img
+-                                src="/assets/logos/chrome.svg"
++                                src="assets/logos/chrome.svg"
+                                 class="style-scope browser-table"
+                             />
+                             <span class="style-scope browser-table"
+@@ -2899,14 +2856,14 @@ new range of rendered children.
+                         </div>
+                         <div class="style-scope browser-table">
+                             <img
+-                                src="/assets/logos/opera-icon.svg"
++                                src="assets/logos/opera-icon.svg"
+                                 class="style-scope browser-table"
+                             />
+                             <span class="style-scope browser-table">Opera</span>
+                         </div>
+                         <div class="style-scope browser-table">
+                             <img
+-                                src="/assets/logos/safari.svg"
++                                src="assets/logos/safari.svg"
+                                 class="style-scope browser-table"
+                             />
+                             <span class="style-scope browser-table"
+@@ -2915,7 +2872,7 @@ new range of rendered children.
+                         </div>
+                         <div class="style-scope browser-table">
+                             <img
+-                                src="/assets/logos/firefox.svg"
++                                src="assets/logos/firefox.svg"
+                                 class="style-scope browser-table"
+                             />
+                             <span class="style-scope browser-table"
+@@ -2924,7 +2881,7 @@ new range of rendered children.
+                         </div>
+                         <div class="style-scope browser-table">
+                             <img
+-                                src="/assets/logos/edge.svg"
++                                src="assets/logos/edge.svg"
+                                 class="style-scope browser-table"
+                             />
+                             <span class="style-scope browser-table">Edge</span>
+@@ -2948,7 +2905,7 @@ new range of rendered children.
+                                 class="style-scope browser-table"
+                             >
+                                 <use
+-                                    xlink:href="/sprite.octicons.svg#template"
++                                    xlink:href="sprite.octicons.svg#template"
+                                     class="style-scope browser-table"
+                                 ></use>
+                             </svg>
+@@ -2997,7 +2954,7 @@ new range of rendered children.
+                                 class="style-scope browser-table"
+                             >
+                                 <use
+-                                    xlink:href="/sprite.octicons.svg#element"
++                                    xlink:href="sprite.octicons.svg#element"
+                                     class="style-scope browser-table"
+                                 ></use>
+                             </svg>
+@@ -3054,7 +3011,7 @@ new range of rendered children.
+                                 class="style-scope browser-table"
+                             >
+                                 <use
+-                                    xlink:href="/sprite.octicons.svg#shadow"
++                                    xlink:href="sprite.octicons.svg#shadow"
+                                     class="style-scope browser-table"
+                                 ></use>
+                             </svg>
+@@ -3111,7 +3068,7 @@ new range of rendered children.
+                                 class="style-scope browser-table"
+                             >
+                                 <use
+-                                    xlink:href="/sprite.octicons.svg#import"
++                                    xlink:href="sprite.octicons.svg#import"
+                                     class="style-scope browser-table"
+                                 ></use>
+                             </svg>
+diff --git a/src/scripts/menu.js b/src/scripts/menu.js
+index f954a3d..94b4a13 100644
+--- a/src/scripts/menu.js
++++ b/src/scripts/menu.js
+@@ -18,7 +18,7 @@ buildMenuListActions = () => {
+         result += '<ion-item ion-item button detail="false" onclick="displaySlideNotes()" color="primary" style="--border-style: none;"><ion-icon name="clipboard" aria-label="Display slide notes" slot="end"></ion-icon><ion-label>Display slide notes</ion-label></ion-item>';
+         result += '<ion-item ion-item button detail="false" onclick="displayRemoteControl()" color="primary" style="--border-style: none;"><ion-icon name="phone-portrait" aria-label="Remote control" slot="end"></ion-icon><ion-label>Remote control</ion-label></ion-item>';
+         result += '<ion-item ion-item button detail="false" onclick="openShare()" color="primary" style="--border-style: none;"><ion-icon name="share" aria-label="Share this presentation" slot="end"></ion-icon><ion-label>Share</ion-label></ion-item>';
+-        result += '<ion-item ion-item button detail="false" onclick="openLink(\'https://deckdeckgo.com\')" style="--border-style: none; --ion-item-background: white;"><ion-icon src="/assets/icons/deckdeckgo.svg" aria-label="DeckDeckGo" slot="end"></ion-icon><ion-label>Created with DeckDeckGo</ion-label></ion-item>';
++        result += '<ion-item ion-item button detail="false" onclick="openLink(\'https://deckdeckgo.com\')" style="--border-style: none; --ion-item-background: white;"><ion-icon src="assets/icons/deckdeckgo.svg" aria-label="DeckDeckGo" slot="end"></ion-icon><ion-label>Created with DeckDeckGo</ion-label></ion-item>';
+ 
+         resolve(result);
+     });
+diff --git a/src/scripts/modalRemoteControl.js b/src/scripts/modalRemoteControl.js
+index 10a8b46..10b4633 100644
+--- a/src/scripts/modalRemoteControl.js
++++ b/src/scripts/modalRemoteControl.js
+@@ -17,9 +17,9 @@ displayRemoteControl = async () => {
+     </ion-toolbar>
+   </ion-header>
+   <ion-content padding color="primary">
+-  
++
+   ${getRemoteControlModalContent()}
+-    
++
+   </ion-content>
+   `;
+ 
+@@ -72,18 +72,18 @@ function getRemoteControlModalContent() {
+ 
+         return `<ion-list style="ion-no-margin">
+         <ion-item style="--border-color: transparent; color: black;">
+-            <ion-label class="ion-text-wrap">Toggle to disable or enable the remote control</ion-label> 
++            <ion-label class="ion-text-wrap">Toggle to disable or enable the remote control</ion-label>
+             <ion-toggle slot="end" checked="true" color="tertiary" style="--background: var(--ion-color-light); --handle-background: white; --handle-background-checked: white;"></ion-toggle>
+         </ion-item>
+     </ion-list>
+-  
++
+     <p class="ion-padding-start ion-padding-end" style="margin: 0; font-size: 16px;">Remote control this presentation with your phone or any devices. Scan the following QR Code to open it directly or get the Progressive Web Apps at <a href="https://deckdeckgo.app" target="_blank" style="color: var(--ion-color-tertiary);">https://deckdeckgo.app <ion-icon name="open" style="color: var(--ion-color-tertiary); vertical-align: bottom;"></ion-icon></a> and find <mark style="background: transparent; color: var(--ion-color-tertiary); font-weight: 500;">${remoteRoom}</mark>.</p>
+ 
+     <p class="ion-padding-start ion-padding-end" style="margin-bottom: 0; font-size: 16px;">If you can't connect or if you lost the connection, toggle off and on the connection to refresh it.</p>
+ 
+     <div class="qrcode-container" style="display: flex; justify-content: center;  --deckgo-qrcode-size: 300px; --deckgo-qrcode-color-fill: var(--ion-color-tertiary);">
+         <deckgo-qrcode content="${qrCodeLink}">
+-            <ion-icon slot="logo" src="/assets/icons/deckdeckgo.svg"></ion-icon>
++            <ion-icon slot="logo" src="assets/icons/deckdeckgo.svg"></ion-icon>
+         </deckgo-qrcode>
+     </div>`;
+     }
+diff --git a/webpack.config.js b/webpack.config.js
+index c48949f..ca57b2e 100644
+--- a/webpack.config.js
++++ b/webpack.config.js
+@@ -5,8 +5,6 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+ 
+ const {DeckDeckGoInfoPlugin, DeckDeckGoRemoveNotesPlugin} = require('deckdeckgo-webpack-plugins');
+ 
+-const {GenerateSW} = require('workbox-webpack-plugin');
+-
+ const webpack = require('webpack');
+ 
+ const path = require('path');
+@@ -31,6 +29,9 @@ const config = {
+ };
+ 
+ const plugins = [
++    new webpack.DefinePlugin({
++        'process.env.ASSET_PATH': '/slides/wof/latest/',
++    }),
+     new CleanWebpackPlugin({
+         cleanStaleWebpackAssets: false
+     }),
+@@ -57,9 +58,6 @@ module.exports = (env, argv) => {
+     }
+ 
+     if (argv.mode === 'production') {
+-        plugins.push(new GenerateSW({
+-            ignoreURLParametersMatching: [/./]
+-        }));
+         plugins.push(new DeckDeckGoInfoPlugin());
+ 
+         if (!argv.notes) {
