@@ -1,87 +1,39 @@
 # Brace youself, :icecream: Vanilla is coming ... back :dark_sunglasses:!
 
-<p align="center">A <a href="https://wof.show" rel="nofollow"><strong>WoF</strong> Show</a> by <a href="https://twitter.com/noel_mace" rel="nofollow">Noël Macé</a>.</p>
-<p align="center">
+<p>Slides by <a href="https://twitter.com/noel_mace" rel="nofollow">Noël Macé</a>, using <a href="https://github.com/deckgo/deckdeckgo-starter">DeckDeckGo-starter</a> .</p>
+<p>
 <a href="https://twitter.com/intent/follow?screen_name=noel_mace">
     <img src="https://img.shields.io/twitter/follow/noel_mace?style=social" alt="follow on Twitter">
   </a>
 </p>
 
-Embrace the power of the Web Platform! A real-life practical guide.
+- [Slides](https://fullweb.dev/slides/vanilla1/latest/)
+- [Notes, Resources & Comments](./src/notes.md)
 
-- **:man_teacher: Slides: [fullweb.dev/slides/vanilla1/latest/](https://fullweb.dev/slides/vanilla1/latest/)**
-- **:book: Full doc: [notes.md](./src/notes.md)**
-##
+More information on [fullweb.dev](https://fullweb.dev/en/05-conferences/02-vanilla-web).
 
-<p>
-  <a href="https://github.com/fullwebdev/fullwebdev/releases/latest">
-    <img src="https://img.shields.io/github/v/release/noelmace/slides-modern-vanilla?sort=semver" alt="release">
-  </a>
-  <a href="https://github.com/fullwebdev/fullwebdev/releases/latest">
-    <img src="https://img.shields.io/github/release-date/noelmace/slides-modern-vanilla?sort=semver" alt="stable release date">
-  </a>
-  <a href="https://github.com/fullwebdev/fullwebdev/actions?workflow=Deploy+Master">
-    <img src="https://github.com/fullwebdev/fullwebdev/workflows/Deploy%20Master/badge.svg" alt="deploy master">
-  </a>
-</p>
-<p>
-  <a href="https://github.com/fullwebdev/fullwebdev/releases">
-    <img src="https://img.shields.io/github/v/release/noelmace/slides-modern-vanilla?sort=semver&include_prereleases&label=pre-release" alt="pre-release">
-  </a>
-  <a href="https://github.com/fullwebdev/fullwebdev/releases">
-    <img src="https://img.shields.io/github/release-date-pre/noelmace/slides-modern-vanilla?label=pre-release%20date" alt="pre-release date">
-  </a>
-  <a href="https://github.com/fullwebdev/fullwebdev/actions?workflow=Deploy+branches">
-    <img src="https://github.com/fullwebdev/fullwebdev/workflows/Deploy%20branches/badge.svg" alt="deploy branches">
-  </a>
-</p>
-<p>
-  <a href="https://github.com/fullwebdev/fullwebdev/actions?workflow=GH+Release">
-    <img src="https://github.com/fullwebdev/fullwebdev/workflows/GH%20Release/badge.svg" alt="Github release">
-  </a>
-  <a href="https://docs.deckdeckgo.com/">
-    <img src="https://img.shields.io/github/package-json/dependency-version/fullwebdev/fullwebdev/@deckdeckgo/core" alt="deckdeckgo">
-  </a>
-  <a href="https://conventionalcommits.org">
-    <img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg" alt="Conventional Commits">
-  </a>
-</p>
+<!-- markdownlint-disable no-emphasis-as-header -->
 
-## Versions
+**:warning: old content warning**
 
-> Go check the [changelog](/CHANGELOG.md) or [releases](https://github.com/fullwebdev/fullwebdev/releases) for more details.
+I stopped updating the content of these slides the 8th of December 2019.
 
-- v1.1: conference (40min) @ [POSS 2019](https://fullweb.dev/slides/vanilla1/poss19/)
-- v1.0: conference (40min) @ [DevFest Toulouse 2019](https://fullweb.dev/slides/vanilla1/devfesttlse19/)
+This project has been moved from wof.show (:octocat: [noelmace/slides-modern-vanilla](https://github.com/noelmace/slides-modern-vanilla/)) to [fullweb.dev](https://fullweb.dev) (:octocat: [fullwebdev/fullwebdev](https://github.com/fullwebdev/fullwebdev)) after that, as there is a good chance I recycle this project into something else here.
 
-> Versions are incremented as follow (not exactly semver :man_shrugging:):
->
-> - Major: redesign (new approach / plan / presentation framework...)
-> - Minor: new talk/event following the same plan & ideas as the previous one
-> - Patch: modifications to a talk that has already been presented
->
-> Each minor version has its own [branch](https://github.com/fullwebdev/fullwebdev/branches). For example, [poss19](https://github.com/fullwebdev/fullwebdev/tree/poss19)
+## License
 
-## Abstract
+### Content
 
-_In a world of complex and sophisticated flavors, the battle for toppings among the ice cream families is raging in Web-steros! Who knows who will win between the crunchies of the Angular castle, the hot fudge of the React lands, or the sprinkles of the Vue islands?!_
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
-_During this time, in another place, the independent Vanilla walks towards his destiny. Could he be the hero from the legend, whom could turn things around?_
+© [Noël Macé](mailto:contact@noelmace.com)
 
-_Hear my story, traveler! My old eyes have seen him in these lands! Let me tell you how he helped us taking down our old king, and you shall learn how he could help you too..._
+### [Code Samples](./src/assets/code-samples)
 
-## Develop
+MIT © [Noël Macé](mailto:contact@noelmace.com)
 
-Created with [DeckDeckGo].
+### [Code](./src) (derivative of [DeckDeckGo](https://github.com/deckgo/deckdeckgo-starter))
 
-To develop and run locally, proceed as following:
+MIT © [Noël Macé](mailto:contact@noelmace.com), [David Dal Busco](mailto:david.dalbusco@outlook.com) and [Nicolas Mattia](nicolas@nmattia.com)
 
-```
-git clone https://github.com/noelmace/slides-modern-vanilla
-cd slides-modern-vanilla
-npm install
-npm run start
-```
-
-
-[DeckDeckGo]: https://deckdeckgo.com
+[deckdeckgo]: https://deckdeckgo.com
