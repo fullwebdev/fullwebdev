@@ -40,7 +40,7 @@ const share = async (data) => {
 document.querySelector('.share-btn-slides').addEventListener('click', () =>
     share({
         text: tweets.slides,
-        url: 'https://devoxxbe-2019.wof.show'
+        url: 'https://fullweb.dev/slides/wof/devoxxbe19/'
     })
 );
 

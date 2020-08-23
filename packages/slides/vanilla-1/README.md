@@ -9,38 +9,38 @@
 
 Embrace the power of the Web Platform! A real-life practical guide.
 
-- **:man_teacher: Slides: [modern-vanilla.wof.show](https://modern-vanilla.wof.show)**
+- **:man_teacher: Slides: [fullweb.dev/slides/vanilla1/latest/](https://fullweb.dev/slides/vanilla1/latest/)**
 - **:book: Full doc: [notes.md](./src/notes.md)**
 ##
 
 <p>
-  <a href="https://github.com/noelmace/slides-modern-vanilla/releases/latest">
+  <a href="https://github.com/fullwebdev/fullwebdev/releases/latest">
     <img src="https://img.shields.io/github/v/release/noelmace/slides-modern-vanilla?sort=semver" alt="release">
   </a>
-  <a href="https://github.com/noelmace/slides-modern-vanilla/releases/latest">
+  <a href="https://github.com/fullwebdev/fullwebdev/releases/latest">
     <img src="https://img.shields.io/github/release-date/noelmace/slides-modern-vanilla?sort=semver" alt="stable release date">
   </a>
-  <a href="https://github.com/noelmace/slides-modern-vanilla/actions?workflow=Deploy+Master">
-    <img src="https://github.com/noelmace/slides-modern-vanilla/workflows/Deploy%20Master/badge.svg" alt="deploy master">
+  <a href="https://github.com/fullwebdev/fullwebdev/actions?workflow=Deploy+Master">
+    <img src="https://github.com/fullwebdev/fullwebdev/workflows/Deploy%20Master/badge.svg" alt="deploy master">
   </a>
 </p>
 <p>
-  <a href="https://github.com/noelmace/slides-modern-vanilla/releases">
+  <a href="https://github.com/fullwebdev/fullwebdev/releases">
     <img src="https://img.shields.io/github/v/release/noelmace/slides-modern-vanilla?sort=semver&include_prereleases&label=pre-release" alt="pre-release">
   </a>
-  <a href="https://github.com/noelmace/slides-modern-vanilla/releases">
+  <a href="https://github.com/fullwebdev/fullwebdev/releases">
     <img src="https://img.shields.io/github/release-date-pre/noelmace/slides-modern-vanilla?label=pre-release%20date" alt="pre-release date">
   </a>
-  <a href="https://github.com/noelmace/slides-modern-vanilla/actions?workflow=Deploy+branches">
-    <img src="https://github.com/noelmace/slides-modern-vanilla/workflows/Deploy%20branches/badge.svg" alt="deploy branches">
+  <a href="https://github.com/fullwebdev/fullwebdev/actions?workflow=Deploy+branches">
+    <img src="https://github.com/fullwebdev/fullwebdev/workflows/Deploy%20branches/badge.svg" alt="deploy branches">
   </a>
 </p>
 <p>
-  <a href="https://github.com/noelmace/slides-modern-vanilla/actions?workflow=GH+Release">
-    <img src="https://github.com/noelmace/slides-modern-vanilla/workflows/GH%20Release/badge.svg" alt="Github release">
+  <a href="https://github.com/fullwebdev/fullwebdev/actions?workflow=GH+Release">
+    <img src="https://github.com/fullwebdev/fullwebdev/workflows/GH%20Release/badge.svg" alt="Github release">
   </a>
   <a href="https://docs.deckdeckgo.com/">
-    <img src="https://img.shields.io/github/package-json/dependency-version/noelmace/slides-modern-vanilla/@deckdeckgo/core" alt="deckdeckgo">
+    <img src="https://img.shields.io/github/package-json/dependency-version/fullwebdev/fullwebdev/@deckdeckgo/core" alt="deckdeckgo">
   </a>
   <a href="https://conventionalcommits.org">
     <img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg" alt="Conventional Commits">
@@ -49,10 +49,10 @@ Embrace the power of the Web Platform! A real-life practical guide.
 
 ## Versions
 
-> Go check the [changelog](/CHANGELOG.md) or [releases](https://github.com/noelmace/slides-modern-vanilla/releases) for more details.
+> Go check the [changelog](/CHANGELOG.md) or [releases](https://github.com/fullwebdev/fullwebdev/releases) for more details.
 
-- v1.1: conference (40min) @ [POSS 2019](https://vanilla-poss19.wof.show)
-- v1.0: conference (40min) @ [DevFest Toulouse 2019](https://devfesttls19.wof.show)
+- v1.1: conference (40min) @ [POSS 2019](https://fullweb.dev/slides/vanilla1/poss19/)
+- v1.0: conference (40min) @ [DevFest Toulouse 2019](https://fullweb.dev/slides/vanilla1/devfesttlse19/)
 
 > Versions are incremented as follow (not exactly semver :man_shrugging:):
 >
@@ -60,7 +60,7 @@ Embrace the power of the Web Platform! A real-life practical guide.
 > - Minor: new talk/event following the same plan & ideas as the previous one
 > - Patch: modifications to a talk that has already been presented
 >
-> Each minor version has its own [branch](https://github.com/noelmace/slides-modern-vanilla/branches). For example, [poss19](https://github.com/noelmace/slides-modern-vanilla/tree/poss19)
+> Each minor version has its own [branch](https://github.com/fullwebdev/fullwebdev/branches). For example, [poss19](https://github.com/fullwebdev/fullwebdev/tree/poss19)
 
 ## Abstract
 
