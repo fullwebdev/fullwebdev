@@ -49,7 +49,7 @@ document
     .addEventListener('click', () => copy(tweets.camera));
 
 (async () => {
-    const imgFile = await getImgFile('/assets/img/usetheplatform.png');
+    const imgFile = await getImgFile('assets/img/usetheplatform.png');
     const shareData = {
         text: tweets.picture,
         files: [imgFile]
@@ -65,7 +65,7 @@ document
 
 document.querySelector('.copy-btn-img').addEventListener('click', async () => {
     try {
-        const imgURL = '/assets/img/elmo.png';
+        const imgURL = 'assets/img/elmo.png';
         const data = await fetch(imgURL);
         const blob = await data.blob();
         const item = new ClipboardItem(

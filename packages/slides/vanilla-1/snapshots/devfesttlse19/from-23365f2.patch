@@ -1,5 +1,5 @@
 diff --git a/src/assets/code-samples/copy-share-twitter.js b/src/assets/code-samples/copy-share-twitter.js
-index a89827b..dadcf40 100644
+index a89827b..d450e99 100644
 --- a/src/assets/code-samples/copy-share-twitter.js
 +++ b/src/assets/code-samples/copy-share-twitter.js
 @@ -1,8 +1,8 @@
@@ -15,10 +15,37 @@ index a89827b..dadcf40 100644
  };
  
  const getImgFile = async (url) => {
+@@ -49,7 +49,7 @@ document
+     .addEventListener('click', () => copy(tweets.camera));
+ 
+ (async () => {
+-    const imgFile = await getImgFile('/assets/img/usetheplatform.png');
++    const imgFile = await getImgFile('assets/img/usetheplatform.png');
+     const shareData = {
+         text: tweets.picture,
+         files: [imgFile]
+@@ -65,7 +65,7 @@ document
+ 
+ document.querySelector('.copy-btn-img').addEventListener('click', async () => {
+     try {
+-        const imgURL = '/assets/img/elmo.png';
++        const imgURL = 'assets/img/elmo.png';
+         const data = await fetch(imgURL);
+         const blob = await data.blob();
+         const item = new ClipboardItem(
 diff --git a/src/index.html b/src/index.html
-index 891d6dd..61d5d95 100644
+index 891d6dd..7cad448 100644
 --- a/src/index.html
 +++ b/src/index.html
+@@ -7,7 +7,7 @@
+             content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+         />
+ 
+-        <base href="/" />
++        <base href="/slides/vanilla1/devfesttlse19/" />
+ 
+         <title>Vanilla is coming back</title>
+ 
 @@ -26,11 +26,11 @@
          />
  
@@ -33,7 +60,28 @@ index 891d6dd..61d5d95 100644
          />
          <meta property="og:image:type" content="image/png" />
  
-@@ -337,7 +337,7 @@
+@@ -113,20 +113,6 @@
+         />
+         <meta name="theme-color" content="#f3e5ab" />
+ 
+-        <script>
+-            if ('serviceWorker' in navigator) {
+-                window.addEventListener('load', async () => {
+-                    try {
+-                        await navigator.serviceWorker.register(
+-                            'service-worker.js'
+-                        );
+-                    } catch (e) {
+-                        console.warn('No service worker registered');
+-                    }
+-                });
+-            }
+-        </script>
+-
+         <link rel="manifest" href="manifest.json" />
+ 
+         <meta name="apple-mobile-web-app-capable" content="yes" />
+@@ -337,7 +323,7 @@
                              <p style="font-style: italic">
                                  Go read it
                                  <a
@@ -42,7 +90,7 @@ index 891d6dd..61d5d95 100644
                                      >on Github</a
                                  >!
                              </p>
-@@ -396,10 +396,10 @@ la raison d'être de nos royaumes
+@@ -396,10 +382,10 @@ la raison d'être de nos royaumes
  
  ☀️ Terres ensoleillées
  🏝️ Terres isolées
@@ -56,7 +104,7 @@ index 891d6dd..61d5d95 100644
  maintenir ☮️ paix
                          </div>
                      </deckgo-slide-big-img>
-@@ -413,7 +413,7 @@ maintenir ☮️ paix
+@@ -413,7 +399,7 @@ maintenir ☮️ paix
                          <div slot="notes" show>
  👨‍👨‍👧‍👦 NON-ALIGNÉS
  
@@ -65,7 +113,7 @@ index 891d6dd..61d5d95 100644
  
  Nous tous 💚 aimons & 🤚 restons à distance des 👑 royaumes
                          </div>
-@@ -443,7 +443,7 @@ Nombreuses façons de nous rejoindre
+@@ -443,7 +429,7 @@ Nombreuses façons de nous rejoindre
  🟨 🍦Vanilla JS
  🧊 Web Components
  
@@ -74,7 +122,7 @@ index 891d6dd..61d5d95 100644
  RAPPEL pour SysthoryOS
                          </div>
                      </deckgo-slide-content>
-@@ -656,7 +656,7 @@ CEO Clever Cloud
+@@ -656,7 +642,7 @@ CEO Clever Cloud
                          class="bg-img"
                      >
                          <h1 slot="title" hidden>Easy game</h1>
@@ -83,7 +131,7 @@ index 891d6dd..61d5d95 100644
                          <div slot="notes" show>
  🎮👶 JEUX D'ENFANT
  
-@@ -697,7 +697,7 @@ CONNAISSANCE, VEILLE
+@@ -697,7 +683,7 @@ CONNAISSANCE, VEILLE
                          class="bg-img"
                      >
                          <h1 slot="title" hidden>Closed door</h1>
@@ -92,7 +140,7 @@ index 891d6dd..61d5d95 100644
                          <div slot="notes" show>
  🚪 PORTE FERMÉE
  
-@@ -759,7 +759,7 @@ RAPPEL: react frameworks
+@@ -759,7 +745,7 @@ RAPPEL: react frameworks
  
  ABSTRACTION 👍
  
@@ -101,7 +149,7 @@ index 891d6dd..61d5d95 100644
  ⬅ 🕸 Web Platform
  ⬅ SUPER POUVOIRS
                          </div>
-@@ -774,7 +774,7 @@ ABSTRACTION 👍
+@@ -774,7 +760,7 @@ ABSTRACTION 👍
                                  world"
                              />
                          </div>
@@ -110,7 +158,7 @@ index 891d6dd..61d5d95 100644
                          <div slot="notes" show>
  DEPENDENCY GRAPH
  
-@@ -791,7 +791,7 @@ REACT-DOM
+@@ -791,7 +777,7 @@ REACT-DOM
                          axis="y"
                      >
                          <h1 slot="title" hidden>Big Dependency Graph</h1>
@@ -119,7 +167,34 @@ index 891d6dd..61d5d95 100644
                          <div slot="notes" show>
  BIG DEPENDENCY GRAPH
  
-@@ -946,7 +946,7 @@ vous devez vous préparer à abandonner vos libs
+@@ -822,7 +808,7 @@ ET SI VOUS LA COMPRENEZ MAL, VOUS MOURREZ
+                     </deckgo-slide-content>
+ 
+                     <deckgo-slide-code
+-                        src="/assets/code-samples/wc-in-react.js"
++                        src="assets/code-samples/wc-in-react.js"
+                     >
+                         <h1 slot="title">WC in React</h1>
+                         <!-- prettier-ignore -->
+@@ -839,7 +825,7 @@ The community is discussing some solutions (since 2016)
+                         <h1 slot="title">React in WC</h1>
+                         <div slot="content" class="flex flex-center">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/react-in-wc.js"
++                                src="assets/code-samples/react-in-wc.js"
+                                 highlight-lines="8,8"
+                             >
+                             </deckgo-highlight-code>
+@@ -878,7 +864,7 @@ résoud un problème LIÉ au WEB
+                     <deckgo-slide-chart
+                         type="bar"
+                         animation="true"
+-                        src="/assets/charts/libs-weight.csv"
++                        src="assets/charts/libs-weight.csv"
+                         class="lib-chart"
+                     >
+                         <div slot="title" class="flex-row">
+@@ -946,7 +932,7 @@ vous devez vous préparer à abandonner vos libs
                          class="bg-img"
                      >
                          <h1 slot="title" hidden>lit-element</h1>
@@ -128,7 +203,7 @@ index 891d6dd..61d5d95 100644
                          <div slot="notes" show>LIT-ELEMENT/HTML</div>
                      </deckgo-slide-content>-->
  
-@@ -957,7 +957,7 @@ vous devez vous préparer à abandonner vos libs
+@@ -957,7 +943,7 @@ vous devez vous préparer à abandonner vos libs
                          class="bg-img"
                      >
                          <h1 slot="title" hidden>Tools</h1>
@@ -137,8 +212,30 @@ index 891d6dd..61d5d95 100644
                          <div slot="notes" show>TOOLING</div>
                      </deckgo-slide-content>-->
  
-@@ -1090,7 +1090,7 @@ pwa-helpers/router.min.js is 589 bytes only!
-                         src="/assets/code-samples/bloc/bloc-class.js"
+@@ -994,7 +980,7 @@ vous devez vous préparer à abandonner vos libs
+                     </deckgo-slide-content>
+ 
+                     <deckgo-slide-code
+-                        src="/assets/code-samples/pwa-helpers-routing.js"
++                        src="assets/code-samples/pwa-helpers-routing.js"
+                     >
+                         <h1 slot="title">PWA Helpers</h1>
+                         <!-- prettier-ignore -->
+@@ -1025,7 +1011,7 @@ pwa-helpers/router.min.js is 589 bytes only!
+                     </deckgo-slide-content>
+ 
+                     <!-- <deckgo-slide-code
+-                        src="/assets/code-samples/ssr-puppeteer.js"
++                        src="assets/code-samples/ssr-puppeteer.js"
+                     >
+                         <h1 slot="title">SSR w/ Puppeteer</h1>
+                     </deckgo-slide-code> -->
+@@ -1087,17 +1073,17 @@ pwa-helpers/router.min.js is 589 bytes only!
+                     </deckgo-slide-content>
+ 
+                     <!--<deckgo-slide-code
+-                        src="/assets/code-samples/bloc/bloc-class.js"
++                        src="assets/code-samples/bloc/bloc-class.js"
                      >
                          <h1 slot="title">Pseudo BLoC Class</h1>
 -                         prettier-ignore 
@@ -146,7 +243,15 @@ index 891d6dd..61d5d95 100644
                          <div slot="notes" show>
                              BLoC design pattern with Angular, by Suguru Inatomi.
                          </div>
-@@ -1128,7 +1128,7 @@ RxJS ~30kB minified.
+                     </deckgo-slide-code>-->
+ 
+                     <!--<deckgo-slide-code
+-                        src="/assets/code-samples/bloc/bloc-rx.js"
++                        src="assets/code-samples/bloc/bloc-rx.js"
+                     >
+                         <h1 slot="title">Real BLoC w/ RxJS</h1>
+                     </deckgo-slide-code>-->
+@@ -1128,7 +1114,7 @@ RxJS ~30kB minified.
                          style="--background:center no-repeat url('assets/img/castle.jpg')"
                          class="bg-img dark"
                      >
@@ -155,7 +260,39 @@ index 891d6dd..61d5d95 100644
                          <div slot="notes" show>
  Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
                          </div>
-@@ -1373,12 +1373,6 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+@@ -1156,19 +1142,19 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+                     </deckgo-slide-content>
+ 
+                     <deckgo-slide-code
+-                        src="/assets/code-samples/typing/card.js"
++                        src="assets/code-samples/typing/card.js"
+                     >
+                         <h1 slot="title">You don't need TS</h1>
+                     </deckgo-slide-code>
+ 
+                     <deckgo-slide-code
+-                        src="/assets/code-samples/typing/import.js"
++                        src="assets/code-samples/typing/import.js"
+                     >
+                         <h1 slot="title">You don't need TS</h1>
+                     </deckgo-slide-code>
+ 
+                     <deckgo-slide-code
+-                        src="/assets/code-samples/typing/vs-code.json"
++                        src="assets/code-samples/typing/vs-code.json"
+                     >
+                         <h1 slot="title">VS Code</h1>
+                     </deckgo-slide-code>
+@@ -1358,7 +1344,7 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+                             slot="title"
+                             style="text-align: center; font-size: 3em"
+                         >
+-                            noelmace/slides-modern-vanilla
++                            fullwebdev/fullwebdev
+                         </h2>
+                         <div slot="content" class="flex flex-center">
+                             <img
+@@ -1373,12 +1359,6 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
                          <div slot="notes" show></div>
                      </deckgo-slide-content>
  
@@ -168,7 +305,7 @@ index 891d6dd..61d5d95 100644
                      <deckgo-slide-content
                          style="--background:center no-repeat url('assets/img/question-not-now.jpeg')"
                          class="bg-img"
-@@ -1386,18 +1380,18 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+@@ -1386,18 +1366,18 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
                      </deckgo-slide-content>
  
                      <deckgo-slide-qrcode
@@ -261,3 +398,87 @@ index 0021ad6..78ee822 100644
  
  > These examples where taken from [BLoC design pattern with Angular](https://medium.com/lacolaco-blog/bloc-design-pattern-with-angular-1c2f0339f6a3),
  > by Suguru Inatomi. I just transpiled them.
+diff --git a/src/scripts/menu.js b/src/scripts/menu.js
+index f954a3d..94b4a13 100644
+--- a/src/scripts/menu.js
++++ b/src/scripts/menu.js
+@@ -18,7 +18,7 @@ buildMenuListActions = () => {
+         result += '<ion-item ion-item button detail="false" onclick="displaySlideNotes()" color="primary" style="--border-style: none;"><ion-icon name="clipboard" aria-label="Display slide notes" slot="end"></ion-icon><ion-label>Display slide notes</ion-label></ion-item>';
+         result += '<ion-item ion-item button detail="false" onclick="displayRemoteControl()" color="primary" style="--border-style: none;"><ion-icon name="phone-portrait" aria-label="Remote control" slot="end"></ion-icon><ion-label>Remote control</ion-label></ion-item>';
+         result += '<ion-item ion-item button detail="false" onclick="openShare()" color="primary" style="--border-style: none;"><ion-icon name="share" aria-label="Share this presentation" slot="end"></ion-icon><ion-label>Share</ion-label></ion-item>';
+-        result += '<ion-item ion-item button detail="false" onclick="openLink(\'https://deckdeckgo.com\')" style="--border-style: none; --ion-item-background: white;"><ion-icon src="/assets/icons/deckdeckgo.svg" aria-label="DeckDeckGo" slot="end"></ion-icon><ion-label>Created with DeckDeckGo</ion-label></ion-item>';
++        result += '<ion-item ion-item button detail="false" onclick="openLink(\'https://deckdeckgo.com\')" style="--border-style: none; --ion-item-background: white;"><ion-icon src="assets/icons/deckdeckgo.svg" aria-label="DeckDeckGo" slot="end"></ion-icon><ion-label>Created with DeckDeckGo</ion-label></ion-item>';
+ 
+         resolve(result);
+     });
+diff --git a/src/scripts/modalRemoteControl.js b/src/scripts/modalRemoteControl.js
+index 10a8b46..10b4633 100644
+--- a/src/scripts/modalRemoteControl.js
++++ b/src/scripts/modalRemoteControl.js
+@@ -17,9 +17,9 @@ displayRemoteControl = async () => {
+     </ion-toolbar>
+   </ion-header>
+   <ion-content padding color="primary">
+-  
++
+   ${getRemoteControlModalContent()}
+-    
++
+   </ion-content>
+   `;
+ 
+@@ -72,18 +72,18 @@ function getRemoteControlModalContent() {
+ 
+         return `<ion-list style="ion-no-margin">
+         <ion-item style="--border-color: transparent; color: black;">
+-            <ion-label class="ion-text-wrap">Toggle to disable or enable the remote control</ion-label> 
++            <ion-label class="ion-text-wrap">Toggle to disable or enable the remote control</ion-label>
+             <ion-toggle slot="end" checked="true" color="tertiary" style="--background: var(--ion-color-light); --handle-background: white; --handle-background-checked: white;"></ion-toggle>
+         </ion-item>
+     </ion-list>
+-  
++
+     <p class="ion-padding-start ion-padding-end" style="margin: 0; font-size: 16px;">Remote control this presentation with your phone or any devices. Scan the following QR Code to open it directly or get the Progressive Web Apps at <a href="https://deckdeckgo.app" target="_blank" style="color: var(--ion-color-tertiary);">https://deckdeckgo.app <ion-icon name="open" style="color: var(--ion-color-tertiary); vertical-align: bottom;"></ion-icon></a> and find <mark style="background: transparent; color: var(--ion-color-tertiary); font-weight: 500;">${remoteRoom}</mark>.</p>
+ 
+     <p class="ion-padding-start ion-padding-end" style="margin-bottom: 0; font-size: 16px;">If you can't connect or if you lost the connection, toggle off and on the connection to refresh it.</p>
+ 
+     <div class="qrcode-container" style="display: flex; justify-content: center;  --deckgo-qrcode-size: 300px; --deckgo-qrcode-color-fill: var(--ion-color-tertiary);">
+         <deckgo-qrcode content="${qrCodeLink}">
+-            <ion-icon slot="logo" src="/assets/icons/deckdeckgo.svg"></ion-icon>
++            <ion-icon slot="logo" src="assets/icons/deckdeckgo.svg"></ion-icon>
+         </deckgo-qrcode>
+     </div>`;
+     }
+diff --git a/webpack.config.js b/webpack.config.js
+index cd19aaa..bb0826f 100644
+--- a/webpack.config.js
++++ b/webpack.config.js
+@@ -5,8 +5,6 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+ 
+ const {DeckDeckGoInfoPlugin, DeckDeckGoRemoveNotesPlugin} = require('deckdeckgo-webpack-plugins');
+ 
+-const {GenerateSW} = require('workbox-webpack-plugin');
+-
+ const webpack = require('webpack');
+ 
+ const path = require('path');
+@@ -31,6 +29,9 @@ const config = {
+ };
+ 
+ const plugins = [
++    new webpack.DefinePlugin({
++        'process.env.ASSET_PATH': '/slides/vanilla1/devfesttlse19/',
++    }),
+     new CleanWebpackPlugin({
+         cleanStaleWebpackAssets: false
+     }),
+@@ -57,9 +58,6 @@ module.exports = (env, argv) => {
+     }
+ 
+     if (argv.mode === 'production') {
+-        plugins.push(new GenerateSW({
+-            ignoreURLParametersMatching: [/./]
+-        }));
+         plugins.push(new DeckDeckGoInfoPlugin());
+ 
+         if (!argv.notes) {
