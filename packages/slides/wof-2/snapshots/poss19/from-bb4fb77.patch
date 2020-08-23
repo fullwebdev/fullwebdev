@@ -1,0 +1,401 @@
+diff --git a/src/assets/code-samples/copy-share-twitter.js b/src/assets/code-samples/copy-share-twitter.js
+index a89827b..f69ddf7 100644
+--- a/src/assets/code-samples/copy-share-twitter.js
++++ b/src/assets/code-samples/copy-share-twitter.js
+@@ -1,8 +1,8 @@
+ const tweets = {
+-    slides: `Hey look, I can share my slides with the Twitter #PWA using the Web Share & Web Share Target APIs! 🙌 #usetheplatform #WebOnFIRE wof.show`,
+-    camera: `I can share a picture with the Twitter #PWA from the Camera App using the Web Share Target API Level 2 😁! #WebOnFIRE #usetheplatform wof.show`,
+-    picture: `I can also share a picture from my own app using the Web Share & Web Share Target API Level 2! #WebOnFIRE #usetheplatform wof.show`,
+-    clipboardPic: `And I can even share an image using the Async Clipboard Level 2 🤯! #WebOnFIRE #usetheplatform wof.show`
++    slides: `Hey look, I can share my slides with the Twitter #PWA using the Web Share & Web Share Target APIs! 🙌 #usetheplatform #WebOnFIRE`,
++    camera: `I can share a picture with the Twitter #PWA from the Camera App using the Web Share Target API Level 2 😁! #WebOnFIRE #usetheplatform`,
++    picture: `I can also share a picture from my own app using the Web Share & Web Share Target API Level 2! #WebOnFIRE #usetheplatform`,
++    clipboardPic: `And I can even share an image using the Async Clipboard Level 2 🤯! #WebOnFIRE #usetheplatform`
+ };
+ 
+ const getImgFile = async (url) => {
+@@ -40,7 +40,7 @@ const share = async (data) => {
+ document.querySelector('.share-btn-slides').addEventListener('click', () =>
+     share({
+         text: tweets.slides,
+-        url: 'https://devoxxbe-2019.wof.show'
++        url: 'https://fullweb.dev/slides/wof/poss19/'
+     })
+ );
+ 
+diff --git a/src/css/google-fonts.css b/src/css/google-fonts.css
+index 27bcba7..65b2670 100644
+--- a/src/css/google-fonts.css
++++ b/src/css/google-fonts.css
+@@ -2,14 +2,14 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: url(/assets/fonts/KFOmCnqEu92Fr1Mu4mxO.eot);
++  src: url(/slides/wof/poss19/assets/fonts/KFOmCnqEu92Fr1Mu4mxO.eot);
+ }
+ /* cyrillic-ext */
+ @font-face {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/poss19/assets/fonts/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
+   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+ }
+ /* cyrillic */
+@@ -17,7 +17,7 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/poss19/assets/fonts/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');
+   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+ }
+ /* greek-ext */
+@@ -25,7 +25,7 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/poss19/assets/fonts/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');
+   unicode-range: U+1F00-1FFF;
+ }
+ /* greek */
+@@ -33,7 +33,7 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/poss19/assets/fonts/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
+   unicode-range: U+0370-03FF;
+ }
+ /* vietnamese */
+@@ -41,7 +41,7 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/poss19/assets/fonts/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
+   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+ }
+ /* latin-ext */
+@@ -49,7 +49,7 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/poss19/assets/fonts/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
+   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+ }
+ /* latin */
+@@ -57,26 +57,26 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/poss19/assets/fonts/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+ }
+ @font-face {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu4mxM.woff) format('woff');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/poss19/assets/fonts/KFOmCnqEu92Fr1Mu4mxM.woff) format('woff');
+ }
+ @font-face {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu4mxPKTU1Kg.ttf) format('truetype');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/poss19/assets/fonts/KFOmCnqEu92Fr1Mu4mxPKTU1Kg.ttf) format('truetype');
+ }
+ @font-face {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu4mxN) format('svg');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/poss19/assets/fonts/KFOmCnqEu92Fr1Mu4mxN) format('svg');
+ }
+ 
+ :root {
+diff --git a/src/index.html b/src/index.html
+index 7f61772..6e5bb26 100644
+--- a/src/index.html
++++ b/src/index.html
+@@ -7,7 +7,7 @@
+             content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+         />
+ 
+-        <base href="/" />
++        <base href="/slides/wof/poss19/" />
+ 
+         <title>The Web is on F.I.R.E.</title>
+ 
+@@ -27,10 +27,10 @@
+         />
+         <meta property="og:site_name" content="The Web is on F.I.R.E." />
+         <meta property="og:type" content="website" />
+-        <meta property="og:url" content="https://conf.wof.show" />
++        <meta property="og:url" content="https://fullweb.dev/slides/wof/poss19/" />
+         <meta
+             property="og:image"
+-            content="https://conf.wof.show/assets/favicon/icon-512x512.png"
++            content="https://fullweb.dev/slides/wof/poss19//assets/favicon/icon-512x512.png"
+         />
+         <meta property="og:image:type" content="image/png" />
+ 
+@@ -42,7 +42,7 @@
+         />
+         <meta
+             name="twitter:image:src"
+-            content="https://conf.wof.show/assets/favicon/icon-512x512.png"
++            content="https://fullweb.dev/slides/wof/poss19//assets/favicon/icon-512x512.png"
+         />
+         <meta name="twitter:card" content="summary" />
+ 
+@@ -125,20 +125,6 @@
+         />
+         <meta name="theme-color" content="#ed6c30" />
+ 
+-        <script>
+-            if ('serviceWorker' in navigator) {
+-                window.addEventListener('load', async () => {
+-                    try {
+-                        await navigator.serviceWorker.register(
+-                            'service-worker.js'
+-                        );
+-                    } catch (e) {
+-                        console.warn('No service worker registered');
+-                    }
+-                });
+-            }
+-        </script>
+-
+         <link rel="manifest" href="manifest.json" />
+ 
+         <meta name="apple-mobile-web-app-capable" content="yes" />
+@@ -179,7 +165,7 @@
+                             </h3>
+ 
+                             <deckgo-social
+-                                github="noelmace/slides-wof-conf"
++                                github="fullwebdev/fullwebdev"
+                                 class="hydrated"
+                                 style="margin-left: 32px"
+                                 ><ion-icon
+@@ -196,7 +182,7 @@
+                                 this slides (and more)</deckgo-social
+                             >
+                             <deckgo-social
+-                                github="noelmace/slides-wof-conf/blob/master/src/notes.md"
++                                github="fullwebdev/fullwebdev/blob/master/packages/slides/wof-2/src/notes.md"
+                                 class="hydrated"
+                                 style="margin-left: 32px"
+                                 ><ion-icon
+@@ -776,7 +762,7 @@
+                         </h1>
+                         <div slot="content" class="flex flex-center">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/mq5/dark/load-css.html"
++                                src="assets/code-samples/mq5/dark/load-css.html"
+                             >
+                             </deckgo-highlight-code>
+                         </div>
+@@ -796,7 +782,7 @@ above I already force `highest` priority for my default light experience).
+                         </h1>
+                         <div slot="content" class="flex flex-center">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/mq5/dark/variables.css"
++                                src="assets/code-samples/mq5/dark/variables.css"
+                             >
+                             </deckgo-highlight-code>
+                         </div>
+@@ -820,7 +806,7 @@ above I already force `highest` priority for my default light experience).
+                         </h1>
+                         <div slot="content" class="flex flex-center">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/mq5/motion/reduced-motion.css"
++                                src="assets/code-samples/mq5/motion/reduced-motion.css"
+                             >
+                             </deckgo-highlight-code>
+                         </div>
+@@ -834,7 +820,7 @@ above I already force `highest` priority for my default light experience).
+                         </h1>
+                         <div slot="content" class="flex flex-center">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/mq5/motion/reduced-motion.js"
++                                src="assets/code-samples/mq5/motion/reduced-motion.js"
+                             >
+                             </deckgo-highlight-code>
+                         </div>
+@@ -913,7 +899,7 @@ above I already force `highest` priority for my default light experience).
+                     </deckgo-slide-content>
+ 
+                     <deckgo-slide-qrcode
+-                        content="https://miniconf.wof.show"
++                        content="https://fullweb.dev/slides/wof/poss19/"
+                         style="--deckgo-qrcode-color-fill: black;"
+                         class="resources-slide"
+                     >
+@@ -935,7 +921,7 @@ above I already force `highest` priority for my default light experience).
+                                 @noel_mace</deckgo-social
+                             >
+                             <deckgo-social
+-                                full-url="https://miniconf.wof.show"
++                                full-url="https://fullweb.dev/slides/wof/poss19/"
+                                 class="hydrated"
+                                 style="margin-left: 32px"
+                                 ><ion-icon
+@@ -948,10 +934,10 @@ above I already force `highest` priority for my default light experience).
+                                     class="md hydrated"
+                                     aria-label="logo twitter"
+                                 ></ion-icon>
+-                                miniconf.wof.show</deckgo-social
++                                fullweb.dev/slides/wof/poss19/</deckgo-social
+                             >
+                             <deckgo-social
+-                                github="noelmace/slides-wof-conf"
++                                github="fullwebdev/fullwebdev"
+                                 class="hydrated"
+                                 style="margin-left: 32px"
+                                 ><ion-icon
+@@ -964,7 +950,7 @@ above I already force `highest` priority for my default light experience).
+                                     class="md hydrated"
+                                     aria-label="logo slides"
+                                 ></ion-icon>
+-                                noelmace/slides-wof-conf</deckgo-social
++                                fullwebdev/fullwebdev</deckgo-social
+                             >
+                             <deckgo-social
+                                 full-url="https://dev.to/noelmace"
+@@ -1312,7 +1298,7 @@ above I already force `highest` priority for my default light experience).
+                     <div class="row style-scope browser-table">
+                         <div class="style-scope browser-table">
+                             <img
+-                                src="/assets/logos/chrome.svg"
++                                src="assets/logos/chrome.svg"
+                                 class="style-scope browser-table"
+                             />
+                             <span class="style-scope browser-table"
+@@ -1321,14 +1307,14 @@ above I already force `highest` priority for my default light experience).
+                         </div>
+                         <div class="style-scope browser-table">
+                             <img
+-                                src="/assets/logos/opera-icon.svg"
++                                src="assets/logos/opera-icon.svg"
+                                 class="style-scope browser-table"
+                             />
+                             <span class="style-scope browser-table">Opera</span>
+                         </div>
+                         <div class="style-scope browser-table">
+                             <img
+-                                src="/assets/logos/safari.svg"
++                                src="assets/logos/safari.svg"
+                                 class="style-scope browser-table"
+                             />
+                             <span class="style-scope browser-table"
+@@ -1337,7 +1323,7 @@ above I already force `highest` priority for my default light experience).
+                         </div>
+                         <div class="style-scope browser-table">
+                             <img
+-                                src="/assets/logos/firefox.svg"
++                                src="assets/logos/firefox.svg"
+                                 class="style-scope browser-table"
+                             />
+                             <span class="style-scope browser-table"
+@@ -1346,7 +1332,7 @@ above I already force `highest` priority for my default light experience).
+                         </div>
+                         <div class="style-scope browser-table">
+                             <img
+-                                src="/assets/logos/edge.svg"
++                                src="assets/logos/edge.svg"
+                                 class="style-scope browser-table"
+                             />
+                             <span class="style-scope browser-table">Edge</span>
+@@ -1370,7 +1356,7 @@ above I already force `highest` priority for my default light experience).
+                                 class="style-scope browser-table"
+                             >
+                                 <use
+-                                    xlink:href="/sprite.octicons.svg#template"
++                                    xlink:href="sprite.octicons.svg#template"
+                                     class="style-scope browser-table"
+                                 ></use>
+                             </svg>
+@@ -1419,7 +1405,7 @@ above I already force `highest` priority for my default light experience).
+                                 class="style-scope browser-table"
+                             >
+                                 <use
+-                                    xlink:href="/sprite.octicons.svg#element"
++                                    xlink:href="sprite.octicons.svg#element"
+                                     class="style-scope browser-table"
+                                 ></use>
+                             </svg>
+@@ -1476,7 +1462,7 @@ above I already force `highest` priority for my default light experience).
+                                 class="style-scope browser-table"
+                             >
+                                 <use
+-                                    xlink:href="/sprite.octicons.svg#shadow"
++                                    xlink:href="sprite.octicons.svg#shadow"
+                                     class="style-scope browser-table"
+                                 ></use>
+                             </svg>
+@@ -1533,7 +1519,7 @@ above I already force `highest` priority for my default light experience).
+                                 class="style-scope browser-table"
+                             >
+                                 <use
+-                                    xlink:href="/sprite.octicons.svg#import"
++                                    xlink:href="sprite.octicons.svg#import"
+                                     class="style-scope browser-table"
+                                 ></use>
+                             </svg>
+diff --git a/src/manifest.json b/src/manifest.json
+index e8e34e7..572ce66 100644
+--- a/src/manifest.json
++++ b/src/manifest.json
+@@ -4,8 +4,8 @@
+   "display": "standalone",
+   "theme_color": "#ed6c30",
+   "background_color": "#ffffff",
+-  "scope": "/",
+-  "start_url": "/",
++  "scope": "/slides/wof/poss19/",
++  "start_url": "/slides/wof/poss19/index.html",
+   "icons": [
+     {
+       "src": "assets/favicon/android-icon-36x36.png",
+diff --git a/webpack.config.js b/webpack.config.js
+index c48949f..2974c6b 100644
+--- a/webpack.config.js
++++ b/webpack.config.js
+@@ -5,8 +5,6 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+ 
+ const {DeckDeckGoInfoPlugin, DeckDeckGoRemoveNotesPlugin} = require('deckdeckgo-webpack-plugins');
+ 
+-const {GenerateSW} = require('workbox-webpack-plugin');
+-
+ const webpack = require('webpack');
+ 
+ const path = require('path');
+@@ -31,6 +29,9 @@ const config = {
+ };
+ 
+ const plugins = [
++    new webpack.DefinePlugin({
++        'process.env.ASSET_PATH': '/slides/wof/poss19/',
++    }),
+     new CleanWebpackPlugin({
+         cleanStaleWebpackAssets: false
+     }),
+@@ -57,9 +58,6 @@ module.exports = (env, argv) => {
+     }
+ 
+     if (argv.mode === 'production') {
+-        plugins.push(new GenerateSW({
+-            ignoreURLParametersMatching: [/./]
+-        }));
+         plugins.push(new DeckDeckGoInfoPlugin());
+ 
+         if (!argv.notes) {

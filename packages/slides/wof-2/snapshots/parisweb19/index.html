@@ -1,0 +1,309 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,viewport-fit=cover"><base href="/slides/wof/parisweb19/"><title>The Web is on F.I.R.E.</title><meta property="og:site_name" content="The Web is on F.I.R.E."><meta property="og:title" content="The Web is on F.I.R.E."><meta name="author" content="Noël Macé"><meta name="description" content="The F.I.R.E. safety kit for everyone! Learn the best new capabilities of the modern web without burning out!"><meta property="og:description" content="The F.I.R.E. safety kit for everyone! Learn the best new capabilities of the modern web without burning out!"><meta property="og:site_name" content="The Web is on F.I.R.E."><meta property="og:type" content="website"><meta property="og:url" content="https://fullweb.dev/slides/wof/parisweb19/"><meta property="og:image" content="https://fullweb.dev/slides/wof/parisweb19/assets/favicon/icon-512x512.png"><meta property="og:image:type" content="image/png"><meta name="twitter:site" content="@noel_mace"><meta name="twitter:title" content="The Web is on F.I.R.E."><meta name="twitter:description" content="The F.I.R.E. safety kit for everyone! Learn the best new capabilities of the modern web without burning out!"><meta name="twitter:image:src" content="https://fullweb.dev/slides/wof/parisweb19/assets/favicon/icon-512x512.png"><meta name="twitter:card" content="summary"><link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png"><link rel="shortcut icon" href="assets/favicon/favicon.ico"><meta name="msapplication-TileColor" content="#ed6c30"><meta name="msapplication-TileImage" content="/ms-icon-144x144.png"><meta name="msapplication-config" content="assets/favicon/browserconfig.xml"><meta name="theme-color" content="#ed6c30"><script>if ('serviceWorker' in navigator) {
+                window.addEventListener('load', async () => {
+                    try {
+                        await navigator.serviceWorker.register(
+                            'service-worker.js'
+                        );
+                    } catch (e) {
+                        console.warn('No service worker registered');
+                    }
+                });
+            }</script><link rel="manifest" href="manifest.json"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="msapplication-tap-highlight" content="no"><style>:root {
+                background: #ffffff;
+                --ion-background-color: #ffffff;
+                --main-color: #ed6c30;
+                --alt-color: #fcc21b;
+                --slide-split-title-display: block;
+                --slide-split-padding-top: 0;
+            }
+
+            deckgo-deck {
+                color: black;
+                --color: black;
+                --ion-text-color: black;
+            }
+
+            deckgo-deck h1,
+            deckgo-deck h2,
+            deckgo-deck h3 {
+                /* TODO: deckgo issue */
+                overflow: visible !important;
+            }
+
+            /* Until Web Components are loaded, don't display content */
+            body {
+                background: #ffffff;
+            }
+
+            ion-app.loading,
+            ion-app.loading a {
+                color: transparent;
+            }
+
+            ion-app.loading a {
+                color: transparent;
+            }
+
+            ion-app.loading {
+                display: none;
+            }
+
+            :root {
+                background: #ffffff;
+                --ion-background-color: #ffffff;
+            }
+
+            deckgo-deck {
+                color: black;
+                --color: black;
+                --ion-text-color: black;
+                --deckgo-highlight-code-line-background: yellow;
+            }
+
+            /* Until Web Components are loaded, don't display content */
+            body {
+                background: #ffffff;
+
+                --react-color: #61dafb;
+                --preact-color: #673ab8;
+                --redux-color: #764abc;
+                --lit-element-color: #2196f3;
+                --jquery-color: #d18f4f;
+            }
+
+            ion-app.loading,
+            ion-app.loading a {
+                color: transparent;
+            }
+
+            ion-app.loading a {
+                color: transparent;
+            }
+
+            ion-app.loading {
+                display: none;
+            }
+
+            .dark {
+                --background: #000;
+                --color: #fff;
+            }
+
+            .full {
+                width: 100%;
+                height: 100%;
+            }
+
+            .big {
+                font-size: 5em;
+            }
+
+            .flex {
+                width: 100%;
+                height: 100%;
+                display: flex;
+            }
+
+            .flex-center {
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-direction: column;
+            }
+
+            .flex-end {
+                justify-content: flex-end;
+                align-items: center;
+                text-align: center;
+                flex-direction: column;
+            }
+
+            .flex-row {
+                display: flex;
+                justify-content: space-around;
+                flex-direction: row;
+                width: 100%;
+            }
+
+            .flex-center img,
+            .img-row img {
+                max-height: 70vh;
+            }
+
+            .flex-center img,
+            .img-row.fill img {
+                width: 100%;
+            }
+
+            .img-row {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                align-items: center;
+                text-align: center;
+            }
+
+            .img-row .img-container {
+                flex: 1 1;
+            }
+
+            .img-row img {
+                padding: 1em 1em;
+            }
+
+            .frame {
+                background: center no-repeat url('assets/img/frame-h.png');
+                background-size: contain;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .bg-img {
+                background-size: contain;
+            }
+
+            .frame * {
+                font-size: 2em;
+            }
+
+            .small-code {
+                --slide-padding-top: 8em;
+            }
+
+            .strong {
+                font-weight: bold;
+            }
+
+            .slide-todo {
+                --background: #f00;
+                color: #000;
+            }
+
+            .wof-show > a {
+                color: red;
+                text-decoration: none;
+                font-size: 2em;
+                text-shadow: 1px 1px 2px #000;
+            }
+
+            .wof-show .sub {
+                color: black;
+                text-shadow: 1px 1px 2px #fff;
+                display: inline-block;
+            }
+
+            .center {
+                text-align: center;
+            }
+
+            .lib-chart {
+                --deckgo-chart-fill-color-1: var(--react-color);
+                --deckgo-chart-fill-color-2: var(--preact-color);
+                --deckgo-chart-fill-color-3: var(--redux-color);
+                --deckgo-chart-fill-color-4: var(--lit-element-color);
+                --deckgo-chart-fill-color-5: var(--jquery-color);
+            }
+
+            .twitter-content {
+                width: 100%;
+            }
+
+            .twitter-content twitter-widget {
+                margin: 0 auto;
+            }
+
+            .title-slide {
+                --background: var(--main-color);
+            }
+
+            .subtitle-slide {
+                --background: var(--alt-color);
+            }
+
+            .fire-bg {
+                background: center no-repeat url('assets/img/flames.jpg');
+                background-size: cover;
+            }
+
+            .fire-icons .img-container {
+                margin: 1em;
+            }
+
+            deckgo-reveal.compact {
+                text-align: center;
+            }
+
+            deckgo-reveal.compact > * {
+                margin: 0;
+            }
+
+            /* TODO: discuss with deckgo team */
+            deckgo-slide-split deckgo-reveal > * {
+                height: fit-content !important;
+            }
+
+            .whatwg.note {
+                font: 1em/1.45 Helvetica Neue, sans-serif, Droid Sans Fallback;
+                padding: 0.5em 1em;
+                position: relative;
+                padding-top: 1em;
+                padding-bottom: 1em;
+                color: green;
+                background: #ddffdd;
+                font-style: italic;
+                margin: 1em 0;
+                margin-top: 1.5em;
+            }
+
+            .whatwg.note::before {
+                background: green;
+                padding: 0.15em 0.25em;
+                position: absolute;
+                top: -0.8em;
+                left: -0.8em;
+                color: white;
+                content: 'Note';
+                font: 1em/1.45 Helvetica Neue, sans-serif, Droid Sans Fallback;
+            }
+
+            .ciu-wrapper {
+                width: 100%;
+            }
+
+            .ciu_embed {
+                margin: 0 auto;
+            }
+
+            @media (min-width: 992px) {
+                .ciu_embed {
+                    width: 800px;
+                }
+            }
+
+            .demo {
+                border: 2px red solid;
+            }
+
+            std-toast {
+                font-weight: bold;
+                font-size: 3em;
+            }</style><script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script></head><body><ion-app class="loading"><ion-content force-overscroll="false" scroll-y="false"><deckgo-deck id="slider" pager-percentage="false"><deckgo-slide-title class="dark"><h1 slot="title" style="color:red">Reading this slides?</h1><div no-shadow="" slot="content"><h3>There is a documentation for that!</h3><p style="font-style: italic">Go read it <a href="https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/wof-2/src/notes.md">on Github</a>!</p></div><div slot="notes" show="">INTRO LECTEUR</div></deckgo-slide-title><deckgo-slide-title class="title-slide"><h1 slot="title">The Web is on 🔥 F.I.R.E. 🔥</h1><div slot="content"><h3>mini-conf</h3><p><img src="assets/logos/parisweb.svg" alt="Paris Web" style="vertical-align: middle"> 2019</p></div></deckgo-slide-title><deckgo-slide-author img-src="https://avatars3.githubusercontent.com/u/7578400"><h1 slot="title">Noël Macé</h1><div slot="author"><h2>Noël Macé</h2><p>Freelance WebDev Consultant &amp; Teacher</p><p>Independent Dev Advocado 🥑 for the Web Platform</p></div><div slot="social-link"><deckgo-social twitter="noel_mace"><ion-icon alt="Noël on Twitter" slot="icon" name="logo-twitter" margin-start="" margin-end=""></ion-icon>@noel_mace</deckgo-social></div><div slot="social-link"><deckgo-social linkedin="noelmace/"><ion-icon alt="Noël on Linkedin" slot="icon" name="logo-linkedin" margin-start="" margin-end=""></ion-icon>in/noelmace</deckgo-social></div></deckgo-slide-author><deckgo-slide-title class="title-slide"><h1 slot="title">On ... F.I.R.E.? 🤨</h1></deckgo-slide-title><deckgo-slide-content><div slot="content" class="flex flex-center"><img data-src="assets/logos/pwa.svg" alt="pwa"></div><div slot="notes" show="">PWA</div></deckgo-slide-content><deckgo-slide-content style="--background:center no-repeat url('assets/img/small-lego.jpeg')" class="bg-img"></deckgo-slide-content><deckgo-slide-content class="fire-bg fire-icons dark"><h1 slot="title" hidden="">F.I.R.E.</h1><div slot="content" class="img-row fill"><div class="img-container"><img data-src="assets/icons/fast.svg" style="background: #dd311f"><h2>F.</h2></div><div class="img-container"><img data-src="assets/icons/add_to_home_screen.svg" style="background: #249f5a"><h2>I.</h2></div><div class="img-container"><img data-src="assets/icons/check_circle_outline.svg" style="background: #314ffe"><h2>R.</h2></div><div class="img-container"><img data-src="assets/icons/touch.svg" style="background: #773f9b"><h2>E.</h2></div></div></deckgo-slide-content><deckgo-slide-title class="title-slide"><h1 slot="title">How the Web evolves</h1></deckgo-slide-title><deckgo-slide-content><div slot="content" class="flex flex-center"><img data-src="assets/logos/w3c.svg" alt="w3c logo"></div></deckgo-slide-content><deckgo-slide-content><div slot="content" class="flex flex-center"><img data-src="assets/logos/whatwg.svg" alt="WHATWG logo"></div></deckgo-slide-content><deckgo-slide-content><div slot="content" class="flex flex-center"><img data-src="assets/logos/wicg.svg" alt="WICG logo"></div></deckgo-slide-content><deckgo-slide-content><div slot="content" class="flex flex-center"><img data-src="assets/logos/tc39.svg" alt="TC39 logo"></div></deckgo-slide-content><deckgo-slide-content><h1 slot="title" hidden="">Integrators</h1><div slot="content" class="img-row fill"><div class="img-container"><img data-src="assets/logos/chrome-canary.svg"></div><div class="img-container"><img data-src="assets/logos/firefox-nightly.svg"></div><div class="img-container"><img data-src="assets/logos/webkit.svg"></div></div></deckgo-slide-content><deckgo-slide-title class="title-slide"><h1 slot="title">What's hot?</h1></deckgo-slide-title><deckgo-slide-title class="subtitle-slide"><h1 slot="title">An integrated Web</h1></deckgo-slide-title><deckgo-slide-content><h1 slot="title">The mini-infobar</h1><div slot="content" style="width: 100%; text-align: center"><img data-src="assets/img/install-promo/a2hs-infobar-cropped.png" style="margin-top: 2em"><deckgo-reveal style="font-size: 2em"><p>interim experience</p><p>becomes annoying</p></deckgo-reveal></div></deckgo-slide-content><deckgo-slide-content><h1 slot="title" hidden="">Prevent mini-infobar</h1><div slot="content" class="flex flex-center"><deckgo-highlight-code src="assets/code-samples/prevent-infobar.js" highlight-lines="2,3"></deckgo-highlight-code></div><div slot="notes" show="">Prevent mini-infobar</div></deckgo-slide-content><deckgo-slide-video src="assets/img/install-promo/pwa-install-addressbar.webm"><h1 slot="title">Omnibox Button</h1></deckgo-slide-video><deckgo-slide-content><h1 slot="title">Firefox Mobile</h1><div slot="content" style="width: 100%; text-align: center"><img data-src="assets/img/install-promo/firefox/js13kpwa-icon.png" style="margin: 2em auto"></div></deckgo-slide-content><deckgo-slide-content><h1 slot="title">App Patterns</h1><div slot="content" class="img-row"><div class="img-container"><img data-src="assets/img/install-promo/header.png"></div><div class="img-container"><img data-src="assets/img/install-promo/nav.png"></div><div class="img-container"><img data-src="assets/img/install-promo/landing.png"></div><div class="img-container"><img data-src="assets/img/install-promo/banner.png"></div></div></deckgo-slide-content><deckgo-slide-content><h1 slot="title">Inline Patterns</h1><div slot="content" class="img-row"><div class="img-container"><img data-src="assets/img/install-promo/in-feed.png"></div><div class="img-container"><img data-src="assets/img/install-promo/journey.png"></div><div class="img-container"><img data-src="assets/img/install-promo/sign-up.png"></div></div></deckgo-slide-content><deckgo-slide-content><h1 slot="title">Special Patterns</h1><div slot="content" class="img-row"><div class="img-container"><img data-src="assets/img/install-promo/plp.png"></div><div class="img-container"><img data-src="assets/img/install-promo/game-over.png"></div></div></deckgo-slide-content><deckgo-slide-split><h1 slot="title">Closing the App Gapp</h1><div slot="start"><img data-src="assets/img/capabilities-process.jpg"></div><div slot="end"><deckgo-reveal class="compact"><h2>Capabilities in flight</h2><p>Badging API</p><p>Contact Picker API</p><p>Get Installed Related Apps API</p><p>Native File System API</p><p>Shape Detection API</p><p>Wake Lock API</p><h2>Launched capabilities</h2><p>Async Clipboard API (images)</p><p>Web Share Target</p></deckgo-reveal></div></deckgo-slide-split><deckgo-slide-title class="subtitle-slide"><h1 slot="title">A Modular Web</h1></deckgo-slide-title><deckgo-slide-content><h1 slot="title">ES Modules</h1><div slot="content" class="ciu-wrapper"><p class="ciu_embed" data-feature="es6-module" data-periods="future_1,current,past_1,past_2" data-accessible-colours="false"><a href="http://caniuse.com/#feat=es6-module">Can I Use es6-module?</a> Data on support for the es6-module feature across the major browsers from caniuse.com.</p></div><div slot="notes" show=""></div></deckgo-slide-content><deckgo-slide-content><h1 slot="title">Bare specifiers</h1><div slot="content"><deckgo-highlight-code src="assets/code-samples/import-maps/bare.js"></deckgo-highlight-code><deckgo-reveal><p class="whatwg note">This restriction is in place so that in the future we can allow custom module loaders to give special meaning to "bare" import specifiers, like <code>import "jquery"</code> or <code>import "web/crypto"</code>. For now any such imports will fail, instead of being treated as relative URLs.</p></deckgo-reveal></div><div slot="notes" show=""></div></deckgo-slide-content><deckgo-slide-content><h1 slot="title">Import Maps</h1><div slot="content"><deckgo-highlight-code src="assets/code-samples/import-maps/map.html"></deckgo-highlight-code><deckgo-highlight-code src="assets/code-samples/import-maps/bare-equivalent.js"></deckgo-highlight-code></div><div slot="notes" show=""></div></deckgo-slide-content><deckgo-slide-content><h1 slot="title">KV Storage</h1><div slot="content" style="width: 100%; text-align: center"><deckgo-highlight-code language="javascript"><code slot="code">import storage, {StorageArea} from 'std:kv-storage';</code></deckgo-highlight-code><deckgo-reveal><p>faster than localStorage API...</p><p>easier than IndexDB</p><p>closer to Map &amp; Chromium <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea">storage</a> API</p></deckgo-reveal></div><div slot="notes" show=""></div></deckgo-slide-content><deckgo-slide-content><h2 slot="title" style="text-align: center">using built-in modules for new HTML elements</h2><div slot="content" style="width: 100%; text-align: center"><img data-src="assets/img/pay-as-you-go.jpg"></div><div slot="notes" show="">DECIDE</div></deckgo-slide-content><deckgo-slide-content><h1 slot="title">Virtual Scroller</h1><div slot="content" style="height: 100%; width: 100%;"><iframe src="https://fergald.github.io/virtual-scroller-demos/demo/loadmore.html" class="demo" width="100%" height="100%"></iframe></div></deckgo-slide-content><deckgo-slide-code src="assets/code-samples/virtual-scroller/virtual-scroller.html">
+                        <!-- prettier-ignore -->
+                        <div slot="notes" show="">
+The &lt;virtual-scroller&gt; will manage the
+rendering of its children. It will prioritize
+rendering things that are in the viewport and not
+render children that are far away, such that we are
+only paying as little rendering cost as possible
+while still allowing them to work with find-in-page,
+accessibility features, focus navigation, fragment
+URL navigation, etc.
+                        </div>
+                    </deckgo-slide-code>
+
+                    <deckgo-slide-code src="assets/code-samples/virtual-scroller/scroll.js">
+                        <div slot="notes" show="">You can add, remove, modify children of the &lt;virtual-scroller&gt; as you would a regular element, using DOM APIs. When the set of actually-rendered children is about to change, the &lt;virtual-scroller&gt; will fire a "rangechange" event with the new range of rendered children.</div></deckgo-slide-code><deckgo-slide-content><h1 slot="title">Switch</h1><div slot="content" style="height: 100%; width: 100%;"><iframe src="https://tkent-google.github.io/std-switch/demo.html" class="demo" width="100%" height="100%"></iframe></div></deckgo-slide-content><deckgo-slide-code src="assets/code-samples/std-switch.html"></deckgo-slide-code><deckgo-slide-content><h1 slot="title">Toast</h1><div slot="content" style="height: 100%; width: 100%;"><deckgo-highlight-code src="assets/code-samples/toast/toast.mjs" highlight-lines="3,6"></deckgo-highlight-code><script type="module" src="assets/code-samples/toast/toast.mjs"></script><div class="demo" style="text-align: center; padding: 1em"><ion-button id="show-toast" color="primary">show toast</ion-button></div></div></deckgo-slide-content><deckgo-slide-code src="assets/code-samples/toast/toast.html"></deckgo-slide-code><deckgo-slide-content class="dark"><h1 slot="title">Aaaand ... That it!</h1><div slot="content" style="width: 100%; text-align: center"><img data-src="assets/img/well-that-was-quick.jpg"></div></deckgo-slide-content><deckgo-slide-title class="title-slide"><h1 slot="title">resources</h1></deckgo-slide-title><deckgo-slide-content><h2 slot="title" style="text-align: center; font-size: 3em">@noel_mace</h2><div slot="content" class="flex flex-center"><img src="assets/icons/twitter.svg" alt="Github" style="padding: 2em" height="500" width="500"></div><div slot="notes" show=""></div></deckgo-slide-content><deckgo-slide-content><h2 slot="title" style="text-align: center; font-size: 3em">dev.to/noelmace</h2><div slot="content" class="flex flex-center"><img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Noël Macé's DEV Profile" style="padding: 2em" height="500" width="500"></div><div slot="notes" show=""></div></deckgo-slide-content><deckgo-slide-content><h2 slot="title" style="text-align: center; font-size: 3em">fullwebdev/fullwebdev</h2><div slot="content" class="flex flex-center"><img src="assets/icons/github.svg" alt="Github" style="padding: 2em" height="500" width="500"><h3>branch: parisweb-2019</h3></div><div slot="notes" show=""></div></deckgo-slide-content><deckgo-slide-content style="--background:center no-repeat url('assets/img/question.jpeg')" class="bg-img"></deckgo-slide-content><deckgo-slide-qrcode content="https://fullweb.dev/slides/wof/parisweb19/" style="--deckgo-qrcode-color-fill: black;"><h1 slot="title">Slides</h1><div slot="content" class="wof-show"><a href="https://fullweb.dev/slides/wof/parisweb19/" style="font-weight: bold" target="_blank" rel="noopener">fullweb.dev/slides/wof/parisweb19/</a></div></deckgo-slide-qrcode><a href="#" onclick="openMenu(event)" slot="actions" style="color: inherit;"><ion-icon name="more"></ion-icon></a></deckgo-deck><deckgo-remote></deckgo-remote></ion-content><ion-fab vertical="bottom" horizontal="end" slot="fixed" id="navigation"><button id="play" onclick="playPause('play', true)" class="navigation ion-activatable" style="display: none;"><ion-ripple-effect></ion-ripple-effect><ion-icon name="play" aria-label="Play video" style="font-size: 1.4em;"></ion-icon></button> <button id="pause" onclick="playPause('pause', true)" class="navigation ion-activatable" style="display: none;"><ion-ripple-effect></ion-ripple-effect><ion-icon name="pause" aria-label="Pause video" style="font-size: 1.4em;"></ion-icon></button> <button onclick="previousSlide()" class="navigation ion-activatable"><ion-ripple-effect></ion-ripple-effect><ion-icon name="arrow-back" aria-label="Previous slide" style="font-size: 1.4em;"></ion-icon></button> <button onclick="nextSlide()" class="navigation ion-activatable"><ion-ripple-effect></ion-ripple-effect><ion-icon name="arrow-forward" aria-label="Next slide" style="font-size: 1.4em;"></ion-icon></button> <button onclick="presentSlidePicker()" class="navigation ion-activatable"><ion-ripple-effect></ion-ripple-effect><ion-icon name="list" md="md-list" ios="md-list" aria-label="Jump to a particular slide" style="font-size: 1.4em;"></ion-icon></button> <button onclick="toggleFullScreen()" class="navigation ion-activatable hide-on-mobile"><ion-ripple-effect></ion-ripple-effect><ion-icon name="expand" aria-label="Full screen" style="font-size: 1.4em;"></ion-icon></button></ion-fab><ion-popover-controller></ion-popover-controller><ion-modal-controller></ion-modal-controller><ion-alert-controller></ion-alert-controller><web-social-share show="false" style="--web-social-share-backdrop-opacity: 0.5;"><ion-icon name="logo-twitter" aria-label="Twitter" slot="twitter" style="color: #00aced; font-size: 1.6rem; display: block;"></ion-icon><ion-icon name="logo-reddit" aria-label="Reddit" slot="reddit" style="font-size: 1.6rem; display: block;"></ion-icon><ion-icon name="logo-linkedin" aria-label="Linkedin" slot="linkedin" style="color: #0077b5; font-size: 1.6rem; display: block;"></ion-icon><ion-icon name="mail" slot="email" aria-label="Email" style="color: #ff8ea3; font-size: 1.6rem; display: block;"></ion-icon><ion-icon name="logo-whatsapp" aria-label="WhatsApp" slot="whatsapp" style="color: #25D366; font-size: 1.6rem; display: block;"></ion-icon></web-social-share></ion-app><noscript>Please enable Javascript to access this presentation.</noscript><script src="main.97297fc7cd016b1fe85d.js?0307c685b7c4a5f86039"></script></body></html>

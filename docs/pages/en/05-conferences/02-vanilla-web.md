@@ -16,11 +16,11 @@ Hear my story, traveler! My old eyes have seen him in these lands! Let me tell y
 
 October 03, 2019 at 3:30 pm.
 
-- [slides](https://devfesttls19.wof.show/){target="\_blank"}
+- [slides](/slides/vanilla1/devfesttlse19/index.html){target="\_blank"}
 - [(fr) video](https://youtu.be/-d_Ka7OE4Xk){target="\_blank"}
 
 ## [Paris Open Source Summit](https://2019.opensourcesummit.paris/){target="\_blank"}
 
 December 11, 2019 at 10:00 am.
 
-- [slides](https://vanilla-poss19.wof.show/){target="\_blank"}
+- [slides](/slides/vanilla1/poss19/index.html){target="\_blank"}

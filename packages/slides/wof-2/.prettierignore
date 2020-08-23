@@ -1,0 +1,5 @@
+src/scripts/*.js
+src/css/*.css
+dist/
+webpack.config.js
+node_modules/

@@ -74,7 +74,9 @@ Most packages are also parts of the website, but may provide more than that.
 | /packages/livre-fr/ (private) | [/02-fundamentals/02-materials/](https://fullweb.dev/02-fundamentals/02-materials/) |
 | [/packages/panpress/](./packages/panpress/) | _static website generator_ |
 | [/packages/perf/](./packages/perf/) | _WIP_ |
-| [/packages/reveal/](./packages/reveal/) | [/slides/reveal/](https://fullweb.dev/slides/reveal/) (for historical purposes only) |
+| [/packages/slides/wof-1/](./packages/slides/wof-1/) | [/slides/wof1/](https://fullweb.dev/slides/wof1/) (for historical purposes only) |
+| [/packages/slides/wof-2/](./packages/slides/wof-2/) | [/slides/wof/](https://fullweb.dev/slides/wof/latest/) |
+| [/packages/slides/vanilla-1/](./packages/slides/vanilla-1/) | [/slides/vanilla1/](https://fullweb.dev/slides/vanilla1/latest/) |
 
 You'll find more information about each of these projects in their respective README.md files.
 
@@ -136,7 +138,8 @@ Any line of the commit message cannot be longer than 100 characters.
   │       │             └─⫸ Summary in present tense. Not capitalized. No period at the end.
   │       │
   │       └─⫸ Commit Scope: docs|code-samples|codelabs|data-driven-pwa|illustrations|
-  │                          livre-fr|perf|reveal|helpers|benchmark|panpress-cli|panpress-starter
+  │                          livre-fr|perf|slides-(vanilla-1|wof-1|wof-2)|helpers|
+  │                          benchmark|panpress-(cli|starter)
   │
   └─⫸ Commit Type: build|ci|docs|feat|fix|perf|refactor|style|test
 ```

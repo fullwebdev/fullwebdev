@@ -3,7 +3,7 @@
   "version": "0.9.1",
   "private": true,
   "scripts": {
-    "build": "panpress",
+    "build": "panpress -v",
     "start": "panpress --dev",
     "server": "panpress --serve",
     "help": "panpress --help",

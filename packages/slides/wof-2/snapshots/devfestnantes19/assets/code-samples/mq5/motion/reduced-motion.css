@@ -1,0 +1,11 @@
+@media (prefers-reduced-motion: reduce) {
+    button {
+        animation: none;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    button {
+        animation: vibrate 0.3s linear infinite both;
+    }
+}

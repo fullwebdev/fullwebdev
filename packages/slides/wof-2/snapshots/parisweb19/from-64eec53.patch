@@ -1,0 +1,323 @@
+diff --git a/src/assets/code-samples/copy-share-twitter.js b/src/assets/code-samples/copy-share-twitter.js
+index a89827b..caad6cf 100644
+--- a/src/assets/code-samples/copy-share-twitter.js
++++ b/src/assets/code-samples/copy-share-twitter.js
+@@ -1,8 +1,8 @@
+ const tweets = {
+-    slides: `Hey look, I can share my slides with the Twitter #PWA using the Web Share & Web Share Target APIs! 🙌 #usetheplatform #WebOnFIRE wof.show`,
+-    camera: `I can share a picture with the Twitter #PWA from the Camera App using the Web Share Target API Level 2 😁! #WebOnFIRE #usetheplatform wof.show`,
+-    picture: `I can also share a picture from my own app using the Web Share & Web Share Target API Level 2! #WebOnFIRE #usetheplatform wof.show`,
+-    clipboardPic: `And I can even share an image using the Async Clipboard Level 2 🤯! #WebOnFIRE #usetheplatform wof.show`
++    slides: `Hey look, I can share my slides with the Twitter #PWA using the Web Share & Web Share Target APIs! 🙌 #usetheplatform #WebOnFIRE `,
++    camera: `I can share a picture with the Twitter #PWA from the Camera App using the Web Share Target API Level 2 😁! #WebOnFIRE #usetheplatform `,
++    picture: `I can also share a picture from my own app using the Web Share & Web Share Target API Level 2! #WebOnFIRE #usetheplatform `,
++    clipboardPic: `And I can even share an image using the Async Clipboard Level 2 🤯! #WebOnFIRE #usetheplatform `
+ };
+ 
+ const getImgFile = async (url) => {
+@@ -49,7 +49,7 @@ document
+     .addEventListener('click', () => copy(tweets.camera));
+ 
+ (async () => {
+-    const imgFile = await getImgFile('/assets/img/usetheplatform.png');
++    const imgFile = await getImgFile('assets/img/usetheplatform.png');
+     const shareData = {
+         text: tweets.picture,
+         files: [imgFile]
+@@ -65,7 +65,7 @@ document
+ 
+ document.querySelector('.copy-btn-img').addEventListener('click', async () => {
+     try {
+-        const imgURL = '/assets/img/elmo.png';
++        const imgURL = 'assets/img/elmo.png';
+         const data = await fetch(imgURL);
+         const blob = await data.blob();
+         const item = new ClipboardItem(
+diff --git a/src/css/google-fonts.css b/src/css/google-fonts.css
+index 27bcba7..6694f74 100644
+--- a/src/css/google-fonts.css
++++ b/src/css/google-fonts.css
+@@ -2,14 +2,14 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: url(/assets/fonts/KFOmCnqEu92Fr1Mu4mxO.eot);
++  src: url(/slides/wof/parisweb19/assets/fonts/KFOmCnqEu92Fr1Mu4mxO.eot);
+ }
+ /* cyrillic-ext */
+ @font-face {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/parisweb19/assets/fonts/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
+   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+ }
+ /* cyrillic */
+@@ -17,7 +17,7 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/parisweb19/assets/fonts/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');
+   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+ }
+ /* greek-ext */
+@@ -25,7 +25,7 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/parisweb19/assets/fonts/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');
+   unicode-range: U+1F00-1FFF;
+ }
+ /* greek */
+@@ -33,7 +33,7 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/parisweb19/assets/fonts/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
+   unicode-range: U+0370-03FF;
+ }
+ /* vietnamese */
+@@ -41,7 +41,7 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/parisweb19/assets/fonts/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
+   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+ }
+ /* latin-ext */
+@@ -49,7 +49,7 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/parisweb19/assets/fonts/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
+   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+ }
+ /* latin */
+@@ -57,26 +57,26 @@
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/parisweb19/assets/fonts/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+ }
+ @font-face {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu4mxM.woff) format('woff');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/parisweb19/assets/fonts/KFOmCnqEu92Fr1Mu4mxM.woff) format('woff');
+ }
+ @font-face {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu4mxPKTU1Kg.ttf) format('truetype');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/parisweb19/assets/fonts/KFOmCnqEu92Fr1Mu4mxPKTU1Kg.ttf) format('truetype');
+ }
+ @font-face {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+-  src: local('Roboto'), local('Roboto-Regular'), url(/assets/fonts/KFOmCnqEu92Fr1Mu4mxN) format('svg');
++  src: local('Roboto'), local('Roboto-Regular'), url(/slides/wof/parisweb19/assets/fonts/KFOmCnqEu92Fr1Mu4mxN) format('svg');
+ }
+ 
+ :root {
+diff --git a/src/index.html b/src/index.html
+index 257732c..fb0056f 100644
+--- a/src/index.html
++++ b/src/index.html
+@@ -7,7 +7,7 @@
+             content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+         />
+ 
+-        <base href="/" />
++        <base href="/slides/wof/parisweb19/" />
+ 
+         <title>The Web is on F.I.R.E.</title>
+ 
+@@ -27,10 +27,10 @@
+         />
+         <meta property="og:site_name" content="The Web is on F.I.R.E." />
+         <meta property="og:type" content="website" />
+-        <meta property="og:url" content="https://conf.wof.show" />
++        <meta property="og:url" content="https://fullweb.dev/slides/wof/parisweb19/" />
+         <meta
+             property="og:image"
+-            content="https://conf.wof.show/assets/favicon/icon-512x512.png"
++            content="https://fullweb.dev/slides/wof/parisweb19/assets/favicon/icon-512x512.png"
+         />
+         <meta property="og:image:type" content="image/png" />
+ 
+@@ -42,7 +42,7 @@
+         />
+         <meta
+             name="twitter:image:src"
+-            content="https://conf.wof.show/assets/favicon/icon-512x512.png"
++            content="https://fullweb.dev/slides/wof/parisweb19/assets/favicon/icon-512x512.png"
+         />
+         <meta name="twitter:card" content="summary" />
+ 
+@@ -450,7 +450,7 @@
+                             <p style="font-style: italic">
+                                 Go read it
+                                 <a
+-                                    href="https://github.com/noelmace/slides-wof-conf/blob/master/src/notes.md"
++                                    href="https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/wof-2/src/notes.md"
+                                     >on Github</a
+                                 >!
+                             </p>
+@@ -674,7 +674,7 @@
+                         <h1 slot="title" hidden>Prevent mini-infobar</h1>
+                         <div slot="content" class="flex flex-center">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/prevent-infobar.js"
++                                src="assets/code-samples/prevent-infobar.js"
+                                 highlight-lines="2,3"
+                             >
+                             </deckgo-highlight-code>
+@@ -821,7 +821,7 @@
+                         <h1 slot="title">Bare specifiers</h1>
+                         <div slot="content">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/import-maps/bare.js"
++                                src="assets/code-samples/import-maps/bare.js"
+                             >
+                             </deckgo-highlight-code>
+                             <deckgo-reveal>
+@@ -844,11 +844,11 @@
+                         <h1 slot="title">Import Maps</h1>
+                         <div slot="content">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/import-maps/map.html"
++                                src="assets/code-samples/import-maps/map.html"
+                             >
+                             </deckgo-highlight-code>
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/import-maps/bare-equivalent.js"
++                                src="assets/code-samples/import-maps/bare-equivalent.js"
+                             >
+                             </deckgo-highlight-code>
+                         </div>
+@@ -1061,7 +1061,7 @@ new range of rendered children.
+                             slot="title"
+                             style="text-align: center; font-size: 3em"
+                         >
+-                            noelmace/slides-wof-conf
++                            fullwebdev/fullwebdev
+                         </h2>
+                         <div slot="content" class="flex flex-center">
+                             <img
+@@ -1084,18 +1084,17 @@ new range of rendered children.
+                     </deckgo-slide-content>
+ 
+                     <deckgo-slide-qrcode
+-                        content="https://parisweb-2019.wof.show"
++                        content="https://fullweb.dev/slides/wof/parisweb19/"
+                         style="--deckgo-qrcode-color-fill: black;"
+                     >
+                         <h1 slot="title">Slides</h1>
+                         <div slot="content" class="wof-show">
+                             <a
+-                                href="https://conf.wof.show"
++                                href="https://fullweb.dev/slides/wof/parisweb19/"
+                                 style="font-weight: bold"
+                                 target="_blank"
+                                 rel="noopener"
+-                                ><span class="sub">parisweb-2019.</span
+-                                >wof.show</a
++                                >fullweb.dev/slides/wof/parisweb19/</a
+                             >
+                         </div>
+                     </deckgo-slide-qrcode>
+diff --git a/src/scripts/menu.js b/src/scripts/menu.js
+index f954a3d..94b4a13 100644
+--- a/src/scripts/menu.js
++++ b/src/scripts/menu.js
+@@ -18,7 +18,7 @@ buildMenuListActions = () => {
+         result += '<ion-item ion-item button detail="false" onclick="displaySlideNotes()" color="primary" style="--border-style: none;"><ion-icon name="clipboard" aria-label="Display slide notes" slot="end"></ion-icon><ion-label>Display slide notes</ion-label></ion-item>';
+         result += '<ion-item ion-item button detail="false" onclick="displayRemoteControl()" color="primary" style="--border-style: none;"><ion-icon name="phone-portrait" aria-label="Remote control" slot="end"></ion-icon><ion-label>Remote control</ion-label></ion-item>';
+         result += '<ion-item ion-item button detail="false" onclick="openShare()" color="primary" style="--border-style: none;"><ion-icon name="share" aria-label="Share this presentation" slot="end"></ion-icon><ion-label>Share</ion-label></ion-item>';
+-        result += '<ion-item ion-item button detail="false" onclick="openLink(\'https://deckdeckgo.com\')" style="--border-style: none; --ion-item-background: white;"><ion-icon src="/assets/icons/deckdeckgo.svg" aria-label="DeckDeckGo" slot="end"></ion-icon><ion-label>Created with DeckDeckGo</ion-label></ion-item>';
++        result += '<ion-item ion-item button detail="false" onclick="openLink(\'https://deckdeckgo.com\')" style="--border-style: none; --ion-item-background: white;"><ion-icon src="assets/icons/deckdeckgo.svg" aria-label="DeckDeckGo" slot="end"></ion-icon><ion-label>Created with DeckDeckGo</ion-label></ion-item>';
+ 
+         resolve(result);
+     });
+diff --git a/src/scripts/modalRemoteControl.js b/src/scripts/modalRemoteControl.js
+index 10a8b46..10b4633 100644
+--- a/src/scripts/modalRemoteControl.js
++++ b/src/scripts/modalRemoteControl.js
+@@ -17,9 +17,9 @@ displayRemoteControl = async () => {
+     </ion-toolbar>
+   </ion-header>
+   <ion-content padding color="primary">
+-  
++
+   ${getRemoteControlModalContent()}
+-    
++
+   </ion-content>
+   `;
+ 
+@@ -72,18 +72,18 @@ function getRemoteControlModalContent() {
+ 
+         return `<ion-list style="ion-no-margin">
+         <ion-item style="--border-color: transparent; color: black;">
+-            <ion-label class="ion-text-wrap">Toggle to disable or enable the remote control</ion-label> 
++            <ion-label class="ion-text-wrap">Toggle to disable or enable the remote control</ion-label>
+             <ion-toggle slot="end" checked="true" color="tertiary" style="--background: var(--ion-color-light); --handle-background: white; --handle-background-checked: white;"></ion-toggle>
+         </ion-item>
+     </ion-list>
+-  
++
+     <p class="ion-padding-start ion-padding-end" style="margin: 0; font-size: 16px;">Remote control this presentation with your phone or any devices. Scan the following QR Code to open it directly or get the Progressive Web Apps at <a href="https://deckdeckgo.app" target="_blank" style="color: var(--ion-color-tertiary);">https://deckdeckgo.app <ion-icon name="open" style="color: var(--ion-color-tertiary); vertical-align: bottom;"></ion-icon></a> and find <mark style="background: transparent; color: var(--ion-color-tertiary); font-weight: 500;">${remoteRoom}</mark>.</p>
+ 
+     <p class="ion-padding-start ion-padding-end" style="margin-bottom: 0; font-size: 16px;">If you can't connect or if you lost the connection, toggle off and on the connection to refresh it.</p>
+ 
+     <div class="qrcode-container" style="display: flex; justify-content: center;  --deckgo-qrcode-size: 300px; --deckgo-qrcode-color-fill: var(--ion-color-tertiary);">
+         <deckgo-qrcode content="${qrCodeLink}">
+-            <ion-icon slot="logo" src="/assets/icons/deckdeckgo.svg"></ion-icon>
++            <ion-icon slot="logo" src="assets/icons/deckdeckgo.svg"></ion-icon>
+         </deckgo-qrcode>
+     </div>`;
+     }
+diff --git a/webpack.config.js b/webpack.config.js
+index c48949f..0f94298 100644
+--- a/webpack.config.js
++++ b/webpack.config.js
+@@ -5,8 +5,6 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+ 
+ const {DeckDeckGoInfoPlugin, DeckDeckGoRemoveNotesPlugin} = require('deckdeckgo-webpack-plugins');
+ 
+-const {GenerateSW} = require('workbox-webpack-plugin');
+-
+ const webpack = require('webpack');
+ 
+ const path = require('path');
+@@ -31,6 +29,9 @@ const config = {
+ };
+ 
+ const plugins = [
++    new webpack.DefinePlugin({
++            'process.env.ASSET_PATH': '/slides/wof/parisweb19/',
++    }),
+     new CleanWebpackPlugin({
+         cleanStaleWebpackAssets: false
+     }),
+@@ -57,9 +58,6 @@ module.exports = (env, argv) => {
+     }
+ 
+     if (argv.mode === 'production') {
+-        plugins.push(new GenerateSW({
+-            ignoreURLParametersMatching: [/./]
+-        }));
+         plugins.push(new DeckDeckGoInfoPlugin());
+ 
+         if (!argv.notes) {

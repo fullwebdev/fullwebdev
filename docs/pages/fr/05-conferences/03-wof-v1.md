@@ -17,14 +17,14 @@ Et bien entendu, nous verrons enfin comment les mettre en place (nottament grâc
 
 Présentée le 20 Mars 2019 de 13:30 à 16:30 au [Breizhcamp](https://2019.breizhcamp.org/conference/programme/){target="\_blank"}.
 
-- <a href="/slides/reveal/breizhcamp-2019.html" target="_blank">slides</a>
+- <a href="/slides/wof1/breizhcamp-2019.html" target="_blank">slides</a>
 - [vidéo](https://youtu.be/OQ-dr-7pLaA){target="\_blank"}
 
 ## Sous-thème: PRPL pattern
 
 Présenté le 7 Juin 2019 de 17:20 à 17:50 au Best of Web, Paris.
 
-- <a href="/slides/reveal/BoW-PRPL-2019.html" target="_blank">slides</a>
+- <a href="/slides/wof1/BoW-PRPL-2019.html" target="_blank">slides</a>
 - [vidéo](https://youtu.be/YSn8r0BDKTY){target="\_blank"}
 
 ### Résumé
@@ -45,4 +45,4 @@ Du coup, ça te dit une démo, un pas à pas, et quelques approfondissements sur
 
 Nous avons organisé avec [Wolfgang Goedel](https://twitter.com/wgoedel){target="\_blank"} une table ronde sur le sujet au [Best of Web](https://www.bestofweb.paris/2019/){target="\_blank"} le 6 juin 2019, de 14:00 à 16:00.
 
-Les <a href="/slides/reveal/BoW-workshop-2019.html" target="_blank">slides</a> sont disponibles, mais nous les avons très peu utilisés.
+Les <a href="/slides/wof1/BoW-workshop-2019.html" target="_blank">slides</a> sont disponibles, mais nous les avons très peu utilisés.

@@ -4,8 +4,8 @@
 ## nor to return success if one or more (but not all) scripts failed
 ## TODO: move to monocli
 
-PACKAGES=('docs' 'packages/codelabs' 'packages/reveal')
-ROOT_DISTS=('' 'codelabs/doc' 'slides/reveal')
+PACKAGES=('docs' 'packages/codelabs' 'packages/slides/wof-2' 'packages/slides/wof-1' 'packages/slides/vanilla-1' )
+ROOT_DISTS=('' 'codelabs/doc' 'slides/wof' 'slides/wof1' 'slides/vanilla1' )
 
 NBR_PACKAGES=${#PACKAGES[@]}
 NBR_ROOT_DISTS=${#ROOT_DISTS[@]}
@@ -42,8 +42,9 @@ for (( i=0; i<${NBR_PACKAGES}; i++ )); do
 
   if [[ $FORCE = true ]] || [[ $HAS_CHANGED -eq 0 ]]; then
     CI_BUILD_FAILED=false
+    echo "[cd] $pkg"
     cd "$pkg"
-    npm run build -- -v
+    npm run build
     # TODO: check for file conflicts (docs)
     rm -rf "${root_dist}"
     mkdir -p "${root_dist}"

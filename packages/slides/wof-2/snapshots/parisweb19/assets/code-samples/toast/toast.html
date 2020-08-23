@@ -1,0 +1,14 @@
+<script type="module">
+    import 'std:elements/toast';
+
+    // this doesn't work yet
+    document.querySelector('#show-toast-el').addEventListener('click', () => {
+        document.querySelector('#sample-toast').show({
+            duration: 1000
+        });
+    });
+</script>
+
+<std-toast id="sample-toast" type="success">
+    Email sent!
+</std-toast>

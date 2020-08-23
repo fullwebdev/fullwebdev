@@ -1,0 +1,13 @@
+{
+  "name": "Web Share Target Test App",
+  [...]
+  "share_target": {
+    "action": "sharetarget.html",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  [...]
+}

@@ -14,11 +14,11 @@ Sache, voyageur, qu’elle est déjà passée par nos contrées. Viens, et écou
 
 Le 3 Octobre 2019 à 15:30.
 
-- [slides](https://devfesttls19.wof.show/){target="\_blank"}
+- [slides](/slides/vanilla1/devfesttlse19/index.html){target="\_blank"}
 - [vidéo](https://youtu.be/-d_Ka7OE4Xk){target="\_blank"}
 
 ### [Paris Open Source Summit](https://2019.opensourcesummit.paris/){target="\_blank"}
 
 Le 11 Décembre 2019 à 10:00.
 
-- [slides](https://vanilla-poss19.wof.show/){target="\_blank"}
+- [slides](/slides/vanilla1/poss19/index.html){target="\_blank"}
