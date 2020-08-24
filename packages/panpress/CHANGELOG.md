@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0-beta.1](https://github.com/fullwebdev/fullwebdev/compare/panpress@v0.2.0...panpress@v0.3.0-beta.1) (2020-08-24)
+
+### Features
+
+- **panpress-cli:** allow route aliases without numbering ([ec0cdfe](https://github.com/fullwebdev/fullwebdev/commit/ec0cdfece472514c281197af93f9adf13230a754))
+- **panpress-starter:** add route aliases without numbering ([8f4b63a](https://github.com/fullwebdev/fullwebdev/commit/8f4b63a32a0a0d21645d2fe0bafe85a9a5b1136f))
+
 ## [0.2.0](https://github.com/fullwebdev/fullwebdev/compare/panpress@v0.1.0...panpress@v0.2.0) (2020-08-20)
 
 ### Features
