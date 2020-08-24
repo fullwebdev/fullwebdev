@@ -1,6 +1,6 @@
 {
   "name": "@fullweb/illustrations",
-  "version": "0.9.1",
+  "version": "0.10.0",
   "private": true,
   "scripts": {
     "build": "npm run clean && concurrently \"npm:mermaid\" \"npm:uml\"",

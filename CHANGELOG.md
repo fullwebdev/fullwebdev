@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.0](https://github.com/fullwebdev/fullwebdev/compare/v0.9.1...v0.10.0) (2020-08-24)
+
+### Features
+
+- **docs:** embed one videos for each conf ([057ba1a](https://github.com/fullwebdev/fullwebdev/commit/057ba1aac72b5b356a1ce15efc0d50516dfc5758))
+- **docs:** matomo ([e9a64fb](https://github.com/fullwebdev/fullwebdev/commit/e9a64fb057fadd2ea7ec4e16de3ab5b2bbc0417a))
+- **helpers:** split packages ([16b0a3c](https://github.com/fullwebdev/fullwebdev/commit/16b0a3c4aec5229f6e3b62d335580d6057a31ebc))
+- **panpress-cli:** allow to not include additionnal pages ([bdda3b4](https://github.com/fullwebdev/fullwebdev/commit/bdda3b4cb349055aa6b4cc3dd8ee302e95d0430a))
+- **slides-vanilla:** _import_ ([d04fb46](https://github.com/fullwebdev/fullwebdev/commit/d04fb46))
+- **wof-slides:** _import_ ([9a90014](https://github.com/fullwebdev/fullwebdev/commit/9a90014))
+
+### Bug Fixes
+
+- **docs:** links to slides ([7321a75](https://github.com/fullwebdev/fullwebdev/commit/7321a758d250c7f96d1857e6cd1c8fd986ec7987))
+- **docs:** links to vanilla-slides ([592752e](https://github.com/fullwebdev/fullwebdev/commit/592752e47e6f8625312b1857977d96238e168c8f))
+- **docs:** remove ref to web-on-fire repo for slides ([bb90de7](https://github.com/fullwebdev/fullwebdev/commit/bb90de795921939950fd407aac64199f6b2e66a3))
+- **docs:** url to slides-wof-1 ([fe88b34](https://github.com/fullwebdev/fullwebdev/commit/fe88b34ecccda88babf13242600a1a24f8adab8d))
+- **panpress-cli:** hard coded repo url ([572901b](https://github.com/fullwebdev/fullwebdev/commit/572901b59cc82f864902bb94faa33001979822f7))
+- **panpress-cli:** path to snowpack binary ([ad88fac](https://github.com/fullwebdev/fullwebdev/commit/ad88fac11409070fed734f7f5d6cc60781ecea3d))
+
 ### [0.9.1](https://github.com/fullwebdev/fullwebdev/compare/v0.9.0...v0.9.1) (2020-08-16)
 
 ### Bug Fixes
