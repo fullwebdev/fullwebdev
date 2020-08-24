@@ -22,7 +22,7 @@ Opting, or not, for a framework or library, should only be based on context. Thi
 
 We just started this project, so this website is mostly inclomplete for now.
 
-First, we're focusing on the [fundamentals](/02-fundamentals/) section, in 3 steps:
+First, we're focusing on the [fundamentals](/fundamentals/) section, in 3 steps:
 
 1. writing a lot of contents, in French (sorry for that)
 2. finalizing, delivering and using this French version
@@ -32,13 +32,13 @@ Step 2 should end by the end of this year (2020), and we can't share a lot in th
 
 Yet, we also create a lot of open-source stuff doing so.
 
-First, most instruction materials (e.g. code samples and illustrations) are continuously delivered in the [Instruction Materials](/02-fundamentals/02-fundamentals/02-materials/) section.
+First, most instruction materials (e.g. code samples and illustrations) are continuously delivered in the [Instruction Materials](/fundamentals/fundamentals/materials/) section.
 
-We also maintain an [inventory](/03-inventory/) of every project we study, use and talk about (mostly libraries and dev tools). Any external contribution can help us, so please do not hesitate to send us a pull request.
+We also maintain an [inventory](/inventory/) of every project we study, use and talk about (mostly libraries and dev tools). Any external contribution can help us, so please do not hesitate to send us a pull request.
 
 On top of that, we are creating a bunch of dev tools during this process, which should be presented here pretty soon.
 
-Finally, you can already study our [codelabs](/04-codelabs/) and the videos of our [conferences](/05-conferences/). Those are 100% publicly available and all the related materials are open sourced on GitHub.
+Finally, you can already study our [codelabs](/codelabs/) and the videos of our [conferences](/conferences/). Those are 100% publicly available and all the related materials are open sourced on GitHub.
 
 ## Stay tuned
 

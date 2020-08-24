@@ -9,7 +9,7 @@ Entries are orderred by popularity, based on npmjs.org download statistics.
 ::: tip
 Is your favorite tool or library missing?
 
-Go [edit this page](https://github.com/fullwebdev/fullwebdev/edit/master/docs/03-inventory/README.md){target="\_blank"} or [open an issue](https://github.com/fullwebdev/fullwebdev/issues/new){target="\_blank"} on GitHub.
+Go [edit this page](https://github.com/fullwebdev/fullwebdev/edit/master/docs/inventory/README.md){target="\_blank"} or [open an issue](https://github.com/fullwebdev/fullwebdev/issues/new){target="\_blank"} on GitHub.
 :::
 
 ## Runtime Libraries

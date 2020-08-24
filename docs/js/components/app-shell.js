@@ -58,7 +58,7 @@ const getRoutes = (path, lang = "en") => {
     const firstChild = menu.shift();
     firstChild.separator = true;
     menu = [
-      routes[pathElmts[0]].children["01-introduction"],
+      routes[pathElmts[0]].children["introduction"],
       reduceRoute(pathElmts.slice(0, -1)),
       firstChild,
       ...menu,

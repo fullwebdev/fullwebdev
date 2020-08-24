@@ -39,7 +39,7 @@ October 22, 2019, 11:20 at [Devfest Nantes](https://devfest2019.gdgnantes.com/se
 
 February 14, 2020, from 10:00 to 12:00, at [Devfest Paris](https://devfest.gdgparis.com/sessions/the_web_is_still_on_f_i_r_e_workshop_/){target="\_blank"}.
 
-[Step-by-step](/04-codelabs/doc/modern-data-driven){target="\_blank"} is available on this same website.
+[Step-by-step](/codelabs/doc/modern-data-driven){target="\_blank"} is available on this same website.
 
 ## Long version
 

@@ -29,7 +29,7 @@ _Un an de plus c'est écoulé, et la Web Platform continue à évoluer. Entre de
 
 Rien n'arrête le Web ! Malgré le chaos auquel nous avons tous dû faire face depuis l'an dernier, les projets, débats et expérimentations ont continué à suivre leur cours. Il est donc, encore une fois, temps de se mettre à jour.
 
-En 2019, je concluais ma conférence [**Web on FIRE**](https://fullweb.dev/en/05-conferences/01-wof-v2) par un chapitre sur la modularité du Web, évoquant Import Maps et les Built-in Modules. Ces derniers ont cependant dû être abandonnés, pour de bonnes raisons. Mais pourquoi ?
+En 2019, je concluais ma conférence [**Web on FIRE**](https://fullweb.dev/en/conferences/wof-v2) par un chapitre sur la modularité du Web, évoquant Import Maps et les Built-in Modules. Ces derniers ont cependant dû être abandonnés, pour de bonnes raisons. Mais pourquoi ?
 
 - Comment se fait-il que des solutions en apparence si prometteuses puissent être ainsi mises aux oubliettes ?
 - Doit-on s'attendre à la même chose pour tous les sujets ?

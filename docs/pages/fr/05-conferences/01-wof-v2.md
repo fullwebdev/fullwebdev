@@ -35,7 +35,7 @@ Présentée le 22 octobre 2019 à 11:20 au [Devfest Nantes](https://devfest2019.
 
 Animé le 14 Février 2020 de 10:00 à 12:00 au [Devfest Paris](https://devfest.gdgparis.com/sessions/the_web_is_still_on_f_i_r_e_workshop_/){target="\_blank"}.
 
-Vous pouvez suivre la [pas à pas](/04-codelabs/doc/modern-data-driven){target="\_blank"} par vous même dans la section associée de ce site.
+Vous pouvez suivre la [pas à pas](/codelabs/doc/modern-data-driven){target="\_blank"} par vous même dans la section associée de ce site.
 
 ## Version longue
 

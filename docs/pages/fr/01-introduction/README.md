@@ -20,17 +20,17 @@ Adopter, ou non, certains outils, ne devrait se faire qu'en fonction du contexte
 
 Ce projet démarre tout juste, et est donc encore largement incomplet.
 
-Pour l'heure, nous nous focalisons sur la création d'une grande quantité de contenus en français (sans traduction en anglais, donc), liés à la section [fondamentaux](/02-fundamentals/).
+Pour l'heure, nous nous focalisons sur la création d'une grande quantité de contenus en français (sans traduction en anglais, donc), liés à la section [fondamentaux](/fundamentals/).
 
 Ce travail devrais être achevé d'ici la fin de cette année 2020, ce qui nous permettra ensuite de délivrer par étapes des contenus courts sur ce site.
 
-Durant cette période, l'intégralité des illustrations et exemples de code étant créées en Open Source, vous retrouverez ceux-ci dans les section [Code & Démos](/02-fundamentals/01-code-samples/) et [fragments pédagogiques](/02-fundamentals/02-materials/).
+Durant cette période, l'intégralité des illustrations et exemples de code étant créées en Open Source, vous retrouverez ceux-ci dans les section [Code & Démos](/fundamentals/code-samples/) et [fragments pédagogiques](/fundamentals/materials/).
 
-Nous maintenons également un "inventaire" de tous les projets que nous avons l'occasion d'étudier, présenter et utiliser dans la section [inventory](/03-inventory/) (non traduite de l'anglais pour l'instant).
+Nous maintenons également un "inventaire" de tous les projets que nous avons l'occasion d'étudier, présenter et utiliser dans la section [inventory](/inventory/) (non traduite de l'anglais pour l'instant).
 
 De plus, nous développons également plusieurs outils de développement afin de mieux concrétiser ce travail. Ceux-ci sont bien entendu également Open-Source, et seront présentés sur ce même site prochainement.
 
-Enfin, vous pouvez dès à présent consulter nos [codelabs](/04-codelabs/) et [conférences](/05-conferences/), ceux-ci ainsi que tous les éléments associés étant 100 % publiques et Open Source.
+Enfin, vous pouvez dès à présent consulter nos [codelabs](/codelabs/) et [conférences](/conferences/), ceux-ci ainsi que tous les éléments associés étant 100 % publiques et Open Source.
 
 ## Nous suivre
 

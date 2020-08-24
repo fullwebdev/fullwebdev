@@ -193,7 +193,7 @@ export default ({ data, routeParams: [, pkgName] }) => {
   }
 
   return html`
-    <p><a href="/en/03-inventory/">&lt; back to inventory</a></p>
+    <p><a href="/en/inventory/">&lt; back to inventory</a></p>
     <main class="inventory-entry" aria-labelledby="main-title">
       <h1>${name}</h1>
 
