@@ -66,12 +66,12 @@ Most packages are also parts of the website, but may provide more than that.
 | package | usage |
 | ------- | ----- |
 | [/packages/benchmark/](https://github.com/fullwebdev/benchmark/) (submodule) | _WIP_ |
-| [/packages/code-samples/](./packages/code-samples/) | [/02-fundamentals/01-code-samples/](https://fullweb.dev/02-fundamentals/01-code-samples/) |
-| [/packages/codelabs/](./packages/codelabs/) | [/04-codelabs/](https://fullweb.dev/04-codelabs/) |
+| [/packages/code-samples/](./packages/code-samples/) | [/fundamentals/code-samples/](https://fullweb.dev/fundamentals/code-samples/) |
+| [/packages/codelabs/](./packages/codelabs/) | [/codelabs/](https://fullweb.dev/codelabs/) |
 | [/packages/data-driven-pwa/](./packages/data-driven-pwa/) | base project for the associated [codelab](https://fullweb.dev/codelabs/doc/modern-data-driven_fr/index.html) |
 | [/packages/helpers/](./packages/helpers/) | _helpers functions_ |
 | [/packages/illustrations/](./packages/illustrations/) | _images and more_ |
-| /packages/livre-fr/ (private) | [/02-fundamentals/02-materials/](https://fullweb.dev/02-fundamentals/02-materials/) |
+| /packages/livre-fr/ (private) | [/fundamentals/materials/](https://fullweb.dev/fundamentals/materials/) |
 | [/packages/panpress/](./packages/panpress/) | _static website generator_ |
 | [/packages/perf/](./packages/perf/) | _WIP_ |
 | [/packages/slides/wof-1/](./packages/slides/wof-1/) | [/slides/wof1/](https://fullweb.dev/slides/wof1/) (for historical purposes only) |
