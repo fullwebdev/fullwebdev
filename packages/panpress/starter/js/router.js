@@ -3,6 +3,7 @@ import appShellTemplate from "./components/app-shell.js";
 import { sidebarState } from "./sidebar.js";
 import Prism from "prismjs";
 import { langBase, getLang } from "./lang.js";
+import { routes } from "./routes.js";
 
 import notFound from "./routes/404.js";
 
@@ -65,7 +66,7 @@ const routeContainer = document.getElementById("router-outlet");
  */
 const progRoutes = [
   [
-    // /<lang>/05-inventory/:npm-package-name
+    // /<lang>/inventory/:npm-package-name
     /^\/(?:en|fr)\/(?:\d+-)?inventory\/((?:(?:@|%40)[\w-~][\w-.~]*(?:\/|%2F))?[\w-~][\w-.~]+)$/,
     "/js/routes/inventory-item.js",
   ],
@@ -85,7 +86,9 @@ export async function navigate(
    * @type {string[]}
    */
   let routeMatch;
-  const route = progRoutes.find(([regex]) => (routeMatch = regex.exec(path)));
+  const progRoute = progRoutes.find(
+    ([regex]) => (routeMatch = regex.exec(path))
+  );
 
   /**
    * @type {string}
@@ -96,9 +99,12 @@ export async function navigate(
    */
   let viewRoutePath;
 
-  if (route) {
-    importPath = route[1];
+  if (progRoute) {
+    importPath = progRoute[1];
   } else {
+    const pathHasLang = langBase.test(path);
+    const lang = getLang();
+
     viewRoutePath = path;
     if (path.endsWith("/")) {
       viewRoutePath += "index.js";
@@ -106,13 +112,31 @@ export async function navigate(
       viewRoutePath = path.concat(".js");
     }
 
-    if (!langBase.test(path)) {
-      const lang = getLang();
+    if (!pathHasLang) {
       path = "/" + lang + path;
-      viewRoutePath = "/" + lang + viewRoutePath;
     }
 
-    importPath = `${baseUrl}/views${viewRoutePath}`;
+    let routeInfos = routes[lang]
+      ? path
+          .split("/")
+          .filter((e) => e)
+          .reduce((prev, cur) => {
+            return prev[cur] || (prev.children && prev.children[cur]);
+          }, routes)
+      : null;
+
+    if (routeInfos) {
+      importPath = routeInfos.file;
+    } else {
+      viewRoutePath = path;
+      if (path.endsWith("/")) {
+        viewRoutePath += "index.js";
+      } else {
+        viewRoutePath = path.concat(".js");
+      }
+
+      importPath = `${baseUrl}/views${viewRoutePath}`;
+    }
   }
 
   let template;

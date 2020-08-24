@@ -203,7 +203,7 @@ export default (data) => html`
     </p>
 
     <p class="action">
-      <a class="action-button button" href="./01-introduction/"
+      <a class="action-button button" href="./introduction/"
         >${data.actionText} -&gt;</a
       >
     </p>
