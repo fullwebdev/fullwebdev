@@ -117,6 +117,8 @@ export async function navigate(
 
   let template;
 
+  const startTime = performance.now();
+
   try {
     let page;
     try {
@@ -147,7 +149,23 @@ export async function navigate(
     template = notFound({ lang: getLang() });
   }
 
+  const previousUrl = location.href;
+
   render(template, routeContainer);
+  const loadedTime = performance.now();
+
+  if (window._paq) {
+    window._paq.push(["setReferrerUrl", previousUrl]);
+    window._paq.push(["setCustomUrl", path]);
+    window._paq.push(["setDocumentTitle", document.title]);
+    window._paq.push(["setGenerationTimeMs", startTime - loadedTime]);
+    window._paq.push(["MediaAnalytics::scanForMedia", routeContainer]);
+    window._paq.push(["FormAnalytics::scanForForms", routeContainer]);
+    window._paq.push(["trackPageView"]);
+  } else {
+    console.warn("matomo is unavailable");
+  }
+
   if (!firstNavigation) {
     const heading = routeContainer.querySelector("h1");
     heading.tabIndex = -1;
