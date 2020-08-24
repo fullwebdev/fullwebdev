@@ -10,7 +10,7 @@
 - [Slides](https://fullweb.dev/slides/wof/latest/)
 - [Notes, Resources & Comments](./src/notes.md)
 
-More information on [fullweb.dev](https://fullweb.dev/en/05-conferences/01-wof-v2).
+More information on [fullweb.dev](https://fullweb.dev/en/conferences/wof-v2).
 
 <!-- markdownlint-disable no-emphasis-as-header-->
 
