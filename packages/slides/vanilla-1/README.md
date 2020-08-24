@@ -10,7 +10,7 @@
 - [Slides](https://fullweb.dev/slides/vanilla1/latest/)
 - [Notes, Resources & Comments](./src/notes.md)
 
-More information on [fullweb.dev](https://fullweb.dev/en/05-conferences/02-vanilla-web).
+More information on [fullweb.dev](https://fullweb.dev/en/conferences/vanilla-web).
 
 <!-- markdownlint-disable no-emphasis-as-header -->
 
