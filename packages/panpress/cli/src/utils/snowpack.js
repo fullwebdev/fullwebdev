@@ -18,18 +18,15 @@ let bin;
 
 function binPath() {
   if (!bin) {
-    let maybeBin = path.resolve(
-      __dirname,
-      "..",
-      "..",
-      "node_modules",
-      ".bin",
-      "snowpack"
+    const possibleBinPaths = [
+      path.resolve("node_modules", ".bin", "snowpack"),
+      path.resolve(__dirname, "..", "..", "..", "..", ".bin", "snowpack"),
+      path.resolve(__dirname, "..", "..", "node_modules", ".bin", "snowpack"),
+    ];
+    const maybeBin = possibleBinPaths.find((maybePath) =>
+      fs.existsSync(maybePath)
     );
-    if (!fs.existsSync(maybeBin)) {
-      maybeBin = path.resolve(__dirname, "..", "..", "..", ".bin", "snowpack");
-    }
-    if (!fs.existsSync(maybeBin)) {
+    if (!maybeBin) {
       throw new Error("can't find the snowpack binary");
     }
     bin = maybeBin;
