@@ -1,5 +1,5 @@
 {
-  "install": ["lit-html", "prismjs"],
+  "install": ["lit-html", "prismjs", "@modern-helpers/lazy-router"],
   "exclude": [
     "**/node_modules/**/*",
     "**/__tests__/*",
