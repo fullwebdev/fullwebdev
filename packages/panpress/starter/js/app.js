@@ -31,8 +31,9 @@ Router.setUp(progRoutes, render, {
           }, routes)
       : null;
 
+    let importPath;
     if (routeInfos) {
-      return routeInfos.file;
+      importPath = routeInfos.file;
     } else {
       let viewRoutePath = path;
       if (path.endsWith("/")) {
@@ -41,8 +42,13 @@ Router.setUp(progRoutes, render, {
         viewRoutePath = path.concat(".js");
       }
 
-      return `${Router.baseUrl}/views${viewRoutePath}`;
+      importPath = `${Router.baseUrl}/views${viewRoutePath}`;
     }
+
+    return {
+      importPath,
+      newPath: path,
+    };
   },
   importFailed: async (url, path) => {
     const urlMatch = new RegExp(`${Router.baseUrl}/views/(.*)`).exec(url);
