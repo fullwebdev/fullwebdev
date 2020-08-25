@@ -210,14 +210,14 @@ const navbar = {
   ],
 };
 
-let router;
+let langUtils;
 
 const selectLang = async (newLang) => {
   setLang(newLang);
-  if (!router) {
-    router = await import("../router.js");
+  if (!langUtils) {
+    langUtils = await import("../lang.js");
   }
-  router.navigate();
+  langUtils.reload();
 };
 
 const langSelector = ({ currentLang }) => {

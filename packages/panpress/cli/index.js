@@ -29,6 +29,7 @@ async function cli() {
     .option("--skip-build", "don't build the app for production")
     .option("-l, --local", "don't build additionnal pages")
     .option("-s, --start", "start an HTTP server after build")
+    .option("-r, --reload", "clear the local cache")
     .option("-v, --verbose", "log everything");
 
   program.parse(process.argv);
@@ -91,18 +92,18 @@ async function cli() {
 
   if (!program.skipRoutes) {
     console.debug(`[generate] routes`);
-    await generateAll(root);
+    await generateAll(root, program.reload);
   }
 
   if (!program.skipBuild) {
     console.debug(`[build] snowpack build`);
-    snowpackSync(["build"], root);
+    snowpackSync(["build", ...(program.reload ? ["--reload"] : [])], root);
   }
 
   if (program.start) {
     if (program.skipBuild) {
       console.debug(`[start] snowpack dev server`);
-      snowpack(["dev"], root);
+      snowpack(["dev", ...(program.reload ? ["--reload"] : [])], root);
     } else {
       console.debug(`[start] local-web-server on dist/`);
       const LocalWebServer = require("local-web-server");

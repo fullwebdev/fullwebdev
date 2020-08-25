@@ -18,18 +18,15 @@ let bin;
 
 function binPath() {
   if (!bin) {
-    let maybeBin = path.resolve(
-      __dirname,
-      "..",
-      "..",
-      "node_modules",
-      ".bin",
-      "snowpack"
+    const possibleBinPaths = [
+      path.resolve("node_modules", ".bin", "snowpack"),
+      path.resolve(__dirname, "..", "..", "..", "..", ".bin", "snowpack"),
+      path.resolve(__dirname, "..", "..", "node_modules", ".bin", "snowpack"),
+    ];
+    const maybeBin = possibleBinPaths.find((maybePath) =>
+      fs.existsSync(maybePath)
     );
-    if (!fs.existsSync(maybeBin)) {
-      maybeBin = path.resolve(__dirname, "..", "..", "..", ".bin", "snowpack");
-    }
-    if (!fs.existsSync(maybeBin)) {
+    if (!maybeBin) {
       throw new Error("can't find the snowpack binary");
     }
     bin = maybeBin;
@@ -45,7 +42,7 @@ module.exports.snowpack = (args, root) => {
   const snowp = execFile(
     binPath(),
     args,
-    { cwd: path.resolve(process.cwd(), root) },
+    { cwd: path.resolve(process.cwd(), root), maxBuffer: 1024 * 1024 * 100 },
     (error, stdout) => {
       stdout = rmClear(stdout);
       if (error) {
@@ -82,5 +79,6 @@ module.exports.snowpackSync = (args, root) => {
   return execFileSync(binPath(), args, {
     cwd: path.resolve(process.cwd(), root),
     encoding: "utf-8",
+    maxBuffer: 1024 * 1024 * 100,
   });
 };
