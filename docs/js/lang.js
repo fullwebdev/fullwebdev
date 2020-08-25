@@ -1,3 +1,5 @@
+import { baseUrl, navigate } from "@modern-helpers/lazy-router";
+
 export const langBase = /\/(en|fr)\//;
 
 /**
@@ -13,3 +15,13 @@ export const setLang = (newLang) => {
 };
 
 export const getLang = () => lang;
+
+function getGenericPath() {
+  return (
+    window.location.pathname.replace(baseUrl, "").replace(langBase, "/") || "/"
+  );
+}
+
+export function reload() {
+  navigate(getGenericPath());
+}
