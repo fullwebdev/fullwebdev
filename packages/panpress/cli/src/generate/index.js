@@ -1,5 +1,4 @@
 const { writeRoutes, writeRoutesFile } = require("./write-routes");
-const { execFile } = require("child_process");
 const path = require("path");
 const fs = require("fs-extra");
 const { snowpack } = require("../utils/snowpack");
