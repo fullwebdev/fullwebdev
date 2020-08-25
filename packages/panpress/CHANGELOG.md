@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0-beta.2](https://github.com/fullwebdev/fullwebdev/compare/panpress@v0.3.0-beta.1...panpress@v0.3.0-beta.2) (2020-08-25)
+
+### Bug Fixes
+
+- **panpress-cli:** path to snowpack binary ([634d59e](https://github.com/fullwebdev/fullwebdev/commit/634d59e1a85d3219f7499ddd9f76a98a9476d5d1))
+
 ## [0.3.0-beta.1](https://github.com/fullwebdev/fullwebdev/compare/panpress@v0.2.0...panpress@v0.3.0-beta.1) (2020-08-24)
 
 ### Features
