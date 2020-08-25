@@ -3,6 +3,9 @@
     "packages/*",
     "packages/panpress/*",
     "packages/slides/*",
+    "packages/helpers/el",
+    "packages/helpers/lazy-router",
+    "packages/helpers/template",
     "docs"
   ],
   "version": "independent"
