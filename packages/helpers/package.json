@@ -30,6 +30,6 @@
     "@open-wc/testing": "^2.5.24",
     "@web/test-runner": "^0.7.6",
     "es-dev-server": "^1.57.1",
-    "typescript": "^3.9.7"
+    "typescript": "^4.0.2"
   }
 }

@@ -97,11 +97,11 @@ let navigateFn;
 /**
  * @type {import('./main').navigateFn}
  */
-export let navigate = (...args) => {
+export let navigate = async (...args) => {
   if (!navigateFn) {
     throw new NavigationError("the router wasn't set up correctly", ...args);
   }
-  navigateFn(...args);
+  return navigateFn(...args);
 };
 
 /**
