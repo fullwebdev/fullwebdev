@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0-beta.3](https://github.com/fullwebdev/fullwebdev/compare/panpress@v0.3.0-beta.2...panpress@v0.3.0-beta.3) (2020-08-25)
+
+### Features
+
+- **panpress-cli:** permit to clear snowpack cache ([e7ecf9d](https://github.com/fullwebdev/fullwebdev/commit/e7ecf9d14f660ee630cb812e8d64048384e8a99a))
+
+### Bug Fixes
+
+- **panpress-cli:** raise maxBuffer for snowpack ([15640d3](https://github.com/fullwebdev/fullwebdev/commit/15640d38e235955cc4971e4938d959691617fa7c))
+- **panpress-starter:** rewrite generic paths ([e2e9d4f](https://github.com/fullwebdev/fullwebdev/commit/e2e9d4f931cdf65ef13e8ef7e88eab86ca447b64))
+
 ## [0.3.0-beta.2](https://github.com/fullwebdev/fullwebdev/compare/panpress@v0.3.0-beta.1...panpress@v0.3.0-beta.2) (2020-08-25)
 
 ### Bug Fixes
