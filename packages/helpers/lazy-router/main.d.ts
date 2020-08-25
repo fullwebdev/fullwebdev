@@ -49,7 +49,7 @@ export interface Renderer {
 }
 
 export interface SetUpCallbacks {
-  routeNotFound: NavigationCallback<string>;
+  routeNotFound: NavigationCallback<{ importPath: string; newPath: string }>;
   importFailed: (
     url?: string,
     path?: string,
@@ -71,4 +71,4 @@ export interface navigateFn {
   (path: string, redirection?: boolean, update?: boolean): Promise<void>;
 }
 
-export * from "./index";
+export { setUp, baseUrl, navigate, getPath, NavigationError } from "./index.js";
