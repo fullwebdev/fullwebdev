@@ -189,7 +189,11 @@ export function setUp(routes, render, callbacks = {}, config = {}) {
     if (progRoute && progRoute.component) {
       importPath = progRoute.component;
     } else if (callbacks.routeNotFound) {
-      importPath = callbacks.routeNotFound(path, redirection, update);
+      const newRoute = callbacks.routeNotFound(path, redirection, update);
+      importPath = newRoute.importPath;
+      if (newRoute.newPath) {
+        path = newRoute.newPath;
+      }
     }
 
     // if (!importPath) {
