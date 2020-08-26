@@ -17,3 +17,4 @@ node_modules
 /docs/js/routes.js
 *.log
 /.firebase
+.lighthouseci/
