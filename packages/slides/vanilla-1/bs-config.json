@@ -1,7 +1,7 @@
 {
   "files": [
-    "./dist/**/*.{html,htm,css,js,svg}"
+    "./build/**/*.{html,htm,css,js,svg}"
   ],
-  "server": { "baseDir": "./dist" },
+  "server": { "baseDir": "./build" },
   "open": false
 }
