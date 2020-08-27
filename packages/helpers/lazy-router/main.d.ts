@@ -56,13 +56,13 @@ export interface SetUpCallbacks {
     rediction?: boolean,
     update?: boolean
   ) => Promise<{ page: Page | null; newPath?: string }>;
-  templateCallFailed: NavigationCallback<unknown>;
+  templateCallFailed: NavigationCallback<unknown | Promise<unknown>>;
   afterNavigation: (
     path?: string,
     rediction?: boolean,
     update?: boolean,
     routeContainer?: Element
-  ) => void;
+  ) => void | Promise<void>;
   pathUpdated: PathUpdated;
   templateParams: NavigationCallback<{ [key: string]: any }>;
 }

@@ -259,7 +259,11 @@ export function setUp(routes, render, callbacks = {}, config = {}) {
       });
     } catch (err) {
       if (callbacks.templateCallFailed) {
-        template = callbacks.templateCallFailed(path, redirection, update);
+        template = await callbacks.templateCallFailed(
+          path,
+          redirection,
+          update
+        );
       }
     }
 
@@ -282,7 +286,12 @@ export function setUp(routes, render, callbacks = {}, config = {}) {
     }
 
     if (callbacks.afterNavigation) {
-      callbacks.afterNavigation(path, redirection, update, routeContainer);
+      await callbacks.afterNavigation(
+        path,
+        redirection,
+        update,
+        routeContainer
+      );
     }
   };
 
