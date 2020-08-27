@@ -41,17 +41,19 @@
       href="/style/app-shell_large.css"
       media="screen and (min-width: 719px)"
     />
+    <link rel="preload" href="/style/pages.css" as="style" />
     <link
-      rel="preload"
+      rel="stylesheet"
       href="/style/pages.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      media="print"
+      onload="this.media='all'"
     />
+    <link rel="preload" href="/style/code.css" as="style" />
     <link
-      rel="preload"
+      rel="stylesheet"
       href="/style/code.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      media="print"
+      onload="this.media='all'"
     />
     <script src="js/app-shell.js" type="module"></script>
     <link rel="manifest" href="/manifest.json" />
