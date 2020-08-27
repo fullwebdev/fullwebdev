@@ -226,15 +226,6 @@ export function setUp(routes, render, callbacks = {}, config = {}) {
       }
     }
 
-    if (!page) {
-      throw new NavigationError(
-        "page import failed",
-        path,
-        redirection,
-        update
-      );
-    }
-
     let templateParams = {};
     if (callbacks.templateParams) {
       templateParams = callbacks.templateParams(path, redirection, update);
@@ -260,6 +251,13 @@ export function setUp(routes, render, callbacks = {}, config = {}) {
     } catch (err) {
       if (callbacks.templateCallFailed) {
         template = await callbacks.templateCallFailed(
+          path,
+          redirection,
+          update
+        );
+      } else {
+        throw new NavigationError(
+          "no route could be found for this path",
           path,
           redirection,
           update
