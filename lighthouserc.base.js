@@ -16,10 +16,8 @@ module.exports = {
     assert: {
       preset: "lighthouse:no-pwa",
       assertions: {
-        "errors-in-console": "warn",
         "external-anchors-use-rel-noopener": "warn",
         "robots-txt": "warn",
-        "unused-javascript": "warn",
       },
     },
   },

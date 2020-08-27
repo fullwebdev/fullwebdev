@@ -1,11 +1,9 @@
 import { render } from "lit-html";
 import appShellTemplate from "./components/app-shell.js";
 import { sidebarState } from "./sidebar.js";
-import Prism from "prismjs";
 import { langBase, getLang } from "./lang.js";
 import { routes } from "./routes.js";
 import * as Router from "@modern-helpers/lazy-router";
-import notFound from "./routes/404.js";
 
 /**
  * @type {import('@modern-helpers/lazy-router').Routes}
@@ -17,6 +15,9 @@ const progRoutes = [
     component: "/js/routes/inventory-item.js",
   },
 ];
+
+let Prism;
+let notFound;
 
 Router.setUp(progRoutes, render, {
   templateParams: () => ({ lang: getLang() }),
@@ -63,16 +64,22 @@ Router.setUp(progRoutes, render, {
     }
     const viewRoutePath = urlMatch[1].replace(langBase, "/en/");
     // TODO: msg page not translated
-    let page = null,
-      newPath;
     try {
-      page = await import(`${Router.baseUrl}/views${viewRoutePath}`);
-      newPath = path.replace(langBase, "/en/");
-    } catch {}
-    return { page, newPath };
+      return {
+        page: await import(`${Router.baseUrl}/views${viewRoutePath}`),
+        newPath: path.replace(langBase, "/en/"),
+      };
+    } catch {
+      return null;
+    }
   },
-  templateCallFailed: () => notFound({ lang: getLang() }),
-  afterNavigation: (path, redirection, update, routeContainer) => {
+  templateCallFailed: async () => {
+    if (!notFound) {
+      notFound = (await import("./routes/404.js")).default;
+    }
+    return notFound({ lang: getLang() });
+  },
+  afterNavigation: async (path, redirection, update, routeContainer) => {
     const genericPath = path.replace(langBase, "/");
     sidebarState.updateThemeClass(genericPath);
     render(
@@ -83,8 +90,13 @@ Router.setUp(progRoutes, render, {
     const codes = routeContainer.querySelectorAll(
       `pre code[class*="language-"]`
     );
-    for (let i = 0; i < codes.length; i++) {
-      Prism.highlightElement(codes[i]);
+    if (codes.length > 0) {
+      if (!Prism) {
+        Prism = await import("prismjs");
+      }
+      for (let i = 0; i < codes.length; i++) {
+        Prism.highlightElement(codes[i]);
+      }
     }
   },
 });

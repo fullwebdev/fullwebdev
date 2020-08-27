@@ -137,11 +137,11 @@ Any line of the commit message cannot be longer than 100 characters.
   │       │             │
   │       │             └─⫸ Summary in present tense. Not capitalized. No period at the end.
   │       │
-  │       └─⫸ Commit Scope: docs|code-samples|codelabs|data-driven-pwa|illustrations|
-  │                          livre-fr|perf|slides-(vanilla-1|wof-1|wof-2)|helpers|
-  │                          benchmark|panpress-(cli|starter)
+  │       └─⫸ Commit Scope: docs | code-samples | codelabs | data-driven-pwa | illustrations |
+  │                          livre-fr | perf | slides-(vanilla-1|wof-1|wof-2) | helpers |
+  │                          helpers-(el|template|lazy-router) | benchmark | panpress | panpress-(cli|starter)
   │
-  └─⫸ Commit Type: build|ci|docs|feat|fix|perf|refactor|style|test
+  └─⫸ Commit Type: build | ci | docs | feat | fix | perf | refactor | style | test
 ```
 
 The `<type>` and `<summary>` fields are mandatory, the `(<scope>)` field is optional.
@@ -175,9 +175,18 @@ The following is the list of supported scopes:
 - `perf`
 - `reveal`
 - `helpers`
+- `helpers-el`
+- `helpers-template`
+- `helpers-lazy-router`
 - `benchmark`
+- `panpress`
 - `panpress-cli`
 - `panpress-starter`
+- `slides-wof-1`
+- `slides-wof-2`
+- `slides-wof-3`
+
+Using the most precise scope (e.g. `helpers-el` and `panpress-cli`) should be prioritized over using a generic one (e.g., respectively, `helpers` and `panpress`), especially if the scope is `fix` or `feat`.
 
 ##### Summary
 
