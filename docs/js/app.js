@@ -1,7 +1,6 @@
 import { render } from "lit-html";
 import appShellTemplate from "./components/app-shell.js";
 import { sidebarState } from "./sidebar.js";
-import Prism from "prismjs";
 import { langBase, getLang } from "./lang.js";
 import { routes } from "./routes.js";
 import * as Router from "@modern-helpers/lazy-router";
@@ -17,6 +16,8 @@ const progRoutes = [
     component: "/js/routes/inventory-item.js",
   },
 ];
+
+let Prism;
 
 Router.setUp(progRoutes, render, {
   templateParams: () => ({ lang: getLang() }),
@@ -72,7 +73,7 @@ Router.setUp(progRoutes, render, {
     return { page, newPath };
   },
   templateCallFailed: () => notFound({ lang: getLang() }),
-  afterNavigation: (path, redirection, update, routeContainer) => {
+  afterNavigation: async (path, redirection, update, routeContainer) => {
     const genericPath = path.replace(langBase, "/");
     sidebarState.updateThemeClass(genericPath);
     render(
@@ -83,8 +84,13 @@ Router.setUp(progRoutes, render, {
     const codes = routeContainer.querySelectorAll(
       `pre code[class*="language-"]`
     );
-    for (let i = 0; i < codes.length; i++) {
-      Prism.highlightElement(codes[i]);
+    if (codes.length > 0) {
+      if (!Prism) {
+        Prism = await import("prismjs");
+      }
+      for (let i = 0; i < codes.length; i++) {
+        Prism.highlightElement(codes[i]);
+      }
     }
   },
 });
