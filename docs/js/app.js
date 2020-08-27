@@ -64,13 +64,14 @@ Router.setUp(progRoutes, render, {
     }
     const viewRoutePath = urlMatch[1].replace(langBase, "/en/");
     // TODO: msg page not translated
-    let page = null,
-      newPath;
     try {
-      page = await import(`${Router.baseUrl}/views${viewRoutePath}`);
-      newPath = path.replace(langBase, "/en/");
-    } catch {}
-    return { page, newPath };
+      return {
+        page: await import(`${Router.baseUrl}/views${viewRoutePath}`),
+        newPath: path.replace(langBase, "/en/"),
+      };
+    } catch {
+      return null;
+    }
   },
   templateCallFailed: async () => {
     if (!notFound) {
