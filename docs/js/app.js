@@ -4,7 +4,6 @@ import { sidebarState } from "./sidebar.js";
 import { langBase, getLang } from "./lang.js";
 import { routes } from "./routes.js";
 import * as Router from "@modern-helpers/lazy-router";
-import notFound from "./routes/404.js";
 
 /**
  * @type {import('@modern-helpers/lazy-router').Routes}
@@ -18,6 +17,7 @@ const progRoutes = [
 ];
 
 let Prism;
+let notFound;
 
 Router.setUp(progRoutes, render, {
   templateParams: () => ({ lang: getLang() }),
@@ -72,7 +72,12 @@ Router.setUp(progRoutes, render, {
     } catch {}
     return { page, newPath };
   },
-  templateCallFailed: () => notFound({ lang: getLang() }),
+  templateCallFailed: async () => {
+    if (!notFound) {
+      notFound = (await import("./routes/404.js")).default;
+    }
+    return notFound({ lang: getLang() });
+  },
   afterNavigation: async (path, redirection, update, routeContainer) => {
     const genericPath = path.replace(langBase, "/");
     sidebarState.updateThemeClass(genericPath);
