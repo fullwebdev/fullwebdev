@@ -33,7 +33,7 @@ async function routesWithTitles(root) {
     return { title };
   };
 
-  const dirPath = path.resolve(root, "views");
+  const dirPath = path.resolve(root, "app", "views");
   const dirTree = readDirTree(dirPath, ".js");
   const menu = await dirToRoutes(dirTree, getTitle);
   await browser.close();

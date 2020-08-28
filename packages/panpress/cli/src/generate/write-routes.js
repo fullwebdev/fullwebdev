@@ -9,7 +9,7 @@ async function writeRoutesFile(data, root) {
   const jsContent = `
     export const routes = ${routes};
   `;
-  const dest = path.resolve(root, "js", "routes.js");
+  const dest = path.resolve(root, "app", "js", "routes.js");
   await fs.createFile(dest);
   console.log(`[build] ${dest} built`);
   await writeFile(dest, jsContent, {

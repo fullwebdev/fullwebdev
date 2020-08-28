@@ -59,7 +59,7 @@ async function cli() {
   const root = path.join(process.cwd());
 
   const rootDir = path.resolve(root, "pages");
-  const outputDir = path.resolve(root, "views");
+  const outputDir = path.resolve(root, "app", "views");
 
   if (!program.skipViews) {
     rimraf.sync(outputDir, { disableGlob: true });
