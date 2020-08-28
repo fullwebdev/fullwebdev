@@ -1,3 +1,5 @@
+const { join } = require("path");
+
 const rmFilePrefix = (str) => {
   const parsed = /^[0-9]+-(.*)$/.exec(str);
   return parsed ? parsed[1] : str;
@@ -5,9 +7,9 @@ const rmFilePrefix = (str) => {
 
 /**
  * @param {import('../utils/tree-node').DirTree} dirTree
- * @param {(path?: string) => Promise<{ [key: string ] : any} | null>} [asyncViewData]
+ * @param {Array<(path?: string, realPath?: string, file?: string) => Promise<{ [key: string ] : any} | null> | void>} [callbacks]
  */
-async function dirToRoutes(dirTree, asyncViewData) {
+async function dirToRoutes(dirTree, ...callbacks) {
   /**
    * @param {string[]} pathStack
    */
@@ -27,12 +29,7 @@ async function dirToRoutes(dirTree, asyncViewData) {
     }
 
     for (let [name, node] of Object.entries(root)) {
-      if (name === "index.js") {
-        if (asyncViewData && menu.path) {
-          const data = await asyncViewData(menu.realPath);
-          Object.assign(menu, data);
-        }
-      } else {
+      if (name !== "index.js") {
         let entry = { name };
 
         const subNode = await recurse(pathStack.concat(name));
@@ -61,12 +58,21 @@ async function dirToRoutes(dirTree, asyncViewData) {
           key = entry.path.split("/").pop();
         }
 
-        if (asyncViewData && entry.path) {
-          const data = await asyncViewData(entry.realPath);
-          if (data === null) {
-            entry = null;
-          } else {
-            Object.assign(entry, data);
+        if (callbacks && entry.path) {
+          for (const cb of callbacks) {
+            let data;
+            try {
+              data = await cb(entry.path, entry.realPath, entry.file);
+            } catch (e) {
+              console.warn(`[routes] callback failed for ${entry.realPath}`);
+              console.log(e);
+              entry = null;
+              break;
+            }
+
+            if (data) {
+              Object.assign(entry, data);
+            }
           }
         }
 

@@ -31,6 +31,8 @@ async function cli() {
     .option("-s, --start", "start an HTTP server after build")
     .option("-r, --reload", "clear the local cache")
     .option("-v, --verbose", "log everything");
+  // TODO: environment option
+  // .option('-e, --env', "environment", "prod");
 
   program.parse(process.argv);
 
@@ -108,6 +110,7 @@ async function cli() {
       console.debug(`[start] local-web-server on dist/`);
       const LocalWebServer = require("local-web-server");
       const ws = LocalWebServer.create({
+        // @ts-ignore
         port: 8080,
         directory: path.resolve(root, "dist"),
         // FIXME: spa mode (ws --spa index.html)

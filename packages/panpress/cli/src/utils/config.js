@@ -43,6 +43,14 @@ function readConfig(filePath) {
     throw new Error(`missing repository.url option in ${filePath}`);
   }
 
+  if (
+    !configJson.environments ||
+    !configJson.environments.prod ||
+    !configJson.environments.prod.host
+  ) {
+    configJson.environments = { prod: { host: null } };
+  }
+
   if (!configJson.repository.root) {
     configJson.repository.root = process.cwd();
   }
