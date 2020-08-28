@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0-beta.4](https://github.com/fullwebdev/fullwebdev/compare/panpress@v0.3.0-beta.3...panpress@v0.3.0-beta.4) (2020-08-28)
+
+### ⚠ BREAKING CHANGES
+
+- **panpress-cli:** views are now generated in the /app/views/ directory,
+  and routes.js in /app/js/routes.js. But source files (md) for pages
+  should stay in the /pages directory.
+
+### Features
+
+- **panpress-cli:** generate sitemaps ([e288642](https://github.com/fullwebdev/fullwebdev/commit/e288642b11ede3e31789adf15144170e51558d58))
+
+### Bug Fixes
+
+- **panpress-starter:** add missing robot.txt ([cc088e8](https://github.com/fullwebdev/fullwebdev/commit/cc088e88763350291538816923d4aa355e11656c))
+- **panpress-starter:** remove postcss import ([b1fb88e](https://github.com/fullwebdev/fullwebdev/commit/b1fb88e85c116deb4a5a59897f5c87adc4f357f2))
+
+* **panpress-cli:** use an "app" source dir ([6b36327](https://github.com/fullwebdev/fullwebdev/commit/6b36327956b4ed03e5f731cc2eb43874bddeb047))
+
 ## [0.3.0-beta.3](https://github.com/fullwebdev/fullwebdev/compare/panpress@v0.3.0-beta.2...panpress@v0.3.0-beta.3) (2020-08-25)
 
 ### Features
