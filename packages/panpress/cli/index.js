@@ -31,6 +31,8 @@ async function cli() {
     .option("-s, --start", "start an HTTP server after build")
     .option("-r, --reload", "clear the local cache")
     .option("-v, --verbose", "log everything");
+  // TODO: environment option
+  // .option('-e, --env', "environment", "prod");
 
   program.parse(process.argv);
 
@@ -59,7 +61,7 @@ async function cli() {
   const root = path.join(process.cwd());
 
   const rootDir = path.resolve(root, "pages");
-  const outputDir = path.resolve(root, "views");
+  const outputDir = path.resolve(root, "app", "views");
 
   if (!program.skipViews) {
     rimraf.sync(outputDir, { disableGlob: true });
@@ -108,6 +110,7 @@ async function cli() {
       console.debug(`[start] local-web-server on dist/`);
       const LocalWebServer = require("local-web-server");
       const ws = LocalWebServer.create({
+        // @ts-ignore
         port: 8080,
         directory: path.resolve(root, "dist"),
         // FIXME: spa mode (ws --spa index.html)

@@ -22,7 +22,8 @@
   "devDependencies": {
     "@types/fs-extra": "^9.0.1",
     "@types/puppeteer": "^3.0.1",
-    "@types/rimraf": "^3.0.0"
+    "@types/rimraf": "^3.0.0",
+    "@types/xmlbuilder": "^11.0.1"
   },
   "dependencies": {
     "chokidar": "^3.4.1",
@@ -31,6 +32,7 @@
     "local-web-server": "^4.2.1",
     "puppeteer": "^5.2.1",
     "rimraf": "^2.6.3",
-    "snowpack": "^2.7.5"
+    "snowpack": "^2.7.5",
+    "xmlbuilder": "^15.1.1"
   }
 }

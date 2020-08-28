@@ -200,8 +200,16 @@ function getLang(str, delimiter = path.sep) {
   return (langExecution && langExecution[1]) || defaultLang;
 }
 
+/**
+ * @param {string} str
+ */
+function rmLang(str, delimiter = path.sep) {
+  const regexp = new RegExp(`${delimiter}(${codes.join("|")})${delimiter}`);
+  return str.replace(regexp, delimiter);
+}
+
 function isALangCode(str) {
   return codes.includes(str);
 }
 
-module.exports = { getLang, isALangCode };
+module.exports = { getLang, rmLang, isALangCode };

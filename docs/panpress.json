@@ -22,5 +22,10 @@
       "dest": "02-fundamentals/02-materials",
       "extract": true
     }
-  ]
+  ],
+  "environments": {
+    "prod": {
+      "host": "https://fullweb.dev"
+    }
+  }
 }

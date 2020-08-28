@@ -1,17 +1,7 @@
 {
   "install": ["lit-html", "prismjs", "@modern-helpers/lazy-router"],
-  "exclude": [
-    "**/node_modules/**/*",
-    "**/__tests__/*",
-    "**/*.@(spec|test).js",
-    "_scripts_/**/*",
-    ".vuepress/**/*",
-    "pages/**/*",
-    "*.!(html)",
-    "dist/**/*"
-  ],
   "mount": {
-    "./": "/",
+    "app": "/",
     "assets": "/"
   },
   "proxy": {},

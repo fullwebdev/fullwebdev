@@ -1,7 +1,8 @@
-const { writeRoutes, writeRoutesFile } = require("./write-routes");
+const { writeRoutesFile, writeSitemapFile } = require("./write-files");
 const path = require("path");
 const fs = require("fs-extra");
 const { snowpack } = require("../utils/snowpack");
+const { generateData } = require("./generate-data");
 
 async function generateAll(root, reload = false) {
   await writeRoutesFile({}, root);
@@ -13,8 +14,11 @@ async function generateAll(root, reload = false) {
 
   await new Promise((resolve) => setTimeout(resolve, 8000));
 
-  await writeRoutes(root);
+  const { routes, sitemap } = await generateData(root);
   snowp.kill();
+
+  await writeRoutesFile(routes, root);
+  await writeSitemapFile(sitemap, root);
 }
 
 module.exports = { generateAll };

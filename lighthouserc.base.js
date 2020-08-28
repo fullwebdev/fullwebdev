@@ -17,7 +17,6 @@ module.exports = {
       preset: "lighthouse:no-pwa",
       assertions: {
         "external-anchors-use-rel-noopener": "warn",
-        "robots-txt": "warn",
       },
     },
   },
