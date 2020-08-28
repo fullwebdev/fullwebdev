@@ -1,4 +1,4 @@
 /dist
 /node_modules
-/views
-/js/routes.js
+/app/views
+/app/js/routes.js
