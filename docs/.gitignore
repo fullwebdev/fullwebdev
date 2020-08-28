@@ -2,3 +2,5 @@
 /node_modules
 /assets/graphs/
 /assets/images/
+/app/js/routes.js
+/app/views/
