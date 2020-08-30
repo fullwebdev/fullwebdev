@@ -1,5 +1,6 @@
-import home from "../../js/components/home.js";
 import { html } from "lit-html";
+import logo from "~app/js/components/logo.js";
+import home from "@panpress/webapp/components/home.js";
 
 export default () =>
   home({
@@ -26,6 +27,7 @@ export default () =>
           "Nous partageons l'essentiel de nos création en Open Source avec la communauté, afin de permettre à tous de contribuer à leur amélioration. Dans le cas où une certaine part de notre travail nécessite un accès limité pour une quelconque raison, nous faisons tout notre possible pour garantir que celui-ci ne se fasse au détriment de personne.",
       },
     ],
+    logo: logo(),
     content: html`<div class="banner">
       Ce site, et l'ensemble du projet FullWeb.dev est encore très jeune, et
       incomplet. De plus, nous sommes bien entendu loin d'être infaillibles. Si

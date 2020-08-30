@@ -1,5 +1,6 @@
-import home from "../../js/components/home.js";
 import { html } from "lit-html";
+import logo from "~app/js/components/logo.js";
+import home from "@panpress/webapp/components/home.js";
 
 export default () =>
   home({
@@ -26,6 +27,7 @@ export default () =>
           "Most of our creations are Open-Source, in order to facilitate contributions. However, some of our content may require copyright or paywall. When this is the case, we do our best to never discriminate against anyone.",
       },
     ],
+    logo: logo(),
     content: html`<div class="banner">
       This project is at a very early stage. And we are by no means infallible,
       of course. So if you have any questions, ideas, comments or advice, please

@@ -18,5 +18,8 @@
   },
   "buildOptions": {
     "clean": true
+  },
+  "alias": {
+    "~app": "./app"
   }
 }

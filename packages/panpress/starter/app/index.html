@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
     <title>Panpress Starter</title>
+
+    <!-- #region: App Shell -->
+    <!-- #region: dependencies -->
+    <link
+      rel="modulepreload"
+      href="/web_modules/panpress/webapp/state/project.js"
+    />
     <link rel="modulepreload" href="/web_modules/lit-html.js" />
     <link
       rel="modulepreload"
@@ -14,10 +21,13 @@
       rel="modulepreload"
       href="/web_modules/lit-html/directives/class-map.js"
     />
-    <link rel="modulepreload" href="/js/components/app-shell.js" />
-    <link rel="modulepreload" href="/js/sidebar.js" />
-    <link rel="modulepreload" href="/js/router.js" />
-    <link rel="modulepreload" href="/js/components/home.js" />
+    <link rel="modulepreload" href="/js/routes.js" />
+    <link
+      rel="modulepreload"
+      href="/web_modules/panpress/webapp/shell/app-shell.js"
+    />
+    <!-- #endregion: dependencies -->
+    <!-- #region: styles -->
     <link rel="stylesheet" href="/style/app-shell.css" />
     <link
       rel="stylesheet"
@@ -29,22 +39,77 @@
       href="/style/app-shell_large.css"
       media="screen and (min-width: 719px)"
     />
-    <link rel="stylesheet" href="/style/pages.css" defer />
-    <link rel="stylesheet" href="/style/code.css" defer />
-    <script src="js/app-shell.js" type="module"></script>
+    <!-- #endregion: styles -->
+    <!-- #region: render -->
+    <script type="module">
+      import { setProject } from "@panpress/webapp/states/project.js";
+      import { render } from "lit-html";
+      import { routes } from "./js/routes.js";
+      import appShellTemplate from "@panpress/webapp/shell/app-shell.js";
+
+      setProject({
+        repository: "https://github.com/fullwebdev/panpress-starter/",
+        name: "Panpress Starter",
+        path: "",
+        branch: "master",
+      });
+
+      render(
+        appShellTemplate({ lang: "en" }, routes),
+        document.getElementById("app-shell")
+      );
+    </script>
+    <!-- #endregion: render -->
+    <!-- #endregion: App Shell -->
+
+    <!-- #region: App Content -->
+    <!-- #region: styles -->
+    <link rel="preload" href="/style/pages.css" as="style" />
+    <link
+      rel="stylesheet"
+      href="/style/pages.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="preload"
+      href="/style/a11y-syntax-highlighting-prismjs/a11y-dark.css"
+      as="style"
+    />
+    <link rel="preload" href="/style/code.css" as="style" />
+    <link
+      rel="stylesheet"
+      href="/style/code.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <!-- #endregion: styles -->
+    <!-- #region: dependencies -->
+    <link
+      rel="modulepreload"
+      href="/web_modules/@modern-helpers/lazy-router.js"
+    />
+    <link
+      rel="modulepreload"
+      href="/web_modules/panpress/webapp/components/home.js"
+    />
+    <link
+      rel="modulepreload"
+      href="/web_modules/panpress/webapp/content/app.js"
+    />
+    <!-- #endregion: dependencies -->
+    <!-- #endregion: App Content -->
+
     <link rel="manifest" href="/manifest.json" />
     <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" />
     <meta name="description" content="Panpress Starter" />
-    <meta
-      property="og:image"
-      content="https://fullweb.dev/favicon/icon-384x384.png"
-    />
+    <meta property="og:image" content="TODO" />
     <meta property="og:site_name" content="Panpress Starter" />
     <meta property="og:description" content="Panpress Starter" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://fullweb.dev/social.png" />
+    <meta name="twitter:image" content="TODO" />
     <meta name="twitter:image:alt" content="TODO" />
-    <meta name="twitter:title" content="panpress" />
+    <meta name="twitter:title" content="TODO" />
   </head>
   <body>
     <div id="app-root" class="theme-container">
@@ -55,6 +120,15 @@
         </div>
       </main>
     </div>
-    <script src="js/app.js" type="module"></script>
+    <!-- render App Content -->
+    <script type="module">
+      import bootstrap from "@panpress/webapp/content/app.js";
+      import { routes } from "./js/routes.js";
+      bootstrap(
+        // TODO: demo
+        [],
+        routes
+      );
+    </script>
   </body>
 </html>

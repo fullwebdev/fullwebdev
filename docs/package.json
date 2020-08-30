@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@modern-helpers/lazy-router": "^0.1.0-alpha.1",
+    "@panpress/webapp": "0.0.0-alpha.2",
     "lit-html": "^1.2.1",
     "prismjs": "^1.20.0"
   }
