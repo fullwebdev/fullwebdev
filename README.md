@@ -13,21 +13,52 @@
 <!-- markdownlint-enable header-style -->
 
 <p align="center"><a href="https://fullweb.dev"><img src="https://img.shields.io/website?up_message=fullweb.dev&amp;url=https%3A%2F%2Ffullweb.dev" alt="Website"></a>
-<a href="https://twitter.com/intent/follow?screen_name=noel_mace"><img src="https://img.shields.io/twitter/follow/noel_mace?color=%231da1f2&amp;label=Stay%20tunned%20on%20Twitter%21&amp;style=flat-square" alt="Twitter Follow"></a></p>
+<a href="https://twitter.com/intent/follow?screen_name=noel_mace"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/noel_mace?label=Stay%20tunned%21&style=social"></a></p>
 
 <p align="center">
-<a href="https://github.com/fullwebdev/fullwebdev/blob/master/CHANGELOG.md"><img src="https://img.shields.io/github/v/tag/fullwebdev/fullwebdev?sort=semver&amp;include_prereleases&amp;label=release" alt="release"></a>
+<img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/fullwebdev/fullwebdev">
+<a href="https://github.com/fullwebdev/fullwebdev/releases/tag/latest"><img alt="Latest (Pre-)Release Date" src="https://img.shields.io/github/release-date-pre/fullwebdev/fullwebdev?label=latest%20release"></a>
+</p>
+
+<p align="center">
 <a href="https://github.com/fullwebdev/fullwebdev/actions?query=workflow%3ADeploy"><img src="https://github.com/fullwebdev/fullwebdev/workflows/Deploy/badge.svg" alt="Deploy"></a>
-<a href="https://github.com/fullwebdev/fullwebdev/actions?query=workflow%3A%22Release+Subtrees%22"><img src="https://github.com/fullwebdev/fullwebdev/workflows/Release%20Subtrees/badge.svg" alt="Release Subtrees"></a></p>
+<a href="https://github.com/fullwebdev/fullwebdev/actions?query=workflow%3A%22Release+Subtrees%22"><img src="https://github.com/fullwebdev/fullwebdev/workflows/Release%20Subtrees/badge.svg" alt="Release Subtrees"></a>
+<a href="https://github.com/fullwebdev/fullwebdev/actions?query=workflow%3A%22Audit+Website%22"><img src="https://github.com/fullwebdev/fullwebdev/workflows/Audit%20Website/badge.svg" alt="Release Subtrees"></a>
+</p>
 
 ## Projects
 
+### Website
+
+> The core of the FullWebDev project.
+
 <!-- prettier-ignore -->
-|  | Version | Directory |
-| ------- | ------- | --------- |
-| [website](https://fullweb.dev) | [![release](https://img.shields.io/github/v/tag/fullwebdev/fullwebdev?sort=semver&include_prereleases&label=release)](https://github.com/fullwebdev/fullwebdev/blob/master/CHANGELOG.md) | [/docs](./docs/) |
+|         | Releases | Directory |
+| ------- | -------- | --------- |
+| [fullweb.dev](https://fullweb.dev) | [![release](https://img.shields.io/badge/firebase-latest%20release-FFCA28?logo=firebase)](https://github.com/fullwebdev/fullwebdev/releases/tag/latest)<br>[![lighthouse CI reports](https://img.shields.io/badge/lighthouse-reports-F44B21?logo=lighthouse)](https://lhci-fullwebdev.herokuapp.com/app/projects/fullwebdev/dashboard?branch=master&runUrl=https%3A%2F%2Ffullweb.dev%2F) | [/docs](./docs/) |
+
+### Tools
+
+> Dev tools & libraries
+
+<!-- prettier-ignore -->
+|         | Releases | Directory |
+| ------- | -------- | --------- |
 | [static site generator](https://www.npmjs.com/package/@panpress/cli) | ![npm](https://img.shields.io/npm/v/@panpress/cli) | [/packages/panpress/](./packages/panpress/) |
 | [helpers](https://www.npmjs.com/package/modern-helpers) | ![npm](https://img.shields.io/npm/v/modern-helpers) | [/packages/helpers/](./packages/helpers/) |
+
+### Modules
+
+> "submodules" of the website and subtrees of this monorepo which can also be used as part of other projects
+
+<!-- prettier-ignore -->
+|         | Releases | Directory |
+| ------- | -------- | --------- |
+| [code samples](https://fullweb.dev/fundamentals/code-samples/) | [![GitHub package.json version](https://img.shields.io/github/package-json/v/fullwebdev/code-samples?label=sandox&logo=codesandbox)](https://codesandbox.io/s/github/fullwebdev/fullwebdev/tree/master/packages/code-samples/src/) | [/packages/code-samples/](./packages/code-samples/) |
+| [codelabs](https://fullweb.dev/codelabs/) | ![GitHub package.json version](https://img.shields.io/badge/dynamic/json?color=important&label=version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ffullwebdev%2Ffullwebdev%2Fmaster%2Fpackages%2Fcodelabs%2Fpackage.json) | [/packages/codelabs/](./packages/codelabs/) |
+| [data-driven-pwa](https://github.com/fullwebdev/data-driven-pwa)<br>(sample app) | ![GitHub (subtree) last commit](https://img.shields.io/github/last-commit/fullwebdev/data-driven-pwa?label=subtree&logo=git) | [/packages/data-driven-pwa/](./packages/data-driven-pwa/)<br>(see the associated [codelab](https://fullweb.dev/codelabs) for instructions) |
+| [slides](https://fullweb.dev/conferences/) | [![GitHub package.json version](https://img.shields.io/badge/dynamic/json?color=success&label=WoF%20S2&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ffullwebdev%2Ffullwebdev%2Fmaster%2Fpackages%2Fslides%2Fwof-2%2Fpackage.json)](https://fullweb.dev/slides/wof/latest/)<br>[![GitHub package.json version](https://img.shields.io/badge/dynamic/json?color=success&label=vanilla-1&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ffullwebdev%2Ffullwebdev%2Fmaster%2Fpackages%2Fslides%2Fvanilla-1%2Fpackage.json)](https://fullweb.dev/slides/vanilla1/latest/)<br>[![GitHub package.json version](https://img.shields.io/badge/dynamic/json?color=success&label=WoF%20S1&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ffullwebdev%2Ffullwebdev%2Fmaster%2Fpackages%2Fslides%2Fwof-1%2Fpackage.json)](https://fullweb.dev/slides/wof1/) | [/packages/slides/](./packages/slides/) |
+| [illustrations](https://github.com/fullwebdev/illustrations) | ![GitHub package.json version](https://img.shields.io/github/package-json/v/fullwebdev/illustrations) | [/packages/illustrations](./packages/illustrations)
 
 ## About
 
