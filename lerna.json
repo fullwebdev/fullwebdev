@@ -1,7 +1,7 @@
 {
   "packages": [
     "packages/*",
-    "packages/panpress/*",
+    "packages/panpress/cli",
     "packages/slides/*",
     "packages/helpers/el",
     "packages/helpers/lazy-router",
