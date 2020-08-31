@@ -23,7 +23,8 @@
 <p align="center">
 <a href="https://github.com/fullwebdev/fullwebdev/actions?query=workflow%3ADeploy"><img src="https://github.com/fullwebdev/fullwebdev/workflows/Deploy/badge.svg" alt="Deploy"></a>
 <a href="https://github.com/fullwebdev/fullwebdev/actions?query=workflow%3A%22Release+Subtrees%22"><img src="https://github.com/fullwebdev/fullwebdev/workflows/Release%20Subtrees/badge.svg" alt="Release Subtrees"></a>
-<a href="https://github.com/fullwebdev/fullwebdev/actions?query=workflow%3A%22Audit+Website%22"><img src="https://github.com/fullwebdev/fullwebdev/workflows/Audit%20Website/badge.svg" alt="Release Subtrees"></a>
+<a href="https://github.com/fullwebdev/fullwebdev/actions?query=workflow%3A%22Audit+Website%22"><img src="https://github.com/fullwebdev/fullwebdev/workflows/Audit%20Website/badge.svg" alt="Audit Website"></a>
+<a href="https://github.com/fullwebdev/fullwebdev/actions?query=workflow%3A%22Deploy+to+dev%22"><img src="https://github.com/fullwebdev/fullwebdev/workflows/Deploy%20to%20dev/badge.svg" alt="Deploy to dev"></a>
 </p>
 
 ## Projects
@@ -35,7 +36,7 @@
 <!-- prettier-ignore -->
 |         | Releases | Directory |
 | ------- | -------- | --------- |
-| [fullweb.dev](https://fullweb.dev) | [![release](https://img.shields.io/badge/firebase-latest%20release-FFCA28?logo=firebase)](https://github.com/fullwebdev/fullwebdev/releases/tag/latest)<br>[![lighthouse CI reports](https://img.shields.io/badge/lighthouse-reports-F44B21?logo=lighthouse)](https://lhci-fullwebdev.herokuapp.com/app/projects/fullwebdev/dashboard?branch=master&runUrl=https%3A%2F%2Ffullweb.dev%2F) | [/docs](./docs/) |
+| [fullweb.dev](https://fullweb.dev) | [![Prod env](https://img.shields.io/website?label=prod%20env&logo=firebase&url=https%3A%2F%2Ffullweb.dev)](https://github.com/fullwebdev/fullwebdev/releases/tag/latest)<br>[![Dev env](https://img.shields.io/website?label=dev%20env&logo=firebase&url=https%3A%2F%2Ffullweb-dev-dev.web.app)](https://fullweb-dev-dev.web.app/)<br>[![lighthouse CI reports](https://img.shields.io/badge/lighthouse-reports-F44B21?logo=lighthouse)](https://lhci-fullwebdev.herokuapp.com/app/projects/fullwebdev/dashboard?branch=master&runUrl=https%3A%2F%2Ffullweb.dev%2F) | [/docs](./docs/) |
 
 ### Tools
 
