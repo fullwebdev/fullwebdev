@@ -1,21 +1,22 @@
 import { html } from "lit-html";
 import { repeat } from "lit-html/directives/repeat.js";
 import { classMap } from "lit-html/directives/class-map.js";
-import { sidebarState } from "../sidebar.js";
-import { routes } from "../routes.js";
-import { setLang, langBase } from "../lang.js";
-
-// FIXME: typing
+import { sidebarState } from "../states/sidebar.js";
+import { setLang, langBase } from "../states/lang.js";
+import { getProject } from "../states/project.js";
 
 /**
+ * FIXME: refactor typings
+ *
  * @typedef {{title: string, path: string, name: string, children?: NavItem[]}} NavItem
  * @typedef {{ lang: 'en' | 'fr', currentPath?: string, separator?: boolean }} RouteInfo
  * @typedef {NavItem & RouteInfo} RoutedNavItem
  * @typedef {{name?: string, path: string, title:string, file?: string, children?: {[key:string]: Route} }} Route
  * @typedef {{name?: string, path: string, title:string, file?: string, children?: Route[] }} MenuItem
+ * @typedef {{ title: string; path: string; children?: NavItem[]; lang: "en" | "fr"; currentPath?: string; separator?: boolean; name: string }} SidebarGroupParams
  */
 
-const reduceRoute = (path) => {
+const reduceRoute = (routes, path) => {
   return path.reduce((prev, cur) => {
     return prev[cur] || (prev.children && prev.children[cur]);
   }, routes);
@@ -26,7 +27,7 @@ const reduceRoute = (path) => {
  *
  * @returns {Route[]}
  */
-const getRoutes = (path, lang = "en") => {
+const getRoutes = (routes, path, lang = "en") => {
   let nbrOfLangs = 0;
   try {
     nbrOfLangs = Object.values(routes).length;
@@ -43,13 +44,13 @@ const getRoutes = (path, lang = "en") => {
   /**
    * @type {{ [key:string]: Route }}
    */
-  let route = reduceRoute(pathElmts);
+  let route = reduceRoute(routes, pathElmts);
 
   // TODO: generalize
   const shouldFollow = pathElmts.length > 2 && route.children;
 
   if (!shouldFollow) {
-    route = reduceRoute([lang]);
+    route = reduceRoute(routes, [lang]);
   }
 
   let menu = Object.values(route.children || route);
@@ -59,7 +60,7 @@ const getRoutes = (path, lang = "en") => {
     firstChild.separator = true;
     menu = [
       routes[pathElmts[0]].children["introduction"],
-      reduceRoute(pathElmts.slice(0, -1)),
+      reduceRoute(routes, pathElmts.slice(0, -1)),
       firstChild,
       ...menu,
     ];
@@ -91,7 +92,7 @@ const navLink = (data) => {
 };
 
 /**
- * @param {{ open: boolean, title: string; path: string; children?: NavItem[]; lang: "en" | "fr"; currentPath?: string; separator: boolean; name: string }} data
+ * @param {SidebarGroupParams} data
  */
 const sidebarGroup = (data) => {
   const classes = { separator: data.separator };
@@ -193,7 +194,7 @@ const sidebarButton = html`<div
 </div>`;
 
 /**
- * @type {{en: NavItem[], fr: NavItem[]}}
+ * @type {{ [key in 'en' |'fr']: {title: string; path: string}[]}}
  */
 const navbar = {
   en: [
@@ -210,14 +211,14 @@ const navbar = {
   ],
 };
 
-let langUtils;
+let contentLang;
 
 const selectLang = async (newLang) => {
-  setLang(newLang);
-  if (!langUtils) {
-    langUtils = await import("../lang.js");
+  if (!contentLang) {
+    contentLang = await import("../content/lang.js");
   }
-  langUtils.reload();
+  setLang(newLang);
+  contentLang.reload();
 };
 
 const langSelector = ({ currentLang }) => {
@@ -254,9 +255,8 @@ const langSelector = ({ currentLang }) => {
   </div>`;
 };
 
-// FIXME: change url
 const githubLink = (lang) => html` <a
-  href="https://github.com/fullwebdev/panpress-starter"
+  href=${getProject().repository}
   target="_blank"
   rel="noopener noreferrer"
   class="repo-link"
@@ -270,13 +270,25 @@ const githubLink = (lang) => html` <a
 /**
  * @param {RouteInfo} data
  */
-export default (data) => html` <header class="navbar">
-    ${sidebarButton}
-    <a class="nav-link site-name" href="/">
-      Panpress Starter
-    </a>
-    <div class="links" style="max-width: 1553px;">
-      <nav class="nav-links can-hide">
+export default (data, routes) => {
+  return html` <header class="navbar">
+      ${sidebarButton}
+      <a class="nav-link site-name" href="/">
+        ${getProject().name}
+      </a>
+      <div class="links" style="max-width: 1553px;">
+        <nav class="nav-links can-hide">
+          ${repeat(
+            navbar[data.lang],
+            (item) => item.path,
+            (item) => navLink({ ...item, ...data })
+          )}
+          ${langSelector({ currentLang: data.lang })} ${githubLink(data.lang)}
+        </nav>
+      </div>
+    </header>
+    <aside class="sidebar">
+      <nav class="nav-links">
         ${repeat(
           navbar[data.lang],
           (item) => item.path,
@@ -284,22 +296,12 @@ export default (data) => html` <header class="navbar">
         )}
         ${langSelector({ currentLang: data.lang })} ${githubLink(data.lang)}
       </nav>
-    </div>
-  </header>
-  <aside class="sidebar">
-    <nav class="nav-links">
-      ${repeat(
-        navbar[data.lang],
-        (item) => item.path,
-        (item) => navLink({ ...item, ...data })
-      )}
-      ${langSelector({ currentLang: data.lang })} ${githubLink(data.lang)}
-    </nav>
-    <ul class="sidebar-links">
-      ${repeat(
-        getRoutes(data.currentPath || "/en/", data.lang),
-        (item) => item.path,
-        (item) => sidebarItem({ ...item, ...data })
-      )}
-    </ul>
-  </aside>`;
+      <ul class="sidebar-links">
+        ${repeat(
+          getRoutes(routes, data.currentPath || "/en/", data.lang),
+          (item) => item.path,
+          (item) => sidebarItem({ ...item, ...data })
+        )}
+      </ul>
+    </aside>`;
+};

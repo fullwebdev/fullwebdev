@@ -1,16 +1,18 @@
 const baseConfig = require("./lighthouserc.base");
 const merge = require("deepmerge");
 
-module.exports = merge(baseConfig, {
-  ci: {
-    collect: {
-      staticDistDir: "./dist",
-      settings: { skipAudits: ["uses-http2"] },
-    },
-    assert: {
-      assertions: {
-        "uses-http2": "off",
+module.exports = merge(
+  baseConfig,
+  {
+    ci: {
+      collect: {
+        url: baseConfig.ci.collect.url.map((url) =>
+          url.replace("http://localhost", "https://fullweb-dev-dev.web.app")
+        ),
       },
     },
   },
-});
+  {
+    arrayMerge: (destinationArray, sourceArray, options) => sourceArray,
+  }
+);

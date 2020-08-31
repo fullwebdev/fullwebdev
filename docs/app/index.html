@@ -5,31 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
     <title>FullWeb.dev</title>
-    <link rel="modulepreload" href="/web_modules/lit-html.js" />
+
+    <!-- #region: App Shell -->
+    <!-- #region: dependencies -->
     <link
       rel="modulepreload"
-      href="/web_modules/lit-html/directives/repeat.js"
+      href="/web_modules/@panpress/webapp/states/project.js"
     />
+    <link rel="modulepreload" href="/web_modules/lit-html.js" />
     <link
       rel="modulepreload"
       href="/web_modules/lit-html/directives/class-map.js"
     />
-    <link rel="modulepreload" href="/js/components/app-shell.js" />
-    <link rel="modulepreload" href="/js/sidebar.js" />
+    <link rel="modulepreload" href="/js/routes.js" />
     <link
       rel="modulepreload"
-      href="/web_modules/@modern-helpers/lazy-router.js"
+      href="/web_modules/@panpress/webapp/shell/app-shell.js"
     />
-    <link rel="modulepreload" href="/js/lang.js" />
-    <link rel="modulepreload" href="/js/routes.js" />
-    <link rel="modulepreload" href="/js/app.js" />
-    <link rel="modulepreload" href="/js/components/home.js" />
+    <!-- #endregion: dependencies -->
+    <!-- #region: styles -->
     <link rel="stylesheet" href="/style/app-shell.css" />
-    <link
-      rel="preload"
-      href="/style/a11y-syntax-highlighting-prismjs/a11y-dark.css"
-      as="style"
-    />
     <link
       rel="stylesheet"
       href="/style/app-shell_small.css"
@@ -40,12 +35,40 @@
       href="/style/app-shell_large.css"
       media="screen and (min-width: 719px)"
     />
+    <!-- #endregion: styles -->
+    <!-- #region: render -->
+    <script type="module">
+      import { setProject } from "@panpress/webapp/states/project.js";
+      import { render } from "lit-html";
+      import { routes } from "./js/routes.js";
+      import appShellTemplate from "@panpress/webapp/shell/app-shell.js";
+
+      setProject({
+        repository: "https://github.com/fullwebdev/fullwebdev",
+        name: "FullWeb.dev",
+      });
+
+      render(
+        appShellTemplate({ lang: "en" }, routes),
+        document.getElementById("app-shell")
+      );
+    </script>
+    <!-- #endregion: render -->
+    <!-- #endregion: App Shell -->
+
+    <!-- #region: App Content -->
+    <!-- #region: styles -->
     <link rel="preload" href="/style/pages.css" as="style" />
     <link
       rel="stylesheet"
       href="/style/pages.css"
       media="print"
       onload="this.media='all'"
+    />
+    <link
+      rel="preload"
+      href="/style/a11y-syntax-highlighting-prismjs/a11y-dark.css"
+      as="style"
     />
     <link rel="preload" href="/style/code.css" as="style" />
     <link
@@ -54,7 +77,21 @@
       media="print"
       onload="this.media='all'"
     />
-    <script src="js/app-shell.js" type="module"></script>
+    <!-- #endregion: styles -->
+    <!-- #region: dependencies -->
+    <link
+      rel="modulepreload"
+      href="/web_modules/@panpress/webapp/components/home.js"
+    />
+    <link
+      rel="modulepreload"
+      href="/web_modules/@panpress/webapp/content/app.js"
+    />
+    <link rel="modulepreload" href="/js/components/logo.js" />
+    <!-- #endregion: dependencies -->
+    <!-- #endregion: App Content -->
+
+    <!-- App Metas -->
     <link rel="manifest" href="/manifest.json" />
     <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" />
     <meta
@@ -87,6 +124,20 @@
         </div>
       </main>
     </div>
-    <script src="js/app.js" type="module"></script>
+    <!-- render App Content -->
+    <script type="module">
+      import bootstrap from "@panpress/webapp/content/app.js";
+      import { routes } from "./js/routes.js";
+      bootstrap(
+        [
+          {
+            // /<lang>/inventory/:npm-package-name
+            path: /^\/(?:en|fr)\/(?:\d+-)?inventory\/((?:(?:@|%40)[\w-~][\w-.~]*(?:\/|%2F))?[\w-~][\w-.~]+)$/,
+            component: "/js/routes/inventory-item.js",
+          },
+        ],
+        routes
+      );
+    </script>
   </body>
 </html>

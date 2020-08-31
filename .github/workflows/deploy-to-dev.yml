@@ -1,12 +1,12 @@
-name: Deploy
+name: Deploy to dev
 
 on:
   push:
     branches:
-      - master
+      - develop
 
 jobs:
-  build-deploy:
+  build-deploy-to-dev:
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout with submodules
@@ -50,27 +50,13 @@ jobs:
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting -P prod
+          args: deploy --only hosting -P dev
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-
-      - name: Create archive
-        run: |
-          tar -cvzf www.tar.gz dist
-
-      - name: Publish Github Release
-        uses: "marvinpinto/action-automatic-releases@latest"
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
-          prerelease: true
-          title: "Latest deployed build"
-          files: |
-            www.tar.gz
 
       - name: Run Lighthouse CI
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
         run: |
           npm install -g @lhci/cli@0.4.x
-          lhci autorun --githubAppToken="$LHCI_GITHUB_APP_TOKEN" --config lighthouserc.prod.js
+          lhci autorun --githubAppToken="$LHCI_GITHUB_APP_TOKEN" --config lighthouserc.dev.js

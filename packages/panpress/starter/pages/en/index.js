@@ -1,5 +1,6 @@
-import home from "../../js/components/home.js";
 import { html } from "lit-html";
+import logo from "~app/js/components/logo.js";
+import home from "@panpress/webapp/components/home.js";
 
 export default () =>
   home({
@@ -26,6 +27,7 @@ export default () =>
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       },
     ],
+    logo: logo(),
     content: html`<div class="banner">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

@@ -1,0 +1,28 @@
+{
+  "name": "@panpress/webapp",
+  "version": "0.0.0-alpha.2",
+  "description": "Default Web runtime library for Panpress",
+  "main": "index.js",
+  "module": "index.js",
+  "types": "main.d.ts",
+  "keywords": [
+    "modern",
+    "webapp",
+    "panpress"
+  ],
+  "author": {
+    "name": "Noël Macé",
+    "url": "https://noelmace.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fullwebdev/fullwebdev.git",
+    "directory": "packages/panpress/webapp"
+  },
+  "peerDependencies": {
+    "@modern-helpers/lazy-router": "^0.1.0-alpha.3",
+    "lit-html": "^1.2.1",
+    "prismjs": "^1.20.0"
+  }
+}

@@ -5,6 +5,7 @@ on:
     branches:
       - "**"
       - "!master"
+      - "!develop"
 jobs:
   build-and-test:
     runs-on: ubuntu-18.04
@@ -52,4 +53,4 @@ jobs:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
         run: |
           npm install -g @lhci/cli@0.4.x
-          lhci autorun --githubAppToken="$LHCI_GITHUB_APP_TOKEN" --config lighthouserc.dev.js
+          lhci autorun --githubAppToken="$LHCI_GITHUB_APP_TOKEN" --config lighthouserc.local.js

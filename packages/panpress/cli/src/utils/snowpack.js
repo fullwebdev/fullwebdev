@@ -42,7 +42,7 @@ module.exports.snowpack = (args, root) => {
   const snowp = execFile(
     binPath(),
     args,
-    { cwd: path.resolve(process.cwd(), root), maxBuffer: 1024 * 1024 * 100 },
+    { cwd: path.resolve(process.cwd(), root), maxBuffer: 1024 * 1024 * 1024 },
     (error, stdout) => {
       stdout = rmClear(stdout);
       if (error) {

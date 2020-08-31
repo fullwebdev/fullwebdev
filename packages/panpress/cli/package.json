@@ -32,7 +32,7 @@
     "local-web-server": "^4.2.1",
     "puppeteer": "^5.2.1",
     "rimraf": "^2.6.3",
-    "snowpack": "^2.7.5",
+    "snowpack": "^2.9.3",
     "xmlbuilder": "^15.1.1"
   }
 }
