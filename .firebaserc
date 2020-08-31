@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "fullweb-dev"
+    "default": "fullweb-dev",
+    "prod": "fullweb-dev",
+    "dev": "fullweb-dev-dev"
   }
 }

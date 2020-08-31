@@ -35,8 +35,8 @@
     "build:code-samples:index": "lerna run build:index --scope=@fullweb/code-samples",
     "commit": "commit",
     "lerna": "lerna",
-    "lhci:collect": "lhci collect --config lighthouserc.dev.js",
-    "lhci:assert": "lhci assert --config lighthouserc.dev.js",
+    "lhci:collect": "lhci collect --config lighthouserc.local.js",
+    "lhci:assert": "lhci assert --config lighthouserc.local.js",
     "lhci:open": "lhci open",
     "lhci": "npm run lhci:collect && npm run lhci:assert; npm run lhci:open",
     "l": "lerna run"
