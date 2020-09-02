@@ -1,6 +1,10 @@
 {
   "version": 2,
   "name": "livre-mwa",
+  "public": false,
+  "github": {
+    "enabled": false
+  },
   "builds": [
     { "src": "index.js", "use": "@now/node" }
   ],
