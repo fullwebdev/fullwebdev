@@ -139,7 +139,7 @@ Any line of the commit message cannot be longer than 100 characters.
   │       │
   │       └─⫸ Commit Scope: docs | code-samples | codelabs | data-driven-pwa | illustrations |
   │                          livre-fr | perf | slides-(vanilla-1|wof-1|wof-2) | helpers |
-  │                          helpers-(el|template|lazy-router) | benchmark | panpress | panpress-(cli|starter)
+  │                          helpers-(el|template|lazy-router) | benchmark | panpress | panpress-(cli|starter|webapp)
   │
   └─⫸ Commit Type: build | ci | docs | feat | fix | perf | refactor | style | test
 ```
@@ -182,6 +182,7 @@ The following is the list of supported scopes:
 - `panpress`
 - `panpress-cli`
 - `panpress-starter`
+- `panpress-webapp`
 - `slides-wof-1`
 - `slides-wof-2`
 - `slides-wof-3`

@@ -20,6 +20,7 @@ module.exports = {
         "panpress",
         "panpress-cli",
         "panpress-starter",
+        "panpress-webapp",
         "slides",
         "slides-wof-1",
         "slides-wof-2",
