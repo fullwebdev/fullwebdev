@@ -1,6 +1,6 @@
 {
   "name": "modern-helpers",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Minimalistic helper functions for Modern Web Apps development.",
   "scripts": {
     "validate-types": "tsc",
