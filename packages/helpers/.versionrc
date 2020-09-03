@@ -16,6 +16,14 @@
     {
       "filename": "template/package-lock.json",
       "type": "json"
+    },
+     {
+      "filename": "lazy-router/package.json",
+      "type": "json"
+    },
+    {
+      "filename": "lazy-router/package-lock.json",
+      "type": "json"
     }
   ],
   "tag-prefix": "helpers@v",
