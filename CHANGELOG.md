@@ -2,6 +2,55 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.0](https://github.com/fullwebdev/fullwebdev/compare/v0.10.0...v0.11.0) (2020-09-03)
+
+### ⚠ BREAKING CHANGES
+
+- **panpress-webapp:** update peer dependencies
+- **panpress:** new default WebApp library
+- **panpress-cli:** views are now generated in the /app/views/ directory,
+  and routes.js in /app/js/routes.js. But source files (md) for pages
+  should stay in the /pages directory.
+
+### Features
+
+- **docs:** add route aliases ([bdded6d](https://github.com/fullwebdev/fullwebdev/commit/bdded6d1fb705303c22299411c5b7ab89dc231fe))
+- **helpers:** allow to rewrite path when route wasn't found ([9c11fd9](https://github.com/fullwebdev/fullwebdev/commit/9c11fd92b860ca27bf7c94882f1598e39f937a0d))
+- **helpers:** new experimental lazy-router helper ([1e444cc](https://github.com/fullwebdev/fullwebdev/commit/1e444cc401403ed946071857be9c674fb9bf14c9))
+- **panpress-cli:** allow route aliases without numbering ([ec0cdfe](https://github.com/fullwebdev/fullwebdev/commit/ec0cdfece472514c281197af93f9adf13230a754))
+- **panpress-cli:** generate sitemaps ([e288642](https://github.com/fullwebdev/fullwebdev/commit/e288642b11ede3e31789adf15144170e51558d58))
+- **panpress-cli:** permit to clear snowpack cache ([e7ecf9d](https://github.com/fullwebdev/fullwebdev/commit/e7ecf9d14f660ee630cb812e8d64048384e8a99a))
+- **panpress-starter:** add route aliases without numbering ([8f4b63a](https://github.com/fullwebdev/fullwebdev/commit/8f4b63a32a0a0d21645d2fe0bafe85a9a5b1136f))
+- **panpress-webapp:** update peer dependencies ([39b7122](https://github.com/fullwebdev/fullwebdev/commit/39b71224b08b1cd0a8ee088a85b06e50730aff55))
+
+### Bug Fixes
+
+- **docs:** add missing robot.txt ([7b1c68d](https://github.com/fullwebdev/fullwebdev/commit/7b1c68d6800d0db7a8b3887fe87fd4a7fbf3149b))
+- **docs:** add missing robot.txt ([58c8585](https://github.com/fullwebdev/fullwebdev/commit/58c85853db61abe5e2b62081e75a6a4307672909))
+- **docs:** add missing title id & update lang ([a9359ac](https://github.com/fullwebdev/fullwebdev/commit/a9359ac39cb47723ea4dff1533c70d7fb7b13e4e))
+- **docs:** css loading on firefox ([d1d99b2](https://github.com/fullwebdev/fullwebdev/commit/d1d99b2d5fe6426a256a89f2284e6e37c1543b0e))
+- **docs:** keep 404 original path ([d5cf7dc](https://github.com/fullwebdev/fullwebdev/commit/d5cf7dcb3aeddc8aa0629e56225959f1987328c4))
+- **docs:** lazy load prismjs ([596a9e5](https://github.com/fullwebdev/fullwebdev/commit/596a9e5a2cafa0d9a2b956dc3fad6e5d8ea5e1c7))
+- **docs:** rewrite generic paths ([2502490](https://github.com/fullwebdev/fullwebdev/commit/2502490937156d3048e5f96d6748dcbef21acb2d))
+- **docs:** solve switch lang rendering regression ([284c786](https://github.com/fullwebdev/fullwebdev/commit/284c786caefccbb70271b41c7cc3eedb03ded5b3))
+- **docs:** update preloads & remove matomo ([9bdd82b](https://github.com/fullwebdev/fullwebdev/commit/9bdd82befadf54c62ba34fe8716aeb0fe7bb7537))
+- **helpers:** format typings ([0d2a1ee](https://github.com/fullwebdev/fullwebdev/commit/0d2a1ee6a3778c005dd2fd78ae6f675f0b629db5))
+- **helpers:** resolve lazy-router/navigate promise ([5e5b85d](https://github.com/fullwebdev/fullwebdev/commit/5e5b85d6a480eeb95af3f28d7da9b2b72690fa95))
+- **helpers-lazy-router:** allow async callbacks ([efc7726](https://github.com/fullwebdev/fullwebdev/commit/efc7726c2a18af674fa13028a2c8d80269d93020))
+- **helpers-lazy-router:** allow generic 404 ([eef3e45](https://github.com/fullwebdev/fullwebdev/commit/eef3e4552c3e67e4f5b5ddb56a2a801815291d67))
+- **panpress-cli:** path to snowpack binary ([634d59e](https://github.com/fullwebdev/fullwebdev/commit/634d59e1a85d3219f7499ddd9f76a98a9476d5d1))
+- **panpress-cli:** raise maxBuffer for snowpack ([15640d3](https://github.com/fullwebdev/fullwebdev/commit/15640d38e235955cc4971e4938d959691617fa7c))
+- **panpress-cli:** update snowpack ([1d7297a](https://github.com/fullwebdev/fullwebdev/commit/1d7297acae54e45dcf5ee85a5db5390ab2cd7a60))
+- **panpress-cli:** use a huge max buffer for snowpack ([9463dc2](https://github.com/fullwebdev/fullwebdev/commit/9463dc22d6875bb26fe561204bf3451c211f3965))
+- **panpress-starter:** add missing robot.txt ([cc088e8](https://github.com/fullwebdev/fullwebdev/commit/cc088e88763350291538816923d4aa355e11656c))
+- **panpress-starter:** modulepreload ([363dd1b](https://github.com/fullwebdev/fullwebdev/commit/363dd1bf4a4c19b55a05d0f31944502d24bbb69a))
+- **panpress-starter:** remove postcss import ([b1fb88e](https://github.com/fullwebdev/fullwebdev/commit/b1fb88e85c116deb4a5a59897f5c87adc4f357f2))
+- **panpress-starter:** rewrite generic paths ([e2e9d4f](https://github.com/fullwebdev/fullwebdev/commit/e2e9d4f931cdf65ef13e8ef7e88eab86ca447b64))
+- **panpress-starter:** update dependencies ([a4139ba](https://github.com/fullwebdev/fullwebdev/commit/a4139ba2b351fc8fd32840c56dea8484ebf003f6))
+
+* **panpress:** new default WebApp library ([928dc6b](https://github.com/fullwebdev/fullwebdev/commit/928dc6be6fcd47417563fc09ccee11443ae01ad5))
+* **panpress-cli:** use an "app" source dir ([6b36327](https://github.com/fullwebdev/fullwebdev/commit/6b36327956b4ed03e5f731cc2eb43874bddeb047))
+
 ## [0.10.0](https://github.com/fullwebdev/fullwebdev/compare/v0.9.1...v0.10.0) (2020-08-24)
 
 ### Features
