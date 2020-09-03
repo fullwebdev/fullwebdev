@@ -1,6 +1,6 @@
 {
   "name": "@modern-helpers/lazy-router",
-  "version": "0.1.0-alpha.3",
+  "version": "0.2.0",
   "description": "minimalistic SPA router for lazy loading",
   "main": "index.js",
   "module": "index.js",
