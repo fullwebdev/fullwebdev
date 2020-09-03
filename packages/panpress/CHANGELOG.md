@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0-beta.5](https://github.com/fullwebdev/fullwebdev/compare/panpress@v0.3.0-beta.4...panpress@v0.3.0-beta.5) (2020-09-03)
+
+### ⚠ BREAKING CHANGES
+
+- **panpress-webapp:** update peer dependencies
+- **panpress:** new default WebApp library
+
+### Features
+
+- **panpress-webapp:** update peer dependencies ([39b7122](https://github.com/fullwebdev/fullwebdev/commit/39b71224b08b1cd0a8ee088a85b06e50730aff55))
+
+### Bug Fixes
+
+- **panpress-cli:** update snowpack ([1d7297a](https://github.com/fullwebdev/fullwebdev/commit/1d7297acae54e45dcf5ee85a5db5390ab2cd7a60))
+- **panpress-cli:** use a huge max buffer for snowpack ([9463dc2](https://github.com/fullwebdev/fullwebdev/commit/9463dc22d6875bb26fe561204bf3451c211f3965))
+- **panpress-starter:** modulepreload ([363dd1b](https://github.com/fullwebdev/fullwebdev/commit/363dd1bf4a4c19b55a05d0f31944502d24bbb69a))
+- **panpress-starter:** update dependencies ([a4139ba](https://github.com/fullwebdev/fullwebdev/commit/a4139ba2b351fc8fd32840c56dea8484ebf003f6))
+
+* **panpress:** new default WebApp library ([928dc6b](https://github.com/fullwebdev/fullwebdev/commit/928dc6be6fcd47417563fc09ccee11443ae01ad5))
+
 ## [0.3.0-beta.4](https://github.com/fullwebdev/fullwebdev/compare/panpress@v0.3.0-beta.3...panpress@v0.3.0-beta.4) (2020-08-28)
 
 ### ⚠ BREAKING CHANGES

@@ -1,6 +1,6 @@
 {
   "name": "@panpress/webapp",
-  "version": "0.3.0-beta.4",
+  "version": "0.3.0-beta.5",
   "description": "Default Web runtime library for Panpress",
   "main": "index.js",
   "module": "index.js",

@@ -1,6 +1,6 @@
 {
   "name": "@panpress/cli",
-  "version": "0.3.0-beta.4",
+  "version": "0.3.0-beta.5",
   "description": "Static site generator powered by Pandoc & lit-html.",
   "main": "index.js",
   "bin": {
