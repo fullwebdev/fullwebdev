@@ -1,13 +1,11 @@
 {
-  "spellright.language": ["fr_FR", "en_GB"],
-  "spellright.documentTypes": ["markdown", "latex", "plaintext", "git-commit"],
   "ltex.language": "fr",
   "ltex.configurationTarget": {
     "addToDictionary": "workspaceFolder",
     "disableRule": "workspaceFolder",
     "ignoreRuleInSentence": "workspaceFolder"
   },
-  "ltex.dictionary": {
+  "ltex.workspaceDictionary": {
     "fr": [
       "Pandoc",
       "TODO",
@@ -215,10 +213,6 @@
       "Enquire"
     ]
   },
-  "cSpell.language": "fr,en",
-  "cSpell.allowCompoundWords": true,
-  "cSpell.dictionaryDefinitions": [{ "name": "local", "path": "${workspaceFolder}/.vscode/spellright.dict" }],
-  "cSpell.dictionaries": ["local"],
   "[markdown]": {
     "editor.quickSuggestions": true
   },
@@ -231,14 +225,5 @@
       "rule": "DOUBLE_PUNCTUATION",
       "sentence": "^\\Q<<< @/../\\E"
     }
-  ],
-  "cSpell.words": [
-    "Crocker",
-    "DARPA",
-    "Deloche",
-    "Duvall",
-    "IESG",
-    "IRTF",
-    "ISOC"
   ]
 }
