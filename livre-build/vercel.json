@@ -5,12 +5,8 @@
   "github": {
     "enabled": false
   },
-  "builds": [
-    { "src": "index.js", "use": "@now/node" }
-  ],
-  "routes": [
-    { "src": "/.*", "dest": "index.js" }
-  ],
+  "builds": [{ "src": "index.js", "use": "@now/node" }],
+  "routes": [{ "src": "/.*", "dest": "index.js" }],
   "env": {
     "USERNAME": "@username",
     "PASSWORD": "@password"

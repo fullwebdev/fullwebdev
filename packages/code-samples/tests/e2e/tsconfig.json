@@ -11,10 +11,13 @@
     "strict": false,
     "noImplicitThis": true,
     "alwaysStrict": true,
-    "types": ["node", "puppeteer", "jest", "expect-puppeteer", "jest-environment-puppeteer"],
+    "types": [
+      "node",
+      "puppeteer",
+      "jest",
+      "expect-puppeteer",
+      "jest-environment-puppeteer"
+    ]
   },
-  "include": [
-    "./jest-globals.d.ts",
-    "./**/*.jest.js"
-  ]
+  "include": ["./jest-globals.d.ts", "./**/*.jest.js"]
 }

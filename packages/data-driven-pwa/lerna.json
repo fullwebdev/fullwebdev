@@ -1,8 +1,4 @@
 {
-  "packages": [
-    "before-bgsync",
-    "data-driven-solution",
-    "project"
-  ],
+  "packages": ["before-bgsync", "data-driven-solution", "project"],
   "version": "independent"
 }

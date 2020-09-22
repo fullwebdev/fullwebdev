@@ -14,8 +14,8 @@
     "prebuild": "npm run prebuild:docs",
     "build": "bash scripts/build.sh -f",
     "serve": "cd dist && ws --spa index.html",
-    "lint": "prettier --write \"./**/*.{js,css,ts,jsx,tsx,html,yml,vue,styl,md}\" && markdownlint . --fix",
-    "pretty": "prettier --write \"./**/*.{js,css,ts,jsx,tsx,html,yml,vue,styl,md}\"",
+    "lint": "prettier --write \"./**/*.{js,css,ts,jsx,tsx,html,yml,vue,styl,md,json}\" && markdownlint . --fix",
+    "pretty": "prettier --write \"./**/*.{js,css,ts,jsx,tsx,html,yml,vue,styl,md,json}\"",
     "grammar": "bash scripts/grammar.sh",
     "install:panpress-starter": "cd packages/panpress/starter",
     "postinstall": "lerna bootstrap && npm run install:panpress-starter && pip install -r py-requirements.txt",
@@ -71,7 +71,7 @@
       "prettier --write",
       "markdownlint --fix"
     ],
-    "*.{js,css,ts,jsx,tsx,html,yml,vue}": [
+    "*.{js,css,ts,jsx,tsx,html,yml,vue,json}": [
       "prettier --write"
     ]
   }

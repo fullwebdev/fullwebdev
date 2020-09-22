@@ -12,5 +12,5 @@
     "alwaysStrict": true,
     "esModuleInterop": true
   },
-  "include": ["**/el/*", "**/template/*", "**/lazy-router/*"],
+  "include": ["**/el/*", "**/template/*", "**/lazy-router/*"]
 }

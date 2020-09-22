@@ -1,1 +1,8 @@
 /packages/code-samples/src/index.html
+package.json
+package-lock.json
+vercel.json
+/packages/benchmark
+/packages/slides/**/snapshots/
+/packages/slides/**/src/**/*.json
+

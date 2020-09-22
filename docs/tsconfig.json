@@ -16,8 +16,5 @@
       "~app/*": ["app/*"]
     }
   },
-  "exclude": [
-    "views",
-    "build"
-  ]
+  "exclude": ["views", "build"]
 }
