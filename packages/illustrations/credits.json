@@ -1,1 +1,103 @@
-[]
+[
+  {
+    "id": "ietf-rfc1-heading-capture",
+    "archive_location": "/images/third-party/ietf-rfc1-heading.png",
+    "citation-label": "ietf-rfc1-heading-capture",
+    "issued": { "date-parts": [[2020, 9, 7]] },
+    "language": "en",
+    "medium": "https://trustee.ietf.org/reproduction-rfcs-faq.html",
+    "title": "RFC 1 Heading",
+    "type": "graphic"
+  },
+  {
+    "id": "IETFLogo",
+    "accessed": { "date-parts": [[2020, 9, 7]] },
+    "archive_location": "/images/third-party/IETF_Logo.svg",
+    "author": [{ "literal": "IETF" }],
+    "citation-label": "IETFLogo",
+    "language": "en",
+    "medium": "trademark descriptive fair use",
+    "title": "IETF Logo",
+    "type": "graphic",
+    "URL": "https://www.ietf.org/logo/"
+  },
+  {
+    "id": "ISOCLogo",
+    "accessed": { "date-parts": [[2020, 9, 7]] },
+    "archive_location": "/images/third-party/ISOC-Dark-RGB_Logo_400px.png",
+    "author": [{ "literal": "Internet Society" }],
+    "citation-label": "ISOCLogo",
+    "medium": "trademark descriptive fair use",
+    "title": "Internet Society Logo",
+    "type": "graphic",
+    "URL": "https://assets.internetsociety.org/Styleguide/#page/029105C2-BD06-4184-9C413CD5BAB15B76"
+  },
+  {
+    "id": "programma101",
+    "abstract": "front view of an Olivetti-Underwood Programma 101 electronic programmable calculator, on display at w:The National Museum of Computing",
+    "accessed": { "date-parts": [[2020, 9, 7]] },
+    "archive_location": "/images/third-party/Olivettiunderwood_programma101.jpg",
+    "author": [{ "literal": "AlisonW" }],
+    "citation-label": "programma101",
+    "issued": { "date-parts": [[2009, 10, 15]] },
+    "medium": "https://creativecommons.org/licenses/by-sa/3.0/legalcode",
+    "source": "Wikimedia Commons",
+    "title": "Olivetti-Underwood Programma 101",
+    "title-short": "Programma 101",
+    "type": "graphic",
+    "URL": "https://commons.wikimedia.org/wiki/File:Olivettiunderwood_programma101.jpg"
+  },
+  {
+    "id": "SRIBillEnglish1968",
+    "abstract": "SRI’s Bill English, engineer who built the first computer mouse prototype, prepares for the December 9, 1968 \"mother of all demos\"",
+    "accessed": { "date-parts": [[2020, 9, 7]] },
+    "archive_location": "/images/third-party/SRI_Bill_English_1968.jpg",
+    "author": [{ "literal": "S. R. I. International" }],
+    "citation-label": "SRIBillEnglish1968",
+    "issued": { "date-parts": [[1968, 12]] },
+    "medium": "https://creativecommons.org/licenses/by-sa/3.0/legalcode",
+    "source": "Wikimedia Commons",
+    "title": "SRI Bill English 1968",
+    "type": "graphic",
+    "URL": "https://commons.wikimedia.org/wiki/File:SRI_Bill_English_1968.jpg"
+  },
+  {
+    "id": "SteveCrockerJI1",
+    "accessed": { "date-parts": [[2020, 9, 7]] },
+    "archive_location": "/images/third-party/SteveCrockerICANN07.jpg",
+    "author": [{ "family": "Ito", "given": "Joi" }],
+    "citation-label": "SteveCrockerJI1",
+    "issued": { "literal": "25 March 2007, 20:23:45" },
+    "medium": "https://creativecommons.org/licenses/by/2.0/legalcode",
+    "source": "Wikimedia Commons",
+    "title": "SteveCrockerJI1",
+    "type": "graphic",
+    "URL": "https://commons.wikimedia.org/wiki/File:SteveCrockerJI1.jpg"
+  },
+  {
+    "id": "TBLODI14",
+    "accessed": { "date-parts": [[2020, 9, 7]] },
+    "archive_location": "/images/third-party/TimBernersLee-ODISummit2014.jpg",
+    "author": [{ "literal": "Open Data Institute Knowledge for Everyone" }],
+    "citation-label": "TBLODI14",
+    "issued": { "literal": "20 November 2018, 11:17" },
+    "medium": "https://creativecommons.org/licenses/by-sa/2.0/legalcode",
+    "source": "Wikimedia Commons",
+    "title": "Tim Berners-Lee @ ODISummit 2014",
+    "type": "graphic",
+    "URL": "https://commons.wikimedia.org/wiki/File:ODISummit_20Nov_114_s_(32187716308).jpg"
+  },
+  {
+    "id": "The_Memex",
+    "accessed": { "date-parts": [[2020, 9, 7]] },
+    "archive_location": "/images/third-party/The_Memex.jpg",
+    "author": [{ "literal": "Dunkoman" }],
+    "citation-label": "The_Memex",
+    "issued": { "literal": "30 October 2008, 09:28" },
+    "medium": "https://creativecommons.org/licenses/by/2.0/legalcode",
+    "source": "Wikimedia Commons",
+    "title": "The Memex",
+    "type": "graphic",
+    "URL": "https://commons.wikimedia.org/wiki/File:The_Memex_%283002477109%29.jpg"
+  }
+]
