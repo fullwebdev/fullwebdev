@@ -40,7 +40,7 @@
     "author": [{ "literal": "AlisonW" }],
     "citation-label": "programma101",
     "issued": { "date-parts": [[2009, 10, 15]] },
-    "medium": "https://creativecommons.org/licenses/by-sa/3.0/legalcode",
+    "medium": "CC BY-SA  3.0 Unported",
     "source": "Wikimedia Commons",
     "title": "Olivetti-Underwood Programma 101",
     "title-short": "Programma 101",
@@ -55,11 +55,24 @@
     "author": [{ "literal": "S. R. I. International" }],
     "citation-label": "SRIBillEnglish1968",
     "issued": { "date-parts": [[1968, 12]] },
-    "medium": "https://creativecommons.org/licenses/by-sa/3.0/legalcode",
+    "medium": "CC BY-SA  3.0 Unported",
     "source": "Wikimedia Commons",
     "title": "SRI Bill English 1968",
     "type": "graphic",
     "URL": "https://commons.wikimedia.org/wiki/File:SRI_Bill_English_1968.jpg"
+  },
+  {
+    "id": "stackOfBooks",
+    "archive_location": "/images/third-party/parts/Depositphotos_stack-books_196747296_l-2015.jpg",
+    "author": [{ "literal": "Vadim Vasenin" }],
+    "citation-label": "stackOfBooks",
+    "issued": { "date-parts": [[2018, 5, 22]] },
+    "medium": "Depositphotos Attributed Free License",
+    "source": "DepositPhotos",
+    "title": "Stack of different colored books on white tabletop",
+    "title-short": "Stack Books",
+    "type": "graphic",
+    "URL": "https://depositphotos.com/196747296/stock-photo-stack-different-colored-books-white.html"
   },
   {
     "id": "SteveCrockerJI1",
@@ -68,11 +81,22 @@
     "author": [{ "family": "Ito", "given": "Joi" }],
     "citation-label": "SteveCrockerJI1",
     "issued": { "literal": "25 March 2007, 20:23:45" },
-    "medium": "https://creativecommons.org/licenses/by/2.0/legalcode",
+    "medium": "CC BY 2.0",
     "source": "Wikimedia Commons",
     "title": "SteveCrockerJI1",
     "type": "graphic",
     "URL": "https://commons.wikimedia.org/wiki/File:SteveCrockerJI1.jpg"
+  },
+  {
+    "id": "sweating-icon",
+    "archive_location": "/images/third-party/parts/noun_sweating_1280760.svg",
+    "author": [{ "literal": "Gan Khoon Lay" }],
+    "citation-label": "sweating-icon",
+    "medium": "CC BY 3.0 US",
+    "source": "Noun Project",
+    "title": "sweating",
+    "type": "graphic",
+    "URL": "https://thenounproject.com/term/sweating/1280760/"
   },
   {
     "id": "TBLODI14",
@@ -81,7 +105,7 @@
     "author": [{ "literal": "Open Data Institute Knowledge for Everyone" }],
     "citation-label": "TBLODI14",
     "issued": { "literal": "20 November 2018, 11:17" },
-    "medium": "https://creativecommons.org/licenses/by-sa/2.0/legalcode",
+    "medium": "CC BY 2.0",
     "source": "Wikimedia Commons",
     "title": "Tim Berners-Lee @ ODISummit 2014",
     "type": "graphic",
@@ -94,10 +118,20 @@
     "author": [{ "literal": "Dunkoman" }],
     "citation-label": "The_Memex",
     "issued": { "literal": "30 October 2008, 09:28" },
-    "medium": "https://creativecommons.org/licenses/by/2.0/legalcode",
+    "medium": "CC BY 2.0",
     "source": "Wikimedia Commons",
     "title": "The Memex",
     "type": "graphic",
     "URL": "https://commons.wikimedia.org/wiki/File:The_Memex_%283002477109%29.jpg"
+  },
+  {
+    "id": "webdev-fatigue-img",
+    "archive_location": "/images/webdev-fatigue.png",
+    "author": [{ "literal": "Noël Macé" }],
+    "citation-label": "webdev-fatigue-img",
+    "issued": { "date-parts": [[2020, 9, 23]] },
+    "medium": "CC BY-SA  3.0 Unported",
+    "title": "WebDev Fatigue",
+    "type": "graphic"
   }
 ]
