@@ -125,6 +125,20 @@
     "URL": "https://commons.wikimedia.org/wiki/File:The_Memex_%283002477109%29.jpg"
   },
   {
+    "id": "timNextCube",
+    "abstract": "Computador NeXTcube utilizado por Tim Berners-Lee e que se tornou o primeiro servidor Web",
+    "accessed": { "date-parts": [[2020, 10, 24]] },
+    "archive_location": "/images/third-party/Ciuffo-2008-Primeiro_servidor_Web.jpg",
+    "author": [{ "family": "Ciuffo", "given": "Leandro Neumann" }],
+    "citation-label": "timNextCube",
+    "issued": { "date-parts": [[2008, 7, 3]] },
+    "medium": "CC BY 2.0",
+    "source": "Flickr",
+    "title": "Primeiro servidor Web",
+    "type": "graphic",
+    "URL": "https://www.flickr.com/photos/leandrociuffo/2640164998/"
+  },
+  {
     "id": "webdev-fatigue-img",
     "archive_location": "/images/webdev-fatigue.png",
     "author": [{ "literal": "Noël Macé" }],
