@@ -84,6 +84,16 @@
     "URL": "https://commons.wikimedia.org/wiki/File:Phoenix_0.1.png"
   },
   {
+    "id": "graphNavigateursAndroid",
+    "archive_location": "/images/history/graph-browser-share-android.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphNavigateursAndroid",
+    "issued": { "date-parts": [[2020, 10, 31]] },
+    "language": "fr",
+    "title": "Parts de marché des navigateurs Android",
+    "type": "graphic"
+  },
+  {
     "id": "graphVentesPC19862000",
     "archive_location": "/images/history/graph-ventes-pc-1986-2000.png",
     "author": [{ "family": "Macé", "given": "Noël" }],
