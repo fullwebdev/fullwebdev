@@ -148,6 +148,26 @@
     "URL": "https://assets.internetsociety.org/Styleguide/#page/029105C2-BD06-4184-9C413CD5BAB15B76"
   },
   {
+    "id": "maceChromePacman",
+    "abstract": "\"Chrome eats RAM like Pacman eats dots.\"\nFrom https://knowyourmeme.com/photos/1501182-google-chrome-ram-hog",
+    "archive_location": "/images/history/chrome-pacman.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "maceChromePacman",
+    "title": "Chrome Pacman",
+    "type": "graphic"
+  },
+  {
+    "id": "maceChromiumArchitecture2020",
+    "abstract": "Minimalistic architecture diagram of Chromium and its derivatives based on https://chromium.googlesource.com/chromium/src/+/HEAD/content/README.md and the \"How Blinks Work\" document.",
+    "archive_location": "/images/src/chromium-architecture.dia",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "maceChromiumArchitecture2020",
+    "issued": { "date-parts": [[2020, 10, 31]] },
+    "language": "fr",
+    "title": "Chromium Architecture",
+    "type": "graphic"
+  },
+  {
     "id": "mozillaDinoLogo",
     "accessed": { "date-parts": [[2020, 10, 30]] },
     "archive": "Mozilla",
@@ -192,6 +212,16 @@
     "title-short": "Mosaic screenshot",
     "type": "graphic",
     "URL": "https://commons.wikimedia.org/wiki/File:NCSA_Mosaic_Browser_Screenshot.png"
+  },
+  {
+    "id": "partsNavigateursOct2020",
+    "archive_location": "/images/history/graph-browser-share-latest.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "partsNavigateursOct2020",
+    "issued": { "date-parts": [[2020, 10, 31]] },
+    "language": "fr",
+    "title": "Parts de marché des navigateurs web en octobre 2020",
+    "type": "graphic"
   },
   {
     "id": "pittsComputerCollection90s2010",
@@ -332,6 +362,19 @@
     "title": "Primeiro servidor Web",
     "type": "graphic",
     "URL": "https://www.flickr.com/photos/leandrociuffo/2640164998/"
+  },
+  {
+    "id": "V8Logo2018",
+    "accessed": { "date-parts": [[2020, 11, 1]] },
+    "archive_location": "/images/third-party/V8_JavaScript_engine_logo_2.svg",
+    "author": [{ "literal": "The V8 Project" }],
+    "citation-label": "V8Logo2018",
+    "issued": { "date-parts": [[2018]] },
+    "medium": "CC BY-SA  3.0 Unported",
+    "source": "Wikimedia Commons",
+    "title": "V8 logo",
+    "type": "graphic",
+    "URL": "https://commons.wikimedia.org/wiki/File:V8_JavaScript_engine_logo_2.svg"
   },
   {
     "id": "violaWWWAbout",
