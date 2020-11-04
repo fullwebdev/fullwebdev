@@ -135,6 +135,21 @@
     "type": "graphic"
   },
   {
+    "id": "ietfHTTPLogo",
+    "accessed": { "date-parts": [[2020, 11, 2]] },
+    "archive": "https://httpwg.github.io/asset/http.svg",
+    "archive_location": "/images/third-party/HTTP_logo.svg",
+    "author": [{ "literal": "IETF HTTP Working Group (HTTPbis)" }],
+    "citation-label": "ietfHTTPLogo",
+    "issued": { "date-parts": [[2014]] },
+    "medium": "Public domain",
+    "source": "Wikimedia Commons",
+    "title": "HTTP logo",
+    "title-short": "English",
+    "type": "graphic",
+    "URL": "https://commons.wikimedia.org/wiki/File:HTTP_logo.svg"
+  },
+  {
     "id": "IETFLogo",
     "accessed": { "date-parts": [[2020, 9, 7]] },
     "archive_location": "/images/third-party/IETF_Logo.svg",
@@ -176,6 +191,15 @@
     "language": "fr",
     "title": "Chromium Architecture",
     "type": "graphic"
+  },
+  {
+    "id": "maceWICGProcess2020",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "maceWICGProcess2020",
+    "issued": { "date-parts": [[2020, 11, 2]] },
+    "title": "WICG process",
+    "type": "graphic",
+    "URL": "/images/standards/WICG-process.png"
   },
   {
     "id": "mozillaDinoLogo",
@@ -222,6 +246,19 @@
     "title-short": "Mosaic screenshot",
     "type": "graphic",
     "URL": "https://commons.wikimedia.org/wiki/File:NCSA_Mosaic_Browser_Screenshot.png"
+  },
+  {
+    "id": "OfficialW3CIcon2008",
+    "accessed": { "date-parts": [[2020, 11, 2]] },
+    "archive": "http://www.w3.org/Consortium/Legal/logo-usage-20000308.html",
+    "archive_location": "/images/third-party/W3C_Icon.svg",
+    "citation-label": "OfficialW3CIcon2008",
+    "issued": { "date-parts": [[2008, 7, 21]] },
+    "medium": "trademark descriptive fair use",
+    "source": "Wikimedia Commons",
+    "title": "Official W3C Icon",
+    "type": "graphic",
+    "URL": "https://commons.wikimedia.org/wiki/File:W3C%C2%AE_Icon.svg"
   },
   {
     "id": "partsNavigateursOct2020",
@@ -399,6 +436,28 @@
     "title": "violaWWWAbout",
     "type": "graphic",
     "URL": "https://commons.wikimedia.org/wiki/File:ViolaWWWAbout.png"
+  },
+  {
+    "id": "W3CHTMLValidationIcons",
+    "abstract": "Combination of the \"valid HTML\" icons by the W3C for HTML 2 and HTML 3.2.\n\nThis work includes material that may be protected as a trademark in some jurisdictions. If you want to use it, you have to ensure that you have the legal right to do so and that you do not infringe any trademark rights.\n\nSee https://www.w3.org/QA/Tools/Icons & https://commons.wikimedia.org/wiki/Category:W3C_validation",
+    "archive_location": "/images/third-party/W3C-HTML-validation.png",
+    "author": [{ "literal": "W3C" }],
+    "citation-label": "W3CHTMLValidationIcons",
+    "medium": "Public domain",
+    "title": "W3C HTML Validation Icons",
+    "type": "graphic"
+  },
+  {
+    "id": "W3CRecProcess",
+    "abstract": "Inspiré de https://github.com/w3c/w3process/blob/9536091cacc516ceeff253211058c4c10cd8e3f5/basic-rec-track.svg",
+    "accessed": { "date-parts": [[2020, 11, 2]] },
+    "archive_location": "/images/standards/W3C-rec-process.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "W3CRecProcess",
+    "issued": { "date-parts": [[2020, 11, 2]] },
+    "language": "fr",
+    "title": "W3C Recommendation - Processus (simplifié)",
+    "type": "graphic"
   },
   {
     "id": "webdev-fatigue-img",
