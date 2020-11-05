@@ -1,11 +1,11 @@
 {
   "ltex.language": "fr",
   "ltex.configurationTarget": {
-    "addToDictionary": "workspaceFolder",
-    "disableRule": "workspaceFolder",
-    "ignoreRuleInSentence": "workspaceFolder"
+    "dictionary": "workspaceFolder",
+    "disabledRules": "workspaceFolder",
+    "hiddenFalsePositives": "workspaceFolder"
   },
-  "ltex.workspaceDictionary": {
+  "ltex.dictionary": {
     "fr": [
       "Pandoc",
       "TODO",
@@ -285,13 +285,37 @@
       "Anaheim",
       "Blink",
       "Chakra",
-      "ChakraCore"
+      "ChakraCore",
+      "ARPA",
+      "chargeant",
+      "WG",
+      "SGML",
+      "MathML",
+      "DocBook",
+      "Hickson",
+      "Ebay",
+      "XForms",
+      "Stachowiak",
+      "Maciej",
+      "Terje",
+      "Bless",
+      "Rosmaita",
+      "Boyer",
+      "Tomaszuk",
+      "Dominik",
+      "IRC",
+      "versionnement",
+      "Freenode",
+      "Wattsi",
+      "World",
+      "Wide",
+      "Bialystok"
     ]
   },
   "[markdown]": {
     "editor.quickSuggestions": true
   },
-  "ltex.ignoreRuleInSentence": [
+  "ltex.hiddenFalsePositives": [
     {
       "rule": "FR_SPELLING_RULE",
       "sentence": "^\\Q<<< @/../\\E"
