@@ -193,6 +193,15 @@
     "type": "graphic"
   },
   {
+    "id": "maceRelationSGMLXML2020",
+    "archive_location": "/images/standards/sgml-xml.svg",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "maceRelationSGMLXML2020",
+    "issued": { "date-parts": [[2020, 11, 4]] },
+    "title": "Relation SGML-XML",
+    "type": "graphic"
+  },
+  {
     "id": "maceWICGProcess2020",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "maceWICGProcess2020",
@@ -468,5 +477,17 @@
     "medium": "CC BY-SA  3.0 Unported",
     "title": "WebDev Fatigue",
     "type": "graphic"
+  },
+  {
+    "id": "WHATWGLogo2004",
+    "accessed": { "date-parts": [[2020, 11, 4]] },
+    "archive_location": "/images/third-party/WHATWG_first-logo.png",
+    "author": [{ "literal": "WHATWG" }],
+    "citation-label": "WHATWGLogo2004",
+    "issued": { "date-parts": [[2004]] },
+    "medium": "trademark descriptive fair use",
+    "title": "WHATWG first logo",
+    "type": "graphic",
+    "URL": "https://web.archive.org/web/20040606022735im_/http://www.whatwg.org/images/logo"
   }
 ]
