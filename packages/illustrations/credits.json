@@ -50,6 +50,33 @@
     "type": "graphic"
   },
   {
+    "id": "DiagrammeOrganisationEcma",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "DiagrammeOrganisationEcma",
+    "issued": { "date-parts": [[2020, 11, 6]] },
+    "title": "Diagramme organisation Ecma",
+    "type": "graphic"
+  },
+  {
+    "id": "EcmaTC39Logo",
+    "accessed": { "date-parts": [[2020, 11, 6]] },
+    "archive_location": "/images/third-party/TC39-logo.png",
+    "citation-label": "EcmaTC39Logo",
+    "language": "en",
+    "title": "Ecma TC39 Logo",
+    "type": "graphic",
+    "URL": "https://github.com/tc39"
+  },
+  {
+    "id": "ESJSTimelinePicture",
+    "archive_location": "/images/history/js-timeline.svg",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "ESJSTimelinePicture",
+    "issued": { "date-parts": [[2020, 11, 6]] },
+    "title": "ES/JS Timeline",
+    "type": "graphic"
+  },
+  {
     "id": "fdecomiteWindowsDisk19922012",
     "accessed": { "date-parts": [[2020, 10, 26]] },
     "author": [{ "literal": "fdecomite" }],
@@ -84,6 +111,14 @@
     "URL": "https://commons.wikimedia.org/wiki/File:Phoenix_0.1.png"
   },
   {
+    "id": "graphEcmaLiaisons",
+    "archive_location": "/images/standards/ecma-liaisons.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphEcmaLiaisons",
+    "title": "Ecma Liaisons",
+    "type": "graphic"
+  },
+  {
     "id": "graphNavigateursAndroid",
     "archive_location": "/images/history/graph-browser-share-android.png",
     "author": [{ "family": "Macé", "given": "Noël" }],
@@ -91,6 +126,14 @@
     "issued": { "date-parts": [[2020, 10, 31]] },
     "language": "fr",
     "title": "Parts de marché des navigateurs Android",
+    "type": "graphic"
+  },
+  {
+    "id": "graphPeriodeRevisionTC39",
+    "archive_location": "/images/standards/TC39-periode-revision.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphPeriodeRevisionTC39",
+    "title": "Période de révision des specs TC39",
     "type": "graphic"
   },
   {
@@ -171,6 +214,16 @@
     "title": "Internet Society Logo",
     "type": "graphic",
     "URL": "https://assets.internetsociety.org/Styleguide/#page/029105C2-BD06-4184-9C413CD5BAB15B76"
+  },
+  {
+    "id": "LogoEcmaInternational",
+    "accessed": { "date-parts": [[2020, 11, 4]] },
+    "archive_location": "/images/third-party/ecma-logo.jpg",
+    "citation-label": "LogoEcmaInternational",
+    "medium": "trademark descriptive fair use",
+    "title": "Logo Ecma International",
+    "type": "graphic",
+    "URL": "https://www.ecma-international.org/"
   },
   {
     "id": "maceChromePacman",
@@ -489,5 +542,18 @@
     "title": "WHATWG first logo",
     "type": "graphic",
     "URL": "https://web.archive.org/web/20040606022735im_/http://www.whatwg.org/images/logo"
+  },
+  {
+    "id": "WHATWGLogo2014",
+    "accessed": { "date-parts": [[2020, 11, 4]] },
+    "archive": "/images/third-party/WHATWG_logo.svg",
+    "author": [{ "literal": "WHATWG contributors" }],
+    "citation-label": "WHATWGLogo2014",
+    "issued": { "date-parts": [[2014, 3, 6]] },
+    "medium": "trademark descriptive fair use",
+    "source": "Wikimedia Commons",
+    "title": "The WHATWG's logo",
+    "type": "graphic",
+    "URL": "https://commons.wikimedia.org/wiki/File:WHATWG_logo.svg"
   }
 ]
