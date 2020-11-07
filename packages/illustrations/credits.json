@@ -50,6 +50,15 @@
     "type": "graphic"
   },
   {
+    "id": "ChromePacmanImg",
+    "abstract": "\"Chrome eats RAM like Pacman eats dots.\"\nFrom https://knowyourmeme.com/photos/1501182-google-chrome-ram-hog",
+    "archive_location": "/images/history/patchworks/chrome-pacman.png (souce: .xcf)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "ChromePacmanImg",
+    "title": "Chrome Pacman",
+    "type": "graphic"
+  },
+  {
     "id": "ChromiumArchitecture2020",
     "abstract": "Minimalistic architecture diagram of Chromium and its derivatives based on https://chromium.googlesource.com/chromium/src/+/HEAD/content/README.md and the \"How Blinks Work\" document.",
     "archive_location": "/images/fondamentals/chromium-architecture.png (source: .dia)",
@@ -89,7 +98,7 @@
   },
   {
     "id": "FirefoxLogosHistory",
-    "archive_location": "/images/history/firefox-logos.png",
+    "archive_location": "/images/history/patchworks/firefox-logos.png (source: .xcf)",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "FirefoxLogosHistory",
     "medium": "trademark descriptive fair use",
@@ -137,7 +146,7 @@
   },
   {
     "id": "graphVentesPC19862000",
-    "archive_location": "/images/history/graph-ventes-pc-1986-2000.png",
+    "archive_location": "/images/history/peripheral-marketshare/graph-ventes-pc-1986-2000.png (source: peripheral-marketshare_1975-2012.ods)",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "graphVentesPC19862000",
     "issued": { "date-parts": [[2020, 10, 26]] },
@@ -147,7 +156,7 @@
   },
   {
     "id": "graphVentesPCModel8195",
-    "archive_location": "/images/history/graph-marketshare-pc-1988-1991.png",
+    "archive_location": "/images/history/peripheral-marketshare/graph-marketshare-pc-1988-1991.png (source: peripheral-marketshare_1975-2012.ods)",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "graphVentesPCModel8195",
     "issued": { "date-parts": [[2020, 10, 26]] },
@@ -157,7 +166,7 @@
   },
   {
     "id": "IELogosHistory",
-    "archive_location": "/images/history/ie-logos.png",
+    "archive_location": "/images/history/patchworks/ie-logos.png",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "IELogosHistory",
     "issued": { "date-parts": [[2020, 10, 30]] },
@@ -223,15 +232,6 @@
     "title": "Logo Ecma International",
     "type": "graphic",
     "URL": "https://www.ecma-international.org/"
-  },
-  {
-    "id": "maceChromePacman",
-    "abstract": "\"Chrome eats RAM like Pacman eats dots.\"\nFrom https://knowyourmeme.com/photos/1501182-google-chrome-ram-hog",
-    "archive_location": "/images/history/chrome-pacman.png",
-    "author": [{ "family": "Macé", "given": "Noël" }],
-    "citation-label": "maceChromePacman",
-    "title": "Chrome Pacman",
-    "type": "graphic"
   },
   {
     "id": "maceRelationSGMLXML2020",
@@ -490,7 +490,7 @@
   {
     "id": "W3CHTMLValidationIcons",
     "abstract": "Combination of the \"valid HTML\" icons by the W3C for HTML 2 and HTML 3.2.\n\nThis work includes material that may be protected as a trademark in some jurisdictions. If you want to use it, you have to ensure that you have the legal right to do so and that you do not infringe any trademark rights.\n\nSee https://www.w3.org/QA/Tools/Icons & https://commons.wikimedia.org/wiki/Category:W3C_validation",
-    "archive_location": "/images/third-party/W3C-HTML-validation.png",
+    "archive_location": "/images/history/patchworks/W3C-HTML-validation.png (source: .xcf)",
     "author": [{ "literal": "W3C" }],
     "citation-label": "W3CHTMLValidationIcons",
     "medium": "Public domain",
