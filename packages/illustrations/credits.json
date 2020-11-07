@@ -15,7 +15,7 @@
   },
   {
     "id": "browsersShare03-10",
-    "archive_location": "/images/history/graph-browser-share-2003-2010.png",
+    "archive_location": "/images/history/browser-share/graph-browser-share-2003-2010.png (src: browser-share.ods)",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "browsersShare03-10",
     "medium": "CC BY-SA  3.0 Unported",
@@ -24,7 +24,7 @@
   },
   {
     "id": "browsersShare10-17",
-    "archive_location": "/images/history/graph-browser-share-2010-2017.png",
+    "archive_location": "/images/history/browser-share/graph-browser-share-2010-2017.png (src: browser-share.ods)",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "browsersShare10-17",
     "medium": "CC BY-SA  3.0 Unported",
@@ -33,7 +33,7 @@
   },
   {
     "id": "browsersShare94-02",
-    "archive_location": "/images/history/graph-browser-share-1994-2002.png",
+    "archive_location": "/images/history/browser-share/graph-browser-share-1994-2002.png (src: browser-share.ods)",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "browsersShare94-02",
     "medium": "CC BY-SA  3.0 Unported",
@@ -42,11 +42,22 @@
   },
   {
     "id": "browsersShare94-21",
-    "archive_location": "/images/history/graph-browser-share-1994-2021.png",
+    "archive_location": "/images/history/browser-share/graph-browser-share-1994-2021.png (src: browser-share.ods)",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "browsersShare94-21",
     "medium": "CC BY-SA  3.0 Unported",
     "title": "Évolution des parts de marché des navigateurs web (1994-2021)",
+    "type": "graphic"
+  },
+  {
+    "id": "ChromiumArchitecture2020",
+    "abstract": "Minimalistic architecture diagram of Chromium and its derivatives based on https://chromium.googlesource.com/chromium/src/+/HEAD/content/README.md and the \"How Blinks Work\" document.",
+    "archive_location": "/images/fondamentals/chromium-architecture.png (source: .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "ChromiumArchitecture2020",
+    "issued": { "date-parts": [[2020, 10, 31]] },
+    "language": "fr",
+    "title": "Chromium Architecture",
     "type": "graphic"
   },
   {
@@ -108,7 +119,7 @@
   },
   {
     "id": "graphNavigateursAndroid",
-    "archive_location": "/images/history/graph-browser-share-android.png (+_GS pour version n&b)",
+    "archive_location": "/images/history/browser-share/graph-browser-share-android.png (grayscale: _GS.png, data: browser-share.ods, src: .xcf))",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "graphNavigateursAndroid",
     "issued": { "date-parts": [[2020, 10, 31]] },
@@ -223,17 +234,6 @@
     "type": "graphic"
   },
   {
-    "id": "maceChromiumArchitecture2020",
-    "abstract": "Minimalistic architecture diagram of Chromium and its derivatives based on https://chromium.googlesource.com/chromium/src/+/HEAD/content/README.md and the \"How Blinks Work\" document.",
-    "archive_location": "/images/src/chromium-architecture.dia",
-    "author": [{ "family": "Macé", "given": "Noël" }],
-    "citation-label": "maceChromiumArchitecture2020",
-    "issued": { "date-parts": [[2020, 10, 31]] },
-    "language": "fr",
-    "title": "Chromium Architecture",
-    "type": "graphic"
-  },
-  {
     "id": "maceRelationSGMLXML2020",
     "archive_location": "/images/standards/sgml-xml.svg",
     "author": [{ "family": "Macé", "given": "Noël" }],
@@ -312,7 +312,7 @@
   },
   {
     "id": "partsNavigateursOct2020",
-    "archive_location": "/images/history/graph-browser-share-latest.png",
+    "archive_location": "/images/history/browser-share/graph-browser-share-latest.png (src: browser-share.ods)",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "partsNavigateursOct2020",
     "issued": { "date-parts": [[2020, 10, 31]] },
@@ -410,10 +410,10 @@
     "URL": "https://commons.wikimedia.org/wiki/File:SteveCrockerJI1.jpg"
   },
   {
-    "id": "sweating-icon",
+    "id": "sweatingIcon",
     "archive_location": "/images/third-party/parts/noun_sweating_1280760.svg",
     "author": [{ "literal": "Gan Khoon Lay" }],
-    "citation-label": "sweating-icon",
+    "citation-label": "sweatingIcon",
     "medium": "CC BY 3.0 US",
     "source": "Noun Project",
     "title": "sweating",
@@ -510,10 +510,10 @@
     "type": "graphic"
   },
   {
-    "id": "webdev-fatigue-img",
-    "archive_location": "/images/webdev-fatigue.png",
+    "id": "WebdevFatigueImg",
+    "archive_location": "/images/funamentals/webdev-fatigue.png (src: .xcf)",
     "author": [{ "family": "Macé", "given": "Noël" }],
-    "citation-label": "webdev-fatigue-img",
+    "citation-label": "WebdevFatigueImg",
     "issued": { "date-parts": [[2020, 9, 23]] },
     "medium": "CC BY-SA  3.0 Unported",
     "title": "WebDev Fatigue",
