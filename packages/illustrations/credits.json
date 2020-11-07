@@ -4,6 +4,7 @@
     "abstract": "Brendan Eich, American computer programmer and technologist",
     "accessed": { "date-parts": [[2020, 10, 29]] },
     "archive": "Transferred from en.wikipedia to Commons.",
+    "archive_location": "/images/third-party/BEich.png",
     "author": [{ "literal": "AcidJazzed" }],
     "citation-label": "brendanEichMozilla2007",
     "issued": { "literal": "22 January 2007 (original upload date)" },
@@ -89,7 +90,7 @@
   },
   {
     "id": "ESJSTimelinePicture",
-    "archive_location": "/images/history/js-timeline.svg",
+    "archive_location": "/images/history/js-timeline.png (source: .dia)",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "ESJSTimelinePicture",
     "issued": { "date-parts": [[2020, 11, 6]] },
@@ -145,6 +146,15 @@
     "type": "graphic"
   },
   {
+    "id": "graphRelationSGMLXML",
+    "archive_location": "/images/standards/sgml-xml.png (source: .odg)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphRelationSGMLXML",
+    "issued": { "date-parts": [[2020, 11, 4]] },
+    "title": "Relation SGML-XML",
+    "type": "graphic"
+  },
+  {
     "id": "graphVentesPC19862000",
     "archive_location": "/images/history/peripheral-marketshare/graph-ventes-pc-1986-2000.png (source: peripheral-marketshare_1975-2012.ods)",
     "author": [{ "family": "Macé", "given": "Noël" }],
@@ -189,7 +199,7 @@
     "id": "ietfHTTPLogo",
     "accessed": { "date-parts": [[2020, 11, 2]] },
     "archive": "https://httpwg.github.io/asset/http.svg",
-    "archive_location": "/images/third-party/HTTP_logo.svg",
+    "archive_location": "/images/third-party/HTTP_logo.png",
     "author": [{ "literal": "IETF HTTP Working Group (HTTPbis)" }],
     "citation-label": "ietfHTTPLogo",
     "issued": { "date-parts": [[2014]] },
@@ -203,7 +213,7 @@
   {
     "id": "IETFLogo",
     "accessed": { "date-parts": [[2020, 9, 7]] },
-    "archive_location": "/images/third-party/IETF_Logo.svg",
+    "archive_location": "/images/third-party/IETF_Logo.png",
     "author": [{ "literal": "IETF" }],
     "citation-label": "IETFLogo",
     "language": "en",
@@ -226,21 +236,12 @@
   {
     "id": "LogoEcmaInternational",
     "accessed": { "date-parts": [[2020, 11, 4]] },
-    "archive_location": "/images/third-party/ecma-logo.jpg",
+    "archive_location": "/images/third-party/ecma-logo.png",
     "citation-label": "LogoEcmaInternational",
     "medium": "trademark descriptive fair use",
     "title": "Logo Ecma International",
     "type": "graphic",
     "URL": "https://www.ecma-international.org/"
-  },
-  {
-    "id": "maceRelationSGMLXML2020",
-    "archive_location": "/images/standards/sgml-xml.svg",
-    "author": [{ "family": "Macé", "given": "Noël" }],
-    "citation-label": "maceRelationSGMLXML2020",
-    "issued": { "date-parts": [[2020, 11, 4]] },
-    "title": "Relation SGML-XML",
-    "type": "graphic"
   },
   {
     "id": "maceWICGProcess2020",
@@ -269,7 +270,7 @@
   {
     "id": "MozillaStatueAOL",
     "accessed": { "date-parts": [[2020, 10, 30]] },
-    "archive_location": "/images/third-party/Mozilla_statue,_AOL_Campus,_December_2014.jpg",
+    "archive_location": "/images/third-party/mozilla-statue-aol.png",
     "author": [{ "literal": "Dcdjason" }],
     "citation-label": "MozillaStatueAOL",
     "issued": { "date-parts": [[2014, 12, 12]] },
@@ -301,7 +302,7 @@
     "id": "OfficialW3CIcon2008",
     "accessed": { "date-parts": [[2020, 11, 2]] },
     "archive": "http://www.w3.org/Consortium/Legal/logo-usage-20000308.html",
-    "archive_location": "/images/third-party/W3C_Icon.svg",
+    "archive_location": "/images/third-party/W3C_Icon.png",
     "citation-label": "OfficialW3CIcon2008",
     "issued": { "date-parts": [[2008, 7, 21]] },
     "medium": "trademark descriptive fair use",
@@ -349,7 +350,7 @@
     "id": "programma101",
     "abstract": "front view of an Olivetti-Underwood Programma 101 electronic programmable calculator, on display at w:The National Museum of Computing",
     "accessed": { "date-parts": [[2020, 9, 7]] },
-    "archive_location": "/images/third-party/Olivettiunderwood_programma101.jpg",
+    "archive_location": "/images/third-party/programma101.png",
     "author": [{ "literal": "AlisonW" }],
     "citation-label": "programma101",
     "issued": { "date-parts": [[2009, 10, 15]] },
@@ -373,7 +374,7 @@
     "id": "SRIBillEnglish1968",
     "abstract": "SRI’s Bill English, engineer who built the first computer mouse prototype, prepares for the December 9, 1968 \"mother of all demos\"",
     "accessed": { "date-parts": [[2020, 9, 7]] },
-    "archive_location": "/images/third-party/SRI_Bill_English_1968.jpg",
+    "archive_location": "/images/third-party/SRI-Bill-English-1968.png",
     "author": [{ "literal": "S. R. I. International" }],
     "citation-label": "SRIBillEnglish1968",
     "issued": { "date-parts": [[1968, 12]] },
@@ -399,7 +400,7 @@
   {
     "id": "SteveCrockerJI1",
     "accessed": { "date-parts": [[2020, 9, 7]] },
-    "archive_location": "/images/third-party/SteveCrockerICANN07.jpg",
+    "archive_location": "/images/third-party/SteveCrockerICANN07.png",
     "author": [{ "family": "Ito", "given": "Joi" }],
     "citation-label": "SteveCrockerJI1",
     "issued": { "literal": "25 March 2007, 20:23:45" },
@@ -423,7 +424,7 @@
   {
     "id": "TBLODI14",
     "accessed": { "date-parts": [[2020, 9, 7]] },
-    "archive_location": "/images/third-party/TimBernersLee-ODISummit2014.jpg",
+    "archive_location": "/images/third-party/TimBernersLee-ODISummit2014.png",
     "author": [{ "literal": "Open Data Institute Knowledge for Everyone" }],
     "citation-label": "TBLODI14",
     "issued": { "literal": "20 November 2018, 11:17" },
@@ -436,7 +437,7 @@
   {
     "id": "The_Memex",
     "accessed": { "date-parts": [[2020, 9, 7]] },
-    "archive_location": "/images/third-party/The_Memex.jpg",
+    "archive_location": "/images/third-party/The_Memex.png",
     "author": [{ "literal": "Dunkoman" }],
     "citation-label": "The_Memex",
     "issued": { "literal": "30 October 2008, 09:28" },
@@ -450,7 +451,7 @@
     "id": "timNextCube",
     "abstract": "Computador NeXTcube utilizado por Tim Berners-Lee e que se tornou o primeiro servidor Web",
     "accessed": { "date-parts": [[2020, 10, 24]] },
-    "archive_location": "/images/third-party/Ciuffo-2008-Primeiro_servidor_Web.jpg",
+    "archive_location": "/images/third-party/premier-serveur-web.png",
     "author": [{ "family": "Ciuffo", "given": "Leandro Neumann" }],
     "citation-label": "timNextCube",
     "issued": { "date-parts": [[2008, 7, 3]] },
@@ -463,7 +464,7 @@
   {
     "id": "V8Logo2018",
     "accessed": { "date-parts": [[2020, 11, 1]] },
-    "archive_location": "/images/third-party/V8_JavaScript_engine_logo_2.svg",
+    "archive_location": "/images/third-party/V8_JavaScript_engine_logo_2.png",
     "author": [{ "literal": "The V8 Project" }],
     "citation-label": "V8Logo2018",
     "issued": { "date-parts": [[2018]] },
@@ -534,7 +535,7 @@
   {
     "id": "WHATWGLogo2014",
     "accessed": { "date-parts": [[2020, 11, 4]] },
-    "archive": "/images/third-party/WHATWG_logo.svg",
+    "archive": "/images/third-party/WHATWG_logo.png",
     "author": [{ "literal": "WHATWG contributors" }],
     "citation-label": "WHATWGLogo2014",
     "issued": { "date-parts": [[2014, 3, 6]] },
@@ -547,6 +548,7 @@
   {
     "id": "Windows31Disk1992",
     "accessed": { "date-parts": [[2020, 10, 26]] },
+    "archive_location": "/images/third-party/disk-win31-fr.png",
     "author": [{ "literal": "fdecomite" }],
     "citation-label": "Windows31Disk1992",
     "issued": { "date-parts": [[2012, 8, 27]] },
