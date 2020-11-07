@@ -77,18 +77,6 @@
     "type": "graphic"
   },
   {
-    "id": "fdecomiteWindowsDisk19922012",
-    "accessed": { "date-parts": [[2020, 10, 26]] },
-    "author": [{ "literal": "fdecomite" }],
-    "citation-label": "fdecomiteWindowsDisk19922012",
-    "issued": { "date-parts": [[2012, 8, 27]] },
-    "medium": "CC BY 2.0",
-    "source": "Flickr",
-    "title": "Windows 3.1 disk 1992",
-    "type": "graphic",
-    "URL": "https://www.flickr.com/photos/fdecomite/7871353730/"
-  },
-  {
     "id": "FirefoxLogosHistory",
     "archive_location": "/images/history/firefox-logos.png",
     "author": [{ "family": "Macé", "given": "Noël" }],
@@ -120,7 +108,7 @@
   },
   {
     "id": "graphNavigateursAndroid",
-    "archive_location": "/images/history/graph-browser-share-android.png",
+    "archive_location": "/images/history/graph-browser-share-android.png (+_GS pour version n&b)",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "graphNavigateursAndroid",
     "issued": { "date-parts": [[2020, 10, 31]] },
@@ -147,13 +135,13 @@
     "type": "graphic"
   },
   {
-    "id": "graphVentesPCModel8891",
+    "id": "graphVentesPCModel8195",
     "archive_location": "/images/history/graph-marketshare-pc-1988-1991.png",
     "author": [{ "family": "Macé", "given": "Noël" }],
-    "citation-label": "graphVentesPCModel8891",
+    "citation-label": "graphVentesPCModel8195",
     "issued": { "date-parts": [[2020, 10, 26]] },
     "medium": "CC BY-SA  3.0 Unported",
-    "title": "Graph : ventes mondiales d'ordinateurs personnels par modèles, de 1988 à 1991",
+    "title": "Graph : part des ventes mondiales d'ordinateurs personnels par modèles, de 1981 à 1995",
     "type": "graphic"
   },
   {
@@ -555,5 +543,17 @@
     "title": "The WHATWG's logo",
     "type": "graphic",
     "URL": "https://commons.wikimedia.org/wiki/File:WHATWG_logo.svg"
+  },
+  {
+    "id": "Windows31Disk1992",
+    "accessed": { "date-parts": [[2020, 10, 26]] },
+    "author": [{ "literal": "fdecomite" }],
+    "citation-label": "Windows31Disk1992",
+    "issued": { "date-parts": [[2012, 8, 27]] },
+    "medium": "CC BY 2.0",
+    "source": "Flickr",
+    "title": "Windows 3.1 disk 1992",
+    "type": "graphic",
+    "URL": "https://www.flickr.com/photos/fdecomite/7871353730/"
   }
 ]
