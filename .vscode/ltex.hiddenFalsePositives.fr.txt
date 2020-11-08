@@ -1,0 +1,2 @@
+{"rule": "FR_SPELLING_RULE","sentence": "^\\Q<<< @/../\\E"}
+{"rule": "DOUBLE_PUNCTUATION","sentence": "^\\Q<<< @/../\\E"}
