@@ -214,7 +214,6 @@
     "id": "IETFLogo",
     "accessed": { "date-parts": [[2020, 9, 7]] },
     "archive_location": "/images/third-party/IETF_Logo.png",
-    "author": [{ "literal": "IETF" }],
     "citation-label": "IETFLogo",
     "language": "en",
     "medium": "trademark descriptive fair use",
@@ -512,6 +511,7 @@
   },
   {
     "id": "WebdevFatigueImg",
+    "abstract": "dérivé de stackOfBooks & sweatingIcon",
     "archive_location": "/images/funamentals/webdev-fatigue.png (src: .xcf)",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "WebdevFatigueImg",
