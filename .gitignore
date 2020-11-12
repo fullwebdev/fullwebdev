@@ -1,7 +1,7 @@
 /.vscode/*
 !/.vscode/settings.json
 !/.vscode/md-import.code-snippets
-!/.vscode/spellright.dict
+!/.vscode/ltex.*
 dist/
 /build/
 /docs/build
@@ -18,3 +18,6 @@ node_modules
 *.log
 /.firebase
 .lighthouseci/
+.~lock*
+*.*~
+*.autosave
