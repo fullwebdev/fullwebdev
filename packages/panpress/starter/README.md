@@ -20,9 +20,7 @@ Please do not hesitate to [open an issue](https://github.com/fullwebdev/fullwebd
 4. install dependencies (`npm install`) (don't forget to commit package-lock.json)
 5. [install Pandoc](https://pandoc.org/installing.html)
 
-   **:warning: Panpress do not support Pandoc 2.10 for now. See [#20](https://github.com/fullwebdev/fullwebdev/issues/20)**
-
-   In the meantime, we recommend you to use the [v2.9.2.1 installer](https://github.com/jgm/pandoc/releases/tag/2.9.2.1).
+   **:warning: Panpress requires Pandoc 2.11 or above**
 
 6. install [pandoc-import-code](https://github.com/noelmace/pandoc-import-code)
 7. run `npm start`
