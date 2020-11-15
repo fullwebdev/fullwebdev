@@ -120,6 +120,14 @@
     "URL": "https://commons.wikimedia.org/wiki/File:Phoenix_0.1.png"
   },
   {
+    "id": "graphComposantsInterfaceUML",
+    "archive_location": "/images/components/UML-components-interface.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphComposantsInterfaceUML",
+    "title": "Principe Composants-Interface UML",
+    "type": "graphic"
+  },
+  {
     "id": "graphEcmaLiaisons",
     "archive_location": "/images/standards/ecma-liaisons.png",
     "author": [{ "family": "Macé", "given": "Noël" }],
@@ -143,6 +151,14 @@
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "graphPeriodeRevisionTC39",
     "title": "Période de révision des specs TC39",
+    "type": "graphic"
+  },
+  {
+    "id": "graphPrincipeComposantUML",
+    "archive_location": "/images/components/UML-component.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphPrincipeComposantUML",
+    "title": "Principe Composant UML",
     "type": "graphic"
   },
   {
@@ -384,6 +400,14 @@
     "URL": "https://commons.wikimedia.org/wiki/File:SRI_Bill_English_1968.jpg"
   },
   {
+    "id": "stackDiagramCBSE-WC",
+    "archive_location": "/images/components/stack-diagram-CBSE-WC.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "stackDiagramCBSE-WC",
+    "title": "Diagram d'empilement POC à WC",
+    "type": "graphic"
+  },
+  {
     "id": "stackOfBooks",
     "archive_location": "/images/third-party/parts/Depositphotos_stack-books_196747296_l-2015.jpg",
     "author": [{ "literal": "Vadim Vasenin" }],
@@ -472,6 +496,14 @@
     "title": "V8 logo",
     "type": "graphic",
     "URL": "https://commons.wikimedia.org/wiki/File:V8_JavaScript_engine_logo_2.svg"
+  },
+  {
+    "id": "vennDiagramPOC-POO",
+    "archive_location": "/images/components/venn-diagram-POC.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "vennDiagramPOC-POO",
+    "title": "Venn Diagram POC/SOA/POO",
+    "type": "graphic"
   },
   {
     "id": "violaWWWAbout",

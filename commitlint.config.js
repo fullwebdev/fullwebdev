@@ -27,5 +27,6 @@ module.exports = {
         "slides-vanilla-1",
       ],
     ],
+    "subject-case": [1, "always", "lowerCase"],
   },
 };
