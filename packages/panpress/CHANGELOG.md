@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0-beta.6](https://github.com/fullwebdev/fullwebdev/compare/panpress@v0.3.0-beta.5...panpress@v0.3.0-beta.6) (2020-11-15)
+
 ## [0.3.0-beta.5](https://github.com/fullwebdev/fullwebdev/compare/panpress@v0.3.0-beta.4...panpress@v0.3.0-beta.5) (2020-09-03)
 
 ### ⚠ BREAKING CHANGES
