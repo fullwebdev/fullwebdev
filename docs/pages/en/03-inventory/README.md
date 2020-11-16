@@ -217,6 +217,7 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 | [harp](./harp?library=false)                        | 25           |
 | [Scully](./%40scullyio%2Fscully?library=false)      | 20           |
 | [yst](https://github.com/jgm/yst){target="\_blank"} | (:star: 300) |
+| [RedwoodJS](./@redwoodjs/cli)                       | 8            |
 | [Hydrogen](./hydrogen-cli?library=false)            | 6            |
 | [Greenwood](./%40greenwood%2Fcli?library=false)     | 5            |
 
