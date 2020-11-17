@@ -5,7 +5,7 @@ title: "Code Samples"
 ## Components
 
 1. Intro
-   - [JQuery Plugin](components/jquery/range-slider.html)
+   - [JQuery Plugin](components/jquery/slider.html)
 2. AngularJS
    1. [v1.0 - directive](components/angularjs/directive/hello-world.html)
    2. [v1.2 - controllerAs](components/angularjs/controller-as/hello-world.html)
