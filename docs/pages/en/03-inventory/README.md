@@ -172,16 +172,17 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 | [knockout](./knockout)              | 43           |                                            |
 | [mithril](./mithril)                | 40           |                                            |
 | [ember](./ember-cli)                | 39           |                                            |
-| [Flutter Web](https://flutter.dev/docs/get-started/flutter-for/web-devs){target="_blank"} | NA |                 |
-| [Meteor](https://www.meteor.com/){target="_blank"}   | (:star: 42k) |                                            |
+| [Flutter Web](https://flutter.dev/docs/get-started/flutter-for/web-devs){target="_blank"} | NA | |
+| [Meteor](https://www.meteor.com/){target="_blank"}   | (:star: 42k) |                         |
 | [riot](./riot)                      | 36           |                                            |
-| [Yew](https://yew.rs){target="_blank"}               | (:star: 13k) |                                            |
+| [Yew](https://yew.rs){target="_blank"}               | (:star: 13k) |                         |
 | [Marionette](./backbone.marionette) | 35           |                                            |
 | [rax](./rax)                        | 31           |                                            |
 | [Cycle.js](./%40cycle%2Fdom)        | 30           |                                            |
 | [choo](./choo)                      | 28           |                                            |
 | [san](./san)                        | 24           |                                            |
-| [Mavo](https://mavo.io/){target="_blank"}            | (:star: 3k)  |                                            |
+| [Mavo](https://mavo.io/){target="_blank"}            | (:star: 3k)  |                         |
+| [Cappuccino](https://www.cappuccino.dev){target="_blank"} | (:star: 2.2k)  |                   |
 | [aurelia](./aurelia)                | 18           |                                            |
 | [Dojo](./%40dojo%2Fframework)       | 18           |                                            |
 | [apprun](./apprun)                  | 17           |                                            |
