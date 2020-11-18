@@ -54,27 +54,29 @@ Performance indexes from [js-framework-benchmark](https://rawgit.com/krausest/js
 <details>
   <summary>Other projects</summary>
 
-| name                         | popularity | status                                                    |
-| ---------------------------- | ---------- | --------------------------------------------------------- |
-| [virtual-dom](./virtual-dom) | 39         | :x: unmaintained                                          |
-| [hyperscript](./hyperscript) | 32         | :x: unmaintained                                          |
-| [react-lite](./react-lite)   | 19         | :x: unmaintained                                          |
-| [surplus](./surplus)         | 15         | :x: unmaintained                                          |
-| [vidom](./vidom)             | 14         | :wavy_dash: low maintenance & :turtle: performance issues |
-| [domvm](./domvm)             | 14         | :wavy_dash: low maintenance                               |
-| [simulacra](./simulacra)     | 13         | :wavy_dash: low maintenance                               |
-| [petit-dom](./petit-dom)     | 12         | :wavy_dash: low maintenance                               |
-| [mikado](./mikado)           | 8          | :wavy_dash: low maintenance                               |
-| [domc](./domc)               | 8          | :x: unmaintained                                          |
-| [HyperAxe](./hyperaxe)       | 7          | :x: unmaintained                                          |
-| [ganic](./ganic)             | 6          | :turtle: performance issues                               |
-| [CRUI](./%40crui%2Fcore)     | 4          | :wavy_dash: low maintenance                               |
-| [lite-html](./lite-html)     | 4          | :x: unmaintained                                          |
-| [faster-dom](./faster-dom)   | 8          | :wavy_dash: low maintenance                               |
-| [glasgow](./glasgow)         | 4          | :wavy_dash: low maintenance & :turtle: performance issues |
-| [fntags](./fntags)           | 3          | :wavy_dash: low maintenance & :turtle: performance issues |
-| [Datum.js](./Datum)          | 3          | :turtle: performance issues                               |
-| [literaljs](./literaljs)     | 1          | :wavy_dash: low maintenance & :turtle: performance issues |
+| name                                         | popularity | status                                                    |
+| -------------------------------------------- | ---------- | --------------------------------------------------------- |
+| [virtual-dom](./virtual-dom)                 | 39         | :x: unmaintained                                          |
+| [hyperscript](./hyperscript)                 | 32         | :x: unmaintained                                          |
+| [react-hyperscript](./react-hyperscript)     | 20         | :x: unmaintained                                          |
+| [react-lite](./react-lite)                   | 19         | :x: unmaintained                                          |
+| [hyperscript-helpers](./hyperscript-helpers) | 18         | :x: unmaintained                                          |
+| [surplus](./surplus)                         | 15         | :x: unmaintained                                          |
+| [vidom](./vidom)                             | 14         | :wavy_dash: low maintenance & :turtle: performance issues |
+| [domvm](./domvm)                             | 14         | :wavy_dash: low maintenance                               |
+| [simulacra](./simulacra)                     | 13         | :wavy_dash: low maintenance                               |
+| [petit-dom](./petit-dom)                     | 12         | :wavy_dash: low maintenance                               |
+| [mikado](./mikado)                           | 8          | :wavy_dash: low maintenance                               |
+| [domc](./domc)                               | 8          | :x: unmaintained                                          |
+| [HyperAxe](./hyperaxe)                       | 7          | :x: unmaintained                                          |
+| [ganic](./ganic)                             | 6          | :turtle: performance issues                               |
+| [CRUI](./%40crui%2Fcore)                     | 4          | :wavy_dash: low maintenance                               |
+| [lite-html](./lite-html)                     | 4          | :x: unmaintained                                          |
+| [faster-dom](./faster-dom)                   | 8          | :wavy_dash: low maintenance                               |
+| [glasgow](./glasgow)                         | 4          | :wavy_dash: low maintenance & :turtle: performance issues |
+| [fntags](./fntags)                           | 3          | :wavy_dash: low maintenance & :turtle: performance issues |
+| [Datum.js](./Datum)                          | 3          | :turtle: performance issues                               |
+| [literaljs](./literaljs)                     | 1          | :wavy_dash: low maintenance & :turtle: performance issues |
 
 </details>
 
