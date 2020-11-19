@@ -12,8 +12,11 @@ title: "Code Samples"
    3. [v1.3 - bindToController](components/angularjs/bindtocontroller/hello-world.html)
    4. [v1.5+ - component helper](components/angularjs/component-helper/hello-world.html)
 3. React
-   - [Hello World - without JSX](components/react/hello-world.html)
-   - [Hello World - JSX](components/react/hello-jsx.html)
+   - without JSX
+     - [basics](components/react/hello-world.html)
+     - [composition](components/react/composition.html)
+     - [props](components/react/composition-props.html)
+   - [JSX](components/react/hello-jsx.html)
    - [State](components/react/stateful.html)
    - [Shared Hook](components/react/responsive-component/index.html)
      (from

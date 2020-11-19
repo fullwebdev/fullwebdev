@@ -2,14 +2,14 @@
 //#region signature
 class Increment extends React.Component {
   //#endregion signature
-  //#region init
+  //#region constructor
   constructor(props) {
     super(props);
     this.state = { count: 0 };
 
     this.handleClick = this.handleClick.bind(this);
   }
-  //#endregion init
+  //#endregion constructor
 
   //#region handle-click
   handleClick() {
@@ -34,7 +34,9 @@ class Increment extends React.Component {
 }
 //#endregion component
 
+//#region dom-render
 ReactDOM.render(
   <Increment />,
   document.getElementById("class-root")
 );
+//#endregion dom-render
