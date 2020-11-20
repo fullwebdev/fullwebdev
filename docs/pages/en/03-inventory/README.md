@@ -142,6 +142,8 @@ Performance indexes from [js-framework-benchmark](https://rawgit.com/krausest/js
 | [stencil](./%40stencil%2Fcore?library=false) | 41         |        |
 | [sapper](./sapper?library=false)             | 28         |        |
 | [hybrids](./hybrids)                         | 21         |        |
+| [Lego](./%40polight%2Flego)                  | 5          |        |
+| [Brick](./%40polight%2Fbrick)                | 3          |        |
 
 <details>
   <summary>Other projects</summary>
