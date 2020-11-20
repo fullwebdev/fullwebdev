@@ -54,27 +54,29 @@ Performance indexes from [js-framework-benchmark](https://rawgit.com/krausest/js
 <details>
   <summary>Other projects</summary>
 
-| name                         | popularity | status                                                    |
-| ---------------------------- | ---------- | --------------------------------------------------------- |
-| [virtual-dom](./virtual-dom) | 39         | :x: unmaintained                                          |
-| [hyperscript](./hyperscript) | 32         | :x: unmaintained                                          |
-| [react-lite](./react-lite)   | 19         | :x: unmaintained                                          |
-| [surplus](./surplus)         | 15         | :x: unmaintained                                          |
-| [vidom](./vidom)             | 14         | :wavy_dash: low maintenance & :turtle: performance issues |
-| [domvm](./domvm)             | 14         | :wavy_dash: low maintenance                               |
-| [simulacra](./simulacra)     | 13         | :wavy_dash: low maintenance                               |
-| [petit-dom](./petit-dom)     | 12         | :wavy_dash: low maintenance                               |
-| [mikado](./mikado)           | 8          | :wavy_dash: low maintenance                               |
-| [domc](./domc)               | 8          | :x: unmaintained                                          |
-| [HyperAxe](./hyperaxe)       | 7          | :x: unmaintained                                          |
-| [ganic](./ganic)             | 6          | :turtle: performance issues                               |
-| [CRUI](./%40crui%2Fcore)     | 4          | :wavy_dash: low maintenance                               |
-| [lite-html](./lite-html)     | 4          | :x: unmaintained                                          |
-| [faster-dom](./faster-dom)   | 8          | :wavy_dash: low maintenance                               |
-| [glasgow](./glasgow)         | 4          | :wavy_dash: low maintenance & :turtle: performance issues |
-| [fntags](./fntags)           | 3          | :wavy_dash: low maintenance & :turtle: performance issues |
-| [Datum.js](./Datum)          | 3          | :turtle: performance issues                               |
-| [literaljs](./literaljs)     | 1          | :wavy_dash: low maintenance & :turtle: performance issues |
+| name                                         | popularity | status                                                    |
+| -------------------------------------------- | ---------- | --------------------------------------------------------- |
+| [virtual-dom](./virtual-dom)                 | 39         | :x: unmaintained                                          |
+| [hyperscript](./hyperscript)                 | 32         | :x: unmaintained                                          |
+| [react-hyperscript](./react-hyperscript)     | 20         | :x: unmaintained                                          |
+| [react-lite](./react-lite)                   | 19         | :x: unmaintained                                          |
+| [hyperscript-helpers](./hyperscript-helpers) | 18         | :x: unmaintained                                          |
+| [surplus](./surplus)                         | 15         | :x: unmaintained                                          |
+| [vidom](./vidom)                             | 14         | :wavy_dash: low maintenance & :turtle: performance issues |
+| [domvm](./domvm)                             | 14         | :wavy_dash: low maintenance                               |
+| [simulacra](./simulacra)                     | 13         | :wavy_dash: low maintenance                               |
+| [petit-dom](./petit-dom)                     | 12         | :wavy_dash: low maintenance                               |
+| [mikado](./mikado)                           | 8          | :wavy_dash: low maintenance                               |
+| [domc](./domc)                               | 8          | :x: unmaintained                                          |
+| [HyperAxe](./hyperaxe)                       | 7          | :x: unmaintained                                          |
+| [ganic](./ganic)                             | 6          | :turtle: performance issues                               |
+| [CRUI](./%40crui%2Fcore)                     | 4          | :wavy_dash: low maintenance                               |
+| [lite-html](./lite-html)                     | 4          | :x: unmaintained                                          |
+| [faster-dom](./faster-dom)                   | 8          | :wavy_dash: low maintenance                               |
+| [glasgow](./glasgow)                         | 4          | :wavy_dash: low maintenance & :turtle: performance issues |
+| [fntags](./fntags)                           | 3          | :wavy_dash: low maintenance & :turtle: performance issues |
+| [Datum.js](./Datum)                          | 3          | :turtle: performance issues                               |
+| [literaljs](./literaljs)                     | 1          | :wavy_dash: low maintenance & :turtle: performance issues |
 
 </details>
 
@@ -140,6 +142,8 @@ Performance indexes from [js-framework-benchmark](https://rawgit.com/krausest/js
 | [stencil](./%40stencil%2Fcore?library=false) | 41         |        |
 | [sapper](./sapper?library=false)             | 28         |        |
 | [hybrids](./hybrids)                         | 21         |        |
+| [Lego](./%40polight%2Flego)                  | 5          |        |
+| [Brick](./%40polight%2Fbrick)                | 3          |        |
 
 <details>
   <summary>Other projects</summary>
@@ -172,16 +176,17 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 | [knockout](./knockout)              | 43           |                                            |
 | [mithril](./mithril)                | 40           |                                            |
 | [ember](./ember-cli)                | 39           |                                            |
-| [Flutter Web](https://flutter.dev/docs/get-started/flutter-for/web-devs){target="_blank"} | NA |                 |
-| [Meteor](https://www.meteor.com/){target="_blank"}   | (:star: 42k) |                                            |
+| [Flutter Web](https://flutter.dev/docs/get-started/flutter-for/web-devs){target="_blank"} | NA | |
+| [Meteor](https://www.meteor.com/){target="_blank"}   | (:star: 42k) |                         |
 | [riot](./riot)                      | 36           |                                            |
-| [Yew](https://yew.rs){target="_blank"}               | (:star: 13k) |                                            |
+| [Yew](https://yew.rs){target="_blank"}               | (:star: 13k) |                         |
 | [Marionette](./backbone.marionette) | 35           |                                            |
 | [rax](./rax)                        | 31           |                                            |
 | [Cycle.js](./%40cycle%2Fdom)        | 30           |                                            |
 | [choo](./choo)                      | 28           |                                            |
 | [san](./san)                        | 24           |                                            |
-| [Mavo](https://mavo.io/){target="_blank"}            | (:star: 3k)  |                                            |
+| [Mavo](https://mavo.io/){target="_blank"}            | (:star: 3k)  |                         |
+| [Cappuccino](https://www.cappuccino.dev){target="_blank"} | (:star: 2.2k)  |                   |
 | [aurelia](./aurelia)                | 18           |                                            |
 | [Dojo](./%40dojo%2Fframework)       | 18           |                                            |
 | [apprun](./apprun)                  | 17           |                                            |

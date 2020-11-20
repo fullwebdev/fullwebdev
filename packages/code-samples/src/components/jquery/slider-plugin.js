@@ -3,35 +3,11 @@
  * @license MIT
  * @author André Ruffert, Noël Macé
  *
- * Fork of rangeslider.js removing all polyfill check for demonstration purpose.
+ * Fork of rangeslider.js removing all polyfill check and advanced features for demonstration purpose.
  */
 
-(function (factory) {
-  "use strict";
-
-  if (typeof define === "function" && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(["jquery"], factory);
-  } else if (typeof exports === "object") {
-    // CommonJS
-    module.exports = factory(require("jquery"));
-  } else {
-    // Browser globals
-    factory(jQuery);
-  }
-})(function ($) {
-  "use strict";
-
-  // Polyfill Number.isNaN(value)
-  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN
-  Number.isNaN =
-    Number.isNaN ||
-    function (value) {
-      return typeof value === "number" && value !== value;
-    };
-
-  var pluginName = "rangeslider",
-    pluginIdentifier = 0,
+(function ($) {
+  var pluginIdentifier = 0,
     defaults = {
       orientation: "horizontal",
       rangeClass: "rangeslider",
@@ -241,8 +217,7 @@
     this.COORDINATE =
       constants.orientation[this.orientation].coordinate;
 
-    this.identifier =
-      "js-" + pluginName + "-" + pluginIdentifier++;
+    this.identifier = "js-slider-" + pluginIdentifier++;
     this.startEvent =
       this.options.startEvent.join(
         "." + this.identifier + " "
@@ -597,7 +572,7 @@
     this.$element
       .off("." + this.identifier)
       .removeAttr("style")
-      .removeData("plugin_" + pluginName);
+      .removeData("plugin_slider");
 
     // Remove the generated markup
     if (this.$range && this.$range.length) {
@@ -605,30 +580,11 @@
     }
   };
 
-  // A really lightweight plugin wrapper around the constructor,
-  // preventing against multiple instantiations
-  $.fn[pluginName] = function (options) {
-    var args = Array.prototype.slice.call(arguments, 1);
-
-    return this.each(function () {
-      var $this = $(this),
-        data = $this.data("plugin_" + pluginName);
-
-      // Create a new instance.
-      if (!data) {
-        $this.data(
-          "plugin_" + pluginName,
-          (data = new Plugin(this, options))
-        );
-      }
-
-      // Make it possible to access methods from public.
-      // e.g `$element.rangeslider('method');`
-      if (typeof options === "string") {
-        data[options].apply(data, args);
-      }
-    });
+  //#region add-function
+  $.fn.slider = function (options) {
+    new Plugin(this, options);
   };
+  //#endregion add-function
 
   return "rangeslider.js is available in jQuery context e.g $(selector).rangeslider(options);";
-});
+})(jQuery);

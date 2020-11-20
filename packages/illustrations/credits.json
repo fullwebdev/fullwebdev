@@ -51,6 +51,13 @@
     "type": "graphic"
   },
   {
+    "id": "captureJQueryRangeSlider",
+    "archive_location": "/images/jquery-range-slider.png",
+    "citation-label": "captureJQueryRangeSlider",
+    "title": "JQuery Range Slider",
+    "type": "graphic"
+  },
+  {
     "id": "ChromePacmanImg",
     "abstract": "\"Chrome eats RAM like Pacman eats dots.\"\nFrom https://knowyourmeme.com/photos/1501182-google-chrome-ram-hog",
     "archive_location": "/images/history/patchworks/chrome-pacman.png (souce: .xcf)",
@@ -136,6 +143,24 @@
     "type": "graphic"
   },
   {
+    "id": "graphEtatComposantReact",
+    "archive_location": "/images/components/etat-composant-react.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphEtatComposantReact",
+    "issued": { "date-parts": [[2020, 11, 20]] },
+    "title": "Etat et E/S d'un composant React",
+    "type": "graphic"
+  },
+  {
+    "id": "graphFonctionPure",
+    "archive_location": "/images/components/fonction-pure.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphFonctionPure",
+    "issued": { "date-parts": [[2020, 11, 20]] },
+    "title": "Fonction pure",
+    "type": "graphic"
+  },
+  {
     "id": "graphNavigateursAndroid",
     "archive_location": "/images/history/browser-share/graph-browser-share-android.png (grayscale: _GS.png, data: browser-share.ods, src: .xcf))",
     "author": [{ "family": "Macé", "given": "Noël" }],
@@ -159,6 +184,24 @@
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "graphPrincipeComposantUML",
     "title": "Principe Composant UML",
+    "type": "graphic"
+  },
+  {
+    "id": "graphProjectionFonctionComposant",
+    "archive_location": "/images/components/projection.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphProjectionFonctionComposant",
+    "issued": { "date-parts": [[2020, 11, 20]] },
+    "title": "Projection Fonction Composant",
+    "type": "graphic"
+  },
+  {
+    "id": "graphReactOneWayDataFlow",
+    "archive_location": "/images/components/react-one-way-data-flow.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphReactOneWayDataFlow",
+    "issued": { "date-parts": [[2020, 11, 20]] },
+    "title": "React One-Way Data Flow",
     "type": "graphic"
   },
   {
