@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- derived from https://mkyong.com/jsf2/composite-components-in-jsf-2-0/ under MIT License -->
+<!-- prettier-ignore -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- #region html -->
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:fwd="http://java.sun.com/jsf/composite/fullwebdev"
+>
+  <h:body>
+    <fwd:register
+      nameValue="#{user.name}"
+      registerButtonText="Register"
+      registerButtonAction="#{user.registerAction}"
+    />
+  </h:body>
+</html>
+<!-- #endregion html -->
