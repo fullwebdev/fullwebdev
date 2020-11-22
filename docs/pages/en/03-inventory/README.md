@@ -297,7 +297,7 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 ### Other lists
 
 - [Awesome JavaScript](https://github.com/sorrycc/awesome-javascript#testing-frameworks){target="\_blank"}
-- [Web Component Libraries](https://open-wc.org/guide/component-libraries.html){target="\_blank"}
+- [Web Component Libraries](https://open-wc.org/guides/community/component-libraries/){target="\_blank"}
 - [awesome lit-html](https://github.com/web-padawan/awesome-lit-html){target="\_blank"}
 - [awesome Webpack](https://github.com/webpack-contrib/awesome-webpack){target="\_blank"}
 - [awesome Vue.js](https://github.com/vuejs/awesome-vue){target="\_blank"}
