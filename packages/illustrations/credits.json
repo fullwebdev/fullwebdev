@@ -281,6 +281,16 @@
     "URL": "https://www.ietf.org/logo/"
   },
   {
+    "id": "illustrationWCBuildingBlocks",
+    "archive_location": "/images/web-components/WC-building-blocks.png (source .xcf)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "illustrationWCBuildingBlocks",
+    "issued": { "date-parts": [[2020, 11, 22]] },
+    "language": "en",
+    "title": "Web Components' Building Blocks",
+    "type": "graphic"
+  },
+  {
     "id": "ISOCLogo",
     "accessed": { "date-parts": [[2020, 9, 7]] },
     "archive_location": "/images/third-party/ISOC-Dark-RGB_Logo_400px.png",
