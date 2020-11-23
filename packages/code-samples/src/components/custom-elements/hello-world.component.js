@@ -1,7 +1,10 @@
+console.log("hello-world.component.js chargé");
+
 //#region class
 class HelloWorldComponent extends HTMLElement {
   constructor() {
     super();
+    console.log("constructor de HelloWorldComponent");
     this.innerHTML = "<p>Hello World</p>";
   }
 }
@@ -21,9 +24,7 @@ HelloWorldFnComponent.prototype = Object.create(
 );
 
 HelloWorldFnComponent.prototype.constructor = HelloWorldFnComponent;
-//#endregion function
 
-//#region fn-connected
 HelloWorldFnComponent.prototype.connectedCallback = function () {
   this.innerHTML = "<p>Hello World</p>";
 };
