@@ -314,3 +314,7 @@ Edwardsen
 DHTML
 Russel
 Glazkov
+DOMException
+Liskov
+LSP
+SOLID
