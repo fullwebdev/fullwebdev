@@ -224,6 +224,34 @@
     "type": "graphic"
   },
   {
+    "id": "graphShadowDomFR",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/third-party/mdn-shadow-dom-fr.png (src .xcf, dérivé de ref. mdnGraphShadowDom)",
+    "author": [
+      { "literal": "MDN Web Docs contributors" },
+      { "family": "Macé", "given": "Noël" }
+    ],
+    "citation-label": "graphShadowDomFR",
+    "language": "fr",
+    "medium": "CC BY-SA 3.0 Unported",
+    "title": "shadow DOM (fr)",
+    "type": "graphic"
+  },
+  {
+    "id": "graphShadowDomFRVertical",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/third-party/mdn-shadow-dom-fr-vertical.png (src .xcf, dérivé de ref. mdnGraphShadowDom)",
+    "author": [
+      { "literal": "MDN Web Docs contributors" },
+      { "family": "Macé", "given": "Noël" }
+    ],
+    "citation-label": "graphShadowDomFRVertical",
+    "language": "fr",
+    "medium": "CC BY-SA 3.0 Unported",
+    "title": "shadow DOM (fr, vertical)",
+    "type": "graphic"
+  },
+  {
     "id": "graphVentesPC19862000",
     "archive_location": "/images/history/peripheral-marketshare/graph-ventes-pc-1986-2000.png (source: peripheral-marketshare_1975-2012.ods)",
     "author": [{ "family": "Macé", "given": "Noël" }],
@@ -329,6 +357,18 @@
     "title": "WICG process",
     "type": "graphic",
     "URL": "/images/standards/WICG-process.png"
+  },
+  {
+    "id": "mdnGraphShadowDom",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/third-party/mdn-shadow-dom.png",
+    "author": [{ "literal": "MDN Web Docs contributors" }],
+    "citation-label": "mdnGraphShadowDom",
+    "dimensions": "CC BY-SA v2.5 or any later version",
+    "language": "en",
+    "title": "shadow DOM",
+    "type": "graphic",
+    "URL": "https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM"
   },
   {
     "id": "mozillaDinoLogo",
