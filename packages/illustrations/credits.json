@@ -226,7 +226,7 @@
   {
     "id": "graphShadowDomFR",
     "accessed": { "date-parts": [[2020, 11, 23]] },
-    "archive_location": "/images/third-party/mdn-shadow-dom-fr.png (src .xcf, dérivé de ref. mdnGraphShadowDom)",
+    "archive_location": "/images/web-components/mdn-shadow-dom-fr.png (src .xcf, dérivé de ref. mdnGraphShadowDom)",
     "author": [
       { "literal": "MDN Web Docs contributors" },
       { "family": "Macé", "given": "Noël" }
@@ -240,7 +240,7 @@
   {
     "id": "graphShadowDomFRVertical",
     "accessed": { "date-parts": [[2020, 11, 23]] },
-    "archive_location": "/images/third-party/mdn-shadow-dom-fr-vertical.png (src .xcf, dérivé de ref. mdnGraphShadowDom)",
+    "archive_location": "/images/web-components/mdn-shadow-dom-fr-vertical.png (src .xcf, dérivé de ref. mdnGraphShadowDom)",
     "author": [
       { "literal": "MDN Web Docs contributors" },
       { "family": "Macé", "given": "Noël" }
@@ -586,6 +586,15 @@
     "title": "Primeiro servidor Web",
     "type": "graphic",
     "URL": "https://www.flickr.com/photos/leandrociuffo/2640164998/"
+  },
+  {
+    "id": "umlShadowRoot",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/web-components/UML-ShadowRoot.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "umlShadowRoot",
+    "title": "UML ShadowRoot",
+    "type": "graphic"
   },
   {
     "id": "V8Logo2018",
