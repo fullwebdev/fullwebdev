@@ -44,16 +44,19 @@ customElements.define("demo-closed", ClosedComponent);
 
 //#region append-to-component
 const openCpt = document.querySelector("demo-open");
-openCpt.innerHTML =
-  "<p>This was added outside the Shadow DOM</p>";
+const lightP = document.createElement("p");
+lightP.textContent =
+  "This was added outside the Shadow DOM";
+openCpt.appendChild(lightP);
 //#endregion append-to-component
 
 //#region append-to-el
 const shadowEl = document.getElementById("shadow");
-
 shadowEl.attachShadow({ mode: "open" });
-shadowEl.innerHTML =
-  "<p>This was added outside the Shadow DOM</p>";
+const lightP2 = document.createElement("p");
+lightP2.textContent =
+  "This was added outside the Shadow DOM";
+shadowEl.appendChild(lightP2);
 //#endregion append-to-el
 
 //#region append-to-open-shadow
