@@ -48,6 +48,7 @@ js
 NGINX
 hash
 hack
+hacks
 Fetch
 History
 Ajax
@@ -318,3 +319,4 @@ DOMException
 Liskov
 LSP
 SOLID
+FOUC
