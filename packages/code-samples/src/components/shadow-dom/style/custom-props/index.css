@@ -3,18 +3,21 @@ main {
 }
 
 /* #region main-var */
+/* index.css */
 main {
   --random-text-border-color: blue;
 }
 /* #endregion main-var */
 
 /* #region body-text-color */
+/* index.css */
 body {
   --random-text-color: red;
 }
 /* #endregion body-text-color */
 
 /* #region random-text-color */
+/* index.css */
 random-text {
   --random-text-color: red;
 }

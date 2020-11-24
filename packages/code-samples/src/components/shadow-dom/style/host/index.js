@@ -1,24 +1,24 @@
+//#region constructor
+//#region style
+const randomTextStyle = new CSSStyleSheet();
+randomTextStyle.replaceSync(`
+:host {
+  color: gray;
+  border: 1px solid black;
+  padding: 1rem;
+}
+`);
+//#endregion style
+
 class RandomTextComponent extends HTMLElement {
-  //#region constructor
   constructor() {
     super();
+    this.attachShadow({ mode: "open" });
+    this.shadowRoot.adoptedStyleSheets = [randomTextStyle];
+
     const span = document.createElement("span");
     span.textContent = this.getRandomText();
-
-    const style = document.createElement("style");
-    //#region style
-    style.textContent = `
-      :host {
-        color: gray;
-        border: 1px solid black;
-        padding: 1rem;
-      }
-    `;
-    //#endregion style
-
-    const shadow = this.attachShadow({ mode: "open" });
-    shadow.appendChild(style);
-    shadow.appendChild(span);
+    this.shadowRoot.appendChild(span);
   }
   //#endregion constructor
 
