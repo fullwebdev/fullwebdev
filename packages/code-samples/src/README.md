@@ -52,6 +52,8 @@ title: "Code Samples"
      - [using a private field](components/shadow-dom/access/workaround/private-field/index.html)
    - style
      - [host](components/shadow-dom/style/host/index.html)
+     - [shared style](components/shadow-dom/style/shared/index.html)
+     - [constructable stylesheet](components/shadow-dom/style/constructable/index.html)
      - [context](components/shadow-dom/style/context/index.html)
      - [CSS Custom Properties](components/shadow-dom/style/custom-props/index.html)
 3. Template
