@@ -1,4 +1,7 @@
 {
+  //#region all
+  // pre.js
+
   const notLoremIpsum = [
     "Far far away, behind the word mountains",
     "far from the countries Vokalia and Consonantia",
@@ -24,4 +27,5 @@
       .querySelector("main")
       .appendChild(randomTextEl);
   });
+  //#endregion all
 }

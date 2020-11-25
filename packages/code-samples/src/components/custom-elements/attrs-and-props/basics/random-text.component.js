@@ -1,4 +1,5 @@
 {
+  //#region constructor
   //#region template
   const template = document.createElement("template");
   template.innerHTML = /* HTML */ `
@@ -15,13 +16,14 @@
   //#endregion template
 
   class RandomTextComponent extends HTMLElement {
-    //#region observedAttributes
-    static get observedAttributes() {
-      return ["color", "inverted"];
+    constructor() {
+      super();
+      const shadow = this.attachShadow({ mode: "open" });
+      shadow.appendChild(template.content.cloneNode(true));
     }
-    //#endregion observedAttributes
+    //#endregion constructor
 
-    //#region constructor
+    //#region privateFields
     #possibleTexts = [
       "Lorem ipsum dolor sit amet.",
       "Consectetur adipiscing elits.",
@@ -31,14 +33,19 @@
     ];
 
     #text = this.#getRandomText();
+    //#endregion privateFields
 
-    constructor() {
-      super();
-
-      const shadow = this.attachShadow({ mode: "open" });
-      shadow.appendChild(template.content.cloneNode(true));
+    //#region observedAttributes
+    static get observedAttributes() {
+      return ["color", "inverted"];
     }
-    //#endregion constructor
+    //#endregion observedAttributes
+
+    //#region getText
+    get text() {
+      return this.#text;
+    }
+    //#endregion getText
 
     //#region getters
     get color() {

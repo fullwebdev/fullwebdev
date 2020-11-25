@@ -41,3 +41,16 @@ invertButton.addEventListener("click", () => {
     randomTextEl.setAttribute("inverted", "");
   }
 });
+
+//#region getLengthHack
+const randomText = randomTextEl.shadowRoot.querySelector(
+  ".random-text"
+).textContent;
+//#endregion getLengthHack
+
+console.log(randomText);
+
+//#region getLength
+document.querySelector(".generated-text").textContent =
+  randomTextEl.text;
+//#endregion getLength
