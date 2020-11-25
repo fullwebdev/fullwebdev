@@ -181,6 +181,26 @@
     "type": "graphic"
   },
   {
+    "id": "graphHTMLSlot",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/web-components/slot.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphHTMLSlot",
+    "issued": { "date-parts": [[2020, 11, 25]] },
+    "title": "Slot",
+    "type": "graphic"
+  },
+  {
+    "id": "graphNamedSlot",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/web-components/named-slot.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphNamedSlot",
+    "issued": { "date-parts": [[2020, 11, 25]] },
+    "title": "Named Slot",
+    "type": "graphic"
+  },
+  {
     "id": "graphNavigateursAndroid",
     "archive_location": "/images/history/browser-share/graph-browser-share-android.png (grayscale: _GS.png, data: browser-share.ods, src: .xcf))",
     "author": [{ "family": "Macé", "given": "Noël" }],
@@ -188,6 +208,16 @@
     "issued": { "date-parts": [[2020, 10, 31]] },
     "language": "fr",
     "title": "Parts de marché des navigateurs Android",
+    "type": "graphic"
+  },
+  {
+    "id": "graphPartageHTMLTemplate",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/web-components/partage-html-template.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphPartageHTMLTemplate",
+    "issued": { "date-parts": [[2020, 11, 25]] },
+    "title": "Partage HTML (Template & ES Module)",
     "type": "graphic"
   },
   {
@@ -609,7 +639,7 @@
     "archive_location": "/images/standards/UML-CSSStyleSheet_Constructable.png (source .dia)",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "umlConstructableCSSStyleSheet",
-    "issued": { "date-parts": [[2020, 11, 23]] },
+    "issued": { "date-parts": [[2020, 11, 24]] },
     "title": "Constructable StyleSheet : UML partial CSSStyleSheet",
     "type": "graphic"
   },
@@ -621,6 +651,26 @@
     "citation-label": "umlCSSStyleSheet",
     "issued": { "date-parts": [[2020, 11, 23]] },
     "title": "CSSOM : UML CSSStyleSheet",
+    "type": "graphic"
+  },
+  {
+    "id": "umlHTMLSlotElement",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/web-components/UML-HTMLSlotElement.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "umlHTMLSlotElement",
+    "issued": { "date-parts": [[2020, 11, 25]] },
+    "title": "UML HTMLSlotElement",
+    "type": "graphic"
+  },
+  {
+    "id": "umlHTMLTemplateElement",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/web-components/UML-HTMLTemplateElement.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "umlHTMLTemplateElement",
+    "issued": { "date-parts": [[2020, 11, 25]] },
+    "title": "UML HTMLTemplateElement",
     "type": "graphic"
   },
   {
