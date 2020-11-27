@@ -55,6 +55,16 @@
     "type": "graphic"
   },
   {
+    "id": "captureGoogleSearchAreWC2020",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/web-components/google-search-are-wc.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "captureGoogleSearchAreWC2020",
+    "issued": { "date-parts": [[2020, 11, 27]] },
+    "title": "Google search \"are web components...\"",
+    "type": "graphic"
+  },
+  {
     "id": "captureJQueryRangeSlider",
     "archive_location": "/images/jquery-range-slider.png",
     "author": [{ "family": "Macé", "given": "Noël" }],
