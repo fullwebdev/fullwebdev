@@ -2,6 +2,54 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.12.0](https://github.com/fullwebdev/fullwebdev/compare/v0.11.0...v0.12.0) (2020-11-27)
+
+### Features
+
+- **code-samples:** composite component JSF2 ([f0999a9](https://github.com/fullwebdev/fullwebdev/commit/f0999a9cd264e53e91a9b9eefb9ac18d04fae56c))
+- **code-samples:** constructable stylesheet ([3db9676](https://github.com/fullwebdev/fullwebdev/commit/3db9676bc404314d287e2e73a94972380b1ed012))
+- **code-samples:** JS class vs prototype ([f5fa81b](https://github.com/fullwebdev/fullwebdev/commit/f5fa81bf236b49fd69919f3f361418b46d0270c3))
+- **code-samples:** poor style sharing btw WCs ([dfda299](https://github.com/fullwebdev/fullwebdev/commit/dfda29938a7f0be097d143b3a7cdd4f885af3048))
+- **illustrations:** add browser history illustrations ([6172983](https://github.com/fullwebdev/fullwebdev/commit/6172983345307f2fa78c0d83840d166a3d72a1b2))
+- **illustrations:** add webdev fatigue illustration ([68db98c](https://github.com/fullwebdev/fullwebdev/commit/68db98cefc8e0c73ef968be9fb4d2440b78c5d92))
+- **illustrations:** browser usage share on Android ([38aa8c9](https://github.com/fullwebdev/fullwebdev/commit/38aa8c9453fcbe623b7c5b10ad89ce2bde0bb844))
+- **illustrations:** CSSStyleSheet UML graph ([d6136dd](https://github.com/fullwebdev/fullwebdev/commit/d6136dd0fac4a527b40c9d9b229fc7d630e69467))
+- **illustrations:** custom element life cycle ([314525c](https://github.com/fullwebdev/fullwebdev/commit/314525c7c6a6f6912dece7b03eef34195eedac74))
+- **illustrations:** fist web server ([9395639](https://github.com/fullwebdev/fullwebdev/commit/9395639d0aadbbbea847593bb06308d91fc53a0a))
+- **illustrations:** function components ([a31b2ad](https://github.com/fullwebdev/fullwebdev/commit/a31b2addba10d2c45dbbcc01d9c8103c8c5b1259))
+- **illustrations:** google search web components ([9a59f99](https://github.com/fullwebdev/fullwebdev/commit/9a59f99940f8315572acf68b499e15edaf183844))
+- **illustrations:** histo & credits ([9a5fcd4](https://github.com/fullwebdev/fullwebdev/commit/9a5fcd44e92045a9277432d2ee44c00b75d08faf))
+- **illustrations:** HTML Template & Slot ([418f334](https://github.com/fullwebdev/fullwebdev/commit/418f334d4b90ce4c0be2ae077f6c21d88a3c22ef))
+- **illustrations:** intro CBSE ([a0b7619](https://github.com/fullwebdev/fullwebdev/commit/a0b7619dfdaef8b1b29422ac642a8e0d8b4ded6f))
+- **illustrations:** new browser history illustrations ([1cf231d](https://github.com/fullwebdev/fullwebdev/commit/1cf231dd44f343ca179445c6cdeb27e097ccf9e8))
+- **illustrations:** ShadowRoot UML graph ([dc15883](https://github.com/fullwebdev/fullwebdev/commit/dc15883c072b1617969d105a2052d7d7659077ab))
+- **illustrations:** tc39 ([36be24b](https://github.com/fullwebdev/fullwebdev/commit/36be24b6694e85c9cb76c6cabebd19efb06f46c3))
+- **illustrations:** translate MDN Shadow DOM graph to fr ([f55929f](https://github.com/fullwebdev/fullwebdev/commit/f55929f6bf037610d9f2bd3557f0afc98ced54f1))
+- **illustrations:** W3C process ([63d4633](https://github.com/fullwebdev/fullwebdev/commit/63d46335828286997b851709c68c2afd45f72b82))
+- **illustrations:** web components building blocks ([501c2e6](https://github.com/fullwebdev/fullwebdev/commit/501c2e653e330bd65e70dcbf83793ab6ccb7bb06))
+- **illustrations:** whatwg ([24cd4ac](https://github.com/fullwebdev/fullwebdev/commit/24cd4ac65bbcf554ae6d1fe74553fe577fd4190b))
+
+### Bug Fixes
+
+- **code-samples:** react components ([a704b33](https://github.com/fullwebdev/fullwebdev/commit/a704b3336533273b60aa57d60d600dc963dc6540))
+- **code-samples:** review shadow-dom samples ([f976457](https://github.com/fullwebdev/fullwebdev/commit/f976457670b1bee8636c8d18fc19255373b2548e))
+- **code-samples:** simplify jquery example ([b1d3454](https://github.com/fullwebdev/fullwebdev/commit/b1d3454a3cca15350e52e758efbc3cde7c3490ac))
+- **code-samples:** update custom elements attrs samples ([c373352](https://github.com/fullwebdev/fullwebdev/commit/c37335277a745f9f417c17400550829f715baf64))
+- **code-samples:** update shadow-dom styling samples ([e9ba99f](https://github.com/fullwebdev/fullwebdev/commit/e9ba99fd4cff79123f90b45e8a4d1ebb0e84eedc))
+- **docs:** add Cappuccino to inventory ([2e084ad](https://github.com/fullwebdev/fullwebdev/commit/2e084ad2d8f269083129e8f5abaae514af83318f))
+- **docs:** add hyperscript helpers recommended by React ([0d24b0f](https://github.com/fullwebdev/fullwebdev/commit/0d24b0f1e5bff8c52a27f5ca89b5b63fe2d1e431))
+- **docs:** add Lego & Bricks libraries ([89663c3](https://github.com/fullwebdev/fullwebdev/commit/89663c350ae3e6c91863d5c14fe8d524143c083a))
+- **docs:** add redwoodjs to inventory ([f25cfab](https://github.com/fullwebdev/fullwebdev/commit/f25cfab4df9977be6234800ae5e3fd2bc83629ca))
+- **docs:** url to wc libraries ([cfaa341](https://github.com/fullwebdev/fullwebdev/commit/cfaa3415c836b85fda0c43314db99f36fd182119))
+- **illustrations:** adapt browser-share for print ([257c037](https://github.com/fullwebdev/fullwebdev/commit/257c03787fa74a995df986d85d736ace08b13a13))
+- **illustrations:** adapt for grayscale ([5e278b9](https://github.com/fullwebdev/fullwebdev/commit/5e278b926141f9f9e5fa7063f0891963a7f932e0))
+- **illustrations:** adapt for print ([193fde7](https://github.com/fullwebdev/fullwebdev/commit/193fde76040997325092b4831f501a109a5f28a1))
+- **illustrations:** adapt history & standards for print ([b3abc17](https://github.com/fullwebdev/fullwebdev/commit/b3abc171c6f86f432721b00f33418420dfc2467b))
+- **illustrations:** missing credits for range-slider ([6f351c2](https://github.com/fullwebdev/fullwebdev/commit/6f351c222b50e5311d504d1971f5c125cd774e00))
+- **illustrations:** resolution - fundamentals ([3cb7bf8](https://github.com/fullwebdev/fullwebdev/commit/3cb7bf8ff080bc62d831545fd29657ac13f01375))
+- **illustrations:** wicg new home for proposals ([e18ce90](https://github.com/fullwebdev/fullwebdev/commit/e18ce907dc8afd5741415a5df0ed418c88f0704b))
+- update credits ([e8ca1ec](https://github.com/fullwebdev/fullwebdev/commit/e8ca1ec237a877025d20e997bcef16b7f2648fcf))
+
 ## [0.11.0](https://github.com/fullwebdev/fullwebdev/compare/v0.10.0...v0.11.0) (2020-09-03)
 
 ### ⚠ BREAKING CHANGES
