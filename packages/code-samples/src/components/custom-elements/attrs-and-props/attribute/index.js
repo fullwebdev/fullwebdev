@@ -35,13 +35,20 @@
     randomTextEl.newText();
   });
 
+  // only for demo
   //#region newLength
   const lengthInput = document.getElementById(
     "length-input"
   );
 
   lengthInput.addEventListener("input", (e) => {
-    randomTextEl.length = e.target.value;
+    randomTextEl.setAttribute("length", e.target.value);
   });
   //#endregion newLength
+
+  //#region newLengthProp
+  lengthInput.addEventListener("input", (e) => {
+    randomTextEl.length = e.target.value;
+  });
+  //#endregion newLengthProp
 }

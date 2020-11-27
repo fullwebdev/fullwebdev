@@ -48,6 +48,7 @@ js
 NGINX
 hash
 hack
+hacks
 Fetch
 History
 Ajax
@@ -314,3 +315,9 @@ Edwardsen
 DHTML
 Russel
 Glazkov
+DOMException
+Liskov
+LSP
+SOLID
+FOUC
+inmaintenable

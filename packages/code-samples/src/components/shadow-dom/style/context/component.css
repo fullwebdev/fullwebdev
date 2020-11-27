@@ -5,7 +5,7 @@
 }
 
 /* #region host-context */
-:host-context(h1, h2, h3, h4, p) {
+:host-context(p, h1, h2, h3, h4, h5, h6) {
   border: none;
   padding: 0;
 }

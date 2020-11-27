@@ -78,7 +78,9 @@
         this.newText();
         this.render();
       } else {
-        throw new Error("invalid possibleTexts value");
+        throw new Error(
+          "possibleTexts should be a non-empty array"
+        );
       }
     }
 

@@ -5,4 +5,4 @@ vercel.json
 /packages/benchmark
 /packages/slides/**/snapshots/
 /packages/slides/**/src/**/*.json
-
+*.fake.*

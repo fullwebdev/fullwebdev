@@ -1,25 +1,28 @@
 import { HelloWorldComponent } from "../hello-world.component.js";
-import "./connected-hello-world.component.js";
+import "./connected/hello-world.component.js";
 import "./good-hello-world.component.js";
 
-console.log("differed script loaded");
+console.log("fichier chargé");
 
+//#region createElement
+//#region define
+// index.js
 customElements.define("hello-world", HelloWorldComponent);
+//#endregion define
 
 const container = document.getElementById("after-define");
 
-//#region createElement
 try {
   const helloWorldEl = document.createElement(
     "hello-world"
   );
-  console.log("element created after its definition");
+  console.log("élément créé après sa définition");
   if (!helloWorldEl.querySelector("p")) {
     helloWorldEl.innerHTML = `<p class="error">nothing here</p>`;
   }
   container.appendChild(helloWorldEl);
 } catch (e) {
-  console.error(`this will never happen`);
+  console.error(`cela ne devrait jamais arriver`);
 }
 //#endregion createElement
 

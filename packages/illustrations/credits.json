@@ -19,6 +19,7 @@
     "archive_location": "/images/history/browser-share/graph-browser-share-2003-2010.png (src: browser-share.ods)",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "browsersShare03-10",
+    "issued": { "date-parts": [[2020, 10, 28]] },
     "medium": "CC BY-SA  3.0 Unported",
     "title": "Évolution des parts de marché des navigateurs web durant la première partie de la seconde guerre des navigateurs",
     "type": "graphic"
@@ -28,6 +29,7 @@
     "archive_location": "/images/history/browser-share/graph-browser-share-2010-2017.png (src: browser-share.ods)",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "browsersShare10-17",
+    "issued": { "date-parts": [[2020, 10, 28]] },
     "medium": "CC BY-SA  3.0 Unported",
     "title": "Évolution des parts de marché des navigateurs web durant la seconde partie de la seconde guerre des navigateurs",
     "type": "graphic"
@@ -37,6 +39,7 @@
     "archive_location": "/images/history/browser-share/graph-browser-share-1994-2002.png (src: browser-share.ods)",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "browsersShare94-02",
+    "issued": { "date-parts": [[2020, 10, 28]] },
     "medium": "CC BY-SA  3.0 Unported",
     "title": "Évolution des parts de marché des navigateurs web durant la première guerre des navigateurs",
     "type": "graphic"
@@ -46,14 +49,27 @@
     "archive_location": "/images/history/browser-share/graph-browser-share-1994-2021.png (src: browser-share.ods)",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "browsersShare94-21",
+    "issued": { "date-parts": [[2020, 10, 28]] },
     "medium": "CC BY-SA  3.0 Unported",
     "title": "Évolution des parts de marché des navigateurs web (1994-2021)",
     "type": "graphic"
   },
   {
+    "id": "captureGoogleSearchAreWC2020",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/web-components/google-search-are-wc.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "captureGoogleSearchAreWC2020",
+    "issued": { "date-parts": [[2020, 11, 27]] },
+    "title": "Google search \"are web components...\"",
+    "type": "graphic"
+  },
+  {
     "id": "captureJQueryRangeSlider",
     "archive_location": "/images/jquery-range-slider.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "captureJQueryRangeSlider",
+    "issued": { "date-parts": [[2020, 11, 15]] },
     "title": "JQuery Range Slider",
     "type": "graphic"
   },
@@ -63,6 +79,7 @@
     "archive_location": "/images/history/patchworks/chrome-pacman.png (souce: .xcf)",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "ChromePacmanImg",
+    "issued": { "date-parts": [[2020, 11, 1]] },
     "title": "Chrome Pacman",
     "type": "graphic"
   },
@@ -109,6 +126,7 @@
     "archive_location": "/images/history/patchworks/firefox-logos.png (source: .xcf)",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "FirefoxLogosHistory",
+    "issued": { "date-parts": [[2020, 10, 31]] },
     "medium": "trademark descriptive fair use",
     "title": "Firefox Logos History",
     "type": "graphic"
@@ -131,7 +149,18 @@
     "archive_location": "/images/components/UML-components-interface.png",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "graphComposantsInterfaceUML",
+    "issued": { "date-parts": [[2020, 11, 15]] },
     "title": "Principe Composants-Interface UML",
+    "type": "graphic"
+  },
+  {
+    "id": "graphCustomElLifeCycle",
+    "archive_location": "/images/web-components/lifecycle.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphCustomElLifeCycle",
+    "issued": { "date-parts": [[2020, 11, 22]] },
+    "language": "fr",
+    "title": "Custom Element Life Cycle",
     "type": "graphic"
   },
   {
@@ -139,6 +168,7 @@
     "archive_location": "/images/standards/ecma-liaisons.png",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "graphEcmaLiaisons",
+    "issued": { "date-parts": [[2020, 11, 6]] },
     "title": "Ecma Liaisons",
     "type": "graphic"
   },
@@ -161,6 +191,26 @@
     "type": "graphic"
   },
   {
+    "id": "graphHTMLSlot",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/web-components/slot.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphHTMLSlot",
+    "issued": { "date-parts": [[2020, 11, 25]] },
+    "title": "Slot",
+    "type": "graphic"
+  },
+  {
+    "id": "graphNamedSlot",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/web-components/named-slot.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphNamedSlot",
+    "issued": { "date-parts": [[2020, 11, 25]] },
+    "title": "Named Slot",
+    "type": "graphic"
+  },
+  {
     "id": "graphNavigateursAndroid",
     "archive_location": "/images/history/browser-share/graph-browser-share-android.png (grayscale: _GS.png, data: browser-share.ods, src: .xcf))",
     "author": [{ "family": "Macé", "given": "Noël" }],
@@ -171,10 +221,21 @@
     "type": "graphic"
   },
   {
+    "id": "graphPartageHTMLTemplate",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/web-components/partage-html-template.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphPartageHTMLTemplate",
+    "issued": { "date-parts": [[2020, 11, 25]] },
+    "title": "Partage HTML (Template & ES Module)",
+    "type": "graphic"
+  },
+  {
     "id": "graphPeriodeRevisionTC39",
     "archive_location": "/images/standards/TC39-periode-revision.png",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "graphPeriodeRevisionTC39",
+    "issued": { "date-parts": [[2020, 11, 6]] },
     "title": "Période de révision des specs TC39",
     "type": "graphic"
   },
@@ -183,6 +244,7 @@
     "archive_location": "/images/components/UML-component.png",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "graphPrincipeComposantUML",
+    "issued": { "date-parts": [[2020, 11, 14]] },
     "title": "Principe Composant UML",
     "type": "graphic"
   },
@@ -211,6 +273,36 @@
     "citation-label": "graphRelationSGMLXML",
     "issued": { "date-parts": [[2020, 11, 4]] },
     "title": "Relation SGML-XML",
+    "type": "graphic"
+  },
+  {
+    "id": "graphShadowDomFR",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/web-components/mdn-shadow-dom-fr.png (src .xcf, dérivé de ref. mdnGraphShadowDom)",
+    "author": [
+      { "literal": "MDN Web Docs contributors" },
+      { "family": "Macé", "given": "Noël" }
+    ],
+    "citation-label": "graphShadowDomFR",
+    "issued": { "date-parts": [[2020, 11, 23]] },
+    "language": "fr",
+    "medium": "CC BY-SA 3.0 Unported",
+    "title": "shadow DOM (fr)",
+    "type": "graphic"
+  },
+  {
+    "id": "graphShadowDomFRVertical",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/web-components/mdn-shadow-dom-fr-vertical.png (src .xcf, dérivé de ref. mdnGraphShadowDom)",
+    "author": [
+      { "literal": "MDN Web Docs contributors" },
+      { "family": "Macé", "given": "Noël" }
+    ],
+    "citation-label": "graphShadowDomFRVertical",
+    "issued": { "date-parts": [[2020, 11, 23]] },
+    "language": "fr",
+    "medium": "CC BY-SA 3.0 Unported",
+    "title": "shadow DOM (fr, vertical)",
     "type": "graphic"
   },
   {
@@ -281,6 +373,16 @@
     "URL": "https://www.ietf.org/logo/"
   },
   {
+    "id": "illustrationWCBuildingBlocks",
+    "archive_location": "/images/web-components/WC-building-blocks.png (source .xcf)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "illustrationWCBuildingBlocks",
+    "issued": { "date-parts": [[2020, 11, 22]] },
+    "language": "en",
+    "title": "Web Components' Building Blocks",
+    "type": "graphic"
+  },
+  {
     "id": "ISOCLogo",
     "accessed": { "date-parts": [[2020, 9, 7]] },
     "archive_location": "/images/third-party/ISOC-Dark-RGB_Logo_400px.png",
@@ -309,6 +411,19 @@
     "title": "WICG process",
     "type": "graphic",
     "URL": "/images/standards/WICG-process.png"
+  },
+  {
+    "id": "mdnGraphShadowDom",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/third-party/mdn-shadow-dom.png",
+    "author": [{ "literal": "MDN Web Docs contributors" }],
+    "citation-label": "mdnGraphShadowDom",
+    "dimensions": "CC BY-SA v2.5 or any later version",
+    "issued": { "date-parts": [[2020, 11, 23]] },
+    "language": "en",
+    "title": "shadow DOM",
+    "type": "graphic",
+    "URL": "https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM"
   },
   {
     "id": "mozillaDinoLogo",
@@ -447,6 +562,7 @@
     "archive_location": "/images/components/stack-diagram-CBSE-WC.png",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "stackDiagramCBSE-WC",
+    "issued": { "date-parts": [[2020, 11, 15]] },
     "title": "Diagram d'empilement POC à WC",
     "type": "graphic"
   },
@@ -528,6 +644,56 @@
     "URL": "https://www.flickr.com/photos/leandrociuffo/2640164998/"
   },
   {
+    "id": "umlConstructableCSSStyleSheet",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/standards/UML-CSSStyleSheet_Constructable.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "umlConstructableCSSStyleSheet",
+    "issued": { "date-parts": [[2020, 11, 24]] },
+    "title": "Constructable StyleSheet : UML partial CSSStyleSheet",
+    "type": "graphic"
+  },
+  {
+    "id": "umlCSSStyleSheet",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/standards/UML-CSSStyleSheet_CSSOM.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "umlCSSStyleSheet",
+    "issued": { "date-parts": [[2020, 11, 23]] },
+    "title": "CSSOM : UML CSSStyleSheet",
+    "type": "graphic"
+  },
+  {
+    "id": "umlHTMLSlotElement",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/web-components/UML-HTMLSlotElement.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "umlHTMLSlotElement",
+    "issued": { "date-parts": [[2020, 11, 25]] },
+    "title": "UML HTMLSlotElement",
+    "type": "graphic"
+  },
+  {
+    "id": "umlHTMLTemplateElement",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/web-components/UML-HTMLTemplateElement.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "umlHTMLTemplateElement",
+    "issued": { "date-parts": [[2020, 11, 25]] },
+    "title": "UML HTMLTemplateElement",
+    "type": "graphic"
+  },
+  {
+    "id": "umlShadowRoot",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/web-components/UML-ShadowRoot.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "umlShadowRoot",
+    "issued": { "date-parts": [[2020, 11, 23]] },
+    "title": "UML ShadowRoot",
+    "type": "graphic"
+  },
+  {
     "id": "V8Logo2018",
     "accessed": { "date-parts": [[2020, 11, 1]] },
     "archive_location": "/images/third-party/V8_JavaScript_engine_logo_2.png",
@@ -545,6 +711,7 @@
     "archive_location": "/images/components/venn-diagram-POC.png",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "vennDiagramPOC-POO",
+    "issued": { "date-parts": [[2020, 11, 15]] },
     "title": "Venn Diagram POC/SOA/POO",
     "type": "graphic"
   },

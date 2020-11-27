@@ -1,16 +1,19 @@
 /* #region border-color */
+/* component.css */
 :host {
   border: 1px solid var(--random-text-border-color, black);
 }
 /* #endregion border-color */
 
 /* #region text-color */
+/* component.css */
 :host {
   color: var(--random-text-color, gray);
 }
 /* #endregion text-color */
 
 /* #region span-color */
+/* component.css */
 span {
   color: var(--random-text-color, yellow);
 }

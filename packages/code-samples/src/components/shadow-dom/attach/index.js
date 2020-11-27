@@ -1,10 +1,10 @@
+//#region element-append
 //#region attach-element
 const shadow = document
   .getElementById("shadow")
   .attachShadow({ mode: "open" });
 //#endregion attach-element
 
-//#region element-append
 const p = document.createElement("p");
 p.textContent = "But this paragraph is isolated";
 
