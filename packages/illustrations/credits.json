@@ -276,6 +276,39 @@
     "type": "graphic"
   },
   {
+    "id": "graphSeqLoadIframe",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/graphs/images/spa-iframe.png (source .mmd)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphSeqLoadIframe",
+    "issued": { "date-parts": [[2020, 3, 20]] },
+    "language": "fr",
+    "title": "diagramme de séquence de chargement par iframe",
+    "type": "graphic"
+  },
+  {
+    "id": "graphSeqSPABlog",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/graphs/images/spa-blog.png (source .mmd)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphSeqSPABlog",
+    "issued": { "date-parts": [[2020, 3, 20]] },
+    "language": "fr",
+    "title": "diagramme de séquence de chargement par de la SPA \"blog\"",
+    "type": "graphic"
+  },
+  {
+    "id": "graphSeqWebsite",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/graphs/images/website.png (source .mmd)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphSeqWebsite",
+    "issued": { "date-parts": [[2020, 3, 20]] },
+    "language": "fr",
+    "title": "diagramme de séquence de chargement d'un site web",
+    "type": "graphic"
+  },
+  {
     "id": "graphShadowDomFR",
     "accessed": { "date-parts": [[2020, 11, 23]] },
     "archive_location": "/images/web-components/mdn-shadow-dom-fr.png (src .xcf, dérivé de ref. mdnGraphShadowDom)",
