@@ -535,6 +535,28 @@
     "URL": "https://commons.wikimedia.org/wiki/File:Olivettiunderwood_programma101.jpg"
   },
   {
+    "id": "schemaUrlSPA",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/routage/url-spa.png (source .svg)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "schemaUrlSPA",
+    "issued": { "date-parts": [[2020, 3, 20]] },
+    "language": "fr",
+    "title": "schema d'URL d'une SPA",
+    "type": "graphic"
+  },
+  {
+    "id": "schemaUrlSPAHash",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/routage/url-spa-hash.png (source .svg)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "schemaUrlSPAHash",
+    "issued": { "date-parts": [[2020, 3, 20]] },
+    "language": "fr",
+    "title": "schema d'URL d'une SPA (hash)",
+    "type": "graphic"
+  },
+  {
     "id": "spyglassMosaicFloppy",
     "accessed": { "date-parts": [[2020, 10, 29]] },
     "citation-label": "spyglassMosaicFloppy",
@@ -661,6 +683,39 @@
     "citation-label": "umlCSSStyleSheet",
     "issued": { "date-parts": [[2020, 11, 23]] },
     "title": "CSSOM : UML CSSStyleSheet",
+    "type": "graphic"
+  },
+  {
+    "id": "umlHTMLBaseElement",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/routage/UML-HTMLBaseElement.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "umlHTMLBaseElement",
+    "issued": { "date-parts": [[2020, 11, 28]] },
+    "language": "fr",
+    "title": "UML HTMLBaseElement",
+    "type": "graphic"
+  },
+  {
+    "id": "umlHTMLHistory",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/routage/UML-History.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "umlHTMLHistory",
+    "issued": { "date-parts": [[2020, 11, 28]] },
+    "language": "fr",
+    "title": "UML HTML History",
+    "type": "graphic"
+  },
+  {
+    "id": "umlHTMLLocation",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/routage/UML-Location.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "umlHTMLLocation",
+    "issued": { "date-parts": [[2020, 11, 28]] },
+    "language": "fr",
+    "title": "UML HTML Location",
     "type": "graphic"
   },
   {
