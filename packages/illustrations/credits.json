@@ -782,6 +782,17 @@
     "type": "graphic"
   },
   {
+    "id": "umlURLSearchParams",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/routage/UML-URLSearchParams.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "umlURLSearchParams",
+    "issued": { "date-parts": [[2020, 11, 28]] },
+    "language": "fr",
+    "title": "UML URLSearchParams",
+    "type": "graphic"
+  },
+  {
     "id": "V8Logo2018",
     "accessed": { "date-parts": [[2020, 11, 1]] },
     "archive_location": "/images/third-party/V8_JavaScript_engine_logo_2.png",
