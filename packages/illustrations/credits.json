@@ -719,6 +719,17 @@
     "type": "graphic"
   },
   {
+    "id": "umlHTMLAnchorElement",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/routage/UML-HTMLAnchorElement.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "umlHTMLAnchorElement",
+    "issued": { "date-parts": [[2020, 11, 29]] },
+    "language": "fr",
+    "title": "UML HTMLAnchorElement",
+    "type": "graphic"
+  },
+  {
     "id": "umlHTMLBaseElement",
     "accessed": { "date-parts": [[2020, 11, 23]] },
     "archive_location": "/images/routage/UML-HTMLBaseElement.png (source .dia)",
