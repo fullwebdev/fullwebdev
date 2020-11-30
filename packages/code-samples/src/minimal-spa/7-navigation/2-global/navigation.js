@@ -4,7 +4,7 @@ import { baseUrl } from "../../4-history-api/base-url.js";
 // TODO: typings (HTMLLinkelement)
 
 //#region click
-document.body.addEventListener("click", e => {
+document.body.addEventListener("click", (e) => {
   //#region exclusions
   if (
     e.defaultPrevented ||
@@ -12,8 +12,9 @@ document.body.addEventListener("click", e => {
     e.metaKey ||
     e.ctrlKey ||
     e.shiftKey
-  )
+  ) {
     return;
+  }
   //#endregion exclusions
 
   const anchor = e.target;
@@ -40,7 +41,7 @@ document.body.addEventListener("click", e => {
 //#endregion click
 
 //#region onpopstate
-window.onpopstate = event => {
+window.onpopstate = (event) => {
   navigate(getPath());
 };
 //#endregion onpopstate

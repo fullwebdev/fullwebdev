@@ -6,6 +6,7 @@ import { matchRoute } from "../1-route-params/router.js";
 
 //#region navigate
 //#region navigateSignature
+//#region data
 async function navigate(
   path,
   redirection = false,
@@ -20,7 +21,6 @@ async function navigate(
     return;
   }
 
-  //#region data
   let data;
   if (route.data) {
     try {
@@ -29,7 +29,7 @@ async function navigate(
       if (e instanceof PostDataError) {
         navigate("/post/error", true, {
           id: e.id,
-          msg: e.message
+          msg: e.message,
         });
       }
       return;
@@ -51,7 +51,7 @@ async function navigate(
   if (initialGetParams || getParams) {
     const query = {
       ...initialGetParams,
-      ...getParams
+      ...getParams,
     };
     queryString = "?" + new URLSearchParams(query);
   }
