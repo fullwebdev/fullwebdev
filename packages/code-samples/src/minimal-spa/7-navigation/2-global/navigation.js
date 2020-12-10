@@ -1,4 +1,4 @@
-import { navigate } from "../../5-routes/3-redirect/router.js";
+import { navigate } from "./router.js";
 import { getPath } from "../../5-routes/router.js";
 import { baseUrl } from "../../4-history-api/base-url.js";
 // TODO: typings (HTMLLinkelement)
@@ -42,6 +42,6 @@ document.body.addEventListener("click", (e) => {
 
 //#region onpopstate
 window.onpopstate = (event) => {
-  navigate(getPath());
+  navigate(getPath(), false, false);
 };
 //#endregion onpopstate
