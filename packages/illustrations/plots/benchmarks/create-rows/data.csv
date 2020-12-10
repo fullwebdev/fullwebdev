@@ -1,0 +1,53 @@
+label,render (µs),low,high,
+VanillaJS (update),217.27,215.73,218.80,vanillajs-1
+VanillaJS,217.95,216.59,219.30,vanillajs
+VanillaJS (DX),219.25,217.41,221.10,vanillajs-dx-opti
+Stage0,219.32,217.65,220.99,stage0-v0.0.2
+createElement + cloneNode,220.83,218.67,222.99,vanillajs-prog
+domc,225.57,224.13,227.00,domc-v0.0.12
+Solid,232.31,229.76,234.85,solid-v0.20.0
+Sinuous,233.36,232.34,234.38,sinuous-v0.15.1
+domdiff,239.16,235.97,242.35,domdiff-v2.2.2
+Solid State,239.73,237.70,241.75,solid-state-v0.20.0
+Inferno,247.02,244.95,249.09,inferno-v7.2.1
+san,247.35,245.80,248.90,san-v3.10.0
+ivi,248.37,246.21,250.52,ivi-v0.27.1
+createElement,249.97,248.11,251.82,vanillajs-create-el
+sans cache (query),250.09,248.24,251.94,vanillajs-no-mem-query
+Helper,250.28,248.80,251.76,modern-helpers-no-mem-v0.1.0
+Helper (DX),251.03,249.03,253.03,modern-helpers-dx-v0.1.0
+VanillaJS (docs),251.28,249.44,253.12,vanillajs-create-el-for-doc
+createElement (query),251.39,249.14,253.65,vanillajs-create-el-query
+Helper (base),251.44,250.05,252.82,modern-helpers-v0.1.0
+sans cache,252.06,250.04,254.09,vanillajs-no-mem
+attodom,254.40,253.25,255.54,attodom-v0.12.0
+domvm,254.63,252.98,256.27,domvm-v3.4.12
+lit-html,259.54,256.61,262.48,lit-html-v1.1.0
+lit-html (docs),262.19,260.22,264.17,lit-html-for-doc-v1.1.0
+HyperHTML,262.99,260.36,265.62,hyperhtml-v2.32.1
+élément personnalisé,263.80,262.55,265.05,vanillajs-wc
+stdweb,265.90,263.38,268.42,stdweb-v0.4.17
+Template,266.51,263.72,269.29,modern-helpers-template-v0.1.0
+petit-dom,267.65,265.18,270.10,petit-dom-v0.2.0
+RE:DOM,268.54,266.50,270.58,redom-v3.27.0
+éléments personnalisés (bonnes pratiques),270.23,267.55,272.91,vanillajs-wc-prog
+lit-element,270.92,268.93,272.90,lit-element-v2.4.0
+LighterHTML,271.44,269.45,273.43,lighterhtml-v2.5.0
+uhtml,271.49,269.78,273.20,uhtml-v1.8.1
+Hyperapp,273.06,268.79,277.32,hyperapp-v2.0.8
+innerHTML (avec cache),275.94,273.53,278.34,vanillajs-innerhtml
+Vue.js 3,276.56,274.57,278.53,vue-v3.0.2
+innerHTML,277.35,275.62,279.08,vanillajs-innerhtml-no-mem
+Svelte,281.07,278.99,283.14,svelte-v3.29.4
+pseudo-composant innerHTML,284.53,283.14,285.92,vanillajs-innerhtml-cpnt
+éléments personnalisés (DX),291.08,289.58,292.58,vanillajs-wc-dx
+docs élément personnalisé ,297.24,295.54,298.94,vanillajs-custom-el
+Preact,305.13,300.10,310.16,preact-v10.5.5
+dominator,305.84,303.02,308.66,dominator-v0.5.0
+Angular 8,311.10,307.11,315.08,angular-v8.2.14
+Angular 11,323.77,321.07,326.47,angular-ng-v11.0.2
+React w/ RxJS,326.44,317.18,335.59,react-rxjs-v17.0.1 + 0.6.0
+React,334.89,325.16,344.49,react-hooks-v17.0.1
+React w/ Redux (hooks),338.03,335.66,340.40,react-redux-hooks-v17.0.1 + 7.2.1
+Isotope,380.25,378.27,382.23,isotope-v0.2.0
+React w/ easy-state,389.44,386.03,392.86,react-easy-state-v17.0.1 + 6.3.0

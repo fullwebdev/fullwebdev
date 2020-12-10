@@ -234,7 +234,12 @@ export class Template {
           if (!this._partsMeta[key]) {
             this._partsMeta[key] = [];
           }
-          this._partsMeta[key].push({ type: "class", path, name, formatter });
+          this._partsMeta[key].push({
+            type: "class",
+            path,
+            name,
+            formatter,
+          });
         } else {
           node.classList.add(klass);
         }

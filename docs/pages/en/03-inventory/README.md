@@ -82,11 +82,12 @@ Performance indexes from [js-framework-benchmark](https://rawgit.com/krausest/js
 
 ### Routing
 
-| name                                   | popularity | status |
-| -------------------------------------- | ---------- | ------ |
-| [path-to-regexp](./path-to-regexp)     | 79         |        |
-| [Page.js](./page)                      | 38         |        |
-| [universal-router](./universal-router) | 27         |        |
+| name                                   | popularity | status         |
+| -------------------------------------- | ---------- | -------------- |
+| [path-to-regexp](./path-to-regexp)     | 79         | :zap: microlib |
+| [Page.js](./page)                      | 38         | :zap: microlib |
+| [universal-router](./universal-router) | 27         | :zap: microlib |
+| [vaadin-router](./%40vaadin%2Frouter)  | 17         |                |
 
 ### State Management
 
@@ -96,6 +97,8 @@ Performance indexes from [js-framework-benchmark](https://rawgit.com/krausest/js
 | [VueX](./vuex)            | 72         |
 | [MobX](./mobx)            | 60         |
 | [NgRX](./%40ngrx%2Fstore) | 48         |
+| [Cerebral](./cerebral)    | 25         |
+| [Overmind](./overmind)    | 23         |
 | [beedle](./beedle)        | 15         |
 | [lit-up](./lit-up)        | 5          | :zap: up-to-date microlib |
 

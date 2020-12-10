@@ -5,7 +5,7 @@ function render() {
   const container = document.createElement("div");
   document.querySelector("main").appendChild(container);
   container.innerHTML = heavyHTML();
-  // container.innerHTML = '<p>Hello World</p>'
+  container.innerHTML = "<p>Hello World</p>";
   //#endregion render
 }
 
