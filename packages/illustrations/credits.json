@@ -55,6 +55,26 @@
     "type": "graphic"
   },
   {
+    "id": "captureFBAttenteArtificielle",
+    "archive_location": "/images/third-party/facebook-artificial-wait.jpg",
+    "citation-label": "captureFBAttenteArtificielle",
+    "issued": { "date-parts": [[2020, 7, 29]] },
+    "medium": "descriptive fair use (CC0)",
+    "title": "Capture: attente artificielle sur Facebook",
+    "type": "graphic"
+  },
+  {
+    "id": "captureGoogleDevLighthouseReport",
+    "accessed": { "date-parts": [[2020, 12, 1]] },
+    "archive_location": "/images/third-party/chromedevtools-lighthouse-report.png",
+    "author": [{ "literal": "Google Developers" }],
+    "citation-label": "captureGoogleDevLighthouseReport",
+    "medium": "CC BY 4.0",
+    "title": "A Lighthouse report in Chrome DevTools",
+    "type": "graphic",
+    "URL": "https://developers.google.com/web/tools/lighthouse/images/cdt-report.png"
+  },
+  {
     "id": "captureGoogleSearchAreWC2020",
     "accessed": { "date-parts": [[2020, 11, 23]] },
     "archive_location": "/images/web-components/google-search-are-wc.png",
@@ -71,6 +91,92 @@
     "citation-label": "captureJQueryRangeSlider",
     "issued": { "date-parts": [[2020, 11, 15]] },
     "title": "JQuery Range Slider",
+    "type": "graphic"
+  },
+  {
+    "id": "captureMDNCompareCSS",
+    "archive_location": "/images/performance/mdn-with-or-without-css.png",
+    "citation-label": "captureMDNCompareCSS",
+    "issued": { "date-parts": [[2020, 7, 29]] },
+    "medium": "descriptive fair use (CC0)",
+    "title": "Capture: MDN Web Docs avec ou sans CSS",
+    "type": "graphic"
+  },
+  {
+    "id": "CDTRender1Code",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/rendering/dom-api_override-innerHTML_code-time.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "CDTRender1Code",
+    "issued": { "date-parts": [[2020, 12, 1]] },
+    "language": "fr",
+    "title": "Analyse rendering via CDT (ex1)  : temps d'exécution par ligne",
+    "type": "graphic"
+  },
+  {
+    "id": "CDTRender2Code",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/rendering/dom-api_no-override_code-time.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "CDTRender2Code",
+    "issued": { "date-parts": [[2020, 12, 1]] },
+    "language": "fr",
+    "title": "Analyse rendering via CDT (ex2)  : temps d'exécution par ligne",
+    "type": "graphic"
+  },
+  {
+    "id": "CDTRender2Global",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/rendering/dom-api_no-override.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "CDTRender2Global",
+    "issued": { "date-parts": [[2020, 12, 1]] },
+    "language": "fr",
+    "title": "Analyse rendering via CDT (ex2) : vue d'ensemble",
+    "type": "graphic"
+  },
+  {
+    "id": "CDTRenderGlobal",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/rendering/dom-api_override-innerHTML.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "CDTRenderGlobal",
+    "issued": { "date-parts": [[2020, 12, 1]] },
+    "language": "fr",
+    "title": "Analyse rendering via CDT : vue d'ensemble",
+    "type": "graphic"
+  },
+  {
+    "id": "CDTRenderT23",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/rendering/dom-api_override-innerHTML_time-rendering.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "CDTRenderT23",
+    "issued": { "date-parts": [[2020, 12, 1]] },
+    "language": "fr",
+    "title": "Analyse rendering via CDT  : rendering & paint",
+    "type": "graphic"
+  },
+  {
+    "id": "CDTRenderTimeT1",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/rendering/dom-api_override-innerHTML_time-script.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "CDTRenderTimeT1",
+    "issued": { "date-parts": [[2020, 12, 1]] },
+    "language": "fr",
+    "title": "Analyse rendering via CDT : Temps première tâche",
+    "type": "graphic"
+  },
+  {
+    "id": "CDTRenderZoomP2",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/rendering/dom-api_override-innerHTML_zoom-parse2.png",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "CDTRenderZoomP2",
+    "issued": { "date-parts": [[2020, 12, 1]] },
+    "language": "fr",
+    "title": "Analyse rendering via CDT : zoom second parsing",
     "type": "graphic"
   },
   {
@@ -145,6 +251,39 @@
     "URL": "https://commons.wikimedia.org/wiki/File:Phoenix_0.1.png"
   },
   {
+    "id": "graphChargementScriptAsync",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/performance/load-script-async.png (source .xcf)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphChargementScriptAsync",
+    "issued": { "date-parts": [[2020, 12, 1]] },
+    "language": "fr",
+    "title": "graph chargement script async",
+    "type": "graphic"
+  },
+  {
+    "id": "graphChargementScriptDefaut",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/performance/load-script-default.png (source .xcf)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphChargementScriptDefaut",
+    "issued": { "date-parts": [[2020, 12, 1]] },
+    "language": "fr",
+    "title": "graph chargement script par défaut",
+    "type": "graphic"
+  },
+  {
+    "id": "graphChargementScriptDefer",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/performance/load-script-defer.png (source .xcf)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphChargementScriptDefer",
+    "issued": { "date-parts": [[2020, 12, 1]] },
+    "language": "fr",
+    "title": "graph chargement script defer",
+    "type": "graphic"
+  },
+  {
     "id": "graphComposantsInterfaceUML",
     "archive_location": "/images/components/UML-components-interface.png",
     "author": [{ "family": "Macé", "given": "Noël" }],
@@ -199,6 +338,17 @@
     "issued": { "date-parts": [[2020, 11, 25]] },
     "title": "Slot",
     "type": "graphic"
+  },
+  {
+    "id": "graphMDNBubblingCapturing",
+    "abstract": "Cf. https://developer.mozilla.org/fr/docs/Apprendre/JavaScript/Building_blocks/Ev%C3%A8nements",
+    "accessed": { "date-parts": [[2020, 12, 2]] },
+    "archive_location": "/images/third-party/bubbling-capturing.png",
+    "author": [{ "literal": "MDN Web Docs contributors" }],
+    "citation-label": "graphMDNBubblingCapturing",
+    "title": "bubbling-capturing",
+    "type": "graphic",
+    "URL": "https://media.prod.mdn.mozit.cloud/attachments/2018/06/25/16064/8b6a85ea245af86846591468b30832df/bubbling-capturing.png"
   },
   {
     "id": "graphNamedSlot",
@@ -553,6 +703,259 @@
     "URL": "https://www.jwz.org/photos/1994-1999-nscp/1304.html"
   },
   {
+    "id": "plotBM_mean_libs",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/all/mean-libs.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_mean_libs",
+    "issued": { "date-parts": [[2020, 12, 7]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  moyenne (Bibliothèques)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_mean_vanilla",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/all/mean-vanilla.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_mean_vanilla",
+    "issued": { "date-parts": [[2020, 12, 7]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  moyenne (vanilla)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_rows_base",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/create-rows/base.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_rows_base",
+    "issued": { "date-parts": [[2020, 12, 6]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  create (base)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_rows_cEl",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/create-rows/createElement.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_rows_cEl",
+    "issued": { "date-parts": [[2020, 12, 2]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  create (createElement)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_rows_clone-IH",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/create-rows/clone-node_innerHTML.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_rows_clone-IH",
+    "issued": { "date-parts": [[2020, 12, 7]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  create (createElement + cloneNode)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_rows_clone-prog",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/create-rows/clone-node_prog.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_rows_clone-prog",
+    "issued": { "date-parts": [[2020, 12, 7]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  create (createElement + cloneNode)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_rows_helper-template",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/create-rows/modern-helper-template.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_rows_helper-template",
+    "issued": { "date-parts": [[2020, 12, 7]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  create (modern-helpers/template)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_rows_HS",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/create-rows/hyperscript.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_rows_HS",
+    "issued": { "date-parts": [[2020, 12, 2]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  create (HyperScript libraries)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_rows_IH",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/create-rows/innerHTML.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_rows_IH",
+    "issued": { "date-parts": [[2020, 12, 2]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  create (Template String)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_rows_IH-cpnt",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/create-rows/innerHTML-cpnt.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_rows_IH-cpnt",
+    "issued": { "date-parts": [[2020, 12, 6]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  create (pseudo-composant avec Template String)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_rows_MHel",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/create-rows/modern-helpers-el.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_rows_MHel",
+    "issued": { "date-parts": [[2020, 12, 2]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  create (modern-helpers/el)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_rows_wc",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/create-rows/wc.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_rows_wc",
+    "issued": { "date-parts": [[2020, 12, 6]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  create (éléments personnalisés)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_update_base",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/update/base.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_update_base",
+    "issued": { "date-parts": [[2020, 12, 6]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  update (base)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_update_children",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/update/no-mem_children.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_update_children",
+    "issued": { "date-parts": [[2020, 12, 5]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  update (children without optimisation)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_update_children-mem",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/update/mem_children.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_update_children-mem",
+    "issued": { "date-parts": [[2020, 12, 2]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  update (children on cached element)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_update_helper",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/update/no-mem_helper.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_update_helper",
+    "issued": { "date-parts": [[2020, 12, 2]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  update (Modern Helper without optimisation)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_update_helper-mem",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/update/mem_helper.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_update_helper-mem",
+    "issued": { "date-parts": [[2020, 12, 5]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  update (Modern Helper with cache)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_update_helper-template",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/update/modern-helpers-template.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_update_helper-template",
+    "issued": { "date-parts": [[2020, 12, 7]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  update (modern-helpers/template)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_update_IH-cpnt",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/create-rows/innerHTML-cpnt.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_update_IH-cpnt",
+    "issued": { "date-parts": [[2020, 12, 6]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  update (pseudo-composant avec Template String)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_update_innerHTML",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/update/no-mem_innerHTML.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_update_innerHTML",
+    "issued": { "date-parts": [[2020, 12, 6]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  update (Template String sans cache)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_update_query",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/update/no-mem_querySelector.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_update_query",
+    "issued": { "date-parts": [[2020, 12, 5]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  update (querySelector without optimisation)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_update_query-mem",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/update/mem_querySelector.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_update_query-mem",
+    "issued": { "date-parts": [[2020, 12, 2]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  update (querySelector on cached element)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_update_wc",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/update/mem_wc.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_update_wc",
+    "issued": { "date-parts": [[2020, 12, 6]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  update (élément personnalisé mis en cache)",
+    "type": "graphic"
+  },
+  {
     "id": "programma101",
     "abstract": "front view of an Olivetti-Underwood Programma 101 electronic programmable calculator, on display at w:The National Museum of Computing",
     "accessed": { "date-parts": [[2020, 9, 7]] },
@@ -719,6 +1122,39 @@
     "type": "graphic"
   },
   {
+    "id": "umlDocumentFragment",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/standards/UML-DocumentFragment.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "umlDocumentFragment",
+    "issued": { "date-parts": [[2020, 12, 3]] },
+    "language": "fr",
+    "title": "UML DocumentFragment",
+    "type": "graphic"
+  },
+  {
+    "id": "umlDOMEvent",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/standards/UML-Event.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "umlDOMEvent",
+    "issued": { "date-parts": [[2020, 12, 2]] },
+    "language": "fr",
+    "title": "UML DOM Event",
+    "type": "graphic"
+  },
+  {
+    "id": "umlHighResolutionTime",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/performance/UML-High-Resolution-Time.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "umlHighResolutionTime",
+    "issued": { "date-parts": [[2020, 12, 1]] },
+    "language": "fr",
+    "title": "UML High Resolution Time",
+    "type": "graphic"
+  },
+  {
     "id": "umlHTMLAnchorElement",
     "accessed": { "date-parts": [[2020, 11, 23]] },
     "archive_location": "/images/routage/UML-HTMLAnchorElement.png (source .dia)",
@@ -780,6 +1216,28 @@
     "citation-label": "umlHTMLTemplateElement",
     "issued": { "date-parts": [[2020, 11, 25]] },
     "title": "UML HTMLTemplateElement",
+    "type": "graphic"
+  },
+  {
+    "id": "umlPerformanceObserver",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/performance/UML-PerformancePaintTiming.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "umlPerformanceObserver",
+    "issued": { "date-parts": [[2020, 12, 1]] },
+    "language": "fr",
+    "title": "UML PerformanceObserver",
+    "type": "graphic"
+  },
+  {
+    "id": "umlPerformancePaintTiming",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/images/performance/UML-PerformancePaintTiming.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "umlPerformancePaintTiming",
+    "issued": { "date-parts": [[2020, 12, 1]] },
+    "language": "fr",
+    "title": "UML PerformancePaintTiming",
     "type": "graphic"
   },
   {
