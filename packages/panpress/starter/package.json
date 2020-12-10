@@ -19,7 +19,7 @@
     "@panpress/webapp": "0.3.0-beta.6"
   },
   "dependencies": {
-    "@modern-helpers/lazy-router": "~0.2.0",
+    "@modern-helpers/lazy-router": "~0.2.1",
     "@panpress/webapp": "0.3.0-beta.4",
     "lit-html": "~1.3.0",
     "prismjs": "~1.21.0"
