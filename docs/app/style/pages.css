@@ -307,4 +307,13 @@ figcaption,
   padding-left: 0.2rem;
 }
 
+.home .hero .description {
+  border: solid 5px;
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+}
+
 /* FIXME: tables < 719px */

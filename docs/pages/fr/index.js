@@ -4,12 +4,12 @@ import home from "@panpress/webapp/components/home.js";
 
 export default () =>
   home({
-    heroText: "Full Web",
-    heroSubText: "Development",
+    heroText: "The Full Web",
+    heroSubText: "Developer",
     actionText: "Allons-y !",
     license: "Distribué sour license MIT & CC BY-NC-SA",
     copyright: "Copyright © 2020 fullwebdev, Noël Macé",
-    tagline: "Maitriser l'ensemble du Web moderne",
+    tagline: "Version Alpha",
     features: [
       {
         title: "Accessible",
