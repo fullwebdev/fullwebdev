@@ -2,8 +2,8 @@
   //#region memoization
   const counterChildrenCache = new WeakMap();
 
+  //#region get
   function counterChildren() {
-    //#region get
     if (counterChildrenCache.has(this)) {
       return counterChildrenCache.get(this);
     }

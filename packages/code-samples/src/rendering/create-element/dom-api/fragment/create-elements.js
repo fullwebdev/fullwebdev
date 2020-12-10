@@ -26,14 +26,19 @@
     //#endregion update
 
     //#region render
+    //#region createDocumentFragment
     render(container) {
-      this.container = container;
       const fragment = document.createDocumentFragment();
+      //#endregion createDocumentFragment
+      this.container = container;
 
+      //#region counter
       const counter = document.createElement("p");
       counter.classList.add("counter");
       fragment.appendChild(counter);
+      //#endregion counter
 
+      //#region createActions
       const actions = document.createElement("div");
 
       const incrementBtn = document.createElement("button");
@@ -49,14 +54,14 @@
       });
 
       actions.append(incrementBtn, decrementBtn);
-
       fragment.appendChild(actions);
+      //#endregion createActions
 
-      console.log(fragment.childElementCount);
-
+      //#region attach
+      console.log(fragment.childElementCount); // 2
       this.container.appendChild(fragment);
-
-      console.log(fragment.childElementCount);
+      console.log(fragment.childElementCount); // 0
+      //#endregion attach
 
       this._updateCounter();
     }
