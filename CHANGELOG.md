@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.14.0](https://github.com/fullwebdev/fullwebdev/compare/v0.12.0...v0.14.0) (2020-12-10)
+
+### Features
+
+- **docs:** add vaadin-router & overmind to inventory ([72503a3](https://github.com/fullwebdev/fullwebdev/commit/72503a3181fa93529681d4984200a5df5ed8a4e1))
+- **illustrations:** Event & DocumentFragment UML ([1fad057](https://github.com/fullwebdev/fullwebdev/commit/1fad057faab5975263fbca007f7c586cc8805866))
+- **illustrations:** HTMLAnchorElement class diagram ([a946cac](https://github.com/fullwebdev/fullwebdev/commit/a946cac1770733bc7ce025432cb82f17e6ed302b))
+- **illustrations:** plots of rendering benchmarks ([c5dac95](https://github.com/fullwebdev/fullwebdev/commit/c5dac95d82cd03c6472d1ac0dc9ab6f14aba4038))
+- **illustrations:** rendering introduction third party images ([9756b66](https://github.com/fullwebdev/fullwebdev/commit/9756b6633b936f0c9b3360571c2d05e2cdb9423f))
+- **illustrations:** rendering performance introduction ([5dd6610](https://github.com/fullwebdev/fullwebdev/commit/5dd66109f708682d16d7d012acb576c076ef1a18))
+- **illustrations:** routing, history & location ([d77470f](https://github.com/fullwebdev/fullwebdev/commit/d77470f496208d3067bd1b17000ab379692dfeab))
+- **illustrations:** URLSearchParams class diagram ([76070fc](https://github.com/fullwebdev/fullwebdev/commit/76070fce623efcfc6a93a74ac1ad9fc1062f468f))
+
+### Bug Fixes
+
+- **code-samples:** don't change history on popstate ([308d0f2](https://github.com/fullwebdev/fullwebdev/commit/308d0f2cc7f84d9b70ce5c45aa3c6048a427f717))
+- **code-samples:** update http server redirection samples for spa ([c1a13f3](https://github.com/fullwebdev/fullwebdev/commit/c1a13f33d94470f1cdd259a00a3ab453021f1304))
+- **docs:** add missing alpha warning ([71babb4](https://github.com/fullwebdev/fullwebdev/commit/71babb4d53b98f8fe37e11f98bc015618dac708f)), closes [#39](https://github.com/fullwebdev/fullwebdev/issues/39)
+- **helpers:** lazy-router should render on popstate ([67d4863](https://github.com/fullwebdev/fullwebdev/commit/67d486362cbbdb67ce813a482117713e266ae9e3)), closes [#38](https://github.com/fullwebdev/fullwebdev/issues/38)
+- **illustrations:** missing credits for old routing diagrams ([3effaed](https://github.com/fullwebdev/fullwebdev/commit/3effaed2d2d4d946f52d189c2fe57420a6546495))
+- **illustrations:** update CDT captures for rendering example ([7df0069](https://github.com/fullwebdev/fullwebdev/commit/7df00696dc70181ac42188ae1098b7ce82218b80))
+- **illustrations:** update HTMLTemplateElement UML ([4bc0624](https://github.com/fullwebdev/fullwebdev/commit/4bc062477e13ad3de47031dcb096a4e4902170a5))
+
 ## [0.12.0](https://github.com/fullwebdev/fullwebdev/compare/v0.11.0...v0.12.0) (2020-11-27)
 
 ### Features
