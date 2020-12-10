@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/fullwebdev/fullwebdev/compare/helpers@v0.2.0...helpers@v0.2.1) (2020-12-10)
+
+### Bug Fixes
+
+- **helpers:** lazy-router should render on popstate ([67d4863](https://github.com/fullwebdev/fullwebdev/commit/67d486362cbbdb67ce813a482117713e266ae9e3)), closes [#38](https://github.com/fullwebdev/fullwebdev/issues/38)
+
 ## [0.2.0](https://github.com/fullwebdev/fullwebdev/compare/helpers@v0.1.0...helpers@v0.2.0) (2020-09-03)
 
 ### Features
