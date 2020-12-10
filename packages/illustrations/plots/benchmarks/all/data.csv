@@ -1,0 +1,53 @@
+,Duration for...,Implementation notes,"creating 1,000 rows","updating all 1,000 rows (5 warmup runs).","updating every 10th row for 1,000 rows (3 warmup runs). 16x CPU slowdown.",highlighting a selected row. (no warmup runs). 16x CPU slowdown.,"swap 2 rows for table with 1,000 rows. (5 warmup runs). 4x CPU slowdown.",removing one row. (5 warmup runs).,"creating 10,000 rows","appending 1,000 to a table of 10,000 rows. 2x CPU slowdown","clearing a table with 1,000 rows. 8x CPU slowdown",of all factors in the table
+VanillaJS,vanillajs,772 ,223.1,240.7,1475.5,38.7,85.3,47.3,2129.1,470.2,270.6,1.01
+VanillaJS (createElement + cloneNode),vanillajs-prog,772 ,228.1,242.4,1480.6,37.8,86.9,46.4,2138,470.4,271.3,1.01
+VanillaJS (DX),vanillajs-dx-opti,772 ,224,242.2,1500.2,38.8,86.3,46.9,2146.1,483.3,272.1,1.02
+Docs : VanillaJS (sans Store ni cache),vanillajs-1,772 ,222.1,240.3,1463,38.5,85.1,46.8,2125.4,525.5,271.9,1.02
+Sinuous,sinuous-v0.15.1,800 ,238.6,257.9,1470.3,39.2,87.5,49.6,2282.4,495.6,271.5,1.05
+Stage0,stage0-v0.0.2,772 ,223.8,245.8,1478.2,51.8,86.9,46.8,2149.3,478.4,269.6,1.05
+Solid,solid-v0.20.0,,234.8,254.9,1478.8,47.3,88.2,48.9,2298.4,491.7,285.3,1.07
+modern-helpers,modern-helpers-dx-v0.1.0,772 ,256.3,262.7,1487.6,41.4,86.6,47.2,2458.7,533.8,273.5,1.08
+VanillaJS (createElement + children avec cache),vanillajs-create-el,772 ,255,268.1,1505.4,40.5,87.6,47.3,2450.3,540.3,277,1.08
+VanillaJS (createElement + querySelector avec cache),vanillajs-create-el-query,772 ,256,267.8,1517.4,39.1,86.9,48.8,2468.7,543.1,276.5,1.09
+modern-helpers/el (avec cache),modern-helpers-v0.1.0,772 ,259.1,264.5,1489.3,43.3,86.4,48.5,2440,524.8,273.9,1.09
+domc,domc-v0.0.12,,231.8,244.8,1474,64.2,88.6,47.5,2195,488.7,268.2,1.09
+VanillaJS (children sans cache),vanillajs-no-mem,772 ,256,268.9,1528.6,40.1,87.2,48.1,2481.9,544.3,276.3,1.09
+Docs : VanillaJS,vanillajs-create-el-for-doc,772 ,256.4,270.1,1533.7,40.6,87,47.8,2462.6,556.7,275.3,1.09
+Solid-state,solid-state-v0.20.0,,244.6,258.8,1486.4,47.2,91.7,50.4,2349.5,525.5,285.2,1.1
+modern-helpers/template,modern-helpers-template-v0.1.0,772 ,267.8,274,1483.3,39.8,88.3,48.5,2652.2,546.1,271.7,1.1
+VanillaJS (querySelector sans cache),vanillajs-no-mem-query,772 ,254.7,269,1841.1,39.5,87.9,47.4,2455.6,536.7,274.9,1.11
+VanillaJS (éléments personnalisés),vanillajs-wc,772 ,272.1,280.1,1512.2,39.5,87.3,47.5,2557.5,567.4,274.6,1.11
+modern-helpers/el (sans cache),modern-helpers-no-mem-v0.1.0,772 ,257.2,290.5,1522.8,41.5,86.8,47.5,2435.5,586.2,272.6,1.11
+VanillaJS (éléments personnalisés & bonnes pratiques),vanillajs-wc-prog,,274.7,284.4,1513.9,39.5,88.8,48.7,2658.3,574.1,279.8,1.12
+stdweb,stdweb-v0.4.17,772 ,277.5,278.2,1506.2,42.7,87.3,47.5,2547.9,581.2,290.1,1.13
+VanillaJS (Template Strings avec cache),vanillajs-innerhtml,772 ,276.1,298.8,1514.6,40.5,86.8,47.2,2757.8,593.1,276,1.13
+VanillaJS (Template Strings sans cache ),vanillajs-innerhtml-no-mem,772 ,277.6,300.8,1541.9,41.2,87.3,47.7,2771,593.5,274.7,1.14
+domdiff,domdiff-v2.2.2,772 ,246.5,266.4,1487.4,54.8,92.3,48.4,2320.4,629.7,319.2,1.15
+VanillaJS (pseudo-composant innerHTML),vanillajs-innerhtml-cpnt,772 ,287.1,305.7,1509.1,42.2,89,48.9,2819.9,607,278.7,1.16
+ivi,ivi-v0.27.1,,260,261.5,1541.8,71.4,90.9,51.9,2372.6,564,274.1,1.17
+san,san-v3.10.0,800 ,260.5,266.6,1546.6,72.4,87.7,49,2348.7,536.9,317.2,1.18
+Docs : VanillaJS (Custom Elements),vanillajs-custom-el,772 ,298.4,317.5,1508.4,42.3,90.4,48,2960.9,629.3,276.2,1.18
+attodom,attodom-v0.12.0,772 ,260.1,275.5,1513.5,78.8,89.5,48.1,2488.2,542.7,274.6,1.18
+VanillaJS (éléments personnalisé DX),vanillajs-wc-dx,772 ,293.8,315,1519.9,42.9,88.6,49.3,2883.8,623.6,291.8,1.18
+dominator,dominator-v0.5.0,,304,303.3,1518.8,37,87.4,47.4,3077,620.5,339.2,1.18
+Inferno,inferno-v7.2.1,,257.3,260.1,1497.5,99.1,87.3,46.8,2371.5,523.7,311.3,1.2
+petit-dom,petit-dom-v0.2.0,,282.9,289.4,1499.6,79.4,87.9,48.8,2532.2,562.7,280.7,1.21
+domvm,domvm-v3.4.12,,271,272.2,1519.3,96.7,97,47.5,2392.4,546.1,285.7,1.22
+RE:DOM,redom-v3.27.0,772 ,282.4,288.9,1519.6,75.8,88.2,48,2553.6,575.7,333.1,1.23
+Hyperapp,hyperapp-v2.0.8,,281.2,289.3,1489.9,96.2,88.8,55.4,2651.5,588.4,287.4,1.27
+HyperHTML,hyperhtml-v2.32.1,,270.5,279.1,1536.3,103.4,98.2,50.2,2556.9,561.7,325.8,1.28
+Svelte,svelte-v3.29.4,,286.1,308.8,1537,76.5,90.9,49,2761.2,605.4,385.4,1.29
+µHTML,uhtml-v1.8.1,,275.9,283.3,1546.6,97.6,93.7,51.8,2671.5,606.4,342.2,1.3
+lit-html,lit-html-v1.1.0,800 ,265.7,268.7,1525.3,166.6,89.4,47.6,2535.3,558.4,349.4,1.32
+Docs : lit-html,lit-html-for-doc-v1.1.0,800 ,271.7,269.5,1537.2,169.1,90,47.6,2530.2,581.7,346.7,1.34
+LighterHTML,lighterhtml-v2.5.0,,277,288.4,1556.9,133.6,98.9,51.2,2659.9,584.5,342,1.35
+lit-element,lit-element-v2.4.0,,281.2,278.8,1575,188.1,95.1,49.1,2610.1,590.7,347.6,1.39
+Preact,preact-v10.5.5,,307.4,320.8,1513.8,130.3,93.6,48.7,3028.8,791,351.5,1.43
+Isotope,isotope-v0.2.0,,335.1,359.7,1531.7,160.1,98.2,49.6,4314.8,772.2,268.8,1.52
+Vue 3,vue-v3.0.2,,297.3,279.8,1566.8,346.2,102.7,50.8,2572.6,616.6,354,1.52
+React & Redux,react-redux-hooks-v17.0.1 + 7.2.1,,354.3,307.5,1630.8,111.8,1025.9,50.7,3225.1,696,402.4,1.89
+React & RxJS,react-rxjs-v17.0.1 + 0.6.0,,335,297,1601.5,152.4,1021.7,48.7,3180.9,697,379.3,1.91
+React,react-hooks-v17.0.1,,337.1,304.3,1594.9,200,1024.1,49.2,3326.9,676,375.4,1.97
+Angular 8,angular-v8.2.14,,332.2,314.7,1504.3,160.5,1033.6,53.6,2913.4,675.4,615.8,2.02
+React & react-easy-state,react-easy-state-v17.0.1 + 6.3.0,,418.9,356.7,1644.3,95,1053,60.2,3620.6,839,458.4,2.06
+Angular 11,angular-ng-v11.0.2,,357.2,317.2,1529.5,176.4,1043.4,53.4,2934.7,769.3,630.7,2.1
