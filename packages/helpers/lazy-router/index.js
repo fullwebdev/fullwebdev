@@ -304,4 +304,8 @@ export function setUp(routes, render, callbacks = {}, config = {}) {
       })
     );
   }
+
+  window.onpopstate = () => {
+    navigate(getPath(), false, false);
+  };
 }
