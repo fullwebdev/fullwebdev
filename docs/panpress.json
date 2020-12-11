@@ -9,7 +9,7 @@
         "path": "packages/benchmark"
       },
       "livre-fr": {
-        "url": "https://github.com/noelmace/livre-web-apps/",
+        "url": "https://github.com/fullwebdev/livre-web-apps/",
         "branch": "master",
         "path": "packages/livre-fr"
       }
