@@ -971,6 +971,19 @@
     "URL": "https://commons.wikimedia.org/wiki/File:Olivettiunderwood_programma101.jpg"
   },
   {
+    "id": "schemaDunningKrugerFR",
+    "accessed": { "date-parts": [[2020, 12, 13]] },
+    "archive_location": "/images/third-party/2019-06-19_effet_dunning_kruger.png",
+    "author": [{ "family": "Filips", "given": "Arjuna" }],
+    "citation-label": "schemaDunningKrugerFR",
+    "issued": { "date-parts": [[2019, 6, 19]] },
+    "medium": "CC BY-SA  4.0 International",
+    "source": "Wikimedia Commons",
+    "title": "Schéma représentant la courbe d'apprentissage d'une compétence par rapport à l'auto-évaluation dans cette compétence.",
+    "type": "graphic",
+    "URL": "https://commons.wikimedia.org/wiki/File:2019-06-19_effet_dunning_kruger.png"
+  },
+  {
     "id": "schemaUrlSPA",
     "accessed": { "date-parts": [[2020, 11, 23]] },
     "archive_location": "/images/routage/url-spa.png (source .svg)",
