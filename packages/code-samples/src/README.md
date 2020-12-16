@@ -128,3 +128,4 @@ title: "Code Samples"
 2. Reactive Programming
    - [RxJS](reactive/rxjs/complete/index.html)
      - [cold observable](reactive/rxjs/complete/cold/index.html)
+   - [Bacon.js](reactive/baconjs/index.html)
