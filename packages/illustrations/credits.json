@@ -596,6 +596,78 @@
     "URL": "/images/standards/WICG-process.png"
   },
   {
+    "id": "marbleAutocompleteDT",
+    "archive_location": "/graphs/images/marbles/debounceTime.png (source: /graphs/rxjs/debounceTime.marble)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "marbleAutocompleteDT",
+    "issued": { "date-parts": [[2020, 12, 15]] },
+    "language": "en",
+    "title": "RxJS autocomplete marble : debounceTime",
+    "type": "graphic"
+  },
+  {
+    "id": "marbleAutocompleteDUC",
+    "archive_location": "/graphs/images/marbles/distinctUntilChanged.png (source: /graphs/rxjs/distinctUntilChanged.marble)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "marbleAutocompleteDUC",
+    "issued": { "date-parts": [[2020, 12, 15]] },
+    "language": "en",
+    "title": "RxJS autocomplete marble : distinctUntilChanged",
+    "type": "graphic"
+  },
+  {
+    "id": "marbleAutocompleteFilter",
+    "archive_location": "/graphs/images/marbles/filter.png (source: /graphs/rxjs/filter.marble)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "marbleAutocompleteFilter",
+    "issued": { "date-parts": [[2020, 12, 15]] },
+    "language": "en",
+    "title": "RxJS autocomplete marble : filter",
+    "type": "graphic"
+  },
+  {
+    "id": "marbleAutocompleteMap",
+    "archive_location": "/graphs/images/marbles/map.png (source: /graphs/rxjs/map.marble)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "marbleAutocompleteMap",
+    "issued": { "date-parts": [[2020, 12, 15]] },
+    "language": "en",
+    "title": "RxJS autocomplete marble : map",
+    "type": "graphic"
+  },
+  {
+    "id": "marbleAutocompleteTap",
+    "archive_location": "/graphs/images/marbles/tap.png (source: /graphs/rxjs/tap.marble)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "marbleAutocompleteTap",
+    "issued": { "date-parts": [[2020, 12, 15]] },
+    "language": "en",
+    "title": "RxJS autocomplete marble : tap",
+    "type": "graphic"
+  },
+  {
+    "id": "marbleRxJSFromEvent",
+    "accessed": { "date-parts": [[2020, 12, 15]] },
+    "archive_location": "/images/third-party/rxjs/fromEvent.png",
+    "citation-label": "marbleRxJSFromEvent",
+    "language": "en",
+    "medium": "Apache License, Version 2.0 - Copyright (c) 2015-2018 Google, Inc., Netflix, Inc., Microsoft Corp. and contributors",
+    "title": "RxJS-docs marble : fromEvent",
+    "type": "graphic",
+    "URL": "https://github.com/ReactiveX/rxjs/blob/8c13e0a3dbd88cc473677cd41c9f09cc26a3d947/docs_app/assets/images/marble-diagrams/fromEvent.png"
+  },
+  {
+    "id": "marbleRxJSSwitchMap",
+    "accessed": { "date-parts": [[2020, 12, 15]] },
+    "archive_location": "/images/third-party/rxjs/switchMap.png",
+    "citation-label": "marbleRxJSSwitchMap",
+    "language": "en",
+    "medium": "Apache License, Version 2.0 - Copyright (c) 2015-2018 Google, Inc., Netflix, Inc., Microsoft Corp. and contributors",
+    "title": "RxJS-docs marble : switchMap",
+    "type": "graphic",
+    "URL": "https://github.com/ReactiveX/rxjs/blob/8c13e0a3dbd88cc473677cd41c9f09cc26a3d947/docs_app/assets/images/marble-diagrams/switchMap.png"
+  },
+  {
     "id": "mdnGraphShadowDom",
     "accessed": { "date-parts": [[2020, 11, 23]] },
     "archive_location": "/images/third-party/mdn-shadow-dom.png",
@@ -1190,6 +1262,15 @@
     "type": "graphic"
   },
   {
+    "id": "umlHTMLEventObserver",
+    "archive_location": "/images/standards/UML-Observer-Event.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "umlHTMLEventObserver",
+    "issued": { "date-parts": [[2020, 12, 14]] },
+    "title": "UML HTML Event - Observer Design Pattern",
+    "type": "graphic"
+  },
+  {
     "id": "umlHTMLHistory",
     "accessed": { "date-parts": [[2020, 11, 23]] },
     "archive_location": "/images/routage/UML-History.png (source .dia)",
@@ -1230,6 +1311,19 @@
     "issued": { "date-parts": [[2020, 11, 25]] },
     "title": "UML HTMLTemplateElement",
     "type": "graphic"
+  },
+  {
+    "id": "umlObserver",
+    "accessed": { "date-parts": [[2020, 12, 14]] },
+    "archive_location": "/images/third-party/Observer.png",
+    "author": [{ "literal": "WikiSolved" }],
+    "citation-label": "umlObserver",
+    "medium": "Public domain",
+    "source": "Wikimedia Commons",
+    "title": "A UML diagram of the observer pattern.",
+    "title-short": "English",
+    "type": "graphic",
+    "URL": "https://commons.wikimedia.org/wiki/File:Observer.svg"
   },
   {
     "id": "umlPerformanceObserver",
