@@ -1,0 +1,5 @@
+marble autocompleteDistinctUntilChanged
+{
+    source map:  +-(rea)-(reac)-(reac)-(react)->
+    operator distinctUntilChanged():  +-(rea)-(reac)---(react)->
+}
