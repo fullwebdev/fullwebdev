@@ -119,3 +119,9 @@ title: "Code Samples"
    1. memoize
       1. [latest update](rendering/memoize/dom-api/latest-count/index.html)
       1. [children](rendering/memoize/dom-api/children/index.html)
+
+## Libraries
+
+1. Routing
+   - [Page.js](minimal-spa/8-pagejs/index.html)
+   - [universal-router](minimal-spa/9-universal-router/index.html)

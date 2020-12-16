@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SPA URL</title>
+    <link rel="stylesheet" href="/minimal-spa/index.css" />
+    <base href="/minimal-spa/9-universal-router/" />
+  </head>
+  <body>
+    <header>
+      <h1>SPA Minimaliste - Universal-router</h1>
+      <nav>
+        <!-- #region link -->
+        <a href="./post/1">
+          Article 1
+        </a>
+        <!-- #endregion link -->
+        <a href="./post/2">
+          Article 2
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        Bienvenue ! Ce contenu est statique.
+      </section>
+      <section id="content"></section>
+    </main>
+    <script src="https://unpkg.com/universal-router/universal-router.min.js"></script>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
