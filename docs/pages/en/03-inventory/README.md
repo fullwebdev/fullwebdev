@@ -32,6 +32,7 @@ Performance indexes from [js-framework-benchmark](https://rawgit.com/krausest/js
 | [alpine](./alpinejs)             | 30         | Extended HTML                       |             |                           |
 | [ractive](./ractive)             | 30         | Mustaches                           | 2.37        |                           |
 | [nerv](./nervjs)                 | 30         | JSX                                 | 1.87        |                           |
+| [solid](./solid-js)              | 27         | JSX                                 | **1.06**    |                           |
 | [redom](./redom)                 | 24         | HyperScript                         | 1.23        | :zap: up-to-date microlib |
 | [hyperhtml](./hyperhtml)         | 24         | Tagged templates                    | 1.25        |                           |
 | [nanohtml](./nanohtml)           | 24         | Template Strings                    |             |                           |
@@ -49,7 +50,6 @@ Performance indexes from [js-framework-benchmark](https://rawgit.com/krausest/js
 | [tiny-lit](./%40tiny-lit%2Fcore) | 7          | Tagged templates                    |             | :zap: up-to-date microlib |
 | [attodom](./attodom)             | 5          | HyperScript                         | **1.17**    | :zap: up-to-date microlib |
 | [stage0](./stage0)               | 4          | Tagged templates                    | **1.06**    |                           |
-| [solid](./solid-js)              | 3          | JSX                                 | **1.06**    |                           |
 
 <details>
   <summary>Other projects</summary>
