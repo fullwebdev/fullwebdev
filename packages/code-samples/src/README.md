@@ -129,3 +129,7 @@ title: "Code Samples"
    - [RxJS](reactive/rxjs/complete/index.html)
      - [cold observable](reactive/rxjs/complete/cold/index.html)
    - [Bacon.js](reactive/baconjs/index.html)
+3. State Management
+   - Redux
+     - [Simple Counter](reactive/redux/simple-counter/index.html)
+     - [Better Example](reactive/redux/good-counter/index.html)
