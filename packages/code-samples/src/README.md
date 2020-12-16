@@ -127,3 +127,4 @@ title: "Code Samples"
    - [universal-router](minimal-spa/9-universal-router/index.html)
 2. Reactive Programming
    - [RxJS](reactive/rxjs/complete/index.html)
+     - [cold observable](reactive/rxjs/complete/cold/index.html)

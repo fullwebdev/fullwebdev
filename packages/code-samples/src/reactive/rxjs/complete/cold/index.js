@@ -1,4 +1,4 @@
-const { fromEvent } = rxjs;
+const { Observable } = rxjs;
 const {
   map,
   filter,
@@ -19,41 +19,36 @@ const inputEl = document.getElementById("autocomplete");
 const suggestionEl = document.getElementById("suggestions");
 
 //#region observable
-const source = fromEvent(inputEl, "keyup");
+const source = Observable.create((observer) => {
+  inputEl.addEventListener("keyup", (e) => {
+    observer.next(e);
+  });
+});
 //#endregion observable
 
 //#region operators
 const suggestions = source.pipe(
-  //#region map
   map((e) => e.target.value),
-  //#endregion map
-  //#region filter
   filter((text) => text.length > 2),
-  //#endregion filter
-  //#region distinctUntilChanged
   distinctUntilChanged(),
-  //#endregion distinctUntilChanged
-  //#region debounceTime
   debounceTime(750),
-  //#endregion debounceTime
-  //#region tap
-  tap(() => (suggestionEl.innerHTML = "loading...")),
-  //#endregion tap
-  //#region switchMap
-  switchMap(
-    (term) =>
-      //#region fromFetch
-      fromFetch(
-        `https://en.wikipedia.org/w/api.php?origin=*&action=opensearch&search=${term}`,
-        {
-          selector: (response) => response.json(),
-        }
-      )
-    //#endregion fromFetch
+  tap((term) => console.log(`suggestions: term`)),
+  switchMap((term) =>
+    fromFetch(
+      `https://en.wikipedia.org/w/api.php?origin=*&action=opensearch&search=${term}`,
+      {
+        selector: (response) => response.json(),
+      }
+    )
   )
-  //#endregion switchMap
 );
 //#endregion operators
+
+suggestions.pipe(
+  tap(([, titles]) => {
+    console.log(`outside: titles`);
+  })
+);
 
 //#region subscription
 suggestions.subscribe(
@@ -67,14 +62,3 @@ suggestions.subscribe(
   }
 );
 //#endregion subscription
-
-//#region console
-suggestions.subscribe(
-  ([, title]) => {
-    console.log(title);
-  },
-  (error) => {
-    console.error(error);
-  }
-);
-//#endregion console
