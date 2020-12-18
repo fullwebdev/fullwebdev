@@ -321,6 +321,15 @@
     "type": "graphic"
   },
   {
+    "id": "graphExAppState",
+    "archive_location": "/images/components/ex-appstate.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphExAppState",
+    "issued": { "date-parts": [[2020, 12, 18]] },
+    "title": "Example: App State & Web Components",
+    "type": "graphic"
+  },
+  {
     "id": "graphFonctionPure",
     "archive_location": "/images/components/fonction-pure.png",
     "author": [{ "family": "Macé", "given": "Noël" }],
