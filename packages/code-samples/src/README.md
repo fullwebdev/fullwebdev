@@ -132,4 +132,5 @@ title: "Code Samples"
 3. State Management
    - Redux
      - [Simple Counter](reactive/redux/simple-counter/index.html)
-     - [Better Example](reactive/redux/good-counter/index.html)
+     - [Realistic Example](reactive/redux/good-counter/index.html)
+     - [with a wrapper component](reactive/redux/wrapped-counter/index.html)

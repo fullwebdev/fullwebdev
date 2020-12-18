@@ -1,4 +1,4 @@
-import { store } from "./store.js";
+import { store, increment, decrement } from "./store.js";
 import { p, button } from "./dom.js";
 
 //#region component
@@ -17,9 +17,9 @@ class CounterPanel extends HTMLElement {
     this.shadowRoot.addEventListener("click", (e) => {
       const el = e.target;
       if (el.closest(".increment")) {
-        store.dispatch({ type: "INCREMENT" });
+        store.dispatch(increment());
       } else if (el.closest(".decrement")) {
-        store.dispatch({ type: "DECREMENT" });
+        store.dispatch(decrement());
       }
     });
   }
