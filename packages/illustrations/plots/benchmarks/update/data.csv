@@ -39,6 +39,7 @@ VanillaJS (docs),1533.7,1529.3,1538.1,vanillajs-create-el-for-doc
 HyperHTML,1536.3,1527.3,1545.3,hyperhtml-v2.32.1
 Svelte,1537,1531.7,1542.3,svelte-v3.29.4
 lit-html (docs),1537.2,1529.4,1545,lit-html-for-doc-v1.1.0
+Cash,1537.6,1537.6,1537.6,cash-v8.1.0
 ivi,1541.8,1536.9,1546.7,ivi-v0.27.1
 Children (Template String),1541.9,1537,1546.8,vanillajs-innerhtml-no-mem
 san,1546.6,1540.4,1552.8,san-v3.10.0
@@ -46,6 +47,7 @@ san,1546.6,1540.4,1552.8,san-v3.10.0
 LighterHTML,1556.9,1552.7,1561.1,lighterhtml-v2.5.0
 JQuery,1563.1,1552,1574.2,jquery-v3.5.1 
 Vue 3,1566.8,1561.8,1571.8,vue-v3.0.2
+Zepto,1568.9,1568.9,1568.9,zepto-v1.2.0
 lit-element,1575,1567.2,1582.8,lit-element-v2.4.0
 React,1594.9,1589.7,1600.1,react-hooks-v17.0.1
 React & RxJS,1601.5,1596.9,1606.1,react-rxjs-v17.0.1 + 0.6.0
