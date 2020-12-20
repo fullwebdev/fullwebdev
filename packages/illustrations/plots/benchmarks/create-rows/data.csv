@@ -49,5 +49,6 @@ Angular 11,323.77,321.07,326.47,angular-ng-v11.0.2
 React w/ RxJS,326.44,317.18,335.59,react-rxjs-v17.0.1 + 0.6.0
 React,334.89,325.16,344.49,react-hooks-v17.0.1
 React w/ Redux (hooks),338.03,335.66,340.40,react-redux-hooks-v17.0.1 + 7.2.1
+JQuery,361.86,358.78,364.95,jquery-v3.5.1 
 Isotope,380.25,378.27,382.23,isotope-v0.2.0
 React w/ easy-state,389.44,386.03,392.86,react-easy-state-v17.0.1 + 6.3.0
