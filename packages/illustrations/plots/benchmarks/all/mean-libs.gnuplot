@@ -1,5 +1,9 @@
+working_directory = system("dirname ".ARG0)."/"
+data_file = working_directory."data.csv"
+output_file = working_directory."mean-libs.png"
+set output output_file
+
 set term png size 1024,750 font 'Liberation Sans,16'
-set output "mean-libs.png"
 
 set style fill solid
 set boxwidth 0.7
@@ -20,5 +24,5 @@ set linetype cycle 2
 
 set xtics rotate by 45 right
 
-plot '<(egrep "^(VanillaJS \(DX\)|modern-helpers|lit-html|Inferno|React|Sinuous|Solid|ivi)," data.csv)' \
+plot '<(egrep "^(VanillaJS \(DX\)|modern-helpers|lit-html|Inferno|React|Sinuous|Solid|ivi)," '.data_file.')' \
   using 0:13:($0+1):xtic(1) with boxes lc variable

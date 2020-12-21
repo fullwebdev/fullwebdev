@@ -1,5 +1,9 @@
+working_directory = system("dirname ".ARG0)."/"
+data_file = working_directory."data.csv"
+output_file = working_directory."hyperscript.png"
+set output output_file
+
 set term png size 1024,550 font 'Liberation Sans,16'
-set output "hyperscript.png"
 
 set style fill solid
 set boxwidth 0.7
@@ -16,6 +20,6 @@ set linetype 5 lc rgb "gray90"
 set linetype 6 lc rgb "gray90"
 set linetype cycle 2
 
-plot "<(egrep '^(VanillaJS|Inferno|RE:DOM|Hyperapp|React|Preact),' data.csv)" \
+plot "<(egrep '^(VanillaJS|Inferno|RE:DOM|Hyperapp|React|Preact),' ".data_file.")" \
   using 0:2:($0+1):xtic(1) with boxes lc variable, \
   '' using 0:2:3:4 with yerrorbars lc rgb 'gray30' pt 0 lw 1
