@@ -850,6 +850,15 @@
     "type": "graphic"
   },
   {
+    "id": "plotBM_rows_dom-libs",
+    "archive_location": "/plots/benchmarks/all/mean-dom-libs.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_rows_dom-libs",
+    "issued": { "date-parts": [[2020, 12, 21]] },
+    "title": "Rendering benchmark: create (RE:DOM & JQuery)",
+    "type": "graphic"
+  },
+  {
     "id": "plotBM_rows_helper-template",
     "accessed": { "date-parts": [[2020, 11, 23]] },
     "archive_location": "/plots/benchmarks/create-rows/modern-helper-template.png (source .gnuplot)",
@@ -1034,6 +1043,15 @@
     "issued": { "date-parts": [[2020, 12, 6]] },
     "language": "fr",
     "title": "Rendering benchmark :  update (élément personnalisé mis en cache)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotSizeRedomJQuery",
+    "archive_location": "/plots/libs/dom.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotSizeRedomJQuery",
+    "issued": { "date-parts": [[2020, 12, 21]] },
+    "title": "Graph de comparaison du poids de RE:DOM, JQuery, et ses alternatives",
     "type": "graphic"
   },
   {

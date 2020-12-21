@@ -16,5 +16,5 @@ set datafile separator ","
 myBoxWidth = 0.8
 set offsets 0,0,0.5-myBoxWidth/2.,0.5
 
-plot '<(grep ",772 ," '.data_file.' | egrep -v "(Vanilla|cache|stdweb)")' using 0:0:(0):13:($0-myBoxWidth/2.):($0+myBoxWidth/2.):($0+1):ytic(1) with boxxyerror lc variable
+plot '<(grep ",772 ," '.data_file.' | egrep -v "(Vanilla|cache|stdweb|domdiff|modern-helpers)")' using 0:0:(0):13:($0-myBoxWidth/2.):($0+myBoxWidth/2.):($0+1):ytic(1) with boxxyerror lc variable
 
