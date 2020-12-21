@@ -138,15 +138,16 @@ Performance indexes from [js-framework-benchmark](https://rawgit.com/krausest/js
 
 ## Component-Based Development
 
-| name                                         | popularity | status |
-| -------------------------------------------- | ---------- | ------ |
-| [lit-element](./lit-element)                 | 49         |        |
-| [svelte](./svelte?library=false)             | 48         |        |
-| [stencil](./%40stencil%2Fcore?library=false) | 41         |        |
-| [sapper](./sapper?library=false)             | 28         |        |
-| [hybrids](./hybrids)                         | 21         |        |
-| [Lego](./%40polight%2Flego)                  | 5          |        |
-| [Brick](./%40polight%2Fbrick)                | 3          |        |
+| name                                         | popularity | status                    |
+| -------------------------------------------- | ---------- | ------------------------- |
+| [lit-element](./lit-element)                 | 49         |                           |
+| [svelte](./svelte?library=false)             | 48         |                           |
+| [stencil](./%40stencil%2Fcore?library=false) | 41         |                           |
+| [sapper](./sapper?library=false)             | 28         |                           |
+| [hybrids](./hybrids)                         | 21         |                           |
+| [atomico](./atomico)                         | 17         | :zap: up-to-date microlib |
+| [Lego](./%40polight%2Flego)                  | 5          |                           |
+| [Brick](./%40polight%2Fbrick)                | 3          |                           |
 
 <details>
   <summary>Other projects</summary>
@@ -185,6 +186,7 @@ May include some multi-purpose libraries which doesn't define themselves as "fra
 | [Yew](https://yew.rs){target="_blank"}               | (:star: 13k) |                         |
 | [Marionette](./backbone.marionette) | 35           |                                            |
 | [rax](./rax)                        | 31           |                                            |
+| [Omi](./omi)                        | 30           |                                            |
 | [Cycle.js](./%40cycle%2Fdom)        | 30           |                                            |
 | [choo](./choo)                      | 28           |                                            |
 | [san](./san)                        | 24           |                                            |
