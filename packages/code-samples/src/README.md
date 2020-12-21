@@ -122,14 +122,16 @@ title: "Code Samples"
 
 ## Libraries
 
-1. Routing
+1. Rendering
+   - [RE:DOM](minimal-spa/redom/index.html)
+2. Routing
    - [Page.js](minimal-spa/8-pagejs/index.html)
    - [universal-router](minimal-spa/9-universal-router/index.html)
-2. Reactive Programming
+3. Reactive Programming
    - [RxJS](reactive/rxjs/complete/index.html)
      - [cold observable](reactive/rxjs/complete/cold/index.html)
    - [Bacon.js](reactive/baconjs/index.html)
-3. State Management
+4. State Management
    - Redux
      - [Simple Counter](reactive/redux/simple-counter/index.html)
      - [Realistic Example](reactive/redux/good-counter/index.html)
