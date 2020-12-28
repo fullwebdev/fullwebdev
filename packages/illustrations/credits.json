@@ -784,6 +784,24 @@
     "URL": "https://www.jwz.org/photos/1994-1999-nscp/1304.html"
   },
   {
+    "id": "plotBM_mean_all",
+    "archive_location": "/plots/benchmarks/all/mean-all-libs.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_mean_all",
+    "issued": { "date-parts": [[2020, 12, 22]] },
+    "title": "Rendering benchmark: mean (all libraries)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_mean_dom-libs",
+    "archive_location": "/plots/benchmarks/all/mean-dom-libs.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_mean_dom-libs",
+    "issued": { "date-parts": [[2020, 12, 21]] },
+    "title": "Rendering benchmark: mean (RE:DOM & JQuery)",
+    "type": "graphic"
+  },
+  {
     "id": "plotBM_mean_libs",
     "accessed": { "date-parts": [[2020, 11, 23]] },
     "archive_location": "/plots/benchmarks/all/mean-libs.png (source .gnuplot)",
@@ -792,6 +810,24 @@
     "issued": { "date-parts": [[2020, 12, 7]] },
     "language": "fr",
     "title": "Rendering benchmark :  moyenne (Bibliothèques)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_mean_libs-hs",
+    "archive_location": "/plots/benchmarks/all/mean-hyperscript.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_mean_libs-hs",
+    "issued": { "date-parts": [[2020, 12, 21]] },
+    "title": "Rendering benchmark: mean (RE:DOM, Sinuous, Ivi & Hyperapp)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_mean_tag",
+    "archive_location": "/plots/benchmarks/all/mean-tag.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_mean_tag",
+    "issued": { "date-parts": [[2020, 12, 22]] },
+    "title": "Rendering benchmark: mean (Tagged Templates libraries)",
     "type": "graphic"
   },
   {
@@ -850,15 +886,6 @@
     "type": "graphic"
   },
   {
-    "id": "plotBM_rows_dom-libs",
-    "archive_location": "/plots/benchmarks/all/mean-dom-libs.png (source .gnuplot)",
-    "author": [{ "family": "Macé", "given": "Noël" }],
-    "citation-label": "plotBM_rows_dom-libs",
-    "issued": { "date-parts": [[2020, 12, 21]] },
-    "title": "Rendering benchmark: create (RE:DOM & JQuery)",
-    "type": "graphic"
-  },
-  {
     "id": "plotBM_rows_helper-template",
     "accessed": { "date-parts": [[2020, 11, 23]] },
     "archive_location": "/plots/benchmarks/create-rows/modern-helper-template.png (source .gnuplot)",
@@ -900,6 +927,24 @@
     "issued": { "date-parts": [[2020, 12, 6]] },
     "language": "fr",
     "title": "Rendering benchmark :  create (pseudo-composant avec Template String)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_rows_libs-hs",
+    "archive_location": "/plots/benchmarks/create-rows/libs-hyperscript.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_rows_libs-hs",
+    "issued": { "date-parts": [[2020, 12, 21]] },
+    "title": "Rendering benchmark: create (RE:DOM, Sinuous, Ivi & Hyperapp)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_rows_libs-tag",
+    "archive_location": "/plots/benchmarks/create-rows/libs-tag.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_rows_libs-tag",
+    "issued": { "date-parts": [[2020, 12, 22]] },
+    "title": "Rendering benchmark: create (Tagged Template libraries)",
     "type": "graphic"
   },
   {
@@ -1013,6 +1058,17 @@
     "type": "graphic"
   },
   {
+    "id": "plotBM_update_libs-tag",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/update/libs-tag.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_update_libs-tag",
+    "issued": { "date-parts": [[2020, 12, 27]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  update (Template Tag Rendering Libraries)",
+    "type": "graphic"
+  },
+  {
     "id": "plotBM_update_query",
     "accessed": { "date-parts": [[2020, 11, 23]] },
     "archive_location": "/plots/benchmarks/update/no-mem_querySelector.png (source .gnuplot)",
@@ -1046,12 +1102,30 @@
     "type": "graphic"
   },
   {
+    "id": "plotSizeHS",
+    "archive_location": "/plots/libs/libs-hyperscript.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotSizeHS",
+    "issued": { "date-parts": [[2020, 12, 21]] },
+    "title": "Graph de comparaison du poids de RE:DOM, Hyperapp, Sinuous & Ivi",
+    "type": "graphic"
+  },
+  {
     "id": "plotSizeRedomJQuery",
     "archive_location": "/plots/libs/dom.png (source .gnuplot)",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "plotSizeRedomJQuery",
     "issued": { "date-parts": [[2020, 12, 21]] },
     "title": "Graph de comparaison du poids de RE:DOM, JQuery, et ses alternatives",
+    "type": "graphic"
+  },
+  {
+    "id": "plotSizeTag",
+    "archive_location": "/plots/libs/tag.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotSizeTag",
+    "issued": { "date-parts": [[2020, 12, 22]] },
+    "title": "Graph de comparaison du poids des principales bibliothèques de rendering par Tagged Templates",
     "type": "graphic"
   },
   {
