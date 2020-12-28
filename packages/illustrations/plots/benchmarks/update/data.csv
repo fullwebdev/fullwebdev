@@ -18,6 +18,7 @@ VanillaJS (DX),1500.2,1491.8,1508.6,vanillajs-dx-opti
 Angular 8,1504.3,1496.8,1511.8,angular-v8.2.14
 this.rows[id].children,1505.4,1498.4,1512.4,vanillajs-create-el
 stdweb,1506.2,1500.4,1512,stdweb-v0.4.17
+lit-html v2,1508.2,1503.3,1513.1,lit-html-2-vinvalid
 docs élément personnalisé,1508.4,1503.7,1513.1,vanillajs-custom-el
 pseudo-composant innerHTML,1509.1,1503.3,1514.9,vanillajs-innerhtml-cpnt
 élément personnalisé,1512.2,1503.4,1521,vanillajs-wc
@@ -31,26 +32,27 @@ domvm,1519.3,1513.1,1525.5,domvm-v3.4.12
 RE:DOM,1519.6,1513.8,1525.4,redom-v3.27.0
 éléments personnalisés (DX),1519.9,1514.6,1525.2,vanillajs-wc-dx
 Helper,1522.8,1515.2,1530.4,modern-helpers-no-mem-v0.1.0
-lit-html,1525.3,1518,1532.6,lit-html-v1.1.0
 this.tbody.children,1528.6,1524,1533.2,vanillajs-no-mem
 Angular 11,1529.5,1526.8,1532.2,angular-ng-v11.0.2
 Isotope,1531.7,1526.3,1537.1,isotope-v0.2.0
 VanillaJS (docs),1533.7,1529.3,1538.1,vanillajs-create-el-for-doc
-HyperHTML,1536.3,1527.3,1545.3,hyperhtml-v2.32.1
 Svelte,1537,1531.7,1542.3,svelte-v3.29.4
 lit-html (docs),1537.2,1529.4,1545,lit-html-for-doc-v1.1.0
-Cash,1537.6,1537.6,1537.6,cash-v8.1.0
+Cash,1537.6,1533.8,1541.4,cash-v8.1.0
 ivi,1541.8,1536.9,1546.7,ivi-v0.27.1
 Children (Template String),1541.9,1537,1546.8,vanillajs-innerhtml-no-mem
+lit-html,1543.9,1539.2,1548.6,lit-html-v1.3.0
 san,1546.6,1540.4,1552.8,san-v3.10.0
-µHTML,1546.6,1542.3,1550.9,uhtml-v1.8.1
-LighterHTML,1556.9,1552.7,1561.1,lighterhtml-v2.5.0
-JQuery,1563.1,1552,1574.2,jquery-v3.5.1 
+µHTML,1555.9,1548.6,1563.2,uhtml-v2.1.4
+JQuery,1563.1,1552,1574.2,jquery-v3.5.1
+HyperHTML,1566.3,1561.2,1571.4,hyperhtml-v2.33.0
 Vue 3,1566.8,1561.8,1571.8,vue-v3.0.2
-Zepto,1568.9,1568.9,1568.9,zepto-v1.2.0
+Zepto,1568.9,1564.5,1573.3,zepto-v1.2.0
 lit-element,1575,1567.2,1582.8,lit-element-v2.4.0
+LighterHTML,1575.8,1569.9,1581.7,lighterhtml-v4.1.1
 React,1594.9,1589.7,1600.1,react-hooks-v17.0.1
 React & RxJS,1601.5,1596.9,1606.1,react-rxjs-v17.0.1 + 0.6.0
 React & Redux,1630.8,1626.6,1635,react-redux-hooks-v17.0.1 + 7.2.1
 React & react-easy-state,1644.3,1637.7,1650.9,react-easy-state-v17.0.1 + 6.3.0
 this.tbody.querySelector,1841.1,1832.8,1849.4,vanillajs-no-mem-query
+Choo,4399.6,4347.9,4451.3,choo-v7.1.0

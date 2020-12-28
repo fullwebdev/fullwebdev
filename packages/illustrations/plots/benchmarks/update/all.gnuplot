@@ -15,4 +15,4 @@ set datafile separator ","
 myBoxWidth = 0.8
 set offsets 0,0,0.5-myBoxWidth/2.,0.5
 
-plot data_file using 2:0:(0):2:($0-myBoxWidth/2.):($0+myBoxWidth/2.):($0+1):ytic(1) with boxxyerror lc variable
+plot '<(egrep -v "^Choo," '.data_file.' )' using 2:0:(0):2:($0-myBoxWidth/2.):($0+myBoxWidth/2.):($0+1):ytic(1) with boxxyerror lc variable
