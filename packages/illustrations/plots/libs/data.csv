@@ -1,12 +1,11 @@
 name,version,size,category
 react (dom),17.0.1,42.2,react-like
 jquery,3.5.1,30.38,DOM
-nervjs,1.5.7,12.1,react-like
 zepto,1.2.0,9.54,DOM
 ivi,1.0.1,8.91,micro-framework
 inferno,7.4.6,7.8,react-like
 hyperhtml,2.33.0,7.6,tagged templates
-solid-js,0.22.3,7.34,compiled rendering
+solid-js,0.22.3,7.3,compiled rendering
 cash,8.1.0,5.82,DOM
 lighterhtml,4.1.1,5,tagged templates
 preact,10.5.7,4,react-like
