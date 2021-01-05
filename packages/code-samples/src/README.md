@@ -138,3 +138,6 @@ title: "Code Samples"
      - [with a wrapper component](reactive/redux/wrapped-counter/index.html)
 5. Tagged Templates
    - [introduction](rendering/tagged-template/index.html)
+6. Components
+   1. lit-element
+      - [hello world](components/lit-element/index.html)
