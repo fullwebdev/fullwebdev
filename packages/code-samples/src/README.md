@@ -141,3 +141,4 @@ title: "Code Samples"
 6. Components
    1. lit-element
       - [hello world](components/lit-element/index.html)
+      - [with es-module-shims](components/lit-element/importmap/index.html)
