@@ -498,6 +498,15 @@
     "type": "graphic"
   },
   {
+    "id": "graphTypeOfWebSolutions",
+    "archive_location": "/images/achitecture/types-of-solutions.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphTypeOfWebSolutions",
+    "issued": { "date-parts": [[2021, 1, 8]] },
+    "title": "Types de solutions pour le développement Web",
+    "type": "graphic"
+  },
+  {
     "id": "graphVentesPC19862000",
     "archive_location": "/images/history/peripheral-marketshare/graph-ventes-pc-1986-2000.png (source: peripheral-marketshare_1975-2012.ods)",
     "author": [{ "family": "Macé", "given": "Noël" }],
@@ -822,6 +831,15 @@
     "type": "graphic"
   },
   {
+    "id": "plotBM_mean_libs-jsx",
+    "archive_location": "/plots/benchmarks/all/mean-libs-jsx.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_mean_libs-jsx",
+    "issued": { "date-parts": [[2020, 12, 30]] },
+    "title": "Rendering benchmark: mean (JSX libraries)",
+    "type": "graphic"
+  },
+  {
     "id": "plotBM_mean_tag",
     "archive_location": "/plots/benchmarks/all/mean-tag.png (source .gnuplot)",
     "author": [{ "family": "Macé", "given": "Noël" }],
@@ -930,12 +948,39 @@
     "type": "graphic"
   },
   {
+    "id": "plotBM_rows_jquery",
+    "archive_location": "/plots/benchmarks/create-rows/jquery.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_rows_jquery",
+    "issued": { "date-parts": [[2020, 12, 21]] },
+    "title": "Rendering benchmark: create (JQuery)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_rows_jquery-all",
+    "archive_location": "/plots/benchmarks/create-rows/jquery-all.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_rows_jquery-all",
+    "issued": { "date-parts": [[2020, 12, 21]] },
+    "title": "Rendering benchmark: create (JQuery & alt)",
+    "type": "graphic"
+  },
+  {
     "id": "plotBM_rows_libs-hs",
     "archive_location": "/plots/benchmarks/create-rows/libs-hyperscript.png (source .gnuplot)",
     "author": [{ "family": "Macé", "given": "Noël" }],
     "citation-label": "plotBM_rows_libs-hs",
     "issued": { "date-parts": [[2020, 12, 21]] },
     "title": "Rendering benchmark: create (RE:DOM, Sinuous, Ivi & Hyperapp)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_rows_libs-jsx",
+    "archive_location": "/plots/benchmarks/create-rows/libs-jsx.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_rows_libs-jsx",
+    "issued": { "date-parts": [[2020, 12, 30]] },
+    "title": "Rendering benchmark: create (JSX Libraries)",
     "type": "graphic"
   },
   {
@@ -1058,6 +1103,17 @@
     "type": "graphic"
   },
   {
+    "id": "plotBM_update_libs-jsx",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/update/libs-jsx.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_update_libs-jsx",
+    "issued": { "date-parts": [[2020, 12, 30]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  update (JSX Libraries)",
+    "type": "graphic"
+  },
+  {
     "id": "plotBM_update_libs-tag",
     "accessed": { "date-parts": [[2020, 11, 23]] },
     "archive_location": "/plots/benchmarks/update/libs-tag.png (source .gnuplot)",
@@ -1108,6 +1164,15 @@
     "citation-label": "plotSizeHS",
     "issued": { "date-parts": [[2020, 12, 21]] },
     "title": "Graph de comparaison du poids de RE:DOM, Hyperapp, Sinuous & Ivi",
+    "type": "graphic"
+  },
+  {
+    "id": "plotSizeReactLike",
+    "archive_location": "/plots/libs/react-like.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotSizeReactLike",
+    "issued": { "date-parts": [[2020, 12, 30]] },
+    "title": "Graph de comparaison du poids des principales bibliothèques \"React-like\"",
     "type": "graphic"
   },
   {
