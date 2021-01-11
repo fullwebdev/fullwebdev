@@ -2,7 +2,7 @@
 import {
   html,
   render,
-} from "https://unpkg.com/lit-html@1.2.1/lit-html.js";
+} from "https://unpkg.com/lit-html@2.0.0-pre.5/lit-html.js";
 //#endregion import
 
 //#region say-hello
@@ -36,7 +36,7 @@ const homeParams = {
 
 const root = document.getElementById("root");
 
-render(Home(), root);
+render(Home(homeParams), root);
 //#endregion render
 
 // Something else appens...
