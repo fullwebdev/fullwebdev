@@ -6,7 +6,8 @@
     "build": "npm run clean && concurrently \"npm:mermaid\" \"npm:uml\"",
     "clean": "rimraf graphs/images && mkdirp graphs/images",
     "uml": "node scripts/build-uml.js",
-    "mermaid": "bash scripts/build-mermaid.sh"
+    "mermaid": "bash scripts/build-mermaid.sh",
+    "marble": "bash scripts/build-marbles.sh"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",

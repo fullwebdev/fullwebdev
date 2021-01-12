@@ -321,6 +321,15 @@
     "type": "graphic"
   },
   {
+    "id": "graphExAppState",
+    "archive_location": "/images/components/ex-appstate.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphExAppState",
+    "issued": { "date-parts": [[2020, 12, 18]] },
+    "title": "Example: App State & Web Components",
+    "type": "graphic"
+  },
+  {
     "id": "graphFonctionPure",
     "archive_location": "/images/components/fonction-pure.png",
     "author": [{ "family": "Macé", "given": "Noël" }],
@@ -489,6 +498,15 @@
     "type": "graphic"
   },
   {
+    "id": "graphTypeOfWebSolutions",
+    "archive_location": "/images/achitecture/types-of-solutions.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "graphTypeOfWebSolutions",
+    "issued": { "date-parts": [[2021, 1, 8]] },
+    "title": "Types de solutions pour le développement Web",
+    "type": "graphic"
+  },
+  {
     "id": "graphVentesPC19862000",
     "archive_location": "/images/history/peripheral-marketshare/graph-ventes-pc-1986-2000.png (source: peripheral-marketshare_1975-2012.ods)",
     "author": [{ "family": "Macé", "given": "Noël" }],
@@ -594,6 +612,78 @@
     "title": "WICG process",
     "type": "graphic",
     "URL": "/images/standards/WICG-process.png"
+  },
+  {
+    "id": "marbleAutocompleteDT",
+    "archive_location": "/graphs/images/marbles/debounceTime.png (source: /graphs/rxjs/debounceTime.marble)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "marbleAutocompleteDT",
+    "issued": { "date-parts": [[2020, 12, 15]] },
+    "language": "en",
+    "title": "RxJS autocomplete marble : debounceTime",
+    "type": "graphic"
+  },
+  {
+    "id": "marbleAutocompleteDUC",
+    "archive_location": "/graphs/images/marbles/distinctUntilChanged.png (source: /graphs/rxjs/distinctUntilChanged.marble)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "marbleAutocompleteDUC",
+    "issued": { "date-parts": [[2020, 12, 15]] },
+    "language": "en",
+    "title": "RxJS autocomplete marble : distinctUntilChanged",
+    "type": "graphic"
+  },
+  {
+    "id": "marbleAutocompleteFilter",
+    "archive_location": "/graphs/images/marbles/filter.png (source: /graphs/rxjs/filter.marble)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "marbleAutocompleteFilter",
+    "issued": { "date-parts": [[2020, 12, 15]] },
+    "language": "en",
+    "title": "RxJS autocomplete marble : filter",
+    "type": "graphic"
+  },
+  {
+    "id": "marbleAutocompleteMap",
+    "archive_location": "/graphs/images/marbles/map.png (source: /graphs/rxjs/map.marble)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "marbleAutocompleteMap",
+    "issued": { "date-parts": [[2020, 12, 15]] },
+    "language": "en",
+    "title": "RxJS autocomplete marble : map",
+    "type": "graphic"
+  },
+  {
+    "id": "marbleAutocompleteTap",
+    "archive_location": "/graphs/images/marbles/tap.png (source: /graphs/rxjs/tap.marble)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "marbleAutocompleteTap",
+    "issued": { "date-parts": [[2020, 12, 15]] },
+    "language": "en",
+    "title": "RxJS autocomplete marble : tap",
+    "type": "graphic"
+  },
+  {
+    "id": "marbleRxJSFromEvent",
+    "accessed": { "date-parts": [[2020, 12, 15]] },
+    "archive_location": "/images/third-party/rxjs/fromEvent.png",
+    "citation-label": "marbleRxJSFromEvent",
+    "language": "en",
+    "medium": "Apache License, Version 2.0 - Copyright (c) 2015-2018 Google, Inc., Netflix, Inc., Microsoft Corp. and contributors",
+    "title": "RxJS-docs marble : fromEvent",
+    "type": "graphic",
+    "URL": "https://github.com/ReactiveX/rxjs/blob/8c13e0a3dbd88cc473677cd41c9f09cc26a3d947/docs_app/assets/images/marble-diagrams/fromEvent.png"
+  },
+  {
+    "id": "marbleRxJSSwitchMap",
+    "accessed": { "date-parts": [[2020, 12, 15]] },
+    "archive_location": "/images/third-party/rxjs/switchMap.png",
+    "citation-label": "marbleRxJSSwitchMap",
+    "language": "en",
+    "medium": "Apache License, Version 2.0 - Copyright (c) 2015-2018 Google, Inc., Netflix, Inc., Microsoft Corp. and contributors",
+    "title": "RxJS-docs marble : switchMap",
+    "type": "graphic",
+    "URL": "https://github.com/ReactiveX/rxjs/blob/8c13e0a3dbd88cc473677cd41c9f09cc26a3d947/docs_app/assets/images/marble-diagrams/switchMap.png"
   },
   {
     "id": "mdnGraphShadowDom",
@@ -703,6 +793,24 @@
     "URL": "https://www.jwz.org/photos/1994-1999-nscp/1304.html"
   },
   {
+    "id": "plotBM_mean_all",
+    "archive_location": "/plots/benchmarks/all/mean-all-libs.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_mean_all",
+    "issued": { "date-parts": [[2020, 12, 22]] },
+    "title": "Rendering benchmark: mean (all libraries)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_mean_dom-libs",
+    "archive_location": "/plots/benchmarks/all/mean-dom-libs.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_mean_dom-libs",
+    "issued": { "date-parts": [[2020, 12, 21]] },
+    "title": "Rendering benchmark: mean (RE:DOM & JQuery)",
+    "type": "graphic"
+  },
+  {
     "id": "plotBM_mean_libs",
     "accessed": { "date-parts": [[2020, 11, 23]] },
     "archive_location": "/plots/benchmarks/all/mean-libs.png (source .gnuplot)",
@@ -711,6 +819,33 @@
     "issued": { "date-parts": [[2020, 12, 7]] },
     "language": "fr",
     "title": "Rendering benchmark :  moyenne (Bibliothèques)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_mean_libs-hs",
+    "archive_location": "/plots/benchmarks/all/mean-hyperscript.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_mean_libs-hs",
+    "issued": { "date-parts": [[2020, 12, 21]] },
+    "title": "Rendering benchmark: mean (RE:DOM, Sinuous, Ivi & Hyperapp)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_mean_libs-jsx",
+    "archive_location": "/plots/benchmarks/all/mean-libs-jsx.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_mean_libs-jsx",
+    "issued": { "date-parts": [[2020, 12, 30]] },
+    "title": "Rendering benchmark: mean (JSX libraries)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_mean_tag",
+    "archive_location": "/plots/benchmarks/all/mean-tag.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_mean_tag",
+    "issued": { "date-parts": [[2020, 12, 22]] },
+    "title": "Rendering benchmark: mean (Tagged Templates libraries)",
     "type": "graphic"
   },
   {
@@ -810,6 +945,51 @@
     "issued": { "date-parts": [[2020, 12, 6]] },
     "language": "fr",
     "title": "Rendering benchmark :  create (pseudo-composant avec Template String)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_rows_jquery",
+    "archive_location": "/plots/benchmarks/create-rows/jquery.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_rows_jquery",
+    "issued": { "date-parts": [[2020, 12, 21]] },
+    "title": "Rendering benchmark: create (JQuery)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_rows_jquery-all",
+    "archive_location": "/plots/benchmarks/create-rows/jquery-all.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_rows_jquery-all",
+    "issued": { "date-parts": [[2020, 12, 21]] },
+    "title": "Rendering benchmark: create (JQuery & alt)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_rows_libs-hs",
+    "archive_location": "/plots/benchmarks/create-rows/libs-hyperscript.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_rows_libs-hs",
+    "issued": { "date-parts": [[2020, 12, 21]] },
+    "title": "Rendering benchmark: create (RE:DOM, Sinuous, Ivi & Hyperapp)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_rows_libs-jsx",
+    "archive_location": "/plots/benchmarks/create-rows/libs-jsx.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_rows_libs-jsx",
+    "issued": { "date-parts": [[2020, 12, 30]] },
+    "title": "Rendering benchmark: create (JSX Libraries)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_rows_libs-tag",
+    "archive_location": "/plots/benchmarks/create-rows/libs-tag.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_rows_libs-tag",
+    "issued": { "date-parts": [[2020, 12, 22]] },
+    "title": "Rendering benchmark: create (Tagged Template libraries)",
     "type": "graphic"
   },
   {
@@ -923,6 +1103,28 @@
     "type": "graphic"
   },
   {
+    "id": "plotBM_update_libs-jsx",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/update/libs-jsx.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_update_libs-jsx",
+    "issued": { "date-parts": [[2020, 12, 30]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  update (JSX Libraries)",
+    "type": "graphic"
+  },
+  {
+    "id": "plotBM_update_libs-tag",
+    "accessed": { "date-parts": [[2020, 11, 23]] },
+    "archive_location": "/plots/benchmarks/update/libs-tag.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotBM_update_libs-tag",
+    "issued": { "date-parts": [[2020, 12, 27]] },
+    "language": "fr",
+    "title": "Rendering benchmark :  update (Template Tag Rendering Libraries)",
+    "type": "graphic"
+  },
+  {
     "id": "plotBM_update_query",
     "accessed": { "date-parts": [[2020, 11, 23]] },
     "archive_location": "/plots/benchmarks/update/no-mem_querySelector.png (source .gnuplot)",
@@ -956,6 +1158,42 @@
     "type": "graphic"
   },
   {
+    "id": "plotSizeHS",
+    "archive_location": "/plots/libs/libs-hyperscript.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotSizeHS",
+    "issued": { "date-parts": [[2020, 12, 21]] },
+    "title": "Graph de comparaison du poids de RE:DOM, Hyperapp, Sinuous & Ivi",
+    "type": "graphic"
+  },
+  {
+    "id": "plotSizeReactLike",
+    "archive_location": "/plots/libs/react-like.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotSizeReactLike",
+    "issued": { "date-parts": [[2020, 12, 30]] },
+    "title": "Graph de comparaison du poids des principales bibliothèques \"React-like\"",
+    "type": "graphic"
+  },
+  {
+    "id": "plotSizeRedomJQuery",
+    "archive_location": "/plots/libs/dom.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotSizeRedomJQuery",
+    "issued": { "date-parts": [[2020, 12, 21]] },
+    "title": "Graph de comparaison du poids de RE:DOM, JQuery, et ses alternatives",
+    "type": "graphic"
+  },
+  {
+    "id": "plotSizeTag",
+    "archive_location": "/plots/libs/tag.png (source .gnuplot)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "plotSizeTag",
+    "issued": { "date-parts": [[2020, 12, 22]] },
+    "title": "Graph de comparaison du poids des principales bibliothèques de rendering par Tagged Templates",
+    "type": "graphic"
+  },
+  {
     "id": "programma101",
     "abstract": "front view of an Olivetti-Underwood Programma 101 electronic programmable calculator, on display at w:The National Museum of Computing",
     "accessed": { "date-parts": [[2020, 9, 7]] },
@@ -969,6 +1207,19 @@
     "title-short": "Programma 101",
     "type": "graphic",
     "URL": "https://commons.wikimedia.org/wiki/File:Olivettiunderwood_programma101.jpg"
+  },
+  {
+    "id": "schemaDunningKrugerFR",
+    "accessed": { "date-parts": [[2020, 12, 13]] },
+    "archive_location": "/images/third-party/2019-06-19_effet_dunning_kruger.png",
+    "author": [{ "family": "Filips", "given": "Arjuna" }],
+    "citation-label": "schemaDunningKrugerFR",
+    "issued": { "date-parts": [[2019, 6, 19]] },
+    "medium": "CC BY-SA  4.0 International",
+    "source": "Wikimedia Commons",
+    "title": "Schéma représentant la courbe d'apprentissage d'une compétence par rapport à l'auto-évaluation dans cette compétence.",
+    "type": "graphic",
+    "URL": "https://commons.wikimedia.org/wiki/File:2019-06-19_effet_dunning_kruger.png"
   },
   {
     "id": "schemaUrlSPA",
@@ -1177,6 +1428,15 @@
     "type": "graphic"
   },
   {
+    "id": "umlHTMLEventObserver",
+    "archive_location": "/images/standards/UML-Observer-Event.png (source .dia)",
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "umlHTMLEventObserver",
+    "issued": { "date-parts": [[2020, 12, 14]] },
+    "title": "UML HTML Event - Observer Design Pattern",
+    "type": "graphic"
+  },
+  {
     "id": "umlHTMLHistory",
     "accessed": { "date-parts": [[2020, 11, 23]] },
     "archive_location": "/images/routage/UML-History.png (source .dia)",
@@ -1217,6 +1477,19 @@
     "issued": { "date-parts": [[2020, 11, 25]] },
     "title": "UML HTMLTemplateElement",
     "type": "graphic"
+  },
+  {
+    "id": "umlObserver",
+    "accessed": { "date-parts": [[2020, 12, 14]] },
+    "archive_location": "/images/third-party/Observer.png",
+    "author": [{ "literal": "WikiSolved" }],
+    "citation-label": "umlObserver",
+    "medium": "Public domain",
+    "source": "Wikimedia Commons",
+    "title": "A UML diagram of the observer pattern.",
+    "title-short": "English",
+    "type": "graphic",
+    "URL": "https://commons.wikimedia.org/wiki/File:Observer.svg"
   },
   {
     "id": "umlPerformanceObserver",
