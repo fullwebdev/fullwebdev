@@ -2,33 +2,33 @@
 title: "Code Samples"
 ---
 
-## Components
+## Component Based Software Engineering
 
 1. Intro
-   - [JQuery Plugin](components/jquery/slider.html)
+   - [JQuery Plugin](CBSE/jquery/slider.html)
 2. AngularJS
-   1. [v1.0 - directive](components/angularjs/directive/hello-world.html)
-   2. [v1.2 - controllerAs](components/angularjs/controller-as/hello-world.html)
-   3. [v1.3 - bindToController](components/angularjs/bindtocontroller/hello-world.html)
-   4. [v1.5+ - component helper](components/angularjs/component-helper/hello-world.html)
+   1. [v1.0 - directive](CBSE/angularjs/directive/hello-world.html)
+   2. [v1.2 - controllerAs](CBSE/angularjs/controller-as/hello-world.html)
+   3. [v1.3 - bindToController](CBSE/angularjs/bindtocontroller/hello-world.html)
+   4. [v1.5+ - component helper](CBSE/angularjs/component-helper/hello-world.html)
 3. React
    - without JSX
-     - [basics](components/react/hello-world.html)
-     - [composition](components/react/composition.html)
-     - [props](components/react/composition-props.html)
-   - [JSX](components/react/hello-jsx.html)
-   - [State](components/react/stateful.html)
-   - [Shared Hook](components/react/responsive-component/index.html)
+     - [basics](CBSE/react/hello-world.html)
+     - [composition](CBSE/react/composition.html)
+     - [props](CBSE/react/composition-props.html)
+   - [JSX](CBSE/react/hello-jsx.html)
+   - [State](CBSE/react/stateful.html)
+   - [Shared Hook](CBSE/react/responsive-component/index.html)
      (from
      [Dan Abramov](https://gist.github.com/gaearon/cb5add26336003ed8c0004c4ba820eae))
 4. Function-based
-   - [Hello World](components/function/hello-world.html)
-   - [Using Parameters](components/function/bad-update.html)
-     (bad practice)
-   - [Using Parameters](components/function/params.html)
-     (not pure)
-   - [With lit-html](components/function/with-lit-html.html)
-     (not pure)
+   - [Hello World](CBSE/function/hello-world.html)
+   - [Using Parameters](CBSE/function/bad-update.html) (bad
+     practice)
+   - [Using Parameters](CBSE/function/params.html) (not
+     pure)
+   - [With lit-html](CBSE/function/with-lit-html.html) (not
+     pure)
 
 ## Web Components
 
