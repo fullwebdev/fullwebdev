@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DPAWM - compléments ENI</title>
+    <link rel="stylesheet" href="_libs_/modern-normalize.min.css" />
+    <style>
+      body {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+      header {
+        text-align: center;
+        padding-top: 0.5rem;
+        border-bottom: 1px solid #e3e3e3;
+      }
+      .chapter h3 {
+        margin-left: 1rem;
+      }
+      .chapter h4 {
+        margin-left: 2rem;
+      }
+      .chapter h5 {
+        margin-left: 3rem;
+      }
+      .chapter * details {
+        margin-left: 3rem;
+      }
+      summary > * {
+        display: inline;
+      }
+      summary {
+        outline: none;
+      }
+      .title * {
+        margin: 0;
+      }
+      .title {
+        font-weight: bold;
+      }
+      .pretitle,
+      .subtitle {
+        font-size: large;
+      }
+
+      code {
+        background-color: #e3e3e3;
+        padding: 0.1rem 0.2rem;
+      }
+      .indent {
+        margin-left: 1rem;
+      }
+      .comment {
+        font-style: italic;
+      }
+
+      main {
+        text-align: justify;
+      }
+
+      .card {
+        background-color: #e3e3e3;
+        border-radius: 20px;
+        padding: 1rem;
+        margin: 2rem -1rem;
+      }
+
+      .fullwebdev__link {
+        font-size: large;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <p class="pretitle">Développement et architecture des</p>
+        <h1>Applications Web Modernes</h1>
+      </div>
+      <p class="subtitle">Retrouver les fondamentaux</p>
+    </header>
+    <main>
+      <section id="presentation">
+        <h2>Codes d'exemple</h2>
+        <p>
+          Vous retrouverez dans cette archives certains codes d'exemples issus
+          de mon livre
+          <a
+            href="https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523"
+            >"Développement et architecture des Applications Web Modernes"</a
+          >édité en 2021 aux éditions ENI.
+        </p>
+        <p>
+          Les mini-projet de démonstration sont présentés par chapitre dans la
+          liste ci-dessous. Cliquez sur le lien pour tester un projet dans votre
+          navigateur.
+        </p>
+        <p>
+          La liste complète de fichiers sources utilisés dans le livre est
+          donnée par ordre d'apparition. Cliquez sur la flèche à gauche du nom
+          de chaque mini-projet pour faire apparaître le chemin vers tous les
+          fichiers correspondants à partir du dossier
+          <code>src/</code>. Le hash tag en fin de chemin indique la région du
+          fichier (<code>#region &lt;clef&gt;</code>) présentée dans le livre.
+        </p>
+      </section>
+      <section id="fullwebdev" class="card">
+        <h2>Ressources en ligne</h2>
+        <p>
+          Cette archive ne contient qu'une part des codes d'exemples utilisés
+          dans le livre, certains pouvant être trop complexes ou volumineux.
+          Afin de rester précisément conforme au contenu imprimé, il ne recevra
+          pas ou peu de mises-à-jour.
+        </p>
+        <p>
+          Pour consulté l'ensemble du code versionné et régulièrement
+          mises-à-jour, ainsi que des contenus complémentaires, rendez-vous sur
+          <a href="https://fullweb.dev" class="fullwebdev__link">fullweb.dev</a
+          >.
+        </p>
+      </section>
+      <section id="ch3" class="chapter">
+        <details>
+          <summary
+            ><h2>Chapitre 3 : Adopter une approche par composants</h2></summary
+          >
+          <!--#region 3.1-->
+          <h3>3.1 - Introduction à la programmation par composant</h3>
+
+          <h4>3.1.5 - Limites initiales du développement Web</h4>
+          <details>
+            <summary>Simples examples</summary>
+            <ol>
+              <li>CBSE/introduction/prototype.js</li>
+              <li>CBSE/introduction/class.js</li>
+            </ol>
+          </details>
+          <!--#endregion 3.1-->
+          <!--#region 3.2-->
+          <h3>3.2 - Premières fondations pour le Web</h3>
+
+          <h4>3.2.1 - Plugins</h4>
+
+          <details>
+            <summary
+              ><a href="src/CBSE/jquery/slider.html"
+                >Plugin JQuery (slider)</a
+              ></summary
+            >
+            <ol>
+              <li>CBSE/jquery/slider-plugin.js#add-function</li>
+              <li>CBSE/jquery/slider.html#css</li>
+              <li>CBSE/jquery/slider.html#scripts</li>
+              <li>CBSE/jquery/slider.html#html</li>
+              <li>CBSE/jquery/slider.html#run</li>
+              <li>CBSE/jquery/result.html</li>
+            </ol>
+          </details>
+
+          <h4>3.2.3 - Cas d'étude : AngularJS</h4>
+
+          <details>
+            <summary
+              ><a href="src/CBSE/angularjs/directive/hello-world.html"
+                >v1.0 - directive</a
+              ></summary
+            >
+
+            <ol>
+              <li>CBSE/angularjs/directive/hello-world.html#input</li>
+              <li>CBSE/angularjs/directive/hello-world.html#rendering</li>
+              <li>CBSE/angularjs/directive/hello-world.js#directive</li>
+              <li>CBSE/angularjs/directive/hello-world.html#directive</li>
+              <li>CBSE/angularjs/directive/hello-world.js#template</li>
+            </ol>
+          </details>
+
+          <details>
+            <summary
+              ><a href="src/CBSE/angularjs/controller-as/hello-world.html"
+                >v1.2 - controllerAs</a
+              ></summary
+            >
+
+            <ol>
+              <li>CBSE/angularjs/controller-as/hello-world.js#controllerAs</li>
+              <li>CBSE/angularjs/controller-as/hello-world.js#scope</li>
+              <li>CBSE/angularjs/controller-as/hello-world.html#controller</li>
+              <li>CBSE/angularjs/controller-as/hello-world.js#controller</li>
+            </ol>
+          </details>
+
+          <details>
+            <summary
+              ><a href="src/CBSE/angularjs/bindtocontroller/hello-world.html"
+                >v1.3 - bindToController</a
+              ></summary
+            >
+
+            <ol>
+              <li>CBSE/angularjs/bindtocontroller/hello-world.js#directive</li>
+            </ol>
+          </details>
+
+          <details>
+            <summary
+              ><a href="src/CBSE/angularjs/component-helper/hello-world.html"
+                >v1.5+ - component helper</a
+              ></summary
+            >
+
+            <ol>
+              <li>CBSE/angularjs/component-helper/hello-world.js#component</li>
+            </ol>
+          </details>
+          <!--#endregion 3.2-->
+          <!--#region 3.3-->
+          <h3>3.3 - Liens avec une approche fonctionnelle</h3>
+
+          <h4>3.3.2 - Approche générale</h4>
+
+          <h5>React sans JSX</h5>
+
+          <div class="indent">
+            <details>
+              <summary
+                ><a href="src/CBSE/react/hello-world.html"
+                  >Hello World</a
+                ></summary
+              >
+              <ol>
+                <li>CBSE/react/hello-world.js#function</li>
+              </ol>
+            </details>
+
+            <details>
+              <summary
+                ><a href="src/CBSE/react/composition.html"
+                  >composition</a
+                ></summary
+              >
+              <ol>
+                <li>CBSE/react/composition.js#components</li>
+              </ol>
+            </details>
+
+            <details>
+              <summary
+                ><a href="src/CBSE/react/composition-props.html"
+                  >props</a
+                ></summary
+              >
+              <p class="comment">
+                Modifiez le projet pour tester tous les exemples
+              </p>
+
+              <ol>
+                <li>CBSE/react/composition-props.js#components</li>
+                <li>CBSE/react/composition-props.js#render</li>
+              </ol>
+            </details>
+          </div>
+
+          <h4>3.3.3 - Représenter HTML dans JavaScript</h4>
+
+          <h5>React avec JSX</h5>
+
+          <div class="indent">
+            <details>
+              <summary
+                ><a href="src/CBSE/react/hello-jsx.html"
+                  >Hello World</a
+                ></summary
+              >
+              <ol>
+                <li>CBSE/react/hello-jsx.jsx#component</li>
+                <li>CBSE/react/hello-jsx.jsx#rendering</li>
+                <li>CBSE/react/hello-jsx.js</li>
+              </ol>
+            </details>
+
+            <details>
+              <summary>Exemple de fonction non-pure</summary>
+              <ol>
+                <li>CBSE/react/composition-props.js#not-pure</li>
+              </ol>
+            </details>
+          </div>
+
+          <h4>3.3.4 - Le problème du rendering</h4>
+
+          <h5>fonction composant</h5>
+
+          <div class="indent">
+            <details>
+              <summary
+                ><a href="src/CBSE/function/hello-world.html"
+                  >Hello World</a
+                ></summary
+              >
+              <ol>
+                <li>CBSE/function/hello-world.js#render-fn</li>
+                <li>CBSE/function/hello-world.js#hello-world</li>
+                <li>CBSE/function/hello-world.js#render-hello-world</li>
+              </ol>
+            </details>
+
+            <details>
+              <summary
+                ><a href="src/CBSE/function/bad-update.html"
+                  >Mise à jour via des paramètres (mauvaise pratique)</a
+                ></summary
+              >
+              <ol>
+                <li>CBSE/function/components/Home.mjs#home</li>
+                <li>CBSE/function/components/SayHello.mjs#say-hello</li>
+                <li>CBSE/function/bad-update.mjs#render</li>
+                <li>CBSE/function/bad-update.mjs#update</li>
+              </ol>
+            </details>
+
+            <details>
+              <summary
+                ><a href="src/CBSE/function/params.html"
+                  >Mise à jour via des paramètres (non pure)</a
+                ></summary
+              >
+              <li>CBSE/function/params.mjs#update</li>
+            </details>
+
+            <details>
+              <summary
+                ><a href="src/CBSE/function/CBSE/function/with-lit-html.html"
+                  >Avec lit-html</a
+                ></summary
+              >
+              <ol>
+                <li>CBSE/function/with-lit-html.mjs#import</li>
+                <li>CBSE/function/with-lit-html.mjs#say-hello</li>
+                <li>CBSE/function/with-lit-html.mjs#home</li>
+                <li>CBSE/function/with-lit-html.mjs#render</li>
+              </ol>
+            </details>
+          </div>
+
+          <h4>3.3.5 - Le problème de la gestion d'état</h4>
+
+          <details>
+            <summary
+              ><a href="src/CBSE/react/composition-props.html"
+                >Composants React (props)</a
+              ></summary
+            >
+            <p class="comment">
+              Modifiez le projet pour tester tous les exemples
+            </p>
+            <ol>
+              <li>CBSE/react/composition-props.js#class</li>
+              <li>CBSE/react/composition-props.js#function</li>
+              <li>CBSE/react/composition-props.js#render-class</li>
+              <li>CBSE/react/hello-world-class-fn.js</li>
+            </ol>
+          </details>
+
+          <details>
+            <summary
+              ><a href="src/CBSE/react/stateful.html"
+                >Composant React Stateful</a
+              ></summary
+            >
+            <ol>
+              <li>CBSE/react/stateful-class.jsx#handle-click</li>
+              <li>CBSE/react/stateful-class.jsx#render</li>
+              <li>CBSE/react/stateful-class.jsx#dom-render</li>
+              <li>CBSE/react/stateful-class.jsx#constructor</li>
+              <li>CBSE/react/stateful-class.jsx#component</li>
+            </ol>
+          </details>
+
+          <h4>3.3.6 - Vers un langage fonctionnel ?</h4>
+
+          <details>
+            <summary
+              ><a href="src/CBSE/react/responsive-component/index.html"
+                >Hooks</a
+              ></summary
+            >
+            <p class="comment">
+              Inspiré d'une
+              <a
+                href="https://gist.github.com/gaearon/cb5add26336003ed8c0004c4ba820eae"
+                >démo créée par Dan Abramov</a
+              >
+            </p>
+            <ol>
+              <li>CBSE/react/stateful-hooks.jsx#component</li>
+              <li>CBSE/react/responsive-component/useWindowWidth.js</li>
+              <li>
+                CBSE/react/responsive-component/MyResponsiveComponent.jsx#component
+              </li>
+            </ol>
+          </details>
+          <!--#endregion 3.3-->
+          <!--#region 3.4-->
+          <h3>3.4 - Naissance d'un standard</h3>
+
+          <h4>3.4.1 - Prédécesseurs</h4>
+          <details>
+            <summary>JSF</summary>
+            <ol>
+              <li>CBSE/jsf/resources/fullwebdev/register.xhtml#html</li>
+              <li>CBSE/jsf/default.xhtml#html</li>
+            </ol>
+          </details>
+          <!--#endregion 3.4-->
+        </details>
+      </section>
+    </main>
+  </body>
+</html>
