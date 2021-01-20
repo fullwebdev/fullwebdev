@@ -3,8 +3,8 @@
   "version": "0.14.0",
   "private": true,
   "scripts": {
-    "start": "concurrently npm:watch:index npm:serve",
-    "serve": "es-dev-server --root-dir ./src --compatibility none",
+    "start": "es-dev-server --root-dir ./src --compatibility none",
+    "dev": "concurrently npm:watch:index npm:start",
     "test": "concurrently npm:test:jest npm:test:chai",
     "test:watch": "concurrently npm:test:watch:jest npm:test:watch:chai",
     "test:jest": "jest -c tests/config/jest.config.js",
