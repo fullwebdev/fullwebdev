@@ -2,3 +2,5 @@
 /coverage/
 /scripts/
 /.gitignore
+*.zip
+*.tgz
