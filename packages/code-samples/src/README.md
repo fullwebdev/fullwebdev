@@ -33,35 +33,35 @@ title: "Code Samples"
 ## Web Components
 
 1. Custom Elements
-   - [autonomous](components/custom-elements/autonomous/hello-world.html)
-   - [life cycle](components/custom-elements/life-cycle/index.html)
-     - [call constructor before define](components/custom-elements/life-cycle/before-define/index.html)
-     - [call constructor after define](components/custom-elements/life-cycle/after-define/index.html)
-     - [connectedCallback](components/custom-elements/life-cycle/connected/index.html)
-   - [customized built-in](components/custom-elements/customized-buit-in/hello-world.html)
-   - [conflict](components/custom-elements/conflict/conflict.html)
-   - [names validity](components/custom-elements/names/index.html)
-   - attributes and properties
-     - [basics](components/custom-elements/attrs-and-props/basics/index.html)
-     - [attribute](components/custom-elements/attrs-and-props/attribute/index.html)
+   - [autonomous](web-components/custom-elements/autonomous/hello-world.html)
+   - [life cycle](web-components/custom-elements/life-cycle/index.html)
+     - [call constructor before define](web-components/custom-elements/life-cycle/before-define/index.html)
+     - [call constructor after define](web-components/custom-elements/life-cycle/after-define/index.html)
+     - [connectedCallback](web-components/custom-elements/life-cycle/connected/index.html)
+   - [customized built-in](web-components/custom-elements/customized-built-in/hello-world.html)
+   - [conflict](web-components/custom-elements/conflict/conflict.html)
+   - [names validity](web-components/custom-elements/names/index.html)
 2. Shadow DOM
-   - [attach](components/shadow-dom/attach/index.html)
-   - [open vs. closed](components/shadow-dom/access/bases/index.html)
+   - [attach](web-components/shadow-dom/attach/index.html)
+   - [open vs. closed](web-components/shadow-dom/access/bases/index.html)
    - workaround to closed mode
-     - [using iife](components/shadow-dom/access/workaround/iife/index.html)
-     - [using a private field](components/shadow-dom/access/workaround/private-field/index.html)
+     - [using a private field](web-components/shadow-dom/access/workaround/private-field/index.html)
+     - [using a WeakMap](web-components/shadow-dom/access/workaround/weak/index.html)
    - style
-     - [host](components/shadow-dom/style/host/index.html)
-     - [shared style](components/shadow-dom/style/shared/index.html)
-     - [constructable stylesheet](components/shadow-dom/style/constructable/index.html)
-     - [context](components/shadow-dom/style/context/index.html)
-     - [CSS Custom Properties](components/shadow-dom/style/custom-props/index.html)
+     - [shared style](web-components/shadow-dom/style/shared/index.html)
+     - [constructable stylesheet](web-components/shadow-dom/style/constructable/index.html)
+     - [host](web-components/shadow-dom/style/host/index.html)
+     - [context](web-components/shadow-dom/style/context/index.html)
+     - [CSS Custom Properties](web-components/shadow-dom/style/custom-props/index.html)
 3. Template
-   - [basics](components/template/basics/index.html)
-   - [programmatic](components/template/prog/index.html)
+   - [basics](web-components/template/basics/index.html)
+   - [programmatic](web-components/template/prog/index.html)
 4. Composition
-   - [basics](components/slot/basics/index.html)
-   - [named slots](components/slot/named/index.html)
+   - [basics](web-components/slot/basics/index.html)
+   - [named slots](web-components/slot/named/index.html)
+5. attributes and properties
+   - [basics](web-components/custom-elements/attrs-and-props/basics/index.html)
+   - [attribute](web-components/custom-elements/attrs-and-props/attribute/index.html)
 
 ## Routing
 
