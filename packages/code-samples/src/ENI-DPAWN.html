@@ -2,11 +2,124 @@
 <html>
   <head>
     <title>DPAWM - compléments ENI</title>
-    <link
-      rel="stylesheet"
-      href="_libs_/modern-normalize.min.css"
-    />
     <style>
+      /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      :root {
+        -moz-tab-size: 4;
+        tab-size: 4;
+      }
+      html {
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+      }
+      body {
+        font-family: system-ui, -apple-system, "Segoe UI",
+          Roboto, Helvetica, Arial, sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji";
+      }
+      hr {
+        height: 0;
+        color: inherit;
+      }
+      abbr[title] {
+        text-decoration: underline dotted;
+      }
+      b,
+      strong {
+        font-weight: bolder;
+      }
+      code,
+      kbd,
+      pre,
+      samp {
+        font-family: ui-monospace, SFMono-Regular, Consolas,
+          "Liberation Mono", Menlo, monospace;
+        font-size: 1em;
+      }
+      small {
+        font-size: 80%;
+      }
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+      sub {
+        bottom: -0.25em;
+      }
+      sup {
+        top: -0.5em;
+      }
+      table {
+        text-indent: 0;
+        border-color: inherit;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      [type="button"],
+      [type="reset"],
+      [type="submit"],
+      button {
+        -webkit-appearance: button;
+      }
+      ::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+      }
+      :-moz-focusring {
+        outline: 1px dotted ButtonText;
+      }
+      :-moz-ui-invalid {
+        box-shadow: none;
+      }
+      legend {
+        padding: 0;
+      }
+      progress {
+        vertical-align: baseline;
+      }
+      ::-webkit-inner-spin-button,
+      ::-webkit-outer-spin-button {
+        height: auto;
+      }
+      [type="search"] {
+        -webkit-appearance: textfield;
+        outline-offset: -2px;
+      }
+      ::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit;
+      }
+      summary {
+        display: list-item;
+      }
+
+      /** document **/
       body {
         max-width: 1200px;
         margin: 0 auto;
@@ -59,6 +172,9 @@
       .comment {
         font-style: italic;
       }
+      .important {
+        font-weight: bold;
+      }
 
       main {
         text-align: justify;
@@ -74,6 +190,23 @@
       .fullwebdev__link {
         font-size: large;
         font-weight: bold;
+      }
+
+      footer {
+        background-color: #e3e3e3;
+        padding: 1rem;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        border-top: solid black 1px;
+        border-top-left-radius: 10px;
+        border-left: solid black 1px;
+      }
+
+      nav > * {
+        text-decoration: none;
+        padding: 0 0.5rem;
+        margin: 0 0.2rem;
       }
     </style>
   </head>
@@ -92,48 +225,49 @@
         <h2>Codes d'exemple</h2>
         <p>
           Vous retrouverez dans cette archives certains
-          codes d'exemples issus de mon livre
+          codes d'exemple issus de mon livre
           <a
             href="https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523"
             >"Développement et architecture des Applications
             Web Modernes"</a
-          >édité en 2021 aux éditions ENI.
+          >
+          édité en 2021 aux éditions ENI.
         </p>
         <p>
-          Les mini-projet de démonstration sont présentés
+          Les mini-projets de démonstration sont présentés
           par chapitre dans la liste ci-dessous. Cliquez sur
           le lien pour tester un projet dans votre
           navigateur.
         </p>
         <p>
-          La liste complète de fichiers sources utilisés
-          dans le livre est donnée par ordre d'apparition.
+          La liste complète de fichiers source utilisés dans
+          le livre est donnée par ordre d'apparition.
           Cliquez sur la flèche à gauche du nom de chaque
           mini-projet pour faire apparaître le chemin vers
-          tous les fichiers correspondants à partir du
-          dossier
-          <code>src/</code>. Le hash tag en fin de chemin
-          indique la région du fichier (<code
-            >#region &lt;clef&gt;</code
-          >) présentée dans le livre.
+          tous les fichiers (partant du dossier
+          <code>src/</code>). Le hash tag en fin de chemin
+          indique la région du fichier présentée dans le
+          livre (<code>#region &lt;clef&gt;</code>).
         </p>
       </section>
       <section id="fullwebdev" class="card">
         <h2>Ressources en ligne</h2>
         <p>
-          Cette archive ne contient qu'une part des codes
-          d'exemples utilisés dans le livre, certains
-          pouvant être trop complexes ou volumineux. Afin de
-          rester précisément conforme au contenu imprimé, il
-          ne recevra pas ou peu de mises-à-jour.
+          Cette archive ne contient qu'une partie des codes
+          d'exemple utilisés dans le livre, certains pouvant
+          être trop complexes ou volumineux. Par ailleurs,
+          ceux-ci ne recevront pas ou peu de mises-à-jour,
+          afin de rester précisément conformes au contenu
+          imprimé,
         </p>
         <p>
-          Pour consulté l'ensemble du code versionné et
+          Pour consulter l'ensemble du code, versionné et
           régulièrement mises-à-jour, ainsi que des contenus
           complémentaires, rendez-vous sur
           <a
             href="https://fullweb.dev"
             class="fullwebdev__link"
+            class="important"
             >fullweb.dev</a
           >.
         </p>
@@ -2537,6 +2671,412 @@ el/index.js"
           <!--#endregion 6.7-->
         </details>
       </section>
+      <section id="ch7" class="chapter">
+        <details>
+          <summary>
+            <h2>Chapitre 7 : Utiliser les bons outils</h2>
+          </summary>
+          <!--#region 7.2-->
+          <h3>7.1 - Vanilla Web et micro-bibliothèques</h3>
+
+          <!-- <h4>7.1.1 - Du Vanilla JS au Modern Web</h4> -->
+          <!-- <h3>7.2 - Poids et complexité</h3>
+  <li>(embarqué) js</li>
+  <li>(embarqué) js</li> -->
+          <!-- <h4>7.2.1 - Temporalité, communauté et maintenance</h4> -->
+          <!-- <h4>7.2.2 - Quand et pourquoi utiliser des micro-bibliothèques</h4> -->
+
+          <h4>
+            7.2.3 - Se contenter d'une aide à la
+            manipulation du DOM ?
+          </h4>
+
+          <details>
+            <summary>Benchmark : jquery</summary>
+            <ol>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/jquery/src/index.js"
+                  >frameworks/keyed/jquery/src/index.js</a
+                >#create-row
+              </li>
+            </ol>
+          </details>
+
+          <!-- <h4>7.2.4 - La réalité du "Vanilla"</h4> -->
+          <h4>7.2.5 - RE:DOM</h4>
+
+          <details>
+            <summary>
+              <a href="minimal-spa/redom/index.html"
+                >RE:DOM (minimal-spa)</a
+              >
+            </summary>
+            <ol>
+              <li>(embarqué) js</li>
+              <li>minimal-spa/redom/views/home.js#Home</li>
+              <li>minimal-spa/redom/views/post.js#Post</li>
+              <li>
+                minimal-spa/redom/views/not-found.js#NotFound
+              </li>
+              <li>minimal-spa/redom/router.js#router</li>
+              <li>minimal-spa/redom/router.js#navigate</li>
+              <li>(embarqué) js</li>
+              <li>
+                minimal-spa/redom/components/menu.js#Menu
+              </li>
+              <li>
+                minimal-spa/redom/components/app.js#App
+              </li>
+              <li>minimal-spa/redom/main.js#mount</li>
+            </ol>
+          </details>
+
+          <!-- <h4>7.2.6 - Conclusion</h4> -->
+          <!--#endregion 7.2-->
+          <!--#region 7.3-->
+          <h3>7.3 - Bibliothèques de rendering</h3>
+          <h4>
+            7.3.1 - Principe des étiquettes de gabarits
+          </h4>
+
+          <details>
+            <summary>
+              <a href="rendering/tagged-template/index.html"
+                >Introduction aux tagged templates</a
+              >
+            </summary>
+            <ol>
+              <li>(embarqué) js</li>
+              <li>(embarqué) js</li>
+              <li>(embarqué) js</li>
+              <li>
+                rendering/tagged-template/index.js#tag
+              </li>
+              <li>
+                rendering/tagged-template/index.js#create
+              </li>
+            </ol>
+          </details>
+
+          <!-- <h4>7.3.2 - Bibliothèques de rendering via étiquettes de gabarits</h4>
+  <h4>7.3.3 - Naissance et évolutions de lit-html</h4>
+  <h4>7.3.4 - Fonctionnement</h4>
+  <li>(embarqué) js</li>
+  <li>(embarqué) js</li>
+  <li>(embarqué) json</li>
+  <li>(embarqué) json</li>
+  <li>(embarqué) js</li>
+  <li>(embarqué) js</li> -->
+
+          <h4>7.3.5 - Exemple d'application</h4>
+
+          <details>
+            <summary>
+              Benchmark : lit-html
+            </summary>
+            <ol>
+              <li>(embarqué) typescript</li>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/lit-html-for-doc/src/index.js"
+                  >frameworks/keyed/lit-html-for-doc/src/index.js</a
+                >#row-template
+              </li>
+              <li>(embarqué) js</li>
+              <li>(embarqué) js</li>
+              <li>(embarqué) js</li>
+              <li>(embarqué) js</li>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/lit-html-for-doc/src/index.js"
+                  >frameworks/keyed/lit-html-for-doc/src/index.js</a
+                >#render
+              </li>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/lit-html-for-doc/src/index.js"
+                  >frameworks/keyed/lit-html-for-doc/src/index.js</a
+                >#update
+              </li>
+            </ol>
+          </details>
+
+          <!-- <h4>7.3.6 - Directives</h4>
+  <li>(embarqué) js</li>
+  <li>(embarqué) js</li>
+  <h4>7.3.7 - JSX face aux littéraux de gabarits</h4>
+  <li>(embarqué) js</li>
+  <li>(embarqué) js</li>
+  <li>(embarqué) js</li>
+  <li>(embarqué) js</li>
+  <li>(embarqué) js</li>
+  <li>(embarqué) js</li>
+  <li>(embarqué) jsx</li>
+  <li>(embarqué) js</li>
+  <li>(embarqué) jsx</li>
+  <h4>7.3.8 - React, une bibliothèque de rendering ?</h4> -->
+          <!--#endregion 7.3-->
+          <!--#region 7.4-->
+          <h3>
+            7.4 - Modularité et programmation orientée
+            composants
+          </h3>
+          <!-- <li>(embarqué) js</li> -->
+
+          <h4>7.4.1 - Principes de lit-element</h4>
+
+          <details>
+            <summary>
+              <a href="components/lit-element/index.html"
+                >Hello World (lit-element)</a
+              >
+            </summary>
+            <ol>
+              <li>(embarqué) js</li>
+              <li>
+                components/lit-element/helloworld.js#component
+              </li>
+              <li>
+                components/lit-element/async-helloworld.js#render
+              </li>
+              <li>
+                components/lit-element/async-helloworld.js#properties
+              </li>
+              <li>
+                components/lit-element/async-helloworld.js#constructor
+              </li>
+              <li>
+                components/lit-element/async-helloworld.js#styles
+              </li>
+            </ol>
+          </details>
+
+          <!-- <h4>7.4.2 - Démarrer un projet avec lit-element</h4>
+  <li>(embarqué) js</li>
+  <li>(embarqué) js</li>
+  <li>(embarqué) js</li>
+  <li>(embarqué) html</li>
+  <li>(embarqué) js</li> -->
+
+          <!-- <h4>7.4.3 - Web Components par compilation avec Stencil</h4>
+  <li>(embarqué) tsx</li>
+  <li>(embarqué) js</li> -->
+          <!--#endregion 7.4-->
+          <!--#region 7.5-->
+          <h3>7.5 - Programmation réactive</h3>
+
+          <!-- <h4>7.5.1 - Principe</h4>
+  <li>(embarqué) js</li>
+  <li>(embarqué) js</li> -->
+
+          <!-- <h4>7.5.2 - RxJS</h4> -->
+
+          <details>
+            <summary>
+              <a href="reactive/rxjs/complete/index.html"
+                >RxJS</a
+              >
+            </summary>
+
+            <h4>7.5.3 - Observable et opérateurs</h4>
+            <ol>
+              <li>
+                reactive/rxjs/complete/index.js#observable
+              </li>
+              <li>(embarqué) js</li>
+              <li>(embarqué) text</li>
+              <li>reactive/rxjs/complete/index.js#map</li>
+              <li>
+                reactive/rxjs/complete/index.js#filter
+              </li>
+              <li>
+                reactive/rxjs/complete/index.js#distinctUntilChanged
+              </li>
+              <li>
+                reactive/rxjs/complete/index.js#debounceTime
+              </li>
+              <li>reactive/rxjs/complete/index.js#tap</li>
+            </ol>
+
+            <h4>7.5.4 - Combiner des observables</h4>
+
+            <ol>
+              <li>(embarqué) js</li>
+              <li>
+                reactive/rxjs/complete/index.js#fromFetch
+              </li>
+              <li>
+                reactive/rxjs/complete/index.js#switchMap
+              </li>
+            </ol>
+          </details>
+
+          <h4>7.5.5 - Hot & Cold Observables</h4>
+
+          <details>
+            <summary
+              ><a
+                href="reactive/rxjs/complete/cold/index.html"
+                >Cold Observable</a
+              ></summary
+            >
+            <ol>
+              <li>
+                reactive/rxjs/complete/cold/index.js#observable
+              </li>
+              <li>
+                reactive/rxjs/complete/index.js#subscription
+              </li>
+              <li>
+                reactive/rxjs/complete/index.js#console
+              </li>
+            </ol>
+          </details>
+
+          <h4>7.5.6 - Alternatives</h4>
+
+          <details>
+            <summary>
+              <a href="reactive/baconjs/index.html"
+                >Bacon.js</a
+              >
+            </summary>
+            <ol>
+              <li>reactive/baconjs/index.js#bacon</li>
+            </ol>
+          </details>
+
+          <!-- <h4>7.5.7 - Utilité</h4> -->
+          <!--#endregion 7.5-->
+          <!--#region 7.6-->
+          <h3>7.6 - Gestion d'état</h3>
+
+          <h4>
+            7.6.1 - Conteneur d'état & programmation
+            réactive
+          </h4>
+
+          <details>
+            <summary>
+              <a
+                href="reactive/redux/simple-counter/index.html"
+                >Redux : compteur simple</a
+              >
+            </summary>
+            <ol>
+              <li>
+                reactive/redux/simple-counter/store.js
+              </li>
+              <li>
+                reactive/redux/simple-counter/redux-counter.js#component
+              </li>
+            </ol>
+          </details>
+
+          <h4>7.6.2 - Maintenabilité & réutilisabilité</h4>
+
+          <details>
+            <summary>
+              <a
+                href="reactive/redux/wrapped-counter/index.html"
+                >Redux : composant wrapper</a
+              >
+            </summary>
+            <ol>
+              <li>
+                reactive/redux/wrapped-counter/demo-counter.js#component
+              </li>
+              <li>
+                reactive/redux/wrapped-counter/demo-nav.js#component
+              </li>
+              <li>(embarqué) js</li>
+              <li>(embarqué) js</li>
+              <li>
+                reactive/redux/wrapped-counter/redux-wrapper.js#bindParam
+              </li>
+              <li>
+                reactive/redux/wrapped-counter/redux-wrapper.js#subscribe
+              </li>
+              <li>(embarqué) js</li>
+              <li>
+                reactive/redux/wrapped-counter/index.html#props
+              </li>
+              <li>
+                reactive/redux/wrapped-counter/redux-wrapper.js#actionsParam
+              </li>
+              <li>
+                reactive/redux/wrapped-counter/redux-wrapper.js#dispatch
+              </li>
+              <li>
+                reactive/redux/wrapped-counter/index.html#actions
+              </li>
+            </ol>
+          </details>
+
+          <p>
+            Bonus:
+            <a href="reactive/redux/good-counter/index.html"
+              >Redux : exemple plus réaliste</a
+            >
+          </p>
+          <!--#endregion 7.6-->
+          <!--#region 7.7-->
+          <h3>7.7 - Routeurs</h3>
+
+          <h4>7.7.1 - Page.js</h4>
+
+          <details>
+            <summary>
+              <a href="minimal-spa/8-pagejs/index.html"
+                >minimal-spa avec Page.js</a
+              >
+            </summary>
+            <ol>
+              <li>minimal-spa/8-pagejs/index.js#routes</li>
+              <li>minimal-spa/8-pagejs/index.js#config</li>
+              <li>minimal-spa/8-pagejs/index.html#link</li>
+            </ol>
+          </details>
+
+          <h4>7.7.2 - Universal-router</h4>
+
+          <details>
+            <summary>
+              <a
+                href="minimal-spa/9-universal-router/index.html"
+                >minimal-spa avec Universal-router</a
+              >
+            </summary>
+            <ol>
+              <li>
+                minimal-spa/9-universal-router/index.js#routes
+              </li>
+              <li>
+                minimal-spa/9-universal-router/index.js#resolve
+              </li>
+              <li>
+                minimal-spa/9-universal-router/index.js#navigate
+              </li>
+            </ol>
+          </details>
+          <!--#endregion 7.7-->
+        </details>
+      </section>
     </main>
+    <footer>
+      <nav>
+        &uarr;
+        <a href="#ch3">3</a>
+        <a href="#ch4">4</a>
+        <a href="#ch5">5</a>
+        <a href="#ch6">6</a>
+        <a href="#ch7">7</a>
+      </nav>
+    </footer>
   </body>
 </html>
