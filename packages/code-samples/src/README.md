@@ -2,6 +2,11 @@
 title: "Code Samples"
 ---
 
+> Une [page d'accueil en français](./ENI-DPAWN.html),
+> suivant le déroulement du livre
+> "[Développement et architecture des Applications Web Modernes](https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523)"
+> publié par les éditions ENI, est également disponible.
+
 ## Component Based Software Engineering
 
 1. Intro

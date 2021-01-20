@@ -8,6 +8,12 @@ See [`src`](src/README.md) for the list of examples.
 
 ## Scripts
 
+### Start
+
+`npm start`
+
+Then open [`localhost:8000`](http://localhost:8000) in your web browser.
+
 ### Test
 
 `npm run test`
@@ -15,9 +21,3 @@ See [`src`](src/README.md) for the list of examples.
 ### E2E Tests
 
 `npm run e2e:jest`
-
-### Start
-
-`npm start`
-
-Then open [`localhost:8000`](http://localhost:8000) in your web browser.
