@@ -3,7 +3,7 @@
   "version": "0.14.0",
   "private": true,
   "scripts": {
-    "start": "es-dev-server --root-dir ./src --compatibility none",
+    "start": "web-dev-server --root-dir ./src --compatibility none",
     "dev": "concurrently npm:watch:index npm:start",
     "test": "concurrently npm:test:jest npm:test:chai",
     "test:watch": "concurrently npm:test:watch:jest npm:test:watch:chai",
@@ -14,10 +14,25 @@
     "e2e:jest": "jest -c tests/config/jest-puppeteer.config.js",
     "e2e:watch:jest": "jest -c tests/config/jest-puppeteer.config.js --watch",
     "build:index": "bash scripts/readme.sh",
-    "watch:index": "bash scripts/readme.sh --watch"
+    "watch:index": "bash scripts/readme.sh --watch",
+    "postpack": "tar2zip *.tgz"
   },
-  "author": "Noël Macé <contact@noelmace.com>",
+  "author": {
+    "name": "Noël Macé",
+    "email": "contact@noelmace.com",
+    "url": "https://noelmace.com"
+  },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullwebdev/fullwebdev.git",
+    "directory": "packages/code-samples"
+  },
+  "homepage": "https://fullweb.dev",
+  "bugs": {
+    "url": "https://github.com/fullwebdev/fullwebdev/issues",
+    "email": "contact@noelmace.com"
+  },
   "devDependencies": {
     "@open-wc/testing": "^2.5.16",
     "@open-wc/testing-karma": "^3.3.28",
@@ -26,19 +41,20 @@
     "@types/jest-environment-puppeteer": "^4.3.1",
     "@types/puppeteer": "^3.0.0",
     "@types/sinon-chai": "^3.2.4",
+    "@web/dev-server": "^0.1.5",
     "babel-core": "^6.26.3",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "concurrently": "^5.2.0",
     "deepmerge": "^4.2.2",
     "document-register-element": "^1.14.3",
-    "es-dev-server": "^1.50.6",
     "jest": "^26.0.1",
     "jest-environment-jsdom-sixteen": "^1.0.3",
     "jest-puppeteer": "^4.4.0",
     "lit-html": "^1.2.1",
     "puppeteer": "^3.1.0",
     "sinon": "^9.0.2",
-    "sinon-chai": "^3.5.0"
+    "sinon-chai": "^3.5.0",
+    "tar-to-zip": "^3.0.0"
   }
 }
