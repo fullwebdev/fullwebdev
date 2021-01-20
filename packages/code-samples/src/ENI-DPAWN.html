@@ -1792,6 +1792,751 @@
           <!--#endregion 5.6-->
         </details>
       </section>
+      <section id="ch6" class="chapter">
+        <details>
+          <summary>
+            <h2>
+              Chapitre 6 : Afficher des données
+              dynamiquement
+            </h2>
+          </summary>
+
+          <p>
+            De nombreux exemples utilisés dans ce chapitre
+            sont issus des projets
+            <a
+              href="https://github.com/fullwebdev/benchmark"
+              >"Benchmark"</a
+            >
+            et
+            <a
+              href="https://github.com/fullwebdev/fullwebdev/tree/eni-dpawm/packages/helpers"
+              >modern-helpers</a
+            >, et ne sont donc pas disponibles dans cette
+            archive. Vous pourrez cependant les retrouver en
+            suivant le lien affiché (release "ENI-DPAWM").
+          </p>
+
+          <!--#region 6.1-->
+          <h3>6.1 - Optimiser le chargement initial</h3>
+
+          <h4>
+            6.1.3 - Audit des performances du chargement
+            initial
+          </h4>
+
+          <details>
+            <summary>
+              <a href="rendering/performance-api/index.html"
+                >Performance API</a
+              >
+            </summary>
+            <ol>
+              <li>
+                rendering/performance-api/observer.js#observer
+              </li>
+              <li>
+                rendering/performance-api/observer.js#callback
+              </li>
+            </ol>
+          </details>
+
+          <!-- <h4>6.1.6 - Accélérer l'affichage d'un texte</h4>
+
+          <ol>
+            <li>(embarqué) css</li>
+          </ol>
+
+          <h4>6.1.7 - Ne charger que les styles utiles</h4>
+
+          <ol>
+            <li>(embarqué) css</li>
+            <li>(embarqué) html</li>
+            <li>(embarqué) html</li>
+          </ol> -->
+          <!--#endregion 6.1-->
+          <!--#region 6.2-->
+          <h3>6.2 - Comparer différentes approches</h3>
+
+          <details>
+            <summary>
+              <a
+                href="rendering/limitations/dom-api/heavy-rendering/index.html"
+                >Freeze</a
+              >
+            </summary>
+            <ol>
+              <li>(embarqué) js</li>
+              <li>
+                rendering/limitations/dom-api/heavy-rendering/create-content.js#render
+              </li>
+            </ol>
+          </details>
+
+          <h4>6.2.2 - Implémentation</h4>
+
+          <details>
+            <summary>
+              Benchmark : vanillajs-create-el
+            </summary>
+            <ol>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/vanillajs-create-el-for-doc/index.html"
+                  >frameworks/keyed/vanillajs-create-el-for-doc/index.html</a
+                >#table
+              </li>
+              <li>(embarqué) html</li>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/vanillajs-create-el-for-doc/index.html"
+                  >frameworks/keyed/vanillajs-create-el-for-doc/index.html</a
+                >#jumbotron
+              </li>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/vanillajs-create-el-for-doc/src/Main.js"
+                  >frameworks/keyed/vanillajs-create-el-for-doc/src/Main.js</a
+                >#main-constructor
+              </li>
+            </ol>
+          </details>
+          <!--#endregion 6.2-->
+          <!--#region 6.3-->
+          <!-- <h3>6.3 - Bien utiliser la DOM API</h3>
+          <ol>
+            <li>(embarqué) js</li>
+          </ol> -->
+
+          <h4>6.3.1 - Créer un ensemble d'éléments</h4>
+
+          <details>
+            <summary
+              >Benchmark : vanillajs-create-el</summary
+            >
+            <p>
+              <a
+                href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/vanillajs-create-el/src/Main.js"
+                >frameworks/keyed/vanillajs-create-el/src/Main.js</a
+              >#create-row
+            </p>
+          </details>
+
+          <h4>6.3.2 - Mise à jour</h4>
+
+          <details>
+            <summary>
+              Benchmark : vanillajs-no-mem-query
+            </summary>
+            <ol>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/vanillajs-no-mem-query/src/Main.js"
+                  >frameworks/keyed/vanillajs-no-mem-query/src/Main.js</a
+                >#update
+              </li>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/vanillajs-no-mem/src/Main.js"
+                  >frameworks/keyed/vanillajs-no-mem/src/Main.js</a
+                >#update
+              </li>
+            </ol>
+          </details>
+          <!--#endregion 6.3-->
+          <!--#region 6.4-->
+          <h3>6.4 - Littéraux de gabarits & innerHTML</h3>
+
+          <details>
+            <summary>
+              <a
+                href="rendering/create-element/innerHTML/very-bad"
+                >mauvaise pratique</a
+              >
+            </summary>
+            <ol>
+              <li>
+                rendering/create-element/innerHTML/very-bad/create-elements.js
+              </li>
+            </ol>
+          </details>
+
+          <h4>6.4.1 - Gestion des évènements</h4>
+
+          <details>
+            <summary>
+              <a
+                href="rendering/create-element/innerHTML/bad-handlers/index.html"
+                >conversion des handlers en chaînes de
+                caractères (mauvaise pratique)</a
+              >
+            </summary>
+            <ol>
+              <li>
+                rendering/create-element/innerHTML/bad-handlers/create-elements.js#render
+              </li>
+              <li>
+                rendering/create-element/innerHTML/bad-handlers/rendered.html
+              </li>
+              <li>
+                rendering/create-element/innerHTML/bad-handlers/create-elements.js#count
+              </li>
+            </ol>
+          </details>
+
+          <details>
+            <summary>
+              <a
+                href="rendering/create-element/innerHTML/handlers/local/index.html"
+                >handlers locaux</a
+              >
+            </summary>
+            <ol>
+              <li>
+                rendering/create-element/innerHTML/handlers/local/create-elements.js#component
+              </li>
+              <li>
+                rendering/create-element/innerHTML/handlers/local/create-elements.js#create
+              </li>
+            </ol>
+          </details>
+
+          <details>
+            <summary>
+              <a
+                href="rendering/create-element/innerHTML/handlers/global/index.html"
+                >handler global</a
+              >
+            </summary>
+            <ol>
+              <li>
+                rendering/create-element/innerHTML/handlers/global/create-elements.js#constructor
+              </li>
+            </ol>
+          </details>
+
+          <h4>6.4.2 - Mise à jour</h4>
+
+          <details>
+            <summary>
+              <a
+                href="rendering/create-element/innerHTML/handlers/local/index.html"
+                >bonnes pratiques</a
+              >
+            </summary>
+            <ol>
+              <li>
+                rendering/create-element/innerHTML/better/create-elements.js#render
+              </li>
+              <li>
+                rendering/create-element/innerHTML/better/create-elements.js#update
+              </li>
+              <li>
+                rendering/create-element/innerHTML/better/create-elements.js#actions
+              </li>
+            </ol>
+          </details>
+
+          <h4>6.4.3 - Performances générales</h4>
+
+          <details>
+            <summary>
+              Benchmark : vanillajs-innerhtml
+            </summary>
+            <ol>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/vanillajs-innerhtml/src/Main.js"
+                  >frameworks/keyed/vanillajs-innerhtml/src/Main.js</a
+                >#create-row
+              </li>
+              <li>(embarqué) js</li>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/vanillajs-innerhtml-no-mem/src/Main.js"
+                  >frameworks/keyed/vanillajs-innerhtml-no-mem/src/Main.js</a
+                >#update
+              </li>
+            </ol>
+          </details>
+          <!--#endregion 6.4-->
+          <!--#region 6.5-->
+          <h3>6.5 - HyperScript</h3>
+          <!-- <h4>6.5.2 - Principe</h4>
+          <ol>
+            <li>(embarqué) js</li>
+            <li>(embarqué) js</li>
+          </ol>
+          <h4>6.5.3 - Adoption</h4>
+          <ol>
+            <li>CBSE/react/hello-world.js#helloworld</li>
+            <li>(embarqué) js</li>
+            <li>(embarqué) js</li>
+          </ol>
+          <h4>6.5.4 - Syntaxes alternatives</h4>
+          <ol>
+            <li>(embarqué) js</li>
+          </ol> -->
+
+          <h4>6.5.5 - Helper</h4>
+
+          <details>
+            <summary>
+              <a
+                href="rendering/create-element/hyperscript/index.html"
+                >Exemple de helper HyperScript</a
+              >
+            </summary>
+            <ol>
+              <li>(embarqué) bash</li>
+              <li>(embarqué) js</li>
+              <li>
+                (helpers)
+                <a
+                  href="https://github.com/fullwebdev/fullwebdev/tree/eni-dpawm/packages/helpers
+el/index.js"
+                  >el/index.js</a
+                >
+              </li>
+              <li>
+                rendering/create-element/hyperscript/index.js#render
+              </li>
+            </ol>
+          </details>
+
+          <!-- <h4>6.5.6 - Performances générales</h4>
+
+          <ol>
+            <li>(embarqué) js</li>
+          </ol> -->
+          <!--#endregion 6.5-->
+          <!--#region 6.6-->
+          <h3>6.6 - Minimiser les accès au DOM</h3>
+          <!-- <h4>
+            6.6.1 - Identifier les responsabilités de chacun
+          </h4>
+
+          <ol>
+            <li>(embarqué) js</li>
+            <li>(embarqué) js</li>
+          </ol> -->
+
+          <h4>6.6.2 - Fragments</h4>
+
+          <details>
+            <summary>
+              <a
+                href="rendering/create-element/dom-api/fragment/index.html"
+                >Exemple d'utilisation d'un fragment</a
+              >
+            </summary>
+            <ol>
+              <li>
+                rendering/create-element/dom-api/fragment/create-elements.js#createDocumentFragment
+              </li>
+              <li>
+                rendering/create-element/dom-api/fragment/create-elements.js#counter
+              </li>
+              <li>
+                rendering/create-element/dom-api/fragment/create-elements.js#createActions
+              </li>
+              <li>
+                rendering/create-element/dom-api/fragment/create-elements.js#attach
+              </li>
+            </ol>
+          </details>
+
+          <h4>6.6.3 - Mise en cache des éléments</h4>
+
+          <details>
+            <summary>
+              <a
+                href="rendering/create-element/dom-api/index.html"
+                >Exemple simple</a
+              >
+            </summary>
+            <ol>
+              <li>
+                rendering/caching/elements/dom-api/create-elements.js#render
+              </li>
+              <li>
+                rendering/caching/elements/dom-api/create-elements.js#update
+              </li>
+            </ol>
+          </details>
+
+          <details>
+            <summary>
+              Benchmark : vanillajs-no-mem
+            </summary>
+            <ol>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/vanillajs-no-mem/src/Main.js"
+                  >frameworks/keyed/vanillajs-no-mem/src/Main.js</a
+                >#update
+              </li>
+            </ol>
+          </details>
+
+          <details>
+            <summary>
+              Benchmark : vanillajs-create-el-query
+            </summary>
+            <ol>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/vanillajs-create-el-query/src/Main.js"
+                  >frameworks/keyed/vanillajs-create-el-query/src/Main.js</a
+                >#initRows
+              </li>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/vanillajs-create-el-query/src/Main.js"
+                  >frameworks/keyed/vanillajs-create-el-query/src/Main.js</a
+                >#appendRows
+              </li>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/vanillajs-create-el-query/src/Main.js"
+                  >frameworks/keyed/vanillajs-create-el-query/src/Main.js</a
+                >#update
+              </li>
+            </ol>
+          </details>
+
+          <details>
+            <summary>
+              Benchmark : vanillajs-create-el
+            </summary>
+            <ol>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/vanillajs-create-el/src/Main.js"
+                  >frameworks/keyed/vanillajs-create-el/src/Main.js</a
+                >#update
+              </li>
+            </ol>
+          </details>
+
+          <!-- <h4>
+            6.6.4 - Liens avec la programmation orientée
+            composants
+          </h4>
+
+          <ol>
+            <li>(embarqué) js</li>
+            <li>(embarqué) js</li>
+            <li>(embarqué) js</li>
+            <li>(embarqué) js</li>
+          </ol> -->
+
+          <h4>6.6.5 - Littéraux de gabarits</h4>
+
+          <details>
+            <summary>
+              <a
+                href="rendering/caching/elements/innerHTML/index.html"
+                >innerHTML avec mise en cache de l'élément
+                enfant</a
+              >
+            </summary>
+            <ol>
+              <li>
+                rendering/caching/elements/innerHTML/create-elements.js#render
+              </li>
+              <li>
+                rendering/caching/elements/innerHTML/create-elements.js#update
+              </li>
+            </ol>
+          </details>
+
+          <details>
+            <summary>
+              Benchmark : vanillajs-innerhtml-cpnt
+            </summary>
+            <ol>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/vanillajs-innerhtml-cpnt/src/Main.js"
+                  >frameworks/keyed/vanillajs-innerhtml-cpnt/src/Main.js</a
+                >#create-row
+              </li>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/vanillajs-innerhtml-cpnt/src/Main.js"
+                  >frameworks/keyed/vanillajs-innerhtml-cpnt/src/Main.js</a
+                >#update
+              </li>
+            </ol>
+          </details>
+
+          <h4>6.6.5 - HyperScript</h4>
+
+          <details>
+            <summary>
+              <a
+                href="rendering/caching/elements/hyperscript/index.html"
+                >HyperScript avec mise en cache de l'élément
+                enfant</a
+              >
+            </summary>
+            <ol>
+              <li>
+                rendering/caching/elements/hyperscript/index.js#render
+              </li>
+              <li>
+                rendering/caching/elements/hyperscript/index.js#update
+              </li>
+            </ol>
+          </details>
+
+          <details>
+            <summary>
+              Benchmark : modern-helpers
+            </summary>
+            <ol>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/modern-helpers/src/index.js"
+                  >frameworks/keyed/modern-helpers/src/index.js</a
+                >#create-row
+              </li>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/modern-helpers/src/index.js"
+                  >frameworks/keyed/modern-helpers/src/index.js</a
+                >#update
+              </li>
+            </ol>
+          </details>
+
+          <h4>6.6.6 - Mise en cache de l'état</h4>
+
+          <details>
+            <summary>
+              <a
+                href="rendering/caching/state/dom-api/latest-count/index.html"
+                >mise en cache de l'état (DOM API)</a
+              >
+            </summary>
+            <ol>
+              <li>
+                rendering/caching/state/dom-api/latest-count/create-elements.js#input
+              </li>
+              <li>
+                rendering/caching/state/dom-api/latest-count/create-elements.js#set
+              </li>
+              <li>
+                rendering/caching/state/dom-api/latest-count/create-elements.js#update
+              </li>
+            </ol>
+          </details>
+
+          <h4>6.6.7 - Memoïsation</h4>
+
+          <details>
+            <summary>
+              <a
+                href="rendering/memoize/dom-api/latest-count/index.html"
+                >Memoïsation (DOM API)</a
+              >
+            </summary>
+            <ol>
+              <li>rendering/memoize/utils/latest.js</li>
+              <li>
+                rendering/memoize/utils/latest-with-context.js#memoization
+              </li>
+            </ol>
+          </details>
+          <!--#endregion 6.6-->
+          <!--#region 6.7-->
+          <h3>6.7 - Optimiser pour la répétition</h3>
+          <h4>6.7.1 - Mise en cache & cloneNode()</h4>
+
+          <details>
+            <summary>
+              <a
+                href="packages/code-samples/src/rendering/caching/children/without-copy/index.html"
+                >Mise en cache sans copie</a
+              >
+            </summary>
+            <ol>
+              <li>
+                rendering/caching/children/without-copy/create-elements.js#memoization
+              </li>
+              <li>
+                rendering/caching/children/without-copy/create-elements.js#render
+              </li>
+              <li>
+                rendering/caching/children/without-copy/create-elements.js#get
+              </li>
+              <li>
+                rendering/caching/children/on-call/create-elements.js#get
+              </li>
+            </ol>
+          </details>
+
+          <details>
+            <summary>
+              Benchmark : vanillajs-prog
+            </summary>
+            <ol>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/vanillajs-prog/src/Main.js"
+                  >frameworks/keyed/vanillajs-prog/src/Main.js</a
+                >#row-template
+              </li>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/vanillajs-prog/src/Main.js"
+                  >frameworks/keyed/vanillajs-prog/src/Main.js</a
+                >#createRow
+              </li>
+            </ol>
+          </details>
+
+          <h4>6.7.2 - innerHTML</h4>
+
+          <details>
+            <summary>
+              Benchmark : vanillajs-dx-opti
+            </summary>
+            <ol>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/vanillajs-dx-opti/src/Main.js"
+                  >frameworks/keyed/vanillajs-dx-opti/src/Main.js</a
+                >#row-template
+              </li>
+            </ol>
+          </details>
+
+          <h4>6.7.3 - Construire sa propre solution</h4>
+
+          <details>
+            <summary>
+              Benchmark : modern-helpers
+            </summary>
+            <ol>
+              <li>
+                (helpers)
+                <a
+                  href="https://github.com/fullwebdev/fullwebdev/tree/eni-dpawm/packages/helpers/el/index.js"
+                  >el/index.js</a
+                >
+              </li>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/modern-helpers/src/index.js"
+                  >frameworks/keyed/modern-helpers/src/index.js</a
+                >#create-row
+              </li>
+              <li>
+                (helpers)
+                <a
+                  href="https://github.com/fullwebdev/fullwebdev/tree/eni-dpawm/packages/helpers/template/index.js"
+                  >template/index.js</a
+                >#part
+              </li>
+              <li>(embarqué) js</li>
+            </ol>
+          </details>
+
+          <details>
+            <summary>
+              Benchmark : modern-helpers-template
+            </summary>
+            <ol>
+              <li>
+                (helpers)
+                <a
+                  href="https://github.com/fullwebdev/fullwebdev/tree/eni-dpawm/packages/helpers/template/index.js"
+                  >template/index.js</a
+                >#constructor
+              </li>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/modern-helpers-template/src/index.js"
+                  >frameworks/keyed/modern-helpers-template/src/index.js</a
+                >#template
+              </li>
+              <li>
+                (helpers)
+                <a
+                  href="https://github.com/fullwebdev/fullwebdev/tree/eni-dpawm/packages/helpers/template/index.js"
+                  >template/index.js</a
+                >#parse
+              </li>
+              <li>
+                (helpers)
+                <a
+                  href="https://github.com/fullwebdev/fullwebdev/tree/eni-dpawm/packages/helpers/template/index.js"
+                  >template/index.js</a
+                >#createElement
+              </li>
+              <li>
+                (helpers)
+                <a
+                  href="https://github.com/fullwebdev/fullwebdev/tree/eni-dpawm/packages/helpers/template/index.js"
+                  >template/index.js</a
+                >#renderInit
+              </li>
+              <li>
+                (helpers)
+                <a
+                  href="https://github.com/fullwebdev/fullwebdev/tree/eni-dpawm/packages/helpers/template/index.js"
+                  >template/index.js</a
+                >#loopMeta
+              </li>
+              <li>
+                (helpers)
+                <a
+                  href="https://github.com/fullwebdev/fullwebdev/tree/eni-dpawm/packages/helpers/template/index.js"
+                  >template/index.js</a
+                >#proxy
+              </li>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/modern-helpers-template/src/index.js"
+                  >frameworks/keyed/modern-helpers-template/src/index.js</a
+                >#update
+              </li>
+              <li>
+                (benchmark)
+                <a
+                  href="https://github.com/fullwebdev/benchmark/tree/eni-dpawm/frameworks/keyed/modern-helpers-template/src/index.js"
+                  >frameworks/keyed/modern-helpers-template/src/index.js</a
+                >#select
+              </li>
+            </ol>
+          </details>
+          <!--#endregion 6.7-->
+        </details>
+      </section>
     </main>
   </body>
 </html>
