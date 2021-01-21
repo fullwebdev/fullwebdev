@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.1](https://github.com/fullwebdev/fullwebdev/compare/v0.14.0...v1.0.0-alpha.1) (2021-01-21)
+
+### Features
+
+- **benchmark:** add choo & upgrade tagged template libs ([3ee7b6a](https://github.com/fullwebdev/fullwebdev/commit/3ee7b6ae067170e5db8ea6f1648afa4c4a5ce41b))
+- **benchmark:** jquery alternatives ([6e80f15](https://github.com/fullwebdev/fullwebdev/commit/6e80f1532c8240aeb52896b4c048c17d14dee9d4))
+- **benchmark:** jquery implementation ([ec10f02](https://github.com/fullwebdev/fullwebdev/commit/ec10f02ed2d7129c3ebcf0b9fc81c1d48e8ba905))
+- **code-samples:** add redom minimal-spa ([807cd77](https://github.com/fullwebdev/fullwebdev/commit/807cd77b8346b92ec5a1b4afb6426fd8fe46c5b2))
+- **code-samples:** autocomplete with rxjs ([7946819](https://github.com/fullwebdev/fullwebdev/commit/79468194a006708ff4f283bd7d107462976b0f59))
+- **code-samples:** baconjs ([0d33a16](https://github.com/fullwebdev/fullwebdev/commit/0d33a1699377e0469a392c4f1585277f8c7bf8f2))
+- **code-samples:** basic lit-element demo ([51fff53](https://github.com/fullwebdev/fullwebdev/commit/51fff537434fca92d5c035e303c0ff184db708c6))
+- **code-samples:** intro Redux ([c537271](https://github.com/fullwebdev/fullwebdev/commit/c5372714edfe92ae2bffd1576126eaea00fc75b6))
+- **code-samples:** lit-element with import maps shim ([3331742](https://github.com/fullwebdev/fullwebdev/commit/333174297bd8a57e9fa6101637bbab27a58b8a1d))
+- **code-samples:** pagejs & universal-router ([e71370f](https://github.com/fullwebdev/fullwebdev/commit/e71370f54911b86e5c80f753a1335a2447648456))
+- **code-samples:** Redux wrapper component & good practices ([68f523c](https://github.com/fullwebdev/fullwebdev/commit/68f523cb3ed1396770f6afefa44f64a30afb0f39))
+- **code-samples:** rxjs cold observable ([dea2a1a](https://github.com/fullwebdev/fullwebdev/commit/dea2a1a2463f2142c3b0a204d680c7d7eda8bb54))
+- **code-samples:** simple tagged template example ([45a2c44](https://github.com/fullwebdev/fullwebdev/commit/45a2c44ac5c892ebcea5a8cdee3fec4725eeb2b5))
+- **docs:** add atomico & omi to inventory ([f5ea270](https://github.com/fullwebdev/fullwebdev/commit/f5ea270f0c9e04f615bfbfa37f57dd7ed4081c51))
+- **illustrations:** classic app state diagram ([46e692c](https://github.com/fullwebdev/fullwebdev/commit/46e692c5753b4d28eaed513cf62934b1edacc90e))
+- **illustrations:** dom libs statistics ([ecaed10](https://github.com/fullwebdev/fullwebdev/commit/ecaed10f228d561230ec116f57cfdfb7f6027856))
+- **illustrations:** hyperscript & tagged template libs benchmarks ([87dd0b5](https://github.com/fullwebdev/fullwebdev/commit/87dd0b582cddfb37c6fe5129a2261568c11f33e3))
+- **illustrations:** JSX benchmark plots ([ba6b763](https://github.com/fullwebdev/fullwebdev/commit/ba6b763cae4d03e54b6cfba4c0398b0b640ba351))
+- **illustrations:** Observer pattern ([754ac1a](https://github.com/fullwebdev/fullwebdev/commit/754ac1ad11286e1d3265ac7d9e5577c170e3d370))
+- **illustrations:** rxjs marble diagrams ([e678aa6](https://github.com/fullwebdev/fullwebdev/commit/e678aa65649052eb77d1ee20d086b5a3745a9e72))
+- **illustrations:** tagged template libs weight ([c305b6c](https://github.com/fullwebdev/fullwebdev/commit/c305b6cd2cfbb7a4c03b629bdce59ca6bd143a77))
+- **illustrations:** types of WebDev architures/solutions ([ed27f18](https://github.com/fullwebdev/fullwebdev/commit/ed27f1891476e13aaaef783ea6e092564e482fb3))
+
+### Bug Fixes
+
+- **code-samples:** lit-html version & typo ([1731bab](https://github.com/fullwebdev/fullwebdev/commit/1731babbd56b9cbbf1662d18c74b08aeda081e11))
+- **docs:** popularity of solid ([f67fe5f](https://github.com/fullwebdev/fullwebdev/commit/f67fe5ff2be569e3fe590acae9a3cfa2b57142ee))
+
 ## [0.14.0](https://github.com/fullwebdev/fullwebdev/compare/v0.12.0...v0.14.0) (2020-12-10)
 
 ### Features

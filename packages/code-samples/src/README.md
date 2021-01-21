@@ -2,66 +2,71 @@
 title: "Code Samples"
 ---
 
-## Components
+> Une [page d'accueil en français](./ENI-DPAWN.html),
+> suivant le déroulement du livre
+> "[Développement et architecture des Applications Web Modernes](https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523)"
+> publié par les éditions ENI, est également disponible.
+
+## Component Based Software Engineering
 
 1. Intro
-   - [JQuery Plugin](components/jquery/slider.html)
+   - [JQuery Plugin](CBSE/jquery/slider.html)
 2. AngularJS
-   1. [v1.0 - directive](components/angularjs/directive/hello-world.html)
-   2. [v1.2 - controllerAs](components/angularjs/controller-as/hello-world.html)
-   3. [v1.3 - bindToController](components/angularjs/bindtocontroller/hello-world.html)
-   4. [v1.5+ - component helper](components/angularjs/component-helper/hello-world.html)
+   1. [v1.0 - directive](CBSE/angularjs/directive/hello-world.html)
+   2. [v1.2 - controllerAs](CBSE/angularjs/controller-as/hello-world.html)
+   3. [v1.3 - bindToController](CBSE/angularjs/bindtocontroller/hello-world.html)
+   4. [v1.5+ - component helper](CBSE/angularjs/component-helper/hello-world.html)
 3. React
    - without JSX
-     - [basics](components/react/hello-world.html)
-     - [composition](components/react/composition.html)
-     - [props](components/react/composition-props.html)
-   - [JSX](components/react/hello-jsx.html)
-   - [State](components/react/stateful.html)
-   - [Shared Hook](components/react/responsive-component/index.html)
+     - [basics](CBSE/react/hello-world.html)
+     - [composition](CBSE/react/composition.html)
+     - [props](CBSE/react/composition-props.html)
+   - [JSX](CBSE/react/hello-jsx.html)
+   - [State](CBSE/react/stateful.html)
+   - [Shared Hook](CBSE/react/responsive-component/index.html)
      (from
      [Dan Abramov](https://gist.github.com/gaearon/cb5add26336003ed8c0004c4ba820eae))
 4. Function-based
-   - [Hello World](components/function/hello-world.html)
-   - [Using Parameters](components/function/bad-update.html)
-     (bad practice)
-   - [Using Parameters](components/function/params.html)
-     (not pure)
-   - [With lit-html](components/function/with-lit-html.html)
-     (not pure)
+   - [Hello World](CBSE/function/hello-world.html)
+   - [Using Parameters](CBSE/function/bad-update.html) (bad
+     practice)
+   - [Using Parameters](CBSE/function/params.html) (not
+     pure)
+   - [With lit-html](CBSE/function/with-lit-html.html) (not
+     pure)
 
 ## Web Components
 
 1. Custom Elements
-   - [autonomous](components/custom-elements/autonomous/hello-world.html)
-   - [life cycle](components/custom-elements/life-cycle/index.html)
-     - [call constructor before define](components/custom-elements/life-cycle/before-define/index.html)
-     - [call constructor after define](components/custom-elements/life-cycle/after-define/index.html)
-     - [connectedCallback](components/custom-elements/life-cycle/connected/index.html)
-   - [customized built-in](components/custom-elements/customized-buit-in/hello-world.html)
-   - [conflict](components/custom-elements/conflict/conflict.html)
-   - [names validity](components/custom-elements/names/index.html)
-   - attributes and properties
-     - [basics](components/custom-elements/attrs-and-props/basics/index.html)
-     - [attribute](components/custom-elements/attrs-and-props/attribute/index.html)
+   - [autonomous](web-components/custom-elements/autonomous/hello-world.html)
+   - [life cycle](web-components/custom-elements/life-cycle/index.html)
+     - [call constructor before define](web-components/custom-elements/life-cycle/before-define/index.html)
+     - [call constructor after define](web-components/custom-elements/life-cycle/after-define/index.html)
+     - [connectedCallback](web-components/custom-elements/life-cycle/connected/index.html)
+   - [customized built-in](web-components/custom-elements/customized-built-in/hello-world.html)
+   - [conflict](web-components/custom-elements/conflict/conflict.html)
+   - [names validity](web-components/custom-elements/names/index.html)
 2. Shadow DOM
-   - [attach](components/shadow-dom/attach/index.html)
-   - [open vs. closed](components/shadow-dom/access/bases/index.html)
+   - [attach](web-components/shadow-dom/attach/index.html)
+   - [open vs. closed](web-components/shadow-dom/access/bases/index.html)
    - workaround to closed mode
-     - [using iife](components/shadow-dom/access/workaround/iife/index.html)
-     - [using a private field](components/shadow-dom/access/workaround/private-field/index.html)
+     - [using a private field](web-components/shadow-dom/access/workaround/private-field/index.html)
+     - [using a WeakMap](web-components/shadow-dom/access/workaround/weak/index.html)
    - style
-     - [host](components/shadow-dom/style/host/index.html)
-     - [shared style](components/shadow-dom/style/shared/index.html)
-     - [constructable stylesheet](components/shadow-dom/style/constructable/index.html)
-     - [context](components/shadow-dom/style/context/index.html)
-     - [CSS Custom Properties](components/shadow-dom/style/custom-props/index.html)
+     - [shared style](web-components/shadow-dom/style/shared/index.html)
+     - [constructable stylesheet](web-components/shadow-dom/style/constructable/index.html)
+     - [host](web-components/shadow-dom/style/host/index.html)
+     - [context](web-components/shadow-dom/style/context/index.html)
+     - [CSS Custom Properties](web-components/shadow-dom/style/custom-props/index.html)
 3. Template
-   - [basics](components/template/basics/index.html)
-   - [programmatic](components/template/prog/index.html)
+   - [basics](web-components/template/basics/index.html)
+   - [programmatic](web-components/template/prog/index.html)
 4. Composition
-   - [basics](components/slot/basics/index.html)
-   - [named slots](components/slot/named/index.html)
+   - [basics](web-components/slot/basics/index.html)
+   - [named slots](web-components/slot/named/index.html)
+5. attributes and properties
+   - [basics](web-components/custom-elements/attrs-and-props/basics/index.html)
+   - [attribute](web-components/custom-elements/attrs-and-props/attribute/index.html)
 
 ## Routing
 
@@ -128,17 +133,17 @@ title: "Code Samples"
    - [Page.js](minimal-spa/8-pagejs/index.html)
    - [universal-router](minimal-spa/9-universal-router/index.html)
 3. Reactive Programming
-   - [RxJS](reactive/rxjs/complete/index.html)
-     - [cold observable](reactive/rxjs/complete/cold/index.html)
-   - [Bacon.js](reactive/baconjs/index.html)
+   - [RxJS](libs/reactive/rxjs/complete/index.html)
+     - [cold observable](libs/reactive/rxjs/complete/cold/index.html)
+   - [Bacon.js](libs/reactive/baconjs/index.html)
 4. State Management
    - Redux
-     - [Simple Counter](reactive/redux/simple-counter/index.html)
-     - [Realistic Example](reactive/redux/good-counter/index.html)
-     - [with a wrapper component](reactive/redux/wrapped-counter/index.html)
+     - [Simple Counter](libs/reactive/redux/simple-counter/index.html)
+     - [Realistic Example](libs/reactive/redux/good-counter/index.html)
+     - [with a wrapper component](libs/reactive/redux/wrapped-counter/index.html)
 5. Tagged Templates
    - [introduction](rendering/tagged-template/index.html)
 6. Components
    1. lit-element
-      - [hello world](components/lit-element/index.html)
-      - [with es-module-shims](components/lit-element/importmap/index.html)
+      - [hello world](libs/lit-element/index.html)
+      - [with es-module-shims](libs/lit-element/importmap/index.html)
