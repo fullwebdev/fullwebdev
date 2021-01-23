@@ -13,32 +13,32 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-const gulp = require('gulp');
-const del = require('del');
+const gulp = require("gulp");
+const del = require("del");
 
 // Clean "build" directory
 const clean = () => {
-  return del(['build/*'], {dot: true});
+  return del(["build/*"], { dot: true });
 };
-gulp.task('clean', clean);
+gulp.task("clean", clean);
 
 // Copy "app" directory to "build" directory
 const copy = () => {
-  return gulp.src(['app/**/*']).pipe(gulp.dest('build'));
+  return gulp.src(["app/**/*"]).pipe(gulp.dest("build"));
 };
-gulp.task('copy', copy);
+gulp.task("copy", copy);
 
 // TODO - add "service worker" task here
 
 // This is the app's build process
-const build = gulp.series('clean', 'copy');
-gulp.task('build', build);
+const build = gulp.series("clean", "copy");
+gulp.task("build", build);
 
 // Watch our "app" files & rebuild whenever they change
 const watch = () => {
-  gulp.watch('app/**/*', build);
+  gulp.watch("app/**/*", build);
 };
-gulp.task('watch', watch);
+gulp.task("watch", watch);
 
 // Set the default task to "build"
-gulp.task('default', build);
+gulp.task("default", build);

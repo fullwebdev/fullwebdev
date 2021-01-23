@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
-let applyPatch = require('./apply-patch').applyPatch;
-let fs = require('fs');
-let path = require('path');
+let applyPatch = require("./apply-patch").applyPatch;
+let fs = require("fs");
+let path = require("path");
 
 function gotoStep(step) {
-  console.log(`applying step ${step}`)
-  const stepDir = path.join(__dirname, 'steps', step);
+  console.log(`applying step ${step}`);
+  const stepDir = path.join(__dirname, "steps", step);
 
   fs.readdir(stepDir, (err, patchFiles) => {
     if (err) {
@@ -14,7 +14,7 @@ function gotoStep(step) {
       process.exit(1);
     }
 
-    patchFiles.forEach(patchFile => {
+    patchFiles.forEach((patchFile) => {
       // Make one pass and make the file complete
       let patch = path.join(stepDir, patchFile);
       applyPatch(patch);

@@ -2,12 +2,12 @@
 
 /**
  * alternative to git apply for diff files
- * 
+ *
  * Usage: apply-patch path/to/file.patch
- * 
+ *
  * derivative of apply-patch by David Pärsson, under MIT License
  * see https://github.com/davidparsson/apply-patch
- * 
+ *
  * patchs generated using :
  *   git diff <commit>^..<commit> file > <step>.diff
  *    (with some editions for compatibility)
@@ -40,7 +40,9 @@ function applyPatch(patchFile) {
   if (!patched) {
     throw Error(`Failed to apply patch '${patchFile}' to '${sourceFile}'`);
   } else if (sourceFile !== destinationFile) {
-    console.log(`Applied '${patchFile}' to '${sourceFile}' and stored it as '${destinationFile}'`);
+    console.log(
+      `Applied '${patchFile}' to '${sourceFile}' and stored it as '${destinationFile}'`
+    );
   } else {
     console.log(`Applied '${patchFile}' to '${sourceFile}'`);
   }

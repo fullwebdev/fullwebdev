@@ -2,7 +2,7 @@
   "projects": [
     {
       "scope": "data-driven-pwa",
-      "directory": "packages/data-driven-pwa",
+      "directory": "materials/data-driven-pwa",
       "url": "git@github.com:fullwebdev/data-driven-pwa.git"
     },
     {

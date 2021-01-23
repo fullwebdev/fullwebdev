@@ -23,7 +23,7 @@ body {
   background-color: white;
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto','Helvetica','Arial',sans-serif;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   margin: 0;
   text-align: center;
   width: 100%;
@@ -41,7 +41,7 @@ header {
 
 .navbar {
   align-items: center;
-  background-color: #03A9F4;
+  background-color: #03a9f4;
   display: flex;
   justify-content: space-between;
   list-style-type: none;
@@ -51,8 +51,8 @@ header {
 
 @media (max-width: 499px) {
   .navbar {
-    padding-right: .5rem;
-    padding-left: .5rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
   }
 }
 
@@ -62,7 +62,8 @@ header {
 }
 
 #install-btn {
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
   background-color: #0487d1;
   font-weight: bold;
   margin-right: 1rem;
@@ -102,21 +103,22 @@ section {
 }
 
 .message {
-  box-shadow: 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12), 0 3px 5px -1px rgba(0,0,0,.2);
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12),
+    0 3px 5px -1px rgba(0, 0, 0, 0.2);
   display: none;
   padding: 15px;
 }
 
 .warn {
-  background: #FF9800;
+  background: #ff9800;
 }
 
 .error {
-  background: #F44336;
+  background: #f44336;
 }
 
 .success {
-  background: #4CAF50;
+  background: #4caf50;
 }
 
 .container {
@@ -142,7 +144,8 @@ form {
 
 .card {
   background-color: #fff;
-  box-shadow: 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12), 0 3px 5px -1px rgba(0,0,0,.2);
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12),
+    0 3px 5px -1px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-flow: row wrap;
   margin: 5px 20px;
@@ -184,7 +187,7 @@ input {
   border-bottom: 1px solid #e0e0e0;
   color: #757575;
   display: block;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 16px;
   margin: 0;
   padding: 4px 0;
@@ -192,7 +195,7 @@ input {
 }
 
 .support-text {
-  color: rgba(0,0,0,.54);
+  color: rgba(0, 0, 0, 0.54);
   font-size: 1rem;
   line-height: 18px;
   overflow: hidden;
@@ -203,7 +206,7 @@ input {
 .textfield {
   display: flex;
   flex-wrap: wrap;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
@@ -237,7 +240,7 @@ input {
   border: none;
   cursor: pointer;
   display: inline-block;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 500;
   height: 36px;
@@ -252,15 +255,17 @@ input {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
+    background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   vertical-align: middle;
   will-change: box-shadow;
 }
 
 .button::after {
-  background: rgba(255, 255, 255, .5);
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 100%;
-  content: '';
+  content: "";
   height: 5px;
   left: 50%;
   opacity: 0;
@@ -273,7 +278,8 @@ input {
 
 .raised {
   background: rgb(3, 169, 244);
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
   color: #fff;
 }
 
