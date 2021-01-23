@@ -24,7 +24,7 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/fullwebdev/fullwebdev.git",
-    "directory": "packages/slides/vanilla-1"
+    "directory": "materials/slides/vanilla-1"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",

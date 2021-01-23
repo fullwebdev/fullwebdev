@@ -18,7 +18,7 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/fullwebdev/fullwebdev.git",
-    "directory": "packages/slides/wof-1"
+    "directory": "materials/slides/wof-1"
   },
   "engines": {
     "node": ">=9.0.0"

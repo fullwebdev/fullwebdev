@@ -306,7 +306,7 @@ It just need some tricks.
 
 Here is an example using a Web Component inside a React component:
 
-https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/wc-in-react.js
+https://github.com/fullwebdev/fullwebdev/blob/master/materials/slides/vanilla-1/src/assets/code-samples/wc-in-react.js
 
 > Using a complex web component inside a React App still need a bunch of boilerplate code.
 > The community is discussing some solutions of that since 2016:
@@ -316,25 +316,25 @@ https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/s
 
 And as React is a rendering library, you can even use it inside your Web Components in order to handle the rendering. Here is an example from the documentation:
 
-https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/react-in-wc.js
+https://github.com/fullwebdev/fullwebdev/blob/master/materials/slides/vanilla-1/src/assets/code-samples/react-in-wc.js
 
 Here, we're using the standard HTMLElement...
 
-https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/react-in-wc.js#L1
+https://github.com/fullwebdev/fullwebdev/blob/master/materials/slides/vanilla-1/src/assets/code-samples/react-in-wc.js#L1
 
 ...and use customElement.define...
 
-https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/react-in-wc.js#L12
+https://github.com/fullwebdev/fullwebdev/blob/master/materials/slides/vanilla-1/src/assets/code-samples/react-in-wc.js#L12
 
 ...like every Custom Element.
 
 And we use the standard in order to attach a shadow root.
 
-https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/react-in-wc.js#L4
+https://github.com/fullwebdev/fullwebdev/blob/master/materials/slides/vanilla-1/src/assets/code-samples/react-in-wc.js#L4
 
 Finally, we can use React to render the template.
 
-https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/react-in-wc.js#L9
+https://github.com/fullwebdev/fullwebdev/blob/master/materials/slides/vanilla-1/src/assets/code-samples/react-in-wc.js#L9
 
 Does those make React a "Vanilla" library? Let's see...
 
@@ -453,7 +453,7 @@ You could use for example the minimalist helpers the Polymer project provides: [
 
 It includes the "router.js" utility, which only weights 589 bytes once minified!
 
-https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/pwa-helpers-routing.js
+https://github.com/fullwebdev/fullwebdev/blob/master/materials/slides/vanilla-1/src/assets/code-samples/pwa-helpers-routing.js
 
 You can find an example in https://github.com/noelmace/prpl-demo/tree/master/common/app (using Redux, lit-element & pwa-helpers).
 
@@ -526,7 +526,7 @@ Basically, you could think "reactive MVVM" :wink: It's kind of similar to most S
 
 You could write a BLoC like a ViewModel with VanillaJS.
 
-https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/bloc/bloc-class.js
+https://github.com/fullwebdev/fullwebdev/blob/master/materials/slides/vanilla-1/src/assets/code-samples/bloc/bloc-class.js
 
 Yet, we would miss the point doing so. Using Dart, implementing the BLoC pattern relies on Dart streams most of the time.
 
@@ -534,7 +534,7 @@ Yet, we would miss the point doing so. Using Dart, implementing the BLoC pattern
 
 Some are also using RxDart in order to make it simpler. Let's use RxJS instead.
 
-https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/bloc/bloc-rx.js
+https://github.com/fullwebdev/fullwebdev/blob/master/materials/slides/vanilla-1/src/assets/code-samples/bloc/bloc-rx.js
 
 > These examples where taken from [BLoC design pattern with Angular](https://medium.com/lacolaco-blog/bloc-design-pattern-with-angular-1c2f0339f6a3),
 > by Suguru Inatomi. I just transpiled them.

@@ -26,7 +26,7 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/fullwebdev/fullwebdev",
-    "directory": "packages/slides/wof-2"
+    "directory": "materials/slides/wof-2"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
