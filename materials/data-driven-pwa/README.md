@@ -15,7 +15,7 @@
 During this codelab, you’ll create a fully offline-capable, data-driven Progressive Web App with state of the art modern capabilities.
 
 - **:man_technologist: instructions: on [fullweb.dev](https://fullweb.dev/codelabs/doc/modern-data-driven)**
-- **:book: [Notes](https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/wof-2/src/notes.md)**
+- **:book: [Notes](https://github.com/fullwebdev/fullwebdev/blob/master/materials/slides/wof-2/src/notes.md)**
 - **:house: Home: [fullwebdev/fullwebdev](https://github.com/fullwebdev/fullwebdev)**
 
 ## Getting started
@@ -43,9 +43,9 @@ npm run goto --step="<short-step-name>"
 git apply steps/<long-step-name>.patch
 ```
 
-> If you run this command from the monorepo, you'll need to run it from _this_ directory (`packages/data-driven-pwa`) and add the following option :
+> If you run this command from the monorepo, you'll need to run it from _this_ directory (`materials/data-driven-pwa`) and add the following option :
 >
-> `--directory="packages/data-driven-pwa`
+> `--directory="materials/data-driven-pwa`
 
 ## More resources
 
@@ -55,7 +55,7 @@ git apply steps/<long-step-name>.patch
 - [Background Sync](https://developers.google.com/web/updates/2015/12/background-sync)
 - [Workbox codelab](https://codelabs.developers.google.com/codelabs/workbox-lab/#0)
 - [PWA training materials](https://developers.google.com/web/ilt/pwa/)
-- [Notes (with links to other resources)](https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/wof-2/src/notes.md)
+- [Notes (with links to other resources)](https://github.com/fullwebdev/fullwebdev/blob/master/materials/slides/wof-2/src/notes.md)
 
 ## License
 
