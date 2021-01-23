@@ -117,8 +117,8 @@ title: "Code Samples"
       1. [HyperScript](rendering/caching/elements/hyperscript/index.html)
    1. children
       1. [deep](rendering/caching/children/deep/index.html)
-      1. [on call](packages/code-samples/src/rendering/caching/children/on-call/index.html)
-      1. [without copy](packages/code-samples/src/rendering/caching/children/without-copy/index.html)
+      1. [on call](materials/code-samples/src/rendering/caching/children/on-call/index.html)
+      1. [without copy](materials/code-samples/src/rendering/caching/children/without-copy/index.html)
    1. state
       1. [DOM API](rendering/caching/state/dom-api/latest-count/index.html)
    1. memoize
