@@ -13,8 +13,8 @@ export default () => html`
   <p>
     Ces exemples sont maintenus via le monorepo FullWebDev, dans le dossier
     <a
-      href="https://github.com/fullwebdev/fullwebdev/tree/master/packages/code-samples/"
-      >packages/code-samples/</a
+      href="https://github.com/fullwebdev/fullwebdev/tree/master/materials/code-samples/"
+      >materials/code-samples/</a
     >. Certaines portions (délimitée via des
     <a href="https://code.visualstudio.com/docs/editor/codebasics#_folding"
       >commentaires de régions VS Code</a
@@ -28,7 +28,7 @@ export default () => html`
 
   ${codesandbox({
     branch: "master",
-    path: "packages/code-samples/src/",
+    path: "materials/code-samples/src/",
     title: "Exemples de code",
   })}
   ${pageFooter({ path: "docs/pages/fr/code-samples/index.js", lang: "fr" })}

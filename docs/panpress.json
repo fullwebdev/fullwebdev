@@ -6,19 +6,19 @@
       "benchmark": {
         "url": "https://github.com/fullwebdev/benchmark/",
         "branch": "main",
-        "path": "packages/benchmark"
+        "path": "materials/benchmark"
       },
-      "livre-fr": {
+      "eni-dpawm": {
         "url": "https://github.com/fullwebdev/livre-web-apps/",
         "branch": "master",
-        "path": "packages/livre-fr"
+        "path": "materials/eni-dpawm"
       }
     }
   },
   "additionnalPages": [
     {
-      "src": "../packages/livre-fr/src",
-      "base": "../packages/livre-fr",
+      "src": "../materials/eni-dpawm/src",
+      "base": "../materials/eni-dpawm",
       "dest": "02-fundamentals/02-materials",
       "extract": true
     }

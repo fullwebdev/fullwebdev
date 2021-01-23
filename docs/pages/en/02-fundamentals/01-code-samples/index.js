@@ -13,8 +13,8 @@ export default () => html`
   <p>
     This code samples are maintained in the FullWebDev monorepo, in the
     <a
-      href="https://github.com/fullwebdev/fullwebdev/tree/master/packages/code-samples/"
-      >packages/code-samples/</a
+      href="https://github.com/fullwebdev/fullwebdev/tree/master/materials/code-samples/"
+      >materials/code-samples/</a
     >
     folder. Some parts (i.e.
     <a href="https://code.visualstudio.com/docs/editor/codebasics#_folding"
@@ -29,7 +29,7 @@ export default () => html`
 
   ${codesandbox({
     branch: "master",
-    path: "packages/code-samples/src/",
+    path: "materials/code-samples/src/",
     title: "Code Samples",
   })}
   ${pageFooter({ path: "docs/pages/en/code-samples/index.js", lang: "en" })}
