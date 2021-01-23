@@ -12,7 +12,7 @@
     },
     {
       "scope": "code-samples",
-      "directory": "packages/code-samples",
+      "directory": "materials/code-samples",
       "url": "git@github.com:fullwebdev/code-samples.git"
     },
     {
