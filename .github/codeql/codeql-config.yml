@@ -2,5 +2,5 @@ name: "CodeQL config"
 
 paths-ignore:
   - "**/snapshots/**/*"
-  - "packages/slides/**/plugin/**/*"
-  - "packages/slides/**/reveal.js"
+  - "materials/slides/**/plugin/**/*"
+  - "materials/slides/**/reveal.js"

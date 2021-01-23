@@ -2,7 +2,7 @@
   "packages": [
     "packages/*",
     "packages/panpress/cli",
-    "packages/slides/*",
+    "materials/slides/*",
     "packages/helpers/el",
     "packages/helpers/lazy-router",
     "packages/helpers/template",

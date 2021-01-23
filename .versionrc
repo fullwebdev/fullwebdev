@@ -17,43 +17,43 @@
       "type": "json"
     },
     {
-      "filename": "packages/code-samples/package.json",
+      "filename": "materials/code-samples/package.json",
       "type": "json"
     },
     {
-      "filename": "packages/code-samples/package-lock.json",
+      "filename": "materials/code-samples/package-lock.json",
       "type": "json"
     },
     {
-      "filename": "packages/codelabs/package.json",
+      "filename": "materials/codelabs/package.json",
       "type": "json"
     },
     {
-      "filename": "packages/codelabs/package-lock.json",
+      "filename": "materials/codelabs/package-lock.json",
       "type": "json"
     },
     {
-      "filename": "packages/data-driven-pwa/package.json",
+      "filename": "materials/data-driven-pwa/package.json",
       "type": "json"
     },
     {
-      "filename": "packages/data-driven-pwa/package-lock.json",
+      "filename": "materials/data-driven-pwa/package-lock.json",
       "type": "json"
     },
     {
-      "filename": "packages/illustrations/package.json",
+      "filename": "materials/illustrations/package.json",
       "type": "json"
     },
     {
-      "filename": "packages/illustrations/package-lock.json",
+      "filename": "materials/illustrations/package-lock.json",
       "type": "json"
     },
     {
-      "filename": "packages/perf/package.json",
+      "filename": "materials/perf/package.json",
       "type": "json"
     },
     {
-      "filename": "packages/perf/package-lock.json",
+      "filename": "materials/perf/package-lock.json",
       "type": "json"
     }
   ]

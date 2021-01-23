@@ -65,18 +65,18 @@ Most packages are also parts of the website, but may provide more than that.
 <!-- prettier-ignore -->
 | package | usage |
 | ------- | ----- |
-| [/packages/benchmark/](https://github.com/fullwebdev/benchmark/) (submodule) | _WIP_ |
-| [/packages/code-samples/](./packages/code-samples/) | [/fundamentals/code-samples/](https://fullweb.dev/fundamentals/code-samples/) |
-| [/packages/codelabs/](./packages/codelabs/) | [/codelabs/](https://fullweb.dev/codelabs/) |
-| [/packages/data-driven-pwa/](./packages/data-driven-pwa/) | base project for the associated [codelab](https://fullweb.dev/codelabs/doc/modern-data-driven_fr/index.html) |
+| [/materials/benchmark/](https://github.com/fullwebdev/benchmark/) (submodule) | _WIP_ |
+| [/materials/code-samples/](./materials/code-samples/) | [/fundamentals/code-samples/](https://fullweb.dev/fundamentals/code-samples/) |
+| [/materials/codelabs/](./materials/codelabs/) | [/codelabs/](https://fullweb.dev/codelabs/) |
+| [/materials/data-driven-pwa/](./materials/data-driven-pwa/) | base project for the associated [codelab](https://fullweb.dev/codelabs/doc/modern-data-driven_fr/index.html) |
 | [/packages/helpers/](./packages/helpers/) | _helpers functions_ |
-| [/packages/illustrations/](./packages/illustrations/) | _images and more_ |
-| /packages/livre-fr/ (private) | [/fundamentals/materials/](https://fullweb.dev/fundamentals/materials/) |
+| [/materials/illustrations/](./materials/illustrations/) | _images and more_ |
+| /materials/eni-dpawm/ (private) | [/fundamentals/materials/](https://fullweb.dev/fundamentals/materials/) |
 | [/packages/panpress/](./packages/panpress/) | _static website generator_ |
-| [/packages/perf/](./packages/perf/) | _WIP_ |
-| [/packages/slides/wof-1/](./packages/slides/wof-1/) | [/slides/wof1/](https://fullweb.dev/slides/wof1/) (for historical purposes only) |
-| [/packages/slides/wof-2/](./packages/slides/wof-2/) | [/slides/wof/](https://fullweb.dev/slides/wof/latest/) |
-| [/packages/slides/vanilla-1/](./packages/slides/vanilla-1/) | [/slides/vanilla1/](https://fullweb.dev/slides/vanilla1/latest/) |
+| [/materials/perf/](./materials/perf/) | _WIP_ |
+| [/materials/slides/wof-1/](./materials/slides/wof-1/) | [/slides/wof1/](https://fullweb.dev/slides/wof1/) (for historical purposes only) |
+| [/materials/slides/wof-2/](./materials/slides/wof-2/) | [/slides/wof/](https://fullweb.dev/slides/wof/latest/) |
+| [/materials/slides/vanilla-1/](./materials/slides/vanilla-1/) | [/slides/vanilla1/](https://fullweb.dev/slides/vanilla1/latest/) |
 
 You'll find more information about each of these projects in their respective README.md files.
 
@@ -95,7 +95,7 @@ Finally, you can run the standalone docs, without building any other packages, b
 
 Run `npm run help` for more details about the panpress command.
 
-> :warning: Access to the private repository associated to the `/packages/livre-fr/` submodule is, for now, restricted to the core team. Building the whole website (`npm run build`) requires this access, and Linux.
+> :warning: Access to the private repository associated to the `/materials/eni-dpawm/` submodule is, for now, restricted to the core team. Building the whole website (`npm run build`) requires this access, and Linux.
 >
 > But don't worry: we have CI/CD for that, so there is a good chance you'll never need to do that. Just remember to always use the `--local` option when running a script in `/docs`.
 
@@ -138,7 +138,7 @@ Any line of the commit message cannot be longer than 100 characters.
   │       │             └─⫸ Summary in present tense. Not capitalized. No period at the end.
   │       │
   │       └─⫸ Commit Scope: docs | code-samples | codelabs | data-driven-pwa | illustrations |
-  │                          livre-fr | perf | slides-(vanilla-1|wof-1|wof-2) | helpers |
+  │                          eni-dpawm | perf | slides-(vanilla-1|wof-1|wof-2) | helpers |
   │                          helpers-(el|template|lazy-router) | benchmark | panpress | panpress-(cli|starter|webapp)
   │
   └─⫸ Commit Type: build | ci | docs | feat | fix | perf | refactor | style | test
@@ -171,7 +171,7 @@ The following is the list of supported scopes:
 - `codelabs`
 - `data-driven-pwa`
 - `illustrations`
-- `livre-fr`
+- `eni-dpawm`
 - `perf`
 - `reveal`
 - `helpers`

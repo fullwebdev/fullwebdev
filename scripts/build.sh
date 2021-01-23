@@ -4,7 +4,7 @@
 ## nor to return success if one or more (but not all) scripts failed
 ## TODO: move to monocli
 
-PACKAGES=('docs' 'packages/codelabs' 'packages/slides/wof-2' 'packages/slides/wof-1' 'packages/slides/vanilla-1' )
+PACKAGES=('docs' 'materials/codelabs' 'materials/slides/wof-2' 'materials/slides/wof-1' 'materials/slides/vanilla-1' )
 ROOT_DISTS=('' 'codelabs/doc' 'slides/wof' 'slides/wof1' 'slides/vanilla1' )
 
 NBR_PACKAGES=${#PACKAGES[@]}

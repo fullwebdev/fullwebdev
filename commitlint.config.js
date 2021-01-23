@@ -10,7 +10,7 @@ module.exports = {
         "codelabs",
         "data-driven-pwa",
         "illustrations",
-        "livre-fr",
+        "eni-dpawm",
         "perf",
         "helpers",
         "helpers-lazy-router",

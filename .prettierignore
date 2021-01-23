@@ -1,8 +1,8 @@
-/packages/code-samples/src/index.html
+/materials/code-samples/src/index.html
 package.json
 package-lock.json
 vercel.json
-/packages/benchmark
-/packages/slides/**/snapshots/
-/packages/slides/**/src/**/*.json
+/materials/benchmark
+/materials/slides/**/snapshots/
+/materials/slides/**/src/**/*.json
 *.fake.*

@@ -1,6 +1,6 @@
-[submodule "packages/livre-fr"]
+[submodule "materials/eni-dpawm"]
 	path = materials/eni-dpawm
 	url = https://github.com/fullwebdev/livre-web-apps.git
-[submodule "packages/benchmark"]
+[submodule "materials/benchmark"]
 	path = materials/benchmark
 	url = https://github.com/fullwebdev/benchmark.git
