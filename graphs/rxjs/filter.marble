@@ -1,0 +1,5 @@
+marble autocompleteFilter
+{
+    source map:  +-(r)-(re)-(rea)-(reac)->
+    operator filter(text=>text.length>2):  +-----(rea)-(reac)->
+}

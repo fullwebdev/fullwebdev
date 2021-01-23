@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg"  width="900" height="305" >
+  <polygon points="100,101 150,6 750,6 800,101" fill="#ffffff" stroke="black"/>
+  <text x="50%" y="52" font-size="24px" font-weight="bold" text-anchor="middle" alignment-baseline="central">
+    Components
+  </text>
+  <polygon points="50,202 100,107 800,107 850,202" fill="#c4c4c4" stroke="black"/>
+  <text x="50%" y="152" font-size="24px" font-weight="bold" text-anchor="middle" alignment-baseline="central">
+    Unit tests
+  </text>
+  <polygon points="0,302 50,207 850,207 900,302" fill="#929292" stroke="black"/>
+  <text x="50%" y="252" font-size="24px" font-weight="bold" text-anchor="middle" alignment-baseline="central">
+    Typings
+  </text>
+</svg>
