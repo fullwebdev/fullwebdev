@@ -7,7 +7,7 @@
     },
     {
       "scope": "illustrations",
-      "directory": "packages/illustrations",
+      "directory": "materials/illustrations",
       "url": "git@github.com:fullwebdev/illustrations.git"
     },
     {
