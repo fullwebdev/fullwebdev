@@ -1,0 +1,56 @@
+diff --git a/project/app/index.html b/project/app/index.html
+index 5976ff3..9ea4226 100644
+--- a/project/app/index.html
++++ b/project/app/index.html
+@@ -48,6 +48,7 @@ limitations under the License.
+   <header>
+     <ul class="navbar">
+       <li class="app-title"><a class="home" href="#home"><h2>Dashboardr</h2></a></li>
++      <li><button class="button ripple" id="install-btn" style="display: none">Install</button></li>
+       <li><img class="profile" src="images/profile/cat.jpg" alt="An adorable cat" /></li>
+     </ul>
+   </header>
+diff --git a/project/app/js/main.js b/project/app/js/main.js
+index 08981f8..ff39d93 100644
+--- a/project/app/js/main.js
++++ b/project/app/js/main.js
+@@ -25,6 +25,12 @@ if ('serviceWorker' in navigator) {
+       });
+   });
+ 
++  const btnAdd = document.getElementById('install-btn');
++
++  function showInstallPromotion() {
++    btnAdd.style.display = 'inline-block';
++  }
++
+   let deferredPrompt;
+ 
+   window.addEventListener('beforeinstallprompt', e => {
+@@ -33,8 +39,25 @@ if ('serviceWorker' in navigator) {
+     e.preventDefault();
+     // Stash the event so it can be triggered later.
+     deferredPrompt = e;
+-    console.log('ready for A2HS');
++    showInstallPromotion();
+   });
++
++  btnAdd.addEventListener('click', e => {
++    // hide our user interface that shows our A2HS button
++    btnAdd.style.display = 'none';
++    // Show the prompt
++    deferredPrompt.prompt();
++    // Wait for the user to respond to the prompt
++    deferredPrompt.userChoice.then(choiceResult => {
++      if (choiceResult.outcome === 'accepted') {
++        console.log('User accepted the A2HS prompt');
++      } else {
++        console.log('User dismissed the A2HS prompt');
++      }
++      deferredPrompt = null;
++    });
++  });
++
+ }
+ 
+ function createIndexedDB() {

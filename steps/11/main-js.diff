@@ -1,0 +1,23 @@
+--- project/app/js/main.js
++++ project/app/js/main.js
+@@ -278,3 +278,20 @@ function getLastUpdated() {
+ function setLastUpdated(date) {
+   localStorage.setItem('lastUpdated', date);
+ }
++
++/* Share Target */
++
++window.addEventListener('DOMContentLoaded', () => {
++  const parsedUrl = new URL(window.location);
++  const title = parsedUrl.searchParams.get('title');
++  const text = parsedUrl.searchParams.get('text');
++  const url = parsedUrl.searchParams.get('url');
++  if (title || text || url) {
++    updateUI([{
++      title,
++      note: url && text ? `${text}: ${url}` : url || text,
++      date: '',
++      city: ''
++    }]);
++  }
++});

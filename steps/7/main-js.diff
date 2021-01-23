@@ -1,0 +1,20 @@
+--- project/app/js/main.js
++++ project/app/js/main.js
+@@ -24,6 +24,17 @@ if ('serviceWorker' in navigator) {
+         console.log(`Service Worker registration failed: ${err}`);
+       });
+   });
++
++  let deferredPrompt;
++
++  window.addEventListener('beforeinstallprompt', e => {
++    console.log('beforeInstallPrompt event detected');
++    // Prevent Chrome 76 and later from showing the mini-infobar
++    e.preventDefault();
++    // Stash the event so it can be triggered later.
++    deferredPrompt = e;
++    console.log('ready for A2HS');
++  });
+ }
+ 
+ function createIndexedDB() {

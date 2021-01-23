@@ -1,0 +1,25 @@
+--- project/app/index.html
++++ project/app/index.html
+@@ -48,7 +48,6 @@ limitations under the License.
+   <header>
+     <ul class="navbar">
+       <li class="app-title"><a class="home" href="#home"><h2>Dashboardr</h2></a></li>
+-      <li><button class="button ripple" id="install-btn" style="display: none">Install</button></li>
+       <li><img class="profile" src="images/profile/cat.jpg" alt="An adorable cat" /></li>
+     </ul>
+   </header>
+@@ -67,6 +66,14 @@ limitations under the License.
+ 
+       <ul id="container" class="container">
+         <!-- items dynamically populated -->
++        <li class="card" id="install-card" style="display: none">
++          <div class="card-text">
++            <h2>Browse events anytime you want!</h2>
++            <p>
++              <button class="button ripple" id="install-btn">Install</button>
++            </p>
++          </div>
++        </li>
+       </ul>
+ 
+     </section>

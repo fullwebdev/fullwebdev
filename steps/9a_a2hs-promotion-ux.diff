@@ -1,0 +1,72 @@
+diff --git a/project/app/index.html b/project/app/index.html
+index 9ea4226..6dea447 100644
+--- a/project/app/index.html
++++ b/project/app/index.html
+@@ -48,7 +48,6 @@ limitations under the License.
+   <header>
+     <ul class="navbar">
+       <li class="app-title"><a class="home" href="#home"><h2>Dashboardr</h2></a></li>
+-      <li><button class="button ripple" id="install-btn" style="display: none">Install</button></li>
+       <li><img class="profile" src="images/profile/cat.jpg" alt="An adorable cat" /></li>
+     </ul>
+   </header>
+@@ -67,6 +66,14 @@ limitations under the License.
+ 
+       <ul id="container" class="container">
+         <!-- items dynamically populated -->
++        <li class="card" id="install-card" style="display: none">
++          <div class="card-text">
++            <h2>Browse events anytime you want!</h2>
++            <p>
++              <button class="button ripple" id="install-btn">Install</button>
++            </p>
++          </div>
++        </li>
+       </ul>
+ 
+     </section>
+diff --git a/project/app/js/main.js b/project/app/js/main.js
+index ff39d93..45ca25e 100644
+--- a/project/app/js/main.js
++++ b/project/app/js/main.js
+@@ -25,10 +25,11 @@ if ('serviceWorker' in navigator) {
+       });
+   });
+ 
+-  const btnAdd = document.getElementById('install-btn');
++  const installCard = document.getElementById('install-card');
++  const btnAdd = installCard.querySelector('#install-btn');
+ 
+   function showInstallPromotion() {
+-    btnAdd.style.display = 'inline-block';
++    installCard.style.display = 'inline-block';
+   }
+ 
+   let deferredPrompt;
+@@ -44,7 +45,7 @@ if ('serviceWorker' in navigator) {
+ 
+   btnAdd.addEventListener('click', e => {
+     // hide our user interface that shows our A2HS button
+-    btnAdd.style.display = 'none';
++    installCard.style.display = 'none';
+     // Show the prompt
+     deferredPrompt.prompt();
+     // Wait for the user to respond to the prompt
+@@ -57,7 +58,6 @@ if ('serviceWorker' in navigator) {
+       deferredPrompt = null;
+     });
+   });
+-
+ }
+ 
+ function createIndexedDB() {
+@@ -179,7 +179,8 @@ function updateUI(events) {
+            <p>${event.note}</p>
+          </div>
+        </li>`;
+-    container.insertAdjacentHTML('beforeend', item);
++    const where = container.childElementCount < 6 ? 'afterbegin' : 'beforeend';
++    container.insertAdjacentHTML(where, item);
+   });
+ }
+ 

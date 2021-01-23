@@ -1,0 +1,10 @@
+--- project/app/index.html
++++ project/app/index.html
+@@ -70,6 +70,7 @@ limitations under the License.
+           <div class="card-text">
+             <h2>Browse events anytime you want!</h2>
+             <p>
++              <button class="button ripple" id="dismiss-btn">Not now</button>
+               <button class="button ripple" id="install-btn">Install</button>
+             </p>
+           </div>

@@ -1,0 +1,11 @@
+--- project/app/index.html
++++ project/app/index.html
+@@ -68,7 +68,7 @@ limitations under the License.
+         <!-- items dynamically populated -->
+         <li class="card" id="install-card" style="display: none">
+           <div class="card-text">
+-            <h2>Browse events anytime you want!</h2>
++            <h2>Add events where you want, when you want!</h2>
+             <p>
+               <button class="button ripple" id="dismiss-btn">Not now</button>
+               <button class="button ripple" id="install-btn">Install</button>
