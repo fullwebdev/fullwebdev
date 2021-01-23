@@ -6,6 +6,7 @@
     "packages/helpers/el",
     "packages/helpers/lazy-router",
     "packages/helpers/template",
+    "materials/*",
     "docs"
   ],
   "version": "independent"
