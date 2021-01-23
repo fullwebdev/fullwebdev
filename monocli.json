@@ -38,7 +38,7 @@
     },
     {
       "scope": "slides-vanilla",
-      "directory": "packages/slides/vanilla-1"
+      "directory": "materials/slides/vanilla-1"
     }
   ]
 }
