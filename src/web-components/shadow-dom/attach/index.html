@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shadow DOM - Attach</title>
+    <link rel="stylesheet" href="index.css" />
+    <!-- #region preload-css -->
+    <link
+      rel="preload"
+      href="bye.component.css"
+      as="style"
+    />
+    <!-- #endregion preload-css -->
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <h1>Shadow DOM - Attach</h1>
+    <!-- #region content -->
+    <div class="red">
+      <h2>The children of main are red</h2>
+      <p>The content of the paragraphs is blue</p>
+      <div id="shadow">
+        <!--
+        #shadow-root (open)
+          <p>
+            But this paragraph is isolated
+          </p>
+        -->
+      </div>
+    </div>
+    <!-- #endregion content -->
+    <!-- #region custom-element -->
+    <div class="red">
+      <poem-verse>
+        <!--
+        #shadow-root (open)
+          <p>
+            And this custom element too
+          </p>
+        -->
+      </poem-verse>
+    </div>
+    <!-- #endregion custom-element -->
+    <!-- #region styled -->
+    <div class="red">
+      <poem-author>
+        <!--
+        #shadow-root (open)
+          <style>...</style>
+          <p>...</p>
+        -->
+      </poem-author>
+    </div>
+    <!-- #endregion styled -->
+    <poem-conclusion>
+      <!--
+      #shadow-root (open)
+        <link rel="stylesheet" href="bye.component.css">
+        <p>Thx 👋</p>
+      -->
+    </poem-conclusion>
+    <!-- #region custom-element -->
+  </body>
+</html>

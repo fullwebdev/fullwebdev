@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Shadow DOM - style</title>
+    <link rel="stylesheet" href="index.css" />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <h1>Shadow DOM - style</h1>
+    <p>
+      This demo use the CSS
+      <a
+        href="https://caniuse.com/#feat=mdn-css_selectors_host-context"
+        >:host-context</a
+      >
+      pseudo-class, which is only supported by Chrome and
+      Opera. As this feature is very likely to be
+      <a
+        href="https://github.com/w3c/csswg-drafts/issues/1914"
+        >dropped from the specs</a
+      >
+      in the near future, and won't be implemented by Safari
+      and Firefox, we do not recommend to use it.
+    </p>
+    <!-- #region title -->
+    <h2><random-text class="line"></random-text></h2>
+    <!-- #endregion title -->
+    <main>
+      <random-text></random-text>
+      <random-text class="center"></random-text>
+      <random-text></random-text>
+    </main>
+  </body>
+</html>

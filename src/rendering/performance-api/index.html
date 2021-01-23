@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Performance API</title>
+    <script src="observer.js"></script>
+    <style>
+      body {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <main></main>
+    <script>
+      setTimeout(() => {
+        const main = document.createElement("main");
+        main.innerHTML = `
+          <h1>Performance API</h1>
+          <p>Open the console to see the results.</p>
+        `;
+        document.body.appendChild(main);
+      }, 1000);
+    </script>
+  </body>
+</html>

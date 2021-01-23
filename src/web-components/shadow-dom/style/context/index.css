@@ -1,0 +1,12 @@
+main {
+  padding: 1rem;
+}
+
+main > * {
+  display: block;
+  margin: 1rem 0;
+}
+
+main > :first-child {
+  text-align: right;
+}

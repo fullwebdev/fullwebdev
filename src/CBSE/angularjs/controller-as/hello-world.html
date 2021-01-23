@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>AngularJS Component - Hello World</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+    <script src="hello-world.js"></script>
+    <style>
+      hello-world {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>AngularJS 1.2 Component - Hello World</h1>
+
+    <div ng-app="helloWorldApp">
+      <!-- #region controller -->
+      <div ng-controller="MainCtrl as main">
+        <label>Name:</label>
+        <input
+          type="text"
+          ng-model="main.name"
+          placeholder="Enter a name here"
+        />
+        <hr />
+        <hello-world name="main.name"></hello-world>
+        <hr />
+        <p>Main name: {{main.name}}</p>
+      </div>
+      <!-- #endregion controller -->
+    </div>
+  </body>
+</html>

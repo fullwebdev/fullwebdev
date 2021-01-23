@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Demo JQuery</title>
+    <!-- #region css -->
+    <link rel="stylesheet" href="./slider-plugin.css" />
+    <!-- #endregion css -->
+    <style>
+      p.value {
+        text-align: center;
+        font-weight: bold;
+        font-size: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Jquery Range Slider</h1>
+    <!-- #region html -->
+    <input type="text" min="10" class="range-slider" />
+    <p class="value">?</p>
+    <!-- #endregion html -->
+
+    <!-- #region scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="./slider-plugin.js"></script>
+    <!-- #endregion scripts -->
+    <!-- #region run -->
+    <script>
+      $("input.range-slider").slider({
+        onSlide: function (position, value) {
+          $("p.value").text(value);
+        },
+      });
+    </script>
+    <!-- #endregion run -->
+  </body>
+</html>

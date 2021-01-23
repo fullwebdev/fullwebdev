@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+}
+header {
+  background-color: cadetblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+main,
+header {
+  padding: 1rem;
+}
+section {
+  padding: 1rem 2rem;
+  text-align: center;
+}
+section:nth-child(2) {
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12),
+    0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  padding: 24px;
+}
+#post {
+  text-align: justify;
+}
+section:nth-child(2) h1,
+section:nth-child(2) h2 {
+  margin-bottom: 2rem;
+}
+nav button,
+nav a {
+  display: inline-block;
+  margin: 0.2rem;
+}
+
+nav a {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+/** TODO: nav a */

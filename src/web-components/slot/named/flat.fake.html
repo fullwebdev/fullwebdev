@@ -1,0 +1,61 @@
+<!-- #region simple -->
+<demo-box>
+  #shadow-root
+    <style>
+      :host {
+        border: 1px solid
+          var(--random-text-border-color, black);
+        display: block;
+        padding: 1rem;
+      }
+    </style>
+    <h1>
+      <slot name="title">
+        <span slot="title">Hello</span> ⤵
+      </slot>
+    </h1>
+    <p>
+      <slot name="content">
+        <span slot="content">Lorem Ipsum</span> ⤵
+      </slot>
+    </p>
+    <slot></slot>
+
+  <!-- Light DOM -->
+  <span slot="content">Lorem Ipsum</span>
+  <span slot="title">Hello</span>
+</demo-box>
+<!-- #endregion simple -->
+<!-- #region multiple -->
+<demo-box>
+  #shadow-root
+    <style>
+      :host {
+        border: 1px solid
+          var(--random-text-border-color, black);
+        display: block;
+        padding: 1rem;
+      }
+    </style>
+    <h1>
+      <slot name="title">
+        <span slot="title">Good bye</span> ⤵
+      </slot>
+    </h1>
+    <p>
+      <slot name="content">
+        <span slot="content">Lorem Ipsum</span> ⤵
+        <span slot="content">dolor sit amet</span> ⤵
+      </slot>
+    </p>
+    <slot>
+      <p>Another text.</p>
+    </slot>
+
+  <!-- Light DOM -->
+  <p>Another text.</p>
+  <span slot="content">Lorem Ipsum</span>
+  <span slot="title">Good bye</span>
+  <span slot="content">dolor sit amet</span>
+</demo-box>
+<!-- #endregion multiple -->
