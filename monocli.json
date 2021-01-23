@@ -21,7 +21,7 @@
     },
     {
       "scope": "codelabs",
-      "directory": "packages/codelabs"
+      "directory": "materials/codelabs"
     },
     {
       "scope": "slides-wof-1",
