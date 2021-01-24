@@ -15,14 +15,7 @@
       }
     }
   },
-  "additionnalPages": [
-    {
-      "src": "../materials/eni-dpawm/src",
-      "base": "../materials/eni-dpawm",
-      "dest": "02-fundamentals/02-materials",
-      "extract": true
-    }
-  ],
+  "additionnalPages": [],
   "environments": {
     "prod": {
       "host": "https://fullweb.dev"
