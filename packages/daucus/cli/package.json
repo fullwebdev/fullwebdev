@@ -1,0 +1,38 @@
+{
+  "name": "@daucus/cli",
+  "version": "0.1.0",
+  "description": "Daucus CLI",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "require": "./index.cjs",
+    "default": "./index.js"
+  },
+  "bin": "bin/daucus.js",
+  "author": {
+    "name": "Noël Macé",
+    "email": "contact@noelmace.com",
+    "url": "https://noelmace.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullwebdev/fullwebdev.git",
+    "directory": "packages/daucus/cli"
+  },
+  "bugs": {
+    "url": "https://github.com/fullwebdev/fullwebdev/issues",
+    "email": "contact@noelmace.com"
+  },
+  "dependencies": {
+    "command-line-args": "^5.1.1",
+    "file-type": "^16.2.0",
+    "fs-extra": "^9.1.0",
+    "globby": "^11.0.2",
+    "node-html-parser": "^2.0.2",
+    "rimraf": "^3.0.2",
+    "snarkdown": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/command-line-args": "^5.0.0"
+  }
+}
