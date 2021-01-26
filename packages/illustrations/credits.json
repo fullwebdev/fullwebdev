@@ -1593,6 +1593,18 @@
     "type": "graphic"
   },
   {
+    "id": "wassimUrlSketch",
+    "archive_location": "/images/third-party/url-manekinekko.png (src .jpg)",
+    "author": [{ "literal": "Wassim Chegham" }],
+    "citation-label": "wassimUrlSketch",
+    "issued": { "date-parts": [[2020, 7, 10]] },
+    "language": "en",
+    "medium": "CC BY-NC-SA 2.0",
+    "title": "What happens when you type a url in an address bar in a browser ?",
+    "type": "graphic",
+    "URL": "https://twitter.com/manekinekko/status/1281704000572858375"
+  },
+  {
     "id": "WebdevFatigueImg",
     "abstract": "dérivé de stackOfBooks & sweatingIcon",
     "archive_location": "/images/funamentals/webdev-fatigue.png (src: .xcf)",
