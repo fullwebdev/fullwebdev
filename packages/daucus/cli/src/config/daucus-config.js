@@ -3,6 +3,8 @@ import { absoluteFrom } from "../system/path.js";
 
 /** @typedef {import('../../types/DaucusConfig').DaucusConfig} DaucusConfig */
 
+export const CONFIG_FILE_EXTENSIONS = [".json", ".js", ".mjs", ".cjs"];
+
 /**
  * create a valid configuration object
  * @param {Partial<DaucusConfig>} params

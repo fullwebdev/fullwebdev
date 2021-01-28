@@ -92,7 +92,12 @@ export function findWorkspace(from = "") {
   from = resolve(from);
 
   let fileFound = findUp(
-    [CONFIG_FILE_NAME + ".json", CONFIG_FILE_NAME + ".js", ".git"],
+    [
+      ...daucusConfig.CONFIG_FILE_EXTENSIONS.map(
+        (ext) => CONFIG_FILE_NAME + ext
+      ),
+      ".git",
+    ],
     from
   );
 
