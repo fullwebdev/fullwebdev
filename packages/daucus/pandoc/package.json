@@ -5,7 +5,6 @@
   "license": "MIT",
   "type": "module",
   "main": "index.js",
-  "bin": "bin/pandaucus.js",
   "author": {
     "name": "Noël Macé",
     "email": "contact@noelmace.com",
@@ -19,9 +18,5 @@
   "bugs": {
     "url": "https://github.com/fullwebdev/fullwebdev/issues",
     "email": "contact@noelmace.com"
-  },
-  "dependencies": {
-  },
-  "devDependencies": {
   }
 }

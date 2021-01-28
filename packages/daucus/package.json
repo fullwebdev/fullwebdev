@@ -14,11 +14,15 @@
   "license": "MIT",
   "devDependencies": {
     "@daucus/pandoc": "^0.1.0",
+    "@types/html-minifier": "^4.0.0",
     "chai": "^4.2.0",
     "chai-fs": "^2.0.0",
     "mocha": "^8.2.1",
     "mock-fs": "^4.13.0",
     "sinon": "^9.2.4",
     "sinon-chai": "^3.5.0"
+  },
+  "dependencies": {
+    "html-minifier": "^4.0.0"
   }
 }
