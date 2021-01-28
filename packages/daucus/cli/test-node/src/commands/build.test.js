@@ -10,7 +10,7 @@ import {
 const { expect } = chai;
 chai.use(chaiFS);
 
-describe("[E2E] BuildCommand", () => {
+describe("BuildCommand", () => {
   it("convert pages (default compiler)", async () => {
     const wp = await fixtureWorkspace("default");
     const cmd = new BuildCommand(wp);
@@ -39,7 +39,7 @@ describe("[E2E] BuildCommand", () => {
 
     // TODO: clean strings
     expect(norm(output.html.parse("pages/hello-world.html"))).equals(
-      `<h1 id="hello-world">Hello World!</h1><pre><code class="language-js">console.log("Hello World!");\n</code></pre> `
+      `<h1 id=hello-world>Hello World!</h1><pre><code class=language-js>console.log("Hello World!");</code></pre>`
     );
     expect(await output.html.list()).to.deep.equal(["pages/hello-world.html"]);
   });
