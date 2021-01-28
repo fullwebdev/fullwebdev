@@ -2,7 +2,9 @@
   "name": "@fullweb/docs",
   "version": "1.0.0-alpha.1",
   "private": true,
+  "type": "module",
   "scripts": {
+    "build:daucus": "daucus build",
     "build": "panpress -v",
     "start": "panpress --dev",
     "server": "panpress --serve",
@@ -19,6 +21,8 @@
     "url": "https://github.com/fullwebdev/fullwebdev/issues"
   },
   "devDependencies": {
+    "@daucus/cli": "^0.1.0",
+    "@daucus/pandoc": "^0.1.0",
     "@panpress/cli": "^0.3.0-beta.5",
     "@snowpack/plugin-build-script": "^2.0.6",
     "@types/prismjs": "^1.16.1",
