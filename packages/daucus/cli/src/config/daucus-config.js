@@ -41,6 +41,9 @@ export function makeAllPathsAbsolute(config, from = process.cwd()) {
   if (config.defaultCompiler) {
     rslt.defaultCompiler = config.defaultCompiler;
   }
+  if (config.htmlMinifierOptions) {
+    rslt.htmlMinifierOptions = config.htmlMinifierOptions;
+  }
 
   if (config.projects) {
     rslt.projects = Object.fromEntries(

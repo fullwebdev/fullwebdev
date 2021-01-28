@@ -13,10 +13,12 @@ export async function loadCompiler(name) {
     const { md2html } = await import("@daucus/pandoc");
     return md2html;
   } catch (e) {
-    // console.warn(
-    //   "can't find @daucus/pandoc package - falling back to snarkdown"
-    // );
-    // return snarkdown;
-    throw new Error("no @daucus/pandoc package");
+    if (name === "pandoc") {
+      throw new Error("can't find the @daucus/pandoc package");
+    }
+    console.warn(
+      "can't find @daucus/pandoc package - falling back to snarkdown"
+    );
+    return snarkdown;
   }
 }

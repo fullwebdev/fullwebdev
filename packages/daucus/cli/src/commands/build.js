@@ -4,7 +4,9 @@ import { loadCompiler } from "../compilers/load.js";
 import rimraf from "rimraf";
 import globby from "globby";
 import { ensureDirSync, ensureDir } from "../system/path.js";
-import { dirname } from "path";
+import { dirname, relative } from "path";
+import Gauge from "gauge";
+import HTMLMin from "html-minifier";
 
 /**
  * @typedef {import('../../types/DaucusConfig').DaucusConfig} DaucusConfig
@@ -27,6 +29,14 @@ export class BuildCommand {
    */
   constructor(workspace) {
     this.workspace = workspace;
+    this._compileLog = {
+      gauge: new Gauge(process.stdout, {
+        updateInterval: 50,
+        theme: "colorASCII",
+        cleanupOnExit: true,
+      }),
+      progress: 0,
+    };
   }
 
   /**
@@ -47,19 +57,22 @@ export class BuildCommand {
     /**
      * @type {Array<[string, ProjectConfig]>}
      */
-    const projects = params.project
+    this.projects = params.project
       ? [[params.project, this.config.projects[params.project]]]
       : Object.entries(this.config.projects);
 
-    for (const [name, project] of projects) {
-      await this._compileProject(project);
+    console.log("compiling projects");
+    this._logCompileProgress("init...");
+    for (const [name, project] of this.projects) {
+      await this._compileProject(name, project);
     }
+    this._closeLogProgress();
     ///////////// TODO-HERE ////////
     // copy js files
     // build menu
   }
 
-  async _compileProject(project) {
+  async _compileProject(name, project) {
     const paths = await globby(project.src, {
       absolute: true,
       cwd: project.root,
@@ -77,9 +90,14 @@ export class BuildCommand {
           path.basename(filePath, ".md") + ".html"
         );
         await ensureDir(dirname(destFilePath));
-        return asyncFs.writeFile(destFilePath, html, {
+        const rslt = await asyncFs.writeFile(destFilePath, html, {
           encoding: "utf8",
         });
+        this._logCompileProgress(
+          `[${name}] ${relative(project.root, filePath)}`,
+          1 / this.projects.length / paths.length
+        );
+        return rslt;
       })
     );
   }
@@ -99,7 +117,8 @@ export class BuildCommand {
       try {
         // TODO: allow other extensions
         // TODO: minify html
-        return compiler(md, root);
+        const html = await compiler(md, root);
+        return HTMLMin.minify(html, this.config.htmlMinifierOptions);
       } catch (e) {
         console.warn(`could not convert ${filePath} to html`);
         return;
@@ -122,5 +141,19 @@ export class BuildCommand {
     }
 
     return loadCompiler(compilerFromConfig);
+  }
+
+  _logCompileProgress(msg, step = 0) {
+    this._compileLog.progress += step;
+    this._compileLog.gauge.show(
+      `${Math.round(this._compileLog.progress * 100)}% - ${msg}`,
+      this._compileLog.progress
+    );
+  }
+
+  _closeLogProgress() {
+    this._compileLog.gauge.disable();
+    this._compileLog.progress = 0;
+    console.log("done ✓");
   }
 }

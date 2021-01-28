@@ -8,7 +8,9 @@
     "require": "./index.cjs",
     "default": "./index.js"
   },
-  "bin": "bin/daucus.js",
+  "bin": {
+    "daucus": "bin/daucus.js"
+  },
   "author": {
     "name": "Noël Macé",
     "email": "contact@noelmace.com",
@@ -27,6 +29,7 @@
     "command-line-args": "^5.1.1",
     "file-type": "^16.2.0",
     "fs-extra": "^9.1.0",
+    "gauge": "^3.0.0",
     "globby": "^11.0.2",
     "node-html-parser": "^2.0.2",
     "rimraf": "^3.0.2",

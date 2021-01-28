@@ -3,7 +3,7 @@ import { exec, workspaceInfos } from "../../fixtures/index.js";
 
 const { expect } = chai;
 
-describe("[E2E] CLI", async () => {
+describe("CLI", async () => {
   it("build", async () => {
     const cmd = await exec("build", "default/pages");
     const { output } = await workspaceInfos(cmd.workspace);

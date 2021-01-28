@@ -19,7 +19,7 @@ describe("[E2E] BuildCommand", () => {
 
     const { output, config } = await workspaceInfos(wp);
 
-    expect(config.defaultCompiler).equals("pandoc");
+    expect(config.defaultCompiler).to.not.be.ok;
 
     expect(
       output.html.parse("pages/hello-world.html").querySelector("h1").rawText
@@ -39,9 +39,7 @@ describe("[E2E] BuildCommand", () => {
 
     // TODO: clean strings
     expect(norm(output.html.parse("pages/hello-world.html"))).equals(
-      `<h1 id="hello-world">Hello World!</h1><pre><code class="language-js">console.log(&quot;Hello World!&quot;);
-</code></pre>
-`
+      `<h1 id="hello-world">Hello World!</h1><pre><code class="language-js">console.log("Hello World!");\n</code></pre> `
     );
     expect(await output.html.list()).to.deep.equal(["pages/hello-world.html"]);
   });

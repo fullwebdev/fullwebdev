@@ -59,7 +59,6 @@ describe("workspace", () => {
         );
         expect(await workspace.getConfig()).to.deep.equals(
           {
-            defaultCompiler: "pandoc",
             output: resolve("daucus", config.output),
             projects: {
               default: {
@@ -67,6 +66,7 @@ describe("workspace", () => {
                 root: resolve("daucus", "pages"),
               },
             },
+            htmlMinifierOptions: defaultConfig.htmlMinifierOptions,
           },
           "define config"
         );
@@ -79,7 +79,6 @@ describe("workspace", () => {
         );
         expect(workspace.root).equals(resolve("daucus-root"));
         expect(await workspace.getConfig()).to.deep.equals({
-          defaultCompiler: "pandoc",
           output: resolve("daucus-root", config.output),
           projects: {
             default: {
@@ -87,6 +86,7 @@ describe("workspace", () => {
               root: resolve("daucus-root", "pages"),
             },
           },
+          htmlMinifierOptions: defaultConfig.htmlMinifierOptions,
         });
       });
 
@@ -111,7 +111,6 @@ describe("workspace", () => {
         );
         expect(await workspace.getConfig()).to.deep.equals(
           {
-            defaultCompiler: "pandoc",
             output: resolve(root, "dist/daucus"),
             projects: {
               default: {
@@ -119,6 +118,7 @@ describe("workspace", () => {
                 root: resolve(root, "pages"),
               },
             },
+            htmlMinifierOptions: defaultConfig.htmlMinifierOptions,
           },
           "define config"
         );
