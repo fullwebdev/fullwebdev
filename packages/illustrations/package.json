@@ -3,7 +3,7 @@
   "version": "1.0.0-alpha.1",
   "private": true,
   "scripts": {
-    "build": "npm run clean && concurrently \"npm:mermaid\" \"npm:uml\" \"npm:marble\"",
+    "build": "npm run clean && concurrently \"npm:mermaid\" \"npm:uml\"",
     "clean": "rimraf graphs/images && mkdirp graphs/images",
     "uml": "node scripts/build-uml.js",
     "mermaid": "bash scripts/build-mermaid.sh",
