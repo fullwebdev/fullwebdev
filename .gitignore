@@ -21,3 +21,4 @@ node_modules
 .~lock*
 *.*~
 *.autosave
+_daucus_
