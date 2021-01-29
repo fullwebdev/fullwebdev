@@ -4,9 +4,10 @@ import { loadCompiler } from "../compilers/load.js";
 import rimraf from "rimraf";
 import globby from "globby";
 import { ensureDirSync, ensureDir } from "../system/path.js";
-import { dirname, relative } from "path";
+import { dirname, relative, resolve } from "path";
 import Gauge from "gauge";
 import HTMLMin from "html-minifier";
+import { createRouteFor } from "../routing/routes.js";
 
 /**
  * @typedef {import('../../types/DaucusConfig').DaucusConfig} DaucusConfig
@@ -64,42 +65,99 @@ export class BuildCommand {
     console.log("compiling projects");
     this._logCompileProgress("init...");
     for (const [name, project] of this.projects) {
-      await this._compileProject(name, project);
+      await this._buildProject(name, project);
     }
     this._closeLogProgress();
     ///////////// TODO-HERE ////////
     // copy js files
-    // build menu
   }
 
-  async _compileProject(name, project) {
+  async _buildProject(name, project) {
     const paths = await globby(project.src, {
       absolute: true,
       cwd: project.root,
     });
-    return Promise.all(
+
+    const outDir = resolve(
+      this.root,
+      this.config.output,
+      path.basename(project.root)
+    );
+
+    await ensureDir(outDir);
+
+    const compiler = await this.getCompilerFor(project);
+
+    // TODO : typing
+    const routes = { children: {} };
+    await Promise.all(
       paths.map(async (filePath) => {
-        const compiler = await this.getCompilerFor(project);
+        const relativeFilePath = path.relative(project.root, filePath);
+
         const html = await this._compileFile(compiler, filePath, project.root);
-        const destFilePath = path.resolve(
-          this.root,
-          this.config.output,
-          path.basename(project.root),
-          path.relative(project.root, path.dirname(filePath)),
+
+        const relativeOutputFilePath = path.join(
+          path.dirname(relativeFilePath),
           // TODO: allow other extensions
-          path.basename(filePath, ".md") + ".html"
+          path.basename(relativeFilePath, ".md") + ".html"
         );
-        await ensureDir(dirname(destFilePath));
-        const rslt = await asyncFs.writeFile(destFilePath, html, {
-          encoding: "utf8",
+
+        await this._saveCompiledFile(outDir, relativeOutputFilePath, html);
+
+        const [routeKey, route] = createRouteFor(
+          html,
+          relativeOutputFilePath,
+          project.root
+        );
+
+        const routeParents = route.path.split("/").filter((p) => p);
+        if (routeKey) {
+          routeParents.pop();
+        }
+
+        let acc = routes;
+        routeParents.forEach((elmt, i) => {
+          if (!acc.children) {
+            acc.children = {};
+          }
+          if (!acc.children[elmt]) {
+            acc.children[elmt] = {};
+          }
+          acc = acc.children[elmt];
         });
+
+        if (routeKey) {
+          if (!acc.children) {
+            acc.children = {};
+          }
+          acc.children[routeKey] = route;
+        } else {
+          Object.assign(acc, route);
+        }
+
         this._logCompileProgress(
           `[${name}] ${relative(project.root, filePath)}`,
           1 / this.projects.length / paths.length
         );
-        return rslt;
       })
     );
+
+    await this._saveProjectRoutes(outDir, routes);
+  }
+
+  async _saveProjectRoutes(dir, routes) {
+    const content = `export default ${JSON.stringify(routes, null, 2)}`;
+    await asyncFs.writeFile(path.resolve(dir, "routes.js"), content, {
+      encoding: "utf8",
+    });
+  }
+
+  async _saveCompiledFile(dir, relativeOutputFilePath, html) {
+    const destFilePath = path.resolve(dir, relativeOutputFilePath);
+    await ensureDir(dirname(destFilePath));
+    return asyncFs.writeFile(destFilePath, html, {
+      encoding: "utf8",
+    });
   }
 
   async _compileFile(compiler, filePath, root) {
@@ -116,7 +174,6 @@ export class BuildCommand {
       }
       try {
         // TODO: allow other extensions
-        // TODO: minify html
         const html = await compiler(md, root);
         return HTMLMin.minify(html, this.config.htmlMinifierOptions);
       } catch (e) {

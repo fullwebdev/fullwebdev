@@ -24,7 +24,14 @@ describe("BuildCommand", () => {
     expect(
       output.html.parse("pages/hello-world.html").querySelector("h1").rawText
     ).equals("Hello World!");
-    expect(await output.html.list()).to.deep.equal(["pages/hello-world.html"]);
+    expect(await output.html.list()).to.deep.equal([
+      "pages/README.html",
+      "pages/hello-world.html",
+      "pages/01-first-part/index.html",
+      "pages/01a-after-first-part/README.html",
+      "pages/02-second-part/01-first-file.html",
+      "pages/02-second-part/0b-another-file.html",
+    ]);
   });
 
   it("convert pages w/ code snippets (pandoc)", async () => {
