@@ -11,7 +11,7 @@ const { expect } = chai;
 chai.use(chaiFS);
 
 describe("BuildCommand", () => {
-  it("convert pages (default compiler)", async () => {
+  it("convert pages & create routes (default compiler)", async () => {
     const wp = await fixtureWorkspace("default");
     const cmd = new BuildCommand(wp);
 
@@ -24,14 +24,19 @@ describe("BuildCommand", () => {
     expect(
       output.html.parse("pages/hello-world.html").querySelector("h1").rawText
     ).equals("Hello World!");
-    expect(await output.html.list()).to.deep.equal([
-      "pages/README.html",
-      "pages/hello-world.html",
-      "pages/01-first-part/index.html",
-      "pages/01a-after-first-part/README.html",
-      "pages/02-second-part/01-first-file.html",
-      "pages/02-second-part/0b-another-file.html",
-    ]);
+    expect(await output.html.list()).to.deep.equal(
+      [
+        "pages/README.html",
+        "pages/hello-world.html",
+        "pages/01-first-part/index.html",
+        "pages/01a-after-first-part/README.html",
+        "pages/02-second-part/01-first-file.html",
+        "pages/02-second-part/0b-another-file.html",
+      ].sort()
+    );
+
+    const routes = await output.routes();
+    expect(routes.config).to.deep.equal(routes.snapshot);
   });
 
   it("convert pages w/ code snippets (pandoc)", async () => {

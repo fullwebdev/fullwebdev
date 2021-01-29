@@ -1,6 +1,6 @@
 import HTML from "node-html-parser";
 import { esmDirName } from "../../src/system/path.js";
-import { dirname, resolve } from "path";
+import { dirname, relative, resolve } from "path";
 import { WorkSpace as DaucusWorkspace } from "../../src/config/workspace.js";
 import { readFileSync } from "fs";
 import { DaucusCLI } from "../../src/cli/DaucusCLI.js";
@@ -26,20 +26,39 @@ export const configs = {
   ),
 };
 
-export const outputDirectory = (dir) => (relativePath) => {
-  const path = resolve(dir, relativePath);
-  const content = readFileSync(path, { encoding: "utf8" });
-  return HTML.parse(content);
-};
-
+/**
+ *
+ * @param {DaucusWorkspace} workspace
+ */
 export async function workspaceInfos(workspace) {
-  const config = await workspace.getConfig();
+  const wpConfig = await workspace.getConfig();
   return {
-    config,
+    config: wpConfig,
     output: {
       html: {
-        list: () => globby("**/*.html", { cwd: config.output }),
-        parse: outputDirectory(config.output),
+        list: async () =>
+          (await globby("**/*.html", { cwd: wpConfig.output })).sort(),
+        parse: (relativePath) => {
+          const path = resolve(wpConfig.output, relativePath);
+          const content = readFileSync(path, { encoding: "utf8" });
+          return HTML.parse(content);
+        },
+      },
+      routes: async (project = "default") => {
+        const projectRoot = relative(
+          workspace.root,
+          wpConfig.projects[project].root
+        );
+        const configPath = resolve(wpConfig.output, projectRoot, "routes.js");
+        const config = (await import(configPath)).default;
+        const snapshotPath = resolve(
+          workspace.root,
+          "_snapshots_",
+          projectRoot,
+          "routes.js"
+        );
+        const snapshot = (await import(snapshotPath)).default;
+        return { config, snapshot };
       },
     },
   };
