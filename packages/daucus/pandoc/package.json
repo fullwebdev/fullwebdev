@@ -10,6 +10,9 @@
     "email": "contact@noelmace.com",
     "url": "https://noelmace.com"
   },
+  "scripts": {
+    "postinstall": "node download.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/fullwebdev/fullwebdev.git",
@@ -18,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/fullwebdev/fullwebdev/issues",
     "email": "contact@noelmace.com"
+  },
+  "dependencies": {
+    "download": "^8.0.0"
   }
 }

@@ -1,19 +1,17 @@
 import { Readable } from "stream";
 import { spawn } from "child_process";
 import * as path from "path";
-import { fileURLToPath } from "url";
-import { statSync, readdirSync } from "fs";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import { esmDirName } from "./utils.js";
 
 /**
  * absolute path to Pandoc binary
- * FIXME: only suport linux-amd64 for now
  */
-export function pandocBinPath() {
-  return path.resolve(__dirname, "_pandoc_", "bin", "linux-amd64", "pandoc");
-}
+export const PANDOC_BIN = path.resolve(
+  esmDirName(import.meta),
+  "_pandoc_",
+  "bin",
+  process.platform === "win32" ? "pandoc.exe" : "pandoc"
+);
 
 /**
  * run a pandoc command
@@ -25,7 +23,7 @@ export function pandocBinPath() {
  * @returns {Promise<{output: string; errors: string;}>}
  */
 export function run(args, cwd, src) {
-  const pandocProcess = spawn(pandocBinPath(), args, cwd ? { cwd } : {});
+  const pandocProcess = spawn(PANDOC_BIN, args, cwd ? { cwd } : {});
 
   let output = "";
   let errors = "";
@@ -113,7 +111,12 @@ export function md2html(md, root, filters = [], luaFilters = [], opts = []) {
     // TODO : don't rely on a global dependency & check if python is available
     ["pandoc-import-code", ...filters],
     [
-      path.resolve(__dirname, "_pandoc_", "filters", "standard-code.lua"),
+      path.resolve(
+        esmDirName(import.meta),
+        "_pandoc_",
+        "filters",
+        "standard-code.lua"
+      ),
       ...luaFilters,
     ],
     ["no-highlight", ...opts]
