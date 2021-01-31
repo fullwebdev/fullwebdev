@@ -5,7 +5,8 @@
   "scripts": {
     "validate-types": "tsc",
     "start": "es-dev-server --compatibility none",
-    "test": "npm run validate-types && web-test-runner _test_/**/*.test.js --coverage",
+    "test": "npm run validate-types && npm run test:web",
+    "test:web": "web-test-runner _test_/**/*.test.js --coverage",
     "test:watch": "web-test-runner _test_/**/*.test.js --watch"
   },
   "repository": {
@@ -30,6 +31,7 @@
     "@open-wc/testing": "^2.5.24",
     "@web/test-runner": "^0.7.6",
     "es-dev-server": "^1.57.1",
+    "sinon": "^9.2.4",
     "typescript": "^4.0.2"
   }
 }
