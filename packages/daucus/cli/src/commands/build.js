@@ -153,6 +153,10 @@ export class BuildCommand {
   }
 
   async _saveCompiledFile(dir, relativeOutputFilePath, html) {
+    if (!html) {
+      console.warn(`ignoring empty file ${relativeOutputFilePath}`);
+      return;
+    }
     const destFilePath = path.resolve(dir, relativeOutputFilePath);
     await ensureDir(dirname(destFilePath));
     return asyncFs.writeFile(destFilePath, html, {
@@ -169,15 +173,18 @@ export class BuildCommand {
        */
       let md = await asyncFs.readFile(filePath, { encoding: "utf8" });
       if (!md) {
-        console.warn(`ignoring empty file ${filePath}`);
         return;
       }
       try {
         // TODO: allow other extensions
         const html = await compiler(md, root);
+        if (!html) {
+          return;
+        }
         return HTMLMin.minify(html, this.config.htmlMinifierOptions);
       } catch (e) {
-        console.warn(`could not convert ${filePath} to html`);
+        console.warn(`failed conversion of ${filePath} to html:`);
+        console.warn(e.message);
         return;
       }
     } else {

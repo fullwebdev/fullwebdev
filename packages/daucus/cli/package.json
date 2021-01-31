@@ -37,5 +37,8 @@
   },
   "devDependencies": {
     "@types/command-line-args": "^5.0.0"
+  },
+  "optionalDependencies": {
+    "@daucus/pandoc": "~0.1.0"
   }
 }

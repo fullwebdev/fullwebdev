@@ -63,7 +63,7 @@ describe("workspace", () => {
             projects: {
               default: {
                 src: "**/*.md",
-                root: resolve("daucus", "pages"),
+                root: resolve("daucus", "docs"),
               },
             },
             htmlMinifierOptions: defaultConfig.htmlMinifierOptions,
@@ -83,7 +83,7 @@ describe("workspace", () => {
           projects: {
             default: {
               src: "**/*.md",
-              root: resolve("daucus-root", "pages"),
+              root: resolve("daucus-root", "docs"),
             },
           },
           htmlMinifierOptions: defaultConfig.htmlMinifierOptions,
@@ -115,7 +115,7 @@ describe("workspace", () => {
             projects: {
               default: {
                 src: "**/*.md",
-                root: resolve(root, "pages"),
+                root: resolve(root, "docs"),
               },
             },
             htmlMinifierOptions: defaultConfig.htmlMinifierOptions,

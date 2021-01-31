@@ -5,7 +5,7 @@ export const CONFIG_FILE_NAME = "daucus.config";
  */
 export const defaultProject = {
   src: "**/*.md",
-  root: "pages",
+  root: "docs",
 };
 
 /**

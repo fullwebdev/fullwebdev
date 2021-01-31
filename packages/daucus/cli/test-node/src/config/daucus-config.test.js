@@ -24,7 +24,7 @@ describe("daucus-config", () => {
       const rslt = daucusConfig.create(mockConfig);
       const defaultProject = rslt.projects.default;
       expect(defaultProject.src).equals("**/*.md", "for all markdown files");
-      expect(defaultProject.root).equals("pages", "in the 'pages' directory");
+      expect(defaultProject.root).equals("docs", "in the 'docs' directory");
     });
 
     it("do not override projects", () => {
