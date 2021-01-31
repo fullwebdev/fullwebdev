@@ -32,6 +32,22 @@
     {
       "filename": "lazy-router/package-lock.json",
       "type": "json"
+    },
+    {
+      "filename": "routing/package-lock.json",
+      "type": "json"
+    },
+    {
+      "filename": "routing/package.json",
+      "type": "json"
+    },
+    {
+      "filename": "navigation/package-lock.json",
+      "type": "json"
+    },
+    {
+      "filename": "navigation/package.json",
+      "type": "json"
     }
   ],
   "tag-prefix": "helpers@v",
