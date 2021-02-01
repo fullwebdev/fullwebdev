@@ -1,4 +1,5 @@
 {
+  "name": "@daucus/snowpack-template",
   "private": true,
   "scripts": {
     "start": "snowpack dev",
