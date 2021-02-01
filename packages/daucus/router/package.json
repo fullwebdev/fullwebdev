@@ -1,0 +1,28 @@
+{
+  "name": "@daucus/router",
+  "version": "0.1.0",
+  "description": "runtime routing & navigation for Daucus",
+  "license": "MIT",
+  "main": "index.js",
+  "module": "index.js",
+  "type": "module",
+  "types": "index.d.ts",
+  "author": {
+    "name": "Noël Macé",
+    "email": "contact@noelmace.com",
+    "url": "https://noelmace.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullwebdev/fullwebdev.git",
+    "directory": "packages/daucus/router"
+  },
+  "bugs": {
+    "url": "https://github.com/fullwebdev/fullwebdev/issues",
+    "email": "contact@noelmace.com"
+  },
+  "dependencies": {
+    "@daucus/html-loader": "^0.1.0",
+    "@modern-helpers/router": "^0.2.1"
+  }
+}

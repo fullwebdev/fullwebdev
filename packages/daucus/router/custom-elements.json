@@ -1,0 +1,50 @@
+{
+  "version": 2,
+  "tags": [
+    {
+      "name": "daucus-router",
+      "description": "routing wrapper element for Daucus Routes",
+      "properties": [
+        {
+          "name": "routes",
+          "type": "Object",
+          "description": "Daucus Routes"
+        },
+        {
+          "name": "default-path",
+          "type": "String",
+          "description": "path of the default route",
+          "default": "/docs/"
+        },
+        {
+          "name": "base-dir",
+          "type": "String",
+          "description": "directory where templates are published, relative to the baseHRef (should end with a /)",
+          "default": "templates/"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "cssProperties": []
+    },
+    {
+      "name": "daucus-router-outlet",
+      "description": "load and render html template files",
+      "properties": [
+        {
+          "name": "href",
+          "type": "string",
+          "description": "url of the template"
+        },
+        {
+          "name": "fallback",
+          "type": "string",
+          "description": "url of the default template"
+        }
+      ],
+      "events": ["html-loaded"],
+      "slots": [],
+      "cssProperties": []
+    }
+  ]
+}
