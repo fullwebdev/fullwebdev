@@ -5,6 +5,7 @@
     "materials/slides/*",
     "packages/helpers/el",
     "packages/helpers/lazy-router",
+    "packages/helpers/router",
     "packages/helpers/template",
     "packages/daucus/*",
     "materials/*",
