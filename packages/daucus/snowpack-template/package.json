@@ -19,15 +19,15 @@
     "email": "contact@noelmace.com"
   },
   "dependencies": {
+    "@daucus/router": "^0.1.0",
     "lit-element": "^2.4.0",
-    "lit-html": "^1.3.0",
-    "@daucus/html-loader": "^0.1.0"
+    "lit-html": "^1.3.0"
   },
   "devDependencies": {
-    "@daucus/cli": "^0.1.0",
-    "@daucus/pandoc": "^0.1.0",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@daucus/cli": "^0.1.0",
+    "@daucus/pandoc": "^0.1.0",
     "@snowpack/plugin-babel": "^2.1.6",
     "@snowpack/plugin-dotenv": "^2.0.5",
     "prettier": "^2.0.5",

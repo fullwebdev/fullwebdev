@@ -1,5 +1,5 @@
 module.exports = {
-  output: 'daucus',
+  output: 'templates',
   // defaultCompiler: "pandoc",
   // projects: {
   //   docs: {

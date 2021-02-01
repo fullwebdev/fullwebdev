@@ -1,8 +1,16 @@
 import { LitElement, html, css } from 'lit-element';
 
-// OR import '@daucus/html-loader/html-loader.js'; for <html-loader>
-import { HTMLLoaderElement } from '@daucus/html-loader';
-customElements.define('daucus-outlet', HTMLLoaderElement);
+/*
+ * You can also use @daucus/html-loader and/or @modern-helpers/router
+ * instead of @daucus/router if you need less abstraction
+ *
+ * import '@daucus/html-loader/html-loader.js';
+ * import { Router } from '@modern-helpers/router.js;
+ */
+
+import '@daucus/router/daucus-router';
+import '@daucus/router/daucus-router-outlet';
+import daucusRoutes from '/templates/routes.js';
 
 class AppRoot extends LitElement {
   static get properties() {
@@ -18,35 +26,24 @@ class AppRoot extends LitElement {
 
   static get styles() {
     return css`
-      h1 {
-        font-size: 4rem;
-      }
-      .wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 100vh;
-        background-color: #2196f3;
-        background: linear-gradient(315deg, #b4d2ea 0%, #2196f3 100%);
-        font-size: 24px;
-      }
-      .link {
-        color: white;
+      :host {
+        padding: 2rem 2.5rem;
+        margin: 0 auto;
+        max-width: 740px;
+        display: block;
+        text-align: center;
       }
 
-      daucus-outlet {
-        max-width: 1024px;
-        background-color: #fff;
-        color: #000;
+      daucus-router-outlet {
+        display: block;
+        border: solid #000 2px;
         border-radius: 20px;
         padding: 2rem;
-        margin: 2rem;
+        margin: 2rem 0;
+        text-align: justify;
       }
 
-      daucus-outlet h1 {
-        font-size: 3rem;
-        text-align: center;
+      daucus-router-outlet h1 {
         margin-top: 0;
       }
     `;
@@ -54,9 +51,22 @@ class AppRoot extends LitElement {
 
   render() {
     return html`
-      <div class="wrapper">
+      <daucus-router .routes=${daucusRoutes} default-path="/docs/">
         <h1>Daucus + LitElement + Snowpack</h1>
         <p>Edit <code>src/app-root.js</code> and save to reload.</p>
+        <nav>
+          <ol>
+            <li>
+              <a href="/docs/lorem/">lorem</a> &gt;
+              <a href="/docs/lorem/hello">hello</a>
+            </li>
+            <li>
+              <a href="/docs/ipsum/">ipsum</a> &gt;
+              <a href="/docs/ipsum/world">world</a>
+            </li>
+          </ol>
+        </nav>
+        <daucus-router-outlet></daucus-router-outlet>
         <a
           class="link"
           href="https://fullweb.dev/"
@@ -65,8 +75,7 @@ class AppRoot extends LitElement {
         >
           ${this.message}
         </a>
-        <daucus-outlet href="/docs/" fallback="/docs/404.html"></daucus-outlet>
-      </div>
+      </daucus-router>
     `;
   }
 }
