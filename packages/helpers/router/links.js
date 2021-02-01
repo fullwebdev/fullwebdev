@@ -6,7 +6,7 @@
  *
  * @param {import('./index.d.ts').PathUpdated} pathUpdatedCallback
  */
-export const clickEventHandler = (pathUpdatedCallback) => {
+export const clickEventHandler = (baseUrl) => (pathUpdatedCallback) => {
   return (e) => {
     if (
       e.defaultPrevented ||

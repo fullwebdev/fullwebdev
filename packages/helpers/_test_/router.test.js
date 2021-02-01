@@ -80,7 +80,7 @@ describe("router", () => {
       expect(window.addEventListener).to.have.been.calledWith("popstate");
     });
 
-    it("listen clicks on document.body", async () => {
+    it("listen clicks on document.body by default", async () => {
       await router.run();
       expect(document.body.addEventListener).to.have.been.calledWith("click");
     });
@@ -89,6 +89,14 @@ describe("router", () => {
       spy(router, "navigate");
       await router.run();
       expect(router.navigate).to.have.been.called;
+    });
+
+    it("allow to restrict click listener to an element", async () => {
+      const root = document.createElement("div");
+      stub(root, "addEventListener");
+      await router.run(root);
+      expect(root.addEventListener).to.have.been.calledWith("click");
+      expect(document.body.addEventListener).to.not.have.been.called;
     });
   });
 });

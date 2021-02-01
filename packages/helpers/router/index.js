@@ -39,10 +39,12 @@ export class Router {
     }
   }
 
-  async run() {
-    document.body.addEventListener(
+  async run(root = document.body) {
+    root.addEventListener(
       "click",
-      clickEventHandler((path, event) => this.navigate(path, { event }))
+      clickEventHandler(this.base)((path, event) =>
+        this.navigate(path, { event })
+      )
     );
 
     window.addEventListener("popstate", (event) => {
