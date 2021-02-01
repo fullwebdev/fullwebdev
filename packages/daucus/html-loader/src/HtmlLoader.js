@@ -1,8 +1,8 @@
-const errMsg = msg => `<p class="html-loader__error">${msg}</p>`;
+const errMsg = (msg) => `<p class="html-loader__error">${msg}</p>`;
 
 export class HTMLLoaderElement extends HTMLElement {
   static get observedAttributes() {
-    return ['href'];
+    return ["href"];
   }
 
   constructor() {
@@ -11,23 +11,29 @@ export class HTMLLoaderElement extends HTMLElement {
   }
 
   set href(path) {
-    this.setAttribute('href', path);
+    this.setAttribute("href", path);
   }
 
   get href() {
-    return this.getAttribute('href');
+    return this.getAttribute("href");
   }
 
   get fallback() {
-    return this.getAttribute('fallback');
+    return this.getAttribute("fallback");
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'href' && oldValue !== newValue) {
+    if (name === "href" && oldValue !== newValue) {
       this._render(newValue);
     }
   }
 
+  // TODO: debounce
+  /**
+   *
+   * @param {string} href
+   * @param {boolean} shouldFallback
+   */
   async _loadHTML(href, shouldFallback = true) {
     if (this._cache.has(href)) return this._cache.get(href).cloneNode(true);
 
@@ -44,7 +50,7 @@ export class HTMLLoaderElement extends HTMLElement {
       }
       html = errMsg(err.message);
     }
-    const template = document.createElement('template');
+    const template = document.createElement("template");
     template.innerHTML = html;
     const fragment = document.importNode(template.content, true);
     if (isFetchOk) {
@@ -53,8 +59,15 @@ export class HTMLLoaderElement extends HTMLElement {
     return fragment;
   }
 
+  /**
+   *
+   * @param {string} href
+   */
   async _render(href) {
-    this.innerText = '';
+    this.innerText = "";
     this.appendChild(await this._loadHTML(href));
+    this.dispatchEvent(
+      new CustomEvent("html-loaded", { detail: { href }, bubbles: true })
+    );
   }
 }
