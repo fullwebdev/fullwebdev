@@ -15,7 +15,7 @@ export const defaultConfig = {
   output: "_daucus_",
   defaultCompiler: "",
   projects: {
-    default: defaultProject,
+    docs: defaultProject,
   },
   htmlMinifierOptions: {
     collapseBooleanAttributes: true,

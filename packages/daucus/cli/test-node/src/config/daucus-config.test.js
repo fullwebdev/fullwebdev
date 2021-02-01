@@ -22,7 +22,7 @@ describe("daucus-config", () => {
 
     it("set a default project", () => {
       const rslt = daucusConfig.create(mockConfig);
-      const defaultProject = rslt.projects.default;
+      const defaultProject = rslt.projects["docs"];
       expect(defaultProject.src).equals("**/*.md", "for all markdown files");
       expect(defaultProject.root).equals("docs", "in the 'docs' directory");
     });

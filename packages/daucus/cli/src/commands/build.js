@@ -64,9 +64,11 @@ export class BuildCommand {
 
     console.log("compiling projects");
     this._logCompileProgress("init...");
+    const routes = {};
     for (const [name, project] of this.projects) {
-      await this._buildProject(name, project);
+      routes[name] = await this._buildProject(name, project);
     }
+    await this._saveProjectRoutes(this.config.output, routes);
     this._closeLogProgress();
     ///////////// TODO-HERE ////////
     // copy js files
@@ -78,11 +80,7 @@ export class BuildCommand {
       cwd: project.root,
     });
 
-    const outDir = resolve(
-      this.root,
-      this.config.output,
-      path.basename(project.root)
-    );
+    const outDir = resolve(this.root, this.config.output, name);
 
     await ensureDir(outDir);
 
@@ -142,7 +140,7 @@ export class BuildCommand {
       })
     );
 
-    await this._saveProjectRoutes(outDir, routes);
+    return routes;
   }
 
   async _saveProjectRoutes(dir, routes) {

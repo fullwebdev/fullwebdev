@@ -61,7 +61,7 @@ describe("workspace", () => {
           {
             output: resolve("daucus", config.output),
             projects: {
-              default: {
+              docs: {
                 src: "**/*.md",
                 root: resolve("daucus", "docs"),
               },
@@ -81,7 +81,7 @@ describe("workspace", () => {
         expect(await workspace.getConfig()).to.deep.equals({
           output: resolve("daucus-root", config.output),
           projects: {
-            default: {
+            docs: {
               src: "**/*.md",
               root: resolve("daucus-root", "docs"),
             },
@@ -113,7 +113,7 @@ describe("workspace", () => {
           {
             output: resolve(root, "dist/daucus"),
             projects: {
-              default: {
+              docs: {
                 src: "**/*.md",
                 root: resolve(root, "docs"),
               },

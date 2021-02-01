@@ -44,17 +44,12 @@ export async function workspaceInfos(workspace) {
           return HTML.parse(content);
         },
       },
-      routes: async (project = "default") => {
-        const projectRoot = relative(
-          workspace.root,
-          wpConfig.projects[project].root
-        );
-        const configPath = resolve(wpConfig.output, projectRoot, "routes.js");
+      routes: async () => {
+        const configPath = resolve(wpConfig.output, "routes.js");
         const config = (await import(configPath)).default;
         const snapshotPath = resolve(
           workspace.root,
           "_snapshots_",
-          projectRoot,
           "routes.js"
         );
         const snapshot = (await import(snapshotPath)).default;
