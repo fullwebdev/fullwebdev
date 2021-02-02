@@ -7,7 +7,7 @@
  * @param {import('./index.d.ts').PathUpdated} pathUpdatedCallback
  */
 export const clickEventHandler = (baseUrl) => (pathUpdatedCallback) => {
-  return (e) => {
+  return (/** @type {Event} */ e) => {
     if (
       e.defaultPrevented ||
       e.button !== 0 ||
@@ -18,7 +18,8 @@ export const clickEventHandler = (baseUrl) => (pathUpdatedCallback) => {
       return;
     }
 
-    const anchor = /** @type {HTMLLinkElement} */ (e.target);
+    // support Shadow DOM
+    const anchor = /** @type {HTMLLinkElement} */ (e.composedPath()[0]);
 
     if (
       !anchor ||
