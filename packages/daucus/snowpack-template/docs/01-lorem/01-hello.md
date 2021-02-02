@@ -1,4 +1,4 @@
-# 1.1 Hello
+# Section 1 — Hello
 
 > source file is `docs/01-lorem/01-hello.md`
 

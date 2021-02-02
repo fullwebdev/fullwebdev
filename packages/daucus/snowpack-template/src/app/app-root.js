@@ -11,6 +11,7 @@ import { LitElement, html, css } from 'lit-element';
 import '@daucus/router/daucus-router';
 import '@daucus/router/daucus-router-outlet';
 import daucusRoutes from '/templates/routes.js';
+import './menu.js';
 
 class AppRoot extends LitElement {
   static get properties() {
@@ -54,18 +55,7 @@ class AppRoot extends LitElement {
       <daucus-router .routes=${daucusRoutes} default-path="/docs/">
         <h1>Daucus + LitElement + Snowpack</h1>
         <p>Edit <code>src/app-root.js</code> and save to reload.</p>
-        <nav>
-          <ol>
-            <li>
-              <a href="/docs/lorem/">lorem</a> &gt;
-              <a href="/docs/lorem/hello">hello</a>
-            </li>
-            <li>
-              <a href="/docs/ipsum/">ipsum</a> &gt;
-              <a href="/docs/ipsum/world">world</a>
-            </li>
-          </ol>
-        </nav>
+        <daucus-menu .routes=${daucusRoutes} project="docs"></daucus-menu>
         <daucus-router-outlet></daucus-router-outlet>
         <a
           class="link"
