@@ -18,11 +18,12 @@ export function createRouteFor(html, filePath) {
   }
 
   let { dir, ext, name: id } = posixVPath.parse(fileUrl);
-  let key = posixVPath.removePrefixes(id);
+  let [position, key] = posixVPath.splitPrefix(id) || ["", id];
 
   let path;
   if (["README", "index"].includes(key)) {
     key = null;
+    position = (posixVPath.splitPrefix(posixVPath.basename(dir)) || [""])[0];
     path = dir;
     id = "";
   } else {
@@ -31,6 +32,7 @@ export function createRouteFor(html, filePath) {
 
   const route = {
     id /* "1a-bar" */,
+    position /* "1a" */,
     path: posixVPath.removePrefixes(path) /* fr/foo/bar */,
     title: HTML.parse(html)?.querySelector("h1")?.rawText || "",
   };

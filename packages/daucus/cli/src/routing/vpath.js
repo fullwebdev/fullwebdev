@@ -29,6 +29,7 @@ export class PathCannotBeFragmentException extends Error {
 }
 
 const prefixRegexStr = "[0-9][a-z0-9]*-";
+const prefixInNameRegex = new RegExp(`^([0-9][0-9a-z]*)-(.*)`);
 
 export class VPath {
   /**
@@ -172,6 +173,13 @@ export class VPath {
    */
   removePrefixes(path) {
     return path ? path.replace(this._prefixInPathRegex, "") : "";
+  }
+
+  splitPrefix(str) {
+    const match = prefixInNameRegex.exec(str);
+    if (match && match.length > 1) {
+      return match.slice(1);
+    }
   }
 
   /**
