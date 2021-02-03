@@ -1,5 +1,5 @@
 import { resolve, dirname, extname, basename } from "path";
-import { findUp } from "../system/path.js";
+import { findUp } from "../fs/path.js";
 import { CONFIG_FILE_NAME } from "./defaultConfig.js";
 import * as daucusConfig from "./daucus-config.js";
 import { promises as asyncFs } from "fs";

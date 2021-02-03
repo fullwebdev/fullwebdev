@@ -7,7 +7,7 @@ import {
 } from "../../../src/config/daucus-config.js";
 import { resolve } from "path";
 import MockFS from "mock-fs";
-import { esmDirName } from "../../../src/system/path.js";
+import { esmDirName } from "../../../src/fs/path.js";
 
 const { expect } = chai;
 

@@ -4,6 +4,10 @@ import snarkdown from "snarkdown";
  * TODO: remplace by a generic plugin system
  */
 
+/**
+ *
+ * @param {*} name
+ */
 export async function loadCompiler(name) {
   if (name === "snarkdown") {
     return snarkdown;

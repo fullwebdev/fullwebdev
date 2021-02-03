@@ -3,4 +3,7 @@ export interface Route {
   path: string;
   title: string;
   numbering: string;
+  children: {
+    [key: string]: Route;
+  };
 }

@@ -1,5 +1,5 @@
 import HTML from "node-html-parser";
-import { esmDirName } from "../../src/system/path.js";
+import { esmDirName } from "../../src/fs/path.js";
 import { dirname, relative, resolve } from "path";
 import { WorkSpace as DaucusWorkspace } from "../../src/config/workspace.js";
 import { readFileSync } from "fs";

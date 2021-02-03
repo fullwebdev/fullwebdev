@@ -1,5 +1,5 @@
 import HTML from "node-html-parser";
-import { posixVPath, PathMustBeRelativeException } from "./vpath.js";
+import { posixVPath, PathMustBeRelativeException } from "../fs/vpath.js";
 
 /** @typedef {import('../../types/Route').Route} Route */
 

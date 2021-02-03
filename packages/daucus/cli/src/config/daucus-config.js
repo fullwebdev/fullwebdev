@@ -1,5 +1,5 @@
 import { defaultConfig } from "./defaultConfig.js";
-import { absoluteFrom } from "../system/path.js";
+import { absoluteFrom } from "../fs/path.js";
 
 /** @typedef {import('../../types/DaucusConfig').DaucusConfig} DaucusConfig */
 

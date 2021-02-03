@@ -1,6 +1,6 @@
 import chai from "chai";
 import { createRouteFor } from "../../../src/routing/routes.js";
-import { PathMustBeRelativeException } from "../../../src/routing/vpath.js";
+import { PathMustBeRelativeException } from "../../../src/fs/vpath.js";
 
 const { expect } = chai;
 

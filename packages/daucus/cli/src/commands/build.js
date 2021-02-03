@@ -1,13 +1,9 @@
-import { promises as asyncFs } from "fs";
-import * as path from "path";
 import { loadCompiler } from "../compilers/load.js";
 import rimraf from "rimraf";
-import globby from "globby";
-import { ensureDirSync, ensureDir } from "../system/path.js";
-import { dirname, relative, resolve } from "path";
+import { ensureDirSync } from "../fs/path.js";
+import { writeJSObject } from "../fs/write.js";
 import Gauge from "gauge";
-import HTMLMin from "html-minifier";
-import { createRouteFor } from "../routing/routes.js";
+import { buildProject } from "../compilers/build.js";
 
 /**
  * @typedef {import('../../types/DaucusConfig').DaucusConfig} DaucusConfig
@@ -65,129 +61,27 @@ export class BuildCommand {
     console.log("compiling projects");
     this._logCompileProgress("init...");
     const routes = {};
-    for (const [name, project] of this.projects) {
-      routes[name] = await this._buildProject(name, project);
+    for (const [projectName, projectConfig] of this.projects) {
+      routes[projectName] = await buildProject(
+        projectName,
+        {
+          compiler: this.config.defaultCompiler,
+          ...projectConfig,
+        },
+        this.config.output,
+        this.config.htmlMinifierOptions,
+        (filePath, nbrOfFiles) => {
+          this._logCompileProgress(
+            `[${projectName}] ${filePath}`,
+            1 / this.projects.length / nbrOfFiles
+          );
+        }
+      );
     }
-    await this._saveProjectRoutes(this.config.output, routes);
+    await writeJSObject(this.config.output, "routes.js", routes);
     this._closeLogProgress();
     ///////////// TODO-HERE ////////
     // copy js files
-  }
-
-  async _buildProject(name, project) {
-    const paths = await globby(project.src, {
-      absolute: true,
-      cwd: project.root,
-    });
-
-    const outDir = resolve(this.root, this.config.output, name);
-
-    await ensureDir(outDir);
-
-    const compiler = await this.getCompilerFor(project);
-
-    // TODO : typing
-    const routes = { children: {} };
-    await Promise.all(
-      paths.map(async (filePath) => {
-        const relativeFilePath = path.relative(project.root, filePath);
-
-        const html = await this._compileFile(compiler, filePath, project.root);
-
-        const relativeOutputFilePath = path.join(
-          path.dirname(relativeFilePath),
-          // TODO: allow other extensions
-          path.basename(relativeFilePath, ".md") + ".html"
-        );
-
-        await this._saveCompiledFile(outDir, relativeOutputFilePath, html);
-
-        const [routeKey, route] = createRouteFor(
-          html,
-          relativeOutputFilePath,
-          project.root
-        );
-
-        const routeParents = route.path.split("/").filter((p) => p);
-        if (routeKey) {
-          routeParents.pop();
-        }
-
-        let acc = routes;
-        routeParents.forEach((elmt, i) => {
-          if (!acc.children) {
-            acc.children = {};
-          }
-          if (!acc.children[elmt]) {
-            acc.children[elmt] = {};
-          }
-          acc = acc.children[elmt];
-        });
-
-        if (routeKey) {
-          if (!acc.children) {
-            acc.children = {};
-          }
-          acc.children[routeKey] = route;
-        } else {
-          Object.assign(acc, route);
-        }
-
-        this._logCompileProgress(
-          `[${name}] ${relative(project.root, filePath)}`,
-          1 / this.projects.length / paths.length
-        );
-      })
-    );
-
-    return routes;
-  }
-
-  async _saveProjectRoutes(dir, routes) {
-    const content = `export default ${JSON.stringify(routes, null, 2)}`;
-    await asyncFs.writeFile(path.resolve(dir, "routes.js"), content, {
-      encoding: "utf8",
-    });
-  }
-
-  async _saveCompiledFile(dir, relativeOutputFilePath, html) {
-    if (!html) {
-      console.warn(`ignoring empty file ${relativeOutputFilePath}`);
-      return;
-    }
-    const destFilePath = path.resolve(dir, relativeOutputFilePath);
-    await ensureDir(dirname(destFilePath));
-    return asyncFs.writeFile(destFilePath, html, {
-      encoding: "utf8",
-    });
-  }
-
-  async _compileFile(compiler, filePath, root) {
-    const stat = await asyncFs.lstat(filePath);
-    // TODO: allow other extensions
-    if (stat.isFile() && path.extname(filePath) === ".md") {
-      /**
-       * @type {string}
-       */
-      let md = await asyncFs.readFile(filePath, { encoding: "utf8" });
-      if (!md) {
-        return;
-      }
-      try {
-        // TODO: allow other extensions
-        const html = await compiler(md, root);
-        if (!html) {
-          return;
-        }
-        return HTMLMin.minify(html, this.config.htmlMinifierOptions);
-      } catch (e) {
-        console.warn(`failed conversion of ${filePath} to html:`);
-        console.warn(e.message);
-        return;
-      }
-    } else {
-      console.warn(`could not read ${filePath}`);
-    }
   }
 
   clear() {
