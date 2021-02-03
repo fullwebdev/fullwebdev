@@ -1,7 +1,7 @@
 ---
-name: Panpress - 🐞 Bug report
-about: Create a report to help us improve Panpress
-title: "[Panpress] "
+name: Daucus - 🐞 Bug report
+about: Create a report to help us improve Daucus
+title: "[Daucus] "
 labels: "bug, comp: panpress"
 assignees: ""
 ---

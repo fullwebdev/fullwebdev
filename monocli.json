@@ -28,11 +28,6 @@
       "directory": "materials/slides/wof-1"
     },
     {
-      "scope": "panpress-starter",
-      "directory": "packages/panpress/starter",
-      "url": "git@github.com:fullwebdev/panpress-starter.git"
-    },
-    {
       "scope": "slides-wof-2",
       "directory": "materials/slides/wof-2"
     },

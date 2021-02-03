@@ -53,7 +53,7 @@ Documentations and learning materials are at the core of FullWebDev. This is why
 
 The [/docs] folder makes the basis of this website, and most packages and/or their documentation are added to it to make even more pages, demonstrations, etc...
 
-Using our own static website generator, [Panpress-cli (temporary name)](./packages/panpress/cli), we devide the website source code and content into two parts:
+Using our own static website generator, [Daucus](./packages/daucus), we devide the website source code and content into two parts:
 
 1. "core" templates, pages and code, in the [/docs](./docs) directory
 2. additionnal contents from some other sub-projects in the [/packages/\*](./packages) directories
@@ -72,7 +72,7 @@ Most packages are also parts of the website, but may provide more than that.
 | [/packages/helpers/](./packages/helpers/) | _helpers functions_ |
 | [/materials/illustrations/](./materials/illustrations/) | _images and more_ |
 | /materials/eni-dpawm/ (private) | [/fundamentals/materials/](https://fullweb.dev/fundamentals/materials/) |
-| [/packages/panpress/](./packages/panpress/) | _static website generator_ |
+| [/packages/daucus/](./packages/daucus/) | _static website generator_ |
 | [/materials/perf/](./materials/perf/) | _WIP_ |
 | [/materials/slides/wof-1/](./materials/slides/wof-1/) | [/slides/wof1/](https://fullweb.dev/slides/wof1/) (for historical purposes only) |
 | [/materials/slides/wof-2/](./materials/slides/wof-2/) | [/slides/wof/](https://fullweb.dev/slides/wof/latest/) |
@@ -92,8 +92,6 @@ To run and build the website locally, you'll first need to install the following
 Then, you'll need to install the dependencies for the whole monorepo by running `npm install` from the root directory.
 
 Finally, you can run the standalone docs, without building any other packages, by going to the [/docs](./docs) directory and running `npm start -- --local`.
-
-Run `npm run help` for more details about the panpress command.
 
 > :warning: Access to the private repository associated to the `/materials/eni-dpawm/` submodule is, for now, restricted to the core team. Building the whole website (`npm run build`) requires this access, and Linux.
 >
@@ -139,7 +137,8 @@ Any line of the commit message cannot be longer than 100 characters.
   │       │
   │       └─⫸ Commit Scope: docs | code-samples | codelabs | data-driven-pwa | illustrations |
   │                          eni-dpawm | perf | slides-(vanilla-1|wof-1|wof-2) | helpers |
-  │                          helpers-(el|template|lazy-router) | benchmark | panpress | panpress-(cli|starter|webapp)
+  │                          helpers-(el|template|router) | benchmark | daucus |
+  |                          daucus-(cli|router|snowpack-starter|pandoc) | html-loader
   │
   └─⫸ Commit Type: build | ci | docs | feat | fix | perf | refactor | style | test
 ```
@@ -177,17 +176,13 @@ The following is the list of supported scopes:
 - `helpers`
 - `helpers-el`
 - `helpers-template`
-- `helpers-lazy-router`
+- `helpers-router`
 - `benchmark`
-- `panpress`
-- `panpress-cli`
-- `panpress-starter`
-- `panpress-webapp`
 - `slides-wof-1`
 - `slides-wof-2`
 - `slides-wof-3`
 
-Using the most precise scope (e.g. `helpers-el` and `panpress-cli`) should be prioritized over using a generic one (e.g., respectively, `helpers` and `panpress`), especially if the scope is `fix` or `feat`.
+Using the most precise scope (e.g. `helpers-el` and `daucus-cli`) should be prioritized over using a generic one (e.g., respectively, `helpers` and `daucus`), especially if the scope is `fix` or `feat`.
 
 ##### Summary
 

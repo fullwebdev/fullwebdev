@@ -1,7 +1,7 @@
 ---
-name: Panpress - 🚀 Feature request
-about: Suggest an idea for Panpress
-title: "[Panpress] "
+name: Daucus - 🚀 Feature request
+about: Suggest an idea for Daucus
+title: "[Daucus] "
 labels: "enhancement, comp: panpress"
 assignees: ""
 ---

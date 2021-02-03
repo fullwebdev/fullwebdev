@@ -1,5 +1,5 @@
 {
-  "install": ["lit-html", "prismjs", "@modern-helpers/lazy-router"],
+  "install": ["lit-html", "prismjs"],
   "mount": {
     "app": "/",
     "assets": "/"

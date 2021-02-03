@@ -5,7 +5,7 @@
 <!-- put an `x` in all the boxes that apply -->
 
 - [ ] docs, website
-- [ ] Panpress
+- [ ] Daucus
 - [ ] Helpers
 - [ ] codelabs
 - [ ] illustrations

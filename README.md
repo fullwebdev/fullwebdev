@@ -45,7 +45,7 @@
 <!-- prettier-ignore -->
 |         | Releases | Directory |
 | ------- | -------- | --------- |
-| [static site generator](https://www.npmjs.com/package/@panpress/cli) | ![npm](https://img.shields.io/npm/v/@panpress/cli) | [/packages/panpress/](./packages/panpress/) |
+| [static site generator](https://www.npmjs.com/package/@daucus/cli) | ![npm](https://img.shields.io/npm/v/@daucus/cli) | [/packages/daucus/](./packages/daucus/) |
 | [helpers](https://www.npmjs.com/package/modern-helpers) | ![npm](https://img.shields.io/npm/v/modern-helpers) | [/packages/helpers/](./packages/helpers/) |
 
 ### Modules
