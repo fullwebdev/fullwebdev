@@ -1,13 +1,16 @@
+// TODO: export
+
 /**
  * emulate "normal" link behaviors on click
  *
  * inspired by the router helper from Polymer/pwa-helper
  * @see https://github.com/Polymer/pwa-helpers/blob/v0.9.1/src/router.ts
  *
- * @param {import('./index.d.ts').PathUpdated} pathUpdatedCallback
  */
-export const clickEventHandler = (baseUrl) => (pathUpdatedCallback) => {
-  return (/** @type {Event} */ e) => {
+export const clickEventHandler = (/** @type {string} */ baseUrl) => (
+  /** @type {import('./navigation').PathUpdated} */ pathUpdatedCallback
+) => {
+  return (/** @type {MouseEvent} */ e) => {
     if (
       e.defaultPrevented ||
       e.button !== 0 ||

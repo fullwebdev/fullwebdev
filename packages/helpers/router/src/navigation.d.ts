@@ -4,10 +4,13 @@ export interface NavigationOptions {
   state?: any;
   redirection?: boolean;
   skipLocationChange?: boolean;
-  event?: Event;
+  event?: Event | null;
 }
 
 export type NavigationListener = (
   path: string,
-  options?: NavigationOptions
-) => [string, NavigationOptions] | null;
+  options: NavigationOptions
+) =>
+  | Promise<[string, NavigationOptions | undefined] | undefined>
+  | [string, NavigationOptions | undefined]
+  | undefined;
