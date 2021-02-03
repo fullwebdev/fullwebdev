@@ -1,3 +1,5 @@
+// @ts-nocheck FIXME
+
 /**
  * @typedef {import("./template-options").TemplateInstance} TemplateInstance
  * @typedef {import("./template-options").TemplateElChild} TemplateElChild
@@ -79,16 +81,13 @@ export class Template {
       //#region proxy
       Object.defineProperty(root.state, key, {
         get: function () {
-          // @ts-ignore
           return this._stateCache[key];
         }.bind(root),
         set: function (data) {
-          // @ts-ignore
           const cache = this._partsCache[key];
           for (let i = 0; i < cache.length; i++) {
             cache[i].renderer(cache[i].node, data);
           }
-          // @ts-ignore
           this._stateCache[key] = data;
         }.bind(root),
       });

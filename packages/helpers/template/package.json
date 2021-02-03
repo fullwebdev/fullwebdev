@@ -4,7 +4,7 @@
   "description": "create pre-rendered elements with an HyperHTML syntax",
   "main": "index.js",
   "module": "index.js",
-  "types": "main.d.ts",
+  "types": "./types/index.d.ts",
   "keywords": [
     "modern",
     "vanilla",
@@ -16,6 +16,14 @@
   "author": {
     "name": "Noël Macé",
     "url": "https://noelmace.com"
+  },
+  "files": [
+    "*.d.ts",
+    "*.js",
+    "src"
+  ],
+  "scripts": {
+    "types:copy": "copyfiles \"./*/src/**/*.d.ts\" \"./*.d.ts\" types"
   },
   "license": "MIT",
   "repository": {
