@@ -11,7 +11,7 @@ export class DaucusRouter extends HTMLElement {
   }
 
   get outlet() {
-    return this.getElementsByTagName(this.outletTagName)[0];
+    return this.querySelector(this.outletTagName);
   }
 
   get routes() {
