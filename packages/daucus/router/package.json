@@ -6,11 +6,14 @@
   "main": "index.js",
   "module": "index.js",
   "type": "module",
-  "types": "index.d.ts",
+  "types": "./types/index.d.ts",
   "author": {
     "name": "Noël Macé",
     "email": "contact@noelmace.com",
     "url": "https://noelmace.com"
+  },
+  "scripts": {
+    "types:copy": "copyfiles \"./src/**/*.d.ts\" \"./*.d.ts\" types"
   },
   "repository": {
     "type": "git",

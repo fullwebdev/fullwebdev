@@ -1,39 +1,51 @@
 import { createDaucusRouter } from "./create-router.js";
+import { DaucusRouterOutlet } from "./DaucusRouterOutlet.js";
 
+/**
+ * @typedef {import('./RoutesConfig').RoutesConfig} RoutesConfig
+ */
 export class DaucusRouter extends HTMLElement {
   constructor() {
     super();
     this._connected = false;
   }
 
-  set routes(routes) {
-    this._routes = routes;
-  }
-
+  /**
+   * @type {DaucusRouterOutlet | null}
+   */
   get outlet() {
-    return this.querySelector(this.outletTagName);
+    return /** @type {DaucusRouterOutlet | null} */ this.querySelector(
+      this.outletTagName
+    );
   }
 
-  get routes() {
-    return this._routes;
-  }
-
+  /**
+   * @type {string}
+   */
   get defaultPath() {
-    if (!this.hasAttribute("default-path")) return "/docs/";
-    return this.getAttribute("default-path");
+    return this.getAttribute("default-path") || "/docs/";
   }
 
   set defaultPath(path) {
-    return this.setAttribute("default-path", path);
+    this.setAttribute("default-path", path);
   }
 
+  /**
+   * @type {string}
+   */
   get outletTagName() {
-    if (!this.hasAttribute("outlet-tag")) return "daucus-router-outlet";
-    return this.getAttribute("outlet-tag");
+    return this.getAttribute("outlet-tag") || "daucus-router-outlet";
   }
 
   set outletTagName(tagName) {
-    this.setAttribute(tagName);
+    this.setAttribute("outlet-tag", tagName);
+  }
+
+  /**
+   * @type {RoutesConfig | undefined}
+   */
+  get routes() {
+    return this._routes;
   }
 
   set routes(routes) {
@@ -41,9 +53,11 @@ export class DaucusRouter extends HTMLElement {
     this._createRouter();
   }
 
+  /**
+   * @type {string}
+   */
   get baseDir() {
-    if (!this.hasAttribute("base-dir")) return "templates/";
-    return this.getAttribute("base-dir");
+    return this.getAttribute("base-dir") || "templates/";
   }
 
   set baseDir(path) {
@@ -56,6 +70,12 @@ export class DaucusRouter extends HTMLElement {
         this._routes,
         this.defaultPath,
         (projectName, route) => {
+          if (!this.outlet) {
+            console.warn(
+              `${route.path} can't be rendered without a daucus-router-outlet element`
+            );
+            return;
+          }
           this.outlet.href =
             (this._router.base || "/") +
             this.baseDir +
@@ -79,10 +99,17 @@ export class DaucusRouter extends HTMLElement {
     this._connected = false;
   }
 
+  /**
+   *
+   * @param {string} prop
+   */
   upgradeProperty(prop) {
     if (this.hasOwnProperty(prop)) {
+      // @ts-ignore
       let value = this[prop];
+      // @ts-ignore
       delete this[prop];
+      // @ts-ignore
       this[prop] = value;
     }
   }
