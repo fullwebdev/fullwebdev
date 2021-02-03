@@ -9,7 +9,7 @@ export class DaucusCLI {
 
   /**
    * @param {string[]} argv
-   * @param {{ cwd: string }} [options]
+   * @param {{ cwd?: string }} [options]
    */
   constructor(argv, { cwd } = {}) {
     const mainOptions = commandLineArgs(DaucusCLI.options, {
@@ -27,6 +27,10 @@ export class DaucusCLI {
     this.workspace = findWorkspace(cwd);
 
     const Command = commandsMap.get(cmdName);
+    if (!Command) {
+      throw new Error(`command not found`);
+    }
+    /** @type {any} */
     this.cmdParams = commandLineArgs(Command.options, { argv: cmdArgs });
 
     this.command = new Command(this.workspace);

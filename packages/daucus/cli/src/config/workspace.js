@@ -4,17 +4,17 @@ import { CONFIG_FILE_NAME } from "./defaultConfig.js";
 import * as daucusConfig from "./daucus-config.js";
 import { promises as asyncFs } from "fs";
 
-/** @typedef {import('../../types/DaucusConfig').DaucusConfig} DaucusConfig */
-/** @typedef {import('../../types/WorkSpace').WorkSpace} IWorkSpace */
+/** @typedef {import('./DaucusConfig').DaucusConfig} DaucusConfig */
+/** @typedef {import('./WorkSpace').WorkSpace} IWorkSpace */
 
 /**
  *
- * @param {*} path
+ * @param {string} path
  */
 async function loadConfigFile(path) {
   const fileStat = await asyncFs.stat(path);
   if (!fileStat.isFile()) {
-    console.warn(`no configuration file found at ${filePath}`);
+    console.warn(`no configuration file found at ${path}`);
     return {};
   }
 
@@ -36,7 +36,7 @@ async function loadConfigFile(path) {
     }
   } else {
     console.warn(
-      `ignoring ${filePath} has ${fileExt} isn't associated to json or javascript`
+      `ignoring ${path} has ${fileExt} isn't associated to json or javascript`
     );
   }
 

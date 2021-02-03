@@ -4,8 +4,8 @@
   "description": "Daucus CLI",
   "license": "MIT",
   "type": "module",
+  "typings": "./types/index.d.ts",
   "exports": {
-    "require": "./index.cjs",
     "default": "./index.js"
   },
   "bin": {
@@ -25,18 +25,24 @@
     "url": "https://github.com/fullwebdev/fullwebdev/issues",
     "email": "contact@noelmace.com"
   },
+  "scripts": {
+    "types:copy": "copyfiles \"./src/**/*.d.ts\" \"./*.d.ts\" types"
+  },
   "dependencies": {
     "command-line-args": "^5.1.1",
     "file-type": "^16.2.0",
     "fs-extra": "^9.1.0",
     "gauge": "^3.0.0",
     "globby": "^11.0.2",
+    "html-minifier": "^4.0.0",
     "node-html-parser": "^2.0.2",
     "rimraf": "^3.0.2",
-    "snarkdown": "^2.0.0",
-    "html-minifier": "^4.0.0"
+    "snarkdown": "^2.0.0"
   },
   "optionalDependencies": {
     "@daucus/pandoc": "~0.1.0"
+  },
+  "devDependencies": {
+    "@types/rimraf": "^3.0.0"
   }
 }

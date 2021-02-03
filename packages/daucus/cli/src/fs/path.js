@@ -35,20 +35,32 @@ export const absoluteFrom = (/** @type {string} */ rootPath) => (
   return resolve(rootPath, path);
 };
 
+/**
+ * @param {{ url: string | import("url").URL; }} importMeta
+ */
 export function esmDirName(importMeta) {
   return dirname(esmFileName(importMeta));
 }
 
+/**
+ * @param {{ url: string | import("url").URL; }} importMeta
+ */
 export function esmFileName(importMeta) {
   return fileURLToPath(importMeta.url);
 }
 
+/**
+ * @param {import("fs").PathLike} path
+ */
 export function ensureDirSync(path, recursive = true) {
   if (!existsSync(path)) {
     mkdirSync(path, { recursive });
   }
 }
 
+/**
+ * @param {import("fs").PathLike} path
+ */
 export async function ensureDir(path, recursive = true) {
   if (!existsSync(path)) {
     return asyncFs.mkdir(path, { recursive });

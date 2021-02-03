@@ -8,22 +8,24 @@ import { loadCompiler } from "./load.js";
 import { writeCompiledFile } from "../fs/write.js";
 
 /**
- * @typedef {import('../commands/build.js').ProjectConfig} ProjectConfig
+ * @typedef {import('../config/DaucusConfig').ProjectConfig} ProjectConfig
  * @typedef {(filePath: string, nbrOfFiles: number) => any} FileProcessedCallback
- * @typedef {import('../../types/compiler.js').Compiler} Compiler
- * @typedef {import('../routing/routes.js').Route} Route
+ * @typedef {import('./compiler').Compiler} Compiler
+ * @typedef {import('../routing/Route').Route} Route
+ * @typedef {import('./compiler').FunctionCompiler} FunctionCompiler
+ * @typedef {import('../routing/Route').ProjectRoutesConfig} RoutesConfig
  */
 
 /**
  * compiler a single source file to HTML
  * for now, this function only support markdown sources
  *
- * @param {Compiler} compiler
+ * @param {FunctionCompiler} compiler
  * @param {string} filePath - path to source file
  * @param {string} root - path to root source directory
  * @param {HTMLMin.Options} htmlMinifierOptions
  *
- * @returns {Promise<string>} - html string
+ * @returns {Promise<string | null>} - html string
  */
 export async function compileFile(
   compiler,
@@ -39,23 +41,24 @@ export async function compileFile(
      */
     let md = await asyncFs.readFile(filePath, { encoding: "utf8" });
     if (!md) {
-      return;
+      return null;
     }
     try {
-      // TODO: allow other extensions
+      // TODO: allow other extensions & better compatibility with other compilers
       const html = await compiler(md, root);
       if (!html) {
-        return;
+        return null;
       }
       return HTMLMin.minify(html, htmlMinifierOptions);
     } catch (e) {
       console.warn(`failed conversion of ${filePath} to html:`);
       console.warn(e.message);
-      return;
+      return null;
     }
   } else {
     console.warn(`could not read ${filePath}`);
   }
+  return null;
 }
 
 /**
@@ -69,7 +72,7 @@ export async function compileFile(
  * @param {FileProcessedCallback} fileProcessedCallback - this function will
  *  be called after each file has been processed
  *
- * @returns {Promise<any>} - routes configuration object for the project
+ * @returns {Promise<RoutesConfig>} - routes configuration object for the project
  */
 export async function buildProject(
   projectName,
@@ -87,6 +90,7 @@ export async function buildProject(
 
   await ensureDir(projectOutDir);
 
+  /** @type {FunctionCompiler} */
   let compiler;
   if (typeof projectConfig.compiler === "function") {
     compiler = projectConfig.compiler;
@@ -94,18 +98,19 @@ export async function buildProject(
     compiler = await loadCompiler(projectConfig.compiler);
   }
 
-  /** @type {Partial<Route>} */
+  /** @type {RoutesConfig} */
   const routes = { children: {} };
   await Promise.all(
     paths.map(async (filePath) => {
       const relativeFilePath = relative(projectConfig.root, filePath);
 
-      const html = await compileFile(
-        compiler,
-        filePath,
-        projectConfig.root,
-        htmlMinifierOptions
-      );
+      const html =
+        (await compileFile(
+          compiler,
+          filePath,
+          projectConfig.root,
+          htmlMinifierOptions
+        )) || "";
 
       const relativeOutputFilePath = join(
         dirname(relativeFilePath),
@@ -115,11 +120,7 @@ export async function buildProject(
 
       await writeCompiledFile(projectOutDir, relativeOutputFilePath, html);
 
-      const [routeKey, route] = createRouteFor(
-        html,
-        relativeOutputFilePath,
-        projectConfig.root
-      );
+      const [routeKey, route] = createRouteFor(html, relativeOutputFilePath);
 
       const routeParents = route.path.split("/").filter((p) => p);
       if (routeKey) {

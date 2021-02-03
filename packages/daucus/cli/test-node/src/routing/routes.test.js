@@ -21,7 +21,7 @@ describe("routes", () => {
       expect(rslt[1].id).equals("");
     });
     it("set title from html", () => {
-      const rslt = createRouteFor("<h1>TITLE</h1>", "");
+      const rslt = createRouteFor("<h1>TITLE</h1>", "test.html");
       expect(rslt[1].title).equals("TITLE");
     });
     it("set key and id from file name", () => {

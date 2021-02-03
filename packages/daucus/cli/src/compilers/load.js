@@ -5,8 +5,14 @@ import snarkdown from "snarkdown";
  */
 
 /**
+ * @typedef {import('./compiler').FunctionCompiler} FunctionCompiler
+ */
+
+/**
  *
- * @param {*} name
+ * @param {import('./compiler').CompilerId | undefined} name
+ *
+ * @returns {Promise<FunctionCompiler>}
  */
 export async function loadCompiler(name) {
   if (name === "snarkdown") {
@@ -14,6 +20,7 @@ export async function loadCompiler(name) {
   }
 
   try {
+    // @ts-ignore for build
     const { md2html } = await import("@daucus/pandoc");
     return md2html;
   } catch (e) {

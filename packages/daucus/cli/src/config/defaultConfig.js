@@ -1,7 +1,7 @@
 export const CONFIG_FILE_NAME = "daucus.config";
 
 /**
- * @type {import('../../types/DaucusConfig').ProjectConfig}
+ * @type {import('./DaucusConfig').ProjectConfig}
  */
 export const defaultProject = {
   src: "**/*.md",
@@ -9,11 +9,10 @@ export const defaultProject = {
 };
 
 /**
- * @type {import('../../types/DaucusConfig').DaucusConfig}
+ * @type {import('./DaucusConfig').DaucusConfig}
  */
 export const defaultConfig = {
   output: "_daucus_",
-  defaultCompiler: "",
   projects: {
     docs: defaultProject,
   },

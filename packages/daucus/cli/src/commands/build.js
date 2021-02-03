@@ -1,14 +1,16 @@
-import { loadCompiler } from "../compilers/load.js";
 import rimraf from "rimraf";
 import { ensureDirSync } from "../fs/path.js";
 import { writeJSObject } from "../fs/write.js";
+// @ts-ignore TODO: add .d.ts file
 import Gauge from "gauge";
 import { buildProject } from "../compilers/build.js";
 
 /**
- * @typedef {import('../../types/DaucusConfig').DaucusConfig} DaucusConfig
- * @typedef {import('../../types/DaucusConfig').ProjectConfig} ProjectConfig
- * @typedef {import('../../types/WorkSpace').WorkSpace} WorkSpace
+ * @typedef {import('../config/DaucusConfig').DaucusConfig} DaucusConfig
+ * @typedef {import('../config/DaucusConfig').ProjectConfig} ProjectConfig
+ * @typedef {import('../config/WorkSpace').WorkSpace} WorkSpace
+ * @typedef {import('../routing/Route').ProjectRoutesConfig} ProjectRoutesConfig
+ * @typedef {import('../routing/Route').RoutesConfig} RoutesConfig
  */
 
 export class BuildCommand {
@@ -54,14 +56,16 @@ export class BuildCommand {
     /**
      * @type {Array<[string, ProjectConfig]>}
      */
-    this.projects = params.project
+    const projects = params.project
       ? [[params.project, this.config.projects[params.project]]]
       : Object.entries(this.config.projects);
 
     console.log("compiling projects");
     this._logCompileProgress("init...");
+
+    /** @type {RoutesConfig} */
     const routes = {};
-    for (const [projectName, projectConfig] of this.projects) {
+    for (const [projectName, projectConfig] of projects) {
       routes[projectName] = await buildProject(
         projectName,
         {
@@ -73,32 +77,26 @@ export class BuildCommand {
         (filePath, nbrOfFiles) => {
           this._logCompileProgress(
             `[${projectName}] ${filePath}`,
-            1 / this.projects.length / nbrOfFiles
+            1 / projects.length / nbrOfFiles
           );
         }
       );
     }
     await writeJSObject(this.config.output, "routes.js", routes);
     this._closeLogProgress();
-    ///////////// TODO-HERE ////////
-    // copy js files
+    // TODO: copy js files
   }
 
   clear() {
-    rimraf.sync(this.config.output, { disableGlob: true });
-    ensureDirSync(this.config.output);
-  }
-
-  async getCompilerFor(project) {
-    const compilerFromConfig = project?.compiler || this.config.defaultCompiler;
-
-    if (typeof compilerFromConfig === "function") {
-      return compilerFromConfig;
+    if (this.config) {
+      rimraf.sync(this.config.output, { disableGlob: true });
+      ensureDirSync(this.config.output);
     }
-
-    return loadCompiler(compilerFromConfig);
   }
 
+  /**
+   * @param {string} msg
+   */
   _logCompileProgress(msg, step = 0) {
     this._compileLog.progress += step;
     this._compileLog.gauge.show(

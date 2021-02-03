@@ -8,23 +8,27 @@
  */
 
 export class InvalidPathException extends Error {
+  /**
+   * @param {string} path
+   */
   constructor(path) {
-    super(`Path ${JSON.stringify(path)} is invalid.`);
+    super(`Path ${path} is invalid.`);
   }
 }
 export class PathMustBeAbsoluteException extends Error {
+  /**
+   * @param {string} path
+   */
   constructor(path) {
-    super(`Path ${JSON.stringify(path)} must be absolute.`);
+    super(`Path ${path} must be absolute.`);
   }
 }
 export class PathMustBeRelativeException extends Error {
+  /**
+   * @param {string} path
+   */
   constructor(path) {
-    super(`Path ${JSON.stringify(path)} must be relative.`);
-  }
-}
-export class PathCannotBeFragmentException extends Error {
-  constructor(path) {
-    super(`Path ${JSON.stringify(path)} cannot be made a fragment.`);
+    super(`Path ${path} must be relative.`);
   }
 }
 
@@ -34,7 +38,7 @@ const prefixInNameRegex = new RegExp(`^([0-9][0-9a-z]*)-(.*)`);
 export class VPath {
   /**
    *
-   * @param {string} platform
+   * @param {string} [platform]
    */
   constructor(platform) {
     this.sep = platform?.startsWith("win32") ? "\\" : "/";
@@ -106,7 +110,7 @@ export class VPath {
    */
   join(p1, ...others) {
     if (others.length > 0) {
-      return normalize((p1 ? p1 + this.sep : "") + others.join(this.sep));
+      return this.normalize((p1 ? p1 + this.sep : "") + others.join(this.sep));
     } else {
       return p1;
     }
@@ -175,6 +179,9 @@ export class VPath {
     return path ? path.replace(this._prefixInPathRegex, "") : "";
   }
 
+  /**
+   * @param {string} str
+   */
   splitPrefix(str) {
     const match = prefixInNameRegex.exec(str);
     if (match && match.length > 1) {

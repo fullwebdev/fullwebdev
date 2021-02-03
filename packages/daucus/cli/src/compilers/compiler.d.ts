@@ -1,4 +1,7 @@
-export type FunctionCompiler = (source: string, rootDir: string) => string;
+export type FunctionCompiler = (
+  source: string,
+  ...params: any[]
+) => Promise<string> | string;
 
 export type CompilerId = "snarkdown" | "pandoc";
 
