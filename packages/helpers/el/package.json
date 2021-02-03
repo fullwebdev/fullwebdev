@@ -6,6 +6,9 @@
   "module": "index.js",
   "type": "module",
   "types": "./types/index.d.ts",
+  "scripts": {
+    "types:copy": "copyfiles \"./*/src/**/*.d.ts\" \"./*.d.ts\" types"
+  },
   "keywords": [
     "modern",
     "vanilla",

@@ -25,20 +25,12 @@
       "filename": "template/package-lock.json",
       "type": "json"
     },
-     {
-      "filename": "lazy-router/package.json",
+    {
+      "filename": "router/package-lock.json",
       "type": "json"
     },
     {
-      "filename": "lazy-router/package-lock.json",
-      "type": "json"
-    },
-    {
-      "filename": "routing/package-lock.json",
-      "type": "json"
-    },
-    {
-      "filename": "routing/package.json",
+      "filename": "router/package.json",
       "type": "json"
     },
     {

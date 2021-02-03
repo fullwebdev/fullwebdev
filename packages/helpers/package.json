@@ -3,8 +3,8 @@
   "version": "0.2.1",
   "description": "Minimalistic helper functions for Modern Web Apps development.",
   "scripts": {
-    "validate-types": "tsc",
-    "start": "es-dev-server --compatibility none"
+    "start": "es-dev-server --compatibility none",
+    "types:copy": "copyfiles \"./*/src/**/*.d.ts\" \"./*.d.ts\" types"
   },
   "repository": {
     "type": "git",
@@ -19,13 +19,23 @@
     "utils",
     "helpers"
   ],
+  "type": "module",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./types/index.d.ts",
+  "files": [
+    "*.js",
+    "*.d.ts",
+    "el",
+    "router",
+    "template"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/fullwebdev/fullwebdev/issues"
   },
   "homepage": "https://github.com/fullwebdev/fullwebdev#readme",
   "devDependencies": {
-    "es-dev-server": "^1.57.1",
-    "typescript": "^4.0.2"
+    "es-dev-server": "^1.57.1"
   }
 }
