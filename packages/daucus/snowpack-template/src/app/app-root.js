@@ -10,6 +10,7 @@ import { LitElement, html, css } from 'lit-element';
 
 import '@daucus/router/daucus-router';
 import '@daucus/router/daucus-router-outlet';
+// @ts-ignore
 import daucusRoutes from '/templates/routes.js';
 import './menu.js';
 

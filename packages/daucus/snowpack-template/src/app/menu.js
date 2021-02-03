@@ -9,6 +9,16 @@ import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
  * import { Router } from '@modern-helpers/router.js;
  */
 
+/**
+ * @typedef {import('@daucus/router/src/RoutesConfig').ProjectRoutesConfig} DaucusProjectRoutesConfig
+ * @typedef {import('@daucus/router/src/RoutesConfig').RoutesConfig} DaucusRoutesConfig
+ * @typedef {import('@daucus/router/src/RoutesConfig').Route} DaucusRoute
+ */
+
+/**
+ * @param {[string, Partial<DaucusRoute>]} entryA
+ * @param {[string, Partial<DaucusRoute>]} entryB
+ */
 const sortChildEntriesByPosition = (entryA, entryB) => {
   const positionA = (entryA && entryA[1] && entryA[1].position
     ? entryA[1].position
@@ -23,9 +33,23 @@ const sortChildEntriesByPosition = (entryA, entryB) => {
   return 0;
 };
 
+/**
+ *
+ * @param {DaucusRoutesConfig} routes
+ * @param {string} projectName
+ */
 const projectMenu = (routes, projectName) => {
-  return (function menu(route, depth, routeName) {
-    return `
+  return (
+    /**
+     *
+     * @param {DaucusProjectRoutesConfig} route
+     * @param {number} depth
+     * @param {string} routeName
+     *
+     * @returns {string}
+     */
+    (function menu(route, depth, routeName) {
+      return `
       <div class="${depth === 0 ? 'menu-title' : ''} section-title">
         ${
           route.title && route.path !== undefined
@@ -51,7 +75,8 @@ const projectMenu = (routes, projectName) => {
           : ''
       }
     `;
-  })(routes[projectName], 0);
+    })(routes[projectName], 0)
+  );
 };
 
 class DaucusMenu extends LitElement {
@@ -106,22 +131,30 @@ class DaucusMenu extends LitElement {
     `;
   }
 
+  /**
+   * @param {DaucusRoutesConfig} routes
+   */
   set routes(routes) {
     this._routes = routes;
   }
 
+  /**
+   * @param {string} name
+   */
   set project(name) {
     this.setAttribute('project', name);
   }
 
   get project() {
-    return this.getAttribute('project');
+    return this.getAttribute('project') || 'docs';
   }
 
   render() {
     return html`
       <nav @click=${this._handleClick}>
-        ${unsafeHTML(projectMenu(this._routes, this.project))}
+        ${this._routes
+          ? unsafeHTML(projectMenu(this._routes, this.project))
+          : ''}
       </nav>
     `;
   }
@@ -131,8 +164,10 @@ class DaucusMenu extends LitElement {
    * @param {MouseEvent} event
    */
   __handleClick(event) {
-    /** @type {HTMLElement} */
-    const target = event.target;
+    /** @type {HTMLElement | null} */
+    const target = /** @type {HTMLElement | null} */ event.target;
+    if (!target) return;
+
     const titleEl = target.closest('.section-title');
     if (!titleEl) return;
 
@@ -145,6 +180,7 @@ class DaucusMenu extends LitElement {
     }
     const parentMenu = titleEl.closest('ul');
     if (parentMenu) {
+      /** @type {NodeListOf<HTMLElement>} */
       const submenusOnSameLevel = parentMenu.querySelectorAll(
         ':scope > li > ul',
       );
@@ -152,8 +188,9 @@ class DaucusMenu extends LitElement {
         submenu.style.display = 'none';
       }
     }
-    /** @type {HTMLElement} */
-    const potentialSubmenu = titleEl.nextElementSibling;
+    /** @type {HTMLElement | null} */
+    const potentialSubmenu =
+      /** @type {HTMLElement | null} */ titleEl.nextElementSibling;
     if (potentialSubmenu && potentialSubmenu.tagName === 'UL') {
       potentialSubmenu.style.display = 'block';
     }
