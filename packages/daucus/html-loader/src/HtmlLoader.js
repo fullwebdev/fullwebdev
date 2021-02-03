@@ -1,3 +1,6 @@
+/**
+ * @param {string} msg
+ */
 const errMsg = (msg) => `<p class="html-loader__error">${msg}</p>`;
 
 export class HTMLLoaderElement extends HTMLElement {
@@ -11,7 +14,11 @@ export class HTMLLoaderElement extends HTMLElement {
   }
 
   set href(path) {
-    this.setAttribute("href", path);
+    if (!path) {
+      this.removeAttribute("href");
+    } else {
+      this.setAttribute("href", path);
+    }
   }
 
   get href() {
@@ -22,6 +29,11 @@ export class HTMLLoaderElement extends HTMLElement {
     return this.getAttribute("fallback");
   }
 
+  /**
+   * @param {string} name
+   * @param {string} oldValue
+   * @param {string} newValue
+   */
   attributeChangedCallback(name, oldValue, newValue) {
     if (name === "href" && oldValue !== newValue) {
       this._render(newValue);
@@ -33,6 +45,8 @@ export class HTMLLoaderElement extends HTMLElement {
    *
    * @param {string} href
    * @param {boolean} shouldFallback
+   *
+   * @returns {Promise<DocumentFragment>}
    */
   async _loadHTML(href, shouldFallback = true) {
     if (this._cache.has(href)) return this._cache.get(href).cloneNode(true);

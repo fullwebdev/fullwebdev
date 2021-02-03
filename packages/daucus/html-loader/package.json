@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "Webcomponent html-loader following open-wc recommendations",
   "license": "MIT",
-  "main": "index.js",
-  "module": "index.js",
+  "main": "./index.js",
+  "module": "./index.js",
   "author": {
     "name": "Noël Macé",
     "email": "contact@noelmace.com",
@@ -28,5 +28,6 @@
   "devDependencies": {
     "@web/dev-server": "^0.1.5",
     "@web/dev-server-storybook": "^0.3.4"
-  }
+  },
+  "types": "types/index.d.ts"
 }
