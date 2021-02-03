@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "build:daucus": "daucus build",
-    "build": "panpress -v",
-    "start": "panpress --dev",
-    "server": "panpress --serve",
-    "help": "panpress --help",
+    "prebuild": "npm run build:daucus",
+    "build": "snowpack build",
+    "start": "snowpack dev",
     "lint": "eslint \"{pages,js,components}/**/*.js\""
   },
   "repository": {
@@ -22,7 +21,6 @@
   "devDependencies": {
     "@daucus/cli": "^0.1.0",
     "@daucus/pandoc": "^0.1.0",
-    "@panpress/cli": "^0.3.0-beta.5",
     "@snowpack/plugin-build-script": "^2.0.6",
     "@types/prismjs": "^1.16.1",
     "cssnano": "^4.1.10",
@@ -30,8 +28,6 @@
     "postcss-cli": "^7.1.2"
   },
   "dependencies": {
-    "@modern-helpers/lazy-router": "^0.2.1",
-    "@panpress/webapp": "^0.3.0-beta.5",
     "lit-html": "^1.3.0",
     "prismjs": "^1.21.0"
   }
