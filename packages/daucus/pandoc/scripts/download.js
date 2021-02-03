@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import { resolve } from "path";
-import { esmDirName } from "./utils.js";
+import { esmDirName } from "../src/utils.js";
 import download from "download";
 
 const asyncFs = fs.promises;
@@ -21,7 +21,7 @@ const ARCHIVE_NAMES = {
   darwin: "pandoc-2.11.4-macOS.zip",
   win32: "pandoc-2.11.4-windows-x86_64.zip",
 };
-const DESTINATION_DIR = resolve(esmDirName(import.meta), "_pandoc_");
+const DESTINATION_DIR = resolve(esmDirName(import.meta), "..", "_pandoc_");
 const TMP_DIR = resolve(DESTINATION_DIR, ".tmp");
 const BIN_DIR = resolve(DESTINATION_DIR, "bin");
 

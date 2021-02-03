@@ -4,14 +4,20 @@
   "description": "Install & use pandoc in Nodejs",
   "license": "MIT",
   "type": "module",
-  "main": "index.js",
+  "main": "./index.js",
+  "files": [
+    "*.d.ts",
+    "*.js",
+    "src"
+  ],
   "author": {
     "name": "Noël Macé",
     "email": "contact@noelmace.com",
     "url": "https://noelmace.com"
   },
   "scripts": {
-    "postinstall": "node download.js"
+    "types:copy": "copyfiles \"./src/**/*.d.ts\" \"./*.d.ts\" types",
+    "postinstall": "node ./scripts/download.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +30,6 @@
   },
   "dependencies": {
     "download": "^8.0.0"
-  }
+  },
+  "types": "./types/index.d.ts"
 }
