@@ -2,7 +2,7 @@ import { playwrightLauncher } from "@web/test-runner-playwright";
 
 /** @type {import("@web/test-runner").TestRunnerConfig} */
 export default {
-  files: "*/test-web/**/*.test.{js,ts,html}",
+  files: "packages/*/*/test-web/**/*.test.{js,ts,html}",
   nodeResolve: true,
 
   /** Compile JS for older browsers. Requires @web/dev-server-esbuild plugin */

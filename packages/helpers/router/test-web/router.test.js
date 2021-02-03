@@ -1,6 +1,6 @@
 import { expect } from "@open-wc/testing";
 import { spy, stub, fake } from "sinon";
-import { Router } from "../router/";
+import { Router } from "..";
 
 describe("router", () => {
   const fakeBase = "/mock/base";

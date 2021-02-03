@@ -1,6 +1,6 @@
 import { expect } from "@open-wc/testing";
 
-import { el } from "../el/";
+import { el } from "..";
 
 describe("el", () => {
   it("return a simple HTML element", () => {

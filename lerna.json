@@ -1,8 +1,9 @@
 {
   "packages": [
-    "packages/*",
+    "packages/panpress",
     "packages/panpress/cli",
     "materials/slides/*",
+    "packages/helpers",
     "packages/helpers/el",
     "packages/helpers/lazy-router",
     "packages/helpers/router",
