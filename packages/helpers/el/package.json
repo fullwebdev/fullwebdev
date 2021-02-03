@@ -4,7 +4,8 @@
   "description": "minimalistic HyperHTML function to create HTML elements",
   "main": "index.js",
   "module": "index.js",
-  "types": "main.d.ts",
+  "type": "module",
+  "types": "./types/index.d.ts",
   "keywords": [
     "modern",
     "vanilla",
