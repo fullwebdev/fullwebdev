@@ -15,7 +15,7 @@
     "setup:ts-configs": "node scripts/generate-ts-configs.mjs",
     "types": "run-s types:clear types:copy types:build",
     "types:build": "tsc --build",
-    "types:clear": "rimraf packages/*/types/",
+    "types:clear": "rimraf packages/*/types/ && rimraf packages/*/*/types/",
     "types:copy": "lerna run types:copy",
     "test": "npm run test:node && npm run test:web",
     "test:node": "mocha \"packages/*/*/test-node/**/*.test.{ts,js,mjs,cjs}\" --timeout 5000 --reporter dot --exit",
