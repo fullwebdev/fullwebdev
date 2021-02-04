@@ -1,8 +1,38 @@
-/materials/code-samples/src/index.html
-package.json
-package-lock.json
-vercel.json
-/materials/benchmark
-/materials/slides/**/snapshots/
-/materials/slides/**/src/**/*.json
+## generated
+node_modules
+coverage/
+dist
+tsc-dist
+stats.html
 *.fake.*
+build
+_daucus_/
+templates/
+package-lock.json
+
+## should stay as-is
+/packages/**/test-node/**/snapshots
+/packages/**/types
+/packages/**/demo
+vercel.json
+__mocks__
+
+## projects with other conventions
+/materials/benchmark
+/materials/slides
+/materials/eni-dpawm
+/docs
+*.jest.js
+
+## code samples on historic topics
+/materials/code-samples/src/CBSE/angularjs/
+/materials/code-samples/src/CBSE/jquery/
+/materials/code-samples/src/CBSE/react/
+/materials/code-samples/src/minimal-spa/2-location/ie-location.js
+/materials/code-samples/src/minimal-spa/5-routes/frameworks
+/materials/code-samples/src/CBSE/introduction/
+
+## compatibility / consistency
+/materials/code-samples/src/index.html
+/materials/perf/benchmarks
+/materials/data-driven-pwa
