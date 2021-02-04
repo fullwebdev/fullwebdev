@@ -1,3 +1,4 @@
+/* eslint-disable wc/no-constructor-attributes, no-console, prefer-rest-params */
 console.log("hello-world.component.js chargé");
 
 //#region class

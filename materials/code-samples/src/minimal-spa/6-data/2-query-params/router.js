@@ -53,7 +53,7 @@ async function navigate(
       ...initialGetParams,
       ...getParams,
     };
-    queryString = "?" + new URLSearchParams(query);
+    queryString = `?${new URLSearchParams(query)}`;
   }
 
   //#endregion mergeParams
@@ -62,9 +62,13 @@ async function navigate(
   const pathWithQueryString = baseUrl + path + queryString;
 
   if (redirection) {
-    history.replaceState({}, "", pathWithQueryString);
+    window.history.replaceState(
+      {},
+      "",
+      pathWithQueryString
+    );
   } else {
-    history.pushState({}, "", pathWithQueryString);
+    window.history.pushState({}, "", pathWithQueryString);
   }
   //#endregion concatPath
 

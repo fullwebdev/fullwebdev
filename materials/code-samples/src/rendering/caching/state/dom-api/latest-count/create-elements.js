@@ -8,19 +8,19 @@ class Counter {
 
   //#region actions
   _increment() {
-    this._count++;
+    this._count += 1;
     this._updateCounter();
   }
 
   _decrement() {
-    this._count--;
+    this._count -= 1;
     this._updateCounter();
   }
 
   //#region set
   _set(value) {
-    const newValue = Number.parseInt(value);
-    if (!isNaN(newValue)) {
+    const newValue = Number.parseInt(value, 10);
+    if (!Number.isNaN(newValue)) {
       this._count = newValue;
       this._updateCounter();
     }
@@ -77,7 +77,7 @@ class Counter {
 //#region create
 const containers = document.querySelectorAll(".counter");
 
-for (let container of containers) {
+for (const container of containers) {
   const counter = new Counter();
   counter.render(container);
 }

@@ -7,6 +7,6 @@ class Square {
 
   // Définition d'une méthode
   grow() {
-    this.width++;
+    this.width += 1;
   }
 }

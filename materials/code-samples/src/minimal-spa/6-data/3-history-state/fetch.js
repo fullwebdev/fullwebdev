@@ -1,3 +1,4 @@
+/* eslint-disable no-unsafe-finally */
 /**
  * @param {string} id
  * @returns {Promise<PostData>}
@@ -7,7 +8,7 @@ import { PostDataError } from "../rendering.js";
 
 async function getPostData(id) {
   //#region checkInt
-  const numId = parseInt(id);
+  const numId = parseInt(id, 10);
   if (Number.isNaN(numId)) {
     throw new Error(`chemin invalide`);
   }
@@ -20,11 +21,15 @@ async function getPostData(id) {
     );
   } finally {
     if (!response || !response.ok) {
-      const message = !response
-        ? "erreur réseaux"
-        : response.status === 404
-        ? "article inexistant"
-        : "erreur serveur";
+      let message;
+      if (!response) {
+        message = "erreur réseaux";
+      } else if (response.status === 404) {
+        message = "article inexistant";
+      } else {
+        message = "erreur serveur";
+      }
+
       throw new PostDataError(message, id);
     }
   }

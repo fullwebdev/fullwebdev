@@ -1,4 +1,4 @@
-import { routes } from "./routes.js";
+import { routes as routesConfig } from "./routes.js";
 import { render } from "../../5-routes/rendering.js";
 import { baseUrl } from "../../4-history-api/base-url.js";
 
@@ -11,10 +11,10 @@ import { baseUrl } from "../../4-history-api/base-url.js";
  */
 function simpleMatchRoute(path, routes) {
   //#region simpleMatch
-  const route = routes.find(route =>
-    route.path instanceof RegExp
-      ? route.path.test(path)
-      : route.path === path
+  const route = routes.find((r) =>
+    r.path instanceof RegExp
+      ? r.path.test(path)
+      : r.path === path
   );
   //#endregion simpleMatch
   return route;
@@ -28,7 +28,7 @@ function matchRoute(path, routes) {
       if (parsed) {
         return {
           route,
-          params: parsed.slice(1)
+          params: parsed.slice(1),
         };
       }
     } else if (path === route.path) {
@@ -41,7 +41,7 @@ function matchRoute(path, routes) {
 //#region navigate
 async function navigate(path, redirection = false) {
   //#region callMatch
-  const { route, params } = matchRoute(path, routes);
+  const { route, params } = matchRoute(path, routesConfig);
   //#endregion callMatch
 
   //#region redirect
@@ -59,9 +59,9 @@ async function navigate(path, redirection = false) {
   //#endregion data
 
   if (redirection) {
-    history.replaceState({}, "", baseUrl + path);
+    window.history.replaceState({}, "", baseUrl + path);
   } else {
-    history.pushState({}, "", baseUrl + path);
+    window.history.pushState({}, "", baseUrl + path);
   }
 
   render(route.renderer({ data, params }));

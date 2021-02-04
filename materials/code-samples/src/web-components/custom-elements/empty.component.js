@@ -1,3 +1,5 @@
+/* eslint-disable prefer-rest-params, no-redeclare */
+// @ts-nocheck duplicates for demo
 //#region class
 class MyComponent extends HTMLElement {}
 //#endregion class

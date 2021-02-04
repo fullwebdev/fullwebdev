@@ -2,16 +2,16 @@ import {
   Home,
   ErrorScreen,
   Post,
-  render
+  render,
 } from "../rendering.js";
 import { updatePath, replacePath } from "../router.js";
 import { getPostData } from "../../1-fundamentals/fetch.js";
 
 //#region errorRoute
-const errorRoute = message => ({
+const errorRoute = (message) => ({
   path: "/404",
   renderer: ErrorScreen,
-  data: () => message
+  data: () => message,
 });
 //#endregion errorRoute
 
@@ -24,20 +24,21 @@ const routes = [
   {
     path: "/post/1",
     renderer: Post,
-    data: () => getPostData(1)
+    data: () => getPostData(1),
   },
   {
     path: "/post/2",
     renderer: Post,
-    data: () => getPostData(2)
-  }
+    data: () => getPostData(2),
+  },
   //#endregion postRoutes
 ];
 //#endregion routes
 
 //#region navigate
 async function navigate(path, redirection = false) {
-  let route = routes.find(route => route.path === path);
+  let route = routes.find((r) => r.path === path);
+  let shouldRedirect = redirection;
 
   if (route === undefined) {
     if (path.startsWith("/post/")) {
@@ -45,7 +46,7 @@ async function navigate(path, redirection = false) {
     } else {
       route = defaultRoute;
     }
-    redirection = true;
+    shouldRedirect = true;
   }
 
   let data;
@@ -55,7 +56,7 @@ async function navigate(path, redirection = false) {
 
   render(route.renderer(data));
 
-  if (redirection) {
+  if (shouldRedirect) {
     replacePath(route.path);
   } else {
     updatePath(route.path);

@@ -1,3 +1,4 @@
+/* eslint-disable no-unsafe-finally */
 import { PostDataError } from "../rendering.js";
 
 //#region postData
@@ -9,11 +10,15 @@ async function getPostData(id) {
     );
   } finally {
     if (!response || !response.ok) {
-      const message = !response
-        ? "erreur réseaux"
-        : response.status === 404
-        ? "article inexistant"
-        : "erreur serveur";
+      let message;
+      if (!response) {
+        message = "erreur réseaux";
+      } else if (response.status === 404) {
+        message = "article inexistant";
+      } else {
+        message = "erreur serveur";
+      }
+
       throw new PostDataError(message, id);
     }
   }

@@ -1,3 +1,6 @@
+// @ts-nocheck private method standard won't be supported by typescript until v4.3
+// https://github.com/microsoft/TypeScript/issues/39066#issuecomment-754780049
+
 {
   //#region constructor
   //#region template
@@ -47,16 +50,6 @@
     }
     //#endregion getText
 
-    //#region getters
-    get color() {
-      return this.getAttribute("color");
-    }
-
-    get isInverted() {
-      return this.hasAttribute("inverted");
-    }
-    //#endregion getters
-
     //#region set-color
     set color(val) {
       if (val) {
@@ -66,6 +59,16 @@
       }
     }
     //#endregion set-color
+
+    //#region getters
+    get color() {
+      return this.getAttribute("color");
+    }
+
+    get isInverted() {
+      return this.hasAttribute("inverted");
+    }
+    //#endregion getters
 
     //#region possible-texts
     set possibleTexts(val) {

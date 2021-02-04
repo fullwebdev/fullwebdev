@@ -10,12 +10,12 @@ class Counter {
 
   //#region actions
   _increment() {
-    this._count++;
+    this._count += 1;
     this._updateCounter();
   }
 
   _decrement() {
-    this._count--;
+    this._count -= 1;
     this._updateCounter();
   }
   //#region actions
@@ -50,11 +50,11 @@ class Counter {
 
     container.appendChild(root);
 
-    root.addEventListener("click", (e) => {
-      const el = e.target;
-      if (el.closest(".increment")) {
+    root.addEventListener("click", (event) => {
+      const { target } = event;
+      if (target.closest(".increment")) {
         this._increment();
-      } else if (el.closest(".decrement")) {
+      } else if (target.closest(".decrement")) {
         this._decrement();
       }
     });
@@ -68,7 +68,7 @@ class Counter {
 //#region create
 const containers = document.querySelectorAll(".counter");
 
-for (let container of containers) {
+for (const container of containers) {
   const counter = new Counter();
   counter.render(container);
 }

@@ -3,5 +3,5 @@ import { getPath } from "../../5-routes/router.js";
 
 navigate(getPath(), null, true);
 
-// @ts-ignore
+// @ts-ignore no need to add a custom Window type for this simple demo
 window.navigate = navigate;

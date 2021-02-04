@@ -2,6 +2,9 @@
   //#region memoization
   const counterChildrenCache = new WeakMap();
 
+  /**
+   * @this {any}
+   */
   function counterChildren() {
     //#region get
     if (counterChildrenCache.has(this)) {
@@ -44,17 +47,18 @@
     //#region constructor
     constructor() {
       this._count = 0;
+      this._counter = undefined;
     }
     //#endregion constructor
 
     //#region actions
     _increment() {
-      this._count++;
+      this._count += 1;
       this._updateCounter();
     }
 
     _decrement() {
-      this._count--;
+      this._count -= 1;
       this._updateCounter();
     }
     //#region actions
@@ -70,7 +74,7 @@
       this.container = container;
       const children = counterChildren();
       this.container.append(...children);
-      this._counter = children[0];
+      [this._counter] = children;
       this._updateCounter();
     }
     //#endregion render
@@ -80,7 +84,7 @@
   //#region create
   const containers = document.querySelectorAll(".counter");
 
-  for (let container of containers) {
+  for (const container of containers) {
     const counter = new Counter();
     counter.render(container);
   }

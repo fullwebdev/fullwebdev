@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow, wc/no-closed-shadow-root, class-methods-use-this */
 //#region workaround
 HTMLElement.prototype._attachShadow =
   HTMLElement.prototype.attachShadow;

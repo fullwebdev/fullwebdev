@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const loveContainer = document.getElementById(
   "non-ascii-container"
 );

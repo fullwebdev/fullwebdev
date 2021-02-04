@@ -15,5 +15,4 @@ async function showPost(id) {
 }
 //#endregion show
 
-// @ts-ignore
 window.showPost = showPost;

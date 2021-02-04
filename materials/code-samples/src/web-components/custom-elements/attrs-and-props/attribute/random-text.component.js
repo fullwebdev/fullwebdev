@@ -1,10 +1,11 @@
+// @ts-nocheck private method standard won't be supported by typescript until v4.3
+// https://github.com/microsoft/TypeScript/issues/39066#issuecomment-754780049
 {
   //#region repeatOrCutToLength
-  const repeatOrCutToLength = (str, length) => {
-    return str
+  const repeatOrCutToLength = (str, length) =>
+    str
       .repeat(Math.ceil(length / str.length))
       .slice(0, length);
-  };
   //#endregion repeatOrCutToLength
 
   //#region positiveIntOrNull
@@ -153,7 +154,7 @@
 
     #upgradeProperty(prop) {
       if (this.hasOwnProperty(prop)) {
-        let value = this[prop];
+        const value = this[prop];
         delete this[prop];
         this[prop] = value;
       }

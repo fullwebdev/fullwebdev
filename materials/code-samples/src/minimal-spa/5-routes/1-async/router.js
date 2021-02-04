@@ -8,19 +8,19 @@ async function Routes() {
     { path: "/", template: Home() },
     {
       path: "/post/1",
-      template: Post(await getPostData(1))
+      template: Post(await getPostData(1)),
     },
     {
       path: "/post/2",
-      template: Post(await getPostData(2))
-    }
+      template: Post(await getPostData(2)),
+    },
   ];
 }
 //#endregion routes
 
 export async function navigate(path, redirection = false) {
   const route = (await Routes()).find(
-    route => route.path === path
+    (r) => r.path === path
   );
 
   render(route.template);

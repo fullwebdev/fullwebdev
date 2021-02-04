@@ -16,7 +16,7 @@ function updatePath(path) {
  */
 //#region replacePath
 function replacePath(path) {
-  const href = window.location.href;
+  const { href } = window.location;
   const locationWithoutHash = href.split("#")[0];
   window.location.replace(`${locationWithoutHash}#${path}`);
 }

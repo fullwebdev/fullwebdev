@@ -29,7 +29,7 @@ export async function navigate(
       if (e instanceof PostDataError) {
         navigate("/post/error", {}, true, {
           id: e.id,
-          msg: e.message
+          msg: e.message,
         });
       } else {
         navigate("/404", { errorMessage: e.message }, true);
@@ -50,18 +50,26 @@ export async function navigate(
   if (initialGetParams || getParams) {
     const query = {
       ...initialGetParams,
-      ...getParams
+      ...getParams,
     };
-    queryString = "?" + new URLSearchParams(query);
+    queryString = `?${new URLSearchParams(query)}`;
   }
 
   const pathWithQueryString = baseUrl + path + queryString;
 
   //#region pushState
   if (redirection) {
-    history.replaceState(state, "", pathWithQueryString);
+    window.history.replaceState(
+      state,
+      "",
+      pathWithQueryString
+    );
   } else {
-    history.pushState(state, "", pathWithQueryString);
+    window.history.pushState(
+      state,
+      "",
+      pathWithQueryString
+    );
   }
   //#endregion pushState
 

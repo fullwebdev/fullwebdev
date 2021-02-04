@@ -27,7 +27,7 @@ document.body.addEventListener("click", (e) => {
   )
     return;
 
-  let href = anchor.href;
+  const { href } = anchor;
 
   if (!href || href.includes("mailto:")) return;
 
@@ -41,7 +41,7 @@ document.body.addEventListener("click", (e) => {
 //#endregion click
 
 //#region onpopstate
-window.onpopstate = (event) => {
+window.onpopstate = () => {
   navigate(getPath(), false, false);
 };
 //#endregion onpopstate

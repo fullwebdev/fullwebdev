@@ -1,3 +1,4 @@
+/* eslint-disable no-multi-assign */
 import { store, counterSelector } from "./store.js";
 import { p } from "./dom.js";
 

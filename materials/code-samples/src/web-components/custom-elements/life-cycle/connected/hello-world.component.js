@@ -7,6 +7,7 @@ class ConnectedHelloWorldComponent extends HTMLElement {
     p.textContent = "Hello World";
     this.appendChild(p);
   }
+
   //#endregion connectedCallback
   //#region disconnectedCallback
   disconnectedCallback() {

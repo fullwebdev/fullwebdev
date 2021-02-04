@@ -1,15 +1,17 @@
+/* eslint-disable no-use-before-define */
+// @ts-nocheck bad on purpose
 {
   //#region count
   window.count = 0;
   //#endregion count
 
   function increment() {
-    window.count++;
+    window.count += 1;
     render();
   }
 
   function decrement() {
-    window.count--;
+    window.count -= 1;
     render();
   }
 

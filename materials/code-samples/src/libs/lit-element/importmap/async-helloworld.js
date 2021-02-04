@@ -5,6 +5,7 @@
  * under BSD 3-Clause License
  */
 
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { LitElement, html, css } from "lit-element";
 
 class AsyncHelloWorld extends LitElement {
@@ -45,7 +46,7 @@ class AsyncHelloWorld extends LitElement {
 
   loadMsg() {
     setInterval(() => {
-      let loaded = new CustomEvent("msg-loaded", {
+      const loaded = new CustomEvent("msg-loaded", {
         detail: "Hello World!",
       });
       this.dispatchEvent(loaded);

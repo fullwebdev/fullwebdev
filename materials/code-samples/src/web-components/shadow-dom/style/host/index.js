@@ -1,3 +1,6 @@
+/* eslint-disable class-methods-use-this */
+// @ts-nocheck see https://github.com/microsoft/TypeScript/issues/30022
+
 //#region constructor
 //#region style
 const randomTextStyle = new CSSStyleSheet();

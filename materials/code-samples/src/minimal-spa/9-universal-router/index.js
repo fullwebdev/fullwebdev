@@ -1,3 +1,4 @@
+/* globals UniversalRouter */
 import { getPostData } from "../1-fundamentals/fetch.js";
 
 const render = (html) => {
@@ -58,9 +59,13 @@ async function navigate(
   } else {
     render(route);
     if (redirection) {
-      history.replaceState({}, "", `${baseUrl}${path}`);
+      window.history.replaceState(
+        {},
+        "",
+        `${baseUrl}${path}`
+      );
     } else if (update) {
-      history.pushState({}, "", `${baseUrl}${path}`);
+      window.history.pushState({}, "", `${baseUrl}${path}`);
     }
   }
 }
@@ -91,7 +96,7 @@ document.body.addEventListener("click", (e) => {
   )
     return;
 
-  let href = anchor.href;
+  const { href } = anchor;
 
   if (!href || href.includes("mailto:")) return;
 

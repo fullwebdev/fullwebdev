@@ -6,5 +6,5 @@ function Square(height, width) {
 
 // Définition d'une méthode
 Square.prototype.grow = function () {
-  this.width++;
+  this.width += 1;
 };

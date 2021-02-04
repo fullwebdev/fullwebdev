@@ -49,7 +49,7 @@ class AsyncHelloWorld extends LitElement {
 
   loadMsg() {
     setInterval(() => {
-      let loaded = new CustomEvent("msg-loaded", {
+      const loaded = new CustomEvent("msg-loaded", {
         detail: "Hello World!",
       });
       this.dispatchEvent(loaded);

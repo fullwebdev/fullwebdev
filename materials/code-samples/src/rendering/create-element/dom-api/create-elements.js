@@ -17,11 +17,11 @@ function renderCount() {
 }
 
 incrementBtn.addEventListener("click", () => {
-  count++;
+  count += 1;
   renderCount();
 });
 decrementBtn.addEventListener("click", () => {
-  count--;
+  count -= 1;
   renderCount();
 });
 

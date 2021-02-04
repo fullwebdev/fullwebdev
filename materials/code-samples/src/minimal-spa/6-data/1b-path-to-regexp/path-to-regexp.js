@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  * Derived from path-to-regexp v1.7.0
  * by Blake Embrey (hello@blakeembrey.com) under MIT License
@@ -22,7 +23,7 @@ const PATH_REGEXP = new RegExp(
     // "/:test(\\d+)?" => ["/", "test", "\d+", undefined, "?", undefined]
     // "/route(\\d+)"  => [undefined, undefined, undefined, "\d+", undefined, undefined]
     // "/*"            => ["/", undefined, undefined, undefined, undefined, "*"]
-    "([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))"
+    "([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))",
   ].join("|"),
   "g"
 );
@@ -34,17 +35,17 @@ const PATH_REGEXP = new RegExp(
  * @return {!Array}
  */
 function parse(str) {
-  var tokens = [];
-  var key = 0;
-  var index = 0;
-  var path = "";
-  var defaultDelimiter = "/";
-  var res;
+  const tokens = [];
+  let key = 0;
+  let index = 0;
+  let path = "";
+  const defaultDelimiter = "/";
+  let res;
 
   while ((res = PATH_REGEXP.exec(str)) != null) {
-    var m = res[0];
-    var escaped = res[1];
-    var offset = res.index;
+    const m = res[0];
+    const escaped = res[1];
+    const offset = res.index;
     path += str.slice(index, offset);
     index = offset + m.length;
 
@@ -54,13 +55,13 @@ function parse(str) {
       continue;
     }
 
-    var next = str[index];
-    var prefix = res[2];
-    var name = res[3];
-    var capture = res[4];
-    var group = res[5];
-    var modifier = res[6];
-    var asterisk = res[7];
+    const next = str[index];
+    const prefix = res[2];
+    const name = res[3];
+    const capture = res[4];
+    const group = res[5];
+    const modifier = res[6];
+    const asterisk = res[7];
 
     // Push the current path onto the tokens.
     if (path) {
@@ -68,26 +69,26 @@ function parse(str) {
       path = "";
     }
 
-    var partial =
+    const partial =
       prefix != null && next != null && next !== prefix;
-    var repeat = modifier === "+" || modifier === "*";
-    var optional = modifier === "?" || modifier === "*";
-    var delimiter = res[2] || defaultDelimiter;
-    var pattern = capture || group;
+    const repeat = modifier === "+" || modifier === "*";
+    const optional = modifier === "?" || modifier === "*";
+    const delimiter = res[2] || defaultDelimiter;
+    const pattern = capture || group;
 
     tokens.push({
-      name: name || key++,
+      name: name || (key += 1),
       prefix: prefix || "",
-      delimiter: delimiter,
-      optional: optional,
-      repeat: repeat,
-      partial: partial,
+      delimiter,
+      optional,
+      repeat,
+      partial,
       asterisk: !!asterisk,
       pattern: pattern
         ? escapeGroup(pattern)
         : asterisk
         ? ".*"
-        : "[^" + escapeString(delimiter) + "]+?"
+        : `[^${escapeString(delimiter)}]+?`,
     });
   }
 
@@ -131,51 +132,49 @@ function escapeGroup(group) {
  * @return {!RegExp}
  */
 function tokensToRegExp(tokens) {
-  var route = "";
+  let route = "";
 
   // Iterate over the tokens and create our regexp string.
-  for (var i = 0; i < tokens.length; i++) {
-    var token = tokens[i];
+  for (let i = 0; i < tokens.length; i += 1) {
+    const token = tokens[i];
 
     if (typeof token === "string") {
       route += escapeString(token);
     } else {
-      var prefix = escapeString(token.prefix);
-      var capture = "(?:" + token.pattern + ")";
+      const prefix = escapeString(token.prefix);
+      let capture = `(?:${token.pattern})`;
 
       if (token.repeat) {
-        capture += "(?:" + prefix + capture + ")*";
+        capture += `(?:${prefix}${capture})*`;
       }
 
       if (token.optional) {
         if (!token.partial) {
-          capture = "(?:" + prefix + "(" + capture + "))?";
+          capture = `(?:${prefix}(${capture}))?`;
         } else {
-          capture = prefix + "(" + capture + ")?";
+          capture = `${prefix}(${capture})?`;
         }
       } else {
-        capture = prefix + "(" + capture + ")";
+        capture = `${prefix}(${capture})`;
       }
 
       route += capture;
     }
   }
 
-  var delimiter = escapeString("/");
-  var endsWithDelimiter =
+  const delimiter = escapeString("/");
+  const endsWithDelimiter =
     route.slice(-delimiter.length) === delimiter;
 
-  route =
-    (endsWithDelimiter
+  route = `${
+    endsWithDelimiter
       ? route.slice(0, -delimiter.length)
-      : route) +
-    "(?:" +
-    delimiter +
-    "(?=$))?";
+      : route
+  }(?:${delimiter}(?=$))?`;
 
   route += "$";
 
-  return new RegExp("^" + route);
+  return new RegExp(`^${route}`);
 }
 
 /**

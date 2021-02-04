@@ -9,12 +9,12 @@
 
     //#region actions
     _increment() {
-      this._count++;
+      this._count += 1;
       this._updateCounter();
     }
 
     _decrement() {
-      this._count--;
+      this._count -= 1;
       this._updateCounter();
     }
     //#region actions
@@ -63,7 +63,7 @@
   //#region create
   const containers = document.querySelectorAll(".counter");
 
-  for (let container of containers) {
+  for (const container of containers) {
     const counter = new Counter();
     counter.render(container);
   }

@@ -1,4 +1,4 @@
-import { fixture, expect } from "@open-wc/testing";
+import { expect } from "@open-wc/testing";
 import sinon from "sinon";
 import "sinon-chai";
 

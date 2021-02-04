@@ -30,7 +30,7 @@ class DemoCounter extends HTMLElement {
 
   _upgradeProperty(prop) {
     if (this.hasOwnProperty(prop)) {
-      let value = this[prop];
+      const value = this[prop];
       delete this[prop];
       this[prop] = value;
     }

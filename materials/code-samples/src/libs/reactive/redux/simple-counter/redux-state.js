@@ -7,8 +7,9 @@ class ReduxState extends HTMLElement {
     this.attachShadow({ mode: "open" });
 
     store.subscribe(() => {
-      this.shadowRoot.textContent =
-        "state: " + store.getState().toString();
+      this.shadowRoot.textContent = `state: ${store
+        .getState()
+        .toString()}`;
     });
   }
 }

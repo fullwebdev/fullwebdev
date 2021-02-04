@@ -1,28 +1,27 @@
 import { pathToRegexp } from "./path-to-regexp.js";
 import { render } from "../../5-routes/rendering.js";
 import { baseUrl } from "../../4-history-api/base-url.js";
-import { routes } from "./routes.js";
+import { routes as routesConfig } from "./routes.js";
 
 function matchRoute(path, routes) {
   for (const route of routes) {
     if (path === route.path) {
       return { route };
-    } else {
-      const regexp = pathToRegexp(route.path);
-      const parsed = regexp.exec(path);
-      if (parsed) {
-        return {
-          route,
-          params: parsed.slice(1)
-        };
-      }
+    }
+    const regexp = pathToRegexp(route.path);
+    const parsed = regexp.exec(path);
+    if (parsed) {
+      return {
+        route,
+        params: parsed.slice(1),
+      };
     }
   }
 }
 
 // TODO: dependency injection ? (duplication with previous step)
 export async function navigate(path, redirection = false) {
-  const { route, params } = matchRoute(path, routes);
+  const { route, params } = matchRoute(path, routesConfig);
 
   if (route.redirect) {
     navigate(route.redirect, true);
@@ -35,9 +34,9 @@ export async function navigate(path, redirection = false) {
   }
 
   if (redirection) {
-    history.replaceState({}, "", baseUrl + path);
+    window.history.replaceState({}, "", baseUrl + path);
   } else {
-    history.pushState({}, "", baseUrl + path);
+    window.history.pushState({}, "", baseUrl + path);
   }
 
   render(route.renderer({ data, params }));

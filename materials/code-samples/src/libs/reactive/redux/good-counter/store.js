@@ -1,3 +1,4 @@
+/* global Redux */
 //#region actions
 const INCREMENT = "INCREMENT";
 const DECREMENT = "DECREMENT";

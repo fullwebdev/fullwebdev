@@ -24,7 +24,8 @@ class PostDataError extends Error {
 //#region error
 function ErrorScreen() {
   const message =
-    (history.state && history.state.errorMessage) ||
+    (window.history.state &&
+      window.history.state.errorMessage) ||
     "Route introuvable";
   return `
     <h1>Erreur</h1>
@@ -52,5 +53,5 @@ export {
   PostErrorScreen,
   ErrorScreen,
   PostDataError,
-  Post
+  Post,
 };

@@ -3,13 +3,10 @@
  */
 //#region callback
 function perfObserver(list) {
-  let performanceEntries = list.getEntriesByType("paint");
+  const performanceEntries = list.getEntriesByType("paint");
   performanceEntries.forEach((performanceEntry) => {
     console.log(
-      performanceEntry.name +
-        " est égal à " +
-        performanceEntry.startTime +
-        " millisecondes."
+      `${performanceEntry.name} est égal à ${performanceEntry.startTime} millisecondes.`
     );
   });
 }

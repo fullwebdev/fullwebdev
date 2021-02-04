@@ -3,7 +3,7 @@ function isEqual(newInputs, lastInputs) {
     return false;
   }
 
-  for (let i = 0; i < newInputs.length; i++) {
+  for (let i = 0; i < newInputs.length; i += 1) {
     if (newInputs[i] !== lastInputs[i]) {
       return false;
     }
@@ -13,7 +13,10 @@ function isEqual(newInputs, lastInputs) {
 
 //#region memoization
 export function memLatest(fn) {
-  let lastThis, lastArgs, lastResult, calledOnce;
+  let lastThis;
+  let lastArgs;
+  let lastResult;
+  let calledOnce;
 
   function memoized(...newArgs) {
     if (

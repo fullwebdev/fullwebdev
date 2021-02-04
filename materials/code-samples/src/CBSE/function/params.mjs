@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { SayHello } from "./components/SayHello.mjs";
 import { Home } from "./components/Home.mjs";
 

@@ -1,3 +1,5 @@
+/* eslint-disable no-return-assign */
+/* globals rxjs */
 const { fromEvent } = rxjs;
 const {
   map,

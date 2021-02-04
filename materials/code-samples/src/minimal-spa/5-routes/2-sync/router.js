@@ -8,19 +8,19 @@ const routes = [
   {
     path: "/post/1",
     renderer: Post,
-    data: () => getPostData(1)
+    data: () => getPostData(1),
   },
   {
     path: "/post/2",
     renderer: Post,
-    data: () => getPostData(2)
-  }
+    data: () => getPostData(2),
+  },
 ];
 //#endregion routes
 
 //#region navigate
 async function navigate(path, redirection = false) {
-  const route = routes.find(route => route.path === path);
+  const route = routes.find((r) => r.path === path);
 
   let data;
   if (route.data) {

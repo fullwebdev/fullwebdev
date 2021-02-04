@@ -44,7 +44,8 @@ async function navigate(
   redirection = false,
   update = true
 ) {
-  let route = routes.find((route) => route.path === path);
+  let route = routes.find((r) => r.path === path);
+  let shouldRedirection = redirection;
 
   if (route === undefined) {
     if (path.startsWith("/post/")) {
@@ -52,7 +53,7 @@ async function navigate(
     } else {
       route = defaultRoute;
     }
-    redirection = true;
+    shouldRedirection = true;
   }
 
   let data;
@@ -62,7 +63,7 @@ async function navigate(
 
   render(route.renderer(data));
 
-  if (redirection) {
+  if (shouldRedirection) {
     replacePath(route.path);
   } else if (update) {
     updatePath(route.path);

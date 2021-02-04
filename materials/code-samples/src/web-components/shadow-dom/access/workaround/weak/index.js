@@ -1,3 +1,4 @@
+/* eslint-disable func-names, wc/no-closed-shadow-root */
 //#region workaround
 HTMLElement.prototype._attachShadow =
   HTMLElement.prototype.attachShadow;

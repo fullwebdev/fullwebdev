@@ -7,12 +7,12 @@
     }
 
     _increment() {
-      this._count++;
+      this._count += 1;
       this.render();
     }
 
     _decrement() {
-      this._count--;
+      this._count -= 1;
       this.render();
     }
 
@@ -44,7 +44,7 @@
   //#region create
   const containers = document.querySelectorAll(".counter");
 
-  for (let container of containers) {
+  for (const container of containers) {
     const counter = new Counter(container);
     counter.render();
   }

@@ -1,4 +1,4 @@
-import page from "//unpkg.com/page/page.mjs";
+import page from "https://unpkg.com/page/page.mjs";
 import { getPostData } from "../1-fundamentals/fetch.js";
 
 const render = (html) => {

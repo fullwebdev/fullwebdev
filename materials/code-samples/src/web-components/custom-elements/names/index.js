@@ -1,3 +1,4 @@
+/* eslint-disable wc/no-invalid-element-name */
 export class SuccessComponent extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `<p class="success">This Custom Element works!</p>`;

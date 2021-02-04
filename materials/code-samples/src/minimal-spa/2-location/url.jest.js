@@ -1,3 +1,5 @@
+/* eslint-disable new-cap, no-undef, import/extensions */
+// @ts-nocheck JEST
 import { updateUrl } from "./url";
 import { locationStub } from "../__mocks__/jest-location";
 

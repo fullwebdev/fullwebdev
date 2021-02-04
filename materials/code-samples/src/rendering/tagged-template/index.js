@@ -8,8 +8,7 @@ function anchor(strs, ...args) {
   }
 
   const rslt = document.createElement("a");
-  rslt.href = args[0];
-  rslt.textContent = args[1];
+  [rslt.href, rslt.textContent] = args;
 
   return rslt;
 }

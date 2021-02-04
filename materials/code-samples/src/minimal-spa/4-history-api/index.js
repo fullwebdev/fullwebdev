@@ -24,5 +24,5 @@ async function showPost(id) {
 }
 //#endregion show
 
-// @ts-ignore
+// @ts-ignore no need to add a custom Window type for this simple demo
 window.showPost = showPost;

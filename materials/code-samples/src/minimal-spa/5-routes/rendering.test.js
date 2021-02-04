@@ -4,8 +4,8 @@ import {
   render,
   Post,
   Home,
-  ErrorScreen
-} from "./rendering";
+  ErrorScreen,
+} from "./rendering.js";
 import { post } from "../__mocks__/Post.mock.js";
 
 describe("minimal-spa - 5-routes : rendering", () => {

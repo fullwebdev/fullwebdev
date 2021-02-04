@@ -1,5 +1,3 @@
-"use strict";
-
 //#region render-fn
 function render(html, selector) {
   document.querySelector(selector).innerHTML = html;

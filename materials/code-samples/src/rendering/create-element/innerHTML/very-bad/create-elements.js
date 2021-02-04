@@ -1,15 +1,6 @@
+// @ts-nocheck bad on purpose
 {
   let count = 0;
-
-  const increment = () => {
-    count++;
-    render();
-  };
-
-  const decrement = () => {
-    count--;
-    render();
-  };
 
   const container = document.querySelector("main");
 
@@ -22,6 +13,16 @@
       </div>
     `;
   }
+
+  const increment = () => {
+    count += 1;
+    render();
+  };
+
+  const decrement = () => {
+    count -= 1;
+    render();
+  };
 
   window.increment = increment;
   window.decrement = decrement;

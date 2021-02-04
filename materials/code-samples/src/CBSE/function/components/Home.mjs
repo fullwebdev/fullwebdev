@@ -1,5 +1,9 @@
 import { SayHello } from "./SayHello.mjs";
 
+/**
+ *
+ * @param {{appName: string, style: string, helloTo: string}}
+ */
 //#region home
 function Home({ appName, style, helloTo }) {
   return `

@@ -1,3 +1,6 @@
+/* eslint-disable wc/no-closed-shadow-root */
+// @ts-nocheck lots of duplicates for demo
+
 //#region open-component
 class OpenComponent extends HTMLElement {
   constructor() {

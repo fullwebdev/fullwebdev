@@ -18,26 +18,27 @@ const routerView = router(".router-view", routes);
 const navigate = (route, data) => async (e) => {
   e.preventDefault();
   let path = route;
+  let newRoute = route;
   let params = data;
   if (route === "post") {
     try {
       params = await getPostData(data);
       path = `${route}/${data}`;
     } catch {
-      route = "notFound";
+      newRoute = "notFound";
     }
   } else if (!Object.keys(routes).includes(route)) {
-    route = "notFound";
+    newRoute = "notFound";
   }
 
-  routerView.update(route, params);
-  history.pushState({}, "", `${baseUrl}/${path}`);
+  routerView.update(newRoute, params);
+  window.history.pushState({}, "", `${baseUrl}/${path}`);
 };
 //#endregion navigate
 
 //#region popstate
 window.onpopstate = () => {
-  let [, path, data] = getPath().split("/");
+  const [, path, data] = getPath().split("/");
   navigate(path, data);
 };
 //#endregion popstate
