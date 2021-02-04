@@ -1,0 +1,12 @@
+node_modules
+coverage/
+dist
+tsc-dist
+stats.html
+/packages/**/test-node/**/snapshots
+/packages/**/demo/**/*
+/materials/code-samples/src/index.html
+/materials/benchmark
+/materials/slides/**/snapshots/
+*.fake.*
+
