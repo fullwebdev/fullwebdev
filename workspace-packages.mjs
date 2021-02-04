@@ -7,6 +7,7 @@ const packages = [
   { name: 'el', scope: "helpers", type: 'js', environment: 'browser' },
   { name: 'router', scope: "helpers", type: 'js', environment: 'browser' },
   { name: 'template', scope: "helpers", type: 'js', environment: 'browser' },
+  // { name: 'code-samples', scope: "", type: 'js', environment: 'browser', materials: true },
 ];
 
 export { packages };

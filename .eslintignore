@@ -3,10 +3,29 @@ coverage/
 dist
 tsc-dist
 stats.html
-/packages/**/test-node/**/snapshots
-/packages/**/demo/**/*
-/materials/code-samples/src/index.html
-/materials/benchmark
-/materials/slides/**/snapshots/
 *.fake.*
+__mocks__
 
+## should stay as-is
+/packages/**/test-node/**/snapshots
+/packages/**/types
+/packages/**/demo
+
+## projects with other conventions
+/materials/benchmark
+/materials/slides
+/docs
+*.jest.js
+
+## code samples on historic topics
+/materials/code-samples/src/CBSE/angularjs/
+/materials/code-samples/src/CBSE/jquery/
+/materials/code-samples/src/CBSE/react/
+/materials/code-samples/src/minimal-spa/2-location/ie-location.js
+/materials/code-samples/src/minimal-spa/5-routes/frameworks
+/materials/code-samples/src/CBSE/introduction/
+
+## compatibility / consistency
+/materials/code-samples/src/index.html
+/materials/perf/benchmarks
+/materials/data-driven-pwa

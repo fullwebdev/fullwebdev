@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.browser-base.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "rootDir": ".",
+    "checkJs": true,
+    "noImplicitAny": false,
+    "strictNullChecks": false
+  },
+  "references": [],
+  "exclude": [
+    "dist",
+    "types"
+  ]
+}

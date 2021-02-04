@@ -1,5 +1,6 @@
 {
   "packages": [
+    "livre-build",
     "materials/slides/*",
     "packages/helpers",
     "packages/helpers/el",
