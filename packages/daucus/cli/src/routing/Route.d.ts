@@ -10,6 +10,7 @@ export interface ProjectRoutesConfig extends Partial<Route> {
   children?: {
     [key: string]: Partial<Route>;
   };
+  menu?: string;
 }
 
 export interface RoutesConfig {

@@ -6,6 +6,7 @@ import { ensureDir } from "../fs/path.js";
 import { createRouteFor } from "../routing/routes.js";
 import { loadCompiler } from "./load.js";
 import { writeCompiledFile } from "../fs/write.js";
+import { ProjectRoutesConfigBuilder } from "../routing/route-config.js";
 
 /**
  * @typedef {import('../config/DaucusConfig').ProjectConfig} ProjectConfig
@@ -98,8 +99,7 @@ export async function buildProject(
     compiler = await loadCompiler(projectConfig.compiler);
   }
 
-  /** @type {RoutesConfig} */
-  const routes = { children: {} };
+  const routesConfigBuilder = new ProjectRoutesConfigBuilder(projectName);
   await Promise.all(
     paths.map(async (filePath) => {
       const relativeFilePath = relative(projectConfig.root, filePath);
@@ -122,30 +122,7 @@ export async function buildProject(
 
       const [routeKey, route] = createRouteFor(html, relativeOutputFilePath);
 
-      const routeParents = route.path.split("/").filter((p) => p);
-      if (routeKey) {
-        routeParents.pop();
-      }
-
-      let acc = routes;
-      routeParents.forEach((elmt) => {
-        if (!acc.children) {
-          acc.children = {};
-        }
-        if (!acc.children[elmt]) {
-          acc.children[elmt] = {};
-        }
-        acc = acc.children[elmt];
-      });
-
-      if (routeKey) {
-        if (!acc.children) {
-          acc.children = {};
-        }
-        acc.children[routeKey] = route;
-      } else {
-        Object.assign(acc, route);
-      }
+      routesConfigBuilder.push(routeKey, route);
 
       fileProcessedCallback(
         relative(projectConfig.root, filePath),
@@ -153,6 +130,6 @@ export async function buildProject(
       );
     })
   );
-
-  return routes;
+  routesConfigBuilder.complete(htmlMinifierOptions);
+  return routesConfigBuilder.config;
 }
