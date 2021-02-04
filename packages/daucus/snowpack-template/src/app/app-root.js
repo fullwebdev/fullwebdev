@@ -10,8 +10,8 @@ import { LitElement, html, css } from 'lit-element';
 
 import '@daucus/router/daucus-router';
 import '@daucus/router/daucus-router-outlet';
-// @ts-ignore
-import daucusRoutes from '/templates/routes.js';
+// @ts-ignore ADD baseURL if needed
+import daucusRoutes from '/templates/routes.js'; // eslint-disable-line import/no-unresolved, import/no-absolute-path
 import './menu.js';
 
 class AppRoot extends LitElement {

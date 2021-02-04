@@ -1,3 +1,5 @@
+// FIXME: add a onkey enter event handler for links (a11y)
+/* eslint-disable lit-a11y/click-events-have-key-events */
 import { LitElement, html, css } from 'lit-element';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 
@@ -39,17 +41,16 @@ const sortChildEntriesByPosition = (entryA, entryB) => {
  * @param {string} projectName
  */
 const projectMenu = (routes, projectName) => {
-  return (
-    /**
-     *
-     * @param {DaucusProjectRoutesConfig} route
-     * @param {number} depth
-     * @param {string} routeName
-     *
-     * @returns {string}
-     */
-    (function menu(route, depth, routeName) {
-      return `
+  /**
+   *
+   * @param {DaucusProjectRoutesConfig} route
+   * @param {number} depth
+   * @param {string} routeName
+   *
+   * @returns {string}
+   */
+  function menu(route, depth, routeName) {
+    return `
       <div class="${depth === 0 ? 'menu-title' : ''} section-title">
         ${
           route.title && route.path !== undefined
@@ -75,8 +76,9 @@ const projectMenu = (routes, projectName) => {
           : ''
       }
     `;
-    })(routes[projectName], 0)
-  );
+  }
+
+  return menu(routes[projectName], 0, projectName);
 };
 
 class DaucusMenu extends LitElement {
@@ -165,13 +167,17 @@ class DaucusMenu extends LitElement {
    */
   __handleClick(event) {
     /** @type {HTMLElement | null} */
-    const target = /** @type {HTMLElement | null} */ event.target;
-    if (!target) return;
+    let target;
+    if (event.target instanceof HTMLElement) {
+      target = event.target;
+    } else {
+      return;
+    }
 
     const titleEl = target.closest('.section-title');
     if (!titleEl) return;
 
-    if (target.tagName === 'A') {
+    if (target instanceof HTMLAnchorElement) {
       if (this._selectedTitle) {
         this._selectedTitle.classList.remove('selected');
       }
@@ -180,7 +186,7 @@ class DaucusMenu extends LitElement {
     }
     const parentMenu = titleEl.closest('ul');
     if (parentMenu) {
-      /** @type {NodeListOf<HTMLElement>} */
+      /** @type {NodeListOf<HTMLUListElement>} */
       const submenusOnSameLevel = parentMenu.querySelectorAll(
         ':scope > li > ul',
       );
@@ -188,13 +194,10 @@ class DaucusMenu extends LitElement {
         submenu.style.display = 'none';
       }
     }
-    /** @type {HTMLElement | null} */
-    const potentialSubmenu =
-      /** @type {HTMLElement | null} */ titleEl.nextElementSibling;
-    if (potentialSubmenu && potentialSubmenu.tagName === 'UL') {
+    const potentialSubmenu = titleEl.nextElementSibling;
+    if (potentialSubmenu && potentialSubmenu instanceof HTMLUListElement) {
       potentialSubmenu.style.display = 'block';
     }
-    return false;
   }
 }
 
