@@ -1,4 +1,4 @@
-import { baseUrl } from "./base-url";
+import { baseUrl } from "./base-url.js";
 
 /**
  * TODO
@@ -7,7 +7,7 @@ import { baseUrl } from "./base-url";
  */
 //#region updatePath
 function updatePath(path) {
-  history.pushState({}, "", `${baseUrl}${path}`);
+  window.history.pushState({}, "", `${baseUrl}${path}`);
 }
 //#endregion updatePath
 
@@ -15,10 +15,12 @@ function updatePath(path) {
  * TODO
  *
  * @param {string} path
+ *
+ * @returns {any}
  */
 //#region replacePath
 function replacePath(path) {
-  history.replaceState({}, "", `${baseUrl}${path}`);
+  window.history.replaceState({}, "", `${baseUrl}${path}`);
 }
 //#endregion replacePath
 

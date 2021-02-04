@@ -1,3 +1,4 @@
+/* globals rxjs */
 const { Observable } = rxjs;
 const {
   map,
@@ -32,7 +33,7 @@ const suggestions = source.pipe(
   filter((text) => text.length > 2),
   distinctUntilChanged(),
   debounceTime(750),
-  tap((term) => console.log(`suggestions: term`)),
+  tap((term) => console.log(`suggestions: ${term}`)),
   switchMap((term) =>
     fromFetch(
       `https://en.wikipedia.org/w/api.php?origin=*&action=opensearch&search=${term}`,
@@ -46,7 +47,7 @@ const suggestions = source.pipe(
 
 suggestions.pipe(
   tap(([, titles]) => {
-    console.log(`outside: titles`);
+    console.log(`outside: ${titles}`);
   })
 );
 

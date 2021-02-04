@@ -12,7 +12,7 @@ import { baseUrl } from "../4-history-api/base-url.js";
  * https://github.com/vuejs/vue-router/blob/c0d3376f4e3527bd761bd325873366ed74f5736b/src/util/push-state.js#L8-L23
  */
 //#region support
-const supportHistory = () => {
+const supportHistory = (() => {
   const ua = window.navigator.userAgent;
 
   if (
@@ -26,13 +26,13 @@ const supportHistory = () => {
   }
 
   return window.history && "pushState" in window.history;
-};
+})();
 //#endregion support
 
 //#region updatePath
 function updatePath(path) {
   if (supportHistory) {
-    history.pushState({}, "", `${baseUrl}${path}`);
+    window.history.pushState({}, "", `${baseUrl}${path}`);
   } else {
     window.location.hash = path;
   }
@@ -42,9 +42,13 @@ function updatePath(path) {
 //#region replacePath
 function replacePath(path) {
   if (supportHistory) {
-    history.replaceState({}, "", `${baseUrl}${path}`);
+    window.history.replaceState(
+      {},
+      "",
+      `${baseUrl}${path}`
+    );
   } else {
-    const href = window.location.href;
+    const { href } = window.location;
     const locationWithoutHash = href.split("#")[0];
     window.location.replace(
       `${locationWithoutHash}#${path}`
