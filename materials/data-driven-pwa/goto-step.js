@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-let applyPatch = require("./apply-patch").applyPatch;
-let fs = require("fs");
-let path = require("path");
+const fs = require("fs");
+const path = require("path");
+const { applyPatch } = require("./apply-patch");
 
 function gotoStep(step) {
   console.log(`applying step ${step}`);
@@ -16,7 +16,7 @@ function gotoStep(step) {
 
     patchFiles.forEach((patchFile) => {
       // Make one pass and make the file complete
-      let patch = path.join(stepDir, patchFile);
+      const patch = path.join(stepDir, patchFile);
       applyPatch(patch);
     });
   });

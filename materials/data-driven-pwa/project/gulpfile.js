@@ -17,15 +17,11 @@ const gulp = require("gulp");
 const del = require("del");
 
 // Clean "build" directory
-const clean = () => {
-  return del(["build/*"], { dot: true });
-};
+const clean = () => del(["build/*"], { dot: true });
 gulp.task("clean", clean);
 
 // Copy "app" directory to "build" directory
-const copy = () => {
-  return gulp.src(["app/**/*"]).pipe(gulp.dest("build"));
-};
+const copy = () => gulp.src(["app/**/*"]).pipe(gulp.dest("build"));
 gulp.task("copy", copy);
 
 // TODO - add "service worker" task here

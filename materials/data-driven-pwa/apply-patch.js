@@ -13,20 +13,20 @@
  *    (with some editions for compatibility)
  */
 
-let diff = require(`diff`);
-let fs = require(`fs`);
+const diff = require(`diff`);
+const fs = require(`fs`);
 
 function applyPatch(patchFile) {
-  let patch = fs.readFileSync(patchFile, `utf8`);
+  const patch = fs.readFileSync(patchFile, `utf8`);
 
-  let sourceFileMatch = /--- ([^ \n\r\t]+).*/.exec(patch);
+  const sourceFileMatch = /--- ([^ \n\r\t]+).*/.exec(patch);
   let sourceFile;
   if (sourceFileMatch && sourceFileMatch[1]) {
     sourceFile = sourceFileMatch[1];
   } else {
     throw Error(`Unable to find source file in '${patchFile}'`);
   }
-  let destinationFileMatch = /\+\+\+ ([^ \n\r\t]+).*/.exec(patch);
+  const destinationFileMatch = /\+\+\+ ([^ \n\r\t]+).*/.exec(patch);
   let destinationFile;
   if (destinationFileMatch && destinationFileMatch[1]) {
     destinationFile = destinationFileMatch[1];
@@ -34,8 +34,8 @@ function applyPatch(patchFile) {
     throw Error(`Unable to find destination file in '${patchFile}'`);
   }
 
-  let original = fs.readFileSync(sourceFile, `utf8`);
-  let patched = diff.applyPatch(original, patch);
+  const original = fs.readFileSync(sourceFile, `utf8`);
+  const patched = diff.applyPatch(original, patch);
 
   if (!patched) {
     throw Error(`Failed to apply patch '${patchFile}' to '${sourceFile}'`);
@@ -52,10 +52,9 @@ function applyPatch(patchFile) {
 
 module.exports.applyPatch = applyPatch;
 
-// @ts-ignore
 if (require.main === module) {
-  let argv = process.argv;
-  for (let i = 2; i < argv.length; i++) {
+  const { argv } = process;
+  for (let i = 2; i < argv.length; i += 1) {
     applyPatch(argv[i]);
   }
 }

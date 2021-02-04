@@ -16,44 +16,44 @@ limitations under the License.
 const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require("fs");
+
 const app = express();
 
 // This serves static files from the specified directory
-app.use(express.static(__dirname + "/build"));
+app.use(express.static(`${__dirname}/build`));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get(["/", "/index.html"], (req, res) => {
-  res.sendFile(__dirname + "/index.html");
+  res.sendFile(`${__dirname}/index.html`);
 });
 
 app.get("/api/getAll", (req, res) => {
-  let options = {
-    root: __dirname + "/server-data/",
+  const options = {
+    root: `${__dirname}/server-data/`,
   };
 
   const fileName = "events.json";
   res.sendFile(fileName, options, (err) => {
     if (err) {
       res.sendStatus(500);
-      return;
     }
   });
 });
 
 app.post("/api/add", (req, res) => {
-  let jsonFile = __dirname + "/server-data/events.json";
-  let newEvent = req.body;
+  const jsonFile = `${__dirname}/server-data/events.json`;
+  const newEvent = req.body;
   console.log("Adding new event:", newEvent);
   fs.readFile(jsonFile, (err, data) => {
     if (err) {
       res.sendStatus(500);
       return;
     }
-    let events = JSON.parse(data);
+    const events = JSON.parse(data);
     events.push(newEvent);
-    let eventsJson = JSON.stringify(events, null, 2);
+    const eventsJson = JSON.stringify(events, null, 2);
     fs.writeFile(jsonFile, eventsJson, (err) => {
       if (err) {
         res.sendStatus(500);
@@ -67,18 +67,18 @@ app.post("/api/add", (req, res) => {
 
 //
 app.post("/api/delete", (req, res) => {
-  let jsonFile = __dirname + "/server-data/events.json";
-  let id = req.body.id;
+  const jsonFile = `${__dirname}/server-data/events.json`;
+  const { id } = req.body;
   fs.readFile(jsonFile, (err, data) => {
     if (err) {
       res.sendStatus(500);
       return;
     }
-    let events = JSON.parse(data);
-    let index = events.findIndex((event) => event.id == id);
+    const events = JSON.parse(data);
+    const index = events.findIndex((event) => event.id == id);
     events.splice(index, 1);
 
-    let eventsJson = JSON.stringify(events, null, 2);
+    const eventsJson = JSON.stringify(events, null, 2);
 
     fs.writeFile(jsonFile, eventsJson, (err) => {
       if (err) {
@@ -92,7 +92,7 @@ app.post("/api/delete", (req, res) => {
 
 const server = app.listen(8081, () => {
   const host = server.address().address;
-  const port = server.address().port;
+  const { port } = server.address();
 
   console.log("App listening at http://%s:%s", host, port);
 });

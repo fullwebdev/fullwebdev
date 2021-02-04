@@ -70,8 +70,8 @@ function addAndPostEvent(e) {
   const body = JSON.stringify(data);
   return fetch("api/add", {
     method: "POST",
-    headers: headers,
-    body: body,
+    headers,
+    body,
   });
 }
 
@@ -95,7 +95,7 @@ function messageOffline() {
   // alert user that data may not be current
   const lastUpdated = getLastUpdated();
   if (lastUpdated) {
-    offlineMessage.textContent += " Last fetched server data: " + lastUpdated;
+    offlineMessage.textContent += ` Last fetched server data: ${lastUpdated}`;
   }
   offlineMessage.style.display = "block";
 }
@@ -109,7 +109,7 @@ function messageDataSaved() {
   // alert user that data has been saved for offline
   const lastUpdated = getLastUpdated();
   if (lastUpdated) {
-    dataSavedMessage.textContent += " on " + lastUpdated;
+    dataSavedMessage.textContent += ` on ${lastUpdated}`;
   }
   dataSavedMessage.style.display = "block";
 }

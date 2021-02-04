@@ -13,7 +13,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-"use strict";
 
 (function () {
   function toArray(arr) {
@@ -21,7 +20,7 @@ limitations under the License.
   }
 
   function promisifyRequest(request) {
-    return new Promise(function (resolve, reject) {
+    return new Promise((resolve, reject) => {
       request.onsuccess = function () {
         resolve(request.result);
       };
@@ -33,8 +32,8 @@ limitations under the License.
   }
 
   function promisifyRequestCall(obj, method, args) {
-    var request;
-    var p = new Promise(function (resolve, reject) {
+    let request;
+    const p = new Promise((resolve, reject) => {
       request = obj[method].apply(obj, args);
       promisifyRequest(request).then(resolve, reject);
     });
@@ -44,17 +43,17 @@ limitations under the License.
   }
 
   function promisifyCursorRequestCall(obj, method, args) {
-    var p = promisifyRequestCall(obj, method, args);
-    return p.then(function (value) {
+    const p = promisifyRequestCall(obj, method, args);
+    return p.then((value) => {
       if (!value) return;
       return new Cursor(value, p.request);
     });
   }
 
   function proxyProperties(ProxyClass, targetProp, properties) {
-    properties.forEach(function (prop) {
+    properties.forEach((prop) => {
       Object.defineProperty(ProxyClass.prototype, prop, {
-        get: function () {
+        get() {
           return this[targetProp][prop];
         },
       });
@@ -67,7 +66,7 @@ limitations under the License.
     Constructor,
     properties
   ) {
-    properties.forEach(function (prop) {
+    properties.forEach((prop) => {
       if (!(prop in Constructor.prototype)) return;
       ProxyClass.prototype[prop] = function () {
         return promisifyRequestCall(this[targetProp], prop, arguments);
@@ -76,7 +75,7 @@ limitations under the License.
   }
 
   function proxyMethods(ProxyClass, targetProp, Constructor, properties) {
-    properties.forEach(function (prop) {
+    properties.forEach((prop) => {
       if (!(prop in Constructor.prototype)) return;
       ProxyClass.prototype[prop] = function () {
         return this[targetProp][prop].apply(this[targetProp], arguments);
@@ -90,7 +89,7 @@ limitations under the License.
     Constructor,
     properties
   ) {
-    properties.forEach(function (prop) {
+    properties.forEach((prop) => {
       if (!(prop in Constructor.prototype)) return;
       ProxyClass.prototype[prop] = function () {
         return promisifyCursorRequestCall(this[targetProp], prop, arguments);
@@ -132,14 +131,14 @@ limitations under the License.
   proxyRequestMethods(Cursor, "_cursor", IDBCursor, ["update", "delete"]);
 
   // proxy 'next' methods
-  ["advance", "continue", "continuePrimaryKey"].forEach(function (methodName) {
+  ["advance", "continue", "continuePrimaryKey"].forEach((methodName) => {
     if (!(methodName in IDBCursor.prototype)) return;
     Cursor.prototype[methodName] = function () {
-      var cursor = this;
-      var args = arguments;
-      return Promise.resolve().then(function () {
+      const cursor = this;
+      const args = arguments;
+      return Promise.resolve().then(() => {
         cursor._cursor[methodName].apply(cursor._cursor, args);
-        return promisifyRequest(cursor._request).then(function (value) {
+        return promisifyRequest(cursor._request).then((value) => {
           if (!value) return;
           return new Cursor(value, cursor._request);
         });
@@ -186,7 +185,7 @@ limitations under the License.
 
   function Transaction(idbTransaction) {
     this._tx = idbTransaction;
-    this.complete = new Promise(function (resolve, reject) {
+    this.complete = new Promise((resolve, reject) => {
       idbTransaction.oncomplete = function () {
         resolve();
       };
@@ -234,12 +233,12 @@ limitations under the License.
 
   // Add cursor iterators
   // TODO: remove this once browsers do the right thing with promises
-  ["openCursor", "openKeyCursor"].forEach(function (funcName) {
-    [ObjectStore, Index].forEach(function (Constructor) {
+  ["openCursor", "openKeyCursor"].forEach((funcName) => {
+    [ObjectStore, Index].forEach((Constructor) => {
       Constructor.prototype[funcName.replace("open", "iterate")] = function () {
-        var args = toArray(arguments);
-        var callback = args[args.length - 1];
-        var request = (this._store || this._index)[funcName].apply(
+        const args = toArray(arguments);
+        const callback = args[args.length - 1];
+        const request = (this._store || this._index)[funcName].apply(
           this._store,
           args.slice(0, -1)
         );
@@ -251,14 +250,14 @@ limitations under the License.
   });
 
   // polyfill getAll
-  [Index, ObjectStore].forEach(function (Constructor) {
+  [Index, ObjectStore].forEach((Constructor) => {
     if (Constructor.prototype.getAll) return;
     Constructor.prototype.getAll = function (query, count) {
-      var instance = this;
-      var items = [];
+      const instance = this;
+      const items = [];
 
-      return new Promise(function (resolve) {
-        instance.iterateCursor(query, function (cursor) {
+      return new Promise((resolve) => {
+        instance.iterateCursor(query, (cursor) => {
           if (!cursor) {
             resolve(items);
             return;
@@ -275,10 +274,10 @@ limitations under the License.
     };
   });
 
-  var exp = {
-    open: function (name, version, upgradeCallback) {
-      var p = promisifyRequestCall(indexedDB, "open", [name, version]);
-      var request = p.request;
+  const exp = {
+    open(name, version, upgradeCallback) {
+      const p = promisifyRequestCall(indexedDB, "open", [name, version]);
+      const { request } = p;
 
       request.onupgradeneeded = function (event) {
         if (upgradeCallback) {
@@ -288,11 +287,9 @@ limitations under the License.
         }
       };
 
-      return p.then(function (db) {
-        return new DB(db);
-      });
+      return p.then((db) => new DB(db));
     },
-    delete: function (name) {
+    delete(name) {
       return promisifyRequestCall(indexedDB, "deleteDatabase", [name]);
     },
   };
