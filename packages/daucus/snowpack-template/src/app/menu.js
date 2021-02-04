@@ -16,76 +16,21 @@ import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
  * @typedef {import('@daucus/router/src/RoutesConfig').RoutesConfig} DaucusRoutesConfig
  * @typedef {import('@daucus/router/src/RoutesConfig').Route} DaucusRoute
  */
-
-/**
- * @param {[string, Partial<DaucusRoute>]} entryA
- * @param {[string, Partial<DaucusRoute>]} entryB
- */
-const sortChildEntriesByPosition = (entryA, entryB) => {
-  const positionA = (entryA && entryA[1] && entryA[1].position
-    ? entryA[1].position
-    : ''
-  ).padEnd(10, '~');
-  const positionB = (entryB && entryB[1] && entryB[1].position
-    ? entryB[1].position
-    : ''
-  ).padEnd(10, '~');
-  if (positionA > positionB) return 1;
-  if (positionA < positionB) return -1;
-  return 0;
-};
-
-/**
- *
- * @param {DaucusRoutesConfig} routes
- * @param {string} projectName
- */
-const projectMenu = (routes, projectName) => {
-  /**
-   *
-   * @param {DaucusProjectRoutesConfig} route
-   * @param {number} depth
-   * @param {string} routeName
-   *
-   * @returns {string}
-   */
-  function menu(route, depth, routeName) {
-    return `
-      <div class="${depth === 0 ? 'menu-title' : ''} section-title">
-        ${
-          route.title && route.path !== undefined
-            ? `<a href="/${projectName}/${route.path}">${route.title}</a>`
-            : route.title || routeName
-        }
-      </div>
-      ${
-        route.children && depth < 3
-          ? `
-            <ul class=${depth > 0 ? 'child-menu' : 'menu'}>
-              ${Object.entries(route.children)
-                .sort(sortChildEntriesByPosition)
-                .map(
-                  ([childRouteName, childRoute]) =>
-                    `<li>
-                      ${menu(childRoute, depth + 1, childRouteName)}
-                    </li>`,
-                )
-                .join('')}
-            </ul>
-          `
-          : ''
-      }
-    `;
+class DaucusMenu extends LitElement {
+  static get properties() {
+    return {
+      routes: { type: Object, attribute: false },
+      project: { type: String },
+    };
   }
 
-  return menu(routes[projectName], 0, projectName);
-};
-
-class DaucusMenu extends LitElement {
   constructor() {
     super();
     this._handleClick = this.__handleClick.bind(this);
     this._selectedTitle = null;
+    /** @type {DaucusRoutesConfig} */
+    this.routes = {};
+    this.project = 'docs';
   }
 
   static get styles() {
@@ -133,30 +78,16 @@ class DaucusMenu extends LitElement {
     `;
   }
 
-  /**
-   * @param {DaucusRoutesConfig} routes
-   */
-  set routes(routes) {
-    this._routes = routes;
-  }
-
-  /**
-   * @param {string} name
-   */
-  set project(name) {
-    this.setAttribute('project', name);
-  }
-
-  get project() {
-    return this.getAttribute('project') || 'docs';
-  }
-
   render() {
+    // @ts-ignore this._routes can't be undefined if truthy
+    const projectConfig = this.routes[this.project];
+    if (!projectConfig) {
+      console.warn(`can't find any routes for project ${this.project}`);
+      return;
+    }
     return html`
       <nav @click=${this._handleClick}>
-        ${this._routes
-          ? unsafeHTML(projectMenu(this._routes, this.project))
-          : ''}
+        ${this.routes ? unsafeHTML(projectConfig.menu) : ''}
       </nav>
     `;
   }
