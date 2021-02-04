@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /**
  * @typedef {import("./template-options").TemplateInstance} TemplateInstance
  * @typedef {import("./template-options").TemplateElChild} TemplateElChild
@@ -70,8 +71,8 @@ export class Template {
         root._partsCache[key].push({
           node,
           renderer: partMeta.formatter
-            // @ts-ignore partMeta.formatter can't be undefined here
-            ? (el, data) => renderer(el, partMeta.formatter(data))
+            ? // @ts-ignore partMeta.formatter can't be undefined here
+              (el, data) => renderer(el, partMeta.formatter(data))
             : renderer,
         });
       }
@@ -80,17 +81,17 @@ export class Template {
       //#region proxy
       Object.defineProperty(root.state, key, {
         get: function () {
-          // @ts-ignore
+          // @ts-ignore this is a TemplateInstance
           return this._stateCache[key];
         }.bind(root),
-        // @ts-ignore
+        // @ts-ignore implicit any
         set: function (data) {
-          // @ts-ignore
+          // @ts-ignore this is a TemplateInstance
           const cache = this._partsCache[key];
           for (let j = 0; j < cache.length; j += 1) {
             cache[j].renderer(cache[j].node, data);
           }
-          // @ts-ignore
+          // @ts-ignore this is a TemplateInstance
           this._stateCache[key] = data;
         }.bind(root),
       });

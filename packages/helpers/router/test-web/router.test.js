@@ -1,10 +1,11 @@
 import { expect } from "@open-wc/testing";
 import { spy, stub, fake } from "sinon";
-import { Router } from "..";
+import { Router } from "../index.js";
 
 describe("router", () => {
   const fakeBase = "/mock/base";
-  let fakeCb, router;
+  let fakeCb;
+  let router;
 
   beforeEach(() => {
     const getTagStub = stub(document, "getElementsByTagName");

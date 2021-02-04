@@ -1,6 +1,6 @@
 import { expect } from "@open-wc/testing";
 
-import { el } from "..";
+import { el } from "../index.js";
 
 describe("el", () => {
   it("return a simple HTML element", () => {
@@ -17,12 +17,10 @@ describe("el", () => {
   });
 
   it("define a custom built in element", () => {
-    const className = "foo bar";
-
     class TestButton extends HTMLButtonElement {
       constructor() {
         super(); // always call super() first in the constructor.
-        this.addEventListener("click", (e) => this.classList.add("clicked"));
+        this.addEventListener("click", () => this.classList.add("clicked"));
       }
     }
 

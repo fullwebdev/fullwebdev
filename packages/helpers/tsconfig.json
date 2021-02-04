@@ -12,6 +12,6 @@
     "emitDeclarationOnly": true
   },
   "references": [],
-  "include": ["src", "*.js", "el", "templte", "router"],
+  "include": ["src", "*.js", "el", "template", "router"],
   "exclude": ["dist", "types"]
 }

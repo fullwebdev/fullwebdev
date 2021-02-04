@@ -1,4 +1,4 @@
-import { clickEventHandler } from "./links";
+import { clickEventHandler } from "./links.js";
 
 function baseHRef() {
   if (document.getElementsByTagName("base").length === 0) return "";
@@ -35,9 +35,9 @@ export class Router {
 
     // TODO: params
     if (options.redirection) {
-      history.replaceState(options.state, "", `${this.base}${path}`);
+      window.history.replaceState(options.state, "", `${this.base}${path}`);
     } else if (!options.skipLocationChange) {
-      history.pushState(options.state, "", `${this.base}${path}`);
+      window.history.pushState(options.state, "", `${this.base}${path}`);
     }
   }
 

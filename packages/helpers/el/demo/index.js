@@ -42,9 +42,9 @@ let count = 0;
 incrementEl.addEventListener("click", (e) => {
   const el = e.target;
   if (el.closest(".increment")) {
-    count++;
+    count += 1;
   } else if (el.closest(".decrement")) {
-    count--;
+    count -= 1;
   }
   update({ count });
 });

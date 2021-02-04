@@ -34,9 +34,9 @@ const incrementEl = incrementTemplate.render({ count: 0 });
 incrementEl.addEventListener("click", (e) => {
   const el = e.target;
   if (el.closest(".increment")) {
-    incrementEl.state.count++;
+    incrementEl.state.count += 1;
   } else if (el.closest(".decrement")) {
-    incrementEl.state.count--;
+    incrementEl.state.count -= 1;
   }
 });
 
