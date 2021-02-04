@@ -1,5 +1,5 @@
-const baseConfig = require("./lighthouserc.base");
 const merge = require("deepmerge");
+const baseConfig = require("./lighthouserc.base");
 
 module.exports = merge(
   baseConfig,
@@ -13,6 +13,6 @@ module.exports = merge(
     },
   },
   {
-    arrayMerge: (destinationArray, sourceArray, options) => sourceArray,
+    arrayMerge: (destinationArray, sourceArray) => sourceArray,
   }
 );

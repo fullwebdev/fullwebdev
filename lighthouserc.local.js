@@ -1,5 +1,5 @@
-const baseConfig = require("./lighthouserc.base");
 const merge = require("deepmerge");
+const baseConfig = require("./lighthouserc.base");
 
 module.exports = merge(baseConfig, {
   ci: {
