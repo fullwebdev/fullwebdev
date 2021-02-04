@@ -22,22 +22,22 @@ export const init = function () {
 
 // prettier-ignore
 export const tests = {
-byProp: function ({ byProp, byClass, clazz: {A, B} }) {
+byProp ({ byProp, byClass, clazz: {A, B} }) {
   let count = 0;
   if (byProp[0].type === 'A') {
-    count++
+    count += 1
   }
   if (byProp[1].type !== 'B') {
-    count--;
+    count -= 1;
   }
 },
-byClass: function ({ byProp, byClass, clazz: {A, B} }) {
+byClass ({ byProp, byClass, clazz: {A, B} }) {
   let count = 0;
   if (byClass[0] instanceof A) {
-    count++
+    count += 1
   }
   if (!(byClass[1] instanceof B)) {
-    count--;
+    count -= 1;
   }
 },
 };

@@ -1,8 +1,8 @@
 export function init() {
   const data = {};
 
-  for (let k = 0; k < 15; k++) {
-    data[k] = "user " + k;
+  for (let k = 0; k < 15; k += 1) {
+    data[k] = `user ${k}`;
   }
 
   return { data };
@@ -10,32 +10,32 @@ export function init() {
 
 // prettier-ignore
 export const tests = {
-forIn: function ({ data }) {
+forIn ({ data }) {
   const copy = {};
-  for (let key in data) {
+  for (const key in data) {
     copy[key] = data[key];
   }
 },
-objectKeys: function ({ data }) {
+objectKeys ({ data }) {
   const copy = {}
   Object.keys(data).forEach((element, index, array) => {
     copy[element] = data[element];
   });
 },
-while: function ({ data }) {
+while ({ data }) {
   const copy = [];
   const keys = Object.keys(data);
   let i = 0;
   while (i < keys.length) {
     const prop = keys[i];
     copy[prop] = data[prop];
-    i++;
+    i += 1;
   }
 },
-for: function ({ data }) {
+for ({ data }) {
   const copy = [];
   const keys = Object.keys(data);
-  for (let i = 0; i < keys.length; i++) {
+  for (let i = 0; i < keys.length; i += 1) {
     const prop = keys[i];
     copy[prop] = data[prop];
   }

@@ -14,24 +14,24 @@ export const init = function () {
 
 // prettier-ignore
 export const tests = {
-byProp: function ({A, B}) {
+byProp ({A, B}) {
   const byProp = [{type: 'A', foo: 1}, {type: 'B', foo: 2}];
   let count = 0;
   if (byProp[0].type === 'A') {
-    count++
+    count += 1
   }
   if (byProp[1].type !== 'B') {
-    count--;
+    count -= 1;
   }
 },
-byClass: function ({A, B}) {
+byClass ({A, B}) {
   const byClass = [new A(1), new B(2)];
   let count = 0;
   if (byClass[0] instanceof A) {
-    count++
+    count += 1
   }
   if (!(byClass[1] instanceof B)) {
-    count--;
+    count -= 1;
   }
 },
 };

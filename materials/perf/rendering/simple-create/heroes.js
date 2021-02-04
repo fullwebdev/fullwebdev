@@ -18,6 +18,7 @@ export const data = [
   {
     id: "innerHTML",
     fn: (container) => {
+      // eslint-disable-next-line no-param-reassign
       container.innerHTML = heroes
         .map(
           (hero) => /* HTML */ `
@@ -46,7 +47,7 @@ export const data = [
         const idSpan = document.createElement("span");
         idSpan.textContent = `id: `;
         id.appendChild(idSpan);
-        // @ts-ignore
+        // @ts-ignore cast number to a string
         const heroId = document.createTextNode(hero.id);
         id.appendChild(heroId);
         container.appendChild(id);

@@ -5,10 +5,10 @@ export function init() {
 
 // prettier-ignore
 export const tests = {
-doubleBitwiseNot: function ({ input }) {
+doubleBitwiseNot ({ input }) {
   ~~input;
 },
-mathFloor: function ({ input }) {
+mathFloor ({ input }) {
   Math.floor(input);
 },
 };

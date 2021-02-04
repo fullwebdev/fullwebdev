@@ -8,8 +8,8 @@ export const init = function () {
     }
 
     for (const parent of parents) {
-      let childs = [];
-      for (let j = 0; j < nbrOfChilds; j++) {
+      const childs = [];
+      for (let j = 0; j < nbrOfChilds; j += 1) {
         const child = document.createElement("div");
         parent.append(child);
         if (i === depth - 1) {
@@ -35,22 +35,22 @@ export const init = function () {
 
 // prettier-ignore
 export const tests = {
-direct: function ({ container }) {
+direct ({ container }) {
   const el = container.lastElementChild.children[1].lastElementChild;
 },
-byId: function ({ container }) {
+byId ({ container }) {
   const el = document.getElementById('target')
 },
-queryByAttribute: function ({ container }) {
+queryByAttribute ({ container }) {
   const el = container.querySelector('[data-target]')
 },
-queryByClass: function ({ container }) {
+queryByClass ({ container }) {
   const el = container.querySelector('.target')
 },
-queryById: function ({ container }) {
+queryById ({ container }) {
   const el = container.querySelector('#target')
 },
-byClass: function ({ container }) {
+byClass ({ container }) {
   const el = container.getElementsByClassName('target')[0]
 },
 };

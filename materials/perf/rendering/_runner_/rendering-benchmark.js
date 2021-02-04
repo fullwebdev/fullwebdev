@@ -7,16 +7,17 @@ export const renderingBenchmark = (
   renderFn,
   repeat = 1,
   runs = 50
-) => {
-  return new Promise((resolve) => {
+) =>
+  new Promise((resolve) => {
     const logs = [];
     let startTime = performance.now();
     let i = 0;
+    // eslint-disable-next-line no-param-reassign
     container.textContent = "";
     const repeatedRendering = () => {
-      i++;
+      i += 1;
       logs.push(performance.now() - startTime);
-      for (let j = 0; j < repeat; j++) {
+      for (let j = 0; j < repeat; j += 1) {
         renderFn(container);
       }
       startTime = performance.now();
@@ -30,4 +31,3 @@ export const renderingBenchmark = (
 
     requestAnimationFrame(repeatedRendering);
   });
-};

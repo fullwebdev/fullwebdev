@@ -24,17 +24,17 @@ Run the given benchmark file using node.
     const suite = new Benchmark.Suite();
 
     suite
-      .on("cycle", function (event) {
+      .on("cycle", (event) => {
         console.log(String(event.target));
       })
       .on("complete", function () {
-        console.log("Fastest is " + this.filter("fastest").map("name"));
+        console.log(`Fastest is ${this.filter("fastest").map("name")}`);
       });
 
     const params = init();
 
     Object.entries(tests).forEach(([key, testFn]) => {
-      suite.add(key, function () {
+      suite.add(key, () => {
         testFn(params);
       });
     });

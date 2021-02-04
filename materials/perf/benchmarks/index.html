@@ -81,12 +81,12 @@
         <option value="create-object">create a object</option>
         <option value="test-object">test an object type</option>
         <option value="get-child">get an element child</option>
-        <option value="create-and-test-object"
-          >create objects and test their types</option
-        >
-        <option value="array-collection"
-          >populate a collection of arrays</option
-        >
+        <option value="create-and-test-object">
+          create objects and test their types
+        </option>
+        <option value="array-collection">
+          populate a collection of arrays
+        </option>
         <option value="create-element">rendering (wrong test)</option>
       </select>
     </header>
@@ -135,13 +135,13 @@
         .getElementById("test-select")
         .addEventListener("change", async (e) => {
           e.preventDefault();
-          const value = e.target.value;
+          const { value } = e.target;
 
           if (value) {
             const suite = new Benchmark.Suite();
 
             suite
-              .on("cycle", function (event) {
+              .on("cycle", (event) => {
                 const row = cyclesEl.querySelector(
                   `.test-${event.target.name}`
                 );
@@ -187,7 +187,7 @@
             }
 
             Object.entries(tests).forEach(([key, testFn]) => {
-              suite.add(key, function () {
+              suite.add(key, () => {
                 testFn(params);
               });
 

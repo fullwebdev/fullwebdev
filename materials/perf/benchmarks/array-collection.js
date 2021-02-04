@@ -5,16 +5,16 @@ export const init = function () {
 
 // prettier-ignore
 export const tests = {
-mapSpread: function ({ data }) {
+mapSpread ({ data }) {
   const map = new Map();
-  for (let i = 0; i < data.length; i++) {
+  for (let i = 0; i < data.length; i += 1) {
     const d = data[i];
     map.set(d[0], [...map.get(d[0]) || [], d])
   }
 },
-mapIf: function ({ data }) {
+mapIf ({ data }) {
   const map = new Map();
-  for (let i = 0; i < data.length; i++) {
+  for (let i = 0; i < data.length; i += 1) {
     const d = data[i];
     if (!map.has(d[0])) {
       map.set(d[0], [d]);
@@ -23,16 +23,16 @@ mapIf: function ({ data }) {
     }
   }
 },
-objectSpread: function ({ data }) {
+objectSpread ({ data }) {
   const map = {};
-  for (let i = 0; i < data.length; i++) {
+  for (let i = 0; i < data.length; i += 1) {
     const d = data[i];
     map[d[0]] = [...map[d[0]] || [], d]
   }
 },
-objectIf: function ({ data }) {
+objectIf ({ data }) {
   const map = {};
-  for (let i = 0; i < data.length; i++) {
+  for (let i = 0; i < data.length; i += 1) {
     const d = data[i];
     if (!map[d[0]]) {
       map[d[0]] = []

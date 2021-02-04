@@ -11,13 +11,13 @@ export const init = function () {
 
 // prettier-ignore
 export const tests = {
-new: function ({ TestObject }) {
+new ({ TestObject }) {
   const testObj = new TestObject(1, 'bar', ['baz', 'zab', 'abz']);
 },
-literal: function ({ TestObject }) {
+literal ({ TestObject }) {
   const testObj = { foo: 1, bar: 'bar', baz: ['baz', 'zab', 'abz'] };
 },
-affect: function ({ TestObject }) {
+affect ({ TestObject }) {
   const testObj = {};
   testObj.foo = 1;
   testObj.bar = 'bar';

@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 const templateStr = "<div>Hello World</div>".repeat(30);
 const multi = 30;
 
@@ -21,7 +22,7 @@ export const data = [
   {
     id: "innerHTML concat",
     fn: (container) => {
-      container.innerHTML = container.innerHTML + "<div>Hello World</div>";
+      container.innerHTML += "<div>Hello World</div>";
     },
     multi,
   },

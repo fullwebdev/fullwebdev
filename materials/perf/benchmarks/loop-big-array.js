@@ -5,25 +5,25 @@ export function init() {
 
 // prettier-ignore
 export const tests = {
-forOf: function ({ data }) {
+forOf ({ data }) {
   const copy = [];
-  for (let d of data) {
+  for (const d of data) {
     copy.push(d);
   }
 },
-forEach: function ({ data }) {
+forEach ({ data }) {
   const copy = [];
   data.forEach((d) => {
     copy.push(d);
   });
 },
-for: function ({ data }) {
+for ({ data }) {
   const copy = [];
-  for (let i = 0; i < data.length; i++) {
+  for (let i = 0; i < data.length; i += 1) {
     copy.push(data[i]);
   }
 },
-spread: function ({ data }) {
+spread ({ data }) {
   const copy = [...data];
 }
 };

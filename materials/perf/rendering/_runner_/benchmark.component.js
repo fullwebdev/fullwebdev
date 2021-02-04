@@ -78,7 +78,7 @@ export class RenderingBenchmarkRunnerComponent extends HTMLElement {
   }
 
   set runs(runs) {
-    // @ts-ignore
+    // @ts-ignore cast number to a string
     this.setAttribute("runs", runs);
   }
 
@@ -101,11 +101,12 @@ export class RenderingBenchmarkRunnerComponent extends HTMLElement {
      */
     const container = this.shadowRoot.querySelector(".benchmark-container");
 
-    for (let renderer of this._renderers) {
+    for (const renderer of this._renderers) {
       const cell = document.createElement("td");
-      cell.textContent = 'Loading...';
+      cell.textContent = "Loading...";
       line.appendChild(cell);
 
+      // eslint-disable-next-line no-await-in-loop
       const rslt = await renderingBenchmark(
         container,
         renderer.fn,
@@ -123,7 +124,7 @@ export class RenderingBenchmarkRunnerComponent extends HTMLElement {
 
   _upgradeProperty(prop) {
     if (this.hasOwnProperty(prop)) {
-      let value = this[prop];
+      const value = this[prop];
       delete this[prop];
       this[prop] = value;
     }
