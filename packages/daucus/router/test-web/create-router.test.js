@@ -1,5 +1,5 @@
 import { expect } from "@open-wc/testing";
-import { createDaucusRouter, routeFinder } from "../src/create-router.js";
+import { routeFinder } from "../src/create-router.js";
 import routesFixture from "./fixtures/routes.js";
 
 describe("create router", () => {
@@ -9,8 +9,8 @@ describe("create router", () => {
       finder = routeFinder(routesFixture);
     });
     it("gives the associated route", () => {
-      let [project, route] = finder("/docs/chapter1/section2/file2");
-      let expectedRoute =
+      const [project, route] = finder("/docs/chapter1/section2/file2");
+      const expectedRoute =
         routesFixture.docs.children.chapter1.children.section2.children.file2;
 
       expect(route).to.deep.equal(expectedRoute);
@@ -18,8 +18,8 @@ describe("create router", () => {
     });
 
     it("ignore children", () => {
-      let [project, route] = finder("/docs/chapter1/section2/");
-      let expectedRoute =
+      const [project, route] = finder("/docs/chapter1/section2/");
+      const expectedRoute =
         routesFixture.docs.children.chapter1.children.section2;
 
       expect(route).to.deep.equal(expectedRoute);

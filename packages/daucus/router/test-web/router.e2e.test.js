@@ -6,8 +6,8 @@ import {
   elementUpdated,
 } from "@open-wc/testing";
 import { html } from "lit-html";
-import routesFixture from "./fixtures/routes.js";
 import { stub } from "sinon";
+import routesFixture from "./fixtures/routes.js";
 
 import "../daucus-router.js";
 import "../daucus-router-outlet.js";
@@ -77,7 +77,7 @@ describe("[e2e] DaucusRouter", () => {
       </daucus-router>
     `);
     await elementUpdated(router);
-    //await oneEvent(router, "html-loaded");
+    // await oneEvent(router, "html-loaded");
     expect(window.fetch).to.have.been.calledWith("/templates/docs/index.html");
     expect(router.querySelector("daucus-router-outlet").innerHTML).equals(
       mockTemplates.index

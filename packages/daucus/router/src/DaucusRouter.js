@@ -1,4 +1,5 @@
 import { createDaucusRouter } from "./create-router.js";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { DaucusRouterOutlet } from "./DaucusRouterOutlet.js";
 
 /**
@@ -71,17 +72,15 @@ export class DaucusRouter extends HTMLElement {
         this.defaultPath,
         (projectName, route) => {
           if (!this.outlet) {
+            // eslint-disable-next-line no-console
             console.warn(
               `${route.path} can't be rendered without a daucus-router-outlet element`
             );
             return;
           }
-          this.outlet.href =
-            (this._router.base || "/") +
-            this.baseDir +
-            projectName +
-            "/" +
-            route.templateUrl;
+          this.outlet.href = `${
+            (this._router.base || "/") + this.baseDir + projectName
+          }/${route.templateUrl}`;
         }
       );
       this._router.run(this);
@@ -104,12 +103,13 @@ export class DaucusRouter extends HTMLElement {
    * @param {string} prop
    */
   upgradeProperty(prop) {
+    // eslint-disable-next-line no-prototype-builtins
     if (this.hasOwnProperty(prop)) {
-      // @ts-ignore
-      let value = this[prop];
-      // @ts-ignore
+      // @ts-ignore no need to add [key: string]
+      const value = this[prop];
+      // @ts-ignore no need to add [key: string]
       delete this[prop];
-      // @ts-ignore
+      // @ts-ignore no need to add [key: string]
       this[prop] = value;
     }
   }

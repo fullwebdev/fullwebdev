@@ -27,11 +27,11 @@ export const routeFinder = (routes) => {
     if (!projectsNames.includes(projectName)) return [projectName];
 
     let acc = { ...routes[projectName] };
-    for (let path of paths) {
-      if (!acc.children || !acc.children[path]) return [projectName];
+    for (const routeName of paths) {
+      if (!acc.children || !acc.children[routeName]) return [projectName];
 
-      if (path) {
-        acc = acc.children[path];
+      if (routeName) {
+        acc = acc.children[routeName];
       }
     }
 
@@ -53,7 +53,8 @@ export function createDaucusRouter(routes, defaultPath, routeRenderer) {
     throw new Error(`can't find any route for default path ${defaultPath}`);
 
   return new Router(async (path, options) => {
-    let routeMatch = path === defaultPath ? defaultRouteMatch : findRoute(path);
+    const routeMatch =
+      path === defaultPath ? defaultRouteMatch : findRoute(path);
     if (!routeMatch[1]) return [defaultPath, options];
     await routeRenderer(routeMatch[0], routeMatch[1]);
   });
