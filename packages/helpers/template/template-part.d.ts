@@ -1,12 +1,12 @@
 export interface TemplatePart {
   key: string;
-  formatter: (data: any) => any;
+  formatter?: (data: any) => any;
 }
 
 interface AbsPartMeta {
   type: "attribute" | "class" | "text";
   path: number[];
-  formatter: (data: any) => any;
+  formatter?: (data: any) => any;
 }
 
 export interface AttributePartMeta extends AbsPartMeta {

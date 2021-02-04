@@ -1,5 +1,3 @@
-// @ts-nocheck FIXME
-
 /**
  * @typedef {import("./template-options").TemplateInstance} TemplateInstance
  * @typedef {import("./template-options").TemplateElChild} TemplateElChild
@@ -54,7 +52,7 @@ export class Template {
 
     //#region loopMeta
     const metaKeys = Object.keys(this._partsMeta);
-    for (let i = 0; i < metaKeys.length; i++) {
+    for (let i = 0; i < metaKeys.length; i += 1) {
       const key = metaKeys[i];
       const partsMeta = this._partsMeta[key];
       const prop = props[key];
@@ -62,8 +60,8 @@ export class Template {
         throw new Error(`missing prop ${key}`);
       }
 
-      for (let i = 0; i < partsMeta.length; i++) {
-        const partMeta = partsMeta[i];
+      for (let j = 0; j < partsMeta.length; j += 1) {
+        const partMeta = partsMeta[j];
         const { renderer, node } = this._partCacheInfo(root, partMeta);
 
         if (!root._partsCache[key]) {
@@ -72,7 +70,8 @@ export class Template {
         root._partsCache[key].push({
           node,
           renderer: partMeta.formatter
-            ? (node, data) => renderer(node, partMeta.formatter(data))
+            // @ts-ignore partMeta.formatter can't be undefined here
+            ? (el, data) => renderer(el, partMeta.formatter(data))
             : renderer,
         });
       }
@@ -81,13 +80,17 @@ export class Template {
       //#region proxy
       Object.defineProperty(root.state, key, {
         get: function () {
+          // @ts-ignore
           return this._stateCache[key];
         }.bind(root),
+        // @ts-ignore
         set: function (data) {
+          // @ts-ignore
           const cache = this._partsCache[key];
-          for (let i = 0; i < cache.length; i++) {
-            cache[i].renderer(cache[i].node, data);
+          for (let j = 0; j < cache.length; j += 1) {
+            cache[j].renderer(cache[j].node, data);
           }
+          // @ts-ignore
           this._stateCache[key] = data;
         }.bind(root),
       });
@@ -109,7 +112,7 @@ export class Template {
    */
   //#region parse
   _parseChildren(parent, descriptors, childPath = []) {
-    for (let i = 0; i < descriptors.length; i++) {
+    for (let i = 0; i < descriptors.length; i += 1) {
       const descOrPart = descriptors[i];
       let node;
 
@@ -119,6 +122,7 @@ export class Template {
         const [type, options, children] = descOrPart;
         node = this._createElement(type, options, [...childPath, i]);
         if (children) {
+          // @ts-ignore descOrPart.length > 3
           this._parseChildren(node, descOrPart[2], [...childPath, i]);
         }
       } else {
@@ -143,21 +147,27 @@ export class Template {
    * @param { TemplateInstance } root
    * @param { PartMeta } partMeta
    *
-   * @returns {{ renderer: (node: Node, data: any) => void, node: Node }}
+   * @returns {{ renderer: (node: HTMLElement, data: any) => void, node: Element | Text }}
    */
+  // eslint-disable-next-line class-methods-use-this
   _partCacheInfo(root, partMeta) {
     /**
      * @type {Element}
      */
     let partEl = root;
-    for (let j = 0; j < partMeta.path.length; j++) {
+    for (let j = 0; j < partMeta.path.length; j += 1) {
       partEl = partEl.children[partMeta.path[j]];
     }
 
-    let renderer, node;
+    let renderer;
+    let node;
     if (partMeta.type === "attribute") {
       node = partEl;
-      renderer = (node, data) => {
+      /**
+       * @param {HTMLElement} el
+       * @param {boolean | string | null} [data]
+       */
+      renderer = (el, data) => {
         let formattedData = data;
         if (formattedData === true) {
           formattedData = "";
@@ -167,23 +177,33 @@ export class Template {
           formattedData === null ||
           formattedData === undefined
         ) {
-          node.removeAttribute(partMeta.name);
+          el.removeAttribute(partMeta.name);
         } else {
-          node.setAttribute(partMeta.name, formattedData);
+          el.setAttribute(partMeta.name, formattedData);
         }
       };
     } else if (partMeta.type === "class") {
       node = partEl;
-      renderer = (node, data) => {
+      /**
+       * @param {HTMLElement} el
+       * @param {any} data
+       */
+      renderer = (el, data) => {
+        // eslint-disable-next-line no-unused-expressions
         data
-          ? node.classList.add(partMeta.name)
-          : node.classList.remove(partMeta.name);
+          ? el.classList.add(partMeta.name)
+          : el.classList.remove(partMeta.name);
       };
     } else {
       node = document.createTextNode("");
       partEl.replaceWith(node);
-      renderer = (node, data) => {
-        node.textContent = data;
+      /**
+       * @param {HTMLElement} el
+       * @param {string} data
+       */
+      renderer = (el, data) => {
+        // eslint-disable-next-line no-param-reassign
+        el.textContent = data;
       };
     }
 
