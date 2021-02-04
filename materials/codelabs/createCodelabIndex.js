@@ -52,7 +52,7 @@ module.exports = function createIndex(codelab) {
         codelab.heading
       }" feedback-link="https://github.com/fullwebdev/fullwebdev/issues">
 
-        ${codelab.steps.map(createStep).join('')}
+        ${codelab.steps.map(createStep).join("")}
 
       </google-codelab>
 

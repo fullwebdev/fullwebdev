@@ -13,11 +13,11 @@ export const routes = [
   {
     path: "/post/:id",
     renderer: Post,
-    data: id => getPostData(id)
+    data: (id) => getPostData(id),
   },
   { path: "/", renderer: Home },
   {
     path: "*",
-    redirect: "/"
-  }
+    redirect: "/",
+  },
 ];

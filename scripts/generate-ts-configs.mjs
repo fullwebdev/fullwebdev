@@ -78,62 +78,72 @@ function resolveInternalDependencies(dependencies) {
   return resolved.filter((item, idx) => resolved.indexOf(item) === idx);
 }
 
-packageDirnameMap.forEach(([packageDirScope, packageDirname, projectType], packageName) => {
-  const pkg = packages.find((p) => p.name === packageDirname);
-  const pkgDir = path.join(root, projectType, packageDirScope, packageDirname);
+packageDirnameMap.forEach(
+  ([packageDirScope, packageDirname, projectType], packageName) => {
+    const pkg = packages.find((p) => p.name === packageDirname);
+    const pkgDir = path.join(
+      root,
+      projectType,
+      packageDirScope,
+      packageDirname
+    );
 
-  const tsconfigPath = path.join(pkgDir, "tsconfig.json");
+    const tsconfigPath = path.join(pkgDir, "tsconfig.json");
 
-  let tsConfigOverride = {};
-  const tsConfigOverridePath = path.join(pkgDir, "tsconfig.override.json");
+    let tsConfigOverride = {};
+    const tsConfigOverridePath = path.join(pkgDir, "tsconfig.override.json");
 
-  if (fs.existsSync(tsConfigOverridePath)) {
-    tsConfigOverride = JSON.parse(fs.readFileSync(tsConfigOverridePath));
-  }
-  const overwriteMerge = (destinationArray, sourceArray) => sourceArray;
+    if (fs.existsSync(tsConfigOverridePath)) {
+      tsConfigOverride = JSON.parse(fs.readFileSync(tsConfigOverridePath));
+    }
+    const overwriteMerge = (destinationArray, sourceArray) => sourceArray;
 
-  const internalDependencies = resolveInternalDependencies(
-    internalDependencyMap.get(packageName)
-  );
-  const tsconfigData = merge(
-    {
-      extends: `${packageDirScope ? "../" : ""}../../tsconfig.${
-        pkg.environment === "browser" ? "browser" : "node"
-      }-base.json`,
-      compilerOptions: {
-        // module: pkg.environment === "browser" ? "ESNext" : "commonjs",
-        module: "ESNext",
-        outDir: "./types",
-        rootDir: ".",
-        composite: true,
-        allowJs: true,
-        checkJs: pkg.type === "js" ? true : undefined,
-        emitDeclarationOnly: pkg.type === "js" ? true : undefined,
-        noImplicitAny: projectType !== "materials"
+    const internalDependencies = resolveInternalDependencies(
+      internalDependencyMap.get(packageName)
+    );
+    const tsconfigData = merge(
+      {
+        extends: `${packageDirScope ? "../" : ""}../../tsconfig.${
+          pkg.environment === "browser" ? "browser" : "node"
+        }-base.json`,
+        compilerOptions: {
+          // module: pkg.environment === "browser" ? "ESNext" : "commonjs",
+          module: "ESNext",
+          outDir: "./types",
+          rootDir: ".",
+          composite: true,
+          allowJs: true,
+          checkJs: pkg.type === "js" ? true : undefined,
+          emitDeclarationOnly: pkg.type === "js" ? true : undefined,
+          noImplicitAny: projectType !== "materials",
+        },
+        // materials can't directly depend on internal packages
+        references:
+          projectType === "materials"
+            ? []
+            : internalDependencies.map((dep) => {
+                const [depDirScope, depDirName] = packageDirnameMap.get(dep);
+                if (depDirScope) {
+                  return {
+                    path: `../../${depDirScope}/${depDirName}/tsconfig.json`,
+                  };
+                }
+                return {
+                  path: `../${depDirName}/tsconfig.json`,
+                };
+              }),
+        include: ["src", "*.js"],
+        exclude: ["dist", "types"],
       },
-      // materials can't directly depend on internal packages
-      references: projectType === "materials" ? [] : internalDependencies.map((dep) => {
-        const [depDirScope, depDirName] = packageDirnameMap.get(dep);
-        if (depDirScope) {
-          return {
-            path: `../../${depDirScope}/${depDirName}/tsconfig.json`,
-          };
-        }
-        return {
-          path: `../${depDirName}/tsconfig.json`,
-        };
-      }),
-      include: ['src', '*.js'],
-      exclude: ["dist", "types"],
-    },
-    tsConfigOverride,
-    { arrayMerge: overwriteMerge }
-  );
-  fs.writeFileSync(
-    tsconfigPath,
-    TSCONFIG_COMMENT + JSON.stringify(tsconfigData, null, "  ")
-  );
-});
+      tsConfigOverride,
+      { arrayMerge: overwriteMerge }
+    );
+    fs.writeFileSync(
+      tsconfigPath,
+      TSCONFIG_COMMENT + JSON.stringify(tsconfigData, null, "  ")
+    );
+  }
+);
 
 const projectLevelTsconfigPath = path.join(__dirname, "..", "tsconfig.json");
 
@@ -143,7 +153,9 @@ const projectLevelTsconfigData = {
   references: resolveInternalDependencies(
     Array.from(packageDirnameMap.keys())
   ).map((packageName) => {
-    const [depDirScope, depDirName, projectType] = packageDirnameMap.get(packageName);
+    const [depDirScope, depDirName, projectType] = packageDirnameMap.get(
+      packageName
+    );
     if (depDirScope) {
       return {
         path: `./${projectType}/${depDirScope}/${depDirName}/tsconfig.json`,

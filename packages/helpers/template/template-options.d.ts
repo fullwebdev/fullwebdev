@@ -21,7 +21,10 @@ export interface TemplateInstance extends HTMLElement {
    * each time a new state is defined
    */
   _partsCache?: {
-    [key: string]: { node: Element | Text; renderer: (node: HTMLElement, data: any) => void }[];
+    [key: string]: {
+      node: Element | Text;
+      renderer: (node: HTMLElement, data: any) => void;
+    }[];
   };
   /**
    * internal state value

@@ -8,8 +8,5 @@
     "strictNullChecks": false
   },
   "references": [],
-  "exclude": [
-    "dist",
-    "types"
-  ]
+  "exclude": ["dist", "types"]
 }

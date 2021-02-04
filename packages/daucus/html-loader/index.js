@@ -1,1 +1,1 @@
-export { HTMLLoaderElement } from './src/HtmlLoader.js';
+export { HTMLLoaderElement } from "./src/HtmlLoader.js";

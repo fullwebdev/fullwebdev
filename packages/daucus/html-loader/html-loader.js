@@ -1,3 +1,3 @@
-import { HTMLLoaderElement } from './src/HtmlLoader.js';
+import { HTMLLoaderElement } from "./src/HtmlLoader.js";
 
-window.customElements.define('html-loader', HTMLLoaderElement);
+window.customElements.define("html-loader", HTMLLoaderElement);

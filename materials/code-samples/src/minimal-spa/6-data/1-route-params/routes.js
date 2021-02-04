@@ -17,7 +17,7 @@ export const routes = [
     path: new RegExp("^/post/(\\w+)/?$"),
     //#endregion postPath
     renderer: Post,
-    data: id => getPostData(id)
+    data: (id) => getPostData(id),
   },
   //#endregion post
   { path: "/", renderer: Home },
@@ -25,7 +25,7 @@ export const routes = [
   {
     // path: "*"
     path: /.*/,
-    redirect: "/"
-  }
+    redirect: "/",
+  },
   //#endregion default
 ];

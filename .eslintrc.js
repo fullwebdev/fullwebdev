@@ -51,8 +51,8 @@ module.exports = {
         "import/no-unresolved": "off", // using https:// lead to a false positive
         "no-console": "off",
         "func-names": "off",
-        "@typescript-eslint/no-unused-vars": "off"
-      }
+        "@typescript-eslint/no-unused-vars": "off",
+      },
     },
     {
       files: ["**/*.d.ts"],
@@ -65,7 +65,7 @@ module.exports = {
       },
       rules: {
         "import/extensions": "off",
-        "@typescript-eslint/no-explicit-any": "off"
+        "@typescript-eslint/no-explicit-any": "off",
       },
     },
     {

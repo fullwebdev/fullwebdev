@@ -8,7 +8,7 @@ module.exports = {
   //#region polyfills
   setupFiles: [
     "<rootDir>/node_modules/babel-polyfill/dist/polyfill.js",
-    "<rootDir>/node_modules/document-register-element/build/document-register-element.node.js"
+    "<rootDir>/node_modules/document-register-element/build/document-register-element.node.js",
   ],
   //#endregion polyfills
   //#region jsdom
@@ -19,8 +19,8 @@ module.exports = {
   transform: {
     "^.+\\.(mjs|jsx|js)$": [
       "babel-jest",
-      { configFile: "./tests/config/babel-jest.config.js" }
-    ]
-  }
+      { configFile: "./tests/config/babel-jest.config.js" },
+    ],
+  },
   //#endregion babel
 };

@@ -258,7 +258,7 @@ const { NetworkOnly } = workbox.strategies;
 const bgSyncPlugin = new BackgroundSyncPlugin("dashboardr-queue");
 
 const networkWithBackgroundSync = new NetworkOnly({
-  plugins: [bgSyncPlugin]
+  plugins: [bgSyncPlugin],
 });
 
 registerRoute(/\/api\/add/, networkWithBackgroundSync, "POST");
@@ -347,7 +347,7 @@ Ajoutez le code suivant à **app/sw.js** :
 ```javascript
 const showNotification = () => {
   self.registration.showNotification("Background sync success!", {
-    body: "🎉`🎉`🎉`"
+    body: "🎉`🎉`🎉`",
   });
 };
 ```
@@ -358,7 +358,7 @@ Pour y faire appel à la reception d'un sync event, ajoutez une option `onSync` 
 
 ```javascript
 const bgSyncPlugin = new BackgroundSyncPlugin("dashboardr-queue", {
-  onSync: showNotification
+  onSync: showNotification,
 });
 ```
 
@@ -389,7 +389,7 @@ Pour réparer cette erreur, nous devons reproduire le comportement par défaut d
 const showNotification = ({ queue }) => {
   queue.replayRequests();
   self.registration.showNotification("Background sync success!", {
-    body: "🎉`🎉`🎉`"
+    body: "🎉`🎉`🎉`",
   });
 };
 ```
@@ -426,7 +426,7 @@ Dans **app/js/main.js**, ajouter le code suivant dans le `if('serviceWorker in n
 ```javascript
 let deferredPrompt;
 
-window.addEventListener("beforeinstallprompt", e => {
+window.addEventListener("beforeinstallprompt", (e) => {
   console.log("beforeInstallPrompt event detected");
   e.preventDefault();
   deferredPrompt = e;
@@ -471,7 +471,7 @@ Remarquez que ce bouton est masqué par défaut. Il sera affiché <i>uniquement<
 Pour ce faire, appeler une fonction `showInstallPromotion` en réponse à l'évènement `beforeInstallPrompt`, dans **app/js/main.js** :
 
 ```javascript
-window.addEventListener("beforeinstallprompt", e => {
+window.addEventListener("beforeinstallprompt", (e) => {
   console.log("beforeInstallPrompt event detected");
   e.preventDefault();
   deferredPrompt = e;
@@ -492,10 +492,10 @@ function showInstallPromotion() {
 Enfin, au click sur ce bouton, affichez l'install prompt :
 
 ```javascript
-btnAdd.addEventListener("click", e => {
+btnAdd.addEventListener("click", (e) => {
   btnAdd.style.display = "none";
   deferredPrompt.prompt();
-  deferredPrompt.userChoice.then(choiceResult => {
+  deferredPrompt.userChoice.then((choiceResult) => {
     if (choiceResult.outcome === "accepted") {
       console.log("User accepted the A2HS prompt");
     } else {
@@ -574,7 +574,7 @@ Enfin, pour un meilleur affichage, ajoutez un test dans `updateUI` afin de faire
 
 ```javascript
 function updateUI(events) {
-  events.forEach(event => {
+  events.forEach((event) => {
     const item = `<li class="card">
          <div class="card-text">
            <h2>${event.title}</h2>
@@ -655,7 +655,7 @@ function getCookie(cookieName) {
 Créez un cookie au click sur le bouton dismiss :
 
 ```javascript
-btnDismiss.addEventListener("click", e => {
+btnDismiss.addEventListener("click", (e) => {
   installCard.style.display = "none";
   // By default, Chrome stop showing the mini info-bar during 3 months
   // after the user dismissed it.
@@ -702,7 +702,7 @@ Dans ce cas, la création par l'utilisateur d'un premier événement sera sans a
 Dans **app/js/main.js**, supprimez l'appel à `showInstallPromotion()` dans l'EventHandler du `beforeInstallPrompt` :
 
 ```javascript
-window.addEventListener("beforeinstallprompt", e => {
+window.addEventListener("beforeinstallprompt", (e) => {
   console.log("beforeInstallPrompt event detected");
   e.preventDefault();
   deferredPrompt = e;
@@ -797,7 +797,7 @@ if (navigator.share) {
       await navigator.share({
         title: "The Web is on FIRE, the Codelab",
         text: `Check out this codelab!`,
-        url: "https://fullweb.dev/codelabs/doc/modern-data-driven_fr/"
+        url: "https://fullweb.dev/codelabs/doc/modern-data-driven_fr/",
       });
       console.log("Successful share");
     } catch (error) {
@@ -846,8 +846,8 @@ window.addEventListener("DOMContentLoaded", () => {
         title,
         note: url && text ? `${text}: ${url}` : url || text,
         date: "",
-        city: ""
-      }
+        city: "",
+      },
     ]);
   }
 });

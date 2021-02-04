@@ -3,6 +3,6 @@ module.exports = {
   rootDir: "../..",
   testMatch: ["**/tests/e2e/**/?(*.)jest.[tj]s?(x)"],
   globals: {
-    ORIGIN: "http://localhost:8000"
-  }
+    ORIGIN: "http://localhost:8000",
+  },
 };
