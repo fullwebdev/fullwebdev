@@ -1,246 +1,246 @@
 export type PandocInputFormat =
-  /*BibTeX bibliography*/
+  /* BibTeX bibliography*/
   | "bibtex"
-  /*BibLaTeX bibliography*/
+  /* BibLaTeX bibliography*/
   | "biblatex"
-  /*CommonMark Markdown*/
+  /* CommonMark Markdown*/
   | "commonmark "
-  /*CommonMark Markdown with extensions*/
+  /* CommonMark Markdown with extensions*/
   | "commonmark_x"
-  /*Creole 1.0*/
+  /* Creole 1.0*/
   | "creole"
-  /*CSL JSON bibliography*/
+  /* CSL JSON bibliography*/
   | "csljson"
-  /*CSV table*/
+  /* CSV table*/
   | "csv"
-  /*DocBook*/
+  /* DocBook*/
   | "docbook"
-  /*Word docx*/
+  /* Word docx*/
   | "docx"
-  /*DokuWiki markup*/
+  /* DokuWiki markup*/
   | "dokuwiki"
-  /*EPUB*/
+  /* EPUB*/
   | "epub"
-  /*FictionBook2 e-book*/
+  /* FictionBook2 e-book*/
   | "fb2"
-  /*GitHub-Flavored Markdown*/
+  /* GitHub-Flavored Markdown*/
   | "gfm"
   /* deprecated and less  accurate, use only if you need extensions not supported in gfm */
   | "markdown_github"
-  /*Haddock markup*/
+  /* Haddock markup*/
   | "haddock"
-  /*HTML*/
+  /* HTML*/
   | "html"
-  /*Jupyter notebook*/
+  /* Jupyter notebook*/
   | "ipynb"
-  /*JATS XML*/
+  /* JATS XML*/
   | "jats"
-  /*Jira/Confluence wiki markup*/
+  /* Jira/Confluence wiki markup*/
   | "jira"
-  /*JSON version of native AST*/
+  /* JSON version of native AST*/
   | "json"
-  /*LaTeX*/
+  /* LaTeX*/
   | "latex"
-  /*Pandoc’s Markdown*/
+  /* Pandoc’s Markdown*/
   | "markdown"
-  /*MultiMarkdown*/
+  /* MultiMarkdown*/
   | "markdown_mmd"
-  /*PHP Markdown Extra*/
+  /* PHP Markdown Extra*/
   | "markdown_phpextra"
-  /*original unextended Markdown*/
+  /* original unextended Markdown*/
   | "markdown_strict"
-  /*MediaWiki markup*/
+  /* MediaWiki markup*/
   | "mediawiki"
-  /*roff man*/
+  /* roff man*/
   | "man"
-  /*Muse*/
+  /* Muse*/
   | "muse"
-  /*native Haskell*/
+  /* native Haskell*/
   | "native"
-  /*ODT*/
+  /* ODT*/
   | "odt"
-  /*OPML*/
+  /* OPML*/
   | "opml"
-  /*Emacs Org mode*/
+  /* Emacs Org mode*/
   | "org"
-  /*reStructuredText*/
+  /* reStructuredText*/
   | "rst"
-  /*txt2tags*/
+  /* txt2tags*/
   | "t2t"
-  /*Textile*/
+  /* Textile*/
   | "textile"
-  /*TikiWiki markup*/
+  /* TikiWiki markup*/
   | "tikiwiki"
-  /*TWiki markup*/
+  /* TWiki markup*/
   | "twiki"
-  /*Vimwiki*/
+  /* Vimwiki*/
   | "vimwiki";
 
 export type PandocOutputFormat =
-  /*AsciiDoc*/
+  /* AsciiDoc*/
   | "asciidoc"
-  /*AsciiDoctor*/
+  /* AsciiDoctor*/
   | "asciidoctor"
-  /*LaTeX beamer slide show*/
+  /* LaTeX beamer slide show*/
   | "beamer"
-  /*CommonMark Markdown*/
+  /* CommonMark Markdown*/
   | "commonmark"
-  /*CommonMark Markdown with extensions*/
+  /* CommonMark Markdown with extensions*/
   | "commonmark_x"
-  /*ConTeXt*/
+  /* ConTeXt*/
   | "context"
-  /*CSL JSON bibliography*/
+  /* CSL JSON bibliography*/
   | "csljson"
-  /*DocBook 4*/
+  /* DocBook 4*/
   | "docbook"
   | "docbook4"
-  /*DocBook 5*/
+  /* DocBook 5*/
   | "docbook5"
-  /*Word docx*/
+  /* Word docx*/
   | "docx"
-  /*DokuWiki markup*/
+  /* DokuWiki markup*/
   | "dokuwiki"
-  /*EPUB v3 book*/
+  /* EPUB v3 book*/
   | "epub"
   | "epub3"
-  /*EPUB v2*/
+  /* EPUB v2*/
   | "epub2"
-  /*FictionBook2 e-book*/
+  /* FictionBook2 e-book*/
   | "fb2"
-  /*GitHub-Flavored  Markdown*/
+  /* GitHub-Flavored  Markdown*/
   | "gfm"
   /* deprecated and less  accurate, use only if you need extensions not supported in gfm */
   | "markdown_github"
-  /*Haddock markup*/
+  /* Haddock markup*/
   | "haddock"
-  /*HTML, i.e. HTML5/XHTML polyglot markup*/
+  /* HTML, i.e. HTML5/XHTML polyglot markup*/
   | "html"
   | "html5"
-  /*XHTML 1.0 Transitional*/
+  /* XHTML 1.0 Transitional*/
   | "html4"
-  /*InDesign ICML*/
+  /* InDesign ICML*/
   | "icml"
-  /*Jupyter notebook*/
+  /* Jupyter notebook*/
   | "ipynb"
-  /*JATS XML, Archiving and Interchange Tag Set*/
+  /* JATS XML, Archiving and Interchange Tag Set*/
   | "jats_archiving"
-  /*JATS XML, Article Authoring Tag Set*/
+  /* JATS XML, Article Authoring Tag Set*/
   | "jats_articleauthoring"
-  /*JATS XML, Journal Publishing Tag Set*/
+  /* JATS XML, Journal Publishing Tag Set*/
   | "jats_publishing"
-  /*alias for jats_archiving*/
+  /* alias for jats_archiving*/
   | "jats"
-  /*Jira/Confluence wiki markup*/
+  /* Jira/Confluence wiki markup*/
   | "jira"
-  /*JSON version of native AST*/
+  /* JSON version of native AST*/
   | "json"
-  /*LaTeX*/
+  /* LaTeX*/
   | "latex"
-  /*roff man*/
+  /* roff man*/
   | "man"
-  /*Pandoc’s Markdown*/
+  /* Pandoc’s Markdown*/
   | "markdown"
-  /*MultiMarkdown*/
+  /* MultiMarkdown*/
   | "markdown_mmd"
-  /*PHP Markdown Extra*/
+  /* PHP Markdown Extra*/
   | "markdown_phpextra"
-  /*original unextended Markdown*/
+  /* original unextended Markdown*/
   | "markdown_strict"
-  /*MediaWiki markup*/
+  /* MediaWiki markup*/
   | "mediawiki"
-  /*roff ms*/
+  /* roff ms*/
   | "ms"
-  /*Muse*/
+  /* Muse*/
   | "muse"
-  /*native Haskell*/
+  /* native Haskell*/
   | "native"
-  /*OpenOffice text document*/
+  /* OpenOffice text document*/
   | "odt"
-  /*OPML*/
+  /* OPML*/
   | "opml"
-  /*OpenDocument*/
+  /* OpenDocument*/
   | "opendocument"
-  /*Emacs Org mode*/
+  /* Emacs Org mode*/
   | "org"
-  /*PDF*/
+  /* PDF*/
   | "pdf"
-  /*plain text*/
+  /* plain text*/
   | "plain"
-  /*PowerPoint slide show*/
+  /* PowerPoint slide show*/
   | "pptx"
-  /*reStructuredText*/
+  /* reStructuredText*/
   | "rst"
-  /*Rich Text Format*/
+  /* Rich Text Format*/
   | "rtf"
-  /*GNU Texinfo*/
+  /* GNU Texinfo*/
   | "texinfo"
-  /*Textile*/
+  /* Textile*/
   | "textile"
-  /*Slideous HTML and JavaScript slide show*/
+  /* Slideous HTML and JavaScript slide show*/
   | "slideous"
-  /*Slidy HTML and JavaScript slide show*/
+  /* Slidy HTML and JavaScript slide show*/
   | "slidy"
-  /*DZSlides HTML5 + JavaScript slide show*/
+  /* DZSlides HTML5 + JavaScript slide show*/
   | "dzslides"
-  /*reveal.js HTML5 + JavaScript slide show*/
+  /* reveal.js HTML5 + JavaScript slide show*/
   | "revealjs"
-  /*S5 HTML and JavaScript slide show*/
+  /* S5 HTML and JavaScript slide show*/
   | "s5"
-  /*TEI Simple*/
+  /* TEI Simple*/
   | "tei"
-  /*XWiki markup*/
+  /* XWiki markup*/
   | "xwiki"
-  /*roff man*/
+  /* roff man*/
   | "man"
-  /*Pandoc’s Markdown*/
+  /* Pandoc’s Markdown*/
   | "markdown"
-  /*MultiMarkdown*/
+  /* MultiMarkdown*/
   | "markdown_mmd"
-  /*PHP Markdown Extra*/
+  /* PHP Markdown Extra*/
   | "markdown_phpextra"
-  /*original unextended Markdown*/
+  /* original unextended Markdown*/
   | "markdown_strict"
-  /*MediaWiki markup*/
+  /* MediaWiki markup*/
   | "mediawiki"
-  /*roff ms*/
+  /* roff ms*/
   | "ms"
-  /*Muse*/
+  /* Muse*/
   | "muse"
-  /*native Haskell*/
+  /* native Haskell*/
   | "native"
-  /*OpenOffice text document*/
+  /* OpenOffice text document*/
   | "odt"
-  /*OPML*/
+  /* OPML*/
   | "opml"
-  /*OpenDocument*/
+  /* OpenDocument*/
   | "opendocument"
-  /*Emacs Org mode*/
+  /* Emacs Org mode*/
   | "org"
-  /*PDF*/
+  /* PDF*/
   | "pdf"
-  /*plain text*/
+  /* plain text*/
   | "plain"
-  /*PowerPoint slide show*/
+  /* PowerPoint slide show*/
   | "pptx"
-  /*reStructuredText*/
+  /* reStructuredText*/
   | "rst"
-  /*Rich Text Format*/
+  /* Rich Text Format*/
   | "rtf"
-  /*GNU Texinfo*/
+  /* GNU Texinfo*/
   | "texinfo"
-  /*Textile*/
+  /* Textile*/
   | "textile"
-  /*Slideous HTML and JavaScript slide show*/
+  /* Slideous HTML and JavaScript slide show*/
   | "slideous"
-  /*Slidy HTML and JavaScript slide show*/
+  /* Slidy HTML and JavaScript slide show*/
   | "slidy"
-  /*DZSlides HTML5 + JavaScript slide show*/
+  /* DZSlides HTML5 + JavaScript slide show*/
   | "dzslides"
-  /*reveal.js HTML5 + JavaScript slide show*/
+  /* reveal.js HTML5 + JavaScript slide show*/
   | "revealjs"
-  /*S5 HTML and JavaScript slide show*/
+  /* S5 HTML and JavaScript slide show*/
   | "s5"
-  /*TEI Simple*/
+  /* TEI Simple*/
   | "tei"
-  /*XWiki markup*/
+  /* XWiki markup*/
   | "xwiki";

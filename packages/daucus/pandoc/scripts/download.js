@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import { resolve } from "path";
-import { esmDirName } from "../src/utils.js";
 import download from "download";
+import { esmDirName } from "../src/utils.js";
 
 const asyncFs = fs.promises;
 
