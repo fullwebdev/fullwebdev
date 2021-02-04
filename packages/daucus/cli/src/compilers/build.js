@@ -39,7 +39,7 @@ export async function compileFile(
     /**
      * @type {string}
      */
-    let md = await asyncFs.readFile(filePath, { encoding: "utf8" });
+    const md = await asyncFs.readFile(filePath, { encoding: "utf8" });
     if (!md) {
       return null;
     }
@@ -115,7 +115,7 @@ export async function buildProject(
       const relativeOutputFilePath = join(
         dirname(relativeFilePath),
         // TODO: allow other extensions
-        basename(relativeFilePath, ".md") + ".html"
+        `${basename(relativeFilePath, ".md")}.html`
       );
 
       await writeCompiledFile(projectOutDir, relativeOutputFilePath, html);
@@ -128,7 +128,7 @@ export async function buildProject(
       }
 
       let acc = routes;
-      routeParents.forEach((elmt, i) => {
+      routeParents.forEach((elmt) => {
         if (!acc.children) {
           acc.children = {};
         }

@@ -1,10 +1,10 @@
 import HTML from "node-html-parser";
-import { esmDirName } from "../../src/fs/path.js";
-import { dirname, relative, resolve } from "path";
-import { WorkSpace as DaucusWorkspace } from "../../src/config/workspace.js";
+import { dirname, resolve } from "path";
 import { readFileSync } from "fs";
-import { DaucusCLI } from "../../src/cli/DaucusCLI.js";
 import globby from "globby";
+import { esmDirName } from "../../src/fs/path.js";
+import { WorkSpace as DaucusWorkspace } from "../../src/config/workspace.js";
+import { DaucusCLI } from "../../src/cli/DaucusCLI.js";
 
 /** @typedef {"default" | "js-config"} fixtureId */
 
@@ -77,7 +77,8 @@ export async function exec(args, from) {
   return cmd;
 }
 
-export function norm(str) {
+export function norm(param) {
+  let str = param;
   if (typeof str !== "string") {
     str = str.toString();
   }

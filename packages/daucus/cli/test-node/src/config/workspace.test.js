@@ -1,12 +1,12 @@
 import chai from "chai";
+import { resolve } from "path";
+import MockFS from "mock-fs";
 import { defaultConfig } from "../../../src/config/defaultConfig.js";
 import { WorkSpace } from "../../../src/config/workspace.js";
 import {
   create,
   makeAllPathsAbsolute,
 } from "../../../src/config/daucus-config.js";
-import { resolve } from "path";
-import MockFS from "mock-fs";
 import { esmDirName } from "../../../src/fs/path.js";
 
 const { expect } = chai;
@@ -94,8 +94,6 @@ describe("workspace", () => {
     });
 
     describe("when used w/ a path ton a js file", async () => {
-      const config = { output: "foo/bar" };
-
       it("load configuration", async () => {
         const root = resolve(
           esmDirName(import.meta),

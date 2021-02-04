@@ -17,11 +17,12 @@ const parseHTML = HTMLparser.parse;
  * @returns {[string | null, Route]}
  */
 export function createRouteFor(html, filePath) {
-  let fileUrl = posixVPath.normalize(filePath);
+  const fileUrl = posixVPath.normalize(filePath);
   if (fileUrl[0] === "/") {
     throw new PathMustBeRelativeException(filePath);
   }
 
+  // eslint-disable-next-line prefer-const
   let { dir, ext, name: id } = posixVPath.parse(fileUrl);
   const splittedPrefix = posixVPath.splitPrefix(id) || ["", id];
   let position = splittedPrefix[0];
@@ -31,7 +32,7 @@ export function createRouteFor(html, filePath) {
   let path;
   if (["README", "index"].includes(key)) {
     key = null;
-    position = (posixVPath.splitPrefix(posixVPath.basename(dir)) || [""])[0];
+    [position] = posixVPath.splitPrefix(posixVPath.basename(dir)) || [""];
     path = dir;
     id = "";
   } else {
@@ -39,7 +40,7 @@ export function createRouteFor(html, filePath) {
   }
 
   /** @type {Route} */
-  let route = {
+  const route = {
     id /* "1a-bar" */,
     position /* "1a" */,
     path: posixVPath.removePrefixes(path) /* fr/foo/bar */,

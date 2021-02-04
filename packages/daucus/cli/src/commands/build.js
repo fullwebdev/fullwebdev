@@ -1,8 +1,8 @@
 import rimraf from "rimraf";
+// @ts-ignore no definition available
+import Gauge from "gauge";
 import { ensureDirSync } from "../fs/path.js";
 import { writeJSObject } from "../fs/write.js";
-// @ts-ignore TODO: add .d.ts file
-import Gauge from "gauge";
 import { buildProject } from "../compilers/build.js";
 
 /**
@@ -42,13 +42,14 @@ export class BuildCommand {
    * @param {{ project?: string }} [params] command parameters
    */
   async run(params = {}) {
-    this.config = await this.workspace.getConfig();
+    const config = await this.workspace.getConfig();
+    this.config = config;
 
     this.clear();
 
     if (
       params.project &&
-      !Object.keys(this.config.projects).includes(params.project)
+      !Object.keys(config.projects).includes(params.project)
     ) {
       throw new Error(`no configuration found for project ${params.project}`);
     }
@@ -57,31 +58,34 @@ export class BuildCommand {
      * @type {Array<[string, ProjectConfig]>}
      */
     const projects = params.project
-      ? [[params.project, this.config.projects[params.project]]]
-      : Object.entries(this.config.projects);
+      ? [[params.project, config.projects[params.project]]]
+      : Object.entries(config.projects);
 
     console.log("compiling projects");
     this._logCompileProgress("init...");
 
     /** @type {RoutesConfig} */
     const routes = {};
-    for (const [projectName, projectConfig] of projects) {
-      routes[projectName] = await buildProject(
-        projectName,
-        {
-          compiler: this.config.defaultCompiler,
-          ...projectConfig,
-        },
-        this.config.output,
-        this.config.htmlMinifierOptions,
-        (filePath, nbrOfFiles) => {
-          this._logCompileProgress(
-            `[${projectName}] ${filePath}`,
-            1 / projects.length / nbrOfFiles
-          );
-        }
-      );
-    }
+    await Promise.all(
+      projects.map(async ([projectName, projectConfig]) => {
+        routes[projectName] = await buildProject(
+          projectName,
+          {
+            compiler: config.defaultCompiler,
+            ...projectConfig,
+          },
+          config.output,
+          config.htmlMinifierOptions,
+          (filePath, nbrOfFiles) => {
+            this._logCompileProgress(
+              `[${projectName}] ${filePath}`,
+              1 / projects.length / nbrOfFiles
+            );
+          }
+        );
+      })
+    );
+
     await writeJSObject(this.config.output, "routes.js", routes);
     this._closeLogProgress();
     // TODO: copy js files

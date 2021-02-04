@@ -3,7 +3,7 @@
 import { DaucusCLI } from "../src/cli/DaucusCLI.js";
 
 try {
-  process.title = "daucus " + Array.from(process.argv).slice(2).join(" ");
+  process.title = `daucus ${Array.from(process.argv).slice(2).join(" ")}`;
 } catch (_) {
   process.title = "daucus";
 }

@@ -8,7 +8,7 @@ export interface ProjectConfig {
 }
 
 export interface DaucusConfig {
-  //TODO: docs
+  // TODO: docs
   output: string;
   defaultCompiler?: Compiler;
   projects: { [key: string]: ProjectConfig };

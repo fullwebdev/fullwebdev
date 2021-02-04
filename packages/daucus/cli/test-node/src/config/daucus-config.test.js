@@ -1,6 +1,6 @@
 import chai from "chai";
-import * as daucusConfig from "../../../src/config/daucus-config.js";
 import { join } from "path";
+import * as daucusConfig from "../../../src/config/daucus-config.js";
 
 const { expect } = chai;
 
@@ -22,7 +22,7 @@ describe("daucus-config", () => {
 
     it("set a default project", () => {
       const rslt = daucusConfig.create(mockConfig);
-      const defaultProject = rslt.projects["docs"];
+      const defaultProject = rslt.projects.docs;
       expect(defaultProject.src).equals("**/*.md", "for all markdown files");
       expect(defaultProject.root).equals("docs", "in the 'docs' directory");
     });

@@ -6,14 +6,6 @@ import { absoluteFrom } from "../fs/path.js";
 export const CONFIG_FILE_EXTENSIONS = [".json", ".js", ".mjs", ".cjs"];
 
 /**
- * create a valid configuration object
- * @param {Partial<DaucusConfig>} params
- */
-export function create(params = {}) {
-  return setDefaults(params);
-}
-
-/**
  * add default values to partial config
  * @private
  * @param {Partial<DaucusConfig>} configJson
@@ -24,6 +16,14 @@ function setDefaults(configJson) {
     ...defaultConfig,
     ...configJson,
   };
+}
+
+/**
+ * create a valid configuration object
+ * @param {Partial<DaucusConfig>} params
+ */
+export function create(params = {}) {
+  return setDefaults(params);
 }
 
 /**

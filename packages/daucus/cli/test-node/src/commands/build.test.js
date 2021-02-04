@@ -1,6 +1,6 @@
 import chai from "chai";
-import { BuildCommand } from "../../../src/commands/build.js";
 import chaiFS from "chai-fs";
+import { BuildCommand } from "../../../src/commands/build.js";
 import {
   workspaceInfos,
   fixtureWorkspace,

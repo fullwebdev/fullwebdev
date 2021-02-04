@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this, eqeqeq, max-classes-per-file */
 /**
  * inspired by angular devkit
  *
@@ -71,9 +72,8 @@ export class VPath {
     const i = path.lastIndexOf(this.sep);
     if (i == -1) {
       return path;
-    } else {
-      return path.substr(path.lastIndexOf(this.sep) + 1);
     }
+    return path.substr(path.lastIndexOf(this.sep) + 1);
   }
 
   /**
@@ -85,9 +85,8 @@ export class VPath {
     const i = base.lastIndexOf(".");
     if (i < 1) {
       return "";
-    } else {
-      return base.substr(i);
     }
+    return base.substr(i);
   }
 
   /**
@@ -111,9 +110,8 @@ export class VPath {
   join(p1, ...others) {
     if (others.length > 0) {
       return this.normalize((p1 ? p1 + this.sep : "") + others.join(this.sep));
-    } else {
-      return p1;
     }
+    return p1;
   }
 
   /**
@@ -123,7 +121,8 @@ export class VPath {
   normalize(path) {
     if (path == "" || path == ".") {
       return "";
-    } else if (path == this.sep) {
+    }
+    if (path == this.sep) {
       return this.sep;
     }
 
@@ -131,7 +130,7 @@ export class VPath {
     const original = path;
 
     // Will also convert Windows paths if posix
-    const p = path.split(/[\/\\]/g);
+    const p = path.split(/[/\\]/g);
     let relative = false;
     let i = 1;
 
@@ -149,26 +148,25 @@ export class VPath {
           throw new InvalidPathException(original);
         } else if (i >= 2 && p[i - 1] != "..") {
           p.splice(i - 1, 2);
-          i--;
+          i -= 1;
         } else {
-          i++;
+          i += 1;
         }
       } else if (p[i] == "") {
         p.splice(i, 1);
       } else {
-        i++;
+        i += 1;
       }
     }
 
     if (p.length == 1) {
       return p[0] == "" ? this.sep : "";
-    } else {
-      if (p[0] == ".") {
-        p.shift();
-      }
-
-      return p.join(this.sep);
     }
+    if (p[0] == ".") {
+      p.shift();
+    }
+
+    return p.join(this.sep);
   }
 
   /**
@@ -187,6 +185,7 @@ export class VPath {
     if (match && match.length > 1) {
       return match.slice(1);
     }
+    return ["", str];
   }
 
   /**
@@ -195,7 +194,7 @@ export class VPath {
    */
   parse(path) {
     /** @type {{dir: string, ext: string, base: string, name: string}} */
-    let parsed = {};
+    const parsed = {};
     const i = path.lastIndexOf(this.sep);
     if (i == -1) {
       parsed.base = path;

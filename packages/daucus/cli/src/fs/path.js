@@ -9,7 +9,7 @@ import { fileURLToPath } from "url";
  * @returns {string | null} path to the directory (null if none was found)
  */
 export function findUp(names, from) {
-  const root = parse(from).root;
+  const { root } = parse(from);
 
   let currentDir = from;
   while (currentDir && currentDir !== root) {
@@ -38,15 +38,15 @@ export const absoluteFrom = (/** @type {string} */ rootPath) => (
 /**
  * @param {{ url: string | import("url").URL; }} importMeta
  */
-export function esmDirName(importMeta) {
-  return dirname(esmFileName(importMeta));
+export function esmFileName(importMeta) {
+  return fileURLToPath(importMeta.url);
 }
 
 /**
  * @param {{ url: string | import("url").URL; }} importMeta
  */
-export function esmFileName(importMeta) {
-  return fileURLToPath(importMeta.url);
+export function esmDirName(importMeta) {
+  return dirname(esmFileName(importMeta));
 }
 
 /**

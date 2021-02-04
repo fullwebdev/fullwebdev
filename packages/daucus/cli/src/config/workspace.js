@@ -1,8 +1,8 @@
 import { resolve, dirname, extname, basename } from "path";
+import { promises as asyncFs } from "fs";
 import { findUp } from "../fs/path.js";
 import { CONFIG_FILE_NAME } from "./defaultConfig.js";
 import * as daucusConfig from "./daucus-config.js";
-import { promises as asyncFs } from "fs";
 
 /** @typedef {import('./DaucusConfig').DaucusConfig} DaucusConfig */
 /** @typedef {import('./WorkSpace').WorkSpace} IWorkSpace */
@@ -55,11 +55,11 @@ export class WorkSpace {
    * @param {string} [root] workspace's root directory
    */
   constructor(pathOrConfig = {}, root = "") {
-    let configFileLoading,
-      config = {};
+    let configFileLoading;
+    let config = {};
 
     if (typeof pathOrConfig === "string") {
-      let configFilePath = resolve(pathOrConfig);
+      const configFilePath = resolve(pathOrConfig);
       this.root = root ? resolve(root) : dirname(configFilePath);
       configFileLoading = loadConfigFile(configFilePath);
     } else {
@@ -68,7 +68,7 @@ export class WorkSpace {
     }
 
     this._configPromise = (
-      configFileLoading || new Promise((resolve) => resolve(config))
+      configFileLoading || Promise.resolve(config)
     ).then((loadedConfig) =>
       daucusConfig.makeAllPathsAbsolute(
         daucusConfig.create(loadedConfig),
@@ -89,23 +89,23 @@ export class WorkSpace {
  * @param {string} [from] starting point (CWD by default)
  */
 export function findWorkspace(from = "") {
-  from = resolve(from);
+  const startingDir = resolve(from);
 
-  let fileFound = findUp(
+  const fileFound = findUp(
     [
       ...daucusConfig.CONFIG_FILE_EXTENSIONS.map(
         (ext) => CONFIG_FILE_NAME + ext
       ),
       ".git",
     ],
-    from
+    startingDir
   );
 
   if (fileFound === null) {
     throw new Error("can't find any daucus config file or git reprository");
   }
 
-  let config = basename(fileFound) === ".git" ? {} : fileFound;
+  const config = basename(fileFound) === ".git" ? {} : fileFound;
 
   return new WorkSpace(config, dirname(fileFound));
 }

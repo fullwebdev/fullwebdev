@@ -1,6 +1,6 @@
 import { promises as asyncFs } from "fs";
 import { dirname, resolve } from "path";
-import { ensureDir } from "../fs/path.js";
+import { ensureDir } from "./path.js";
 
 /**
  * @param {string} rootDir
