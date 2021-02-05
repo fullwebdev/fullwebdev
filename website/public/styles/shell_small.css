@@ -1,0 +1,27 @@
+/*#region globals*/
+/*#endregion globals*/
+
+/*#region navbar */
+
+#main-header .row {
+  height: 64px;
+  justify-content: space-between;
+}
+
+#main-header .navigation {
+  display: none;
+}
+
+#main-header .navigation li a.nav-link .nav-link-inner {
+  padding: 4px 4px;
+}
+
+/*#endregion navbar */
+
+/*#region content */
+
+#page-container {
+  padding: 1rem 2rem;
+}
+
+/*#endregion content */

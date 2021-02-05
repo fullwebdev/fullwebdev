@@ -1,0 +1,24 @@
+/*#region globals*/
+
+.sm-only {
+  display: none;
+}
+
+/*#endregion globals*/
+
+/*#region navbar */
+
+#main-header .navigation {
+  padding-left: 50px;
+  flex-grow: 1;
+}
+
+/*#endregion navbar */
+
+/*#region content */
+
+#page-container {
+  padding: 2rem 3rem;
+}
+
+/*#endregion content */

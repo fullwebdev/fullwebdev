@@ -1,6 +1,6 @@
 export default {
   defaultCompiler: "pandoc",
-  output: "app/templates/",
+  output: "src/templates/",
   projects: {
     pages: {
       src: "**/*.md",

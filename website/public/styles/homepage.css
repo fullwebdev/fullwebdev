@@ -1,0 +1,111 @@
+#homepage .welcome {
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#homepage .details-header {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+#homepage .details {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  column-gap: 6rem;
+  row-gap: 2.5rem;
+  color: var(--text-color);
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 719px) {
+  #homepage .welcome {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #homepage .welcome .homepage_illustration img,
+  #homepage .welcome .homepage_illustration {
+    width: 250px;
+  }
+
+  #homepage .welcome .homepage_illustration {
+    height: 165px;
+  }
+
+  #homepage .welcome .homepage_illustration {
+    margin: 2rem auto;
+  }
+
+  #homepage .welcome .homepage_title {
+    max-width: 500px;
+    font-size: 1.6rem;
+    margin-top: 0;
+  }
+
+  #homepage .details {
+    row-gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  #homepage {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  #homepage .mobile-title {
+    display: none;
+  }
+
+  #homepage .welcome {
+    padding-top: 3rem;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #homepage .welcome .homepage_illustration img,
+  #homepage .welcome .homepage_illustration {
+    width: 290px;
+  }
+
+  #homepage .welcome .homepage_illustration {
+    height: 190px;
+  }
+
+  #homepage .welcome .action {
+    padding-left: 3rem;
+  }
+
+  #homepage .welcome .homepage_title {
+    max-width: 500px;
+    font-size: 2.5rem;
+  }
+
+  #homepage .details-header {
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #homepage .welcome .homepage_illustration img,
+  #homepage .welcome .homepage_illustration {
+    width: 500px;
+  }
+
+  #homepage .welcome .homepage_illustration {
+    height: 325px;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  #homepage .welcome .homepage_illustration img,
+  #homepage .welcome .homepage_illustration {
+    width: 200px;
+  }
+
+  #homepage .details {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
