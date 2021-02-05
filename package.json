@@ -13,6 +13,7 @@
   "scripts": {
     "setup": "npm run setup:ts-configs",
     "setup:ts-configs": "node scripts/generate-ts-configs.mjs",
+    "postsetup:ts-configs": "prettier \"./**/tsconfig.json\" --write",
     "types": "run-s types:clear types:copy types:build",
     "types:build": "tsc --build",
     "types:clear": "rimraf packages/*/types/ && rimraf packages/*/*/types/",
