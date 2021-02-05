@@ -14,7 +14,7 @@ module.exports = {
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
-    { match: "routes", src: ".*!(.html)", dest: "/index.html" },
+    { match: "routes", src: "(?!/templates/).*", dest: "/index.html" },
   ],
   optimize: {
     /* Example: Bundle your final build: */
