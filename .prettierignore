@@ -21,7 +21,6 @@ __mocks__
 /materials/benchmark
 /materials/slides
 /materials/eni-dpawm
-/docs
 *.jest.js
 
 ## code samples on historic topics

@@ -51,11 +51,11 @@ Documentations and learning materials are at the core of FullWebDev. This is why
 >
 > Just make sure to follow our [commit message guidelines](#commit) when you're done.
 
-The [/docs] folder makes the basis of this website, and most packages and/or their documentation are added to it to make even more pages, demonstrations, etc...
+The [/website] folder makes the basis of this website, and most packages and/or their documentation are added to it to make even more pages, demonstrations, etc...
 
 Using our own static website generator, [Daucus](./packages/daucus), we devide the website source code and content into two parts:
 
-1. "core" templates, pages and code, in the [/docs](./docs) directory
+1. "core" templates, pages and code, in the [/website](./website) directory
 2. additionnal contents from some other sub-projects in the [/packages/\*](./packages) directories
 
 ### <a name="packages"></a> Packages
@@ -91,11 +91,11 @@ To run and build the website locally, you'll first need to install the following
 
 Then, you'll need to install the dependencies for the whole monorepo by running `npm install` from the root directory.
 
-Finally, you can run the standalone docs, without building any other packages, by going to the [/docs](./docs) directory and running `npm start -- --local`.
+Finally, you can run the standalone website, without building any other packages, by going to the [/website](./website) directory and running `npm start -- --local`.
 
 > :warning: Access to the private repository associated to the `/materials/eni-dpawm/` submodule is, for now, restricted to the core team. Building the whole website (`npm run build`) requires this access, and Linux.
 >
-> But don't worry: we have CI/CD for that, so there is a good chance you'll never need to do that. Just remember to always use the `--local` option when running a script in `/docs`.
+> But don't worry: we have CI/CD for that, so there is a good chance you'll never need to do that. Just remember to always use the `--local` option when running a script in `/website`.
 
 ## <a name="styleguides"></a> Styleguides
 
@@ -135,7 +135,7 @@ Any line of the commit message cannot be longer than 100 characters.
   │       │             │
   │       │             └─⫸ Summary in present tense. Not capitalized. No period at the end.
   │       │
-  │       └─⫸ Commit Scope: docs | code-samples | codelabs | data-driven-pwa | illustrations |
+  │       └─⫸ Commit Scope: website | code-samples | codelabs | data-driven-pwa | illustrations |
   │                          eni-dpawm | perf | slides-(vanilla-1|wof-1|wof-2) | helpers |
   │                          helpers-(el|template|router) | benchmark | daucus |
   |                          daucus-(cli|router|snowpack-starter|pandoc) | html-loader
@@ -165,7 +165,7 @@ The scope should be the name of the package affected (as perceived by the person
 
 The following is the list of supported scopes:
 
-- `docs`
+- `website`
 - `code-samples`
 - `codelabs`
 - `data-driven-pwa`

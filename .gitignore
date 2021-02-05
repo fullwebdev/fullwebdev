@@ -21,7 +21,8 @@ coverage
 ## build files
 dist/
 /build/
-/docs/build
+/website/build
+/website/src/templates/
 /livre-build/public
 _daucus_
 
@@ -30,12 +31,3 @@ packages/*/*/types
 packages/*/types
 tsconfig.tsbuildinfo
 
-## docs
-/docs/pages/en/material/*
-!/docs/pages/en/material/README.md
-/docs/pages/fr/material/*
-!/docs/fr/material/README.md
-/docs/.vuepress/public/graphs
-/docs/.vuepress/public/images
-/docs/views/
-/docs/js/routes.js

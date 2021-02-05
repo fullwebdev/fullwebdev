@@ -6,7 +6,7 @@
     "build:daucus": "daucus build",
     "prebuild": "npm run build:daucus",
     "build": "snowpack build",
-    "start": "snowpack dev",
+    "start": "snowpack dev"
   },
   "repository": {
     "type": "git",

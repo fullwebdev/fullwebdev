@@ -4,7 +4,7 @@
 
 <!-- put an `x` in all the boxes that apply -->
 
-- [ ] docs, website
+- [ ] website
 - [ ] Daucus
 - [ ] Helpers
 - [ ] codelabs

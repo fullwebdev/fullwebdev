@@ -14,7 +14,6 @@ __mocks__
 ## projects with other conventions
 /materials/benchmark
 /materials/slides
-/docs
 *.jest.js
 
 ## code samples on historic topics

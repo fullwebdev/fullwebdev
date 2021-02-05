@@ -5,7 +5,7 @@ module.exports = {
       2,
       "always",
       [
-        "docs",
+        "website",
         "code-samples",
         "codelabs",
         "data-driven-pwa",

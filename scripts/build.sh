@@ -4,7 +4,7 @@
 ## nor to return success if one or more (but not all) scripts failed
 ## TODO: move to monocli
 
-PACKAGES=('docs' 'materials/codelabs' 'materials/slides/wof-2' 'materials/slides/wof-1' 'materials/slides/vanilla-1' )
+PACKAGES=('website' 'materials/codelabs' 'materials/slides/wof-2' 'materials/slides/wof-1' 'materials/slides/vanilla-1' )
 ROOT_DISTS=('' 'codelabs/doc' 'slides/wof' 'slides/wof1' 'slides/vanilla1' )
 
 NBR_PACKAGES=${#PACKAGES[@]}
@@ -32,8 +32,8 @@ for (( i=0; i<${NBR_PACKAGES}; i++ )); do
   ${ROOTWD}/node_modules/.bin/monocli check "$pkg" --tag latest
   HAS_CHANGED=$?
 
-  if [[ $pkg == "docs" ]] && [[ $HAS_CHANGED -eq 0 ]]; then
-    echo "Docs have changed!"
+  if [[ $pkg == "website" ]] && [[ $HAS_CHANGED -eq 0 ]]; then
+    echo "Website changed!"
     echo "Forcing all packages to rebuild."
     rm -rf "${root_dist}"
     mkdir "${root_dist}"
@@ -45,7 +45,7 @@ for (( i=0; i<${NBR_PACKAGES}; i++ )); do
     echo "[cd] $pkg"
     cd "$pkg"
     npm run build
-    # TODO: check for file conflicts (docs)
+    # TODO: check for file conflicts (website)
     rm -rf "${root_dist}"
     mkdir -p "${root_dist}"
     cp -RT ./dist "${root_dist}"

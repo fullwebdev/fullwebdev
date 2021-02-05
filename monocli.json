@@ -16,8 +16,8 @@
       "url": "git@github.com:fullwebdev/code-samples.git"
     },
     {
-      "scope": "docs",
-      "directory": "docs"
+      "scope": "website",
+      "directory": "website"
     },
     {
       "scope": "codelabs",

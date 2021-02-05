@@ -1,10 +1,10 @@
 export default {
   defaultCompiler: "pandoc",
-  output: "app/_daucus_",
+  output: "app/templates/",
   projects: {
     pages: {
       src: "**/*.md",
-      root: "pages",
+      root: "docs",
     },
   },
 };

@@ -6,7 +6,7 @@ import { html } from "lit-html";
 export default (data) => html`<footer class="page-edit">
   <div class="edit-link">
     <a
-      href="https://github.com/fullwebdev/fullwebdev/edit/master/docs/pages/${data.path}"
+      href="https://github.com/fullwebdev/fullwebdev/edit/master/website/pages/${data.path}"
       target="_blank"
       rel="noopener noreferrer"
       >${data.lang === "fr"

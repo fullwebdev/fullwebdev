@@ -8,7 +8,7 @@
     "packages/helpers/template",
     "packages/daucus/*",
     "materials/*",
-    "docs"
+    "website"
   ],
   "version": "independent"
 }

@@ -9,11 +9,11 @@
       "type": "json"
     },
     {
-      "filename": "docs/package.json",
+      "filename": "website/package.json",
       "type": "json"
     },
     {
-      "filename": "docs/package-lock.json",
+      "filename": "website/package-lock.json",
       "type": "json"
     },
     {

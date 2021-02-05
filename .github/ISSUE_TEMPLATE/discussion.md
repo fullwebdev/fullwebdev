@@ -14,7 +14,7 @@ assignees: ""
 
 <!-- (Update "[ ]" to "[x]" to check a box) -->
 
-- [ ] docs, website
+- [ ] website
 - [ ] Daucus
 - [ ] Helpers
 - [ ] codelabs

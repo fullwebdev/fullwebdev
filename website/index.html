@@ -37,22 +37,7 @@
     />
     <!-- #endregion: styles -->
     <!-- #region: render -->
-    <script type="module">
-      import { setProject } from "@panpress/webapp/states/project.js";
-      import { render } from "lit-html";
-      import { routes } from "./js/routes.js";
-      import appShellTemplate from "@panpress/webapp/shell/app-shell.js";
-
-      setProject({
-        repository: "https://github.com/fullwebdev/fullwebdev",
-        name: "FullWeb.dev (alpha)",
-      });
-
-      render(
-        appShellTemplate({ lang: "en" }, routes),
-        document.getElementById("app-shell")
-      );
-    </script>
+    <!-- TODO -->
     <!-- #endregion: render -->
     <!-- #endregion: App Shell -->
 
@@ -125,19 +110,6 @@
       </main>
     </div>
     <!-- render App Content -->
-    <script type="module">
-      import bootstrap from "@panpress/webapp/content/app.js";
-      import { routes } from "./js/routes.js";
-      bootstrap(
-        [
-          {
-            // /<lang>/inventory/:npm-package-name
-            path: /^\/(?:en|fr)\/(?:\d+-)?inventory\/((?:(?:@|%40)[\w-~][\w-.~]*(?:\/|%2F))?[\w-~][\w-.~]+)$/,
-            component: "/js/routes/inventory-item.js",
-          },
-        ],
-        routes
-      );
-    </script>
+    <!-- TODO -->
   </body>
 </html>

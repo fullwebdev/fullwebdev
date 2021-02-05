@@ -1,7 +1,7 @@
 # FullWeb.dev
 
 <p align="center">
-<img src="docs/assets/favicon/android-icon-144x144.png" alt="logo"></img>
+<img src="website/public/images/favicon/android-icon-144x144.png" alt="logo"></img>
 </p>
 
 <p align="center"><b>Mastering the whole Modern Web</b></p>
@@ -36,7 +36,7 @@
 <!-- prettier-ignore -->
 |         | Releases | Directory |
 | ------- | -------- | --------- |
-| [fullweb.dev](https://fullweb.dev) | [![Prod env](https://img.shields.io/website?label=prod%20env&logo=firebase&url=https%3A%2F%2Ffullweb.dev)](https://github.com/fullwebdev/fullwebdev/releases/tag/latest)<br>[![Dev env](https://img.shields.io/website?label=dev%20env&logo=firebase&url=https%3A%2F%2Ffullweb-dev-dev.web.app)](https://fullweb-dev-dev.web.app/)<br>[![lighthouse CI reports](https://img.shields.io/badge/lighthouse-reports-F44B21?logo=lighthouse)](https://lhci-fullwebdev.herokuapp.com/app/projects/fullwebdev/dashboard?branch=master&runUrl=https%3A%2F%2Ffullweb.dev%2F) | [/docs](./docs/) |
+| [fullweb.dev](https://fullweb.dev) | [![Prod env](https://img.shields.io/website?label=prod%20env&logo=firebase&url=https%3A%2F%2Ffullweb.dev)](https://github.com/fullwebdev/fullwebdev/releases/tag/latest)<br>[![Dev env](https://img.shields.io/website?label=dev%20env&logo=firebase&url=https%3A%2F%2Ffullweb-dev-dev.web.app)](https://fullweb-dev-dev.web.app/)<br>[![lighthouse CI reports](https://img.shields.io/badge/lighthouse-reports-F44B21?logo=lighthouse)](https://lhci-fullwebdev.herokuapp.com/app/projects/fullwebdev/dashboard?branch=master&runUrl=https%3A%2F%2Ffullweb.dev%2F) | [/website](./website/) |
 
 ### Tools
 
