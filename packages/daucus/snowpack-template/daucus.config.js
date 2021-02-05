@@ -1,5 +1,5 @@
 module.exports = {
-  output: 'templates',
+  output: 'src/templates',
   // defaultCompiler: "pandoc",
   // projects: {
   //   docs: {

@@ -10,8 +10,7 @@ import { LitElement, html, css } from 'lit-element';
 
 import '@daucus/router/daucus-router';
 import '@daucus/router/daucus-router-outlet';
-// @ts-ignore ADD baseURL if needed
-import daucusRoutes from '/templates/routes.js'; // eslint-disable-line import/no-unresolved, import/no-absolute-path
+import daucusRoutes from '../templates/routes.js';
 import './menu.js';
 
 class AppRoot extends LitElement {
@@ -28,20 +27,53 @@ class AppRoot extends LitElement {
 
   static get styles() {
     return css`
-      :host {
-        padding: 2rem 2.5rem;
-        margin: 0 auto;
-        max-width: 740px;
-        display: block;
-        text-align: center;
+      .app-wrapper {
+        display: flex;
+        flex-flow: column;
+        min-height: 100vh;
       }
 
-      daucus-router-outlet {
-        display: block;
-        border: solid #000 2px;
-        border-radius: 20px;
-        padding: 2rem;
-        margin: 2rem 0;
+      header {
+        text-align: center;
+        padding: 1rem 0;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+        position: relative;
+      }
+
+      header > * {
+        margin: 0;
+      }
+
+      .app-content {
+        flex-grow: 2;
+        display: flex;
+        flex-flow: row;
+        min-height: 80vh;
+      }
+
+      @media screen and (max-width: 719px) {
+        .app-content {
+          flex-direction: column;
+        }
+      }
+
+      aside {
+        background-color: #f2f2f2;
+        flex-shrink: 0;
+        min-width: 250px;
+      }
+
+      footer {
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.1);
+        padding: 2rem 1rem;
+      }
+
+      main {
+        flex-grow: 2;
+        margin: 2rem auto;
+        max-width: 1024px;
+        padding: 0 50px;
         text-align: justify;
       }
 
@@ -54,18 +86,30 @@ class AppRoot extends LitElement {
   render() {
     return html`
       <daucus-router .routes=${daucusRoutes} default-path="/docs/">
-        <h1>Daucus + LitElement + Snowpack</h1>
-        <p>Edit <code>src/app-root.js</code> and save to reload.</p>
-        <daucus-menu .routes=${daucusRoutes} project="docs"></daucus-menu>
-        <daucus-router-outlet></daucus-router-outlet>
-        <a
-          class="link"
-          href="https://fullweb.dev/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          ${this.message}
-        </a>
+        <div class="app-wrapper">
+          <header>
+            <h1>Daucus + LitElement + Snowpack</h1>
+            <p>Edit <code>src/app-root.js</code> and save to reload.</p>
+          </header>
+          <div class="app-content">
+            <aside>
+              <daucus-menu .routes=${daucusRoutes} project="docs"></daucus-menu>
+            </aside>
+            <main>
+              <daucus-router-outlet></daucus-router-outlet>
+            </main>
+          </div>
+          <footer>
+            <a
+              class="link"
+              href="https://fullweb.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ${this.message}
+            </a>
+          </footer>
+        </div>
       </daucus-router>
     `;
   }

@@ -2,7 +2,7 @@
 module.exports = {
   mount: {
     public: { url: '/', static: true },
-    templates: { url: '/templates/' },
+    'src/templates': { url: '/templates/' },
     src: { url: '/dist' },
   },
   plugins: ['@snowpack/plugin-babel', '@snowpack/plugin-dotenv'],

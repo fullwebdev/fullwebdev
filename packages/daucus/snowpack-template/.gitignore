@@ -16,7 +16,7 @@ build
 
 # Daucus
 _daucus_
-/templates
+/src/templates
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
