@@ -1,5 +1,5 @@
 {
-  "name": "@fullweb/docs",
+  "name": "@fullweb/website",
   "version": "1.0.0-alpha.1",
   "private": true,
   "scripts": {
@@ -7,7 +7,6 @@
     "prebuild": "npm run build:daucus",
     "build": "snowpack build",
     "start": "snowpack dev",
-    "lint": "eslint \"{pages,js,components}/**/*.js\""
   },
   "repository": {
     "type": "git",
