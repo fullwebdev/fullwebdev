@@ -5,8 +5,6 @@ module.exports = {
     src: { url: "/dist" },
   },
   plugins: [
-    "@snowpack/plugin-babel",
-    "@snowpack/plugin-dotenv",
     [
       "@snowpack/plugin-build-script",
       { cmd: "postcss", input: [".css"], output: [".css"] },
