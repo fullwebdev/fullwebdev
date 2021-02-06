@@ -22,6 +22,7 @@ coverage
 dist/
 /build/
 /website/build
+/website/public/illustrations/
 /website/src/templates/
 /livre-build/public
 _daucus_
