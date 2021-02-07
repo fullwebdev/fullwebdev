@@ -41,7 +41,7 @@ export class Router {
     }
   }
 
-  async run(root = document.body) {
+  async run(root = document.body, skipLocationChange = true) {
     root.addEventListener(
       "click",
       clickEventHandler(this.base)((path, event) =>
@@ -53,6 +53,6 @@ export class Router {
       this.navigate(this.currentPath, { skipLocationChange: true, event });
     });
 
-    return this.navigate(this.currentPath, { skipLocationChange: true });
+    return this.navigate(this.currentPath, { skipLocationChange });
   }
 }
