@@ -77,6 +77,13 @@ module.exports = {
       },
     },
     {
+      files: ["**/*.html"],
+      rules: {
+        "import/no-unresolved": "off",
+        "import/no-absolute-path": "off",
+      },
+    },
+    {
       files: [
         "**/test-node/**/*.js",
         "**/test-web/**/*.{js,mjs,cjs}",
