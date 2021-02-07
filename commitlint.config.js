@@ -23,6 +23,7 @@ module.exports = {
         "html-loader",
         "daucus-snowpack-template",
         "daucus-router",
+        "daucus-menu",
         "slides",
         "slides-wof-1",
         "slides-wof-2",

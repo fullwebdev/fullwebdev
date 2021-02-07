@@ -1,6 +1,7 @@
 const packages = [
   { name: "cli", scope: "daucus", type: "js", environment: "node" },
   { name: "html-loader", scope: "daucus", type: "js", environment: "browser" },
+  { name: "menu", scope: "daucus", type: "js", environment: "browser" },
   { name: "pandoc", scope: "daucus", type: "js", environment: "node" },
   { name: "router", scope: "daucus", type: "js", environment: "browser" },
   // { name: 'helpers', scope: "", type: 'js', environment: 'browser' },
