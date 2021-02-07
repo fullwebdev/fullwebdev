@@ -10,7 +10,15 @@ module.exports = {
       { cmd: "postcss", input: [".css"], output: [".css"] },
     ],
   ],
-  routes: [{ match: "routes", src: "(?!/templates/).*", dest: "/index.html" }],
+  routes: [
+    {
+      match: "routes",
+      src: "(?!/dist/templates/).*",
+      dest: "/index.html",
+      // dest: "/localized-files/fr_ALL/index.html",
+      // dest: "/localized-files/en_ALL/index.html",
+    },
+  ],
   devOptions: {
     open: "none",
   },

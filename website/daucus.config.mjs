@@ -2,7 +2,7 @@ export default {
   defaultCompiler: "pandoc",
   output: "src/templates/",
   projects: {
-    pages: {
+    docs: {
       src: "**/*.md",
       root: "docs",
     },
