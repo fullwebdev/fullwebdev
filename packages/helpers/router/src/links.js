@@ -21,11 +21,16 @@ export const clickEventHandler = (/** @type {string} */ baseUrl) => (
   }
 
   // support Shadow DOM
-  const anchor = /** @type {HTMLLinkElement} */ (e.composedPath()[0]);
+  let anchor = /** @type {HTMLAnchorElement | null} */ (e.composedPath()[0]);
+
+  if (!anchor) return;
+
+  if (anchor.tagName !== "A") {
+    anchor = anchor.closest("a");
+    if (!anchor) return;
+  }
 
   if (
-    !anchor ||
-    anchor.tagName !== "A" ||
     anchor.hasAttribute("download") ||
     anchor.getAttribute("rel") === "external" ||
     anchor.getAttribute("target") === "_blank"
