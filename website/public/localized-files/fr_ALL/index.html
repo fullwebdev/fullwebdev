@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
-    <title>fullweb.dev</title>
+    <title>fullWeb.dev</title>
 
     <!-- #region: styles -->
     <link rel="stylesheet" href="/styles/shell.css" />
@@ -49,7 +49,7 @@
       type="image/png"
       href="/images/favicon/favicon-96x96.png"
     />
-    <meta name="description" content="Relearn Web Development" />
+    <meta name="description" content="Redécouvrir le développement Web" />
     <meta
       property="og:image"
       content="https://fullweb.dev/images/favicon/icon-384x384.png"
@@ -57,14 +57,14 @@
     <meta property="og:site_name" content="fullweb.dev" />
     <meta
       property="og:description"
-      content="Acquire Web Development expertise by taking a comprehensive view."
+      content="Développez votre expertise du développement Web en adoptant une nouvelle vision d'ensemble"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:image"
       content="https://fullweb.dev/images/social/social_fr.png"
     />
-    <meta name="twitter:image:alt" content="Relearn Web Development" />
+    <meta name="twitter:image:alt" content="Redécouvrir le développement Web" />
     <meta name="twitter:title" content="fullweb.dev" />
   </head>
   <body>
@@ -74,17 +74,17 @@
         <ul class="navigation">
           <li>
             <a class="nav-link" href="/learn"
-              ><span class="nav-link-inner">Learn</span></a
+              ><span class="nav-link-inner">Explorer</span></a
             >
           </li>
           <li>
             <a class="nav-link" href="/build"
-              ><span class="nav-link-inner">Build</span></a
+              ><span class="nav-link-inner">Créer</span></a
             >
           </li>
           <li>
             <a class="nav-link" href="/news"
-              ><span class="nav-link-inner">Keep up</span></a
+              ><span class="nav-link-inner">S'informer</span></a
             >
           </li>
         </ul>
@@ -137,12 +137,81 @@
       </div>
     </header>
     <main id="content-container">
-      <div id="page-container"></div>
+      <div id="page-container">
+        <div id="homepage">
+          <section class="welcome">
+            <div class="homepage_illustration">
+              <img
+                src="images/web-illustrations/undraw_Code_review_re_woeb.svg"
+                width="500px"
+                alt="une nouvelle approche"
+              />
+            </div>
+            <div class="action">
+              <h1 class="homepage_title">Redécouvrir le développement Web</h1>
+              <a href="/learn" class="call-to-action primary">Démarrer</a>
+              <div class="sm-only">
+                <a href="/build" class="call-to-action">Outils</a>
+                <a href="/news" class="call-to-action">Actualités</a>
+              </div>
+            </div>
+          </section>
+          <h2 class="details-header">Retrouvez sur ce site</h2>
+          <section class="details">
+            <article>
+              <h3>Lorem</h3>
+              Pellentesque habitant morbi tristique senectus et netus et
+              malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat
+              vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit
+              amet quam egestas semper. Aenean ultricies mi vitae est. Mauris
+              placerat eleifend leo.
+            </article>
+            <article>
+              <h3>Ipsum</h3>
+              Pellentesque habitant morbi tristique senectus et netus et
+              malesuada fames ac turpis egestas.
+            </article>
+            <article>
+              <h3>Dolor</h3>
+              Pellentesque habitant morbi tristique senectus et netus et
+              malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat
+              vitae, ultricies eget, tempor sit amet, ante.
+            </article>
+            <article>
+              <h3>Sit Amet</h3>
+              Pellentesque habitant morbi tristique senectus et netus et
+              malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat
+              vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit
+              amet quam egestas semper. Aenean ultricies mi vitae est. Mauris
+              placerat eleifend leo.
+            </article>
+            <article>
+              <h3>Consectetuer</h3>
+              Pellentesque habitant morbi tristique.
+            </article>
+            <article>
+              <h3>Adipiscing Elit</h3>
+              Pellentesque habitant morbi tristique senectus et netus et
+              malesuada fames ac turpis egestas.
+            </article>
+          </section>
+        </div>
+      </div>
     </main>
+    <!-- render App Content -->
+    <!-- TODO -->
     <script type="module">
       import { router } from "/dist/app/shell.js";
 
-      router.run();
+      document.body.addEventListener(
+        "click",
+        (e) => {
+          e.preventDefault();
+
+          router.run(document.body, false);
+        },
+        { once: true }
+      );
     </script>
   </body>
 </html>
