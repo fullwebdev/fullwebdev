@@ -25,13 +25,18 @@ export function menuTemplate(routes, projectName) {
         ${
           route.title && route.path !== undefined
             ? `<a href="/${projectName}/${route.path}">${route.title}</a>`
-            : route.title || routeName
+            : `<button role="button" aria-label="${route.title || routeName}">${
+                route.title || routeName
+              }</button>`
         }
       </div>
       ${
         route.children && depth < 3
           ? `
-            <ul class=${depth > 0 ? "child-menu" : "menu"}>
+            <ul class="${
+              (depth > 0 ? "child-menu" : "menu") +
+              (route.path === undefined ? " collapsible" : "")
+            }">
               ${Object.entries(route.children)
                 .sort(sortRoutesChildEntriesByPosition)
                 .map(
