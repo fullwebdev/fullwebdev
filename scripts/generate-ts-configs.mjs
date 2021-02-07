@@ -28,10 +28,10 @@ const internalDependencyMap = new Map();
 
 // collect package json for all packages
 packages.forEach((pkg) => {
-  const projectType = pkg.materials ? "materials" : "packages";
+  const projectRoot = pkg.root ?? "packages";
   const packageJSONPath = path.join(
     root,
-    projectType,
+    projectRoot,
     pkg.scope,
     pkg.name,
     "package.json"
@@ -47,7 +47,7 @@ packages.forEach((pkg) => {
     fs.readFileSync(packageJSONPath).toString()
   );
   const packageName = packageJSONData.name;
-  packageDirnameMap.set(packageName, [pkg.scope, pkg.name, projectType]);
+  packageDirnameMap.set(packageName, [pkg.scope, pkg.name, projectRoot]);
   packageJSONMap.set(packageName, packageJSONData);
 });
 
@@ -79,11 +79,11 @@ function resolveInternalDependencies(dependencies) {
 }
 
 packageDirnameMap.forEach(
-  ([packageDirScope, packageDirname, projectType], packageName) => {
+  ([packageDirScope, packageDirname, projectRoot], packageName) => {
     const pkg = packages.find((p) => p.name === packageDirname);
     const pkgDir = path.join(
       root,
-      projectType,
+      projectRoot,
       packageDirScope,
       packageDirname
     );
@@ -101,11 +101,43 @@ packageDirnameMap.forEach(
     const internalDependencies = resolveInternalDependencies(
       internalDependencyMap.get(packageName)
     );
+    let baseConfig;
+    // materials can't directly depend on internal packages
+    let references = [];
+    if(projectRoot === "packages") {
+      baseConfig = `${packageDirScope ? "../" : ""}../../tsconfig.${
+        pkg.environment === "browser" ? "browser" : "node"
+      }-base.json`;
+      references = internalDependencies.map((dep) => {
+        const [depDirScope, depDirName] = packageDirnameMap.get(dep);
+        if (depDirScope) {
+          return {
+            path: `../../${depDirScope}/${depDirName}/tsconfig.json`,
+          };
+        }
+        return {
+          path: `../${depDirName}/tsconfig.json`,
+        };
+      })
+    } else if (projectRoot === "") {
+      baseConfig = `../tsconfig.${
+        pkg.environment === "browser" ? "browser" : "node"
+      }-base.json`
+      references = internalDependencies.map((dep) => {
+        const [depDirScope, depDirName] = packageDirnameMap.get(dep);
+        if (depDirScope) {
+          return {
+            path: `../packages/${depDirScope}/${depDirName}/tsconfig.json`,
+          };
+        }
+        return {
+          path: `../packages/${depDirName}/tsconfig.json`,
+        };
+      })
+    }
     const tsconfigData = merge(
       {
-        extends: `${packageDirScope ? "../" : ""}../../tsconfig.${
-          pkg.environment === "browser" ? "browser" : "node"
-        }-base.json`,
+        extends: baseConfig,
         compilerOptions: {
           // module: pkg.environment === "browser" ? "ESNext" : "commonjs",
           module: "ESNext",
@@ -115,23 +147,9 @@ packageDirnameMap.forEach(
           allowJs: true,
           checkJs: pkg.type === "js" ? true : undefined,
           emitDeclarationOnly: pkg.type === "js" ? true : undefined,
-          noImplicitAny: projectType !== "materials",
+          noImplicitAny: projectRoot !== "materials",
         },
-        // materials can't directly depend on internal packages
-        references:
-          projectType === "materials"
-            ? []
-            : internalDependencies.map((dep) => {
-                const [depDirScope, depDirName] = packageDirnameMap.get(dep);
-                if (depDirScope) {
-                  return {
-                    path: `../../${depDirScope}/${depDirName}/tsconfig.json`,
-                  };
-                }
-                return {
-                  path: `../${depDirName}/tsconfig.json`,
-                };
-              }),
+        references,
         include: ["src", "*.js"],
         exclude: ["dist", "types"],
       },

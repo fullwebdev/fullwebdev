@@ -1,20 +1,26 @@
 {
+  "extends": "../tsconfig.browser-base.json",
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "lib": ["es2020", "dom"],
+    "module": "ESNext",
+    "outDir": "./types",
+    "rootDir": ".",
+    "composite": true,
     "allowJs": true,
     "checkJs": true,
-    "noEmit": true,
-    "strict": false,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "esModuleInterop": true,
-    "baseUrl": ".",
-    "paths": {
-      "~app/*": ["app/*"]
-    }
+    "emitDeclarationOnly": true,
+    "noImplicitAny": true
   },
-  "exclude": ["views", "build"]
+  "references": [
+    {
+      "path": "../packages/daucus/html-loader/tsconfig.json"
+    },
+    {
+      "path": "../packages/helpers/router/tsconfig.json"
+    },
+    {
+      "path": "../packages/daucus/router/tsconfig.json"
+    }
+  ],
+  "include": ["src"],
+  "exclude": ["dist", "types"]
 }
