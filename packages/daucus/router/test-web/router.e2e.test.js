@@ -6,11 +6,10 @@ import {
   elementUpdated,
 } from "@open-wc/testing";
 import { html } from "lit-html";
-import { stub } from "sinon";
+import { stub, fake } from "sinon";
 import routesFixture from "./fixtures/routes.js";
 
 import "../daucus-router.js";
-import "../daucus-router-outlet.js";
 
 // write your tests inline
 describe("[e2e] DaucusRouterWC", () => {
@@ -70,34 +69,37 @@ describe("[e2e] DaucusRouterWC", () => {
     window.fetch.restore();
   });
 
-  it("load home template", async () => {
+  it("load home route", async () => {
+    const fakeRouteMatchListener = fake();
     const router = await fixture(html`
-      <daucus-router .routes=${routesFixture} default-path="/docs/">
-        <daucus-router-outlet></daucus-router-outlet>
+      <daucus-router
+        .routes=${routesFixture}
+        default-path="/docs/"
+        @route-match=${fakeRouteMatchListener}
+      >
       </daucus-router>
     `);
     await elementUpdated(router);
-    // await oneEvent(router, "html-loaded");
-    expect(window.fetch).to.have.been.calledWith("/templates/docs/index.html");
-    expect(router.querySelector("daucus-router-outlet").innerHTML).equals(
-      mockTemplates.index
-    );
+    // TODO: check event detail
+    expect(fakeRouteMatchListener).to.have.been.calledOnce;
   });
 
   it("load on click", async () => {
+    const fakeRouteMatchListener = fake();
     const router = await fixture(html`
-      <daucus-router .routes=${routesFixture} default-path="/docs/">
+      <daucus-router
+        .routes=${routesFixture}
+        default-path="/docs/"
+        @route-match=${fakeRouteMatchListener}
+      >
         <a href="/docs/chapter1/">chapitre 1</a>
-        <daucus-router-outlet></daucus-router-outlet>
       </daucus-router>
     `);
     await elementUpdated(router);
     setTimeout(() => router.querySelector("a").click());
-    await oneEvent(router, "html-loaded");
-    expect(window.fetch).to.have.been.calledTwice;
-    expect(router.querySelector("daucus-router-outlet").innerHTML).equals(
-      mockTemplates.chapter1
-    );
+    await oneEvent(router, "navigation-end");
+    // TODO: check event detail
+    expect(fakeRouteMatchListener).to.have.been.calledTwice;
   });
 
   afterEach(() => {

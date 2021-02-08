@@ -14,9 +14,6 @@
   },
   "references": [
     {
-      "path": "../../daucus/html-loader/tsconfig.json"
-    },
-    {
       "path": "../../helpers/router/tsconfig.json"
     }
   ],

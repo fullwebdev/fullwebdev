@@ -2,7 +2,6 @@ import { DaucusRouter } from "./daucus-router.js";
 
 /**
  * @typedef {import('./RoutesConfig').RoutesConfig} RoutesConfig
- * @typedef {import('./DaucusRouterOutlet').DaucusRouterOutlet} DaucusRouterOutlet
  */
 
 export class DaucusRouterWC extends HTMLElement {
@@ -63,17 +62,24 @@ export class DaucusRouterWC extends HTMLElement {
       throw new Error("no routes available in the DaucusRouter component");
     if (this._router) throw new Error("can't define router more than once");
 
-    /** @type {DaucusRouterOutlet | null} */
-    const outlet = this.querySelector(this.outletTagName);
-
-    if (!outlet) throw new Error("no routler outlet found");
-
     this._router = new DaucusRouter(
       this._routes,
       this.defaultPath,
-      this.baseDir,
-      outlet
+      this.baseDir
     );
+
+    const routerEventTypes = [
+      "navigation-start",
+      "navigation-end",
+      "route-redirection",
+      "route-match",
+    ];
+    for (const type of routerEventTypes) {
+      // @ts-ignore detail not defined in Event
+      this._router.addEventListener(type, (e) =>
+        this.dispatchEvent(new CustomEvent(type, { detail: e.detail }))
+      );
+    }
 
     this._router.run(this);
   }
