@@ -1,4 +1,6 @@
 import { LitElement, html, css } from 'lit-element';
+import { ifDefined } from 'lit-html/directives/if-defined';
+import { live } from 'lit-html/directives/live';
 
 /*
  * You can also use @daucus/html-loader and/or @modern-helpers/router
@@ -9,20 +11,24 @@ import { LitElement, html, css } from 'lit-element';
  */
 
 import '@daucus/router/daucus-router';
-import '@daucus/router/daucus-router-outlet';
+import '@daucus/html-loader/html-loader';
 import daucusRoutes from '../templates/routes.js';
-import './menu.js';
+import '@daucus/menu/daucus-menu';
 
 class AppRoot extends LitElement {
   static get properties() {
     return {
       message: { type: String },
+      _activePath: { type: String, attribute: false },
+      _templateHRef: { type: String, attribute: false },
     };
   }
 
   constructor() {
     super();
     this.message = 'Become a full web developer';
+    this._handleNavigationEnd = this.__handleNavigationEnd.bind(this);
+    this._handleRouteMatch = this.__handleRouteMatch.bind(this);
   }
 
   static get styles() {
@@ -83,9 +89,28 @@ class AppRoot extends LitElement {
     `;
   }
 
+  /**
+   * @param {CustomEvent & { detail: { path: string; }; }} e
+   */
+  __handleNavigationEnd(e) {
+    this._activePath = e.detail.path;
+  }
+
+  /**
+   * @param {{ detail: { templateHRef: string; }; }} e
+   */
+  __handleRouteMatch(e) {
+    this._templateHRef = e.detail.templateHRef;
+  }
+
   render() {
     return html`
-      <daucus-router .routes=${daucusRoutes} default-path="/docs/">
+      <daucus-router
+        .routes=${daucusRoutes}
+        default-path="/docs/"
+        @navigation-end=${this._handleNavigationEnd}
+        @route-match=${this._handleRouteMatch}
+      >
         <div class="app-wrapper">
           <header>
             <h1>Daucus + LitElement + Snowpack</h1>
@@ -93,10 +118,14 @@ class AppRoot extends LitElement {
           </header>
           <div class="app-content">
             <aside>
-              <daucus-menu .routes=${daucusRoutes} project="docs"></daucus-menu>
+              <daucus-menu
+                .routes=${daucusRoutes}
+                project="docs"
+                active-path=${live(this._activePath)}
+              ></daucus-menu>
             </aside>
             <main>
-              <daucus-router-outlet></daucus-router-outlet>
+              <html-loader href=${ifDefined(this._templateHRef)}></html-loader>
             </main>
           </div>
           <footer>
