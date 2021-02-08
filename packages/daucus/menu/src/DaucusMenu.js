@@ -134,6 +134,7 @@ export class DaucusMenu extends HTMLElement {
 
   set routes(routes) {
     this._routes = routes;
+    this._render();
   }
 
   get project() {
@@ -178,6 +179,10 @@ export class DaucusMenu extends HTMLElement {
     }
   }
 
+  connectedCallback() {
+    this._render();
+  }
+
   _render() {
     this._openedMenus.clear();
     this._activeSection = null;
@@ -190,6 +195,11 @@ export class DaucusMenu extends HTMLElement {
   __handleClick(event) {
     if (!(event.target instanceof HTMLElement)) return;
     const { target } = event;
+    if (target instanceof HTMLAnchorElement) {
+      // FIXME: baseUrl
+      this.activePath = new URL(target.href).pathname;
+      return;
+    }
     this._updateActiveSection(target);
   }
 
@@ -198,8 +208,6 @@ export class DaucusMenu extends HTMLElement {
    * @param {Element} anchor
    */
   _updateActiveSection(anchor) {
-    // TODO: compact & optimise
-
     const titleEl = anchor.closest(".section-title");
     if (!titleEl) return;
     if (titleEl.classList.contains("active")) return;
@@ -232,7 +240,6 @@ export class DaucusMenu extends HTMLElement {
       titleEl.classList.add("active");
       if (this._activeSection) this._activeSection.classList.remove("active");
       this._activeSection = titleEl;
-      this.activePath = new URL(anchor.href).pathname;
     }
 
     /** @type {Element | null} */
