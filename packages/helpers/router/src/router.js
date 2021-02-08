@@ -10,13 +10,14 @@ function baseHRef() {
  * @typedef {import('./navigation').NavigationOptions} NavigationOptions
  */
 
-export class Router {
-  /**
-   * @param {NavigationListener} navigationListener
-   */
-  constructor(navigationListener) {
-    this.base = baseHRef();
-    this._navListener = navigationListener;
+export class AbstractRouter extends EventTarget {
+  constructor() {
+    super();
+    this._base = baseHRef();
+  }
+
+  get base() {
+    return this._base;
   }
 
   get currentPath() {
@@ -29,9 +30,22 @@ export class Router {
    *
    * @returns {Promise<void>}
    */
-  async navigate(path, options = {}) {
-    const newRoute = await this._navListener(path, options);
-    if (newRoute) return this.navigate(newRoute[0], newRoute[1]);
+  async _navigate(path, options = {}) {
+    const newRoute = await this.renderOrRedirect(path, options);
+    if (newRoute && newRoute[0] !== path) {
+      this.dispatchEvent(
+        new CustomEvent("route-redirection", {
+          detail: {
+            oldValue: {
+              path,
+              options,
+            },
+            newValue: { path: newRoute[0], options: newRoute[1] },
+          },
+        })
+      );
+      return this._navigate(newRoute[0], newRoute[1]);
+    }
 
     // TODO: params
     if (options.redirection) {
@@ -39,6 +53,34 @@ export class Router {
     } else if (!options.skipLocationChange) {
       window.history.pushState(options.state, "", `${this.base}${path}`);
     }
+
+    this.dispatchEvent(
+      new CustomEvent("navigation-end", {
+        detail: {
+          path,
+          options,
+        },
+      })
+    );
+  }
+
+  /**
+   * @param {string} path
+   * @param {NavigationOptions} options
+   *
+   * @returns {Promise<void>}
+   */
+  async navigate(path, options = {}) {
+    // TODO: vérifier si j'ai pas mis "details" ailleurs par inatention
+    this.dispatchEvent(
+      new CustomEvent("navigation-start", {
+        detail: {
+          path,
+          options,
+        },
+      })
+    );
+    return this._navigate(path, options);
   }
 
   async run(root = document.body, skipLocationChange = true) {
@@ -54,5 +96,16 @@ export class Router {
     });
 
     return this.navigate(this.currentPath, { skipLocationChange });
+  }
+
+  /**
+   * @param {string} path
+   * @param {NavigationOptions} options
+   *
+   * @returns {[path: string, options?: NavigationOptions] | null | Promise<[path: string, options?: NavigationOptions] | null>}
+   */
+  // eslint-disable-next-line class-methods-use-this
+  renderOrRedirect(path, options) {
+    return null;
   }
 }

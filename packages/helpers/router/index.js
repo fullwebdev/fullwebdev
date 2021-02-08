@@ -1,1 +1,1 @@
-export { Router } from "./src/router.js";
+export { AbstractRouter } from "./src/router.js";
