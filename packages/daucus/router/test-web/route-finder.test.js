@@ -1,5 +1,5 @@
 import { expect } from "@open-wc/testing";
-import { routeFinder } from "../src/create-router.js";
+import { routeFinder } from "../src/route-finder.js";
 import routesFixture from "./fixtures/routes.js";
 
 describe("create router", () => {

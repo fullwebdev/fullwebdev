@@ -1,23 +1,14 @@
-import { createDaucusRouter } from "./create-router.js";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { DaucusRouterOutlet } from "./DaucusRouterOutlet.js";
+import { DaucusRouter } from "./daucus-router.js";
 
 /**
  * @typedef {import('./RoutesConfig').RoutesConfig} RoutesConfig
+ * @typedef {import('./DaucusRouterOutlet').DaucusRouterOutlet} DaucusRouterOutlet
  */
-export class DaucusRouter extends HTMLElement {
+
+export class DaucusRouterWC extends HTMLElement {
   constructor() {
     super();
     this._connected = false;
-  }
-
-  /**
-   * @type {DaucusRouterOutlet | null}
-   */
-  get outlet() {
-    return /** @type {DaucusRouterOutlet | null} */ this.querySelector(
-      this.outletTagName
-    );
   }
 
   /**
@@ -51,7 +42,6 @@ export class DaucusRouter extends HTMLElement {
 
   set routes(routes) {
     this._routes = routes;
-    this._createRouter();
   }
 
   /**
@@ -65,33 +55,27 @@ export class DaucusRouter extends HTMLElement {
     this.setAttribute("base-dir", path);
   }
 
-  _createRouter() {
-    if (this._routes && !this._router && this._connected) {
-      this._router = createDaucusRouter(
-        this._routes,
-        this.defaultPath,
-        (projectName, route) => {
-          if (!this.outlet) {
-            // eslint-disable-next-line no-console
-            console.warn(
-              `${route.path} can't be rendered without a daucus-router-outlet element`
-            );
-            return;
-          }
-          this.outlet.href = `${
-            (this._router.base || "/") + this.baseDir + projectName
-          }/${route.templateUrl}`;
-        }
-      );
-      this._router.run(this);
-    }
-  }
-
   connectedCallback() {
     this.upgradeProperty("routes");
     this.upgradeProperty("defaultPath");
-    this._connected = true;
-    this._createRouter();
+
+    if (!this._routes)
+      throw new Error("no routes available in the DaucusRouter component");
+    if (this._router) throw new Error("can't define router more than once");
+
+    /** @type {DaucusRouterOutlet | null} */
+    const outlet = this.querySelector(this.outletTagName);
+
+    if (!outlet) throw new Error("no routler outlet found");
+
+    this._router = new DaucusRouter(
+      this._routes,
+      this.defaultPath,
+      this.baseDir,
+      outlet
+    );
+
+    this._router.run(this);
   }
 
   disconnectedCallback() {

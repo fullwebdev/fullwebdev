@@ -1,9 +1,6 @@
-import { Router } from "@modern-helpers/router";
-
 /**
  * @typedef {import('./RoutesConfig').RoutesConfig} RoutesConfig
  * @typedef {[string, any] | [string]} RouteMatch
- * @typedef {import('./RoutesConfig').Route} Route
  */
 
 /**
@@ -38,24 +35,3 @@ export const routeFinder = (routes) => {
     return /** @type {RouteMatch} */ [projectName, acc];
   };
 };
-
-/**
- *
- * @param {RoutesConfig} routes
- * @param {string} defaultPath
- * @param {(name:string, options: Partial<Route>) => any} routeRenderer
- */
-export function createDaucusRouter(routes, defaultPath, routeRenderer) {
-  const findRoute = routeFinder(routes);
-  const defaultRouteMatch = findRoute(defaultPath);
-
-  if (!defaultRouteMatch)
-    throw new Error(`can't find any route for default path ${defaultPath}`);
-
-  return new Router(async (path, options) => {
-    const routeMatch =
-      path === defaultPath ? defaultRouteMatch : findRoute(path);
-    if (!routeMatch[1]) return [defaultPath, options];
-    await routeRenderer(routeMatch[0], routeMatch[1]);
-  });
-}

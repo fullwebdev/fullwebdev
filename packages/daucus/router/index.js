@@ -1,3 +1,2 @@
-export { DaucusRouter } from "./src/DaucusRouter.js";
 export { DaucusRouterOutlet } from "./src/DaucusRouterOutlet.js";
-export { createDaucusRouter } from "./src/create-router.js";
+export { DaucusRouterWC } from "./src/DaucusRouterWC.js";

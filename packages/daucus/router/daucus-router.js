@@ -1,3 +1,3 @@
-import { DaucusRouter } from "./src/DaucusRouter.js";
+import { DaucusRouterWC } from "./src/DaucusRouterWC.js";
 
-window.customElements.define("daucus-router", DaucusRouter);
+window.customElements.define("daucus-router", DaucusRouterWC);

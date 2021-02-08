@@ -13,7 +13,7 @@ import "../daucus-router.js";
 import "../daucus-router-outlet.js";
 
 // write your tests inline
-describe("[e2e] DaucusRouter", () => {
+describe("[e2e] DaucusRouterWC", () => {
   const mockTemplates = {
     index: "<p>index</p>",
     chapter1: "<p>chapter 1 </p>",
