@@ -1,6 +1,7 @@
 /**
  * @typedef {import('./RoutesConfig').RoutesConfig} RoutesConfig
- * @typedef {[string, any] | [string]} RouteMatch
+ * @typedef {import('./RoutesConfig').Route} Route
+ * @typedef {[string, Route] | [string]} RouteMatch
  */
 
 /**
@@ -12,6 +13,8 @@
 export const routeFinder = (routes) => {
   const projectsNames = Object.keys(routes);
 
+  // TODO: better typing (Partial<Route> vs Route)
+  // @ts-ignore if position is undefined ()
   return (/** @type {string} */ path) => {
     const paths = path ? path.split("/") : [];
 

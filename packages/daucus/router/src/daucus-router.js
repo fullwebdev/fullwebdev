@@ -6,6 +6,8 @@ import { routeFinder } from "./route-finder.js";
  * @typedef {import('./RoutesConfig').Route} Route
  * @typedef {import("@modern-helpers/router/src/navigation").NavigationOptions} NavigationOptions
  * @typedef {[string, NavigationOptions | undefined]} Navigation
+ * @typedef {CustomEvent<RouteMatchEventDetail>} RouteMatchEvent
+ * @typedef {{ projectName: string, route: Route, templateHRef: string}} RouteMatchEventDetail
  */
 
 export class DaucusRouter extends AbstractRouter {
@@ -45,6 +47,7 @@ export class DaucusRouter extends AbstractRouter {
     }
     this.dispatchEvent(
       new CustomEvent("route-match", {
+        /** @type {RouteMatchEventDetail} */
         detail: {
           projectName: routeMatch[0],
           route: routeMatch[1],

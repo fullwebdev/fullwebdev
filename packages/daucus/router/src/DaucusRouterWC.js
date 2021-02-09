@@ -5,11 +5,6 @@ import { DaucusRouter } from "./daucus-router.js";
  */
 
 export class DaucusRouterWC extends HTMLElement {
-  constructor() {
-    super();
-    this._connected = false;
-  }
-
   /**
    * @type {string}
    */
@@ -75,17 +70,13 @@ export class DaucusRouterWC extends HTMLElement {
       "route-match",
     ];
     for (const type of routerEventTypes) {
-      // @ts-ignore detail not defined in Event
       this._router.addEventListener(type, (e) =>
+        // @ts-ignore detail not defined in Event
         this.dispatchEvent(new CustomEvent(type, { detail: e.detail }))
       );
     }
 
     this._router.run(this);
-  }
-
-  disconnectedCallback() {
-    this._connected = false;
   }
 
   /**
