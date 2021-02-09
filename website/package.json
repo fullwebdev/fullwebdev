@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "build:daucus": "daucus build",
-    "prebuild": "npm run build:daucus",
+    "build:templates": "node ./templates/build.mjs",
+    "prebuild": "npm run build:daucus && npm run build:templates",
     "build": "snowpack build --reload",
+    "prestart": "npm run prebuild",
     "start": "snowpack dev --reload"
   },
   "repository": {
@@ -24,12 +26,15 @@
     "@types/prismjs": "^1.16.1",
     "cssnano": "^4.1.10",
     "minify-html-literals": "^1.3.2",
+    "mustache": "^4.1.0",
     "postcss-cli": "^7.1.2",
     "snowpack": "^3.0.11"
   },
   "dependencies": {
+    "@daucus/html-loader": "^0.1.0",
     "@daucus/menu": "^0.1.0",
     "@daucus/router": "^0.1.0",
+    "html-minifier": "^4.0.0",
     "lit-html": "^1.3.0",
     "prismjs": "^1.21.0"
   }

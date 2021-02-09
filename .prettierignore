@@ -7,8 +7,9 @@ stats.html
 *.fake.*
 build
 _daucus_/
-templates/
 package-lock.json
+/website/public/index.html
+/website/public/localized-file/
 
 ## should stay as-is
 /packages/**/test-node/**/snapshots

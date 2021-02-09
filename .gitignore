@@ -23,7 +23,9 @@ dist/
 /build/
 /website/build
 /website/public/illustrations/
-/website/src/templates/
+/website/src/fragments/
+/website/public/localized-files/
+/website/public/index.html
 /livre-build/public
 _daucus_
 

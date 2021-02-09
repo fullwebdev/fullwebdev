@@ -1,6 +1,6 @@
 export default {
   defaultCompiler: "pandoc",
-  output: "src/templates/",
+  output: "src/fragments/",
   projects: {
     docs: {
       src: "**/*.md",

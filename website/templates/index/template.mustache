@@ -6,7 +6,6 @@
     <base href="/" />
     <title>fullweb.dev</title>
 
-    <!-- #region: styles -->
     <link rel="stylesheet" href="/styles/shell.css" />
     <link
       rel="stylesheet"
@@ -19,37 +18,14 @@
       media="screen and (min-width: 719px)"
     />
     <link rel="stylesheet" href="/styles/homepage.css" />
-    <!-- #endregion: styles -->
-    <!-- #region: preload-styles -->
-    <!-- <link rel="preload" href="/styles/pages.css" as="style" />
-    <link
-      rel="stylesheet"
-      href="/styles/pages.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <link
-      rel="preload"
-      href="/styles/a11y-syntax-highlighting-prismjs/a11y-dark.css"
-      as="style"
-    />
-    <link rel="preload" href="/styles/code.css" as="style" />
-    <link
-      rel="stylesheet"
-      href="/styles/code.css"
-      media="print"
-      onload="this.media='all'"
-    /> -->
-    <!-- #endregion: preload-styles -->
 
-    <!-- App Metas -->
     <link rel="manifest" href="/manifest.json" />
     <link
       rel="icon"
       type="image/png"
       href="/images/favicon/favicon-96x96.png"
     />
-    <meta name="description" content="Relearn Web Development" />
+    <meta name="description" content="{{meta.description.short}}" />
     <meta
       property="og:image"
       content="https://fullweb.dev/images/favicon/icon-384x384.png"
@@ -57,34 +33,34 @@
     <meta property="og:site_name" content="fullweb.dev" />
     <meta
       property="og:description"
-      content="Acquire Web Development expertise by taking a comprehensive view."
+      content="{{meta.description.long}}"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:image"
-      content="https://fullweb.dev/images/social/social_fr.png"
+      content="{{{meta.twitterCard}}}"
     />
-    <meta name="twitter:image:alt" content="Relearn Web Development" />
+    <meta name="twitter:image:alt" content="{{meta.description.short}}" />
     <meta name="twitter:title" content="fullweb.dev" />
   </head>
   <body>
     <header id="main-header" class="navbar">
       <div class="row">
         <a class="home" href="/">fullweb.dev</a>
-        <ul class="navigation">
+        <ul class="navigation" id="header-navigation">
           <li>
             <a class="nav-link" href="/learn"
-              ><span class="nav-link-inner">Learn</span></a
+              ><span class="nav-link-inner">{{nav.0}}</span></a
             >
           </li>
           <li>
             <a class="nav-link" href="/build"
-              ><span class="nav-link-inner">Build</span></a
+              ><span class="nav-link-inner">{{nav.1}}</span></a
             >
           </li>
           <li>
             <a class="nav-link" href="/news"
-              ><span class="nav-link-inner">Keep up</span></a
+              ><span class="nav-link-inner">{{nav.2}}</span></a
             >
           </li>
         </ul>
@@ -137,12 +113,35 @@
       </div>
     </header>
     <main id="content-container">
-      <div id="page-container"></div>
+      <div id="page-container">
+        {{#home}}
+          {{{home}}}
+        {{/home}}
+      </div>
     </main>
+    {{#root}}
     <script type="module">
-      import { router } from "/dist/app/shell.js";
+      import { router } from "/dist/app/router.js";
 
+      router.initOutlet();
       router.run();
+      // TODO: nav fr
     </script>
+    {{/root}}
+    {{^root}}
+    <script type="module">
+      import { router } from "/dist/app/router.js";
+
+      document.body.addEventListener(
+        "click",
+        (e) => {
+          router.initOutlet();
+        },
+        { once: true }
+      );
+
+      router.run(document.body, false);
+    </script>
+    {{/root}}
   </body>
 </html>

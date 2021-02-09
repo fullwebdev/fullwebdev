@@ -13,7 +13,7 @@ module.exports = {
   routes: [
     {
       match: "routes",
-      src: "(?!/dist/templates/).*",
+      src: "(?!/dist/fragments/).*",
       dest: "/index.html",
       // dest: "/localized-files/fr_ALL/index.html",
       // dest: "/localized-files/en_ALL/index.html",
