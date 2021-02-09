@@ -31,15 +31,9 @@
       content="https://fullweb.dev/images/favicon/icon-384x384.png"
     />
     <meta property="og:site_name" content="fullweb.dev" />
-    <meta
-      property="og:description"
-      content="{{meta.description.long}}"
-    />
+    <meta property="og:description" content="{{meta.description.long}}" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:image"
-      content="{{{meta.twitterCard}}}"
-    />
+    <meta name="twitter:image" content="{{{meta.twitterCard}}}" />
     <meta name="twitter:image:alt" content="{{meta.description.short}}" />
     <meta name="twitter:title" content="fullweb.dev" />
   </head>
@@ -113,29 +107,30 @@
       </div>
     </header>
     <main id="content-container">
-      <div id="page-container">
-        {{#home}}
-          {{{home}}}
-        {{/home}}
-      </div>
+      <div id="page-container">{{#home}} {{{home}}} {{/home}}</div>
     </main>
     {{#root}}
+    <script>
+      const navLinksText = {{{script.nav}}};
+
+      document
+        .querySelectorAll("#header-navigation .nav-link-inner")
+        .forEach(
+          (el, i) => (el.innerText = navLinksText[router.preferredLanguage][i])
+        );
+    </script>
     <script type="module">
       import { router } from "/dist/app/router.js";
-
-      router.initOutlet();
       router.run();
-      // TODO: nav fr
     </script>
-    {{/root}}
-    {{^root}}
+    {{/root}} {{^root}}
     <script type="module">
       import { router } from "/dist/app/router.js";
 
       document.body.addEventListener(
         "click",
-        (e) => {
-          router.initOutlet();
+        () => {
+          router.resetPageContainer();
         },
         { once: true }
       );

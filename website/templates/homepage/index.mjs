@@ -3,7 +3,7 @@ import { readTemplate } from "../utils.mjs";
 export default {
   template: readTemplate(import.meta),
   langs: {
-    en : {
+    en: {
       illustration: {
         alt: "une nouvelle approche",
       },
@@ -13,7 +13,7 @@ export default {
         header: "Here, you'll find:",
       },
     },
-    fr : {
+    fr: {
       illustration: {
         alt: "une nouvelle approche",
       },
@@ -22,6 +22,6 @@ export default {
       details: {
         header: "Retrouvez sur ce site",
       },
-    }
-  }
-}
+    },
+  },
+};

@@ -1,4 +1,4 @@
-import { readFileSync, existsSync, mkdirSync, writeFileSync } from "fs";
+import { existsSync, mkdirSync, readFileSync, promises as asyncFS } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -6,21 +6,30 @@ import Mustache from "mustache";
 
 export function readTemplate(importMeta) {
   return readFileSync(
-    resolve(dirname(fileURLToPath(importMeta.url)), "template.mustache"),
+    resolve(dirname(fileURLToPath(importMeta.url)), "template.html"),
     {
       encoding: "utf-8",
     }
   );
 }
 
-export function ensureParentDirSync(path) {
-  if (!existsSync(dirname(path))) {
-    mkdirSync(dirname(path), { recursive: true });
+export function ensureDirSync(path) {
+  if (!existsSync(path)) {
+    mkdirSync(path, { recursive: true });
   }
 }
 
+export function ensureParentDirSync(path) {
+  ensureDirSync(dirname(path));
+}
+
+/**
+ *
+ * @param {string} path
+ * @param {string} template
+ * @param {string} data
+ */
 export function createHTMLFile(path, template, data) {
-  ensureParentDirSync(path);
   const html = Mustache.render(template, data);
-  writeFileSync(path, html, { encoding: "utf-8" });
+  return asyncFS.writeFile(path, html, { encoding: "utf-8" });
 }
