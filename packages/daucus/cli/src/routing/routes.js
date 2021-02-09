@@ -29,6 +29,9 @@ export function createRouteFor(html, filePath) {
   /** @type {string | null} */
   let key = splittedPrefix[1];
 
+  // TODO: position of a chapter where it has no index
+  // (and therefor no Route entry)
+
   let path;
   if (["README", "index"].includes(key)) {
     key = null;

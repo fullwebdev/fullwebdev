@@ -1,52 +1,57 @@
 export default {
   docs: {
     children: {
-      "after-first-part": {
-        id: "",
-        path: "after-first-part",
-        title: "Inbetween",
-        position: "01a",
-        templateUrl: "01a-after-first-part/README.html",
-      },
       "hello-world": {
         id: "hello-world",
-        path: "hello-world",
-        title: "Hello World!",
         position: "",
+        path: "hello-world",
         templateUrl: "hello-world.html",
-      },
-      "first-part": {
-        id: "",
-        path: "first-part",
-        position: "01",
-        title: "",
-        templateUrl: "01-first-part/index.html",
+        title: "Hello World!",
       },
       "second-part": {
         children: {
-          "first-file": {
-            id: "01-first-file",
-            path: "second-part/first-file",
-            title: "First file",
-            position: "01",
-            templateUrl: "02-second-part/01-first-file.html",
-          },
           "another-file": {
             id: "0b-another-file",
-            path: "second-part/another-file",
             position: "0b",
-            title: "Another file",
+            path: "second-part/another-file",
             templateUrl: "02-second-part/0b-another-file.html",
+            title: "Another file",
+          },
+          "first-file": {
+            id: "01-first-file",
+            position: "01",
+            path: "second-part/first-file",
+            templateUrl: "02-second-part/01-first-file.html",
+            title: "First file",
           },
         },
+        id: "",
+        position: "02",
+        path: "second-part",
+        templateUrl: "02-second-part/index.html",
+        title: "Second Part",
+      },
+      "after-first-part": {
+        id: "",
+        position: "01a",
+        path: "after-first-part",
+        templateUrl: "01a-after-first-part/README.html",
+        title: "Inbetween",
+      },
+      "first-part": {
+        id: "",
+        position: "01",
+        path: "first-part",
+        templateUrl: "01-first-part/index.html",
+        title: "",
       },
     },
     id: "",
-    menu:
-      '<div class="section-title menu-title"><a href=/docs/ >Pages project</a></div><ul class=menu><li><div class=section-title><a href=/docs/after-first-part>Inbetween</a></div><li><div class=section-title><button aria-label=first-part role=button>first-part</button></div><li><div class=section-title><a href=/docs/hello-world>Hello World!</a></div><li><div class=section-title><button aria-label=second-part role=button>second-part</button></div><ul class="child-menu collapsible"><li><div class=section-title><a href=/docs/second-part/first-file>First file</a></div><li><div class=section-title><a href=/docs/second-part/another-file>Another file</a></div></ul></ul>',
-    path: "",
     position: "",
-    title: "Pages project",
+    path: "",
     templateUrl: "README.html",
+    title: "Pages project",
+    menu:
+      '<div class="section-title menu-title"><a href=/docs/ >Pages project</a></div><ul class=menu><li><div class=section-title><a href=/docs/after-first-part>Inbetween</a></div><li><div class=section-title><button aria-label=first-part role=button>first-part</button></div><li><div class=section-title><a href=/docs/second-part>Second Part</a></div><ul class=child-menu><li><div class=section-title><a href=/docs/second-part/first-file>First file</a></div><li><div class=section-title><a href=/docs/second-part/another-file>Another file</a></div></ul><li><div class=section-title><a href=/docs/hello-world>Hello World!</a></div></ul>',
   },
 };
