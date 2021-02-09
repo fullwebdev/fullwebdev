@@ -11,6 +11,7 @@ export class HTMLLoaderElement extends HTMLElement {
   constructor() {
     super();
     this._cache = new Map();
+    this._staticCache = new Map();
   }
 
   set href(path) {
@@ -30,13 +31,35 @@ export class HTMLLoaderElement extends HTMLElement {
   }
 
   /**
+   * @param {string | Node} nodeOrString
+   */
+  staticContent(nodeOrString) {
+    this.href = "";
+    if (typeof nodeOrString === "string") {
+      this.innerHTML = nodeOrString;
+    } else if (nodeOrString instanceof Node) {
+      this.innerHTML = "";
+      this.appendChild(nodeOrString);
+    } else {
+      throw new Error(
+        "HTMLLoaderElement.staticContent() can only render a Node or a string"
+      );
+    }
+  }
+
+  /**
    * @param {string} name
    * @param {string} oldValue
    * @param {string} newValue
    */
   attributeChangedCallback(name, oldValue, newValue) {
     if (name === "href" && oldValue !== newValue) {
-      this._render(newValue);
+      this.innerText = "";
+      if (!newValue) {
+        this.dispatchEvent(new CustomEvent("html-reset", { bubbles: true }));
+      } else {
+        this._renderHRef(newValue);
+      }
     }
   }
 
@@ -77,8 +100,7 @@ export class HTMLLoaderElement extends HTMLElement {
    *
    * @param {string} href
    */
-  async _render(href) {
-    this.innerText = "";
+  async _renderHRef(href) {
     this.appendChild(await this._loadHTML(href));
     this.dispatchEvent(
       new CustomEvent("html-loaded", { detail: { href }, bubbles: true })

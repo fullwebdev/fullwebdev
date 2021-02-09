@@ -16,7 +16,7 @@
           "description": "url of the default template"
         }
       ],
-      "events": ["html-loaded"],
+      "events": ["html-loaded", "html-reset"],
       "slots": [],
       "cssProperties": []
     }
