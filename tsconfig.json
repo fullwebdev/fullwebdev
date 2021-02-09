@@ -5,13 +5,13 @@
   "files": [],
   "references": [
     {
-      "path": "./packages/daucus/html-loader/tsconfig.json"
-    },
-    {
       "path": "./packages/helpers/router/tsconfig.json"
     },
     {
       "path": "./packages/daucus/cli/tsconfig.json"
+    },
+    {
+      "path": "./packages/daucus/html-loader/tsconfig.json"
     },
     {
       "path": "./packages/daucus/menu/tsconfig.json"

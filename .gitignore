@@ -6,6 +6,7 @@ node_modules
 !/.vscode/settings.json
 !/.vscode/md-import.code-snippets
 !/.vscode/ltex.*
+!/.vscode/launch.json
 
 ## logs & locks
 *.log

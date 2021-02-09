@@ -104,7 +104,7 @@ packageDirnameMap.forEach(
     let baseConfig;
     // materials can't directly depend on internal packages
     let references = [];
-    if(projectRoot === "packages") {
+    if (projectRoot === "packages") {
       baseConfig = `${packageDirScope ? "../" : ""}../../tsconfig.${
         pkg.environment === "browser" ? "browser" : "node"
       }-base.json`;
@@ -118,11 +118,11 @@ packageDirnameMap.forEach(
         return {
           path: `../${depDirName}/tsconfig.json`,
         };
-      })
+      });
     } else if (projectRoot === "") {
       baseConfig = `../tsconfig.${
         pkg.environment === "browser" ? "browser" : "node"
-      }-base.json`
+      }-base.json`;
       references = internalDependencies.map((dep) => {
         const [depDirScope, depDirName] = packageDirnameMap.get(dep);
         if (depDirScope) {
@@ -133,7 +133,7 @@ packageDirnameMap.forEach(
         return {
           path: `../packages/${depDirName}/tsconfig.json`,
         };
-      })
+      });
     }
     const tsconfigData = merge(
       {
