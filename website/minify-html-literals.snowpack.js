@@ -1,6 +1,8 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 const { minifyHTMLLiterals } = require("minify-html-literals");
 const path = require("path");
 
+// eslint-disable-next-line func-names
 module.exports = function (snowpackConfig, pluginOptions) {
   return {
     name: "minify-html-literals",

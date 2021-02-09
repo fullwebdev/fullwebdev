@@ -5,6 +5,7 @@ module.exports = {
     src: { url: "/dist" },
   },
   plugins: [
+    "./minify-html-literals.snowpack.js",
     [
       "@snowpack/plugin-build-script",
       { cmd: "postcss", input: [".css"], output: [".css"] },
