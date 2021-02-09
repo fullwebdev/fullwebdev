@@ -23,9 +23,7 @@ and links with my learning materials. We'll see.
 ```html
 <details>
   <summary>Question?</summary>
-  <p>
-    Answer!
-  </p>
+  <p>Answer!</p>
 </details>
 ```
 

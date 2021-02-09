@@ -19,9 +19,7 @@ Je poste donc ici quelques flashcards qu'il m'est arrivé d'écrire dans un form
 ```html
 <details>
   <summary>Question?</summary>
-  <p>
-    Answer!
-  </p>
+  <p>Answer!</p>
 </details>
 ```
 

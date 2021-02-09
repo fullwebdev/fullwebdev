@@ -301,9 +301,7 @@ Here is an example:
 **shadow tree (in your WC)**
 
 ```html
-<div part="hello-world">
-  Hello World!
-</div>
+<div part="hello-world">Hello World!</div>
 ```
 
 > :warning: **highly experimental**
