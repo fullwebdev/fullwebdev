@@ -83,7 +83,7 @@ export class AbstractRouter extends EventTarget {
     return this._navigate(path, options);
   }
 
-  async run(root = document.body, skipLocationChange = true) {
+  async run(root = document.body, navigate = true) {
     root.addEventListener(
       "click",
       clickEventHandler(this.base)((path, event) =>
@@ -95,7 +95,9 @@ export class AbstractRouter extends EventTarget {
       this.navigate(this.currentPath, { skipLocationChange: true, event });
     });
 
-    return this.navigate(this.currentPath, { skipLocationChange });
+    if (navigate) {
+      return this.navigate(this.currentPath, { skipLocationChange: true });
+    }
   }
 
   /**

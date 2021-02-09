@@ -215,22 +215,20 @@ describe("router", () => {
       expect(document.body.addEventListener).to.have.been.calledWith("click");
     });
 
-    it("run first navigation", async () => {
+    it("perform navigation without changing history state by default", async () => {
       spy(abstractRouter, "navigate");
       await abstractRouter.run();
       expect(abstractRouter.navigate).to.have.been.called;
-    });
-
-    it("do not change history state by default", async () => {
-      await abstractRouter.run();
       expect(window.history.replaceState).to.not.have.been.called;
       expect(window.history.pushState).to.not.have.been.called;
     });
 
-    it("can change history state if needed", async () => {
+    it("allow to avoid performing a navigation if needed", async () => {
+      spy(abstractRouter, "navigate");
       await abstractRouter.run(document.body, false);
+      expect(abstractRouter.navigate).to.not.have.been.called;
       expect(window.history.replaceState).to.not.have.been.called;
-      expect(window.history.pushState).to.have.been.called;
+      expect(window.history.pushState).to.not.have.been.called;
     });
 
     it("allow to restrict click listener to an element", async () => {
