@@ -67,12 +67,7 @@
             target="_blank"
           >
             <span class="sr-only">Twitter</span>
-            <svg
-              focusable="false"
-              viewBox="0 0 51.8 50.4"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-            >
+            <svg focusable="false" viewBox="0 0 51.8 50.4" fill="none">
               <path
                 fill="currentColor"
                 fill-rule="evenodd"
@@ -89,12 +84,7 @@
             target="_blank"
           >
             <span class="sr-only">GitHub</span>
-            <svg
-              focusable="false"
-              viewBox="0 0 51.8 50.4"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-            >
+            <svg focusable="false" viewBox="0 0 51.8 50.4" fill="none">
               <path
                 fill="currentColor"
                 fill-rule="evenodd"
@@ -107,21 +97,22 @@
       </div>
     </header>
     <main id="content-container">
-      <div id="page-container">{{#home}} {{{home}}} {{/home}}</div>
+      <div id="page-container">
+        {{#home}}{{{home}}}{{/home}}{{^home}}<html-loader
+        ></html-loader>{{/home}}
+      </div>
     </main>
     {{#root}}
-    <script>
+    <script type="module">
+      import { router } from "/dist/app/router.js";
+
+      router.run();
+
       const navLinksText = {{{script.nav}}};
 
       document
         .querySelectorAll("#header-navigation .nav-link-inner")
-        .forEach(
-          (el, i) => (el.innerText = navLinksText[router.preferredLanguage][i])
-        );
-    </script>
-    <script type="module">
-      import { router } from "/dist/app/router.js";
-      router.run();
+        .forEach((el, i) => (el.innerText = navLinksText[router.preferredLanguage][i]));
     </script>
     {{/root}} {{^root}}
     <script type="module">

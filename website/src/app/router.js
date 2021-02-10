@@ -7,24 +7,44 @@ import "@daucus/html-loader/html-loader";
 /** @typedef {import('@daucus/router/src/daucus-router').RouteMatchEvent} RouteMatchEvent */
 /** @typedef {import('@daucus/router/src/daucus-router').NavigationOptions} NavigationOptions */
 
-const preferredLanguages = window.navigator.languages || [
-  window.navigator.language,
-];
-
-/** @type {Node} */
-let homeTemplate;
-
-/** @type {import('./app-routes.js').AppRoutes} */
-const APP_ROUTES = {
-  "/": {
-    templateName: "homepage",
-  },
-  "/404": {
-    templateName: "not-found",
-  },
-};
-
 class AppRouter extends AbstractRouter {
+  /** @type {import('./app-routes').AppRoutes} */
+  static get APP_ROUTES() {
+    return {
+      "/": {
+        templateName: "homepage",
+      },
+      "/404": {
+        templateName: "not-found",
+      },
+      "/learn": {
+        componentURL: "./projects-list.js",
+        wordingsURL: "./wordings/learn.js",
+        props: {
+          items: [...Array(10).keys()],
+        },
+      },
+      "/build": {
+        componentURL: "./projects-list.js",
+        wordingsURL: "./wordings/build.js",
+        props: {
+          items: [...Array(3).keys()],
+        },
+      },
+      "/news": {
+        componentURL: "./projects-list.js",
+        wordingsURL: "./wordings/news.js",
+        props: {
+          items: [...Array(20).keys()],
+        },
+      },
+    };
+  }
+
+  static get preferredLanguages() {
+    return window.navigator.languages || [window.navigator.language];
+  }
+
   /**
    * @param {import("@daucus/router/src/RoutesConfig").RoutesConfig} daucusRoutesConfig
    * @param {string} fragmentsDirectory
@@ -35,9 +55,10 @@ class AppRouter extends AbstractRouter {
     this._findDaucusRoute = routeFinder(daucusRoutesConfig);
     this._fragmentsDirectory = fragmentsDirectory;
 
-    /** @type {"fr" | "en"} */
+    /** @type {import('./languages').Language} */
+
     this.preferredLanguage = "fr";
-    if (!preferredLanguages.find((code) => code.startsWith("fr"))) {
+    if (!AppRouter.preferredLanguages.find((code) => code.startsWith("fr"))) {
       this.preferredLanguage = "en";
     }
 
@@ -61,30 +82,14 @@ class AppRouter extends AbstractRouter {
    * @param {string} path
    * @param {NavigationOptions} [options]
    *
-   * @returns {[path: string, options?: NavigationOptions] | null}
+   * @returns {Promise<[path: string, options?: NavigationOptions] | null>}
    */
-  renderOrRedirect(path, options) {
-    const appRoute = APP_ROUTES[path];
-    /** @type {string | null} */
-    let templateUrl = null;
-    if (appRoute) {
-      if (appRoute.template) {
-        this.outlet.staticContent(appRoute.template());
-        return null;
-        // TODO: lit-html & wc
-      }
-      if (appRoute.templateName) {
-        templateUrl = `${this._fragmentsDirectory}app/${this.preferredLanguage}/${appRoute.templateName}.html`;
-      }
-    } else {
-      const [daucusProjectName, daucusRoute] = this._findDaucusRoute(path);
-      if (daucusRoute && daucusRoute.templateUrl) {
-        templateUrl = `${this.base || "/"}${
-          this._fragmentsDirectory
-        }${daucusProjectName}/${this.preferredLanguage}/${
-          daucusRoute.templateUrl
-        }`;
-      }
+  async renderOrRedirect(path, options) {
+    const { staticContent, templateUrl } = await this._findRoute(path);
+
+    if (staticContent !== null) {
+      this.outlet.staticContent(staticContent);
+      return null;
     }
 
     if (templateUrl !== null) {
@@ -101,15 +106,72 @@ class AppRouter extends AbstractRouter {
     if (!pageContainer)
       throw new Error("no html-loader nor page-container element found");
 
-    if (pageContainer.firstElementChild) {
-      homeTemplate = pageContainer.firstElementChild.cloneNode(true);
-      APP_ROUTES["/"].template = () => homeTemplate.cloneNode(true);
-    }
+    const initialContent = pageContainer.childNodes;
+    const fragment = document.createDocumentFragment();
+    fragment.append(...initialContent);
+    AppRouter.APP_ROUTES["/"].template = () => fragment.cloneNode(true);
+
+    /** @type {HTMLLoaderElement} */
+    // @ts-ignore cast outlet from Element to HTMLLoaderElement
     const outlet = document.createElement("html-loader");
     pageContainer.innerHTML = "";
     pageContainer.appendChild(outlet);
-    // @ts-ignore cast outlet from Element to HTMLLoaderElement
+    outlet.staticContent(fragment.cloneNode(true));
     this._outlet = outlet;
+  }
+
+  /**
+   * @param {string} path
+   * @param {import('./app-routes.js').ComponentProps} props
+   * @param {string} [wordingsURL]
+   */
+  async _loadComponent(path, props = {}, wordingsURL) {
+    const { selector } = await import(path);
+    const el = document.createElement(selector);
+    el.lang = this.preferredLanguage;
+    if (wordingsURL) {
+      el.wordings = await import(wordingsURL);
+    }
+    for (const [key, value] of Object.entries(props)) {
+      el[key] = value;
+    }
+    return el;
+  }
+
+  /**
+   * @param {string} path
+   */
+  async _findRoute(path) {
+    const appRoute = AppRouter.APP_ROUTES[path];
+    /** @type {string | null} */
+    let templateUrl = null;
+    /** @type {string | Node | null} */
+    let staticContent = null;
+
+    if (appRoute) {
+      if (appRoute.template) {
+        staticContent = appRoute.template();
+      } else if (appRoute.componentURL) {
+        staticContent = await this._loadComponent(
+          appRoute.componentURL,
+          appRoute.props,
+          appRoute.wordingsURL
+        );
+      } else if (appRoute.templateName) {
+        templateUrl = `${this._fragmentsDirectory}app/${this.preferredLanguage}/${appRoute.templateName}.html`;
+      }
+    } else {
+      const [daucusProjectName, daucusRoute] = this._findDaucusRoute(path);
+      if (daucusRoute && daucusRoute.templateUrl) {
+        templateUrl = `${this.base || "/"}${
+          this._fragmentsDirectory
+        }${daucusProjectName}/${this.preferredLanguage}/${
+          daucusRoute.templateUrl
+        }`;
+      }
+    }
+
+    return { staticContent, templateUrl };
   }
 }
 

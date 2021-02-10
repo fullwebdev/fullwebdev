@@ -36,6 +36,7 @@
     "@daucus/router": "^0.1.0",
     "@modern-helpers/router": "^0.2.1",
     "html-minifier": "^4.0.0",
+    "lit-element": "^2.4.0",
     "lit-html": "^1.3.0",
     "prismjs": "^1.21.0"
   }
