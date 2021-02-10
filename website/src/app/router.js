@@ -20,23 +20,14 @@ class AppRouter extends AbstractRouter {
       "/learn": {
         componentURL: "./projects-list.js",
         wordingsURL: "./wordings/learn.js",
-        props: {
-          items: [...Array(10).keys()],
-        },
       },
       "/build": {
         componentURL: "./projects-list.js",
         wordingsURL: "./wordings/build.js",
-        props: {
-          items: [...Array(3).keys()],
-        },
       },
       "/news": {
         componentURL: "./projects-list.js",
         wordingsURL: "./wordings/news.js",
-        props: {
-          items: [...Array(20).keys()],
-        },
       },
     };
   }
@@ -56,7 +47,6 @@ class AppRouter extends AbstractRouter {
     this._fragmentsDirectory = fragmentsDirectory;
 
     /** @type {import('./languages').Language} */
-
     this.preferredLanguage = "fr";
     if (!AppRouter.preferredLanguages.find((code) => code.startsWith("fr"))) {
       this.preferredLanguage = "en";
