@@ -13,7 +13,7 @@ const en = {
         subtitle: "Lorem ipsum dolor sit amet",
       },
       img: {
-        src: "/images/web-illustrations/eni-dpawm-cover.jpg ",
+        src: "/images/web-illustrations/eni-dpawm-cover_320.jpg ",
         height: 320,
         alt:
           "développement et architecture des applications web modernes, éditions ENI",
@@ -49,7 +49,7 @@ const fr = {
           "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
       },
       img: {
-        src: "/images/web-illustrations/eni-dpawm-cover.jpg ",
+        src: "/images/web-illustrations/eni-dpawm-cover_320.jpg ",
         height: 320,
         alt:
           "développement et architecture des applications web modernes, éditions ENI",
