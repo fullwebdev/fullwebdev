@@ -4,7 +4,9 @@ export interface Project {
   href?: string;
   type: string;
   spotlight?: boolean;
-  img: { src: string; alt: string; height: number };
+  wip?: boolean;
+  date?: string;
+  img: { src: string; alt: string; height?: number };
   desc: { title: string; subtitle: string };
   cta?: Array<{ href: string; text: string; primary?: boolean }>;
 }
@@ -12,7 +14,7 @@ export interface Project {
 export interface ProjectListWording {
   title: string;
   abstract: string;
-  items: Array<Project>;
+  items: Array<Project> | string;
 }
 
 export type ProjectListWordings = Wordings<ProjectListWording>;
