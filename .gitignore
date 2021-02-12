@@ -27,6 +27,8 @@ dist/
 /website/src/fragments/
 /website/public/localized-files/
 /website/public/index.html
+/website/src/styles/*.css
+/website/src/styles/*.css.map
 /livre-build/public
 _daucus_
 

@@ -30,7 +30,7 @@ const projectCard = (item) => html` <a
       src=${item.img.src}
       alt=${item.img.alt}
       width="100%"
-      height="${item.img.height || 180}"
+      height="${item.img.height || 140}"
     />
   </div>
   <div class="desc">
@@ -87,7 +87,6 @@ export default class ProjectsListElement extends LitElement {
         display: grid;
         grid-template-columns: 1fr;
         margin: 0 auto;
-        grid-gap: 2rem;
       }
 
       .empty-grid {
@@ -103,7 +102,7 @@ export default class ProjectsListElement extends LitElement {
         color: inherit;
         text-decoration: none;
         padding: 2rem;
-        border: 1px solid #dadce0;
+        /* border: 1px solid #dadce0; */
         border-radius: 5px;
       }
 
@@ -113,9 +112,12 @@ export default class ProjectsListElement extends LitElement {
       }
 
       .project-card.dimmed {
-        filter: brightness(70%);
-        background-color: rgba(0, 0, 0, 0.2);
-        border: none;
+        filter: brightness(70%) blur(0.5px);
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+
+      .project-card.dimmed img {
+        filter: blur(1px);
       }
 
       .project-card .desc {
@@ -150,10 +152,29 @@ export default class ProjectsListElement extends LitElement {
         justify-content: space-between;
       }
 
+      /* .project-card::before {
+        background-color: var(--primary-color);
+        content: "";
+        display: block;
+        height: 2px;
+        width: 78px;
+        margin-bottom: 1rem;
+      } */
+
       .project-card .type {
         color: var(--primary-color);
         font-weight: bold;
       }
+
+      /*.project-card .type::before {
+        background-color: var(--primary-color);
+        display: inline-block;
+        content: "";
+        height: 10px;
+        width: 10px;
+        margin-right: 1rem;
+        border-radius: 5px;
+      }*/
 
       .project-card .date {
         color: var(--primary-text-color-softer);
@@ -193,6 +214,7 @@ export default class ProjectsListElement extends LitElement {
 
         .grid {
           grid-template-columns: 1fr 1fr;
+          grid-gap: 1rem;
         }
 
         .project-card.spotlight {
@@ -226,6 +248,7 @@ export default class ProjectsListElement extends LitElement {
         }
         .grid {
           grid-template-columns: 1fr 1fr 1fr;
+          grid-gap: 4rem;
         }
       }
 

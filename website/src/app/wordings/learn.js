@@ -107,6 +107,7 @@ const fr = {
       img: {
         src: "/images/web-illustrations/dev-focus.svg",
         alt: "coder par étapes",
+        height: 120,
       },
     },
     {
