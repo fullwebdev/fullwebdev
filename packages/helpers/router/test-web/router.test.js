@@ -25,15 +25,15 @@ describe("router", () => {
     abstractRouter = new AbstractRouter();
 
     fakeRouter = new (class extends AbstractRouter {
-      renderOrRedirect(path, options) {
-        fakeCb(path, options);
+      renderOrRedirect(path, options, params) {
+        fakeCb(path, options, params);
         return null;
       }
     })();
 
     fakeRouterWithRedirection = new (class extends AbstractRouter {
-      renderOrRedirect(path, options) {
-        fakeCb(path, options);
+      renderOrRedirect(path, options, params) {
+        fakeCb(path, options, params);
         return fakeRedirection;
       }
     })();
@@ -62,12 +62,21 @@ describe("router", () => {
   });
 
   describe("navigate()", () => {
+    it("process get parameters", async () => {
+      await fakeRouter.navigate("/foo/bar?p=test&empty");
+      expect(fakeCb).to.have.been.calledWithExactly(
+        "/foo/bar",
+        {},
+        { p: "test", empty: "" }
+      );
+    });
+
     it("call child class findRoute method", async () => {
       await fakeRouter.navigate("/foo/bar", {
         state: "test",
         redirection: true,
       });
-      expect(fakeCb).to.have.been.calledWithExactly("/foo/bar", {
+      expect(fakeCb).to.have.been.calledWith("/foo/bar", {
         state: "test",
         redirection: true,
       });
