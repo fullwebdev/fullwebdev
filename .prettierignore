@@ -12,6 +12,7 @@ package-lock.json
 /website/public/localized-file/
 /website/src/fragments/
 /packages/daucus/snowpack-template/src/templates/
+/website/src/styles/*.css
 
 ## should stay as-is
 /packages/**/test-node/**/snapshots
