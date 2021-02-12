@@ -17,7 +17,6 @@ __mocks__
 /materials/slides
 *.jest.js
 /website/templates/**/*.html
-/website/public/index.html
 
 ## code samples on historic topics
 /materials/code-samples/src/CBSE/angularjs/
@@ -31,3 +30,9 @@ __mocks__
 /materials/code-samples/src/index.html
 /materials/perf/benchmarks
 /materials/data-driven-pwa
+
+## generated
+/website/public/index.html
+/website/public/localized-files/en_ALL/index.html
+/website/public/localized-files/fr_ALL/index.html
+
