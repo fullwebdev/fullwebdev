@@ -99,6 +99,10 @@ h6 {
 
 /*#region navbar*/
 
+.mdc-drawer--modal {
+  display: none;
+}
+
 #main-header {
   z-index: 20;
   top: 0;
@@ -117,6 +121,20 @@ h6 {
   width: 100%;
 }
 
+#burger-menu {
+  cursor: pointer;
+  padding: 5px;
+  margin-right: 1rem;
+  border-radius: 5px;
+  fill: var(--primary-color-stronger);
+  /* display: none; */
+}
+
+#burger-menu:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  fill: var(--primary-color-softer);
+}
+
 #main-header .row {
   display: flex;
   box-sizing: border-box;
@@ -127,10 +145,24 @@ h6 {
   white-space: nowrap;
 }
 
-#main-header .home {
-  font-size: 1.3em;
+.home {
+  font-size: 1.4rem;
   font-weight: 600;
   position: relative;
+  text-decoration: none;
+  color: var(--primary-color-stronger);
+  text-align: center;
+  display: inline-block;
+}
+
+.home::after {
+  content: "βeta";
+  transform: rotate(-25deg);
+  padding-left: 0.5rem;
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  color: var(--primary-color-softer);
 }
 
 #main-header .external-icons-container {

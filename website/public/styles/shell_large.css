@@ -13,6 +13,11 @@
   flex-grow: 1;
 }
 
+#burger-menu {
+  margin-right: 50px;
+  display: none;
+}
+
 /*#endregion navbar */
 
 /*#region content */
