@@ -1,36 +1,46 @@
 /** @type {import('../projects-list').ProjectListWording} */
 const en = {
-  title: "Lean",
+  title: "Learn",
   abstract:
     "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
   items: [
     {
-      href: "test",
-      type: "book",
-      spotlight: true,
+      type: "Lecture",
+      // TODO: page
+      href: "https://www.youtube.com/watch?v=lfubOlz3JLI",
+      date: "2019",
       desc: {
-        title: "Lorem ipsum",
-        subtitle: "Lorem ipsum dolor sit amet",
+        title: "The Web is on FIRE",
+        subtitle:
+          "Learn the best new capabilities of the modern web in one shot without burning out.",
       },
       img: {
-        src: "/images/web-illustrations/eni-dpawm-cover_320.jpg ",
-        height: 320,
-        alt:
-          "développement et architecture des applications web modernes, éditions ENI",
+        src: "/images/web-illustrations/campfire.svg",
+        alt: "feu de camp",
       },
     },
-    ...Array(8).fill({
-      href: "test",
-      type: "book",
+    {
+      type: "Soon...",
+      date: "",
+      spotlight: true,
       desc: {
-        title: "Lorem ipsum",
-        subtitle: "Lorem ipsum dolor sit amet",
+        title: "More content will follow",
+        subtitle:
+          "For now, I mainly create content in French. New English codelabs and booklets are expected to follow in the second half of 2021.",
       },
       img: {
-        src: "/images/web-illustrations/undraw_reading_0re1.svg",
-        alt: "alt",
+        src: "/images/web-illustrations/content-team.svg",
+        height: 240,
+        alt: "work in progress",
       },
-    }),
+      cta: [
+        {
+          href: "https://twitter.com/noel_mace",
+          primary: true,
+          text: "stay tuned",
+        },
+      ],
+    },
   ],
 };
 
@@ -65,39 +75,10 @@ const fr = {
       ],
     },
     {
-      type: "Ressource",
-      // TODO
-      // href: "/inventory",
-      date: "",
-      desc: {
-        title: "L'Inventaire",
-        subtitle:
-          "Liste et description des différentes bibliothèques, frameworks et outils de développement Web",
-      },
-      img: {
-        src: "/images/web-illustrations/select-option.svg",
-        alt: "faire un choix",
-      },
-    },
-    {
-      type: "Ressource",
-      // TODO
-      // href: "/codelabs/modern-data-driven",
-      date: "",
-      desc: {
-        title: "Codes d'exemple",
-        subtitle:
-          "Explorez des exemples de code simples illustrant de nombreux sujet abordés sur ce site.",
-      },
-      img: {
-        src: "/images/web-illustrations/hacker-mindset.svg",
-        alt: "code",
-      },
-    },
-    {
       type: "Atelier",
       // FIXME: iframe for "/codelabs/doc/modern-data-driven_fr/index.html?index=/codelabs/",
-      href: "/codelabs/modern-data-driven",
+      href:
+        "https://fullweb.dev/codelabs/doc/modern-data-driven_fr/index.html?index=/codelabs/#0",
       date: "février 2020",
       desc: {
         title: "PWA & capacités modernes",
@@ -143,7 +124,7 @@ const fr = {
     {
       type: "Conférence",
       // TODO: page
-      // href: "",
+      href: "https://www.youtube.com/watch?v=YSn8r0BDKTY",
       date: "2019",
       desc: {
         title: "PRPL pattern",
@@ -168,6 +149,38 @@ const fr = {
       img: {
         src: "/images/web-illustrations/undraw_reading_0re1.svg",
         alt: "coder par étapes",
+      },
+    },
+    {
+      type: "Ressource",
+      // TODO
+      // href: "/inventory",
+      date: "prochainement",
+      wip: true,
+      desc: {
+        title: "L'Inventaire",
+        subtitle:
+          "Liste et description des différentes bibliothèques, frameworks et outils de développement Web",
+      },
+      img: {
+        src: "/images/web-illustrations/select-option.svg",
+        alt: "faire un choix",
+      },
+    },
+    {
+      type: "Ressource",
+      // TODO
+      // href: "/codelabs/modern-data-driven",
+      wip: true,
+      date: "prochainement",
+      desc: {
+        title: "Codes d'exemple",
+        subtitle:
+          "Explorez des exemples de code simples illustrant de nombreux sujet abordés sur ce site.",
+      },
+      img: {
+        src: "/images/web-illustrations/hacker-mindset.svg",
+        alt: "code",
       },
     },
   ],
