@@ -40,6 +40,45 @@ describe("BuildCommand", () => {
     expect(routes.config).to.deep.equal(routes.snapshot);
   });
 
+  it("handle i18n", async () => {
+    const wp = await fixtureWorkspace("i18n");
+    const cmd = new BuildCommand(wp);
+
+    await cmd.run();
+
+    const { output } = await workspaceInfos(wp);
+
+    expect(
+      output.html.parse("docs/en/hello-world.html").querySelector("h1").rawText
+    ).equals("Hello World!");
+    expect(
+      output.html.parse("docs/fr/hello-world.html").querySelector("h1").rawText
+    ).equals("Bonjour le Monde !");
+    expect(await output.html.list()).to.deep.equal(
+      [
+        "another-project/README.html",
+        "another-project/infos/lorem.html",
+        "docs/en/01-first-part/index.html",
+        "docs/en/01a-after-first-part/README.html",
+        "docs/en/02-second-part/01-first-file.html",
+        "docs/en/02-second-part/0b-another-file.html",
+        "docs/en/02-second-part/index.html",
+        "docs/en/README.html",
+        "docs/en/hello-world.html",
+        "docs/fr/01-first-part/index.html",
+        "docs/fr/01a-after-first-part/README.html",
+        "docs/fr/02-second-part/01-first-file.html",
+        "docs/fr/02-second-part/0b-another-file.html",
+        "docs/fr/02-second-part/index.html",
+        "docs/fr/README.html",
+        "docs/fr/hello-world.html",
+      ].sort()
+    );
+
+    const routes = await output.routes();
+    expect(routes.config).to.deep.equal(routes.snapshot);
+  });
+
   it("convert docs w/ code snippets (pandoc)", async () => {
     const wp = await fixtureWorkspace("import-snippet");
     const cmd = new BuildCommand(wp);

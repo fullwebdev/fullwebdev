@@ -10,6 +10,7 @@ export interface ProjectConfig {
 export interface DaucusConfig {
   // TODO: docs
   output: string;
+  i18n: boolean;
   defaultCompiler?: Compiler;
   projects: { [key: string]: ProjectConfig };
   htmlMinifierOptions: HTMLMinifierOptions;

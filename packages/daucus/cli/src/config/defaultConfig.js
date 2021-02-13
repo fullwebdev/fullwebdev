@@ -13,6 +13,7 @@ export const defaultProject = {
  */
 export const defaultConfig = {
   output: "_daucus_",
+  i18n: false,
   projects: {
     docs: defaultProject,
   },

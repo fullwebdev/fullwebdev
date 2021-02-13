@@ -13,6 +13,16 @@ export interface ProjectRoutesConfig extends Partial<Route> {
   menu?: string;
 }
 
+export type I18NProjectRoutesConfig = Record<
+  LanguageCodeOrDefault,
+  ProjectRoutesConfig
+>;
+
 export interface RoutesConfig {
   [key: string]: ProjectRoutesConfig;
+}
+
+export interface I18NRoutesConfig {
+  [key: string]: I18NProjectRoutesConfig;
+  i18n: true;
 }

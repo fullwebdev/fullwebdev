@@ -66,6 +66,7 @@ describe("workspace", () => {
                 root: resolve("daucus", "docs"),
               },
             },
+            i18n: false,
             htmlMinifierOptions: defaultConfig.htmlMinifierOptions,
           },
           "define config"
@@ -86,6 +87,7 @@ describe("workspace", () => {
               root: resolve("daucus-root", "docs"),
             },
           },
+          i18n: false,
           htmlMinifierOptions: defaultConfig.htmlMinifierOptions,
         });
       });
@@ -93,7 +95,7 @@ describe("workspace", () => {
       afterEach(MockFS.restore);
     });
 
-    describe("when used w/ a path ton a js file", async () => {
+    describe("when used w/ a path to a js file", async () => {
       it("load configuration", async () => {
         const root = resolve(
           esmDirName(import.meta),
@@ -116,6 +118,7 @@ describe("workspace", () => {
                 root: resolve(root, "docs"),
               },
             },
+            i18n: false,
             htmlMinifierOptions: defaultConfig.htmlMinifierOptions,
           },
           "define config"

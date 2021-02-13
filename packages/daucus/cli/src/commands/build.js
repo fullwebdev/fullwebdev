@@ -76,6 +76,7 @@ export class BuildCommand {
           },
           config.output,
           config.htmlMinifierOptions,
+          config.i18n,
           (filePath, nbrOfFiles) => {
             this._logCompileProgress(
               `[${projectName}] ${filePath}`,
