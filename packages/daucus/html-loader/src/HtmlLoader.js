@@ -63,6 +63,12 @@ export class HTMLLoaderElement extends HTMLElement {
     }
   }
 
+  connectedCallback() {
+    if (!this.style.display) {
+      this.style.display = "block";
+    }
+  }
+
   // TODO: debounce
   /**
    *
