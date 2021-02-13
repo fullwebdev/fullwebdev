@@ -1,11 +1,13 @@
 import { AbstractRouter } from "@modern-helpers/router";
-import { routeFinder } from "@daucus/router";
+import { i18nRouteFinder } from "@daucus/router";
 import daucusRoutes from "../fragments/routes.js";
 import "@daucus/html-loader/html-loader";
 
 /** @typedef {import('@daucus/html-loader').HTMLLoaderElement} HTMLLoaderElement */
 /** @typedef {import('@daucus/router/src/daucus-router').RouteMatchEvent} RouteMatchEvent */
 /** @typedef {import('@daucus/router/src/daucus-router').NavigationOptions} NavigationOptions */
+/** @typedef {import('./languages').Language} Language */
+/** @typedef {import("@daucus/router/src/RoutesConfig").I18NRoutesConfig} I18NRoutesConfig */
 
 class AppRouter extends AbstractRouter {
   /** @type {import('./app-routes').AppRoutes} */
@@ -32,28 +34,33 @@ class AppRouter extends AbstractRouter {
     };
   }
 
-  static get preferredLanguages() {
-    return window.navigator.languages || [window.navigator.language];
-  }
-
   /**
-   * @param {import("@daucus/router/src/RoutesConfig").RoutesConfig} daucusRoutesConfig
+   * @param {I18NRoutesConfig} daucusRoutesConfig
    * @param {string} fragmentsDirectory
    */
   constructor(daucusRoutesConfig, fragmentsDirectory) {
     super();
-    // FIXME: i18n
-    this._findDaucusRoute = routeFinder(daucusRoutesConfig);
+    /** @private */
+    this._findDaucusRoute = i18nRouteFinder(daucusRoutesConfig);
+    /** @private */
     this._fragmentsDirectory = fragmentsDirectory;
 
-    /** @type {import('./languages').Language} */
-    this.preferredLanguage = "fr";
-    if (!AppRouter.preferredLanguages.find((code) => code.startsWith("fr"))) {
-      this.preferredLanguage = "en";
-    }
+    /** @private @type {Language | null} */
+    this._forcedLanguage = null;
 
-    /** @type {HTMLLoaderElement | null} */
+    /** @private @type {HTMLLoaderElement | null} */
     this._outlet = null;
+
+    window.addEventListener("languagechange", () => {
+      this.navigate(this.currentPath, { skipLocationChange: true });
+    });
+  }
+
+  /** @type {Language} */
+  get fallbackLanguage() {
+    if (this.preferredLanguage === "fr") return "en";
+    if (this.preferredLanguage === "en") return "fr";
+    return "en";
   }
 
   /** @type {HTMLLoaderElement} */
@@ -73,6 +80,7 @@ class AppRouter extends AbstractRouter {
    * @param {NavigationOptions} [options]
    *
    * @returns {Promise<[path: string, options?: NavigationOptions] | null>}
+   *
    */
   async renderOrRedirect(path, options) {
     const { staticContent, templateUrl } = await this._findRoute(path);
@@ -110,10 +118,27 @@ class AppRouter extends AbstractRouter {
     this._outlet = outlet;
   }
 
+  /** @type {Language} */
+  get preferredLanguage() {
+    if (this._forcedLanguage) return this._forcedLanguage;
+    // only use english if user doesn't want/undestand french at all as may
+    // french speaking developers set their preferred language to "en"
+    if (!window.navigator.languages.find((code) => code.startsWith("fr")))
+      return "en";
+    return "fr";
+  }
+
+  set preferredLanguage(lang) {
+    this._forcedLanguage = lang;
+    this.navigate(this.currentPath, { skipLocationChange: true });
+  }
+
   /**
    * @param {string} path
    * @param {import('./app-routes.js').ComponentProps} props
    * @param {string} [wordingsURL]
+   *
+   * @private
    */
   async _loadComponent(path, props = {}, wordingsURL) {
     const { selector } = await import(path);
@@ -130,6 +155,8 @@ class AppRouter extends AbstractRouter {
 
   /**
    * @param {string} path
+   *
+   * @private
    */
   async _findRoute(path) {
     const appRoute = AppRouter.APP_ROUTES[path];
@@ -137,6 +164,7 @@ class AppRouter extends AbstractRouter {
     let templateUrl = null;
     /** @type {string | Node | null} */
     let staticContent = null;
+    let useFallbackLang = false;
 
     if (appRoute) {
       if (appRoute.template) {
@@ -151,7 +179,17 @@ class AppRouter extends AbstractRouter {
         templateUrl = `${this._fragmentsDirectory}app/${this.preferredLanguage}/${appRoute.templateName}.html`;
       }
     } else {
-      const [daucusProjectName, daucusRoute] = this._findDaucusRoute(path);
+      let [daucusProjectName, daucusRoute] = this._findDaucusRoute(
+        path,
+        this.preferredLanguage
+      );
+      if (!daucusRoute) {
+        useFallbackLang = true;
+        [daucusProjectName, daucusRoute] = this._findDaucusRoute(
+          path,
+          this.fallbackLanguage
+        );
+      }
       if (daucusRoute && daucusRoute.templateUrl) {
         templateUrl = `${this.base || "/"}${
           this._fragmentsDirectory
@@ -161,7 +199,7 @@ class AppRouter extends AbstractRouter {
       }
     }
 
-    return { staticContent, templateUrl };
+    return { staticContent, templateUrl, useFallbackLang };
   }
 }
 
