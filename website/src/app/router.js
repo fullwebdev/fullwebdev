@@ -11,24 +11,37 @@ class AppRouter extends AbstractRouter {
   /** @type {import('./app-routes').AppRoutes} */
   static get APP_ROUTES() {
     return {
-      "/": {
-        templateName: "homepage",
+      static: {
+        "/": {
+          templateName: "homepage",
+        },
+        "/404": {
+          templateName: "not-found",
+        },
+        "/learn": {
+          componentURL: "./projects-list.js",
+          wordingsURL: "./wordings/learn.js",
+        },
+        "/build": {
+          componentURL: "./projects-list.js",
+          wordingsURL: "./wordings/build.js",
+        },
+        "/news": {
+          componentURL: "./projects-list.js",
+          wordingsURL: "./wordings/news.js",
+        },
       },
-      "/404": {
-        templateName: "not-found",
-      },
-      "/learn": {
-        componentURL: "./projects-list.js",
-        wordingsURL: "./wordings/learn.js",
-      },
-      "/build": {
-        componentURL: "./projects-list.js",
-        wordingsURL: "./wordings/build.js",
-      },
-      "/news": {
-        componentURL: "./projects-list.js",
-        wordingsURL: "./wordings/news.js",
-      },
+      match: [
+        [
+          /^\/codelabs\/([\w-]+)\/?$/,
+          {
+            iframeSrc: (name) =>
+              // FIXME: real URL
+              `https://fullweb.dev/codelabs/doc/${name}_fr/`,
+            // "https://fullweb.dev/slides/wof/devfestnantes19/index.html"
+          },
+        ],
+      ],
     };
   }
 
@@ -75,7 +88,18 @@ class AppRouter extends AbstractRouter {
    * @returns {Promise<[path: string, options?: NavigationOptions] | null>}
    */
   async renderOrRedirect(path, options) {
-    const { staticContent, templateUrl } = await this._findRoute(path);
+    const { staticContent, templateUrl, fullscreen } = await this._findRoute(
+      path
+    );
+
+    const pageContainer = document.getElementById("page-container");
+    if (pageContainer) {
+      if (fullscreen) {
+        pageContainer.classList.add("fullscreen");
+      } else {
+        pageContainer.classList.remove("fullscreen");
+      }
+    }
 
     if (staticContent !== null) {
       this.outlet.staticContent(staticContent);
@@ -99,7 +123,7 @@ class AppRouter extends AbstractRouter {
     const initialContent = pageContainer.childNodes;
     const fragment = document.createDocumentFragment();
     fragment.append(...initialContent);
-    AppRouter.APP_ROUTES["/"].template = () => fragment.cloneNode(true);
+    AppRouter.APP_ROUTES.static["/"].template = () => fragment.cloneNode(true);
 
     /** @type {HTMLLoaderElement} */
     // @ts-ignore cast outlet from Element to HTMLLoaderElement
@@ -132,11 +156,35 @@ class AppRouter extends AbstractRouter {
    * @param {string} path
    */
   async _findRoute(path) {
-    const appRoute = AppRouter.APP_ROUTES[path];
+    let appRoute = AppRouter.APP_ROUTES.static[path];
     /** @type {string | null} */
     let templateUrl = null;
     /** @type {string | Node | null} */
     let staticContent = null;
+    let fullscreen = false;
+
+    if (!appRoute) {
+      /** @type {any[]} */
+      let routeParams = [];
+      let regexpRoute;
+      for (const [regexp, route] of AppRouter.APP_ROUTES.match) {
+        const match = regexp.exec(path);
+        if (match) {
+          routeParams = match.slice(1);
+          regexpRoute = route;
+        }
+      }
+
+      if (regexpRoute) {
+        appRoute = {};
+        for (const [key, entry] of Object.entries(regexpRoute)) {
+          if (entry) {
+            // @ts-ignore RegExpRoute is a mapped type of StaticRoute;
+            appRoute[key] = entry(...routeParams);
+          }
+        }
+      }
+    }
 
     if (appRoute) {
       if (appRoute.template) {
@@ -149,6 +197,9 @@ class AppRouter extends AbstractRouter {
         );
       } else if (appRoute.templateName) {
         templateUrl = `${this._fragmentsDirectory}app/${this.preferredLanguage}/${appRoute.templateName}.html`;
+      } else if (appRoute.iframeSrc) {
+        staticContent = this.createIframe(appRoute.iframeSrc);
+        fullscreen = true;
       }
     } else {
       const [daucusProjectName, daucusRoute] = this._findDaucusRoute(path);
@@ -161,7 +212,20 @@ class AppRouter extends AbstractRouter {
       }
     }
 
-    return { staticContent, templateUrl };
+    return { staticContent, templateUrl, fullscreen };
+  }
+
+  /**
+   * @param {string} src
+   */
+  // eslint-disable-next-line class-methods-use-this
+  createIframe(src) {
+    const container = document.createElement("div");
+    container.classList.add("iframe-container");
+    const iframe = document.createElement("iframe");
+    iframe.src = src;
+    container.appendChild(iframe);
+    return container;
   }
 }
 

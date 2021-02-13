@@ -226,4 +226,27 @@ h6 {
 /*#endregion navbar*/
 
 /*#region content */
+#page-container.fullscreen {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.iframe-container {
+  /* overflow: hidden;
+  padding-top: 100%;
+  position: relative; */
+}
+
+.iframe-container iframe {
+  /* border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0; */
+  width: 100%;
+  height: calc(100% - 3.6rem);
+  position: absolute;
+  overflow: hidden;
+  border: none;
+}
 /*#endregion content */

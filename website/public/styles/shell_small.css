@@ -20,7 +20,7 @@
 
 /*#region content */
 
-#page-container {
+#page-container:not(.fullscreen) {
   padding: 1rem 2rem;
 }
 

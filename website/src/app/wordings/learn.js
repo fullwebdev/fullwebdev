@@ -96,7 +96,7 @@ const fr = {
     },
     {
       type: "Atelier",
-      // FIXME: iframe for "/codelabs/doc/modern-data-driven_fr/index.html?index=/codelabs/",
+      // FIXME: iframe for "/codelabs/doc/modern-data-driven_fr/?index=/codelabs/",
       href: "/codelabs/modern-data-driven",
       date: "février 2020",
       desc: {
