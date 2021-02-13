@@ -1,40 +1,90 @@
 /**
  * @typedef {import('./RoutesConfig').RoutesConfig} RoutesConfig
+ * @typedef {import('./RoutesConfig').I18NRoutesConfig} I18NRoutesConfig
  * @typedef {import('./RoutesConfig').Route} Route
- * @typedef {[string, Route] | [string]} RouteMatch
+ * @typedef {import('./find-route').RouteMatch} RouteMatch
+ * @typedef {import('./find-route').FindRouteFn} FindRouteFn
+ * @typedef {import('./find-route').FindI18NRouteFn} FindI18NRouteFn
+ * @typedef {import('./RoutesConfig').ProjectRoutesConfig} ProjectRoutesConfig
  */
+
+/**
+ * @param {string} path
+ */
+function parsePath(path) {
+  const paths = path ? path.split("/") : [];
+
+  if (paths[0] === "") paths.shift();
+  if (paths[paths.length - 1] === "") paths.pop();
+
+  const projectName = paths.shift() || "";
+
+  return { projectName, paths };
+}
+
+/**
+ * @param {ProjectRoutesConfig} routes
+ * @param {string[]} paths
+ */
+function findRoute(routes, paths) {
+  let acc = { ...routes };
+  for (const routeName of paths) {
+    if (!acc.children || !acc.children[routeName]) return null;
+
+    if (routeName) {
+      acc = acc.children[routeName];
+    }
+  }
+  return acc;
+}
 
 /**
  *
  * @param {RoutesConfig} routes
  *
- * @returns {(path: string) => RouteMatch}
+ * @returns {FindRouteFn}
  */
 export const routeFinder = (routes) => {
   const projectsNames = Object.keys(routes);
 
-  // TODO: better typing (Partial<Route> vs Route)
-  // @ts-ignore if position is undefined ()
   return (/** @type {string} */ path) => {
-    const paths = path ? path.split("/") : [];
+    const { projectName, paths } = parsePath(path);
 
-    if (paths[0] === "") paths.shift();
-    if (paths[paths.length - 1] === "") paths.pop();
-
-    const projectName = paths.shift() || "";
-
-    // TODO: handle additionnal routes
     if (!projectsNames.includes(projectName)) return [projectName];
 
-    let acc = { ...routes[projectName] };
-    for (const routeName of paths) {
-      if (!acc.children || !acc.children[routeName]) return [projectName];
+    const route = findRoute(routes[projectName], paths);
 
-      if (routeName) {
-        acc = acc.children[routeName];
-      }
+    return /** @type {RouteMatch} */ [projectName, route];
+  };
+};
+
+// TODO: create an associated router & WC
+/**
+ *
+ * @param {I18NRoutesConfig} routes
+ *
+ * @returns {FindI18NRouteFn}
+ */
+export const i18nRouteFinder = (routes) => {
+  const projectsNames = Object.keys(routes);
+
+  return (/** @type {string} */ path, /** @type {string} */ lang) => {
+    const { projectName, paths } = parsePath(path);
+
+    if (!projectsNames.includes(projectName)) return [projectName];
+
+    /** @type {ProjectRoutesConfig} */
+    let routesConfigForLang;
+    if (!lang || !routes[projectName][lang]) {
+      routesConfigForLang = routes[projectName].__;
+    } else {
+      routesConfigForLang = routes[projectName][lang];
     }
 
-    return /** @type {RouteMatch} */ [projectName, acc];
+    if (!routesConfigForLang) return [projectName];
+
+    const route = findRoute(routesConfigForLang, paths);
+
+    return /** @type {RouteMatch} */ [projectName, route];
   };
 };
