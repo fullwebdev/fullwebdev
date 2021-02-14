@@ -50,11 +50,11 @@ export const routeFinder = (routes) => {
   return (/** @type {string} */ path) => {
     const { projectName, paths } = parsePath(path);
 
-    if (!projectsNames.includes(projectName)) return [projectName];
+    if (!projectsNames.includes(projectName)) return { projectName };
 
     const route = findRoute(routes[projectName], paths);
 
-    return /** @type {RouteMatch} */ [projectName, route];
+    return /** @type {RouteMatch} */ { projectName, route };
   };
 };
 
@@ -71,20 +71,22 @@ export const i18nRouteFinder = (routes) => {
   return (/** @type {string} */ path, /** @type {string} */ lang) => {
     const { projectName, paths } = parsePath(path);
 
-    if (!projectsNames.includes(projectName)) return [projectName];
+    if (!projectsNames.includes(projectName)) return { projectName, lang };
 
     /** @type {ProjectRoutesConfig} */
     let routesConfigForLang;
+    let langUsed = lang;
     if (!lang || !routes[projectName][lang]) {
       routesConfigForLang = routes[projectName].__;
+      langUsed = "__";
     } else {
       routesConfigForLang = routes[projectName][lang];
     }
 
-    if (!routesConfigForLang) return [projectName];
+    if (!routesConfigForLang) return { projectName, lang: langUsed };
 
     const route = findRoute(routesConfigForLang, paths);
 
-    return /** @type {RouteMatch} */ [projectName, route];
+    return { projectName, route, lang: langUsed };
   };
 };

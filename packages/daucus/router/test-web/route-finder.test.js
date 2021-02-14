@@ -11,28 +11,28 @@ describe("create router", () => {
       finder = routeFinder(routesFixture);
     });
     it("gives the associated route", () => {
-      const [project, route] = finder("/docs/chapter1/section2/file2");
+      const { projectName, route } = finder("/docs/chapter1/section2/file2");
       const expectedRoute =
         routesFixture.docs.children.chapter1.children.section2.children.file2;
 
       expect(route).to.deep.equal(expectedRoute);
-      expect(project).equals("docs");
+      expect(projectName).equals("docs");
     });
 
     it("gives children", () => {
-      const [project, route] = finder("/docs/chapter1/section2/");
+      const { projectName, route } = finder("/docs/chapter1/section2/");
       const expectedRoute =
         routesFixture.docs.children.chapter1.children.section2;
 
       expect(route).to.deep.equal(expectedRoute);
-      expect(project).equals("docs");
+      expect(projectName).equals("docs");
     });
 
     it("can give the root index", () => {
-      const [project, route] = finder("/docs/");
+      const { projectName, route } = finder("/docs/");
       const expectedRoute = routesFixture.docs;
       expect(route).to.deep.equal(expectedRoute);
-      expect(project).equals("docs");
+      expect(projectName).equals("docs");
     });
   });
 
@@ -43,38 +43,48 @@ describe("create router", () => {
       finder = i18nRouteFinder(i18nRoutesFixture);
     });
     it("gives the associated route", () => {
-      const [project, route] = finder("/docs/second-part/first-file", "en");
+      const { projectName, route, lang } = finder(
+        "/docs/second-part/first-file",
+        "en"
+      );
       const expectedRoute =
         i18nRoutesFixture.docs.en.children["second-part"].children[
           "first-file"
         ];
 
       expect(route).to.deep.equal(expectedRoute);
-      expect(project).equals("docs");
+      expect(projectName).equals("docs");
+      expect(lang).equals("en");
     });
 
     it("gives a route with a fallback lang", () => {
-      const [project, route] = finder("/another-project/infos/lorem", "en");
+      const { projectName, route, lang } = finder(
+        "/another-project/infos/lorem",
+        "en"
+      );
       const expectedRoute =
         i18nRoutesFixture["another-project"].__.children.infos.children.lorem;
 
       expect(route).to.deep.equal(expectedRoute);
-      expect(project).equals("another-project");
+      expect(projectName).equals("another-project");
+      expect(lang).equals("__");
     });
 
     it("gives children", () => {
-      const [project, route] = finder("/docs/second-part/", "fr");
+      const { projectName, route, lang } = finder("/docs/second-part/", "fr");
       const expectedRoute = i18nRoutesFixture.docs.fr.children["second-part"];
 
       expect(route).to.deep.equal(expectedRoute);
-      expect(project).equals("docs");
+      expect(projectName).equals("docs");
+      expect(lang).equals("fr");
     });
 
     it("can give the root index", () => {
-      const [project, route] = finder("/docs/", "en");
+      const { projectName, route, lang } = finder("/docs/", "en");
       const expectedRoute = i18nRoutesFixture.docs.en;
       expect(route).to.deep.equal(expectedRoute);
-      expect(project).equals("docs");
+      expect(projectName).equals("docs");
+      expect(lang).equals("en");
     });
   });
 });

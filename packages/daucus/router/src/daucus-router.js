@@ -40,7 +40,7 @@ export class DaucusRouter extends AbstractRouter {
       path === this.defaultPath
         ? this._defaultDaucusRouteMatch
         : this._findDaucusRoute(path);
-    if (!routeMatch[1]) {
+    if (!routeMatch.route) {
       /** @type {Navigation} */
       const redirection = [this.defaultPath, options];
       return redirection;
@@ -49,11 +49,11 @@ export class DaucusRouter extends AbstractRouter {
       new CustomEvent("route-match", {
         /** @type {RouteMatchEventDetail} */
         detail: {
-          projectName: routeMatch[0],
-          route: routeMatch[1],
-          templateHRef: `${(this.base || "/") + this.baseDir + routeMatch[0]}/${
-            routeMatch[1].templateUrl
-          }`,
+          projectName: routeMatch.projectName,
+          route: routeMatch.route,
+          templateHRef: `${
+            (this.base || "/") + this.baseDir + routeMatch.projectName
+          }/${routeMatch.route.templateUrl}`,
         },
       })
     );
