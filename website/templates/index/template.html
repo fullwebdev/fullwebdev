@@ -46,9 +46,12 @@
     <aside class="mdc-drawer mdc-drawer--modal">
       <div class="mdc-drawer__content">
         <div class="mdc-drawer__header">
-          <a class="mdc-drawer__title" href="/">fullweb.dev</a>
+          <a class="mdc-drawer__title" href="/"
+            ><span class="home">fullweb.dev</span></a
+          >
         </div>
         <nav class="mdc-list">
+          <hr class="mdc-list-divider" />
           <div id="modal-navigation">
             <a class="mdc-list-item mdc-list-item--activated" href="/learn">
               <span class="mdc-list-item__ripple"></span>
@@ -172,6 +175,7 @@
           </div>
         </header>
         <main id="content-container">
+          <div id="page-message"></div>
           <div id="page-container">
             {{#home}}{{{home}}}{{/home}}{{^home}}<html-loader
             ></html-loader>{{/home}}

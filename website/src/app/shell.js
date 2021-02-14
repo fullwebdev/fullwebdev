@@ -6,7 +6,7 @@ const drawerEl = document.querySelector(".mdc-drawer");
 if (drawerEl) {
   const drawer = MDCDrawer.attachTo(drawerEl);
 
-  const listEl = document.querySelector(".mdc-drawer .mdc-list");
+  const drawerContent = drawerEl.querySelector(".mdc-drawer__content");
   const mainContentEl = document.getElementById("page-container");
   const burgerEl = document.getElementById("burger-menu");
 
@@ -16,8 +16,8 @@ if (drawerEl) {
     });
   }
 
-  if (listEl && mainContentEl) {
-    listEl.addEventListener("click", () => {
+  if (drawerContent && mainContentEl) {
+    drawerContent.addEventListener("click", () => {
       drawer.open = false;
     });
 

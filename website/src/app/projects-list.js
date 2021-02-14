@@ -269,14 +269,14 @@ export default class ProjectsListElement extends LitElement {
     this.lang = "en";
     /** @type {Array<any>} */
     this.items = [];
-    /** @type {ProjectListWordings | null} */
-    this.wordings = null;
+    /** @type {ProjectListWording | null} */
+    this.wording = null;
   }
 
   get w() {
-    if (!this.wordings)
+    if (!this.wording)
       throw new Error(`can't find any wording for ${selector}`);
-    return this.wordings[this.lang] || this.wordings.en;
+    return this.wording;
   }
 
   render() {

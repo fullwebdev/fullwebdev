@@ -5,11 +5,11 @@ html {
   --primary-text-color-stronger: #333;
   --primary-text-color-softer: #555;
   --primary-bg-color: white;
-  --footer-bg-color: rgba(0, 0, 0, 0.05);
   --primary-color: #002d61;
   --primary-color-stronger: #00152e;
   --primary-color-softer: #004594;
-  --soft-bg-color: #bbb;
+  --soft-bg-color: #f2f2f2;
+  --mdc-theme-primary: var(--primary-color);
   font-size: 16px;
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 #main-footer {
-  background-color: var(--footer-bg-color);
+  background-color: var(--soft-bg-color);
   border-top: 1px solid #eaeaea;
   text-align: center;
   padding: 2rem 0 3rem 0;
@@ -121,6 +121,12 @@ h6 {
   color: white;
 }
 
+.call-to-action.small {
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 0 1rem;
+}
+
 /*#endregion globals*/
 
 /*#region navbar*/
@@ -130,7 +136,7 @@ h6 {
 }
 
 #main-header {
-  z-index: 20;
+  z-index: 5;
   top: 0;
   left: 0;
   right: 0;
@@ -145,10 +151,6 @@ h6 {
   box-sizing: border-box;
   flex-direction: column;
   width: 100%;
-
-  position: fixed;
-  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
-    0 2px 6px 2px rgba(60, 64, 67, 0.15);
 }
 
 #burger-menu {
@@ -246,7 +248,7 @@ h6 {
 #main-header .navigation li a.nav-link .nav-link-inner:hover,
 #main-header .navigation li a.nav-link:focus .nav-link-inner,
 #main-header .navigation li.selected a.nav-link .nav-link-inner {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: var(--soft-bg-color);
 }
 
 #main-header .navigation li a.nav-link:focus .nav-link-inner {
@@ -256,7 +258,16 @@ h6 {
 /*#endregion navbar*/
 
 /*#region content */
-#content-container {
-  padding-top: 3.6rem;
+#page-message {
+  background-color: var(--soft-bg-color);
+  text-align: center;
+  padding: 1rem;
+  display: none;
+}
+
+#content-container a[target="_blank"]::after {
+  content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' viewBox='0 0 100 100' width='15' height='15' class='icon outbound'%3E%3Cpath fill='%23424242' d='M18.8 85.1h56c2.2 0 4-1.8 4-4v-32h-8v28h-48v-48h28v-8h-32c-2.2 0-4 1.8-4 4v56c0 2.2 1.8 4 4 4z'/%3E%3Cpath fill='%23424242' d='M45.7 48.7l5.6 5.6 25.9-25.8v8.7h8V14.9H62.8v8h8.7z'/%3E%3C/svg%3E");
+  vertical-align: middle;
+  padding-left: 0.2rem;
 }
 /*#endregion content */

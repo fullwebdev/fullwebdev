@@ -21,16 +21,36 @@ class AppRouter extends AbstractRouter {
       },
       "/learn": {
         componentURL: "./projects-list.js",
-        wordingsURL: "./wordings/learn.js",
+        wordings: "learn",
       },
       "/build": {
         componentURL: "./projects-list.js",
-        wordingsURL: "./wordings/build.js",
+        wordings: "build",
       },
       "/news": {
         componentURL: "./projects-list.js",
-        wordingsURL: "./wordings/news.js",
+        wordings: "news",
       },
+    };
+  }
+
+  static get WORDINGS() {
+    return {
+      en: {
+        noTranslation: (/** @type {string} */ contributionFilePath) =>
+          `<p>The page you requested doesn't exist in English.</p><p><a href="${AppRouter.GITHUB_REPO.url}/new/${AppRouter.GITHUB_REPO.branch}?filename=${contributionFilePath}" target="_blank" rel="noopener noreferer">Create a translation on Github</a></p>`,
+      },
+      fr: {
+        noTranslation: (/** @type {string} */ contributionFilePath) =>
+          `<p>La page que vous avez demandé n'existe pas en français.</p><p><a href="${AppRouter.GITHUB_REPO.url}/new/${AppRouter.GITHUB_REPO.branch}?filename=${contributionFilePath}" target="_blank" rel="noopener noreferer">Créer une traduction sur Github</a></p>`,
+      },
+    };
+  }
+
+  static get GITHUB_REPO() {
+    return {
+      url: "https://github.com/fullwebdev/fullwebdev/",
+      branch: "master",
     };
   }
 
@@ -75,6 +95,22 @@ class AppRouter extends AbstractRouter {
     return this._outlet;
   }
 
+  /** @private @type {HTMLElement} */
+  get _pageMessageBox() {
+    if (this._pageMessage === undefined) {
+      this._pageMessage = document.getElementById("page-message");
+    }
+    if (this._pageMessage === null) {
+      throw new Error("the page message box could not be found");
+    }
+    return this._pageMessage;
+  }
+
+  /** @private */
+  get _wordings() {
+    return AppRouter.WORDINGS[this.preferredLanguage];
+  }
+
   /**
    * @param {string} path
    * @param {NavigationOptions} [options]
@@ -83,7 +119,21 @@ class AppRouter extends AbstractRouter {
    *
    */
   async renderOrRedirect(path, options) {
-    const { staticContent, templateUrl } = await this._findRoute(path);
+    const {
+      staticContent,
+      templateUrl,
+      translationTemplatePath,
+      templatePath,
+    } = await this._findRoute(path);
+
+    if (translationTemplatePath) {
+      this._pageMessageBox.innerHTML = this._wordings.noTranslation(
+        translationTemplatePath.replace(/\.html$/, ".md")
+      );
+      this._pageMessageBox.style.display = "block";
+    } else {
+      this._pageMessageBox.style.display = "none";
+    }
 
     if (staticContent !== null) {
       this.outlet.staticContent(staticContent);
@@ -136,16 +186,23 @@ class AppRouter extends AbstractRouter {
   /**
    * @param {string} path
    * @param {import('./app-routes.js').ComponentProps} props
-   * @param {string} [wordingsURL]
+   * @param {string} [wordings]
    *
    * @private
    */
-  async _loadComponent(path, props = {}, wordingsURL) {
+  async _loadComponent(path, props = {}, wordings) {
     const { selector } = await import(path);
     const el = document.createElement(selector);
     el.lang = this.preferredLanguage;
-    if (wordingsURL) {
-      el.wordings = await import(wordingsURL);
+    if (wordings) {
+      try {
+        const wordingsModule = await import(
+          `./wordings/${this.preferredLanguage}/${wordings}.js`
+        );
+        el.wording = wordingsModule.default;
+      } catch (e) {
+        return null;
+      }
     }
     for (const [key, value] of Object.entries(props)) {
       el[key] = value;
@@ -165,6 +222,10 @@ class AppRouter extends AbstractRouter {
     /** @type {string | Node | null} */
     let staticContent = null;
     let useFallbackLang = false;
+    /** @type {string | null} */
+    let templatePath = null;
+    /** @type {string | null} */
+    let translationTemplatePath = null;
 
     if (appRoute) {
       if (appRoute.template) {
@@ -173,33 +234,37 @@ class AppRouter extends AbstractRouter {
         staticContent = await this._loadComponent(
           appRoute.componentURL,
           appRoute.props,
-          appRoute.wordingsURL
+          appRoute.wordings
         );
       } else if (appRoute.templateName) {
         templateUrl = `${this._fragmentsDirectory}app/${this.preferredLanguage}/${appRoute.templateName}.html`;
       }
     } else {
-      let [daucusProjectName, daucusRoute] = this._findDaucusRoute(
+      let daucusRouteMatch = this._findDaucusRoute(
         path,
         this.preferredLanguage
       );
-      if (!daucusRoute) {
+      if (!daucusRouteMatch.route || !daucusRouteMatch.route.templateUrl) {
         useFallbackLang = true;
-        [daucusProjectName, daucusRoute] = this._findDaucusRoute(
-          path,
-          this.fallbackLanguage
-        );
+        daucusRouteMatch = this._findDaucusRoute(path, this.fallbackLanguage);
       }
-      if (daucusRoute && daucusRoute.templateUrl) {
+      if (daucusRouteMatch.route && daucusRouteMatch.route.templateUrl) {
+        templatePath = `${daucusRouteMatch.projectName}/${daucusRouteMatch.lang}/${daucusRouteMatch.route.templateUrl}`;
+        if (useFallbackLang) {
+          translationTemplatePath = `${daucusRouteMatch.projectName}/${this.preferredLanguage}/${daucusRouteMatch.route.templateUrl}`;
+        }
         templateUrl = `${this.base || "/"}${
           this._fragmentsDirectory
-        }${daucusProjectName}/${this.preferredLanguage}/${
-          daucusRoute.templateUrl
-        }`;
+        }${templatePath}`;
       }
     }
 
-    return { staticContent, templateUrl, useFallbackLang };
+    return {
+      staticContent,
+      templateUrl,
+      templatePath,
+      translationTemplatePath,
+    };
   }
 }
 

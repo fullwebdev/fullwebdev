@@ -11,7 +11,7 @@ export interface AppRoute {
   template?: () => Node;
   templateName?: string;
   componentURL?: string;
-  wordingsURL?: string;
+  wordings?: string;
   props?: ComponentProps;
 }
 
