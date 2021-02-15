@@ -6,6 +6,7 @@ tsc-dist
 stats.html
 *.fake.*
 __mocks__
+.lighthouseci
 
 ## should stay as-is
 /packages/**/test-node/**/snapshots

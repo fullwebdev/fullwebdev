@@ -7,6 +7,7 @@ stats.html
 *.fake.*
 build
 _daucus_/
+.lighthouseci
 package-lock.json
 /website/public/index.html
 /website/public/localized-files/en_ALL/index.html
