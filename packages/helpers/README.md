@@ -1,6 +1,9 @@
 # Modern helpers
 
-Minimalistic helper functions for Modern Web Apps development.
+<figure align="center">
+  <img alt="logo" src="./logo.png">
+  <figcaption><br><i>Minimalistic helper functions for Modern Web Apps development.</i></figcaption>
+</figure>
 
 ## Installation
 
@@ -16,10 +19,11 @@ npm i --save @modern-helpers/el
 
 ## Helpers
 
-| package                    | description                                                            |
-| -------------------------- | ---------------------------------------------------------------------- |
-| `@modern-helpers/el`       | minimalistic HyperHTML function to create HTML elements                |
-| `@modern-helpers/template` | _(experimental)_ create pre-rendered elements with an HyperHTML syntax |
+| package                    | description                                             |
+| -------------------------- | ------------------------------------------------------- |
+| `@modern-helpers/router`   | extensible router & easy navigation for SPA             |
+| `@modern-helpers/el`       | minimalistic HyperHTML function to create HTML elements |
+| `@modern-helpers/template` | create pre-rendered elements with an HyperHTML syntax   |
 
 ## Demos
 
@@ -32,3 +36,7 @@ You can test them right now in your browser thanks to [codesandbox.io](https://c
 Modern-helpers is part of the FullWeb.dev project.
 
 Check out our [fullweb.dev](https://fullweb.dev) for more information.
+
+\
+\
+_Logo made by [mynamepong](https://www.flaticon.com/authors/mynamepong)._
