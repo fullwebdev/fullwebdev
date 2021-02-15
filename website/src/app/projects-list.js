@@ -14,7 +14,7 @@ export const selector = "app-projects-list";
 /**
  * @param {Project} item
  */
-const projectCard = (item) => html` <a
+const projectCard = (item) => html`<a
   href=${ifDefined(item.href)}
   class="project-card ${classMap({
     spotlight: !!item.spotlight,

@@ -1,0 +1,8 @@
+#burger-menu:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  fill: var(--primary-color-softer);
+}
+
+#main-header .external-icons-container a:hover {
+  opacity: 0.8;
+}

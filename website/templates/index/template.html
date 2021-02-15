@@ -6,7 +6,9 @@
     <base href="/" />
     <title>fullweb.dev</title>
 
-    <link rel="stylesheet" href="/styles/shell.css" />
+    <style>
+      {{{css.shell}}}
+    </style>
     <link
       rel="stylesheet"
       href="/styles/shell_small.css"
@@ -22,7 +24,18 @@
       href="/styles/shell_large.css"
       media="screen and (min-width: 719px)"
     />
-    <link rel="stylesheet" href="/styles/homepage.css" />
+    <link
+      rel="preload"
+      href="/styles/not-critical-shell.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="/styles/build/mdc-drawer.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
 
     <link rel="manifest" href="/manifest.json" />
     <link

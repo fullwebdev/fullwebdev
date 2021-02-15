@@ -35,7 +35,7 @@ const options = {
     minifyCSS: true,
     minifyJS: true,
     minifyURLs: true,
-    preventAttributesEscaping: true,
+    preventAttributesEscaping: false,
     processConditionalComments: true,
     removeAttributeQuotes: true,
     removeComments: true,

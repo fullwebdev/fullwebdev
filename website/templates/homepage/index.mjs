@@ -1,9 +1,12 @@
-import { readTemplate } from "../utils.mjs";
+import { readTemplate, readSource } from "../utils.mjs";
+
+const css = readSource(import.meta, "homepage.css");
 
 export default {
   template: readTemplate(import.meta),
   langs: {
     en: {
+      css,
       illustration: {
         alt: "A new perspective",
       },
@@ -35,6 +38,7 @@ export default {
       },
     },
     fr: {
+      css,
       illustration: {
         alt: "une nouvelle approche",
       },

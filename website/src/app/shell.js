@@ -1,5 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
-import "../styles/mdc-drawer.css";
 import { MDCDrawer } from "@material/drawer";
 
 /** @typedef {import('./languages').Language} Language */

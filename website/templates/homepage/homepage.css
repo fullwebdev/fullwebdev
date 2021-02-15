@@ -21,7 +21,7 @@
     align-items: center;
   }
 
-  #homepage .welcome .homepage_illustration img,
+  #homepage .welcome .homepage_illustration svg,
   #homepage .welcome .homepage_illustration {
     width: 250px;
   }
@@ -51,10 +51,6 @@
     margin: 0 auto;
   }
 
-  #homepage .mobile-title {
-    display: none;
-  }
-
   #homepage .welcome {
     padding-top: 3rem;
     flex-direction: row;
@@ -62,7 +58,7 @@
     align-items: center;
   }
 
-  #homepage .welcome .homepage_illustration img,
+  #homepage .welcome .homepage_illustration svg,
   #homepage .welcome .homepage_illustration {
     width: 290px;
   }
@@ -86,7 +82,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-  #homepage .welcome .homepage_illustration img,
+  #homepage .welcome .homepage_illustration svg,
   #homepage .welcome .homepage_illustration {
     width: 500px;
   }
@@ -97,7 +93,7 @@
 }
 
 @media screen and (max-width: 319px) {
-  #homepage .welcome .homepage_illustration img,
+  #homepage .welcome .homepage_illustration svg,
   #homepage .welcome .homepage_illustration {
     width: 200px;
   }

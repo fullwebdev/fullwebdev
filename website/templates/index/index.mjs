@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import Mustache from "mustache";
 import homepage from "../homepage/index.mjs";
-import { readTemplate } from "../utils.mjs";
+import { readTemplate, readSource } from "../utils.mjs";
 
 const meta = {
   description: {
@@ -28,10 +28,15 @@ const script = {
   languageSwitch: JSON.stringify(languageSwitcher),
 };
 
+const css = {
+  shell: readSource(import.meta, "shell.css"),
+};
+
 export default {
   template: readTemplate(import.meta),
   files: {
     "public/localized-files/en_ALL/index.html": {
+      css,
       meta,
       nav: nav.en,
       home: Mustache.render(homepage.template, homepage.langs.en),
@@ -41,6 +46,7 @@ export default {
       },
     },
     "public/localized-files/fr_ALL/index.html": {
+      css,
       meta: {
         description: {
           short: "Redécouvrir le développement Web",
@@ -57,6 +63,7 @@ export default {
       },
     },
     "public/index.html": {
+      css,
       meta,
       root: true,
       script,

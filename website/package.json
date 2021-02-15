@@ -9,7 +9,7 @@
     "build": "snowpack build --reload",
     "prestart": "npm run prebuild",
     "start": "snowpack dev --reload",
-    "build:sass": "sass src/styles/ --load-path=node_modules",
+    "build:sass": "sass src/styles/:public/styles/build/ --load-path=node_modules",
     "postbuild": "npm run minify",
     "minify": "node ./scripts/minify.mjs"
   },

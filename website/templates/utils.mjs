@@ -13,6 +13,12 @@ export function readTemplate(importMeta) {
   );
 }
 
+export function readSource(importMeta, name) {
+  return readFileSync(resolve(dirname(fileURLToPath(importMeta.url)), name), {
+    encoding: "utf-8",
+  });
+}
+
 export function ensureDirSync(path) {
   if (!existsSync(path)) {
     mkdirSync(path, { recursive: true });
