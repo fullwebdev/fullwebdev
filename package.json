@@ -41,7 +41,6 @@
     "prebuild": "npm run prebuild:website",
     "build:illustrations": "lerna run build --scope=@fullweb/illustrations",
     "build:website": "lerna run build --scope=@fullweb/website && copyfiles -u 2 \"website/dist/**/*\" ./dist/",
-    "postbuild:website": "npm run minify",
     "prebuild:website": "npm run build:illustrations && bash scripts/cp-assets.sh",
     "build:eni-dpawm": "rimraf ./livre-build/public/ && lerna run build:web --scope=@fullweb/eni-dpawm && mv ./materials/eni-dpawm/dist ./livre-build/public",
     "prebuild:eni-dpawm": "npm run build:illustrations",
