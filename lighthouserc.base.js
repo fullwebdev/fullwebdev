@@ -2,11 +2,7 @@ module.exports = {
   ci: {
     collect: {
       isSinglePageApplication: true,
-      url: [
-        "http://localhost/",
-        "http://localhost/introduction/",
-        "http://localhost/conferences/",
-      ],
+      url: ["http://localhost/", "http://localhost/learn/"],
     },
     upload: {
       target: "lhci",
