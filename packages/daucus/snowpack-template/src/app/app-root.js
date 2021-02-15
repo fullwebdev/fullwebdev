@@ -12,6 +12,8 @@ import { live } from 'lit-html/directives/live';
 
 import '@daucus/router/daucus-router';
 import '@daucus/html-loader/html-loader';
+// @ts-ignore is only be available after daucus build
+// eslint-disable-next-line import/no-unresolved
 import daucusRoutes from '../templates/routes.js';
 import '@daucus/menu/daucus-menu';
 
