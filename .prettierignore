@@ -9,7 +9,8 @@ build
 _daucus_/
 package-lock.json
 /website/public/index.html
-/website/public/localized-file/
+/website/public/localized-files/en_ALL/index.html
+/website/public/localized-files/fr_ALL/index.html
 /website/src/fragments/
 /packages/daucus/snowpack-template/src/templates/
 /website/src/styles/*.css
