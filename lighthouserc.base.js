@@ -17,6 +17,8 @@ module.exports = {
         "render-blocking-resources": ["error", { maxLength: 2 }],
         // TODO: (Lit 2.0) use a div instead of an anchor for projectCard when href is falsy
         "crawlable-anchors": "warn",
+        // @material/drawer.js
+        "unused-javascript": ["error", { maxLength: 1 }],
       },
     },
   },
