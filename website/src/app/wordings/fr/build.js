@@ -2,7 +2,7 @@
 export default {
   title: "Outils",
   abstract:
-    "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.",
+    "Bibliothèques et outils de développement pour vous aider à créer de meilleurs projets.",
   items: [
     {
       type: "Bibliothèques Web & Outils de build",
@@ -10,12 +10,12 @@ export default {
       date: "beta",
       desc: {
         title: "Daucus",
-        subtitle: "Lorem ipsum dolor sit amet",
+        subtitle: `Micro-bibliothèques et outils de build pour la création de sites Web semi-statiques simples et performants. Actuellement en version Beta, Daucus fut créé pour ce site web ainsi que le livre "développement et architecture des applications web modernes". Il permettra ainsi, dans sa version finale, de générer de nombreux formats complémentaires (pdf, epub, odt, etc.) à partir d'une même source unique d'information.`,
       },
       img: {
         src: "/images/web-illustrations/umbel.png",
         alt: "alt",
-        height: 250,
+        height: 200,
       },
       cta: [
         {
@@ -35,13 +35,14 @@ export default {
       href:
         "https://github.com/fullwebdev/fullwebdev/tree/new-website/packages/helpers",
       type: "Helpers",
-      date: "v1.0.0",
+      date: "v0",
       desc: {
         title: "modern-helpers",
-        subtitle: "Lorem ipsum dolor sit amet",
+        subtitle:
+          "Des helpers simples pour faciliter la création d'applications Web modernes.",
       },
       img: {
-        src: "/images/web-illustrations/puzzle.jpg",
+        src: "/images/web-illustrations/modern-helpers.svg",
         alt: "alt",
       },
     },
@@ -52,12 +53,12 @@ export default {
       wip: true,
       desc: {
         title: "MonoCLI",
-        subtitle: "Lorem ipsum dolor sit amet",
+        subtitle: "Une Meta-CLI pour vos monorepos.",
       },
       img: {
         src: "/images/web-illustrations/monocli-logo.png",
         alt: "alt",
-        height: 120,
+        height: 100,
       },
     },
   ],

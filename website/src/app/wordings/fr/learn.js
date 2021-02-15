@@ -2,7 +2,7 @@
 export default {
   title: "Apprendre",
   abstract:
-    "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+    "Acquérir une vision d'ensemble pragmatique du développement web, à votre propre rythme.",
   items: [
     {
       type: "Livre",
@@ -10,8 +10,7 @@ export default {
       spotlight: true,
       desc: {
         title: "Applications Web Modernes",
-        subtitle:
-          "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+        subtitle: `Après plus d'un an de recherche et écriture, le tout premier livre francophone abordant la question du "développement Web Moderne" sera enfin disponible dés le mois de mars aux éditions ENI. Retrouvez en sept chapitres les fondamentaux de développement Web comme vous les aviez jamais abordés auparavant.`,
       },
       img: {
         src: "/images/web-illustrations/eni-dpawm-cover_320.jpg ",
@@ -101,7 +100,7 @@ export default {
           "Compléments et notes pour le livre Développement & Architecture des Applications Web Modernes",
       },
       img: {
-        src: "/images/web-illustrations/undraw_reading_0re1.svg",
+        src: "/images/web-illustrations/reading.svg",
         alt: "coder par étapes",
       },
     },

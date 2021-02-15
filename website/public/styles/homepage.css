@@ -4,18 +4,15 @@
   text-align: center;
 }
 
-#homepage .details-header {
-  margin-top: 4rem;
-  text-align: center;
-}
-
 #homepage .details {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   column-gap: 6rem;
   row-gap: 2.5rem;
   color: var(--text-color);
-  margin: 0 auto;
+  margin: 4rem auto 4rem auto;
+  max-width: 950px;
+  text-align: justify;
 }
 
 @media screen and (max-width: 719px) {
@@ -83,8 +80,8 @@
     font-size: 2.5rem;
   }
 
-  #homepage .details-header {
-    margin-bottom: 3rem;
+  #homepage .details {
+    margin-top: 6rem;
   }
 }
 

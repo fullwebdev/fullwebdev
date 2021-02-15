@@ -2,7 +2,7 @@
 export default {
   title: "Tools",
   abstract:
-    "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.",
+    "Libraries and build tools built to help you create better projets.",
   items: [
     {
       type: "Runtime Libraries & Build Tools",
@@ -10,12 +10,13 @@ export default {
       date: "beta",
       desc: {
         title: "Daucus",
-        subtitle: "Lorem ipsum dolor sit amet",
+        subtitle:
+          "Micro-libraries & build tools for (semi-)static site generation. Daucus is currently in beta version, and will soon evolve with this website. In its stable version, it will also allow you to generate other file formats (pdf, epub, odt, etc.) from a single source of documentation.",
       },
       img: {
         src: "/images/web-illustrations/umbel.png",
         alt: "alt",
-        height: 250,
+        height: 200,
       },
       cta: [
         {
@@ -35,13 +36,13 @@ export default {
       href:
         "https://github.com/fullwebdev/fullwebdev/tree/new-website/packages/helpers",
       type: "Helpers",
-      date: "v1.0.0",
+      date: "v0",
       desc: {
         title: "modern-helpers",
-        subtitle: "Lorem ipsum dolor sit amet",
+        subtitle: "Simple helpers for modern web development.",
       },
       img: {
-        src: "/images/web-illustrations/puzzle.jpg",
+        src: "/images/web-illustrations/modern-helpers.svg",
         alt: "alt",
       },
     },
@@ -52,12 +53,12 @@ export default {
       wip: true,
       desc: {
         title: "MonoCLI",
-        subtitle: "Lorem ipsum dolor sit amet",
+        subtitle: "A meta-CLI for your monoreprositories and web projets.",
       },
       img: {
         src: "/images/web-illustrations/monocli-logo.png",
         alt: "alt",
-        height: 120,
+        height: 100,
       },
     },
   ],

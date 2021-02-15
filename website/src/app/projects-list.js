@@ -35,7 +35,7 @@ const projectCard = (item) => html` <a
   </div>
   <div class="desc">
     <h2>${item.desc.title}</h2>
-    <p>${item.desc.subtitle}</p>
+    <p class="content">${item.desc.subtitle}</p>
     ${item.cta
       ? html`<div class="actions">
           ${item.cta.map(
@@ -87,6 +87,7 @@ export default class ProjectsListElement extends LitElement {
         display: grid;
         grid-template-columns: 1fr;
         margin: 0 auto;
+        grid-gap: 1rem;
       }
 
       .empty-grid {
@@ -102,7 +103,6 @@ export default class ProjectsListElement extends LitElement {
         color: inherit;
         text-decoration: none;
         padding: 2rem;
-        /* border: 1px solid #dadce0; */
         border-radius: 5px;
       }
 
@@ -122,6 +122,10 @@ export default class ProjectsListElement extends LitElement {
 
       .project-card .desc {
         text-align: center;
+      }
+
+      .project-card .desc .content {
+        text-align: justify;
       }
 
       .project-card .actions {
@@ -152,29 +156,10 @@ export default class ProjectsListElement extends LitElement {
         justify-content: space-between;
       }
 
-      /* .project-card::before {
-        background-color: var(--primary-color);
-        content: "";
-        display: block;
-        height: 2px;
-        width: 78px;
-        margin-bottom: 1rem;
-      } */
-
       .project-card .type {
         color: var(--primary-color);
         font-weight: bold;
       }
-
-      /*.project-card .type::before {
-        background-color: var(--primary-color);
-        display: inline-block;
-        content: "";
-        height: 10px;
-        width: 10px;
-        margin-right: 1rem;
-        border-radius: 5px;
-      }*/
 
       .project-card .date {
         color: var(--primary-text-color-softer);
@@ -214,7 +199,6 @@ export default class ProjectsListElement extends LitElement {
 
         .grid {
           grid-template-columns: 1fr 1fr;
-          grid-gap: 1rem;
         }
 
         .project-card.spotlight {
@@ -239,6 +223,10 @@ export default class ProjectsListElement extends LitElement {
           text-align: center;
           display: flex;
           flex-direction: column;
+        }
+
+        .project-card.spotlight .desc h2 {
+          margin-top: 0;
         }
       }
 

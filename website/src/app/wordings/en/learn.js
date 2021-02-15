@@ -1,8 +1,7 @@
 /** @type {import('../../projects-list').ProjectListWording} */
 export default {
   title: "Learn",
-  abstract:
-    "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+  abstract: `Gain an holistic and pragmatique view of Web Development at your own pace.`,
   items: [
     {
       type: "Lecture",
@@ -16,12 +15,44 @@ export default {
       },
       img: {
         src: "/images/web-illustrations/campfire.svg",
-        alt: "feu de camp",
+        alt: "campfire",
       },
     },
     {
-      type: "Soon...",
-      date: "",
+      type: "Ressource",
+      // TODO
+      // href: "/inventory",
+      date: "2021",
+      wip: true,
+      desc: {
+        title: "The Inventory",
+        subtitle:
+          "Listing of the most important web development libraries and tools",
+      },
+      img: {
+        src: "/images/web-illustrations/select-option.svg",
+        alt: "making a choice",
+      },
+    },
+    {
+      type: "Resource",
+      // TODO
+      // href: "/codelabs/modern-data-driven",
+      wip: true,
+      date: "2021",
+      desc: {
+        title: "Code Samples",
+        subtitle:
+          "An extensive collection of simple examples covering most of the fundamentals of Web Developement.",
+      },
+      img: {
+        src: "/images/web-illustrations/hacker-mindset.svg",
+        alt: "code",
+      },
+    },
+    {
+      type: "And more...",
+      date: "2021",
       spotlight: true,
       desc: {
         title: "more will follow",
