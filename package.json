@@ -57,6 +57,7 @@
     "lhci:collect": "lhci collect --config lighthouserc.local.js",
     "lhci:assert": "lhci assert --config lighthouserc.local.js",
     "lhci:open": "lhci open",
+    "lhci:autorun": "lhci autorun",
     "==d==": "============================= dev =============================",
     "grammar": "bash scripts/grammar.sh",
     "commit": "commit",
