@@ -1,5 +1,7 @@
 import { AbstractRouter } from "@modern-helpers/router";
 import { i18nRouteFinder } from "@daucus/router";
+// @ts-ignore generated file
+// eslint-disable-next-line import/no-unresolved
 import daucusRoutes from "../fragments/routes.js";
 import "@daucus/html-loader/html-loader";
 
