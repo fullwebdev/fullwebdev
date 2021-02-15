@@ -14,7 +14,7 @@ export default {
           "Micro-libraries & build tools for (semi-)static site generation. Daucus is currently in beta version, and will soon evolve with this website. In its stable version, it will also allow you to generate other file formats (pdf, epub, odt, etc.) from a single source of documentation.",
       },
       img: {
-        src: "/images/web-illustrations/umbel.png",
+        src: "/images/web-illustrations/umbel_200.png",
         alt: "alt",
         height: 200,
       },

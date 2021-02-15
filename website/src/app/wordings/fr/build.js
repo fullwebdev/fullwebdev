@@ -13,7 +13,7 @@ export default {
         subtitle: `Micro-bibliothèques et outils de build pour la création de sites Web semi-statiques simples et performants. Actuellement en version Beta, Daucus fut créé pour ce site web ainsi que le livre "développement et architecture des applications web modernes". Il permettra ainsi, dans sa version finale, de générer de nombreux formats complémentaires (pdf, epub, odt, etc.) à partir d'une même source unique d'information.`,
       },
       img: {
-        src: "/images/web-illustrations/umbel.png",
+        src: "/images/web-illustrations/umbel_200.png",
         alt: "alt",
         height: 200,
       },
