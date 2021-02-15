@@ -191,59 +191,39 @@
     {{#root}}
     <script type="module">
       import { router } from "/dist/app/router.js";
+      import { AppShell } from "/dist/app/shell.js";
 
       router.run();
 
       const navLinksText = {{{script.nav}}};
       const languageSwitchContent = {{{script.languageSwitch}}};
 
-      const addNavLinksText = (el, i) => (el.innerText = navLinksText[router.preferredLanguage][i]);
-
-      let languageSwitchEl;
-
-      const updateShellLang = () => {
-        document
-        .querySelectorAll("#header-navigation .nav-link-inner")
-        .forEach(addNavLinksText);
-
-        document
-          .getElementById('modal-navigation')
-          .querySelectorAll('.mdc-list-item__text')
-          .forEach(addNavLinksText);
-
-        let firstTime = false;
-        if (!languageSwitchEl) {
-          languageSwitchEl = document.querySelector("#main-footer .language-switch");
-          firstTime = true;
-        }
-
-        languageSwitchEl.innerHTML = languageSwitchContent[router.preferredLanguage];
-
-        languageSwitchEl.querySelector('a').addEventListener('click', (e) => {
-          e.preventDefault();
-          router.preferredLanguage = e.target.dataset.lang;
-          updateShellLang();
-          window.scrollTo(0,0);
-        });
-      }
-
-      updateShellLang();
+      const appShell = new AppShell(navLinksText, languageSwitchContent, router);
+      appShell.initDrawer();
+      appShell.updateShellLang();
     </script>
     {{/root}} {{^root}}
     <script type="module">
       import { router } from "/dist/app/router.js";
+      import { AppShell } from "/dist/app/shell.js";
 
       document.body.addEventListener(
         "click",
         () => {
           router.resetPageContainer();
         },
-        { once: true }
+        { once: true, capture: true }
       );
 
       router.run(document.body, false);
+
+      const navLinksText = {{{script.nav}}};
+      const languageSwitchContent = {{{script.languageSwitch}}};
+
+      const appShell = new AppShell(navLinksText, languageSwitchContent, router);
+      appShell.initDrawer();
+      appShell.updateShellLang(true);
     </script>
     {{/root}}
-    <script type="module" src="/dist/app/shell.js"></script>
   </body>
 </html>

@@ -9,7 +9,7 @@ import "@daucus/html-loader/html-loader";
 /** @typedef {import('./languages').Language} Language */
 /** @typedef {import("@daucus/router/src/RoutesConfig").I18NRoutesConfig} I18NRoutesConfig */
 
-class AppRouter extends AbstractRouter {
+export class AppRouter extends AbstractRouter {
   /** @type {import('./app-routes').AppRoutes} */
   static get APP_ROUTES() {
     return {

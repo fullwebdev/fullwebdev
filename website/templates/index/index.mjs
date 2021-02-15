@@ -23,6 +23,11 @@ const languageSwitcher = {
     'Ce site et des contenus supplémentaires sont également disponibles en <a href="" data-lang="fr" aria-label="passer en français">français</a>.',
 };
 
+const script = {
+  nav: JSON.stringify(nav),
+  languageSwitch: JSON.stringify(languageSwitcher),
+};
+
 export default {
   template: readTemplate(import.meta),
   files: {
@@ -30,6 +35,7 @@ export default {
       meta,
       nav: nav.en,
       home: Mustache.render(homepage.template, homepage.langs.en),
+      script,
       language: {
         switch: languageSwitcher.en,
       },
@@ -45,6 +51,7 @@ export default {
       },
       nav: nav.fr,
       home: Mustache.render(homepage.template, homepage.langs.fr),
+      script,
       language: {
         switch: languageSwitcher.fr,
       },
@@ -52,10 +59,7 @@ export default {
     "public/index.html": {
       meta,
       root: true,
-      script: {
-        nav: JSON.stringify(nav),
-        languageSwitch: JSON.stringify(languageSwitcher),
-      },
+      script,
       language: {},
     },
   },
