@@ -1,3 +1,0 @@
-# Bonjour Monde !
-
-DOCS !

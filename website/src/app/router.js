@@ -40,11 +40,11 @@ export class AppRouter extends AbstractRouter {
     return {
       en: {
         noTranslation: (/** @type {string} */ contributionFilePath) =>
-          `<p>The page you requested doesn't exist in English.</p><p><a href="${AppRouter.GITHUB_REPO.url}/new/${AppRouter.GITHUB_REPO.branch}?filename=${contributionFilePath}" target="_blank" rel="noopener noreferer">Create a translation on Github</a></p>`,
+          `<p>There is no English version of this page.</p><p><a href="${AppRouter.GITHUB_REPO.url}/new/${AppRouter.GITHUB_REPO.branch}?filename=${contributionFilePath}" target="_blank" rel="noopener noreferer">Create one on Github</a></p>`,
       },
       fr: {
         noTranslation: (/** @type {string} */ contributionFilePath) =>
-          `<p>La page que vous avez demandé n'existe pas en français.</p><p><a href="${AppRouter.GITHUB_REPO.url}/new/${AppRouter.GITHUB_REPO.branch}?filename=${contributionFilePath}" target="_blank" rel="noopener noreferer">Créer une traduction sur Github</a></p>`,
+          `<p>Cette page n'existe pas en français.</p><p><a href="${AppRouter.GITHUB_REPO.url}/new/${AppRouter.GITHUB_REPO.branch}?filename=${contributionFilePath}" target="_blank" rel="noopener noreferer">Démarrer la traduction sur Github</a></p>`,
       },
     };
   }
@@ -73,6 +73,13 @@ export class AppRouter extends AbstractRouter {
     /** @private @type {HTMLLoaderElement | null} */
     this._outlet = null;
 
+    const pageContainer = document.getElementById("page-container");
+
+    if (!pageContainer) throw new Error("no page-container element found");
+
+    /** @private @type {HTMLElement} */
+    this._pageContainer = pageContainer;
+
     window.addEventListener("languagechange", () => {
       this.navigate(this.currentPath, { skipLocationChange: true });
     });
@@ -90,6 +97,17 @@ export class AppRouter extends AbstractRouter {
     if (!this._outlet) {
       const outlet = document.querySelector("html-loader");
       if (!outlet) throw new Error("no html-loader element could be found");
+      outlet.addEventListener("html-loaded", async () => {
+        const codes = outlet.querySelectorAll(`pre code[class*="language-"]`);
+        if (codes.length > 0) {
+          if (!this.Prism) {
+            this.Prism = await import("prismjs");
+          }
+          for (let i = 0; i < codes.length; i += 1) {
+            this.Prism.highlightElement(codes[i]);
+          }
+        }
+      });
       // @ts-ignore cast outlet from Element to HTMLLoaderElement
       this._outlet = outlet;
     }
@@ -126,6 +144,7 @@ export class AppRouter extends AbstractRouter {
       templateUrl,
       translationTemplatePath,
       templatePath,
+      useDaucus,
     } = await this._findRoute(path);
 
     if (translationTemplatePath) {
@@ -135,6 +154,12 @@ export class AppRouter extends AbstractRouter {
       this._pageMessageBox.style.display = "block";
     } else {
       this._pageMessageBox.style.display = "none";
+    }
+
+    if (useDaucus) {
+      this._pageContainer.classList.add("daucus-page");
+    } else {
+      this._pageContainer.classList.remove("daucus-page");
     }
 
     if (staticContent !== null) {
@@ -152,11 +177,7 @@ export class AppRouter extends AbstractRouter {
 
   // eslint-disable-next-line class-methods-use-this
   resetPageContainer() {
-    const pageContainer = document.getElementById("page-container");
-    if (!pageContainer)
-      throw new Error("no html-loader nor page-container element found");
-
-    const initialContent = pageContainer.childNodes;
+    const initialContent = this._pageContainer.childNodes;
     const fragment = document.createDocumentFragment();
     fragment.append(...initialContent);
     AppRouter.APP_ROUTES["/"].template = () => fragment.cloneNode(true);
@@ -164,8 +185,8 @@ export class AppRouter extends AbstractRouter {
     /** @type {HTMLLoaderElement} */
     // @ts-ignore cast outlet from Element to HTMLLoaderElement
     const outlet = document.createElement("html-loader");
-    pageContainer.innerHTML = "";
-    pageContainer.appendChild(outlet);
+    this._pageContainer.innerHTML = "";
+    this._pageContainer.appendChild(outlet);
     outlet.staticContent(fragment.cloneNode(true));
     this._outlet = outlet;
   }
@@ -228,6 +249,7 @@ export class AppRouter extends AbstractRouter {
     let templatePath = null;
     /** @type {string | null} */
     let translationTemplatePath = null;
+    let useDaucus = false;
 
     if (appRoute) {
       if (appRoute.template) {
@@ -258,6 +280,7 @@ export class AppRouter extends AbstractRouter {
         templateUrl = `${this.base || "/"}${
           this._fragmentsDirectory
         }${templatePath}`;
+        useDaucus = true;
       }
     }
 
@@ -266,6 +289,7 @@ export class AppRouter extends AbstractRouter {
       templateUrl,
       templatePath,
       translationTemplatePath,
+      useDaucus,
     };
   }
 }

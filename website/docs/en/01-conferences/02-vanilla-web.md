@@ -1,4 +1,4 @@
-# Vanilla Web
+# Conference: Vanilla Web
 
 **Brace yourself, :icecream: Vanilla is coming … back :dark_sunglasses:!**
 
@@ -14,7 +14,7 @@ Hear my story, traveler! My old eyes have seen him in these lands! Let me tell y
 
 ## [Devfest Toulouse](https://2019.devfesttoulouse.fr/sessions/brace_yourself__vanilla_is_coming__back__/)
 
-October 03, 2019 at 3:30 pm.
+> October 03, 2019 at 3:30 pm.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-d_Ka7OE4Xk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -22,6 +22,6 @@ October 03, 2019 at 3:30 pm.
 
 ## [Paris Open Source Summit](https://2019.opensourcesummit.paris/){target="\_blank"}
 
-December 11, 2019 at 10:00 am.
+> December 11, 2019 at 10:00 am.
 
 - [slides](/slides/vanilla1/poss19/index.html){target="\_blank"}
