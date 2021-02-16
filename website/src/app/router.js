@@ -98,15 +98,8 @@ export class AppRouter extends AbstractRouter {
       const outlet = document.querySelector("html-loader");
       if (!outlet) throw new Error("no html-loader element could be found");
       outlet.addEventListener("html-loaded", async () => {
-        const codes = outlet.querySelectorAll(`pre code[class*="language-"]`);
-        if (codes.length > 0) {
-          if (!this.Prism) {
-            this.Prism = await import("prismjs");
-          }
-          for (let i = 0; i < codes.length; i += 1) {
-            this.Prism.highlightElement(codes[i]);
-          }
-        }
+        const { stylePage } = await import("./pages.js");
+        stylePage(this.outlet);
       });
       // @ts-ignore cast outlet from Element to HTMLLoaderElement
       this._outlet = outlet;
