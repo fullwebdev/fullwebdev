@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
 import { ifDefined } from 'lit-html/directives/if-defined';
 import { live } from 'lit-html/directives/live';
-
+import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 /*
  * You can also use @daucus/html-loader and/or @modern-helpers/router
  * instead of @daucus/router if you need less abstraction
@@ -31,6 +31,20 @@ class AppRoot extends LitElement {
     this.message = 'Become a full web developer';
     this._handleNavigationEnd = this.__handleNavigationEnd.bind(this);
     this._handleRouteMatch = this.__handleRouteMatch.bind(this);
+    this._handleProjectChange = this.__handleProjectChange.bind(this);
+    this._currentProject = '';
+  }
+
+  get _menuHTML() {
+    // @ts-ignore daucusRouter typings
+    if (
+      daucusRoutes[this._currentProject] &&
+      daucusRoutes[this._currentProject].menu
+    ) {
+      // @ts-ignore daucusRouter typings
+      return daucusRoutes[this._currentProject].menu;
+    }
+    return '';
   }
 
   static get styles() {
@@ -88,6 +102,82 @@ class AppRoot extends LitElement {
       daucus-router-outlet h1 {
         margin-top: 0;
       }
+
+      daucus-menu {
+        padding: 2rem 2.5rem;
+        margin: 0 auto;
+        max-width: 740px;
+        text-align: left;
+      }
+
+      daucus-menu .menu-title {
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      daucus-menu ul {
+        list-style: none;
+      }
+
+      daucus-menu li {
+        padding: 7px 0;
+      }
+
+      daucus-menu button {
+        background: none;
+        border: none;
+        padding: 0;
+        font-family: inherit;
+        cursor: pointer;
+        font-size: 1em;
+        color: var(--daucus-menu-default-color, #666);
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+
+      daucus-menu button:after {
+        content: '›';
+        width: 1em;
+        height: 1em;
+        font-weight: bold;
+        color: var(--daucus-menu-default-color, #666);
+        text-align: center;
+        transition: all 0.1s;
+        transform-origin: center;
+        line-height: 1em;
+        margin-left: 0.5em;
+      }
+
+      daucus-menu button[aria-pressed='true']:after {
+        transform: rotate(90deg);
+      }
+
+      daucus-menu a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      daucus-menu .menu {
+        padding: 0;
+      }
+
+      daucus-menu .child-menu {
+        padding: 7px 0 0px 20px;
+        overflow: hidden;
+        max-height: 0px;
+        transition: max-height 150ms ease-out;
+      }
+
+      daucus-menu .child-menu.open {
+        max-height: 50vh;
+        transition: max-height 1s ease-out;
+      }
+
+      daucus-menu .section-title.active {
+        color: var(--daucus-menu-active-color, #b20000);
+        font-weight: bold;
+      }
     `;
   }
 
@@ -105,6 +195,13 @@ class AppRoot extends LitElement {
     this._templateHRef = e.detail.templateHRef;
   }
 
+  /**
+   * @param {{ detail: { projectName: string; }; }} e
+   */
+  __handleProjectChange(e) {
+    this._currentProject = e.detail.projectName;
+  }
+
   render() {
     return html`
       <daucus-router
@@ -112,6 +209,7 @@ class AppRoot extends LitElement {
         default-path="/docs/"
         @navigation-end=${this._handleNavigationEnd}
         @route-match=${this._handleRouteMatch}
+        @project-change=${this._handleProjectChange}
       >
         <div class="app-wrapper">
           <header>
@@ -120,11 +218,9 @@ class AppRoot extends LitElement {
           </header>
           <div class="app-content">
             <aside>
-              <daucus-menu
-                .routes=${daucusRoutes}
-                project="docs"
-                active-path=${live(this._activePath)}
-              ></daucus-menu>
+              <daucus-menu active-path=${live(this._activePath)}>
+                ${unsafeHTML(this._menuHTML)}
+              </daucus-menu>
             </aside>
             <main>
               <html-loader href=${ifDefined(this._templateHRef)}></html-loader>
