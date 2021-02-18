@@ -3,6 +3,7 @@ export default {
   title: "Apprendre",
   abstract:
     "Acquérir une vision d'ensemble pragmatique du développement web, à votre propre rythme.",
+  intro: "Introduction",
   items: [
     {
       type: "Livre",
@@ -10,7 +11,7 @@ export default {
       spotlight: true,
       desc: {
         title: "Applications Web Modernes",
-        subtitle: `Après plus d'un an de recherche et écriture, le tout premier livre francophone abordant la question du "développement Web Moderne" sera enfin disponible dés le mois de mars aux éditions ENI. Retrouvez en sept chapitres les fondamentaux de développement Web comme vous les aviez jamais abordés auparavant.`,
+        subtitle: `Après plus d'un an de recherche et écriture, le tout premier livre francophone abordant la question du "développement Web Moderne" sera enfin disponible dés le mois de mars aux éditions ENI. Redécouvrez en sept chapitres les fondamentaux de développement Web comme vous ne les aviez jamais abordés auparavant.`,
       },
       img: {
         src: "/images/web-illustrations/eni-dpawm-cover_320.jpg ",
@@ -29,14 +30,13 @@ export default {
     },
     {
       type: "Atelier",
-      // FIXME: iframe for "/codelabs/doc/modern-data-driven_fr/index.html?index=/codelabs/",
       href:
-        "https://fullweb.dev/codelabs/doc/modern-data-driven_fr/index.html?index=/codelabs/#0",
+        "https://fullweb.dev/codelabs/doc/modern-data-driven_fr/index.html?index=/learn",
       date: "février 2020",
       desc: {
         title: "PWA & capacités modernes",
         subtitle:
-          "Construire une application web proposant une expérience optimale, en 12 étapes.",
+          "Construire une application web offrant une expérience optimale, en 12 étapes.",
       },
       img: {
         src: "/images/web-illustrations/dev-focus.svg",
@@ -46,8 +46,7 @@ export default {
     },
     {
       type: "Conférences",
-      // TODO: page
-      href: "https://youtu.be/_byWU9V4fXw",
+      href: "/docs/conferences/wof",
       date: "2019",
       desc: {
         title: "The Web is on FIRE",
@@ -61,8 +60,7 @@ export default {
     },
     {
       type: "Conférence",
-      // TODO: page
-      href: "https://youtu.be/-d_Ka7OE4Xk",
+      href: "/docs/conferences/vanilla-web",
       date: "2019",
       desc: {
         title: "Vanilla is coming (back)",
@@ -76,8 +74,7 @@ export default {
     },
     {
       type: "Conférence",
-      // TODO: page
-      href: "https://www.youtube.com/watch?v=YSn8r0BDKTY",
+      href: "/docs/conferences/prpl",
       date: "2019",
       desc: {
         title: "PRPL pattern",
@@ -93,7 +90,6 @@ export default {
       type: "Livret",
       date: "prochainement",
       wip: true,
-      // href: "/dpawm-notes/",
       desc: {
         title: "Notes pour AWM",
         subtitle:
@@ -106,8 +102,6 @@ export default {
     },
     {
       type: "Ressource",
-      // TODO
-      // href: "/inventory",
       date: "prochainement",
       wip: true,
       desc: {
@@ -122,8 +116,6 @@ export default {
     },
     {
       type: "Ressource",
-      // TODO
-      // href: "/codelabs/modern-data-driven",
       wip: true,
       date: "prochainement",
       desc: {

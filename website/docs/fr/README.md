@@ -2,42 +2,41 @@
 
 Aujourd'hui, le développement Web tend à l'ultra-spécialisation et au dogmatisme.
 
-_"Quel framework apprendre en premier ?" "Lequel choisir pour mes projets ?"_ sont parmi les questions qui reviennent le plus souvent. Beaucoup de développeurs, plus ou moins débutants, sont poussés à n'aborder leur montée en compétence que par le prisme de quelques-uns de ces frameworks. Et, tandis que les concepteurs de ceux-ci collaborent largement, notre communauté est balkanisée, certains allants jusqu'à dénigrer l'autre au moindre prétexte.
+_"Quel framework apprendre en premier ?"_
+_"Lequel choisir pour mes projets ?"_ sont parmi les questions qui reviennent le plus souvent.
+Beaucoup de développeurs, plus ou moins débutants, sont poussés à n'aborder leur montée en compétence que par le prisme de quelques-uns de ces frameworks.
+Alors même que les concepteurs de ces frameworks collaborent très régulièrement, notre communauté est balkanisée, certains allants jusqu'à dénigrer l'autre au moindre prétexte.
 
 Face à cette situation, la tentation est grande de rejeter pêle-mêle tous ces outils, d'espérer leur mort prochaine, et de ne se reposer que sur ses propres compétences et la plateforme.
 
-Sur FullWeb.dev, nous pensons que toutes ces visions, plutôt que se contredire, se complètent. Que celles-ci peuvent parfaitement cohabiter au sain d'une même communauté, équipe, projet et personne.
+Je pense personnellement que toutes ces visions, plutôt que se contredire, se complètent.
+Que celles-ci peuvent parfaitement cohabiter au sain d'une même communauté, équipe, projet et personne.
 
-Adopter, ou non, certains outils, ne devrait se faire qu'en fonction du contexte, en toute connaissance de cause. Mais pour cela, disposer d'une vision d'ensemble est indispensable.
+Adopter, ou non, certains outils, ne devrait se faire qu'en fonction du contexte, en toute connaissance de cause.
+Mais pour cela, disposer d'une vision d'ensemble est indispensable.
 
-:::tip
-**Notre objectif** : aider chacun et chacune à acquérir cette vision d'ensemble.
+## Ce que vous retrouverez sur ce site
 
-**Notre méthode** : étudier et présenter en profondeur les concepts clefs du développement Web un à un. Partant des standards, et du vanilla.js, pour aller jusqu'à la comparaison des approches adoptées par chaque framework et bibliothèque.
-:::
+Après avoir consacré l'année 2020 à l'écriture d'un livre sur ce sujet, créer un site en complément me semblait incontournable.
+Vous y trouverez donc pour commencer une présentation de certaines de mes autres créations y étant liée de prêt ou de loin.
 
-## Ce que vous retrouverez ici
+Pour l'heure, je me focalise sur la création de contenus en français afin de compléter ce livre et de traiter certains sujets laissés de côté.
+Ces contenus seront donc ajoutés progressivement à la section ["Apprendre"](/learn) de ce site.
 
-Ce projet démarre tout juste, et est donc encore largement incomplet.
+Il m'arrive également, dans le cadre de mes recherches, de créer des bibliothèques et outils de développement, que ce soit simplement pour faciliter mon travail, le partager, ou encore pour concrétiser un concept que j'estime utile et prometteur.
+Vous en trouverez une liste à la section ["Créer"](/build).
+Tous sont bien entendu Open-Source et disponibles sur Github.
 
-Pour l'heure, nous nous focalisons sur la création d'une grande quantité de contenus en français (sans traduction en anglais, donc), liés à la section [fondamentaux](/fundamentals/).
+## Suivre mon travail
 
-Ce travail devrais être achevé d'ici la fin de cette année 2020, ce qui nous permettra ensuite de délivrer par étapes des contenus courts sur ce site.
+Pour l'heure, souscrire aux parutions de nouvelles versions de ce projet [sur GitHub](https://github.com/fullwebdev/fullwebdev){target="\_blank"} (`Watch > releases only`) constitue la meilleure méthode pour suivre son évolution.
 
-Durant cette période, l'intégralité des illustrations et exemples de code étant créées en Open Source, vous retrouverez ceux-ci dans les section [Code & Démos](/fundamentals/code-samples/) et [fragments pédagogiques](/fundamentals/materials/).
-
-Nous maintenons également un "inventaire" de tous les projets que nous avons l'occasion d'étudier, présenter et utiliser dans la section [inventory](/inventory/) (non traduite de l'anglais pour l'instant).
-
-De plus, nous développons également plusieurs outils de développement afin de mieux concrétiser ce travail. Ceux-ci sont bien entendu également Open-Source, et seront présentés sur ce même site prochainement.
-
-Enfin, vous pouvez dès à présent consulter nos [codelabs](/codelabs/) et [conférences](/conferences/), ceux-ci ainsi que tous les éléments associés étant 100 % publiques et Open Source.
-
-## Nous suivre
-
-Pour l'heure, la meilleure manière de suivre l'avancement de notre travail consiste à souscrire aux parutions de nouvelles versions [sur GitHub](https://github.com/fullwebdev/fullwebdev){target="\_blank"} (`Watch > releases only`).
-
-Sachez que toute contribution sera la bienvenue ! N'hésitez donc pas à [ouvrir une issue](https://github.com/fullwebdev/fullwebdev/issues/new){target="\_blank"} si vous avez la moindre question ou que vous identifiez une anomalie, voir à soumettre une pull-request.
+Toute contribution est évidemment la bienvenue. N'hésitez donc pas à [ouvrir une issue](https://github.com/fullwebdev/fullwebdev/issues/new){target="\_blank"} si vous avez la moindre question ou que vous identifiez une anomalie, voir à soumettre une pull-request.
 
 :::tip
-Il vous est possible de directement éditer n'importe quelle page de ce site et de soumettre votre version en cliquant sur le lien "Éditez cette page sur GitHub" en bas à gauche.
+Vous pouvez également éditer plusieurs pages de ce site via Github, et ainsi soumettre vos suggestions, en cliquant sur le bouton "éditer" en haut à droite.
 :::
+
+Si vous êtes à la recherche de plus d'information sur ma personne et mes autres projets, rendez-vous sur ma page Web personnelle, [noelmace.com](https://noelmace.com){target="\_blank"}.
+Vous pouvez également me suivre sur [Twitter](https://twitter.com/noel_mace){target="\_blank"} et [LinkedIn](https://linkedin.com/in/noelmace){target="\_blank"}.
+N'hésitez pas, enfin, à m'envoyer un [message](https://twitter.com/messages/compose?recipient_id=191620154){target="\_blank"} si vous avez la moindre question, ou pensez que votre entreprise pourrait bénéficier de mes services.

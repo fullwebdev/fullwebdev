@@ -11,26 +11,28 @@ const meta = {
   twitterCard: "https://fullweb.dev/images/social/social_en.png",
 };
 
-const nav = {
-  en: ["Learn", "Build", "Keep Up"],
-  fr: ["Apprendre", "Créer", "S'informer"],
-};
-
-const languageSwitcher = {
-  fr:
-    'This website is also available in <a href="" data-lang="en" aria-label="switch to english">English</a>.',
-  en:
-    'Ce site et des contenus supplémentaires sont également disponibles en <a href="" data-lang="fr" aria-label="passer en français">français</a>.',
-};
+const scriptWordings = {
+  en: {
+    navLinks: ["Learn", "Build", "Keep Up"],
+    languageSwitch: 'Ce site et des contenus supplémentaires sont également disponibles en <a href="" data-lang="fr" aria-label="passer en français">français</a>.',
+  editButton: "edit",
+  },
+  fr: {
+    navLinks: ["Apprendre", "Créer", "S'informer"],
+    languageSwitch: 'This website is also available in <a href="" data-lang="en" aria-label="switch to english">English</a>.',
+  editButton: "éditer",
+  }
+}
 
 const script = {
-  nav: JSON.stringify(nav),
-  languageSwitch: JSON.stringify(languageSwitcher),
+  wordings: JSON.stringify(scriptWordings)
 };
 
 const css = {
   shell: readSource(import.meta, "shell.css"),
 };
+
+const globalClass = "on-homepage";
 
 export default {
   template: readTemplate(import.meta),
@@ -38,12 +40,14 @@ export default {
     "public/localized-files/en_ALL/index.html": {
       css,
       meta,
-      nav: nav.en,
+      nav: scriptWordings.en.navLinks,
       home: Mustache.render(homepage.template, homepage.langs.en),
       script,
+      editButton: scriptWordings.en.editButton,
       language: {
-        switch: languageSwitcher.en,
+        switch: scriptWordings.en.languageSwitch,
       },
+      globalClass,
     },
     "public/localized-files/fr_ALL/index.html": {
       css,
@@ -55,12 +59,14 @@ export default {
         },
         twitterCard: "https://fullweb.dev/images/social/social_fr.png",
       },
-      nav: nav.fr,
+      nav: scriptWordings.fr.navLinks,
       home: Mustache.render(homepage.template, homepage.langs.fr),
       script,
+      editButton: scriptWordings.fr.editButton,
       language: {
-        switch: languageSwitcher.fr,
+        switch: scriptWordings.fr.languageSwitch,
       },
+      globalClass,
     },
     "public/index.html": {
       css,

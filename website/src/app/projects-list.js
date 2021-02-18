@@ -16,6 +16,8 @@ export const selector = "app-projects-list";
  */
 const projectCard = (item) => html`<a
   href=${ifDefined(item.href)}
+  rel=${item.href && item.href.startsWith("http") ? "noopener noreferrer" : ""}
+  target=${item.href && item.href.startsWith("http") ? "_blank" : ""}
   class="project-card ${classMap({
     spotlight: !!item.spotlight,
     dimmed: !!item.wip,
@@ -43,8 +45,8 @@ const projectCard = (item) => html`<a
               html`<a
                 href="${cta.href}"
                 class="call-to-action ${classMap({ primary: !!cta.primary })}"
-                ?rel=${cta.href.startsWith("http") && "noopener noreferrer"}
-                ?target=${cta.href.startsWith("http") && "_blank"}
+                rel=${cta.href.startsWith("http") ? "noopener noreferrer" : ""}
+                target=${cta.href.startsWith("http") ? "_blank" : ""}
                 >${cta.text}</a
               >`
           )}
@@ -69,8 +71,16 @@ export default class ProjectsListElement extends LitElement {
         max-width: 512px;
       }
 
+      /* :focus {
+        outline: 1px dashed var(--primary-color, #555);
+      } */
+
       h1 {
         text-align: center;
+      }
+
+      h1:focus {
+        outline: none;
       }
 
       .abstract {
@@ -111,6 +121,10 @@ export default class ProjectsListElement extends LitElement {
           0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
       }
 
+      .project-card:only-child {
+        grid-column: 1/-1;
+      }
+
       .project-card.dimmed {
         filter: brightness(70%) blur(0.5px);
         background-color: rgba(0, 0, 0, 0.05);
@@ -125,7 +139,7 @@ export default class ProjectsListElement extends LitElement {
       }
 
       .project-card .desc .content {
-        text-align: justify;
+        text-align: center;
       }
 
       .project-card .actions {
@@ -143,6 +157,8 @@ export default class ProjectsListElement extends LitElement {
         display: flex;
         align-items: center;
         min-height: 180px;
+        max-width: 350px;
+        margin: 0 auto;
       }
 
       .project-card img {
@@ -210,6 +226,10 @@ export default class ProjectsListElement extends LitElement {
           column-gap: 2rem;
         }
 
+        .project-card.spotlight .desc .content {
+          text-align: justify;
+        }
+
         .project-card.spotlight .header {
           grid-column: span 2;
         }
@@ -270,13 +290,26 @@ export default class ProjectsListElement extends LitElement {
   render() {
     return html`
       <h1>${this.w.title}</h1>
-      <section class="abstract">${this.w.abstract}</section>
+      <section class="abstract">
+        <p>${this.w.abstract}</p>
+        ${this.w.intro ? html`<p><a href="/docs/">${this.w.intro}</a></p>` : ""}
+      </section>
       ${typeof this.w.items === "string"
         ? html`<p class="empty-grid">${this.w.items}</p>`
         : html`<section class="grid">
             ${this.w.items.map(projectCard)}
           </section>`}
     `;
+  }
+
+  updated() {
+    const heading = /** @type {ShadowRoot} */ (this.shadowRoot).querySelector(
+      "h1"
+    );
+    if (heading) {
+      heading.tabIndex = -1;
+      heading.focus();
+    }
   }
 }
 

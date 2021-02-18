@@ -1,3 +1,5 @@
+import { Language } from "./languages";
+
 export type ComponentProp =
   | string
   | number
@@ -8,7 +10,7 @@ export type ComponentProp =
 export type ComponentProps = Record<string, ComponentProp>;
 
 export interface AppRoute {
-  template?: () => Node;
+  template?: (lang: Language) => Node;
   templateName?: string;
   componentURL?: string;
   wordings?: string;

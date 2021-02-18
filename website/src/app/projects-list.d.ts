@@ -15,6 +15,7 @@ export interface ProjectListWording {
   title: string;
   abstract: string;
   items: Array<Project> | string;
+  intro?: string;
 }
 
 export type ProjectListWordings = Wordings<ProjectListWording>;

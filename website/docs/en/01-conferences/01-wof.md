@@ -1,6 +1,6 @@
-# Conference: The Web is on FIRE
+# The Web is on FIRE
 
-> The F.I.R.E. safety kit for everyone!\
+> The FIRE safety kit for everyone!\
 > Learn the best new capabilities of the modern web in one shot without burning out!
 
 ## Abstract
@@ -18,13 +18,17 @@ Let's take a few minutes to:
 
 So, are you ready for the future of the web?
 
-## [Devoxx Belgium](https://devoxx.be/speaker-details/?id=50822){target="\_blank"}
+## Recording
 
-> November 4, 2019, 13:30
-
+<div class="video-16x9">
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/lfubOlz3JLI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
-### Other versions
+Recorded on November 4, 2019, 13:30 at [Devoxx Belgium](https://devoxx.be/speaker-details/?id=50822){target="\_blank"}.
+
+[The slides are also available online.](/slides/wof/devfestnantes19/index.html){target="\_blank"}.
+
+## Other versions (in french)
 
 <!-- prettier-ignore -->
 | date | time  | event  | slides  | video  |

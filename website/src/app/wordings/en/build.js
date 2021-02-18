@@ -21,7 +21,7 @@ export default {
       cta: [
         {
           href:
-            "https://github.com/fullwebdev/fullwebdev/tree/new-website/packages/daucus",
+            "https://github.com/fullwebdev/fullwebdev/tree/master/packages/daucus",
           primary: true,
           text: "sources",
         },
@@ -34,7 +34,7 @@ export default {
     },
     {
       href:
-        "https://github.com/fullwebdev/fullwebdev/tree/new-website/packages/helpers",
+        "https://github.com/fullwebdev/fullwebdev/tree/master/packages/helpers",
       type: "Helpers",
       date: "v0",
       desc: {

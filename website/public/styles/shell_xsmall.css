@@ -16,6 +16,10 @@
   justify-content: flex-start;
 }
 
+.mdc-drawer .external-icons {
+  display: block;
+}
+
 /*#endregion navbar */
 
 /*#region content */

@@ -4,6 +4,15 @@
   max-width: 936px;
   margin: 0 auto;
 
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: inherit;
+  }
+
   a:hover {
     text-decoration: underline;
   }
@@ -228,5 +237,20 @@
     font-style: italic;
     margin: 1rem 0;
     color: var(--neutral-color-800);
+  }
+
+  .video-16x9 {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+  }
+
+  .video-16x9 iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
   }
 }

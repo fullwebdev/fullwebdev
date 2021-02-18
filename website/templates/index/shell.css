@@ -8,6 +8,7 @@ html {
   --primary-color: #002d61;
   --primary-color-stronger: #00152e;
   --primary-color-softer: #004594;
+  --link-color: #004594;
   --soft-bg-color: #f2f2f2;
   --mdc-theme-primary: var(--primary-color);
   --neutral-color-900: #212121;
@@ -21,7 +22,18 @@ html {
   --neutral-color-100: #f5f5f5;
   --neutral-color-50: #fafafa;
   --neutral-color-0: #fff;
+  --daucus-menu-active-color: var(--primary-color);
   font-size: 16px;
+}
+
+/* :focus {
+  outline: 1px dashed var(--primary-color, #555);
+} */
+
+h1:focus {
+  /* Is it ok? */
+  outline: none;
+  /* text-shadow: 1px 2px 3px rgb(60 64 67 / 30%); */
 }
 
 body {
@@ -108,6 +120,7 @@ h2 {
   margin: 0.5rem;
   background-color: var(--soft-bg-color);
   color: var(--primary-text-color-stronger);
+  border: none;
 }
 
 .call-to-action.primary {
@@ -139,6 +152,10 @@ h2 {
   box-sizing: border-box;
   flex-direction: column;
   width: 100%;
+
+  position: fixed;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+    0 2px 6px 2px rgba(60, 64, 67, 0.15);
 }
 
 #burger-menu {
@@ -147,7 +164,6 @@ h2 {
   margin-right: 1rem;
   border-radius: 5px;
   fill: var(--primary-color-stronger);
-  /* display: none; */
 }
 
 #main-header .row {
@@ -201,10 +217,36 @@ h2 {
 /*#endregion navbar*/
 
 /*#region content */
+#page-container {
+  margin-top: 1rem;
+}
+
 #page-message {
   background-color: var(--soft-bg-color);
   text-align: center;
   padding: 1rem;
+  display: none;
+}
+
+.main-content {
+  margin: 0 auto;
+}
+
+#standard-menu {
+  display: none;
+}
+
+#content-container {
+  padding-top: 3.6rem;
+}
+
+#edit-page-button[href=""],
+#edit-page-button:not([href]),
+#edit-page-button.hidden {
+  display: none;
+}
+
+#page-spinner {
   display: none;
 }
 /*#endregion content */

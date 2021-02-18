@@ -2,11 +2,11 @@
 export default {
   title: "Learn",
   abstract: `Gain an holistic and pragmatique view of Web Development at your own pace.`,
+  intro: "Introduction",
   items: [
     {
       type: "Lecture",
-      // TODO: page
-      href: "https://www.youtube.com/watch?v=lfubOlz3JLI",
+      href: "/docs/conferences/wof",
       date: "2019",
       desc: {
         title: "The Web is on FIRE",
@@ -20,8 +20,6 @@ export default {
     },
     {
       type: "Ressource",
-      // TODO
-      // href: "/inventory",
       date: "2021",
       wip: true,
       desc: {
@@ -36,8 +34,6 @@ export default {
     },
     {
       type: "Resource",
-      // TODO
-      // href: "/codelabs/modern-data-driven",
       wip: true,
       date: "2021",
       desc: {
@@ -61,7 +57,7 @@ export default {
       },
       img: {
         src: "/images/web-illustrations/content-team.svg",
-        height: 240,
+        height: 200,
         alt: "work in progress",
       },
       cta: [

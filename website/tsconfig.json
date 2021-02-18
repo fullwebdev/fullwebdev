@@ -19,6 +19,9 @@
     },
     {
       "path": "../packages/daucus/router/tsconfig.json"
+    },
+    {
+      "path": "../packages/daucus/menu/tsconfig.json"
     }
   ],
   "include": ["src"],

@@ -30,8 +30,6 @@ function uid() {
 async function responsiveTables(root) {
   const tables = root.querySelectorAll("table");
   if (tables.length < 1) return;
-  /** @type {HTMLStyleElement} */
-  // @ts-ignore cast Node into HTMLStyleElement
   const style = document.createElement("style");
   // base style is in daucus-pages.css
   style.setAttribute("media", "(max-width: 719px)");

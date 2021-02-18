@@ -1,10 +1,8 @@
-# Conference: PRPL
+# PRPL
 
 ## Abstract
 
 **It's time to join these fantastic four!**
-
-> The Web Performance pattern you should already know!
 
 Do you know about the PRPL Pattern?
 
@@ -16,9 +14,9 @@ I have good news for you: it’s not! Using the right tools; like PRPL-Server fo
 
 How about a demonstration, a step by step tutorial, along with an in-depth presentation? Let’s go then!
 
-## Best of Web
+## Talk (in french)
 
-> June 7, 2019, from 5:20 to 5:50 pm
+> June 7, 2019, from 5:20 to 5:50 pm at Best of Web, Paris
 
-- <a href="/slides/wof1/BoW-PRPL-2019.html" target="_blank">slides</a>
+- [slides](/slides/wof1/BoW-PRPL-2019.html){target="\_blank"}
 - [(:fr: fr) video](https://youtu.be/YSn8r0BDKTY){target="\_blank"}
