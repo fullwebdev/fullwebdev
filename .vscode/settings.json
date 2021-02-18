@@ -23,7 +23,8 @@
     "/packages/daucus/snowpack-template/src/templates/": true,
     "/website/src/styles/*.css": true,
     "/website/public/index.html": true,
-    "/website/public/localized-file/": true,
+    "/website/public/illustrations/": true,
+    "**/localized-file/": true,
     "**/_daucus_": true,
     "**/coverage": true,
     "**/types": true
