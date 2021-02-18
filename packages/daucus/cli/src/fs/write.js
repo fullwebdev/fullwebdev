@@ -6,9 +6,18 @@ import { ensureDir } from "./path.js";
  * @param {string} rootDir
  * @param {string} name
  * @param {import("../routing/Route").RoutesConfig} object
+ * @param {string} objectName
+ * @param {string} type
  */
-export async function writeJSObject(rootDir, name, object) {
-  const content = `export default ${JSON.stringify(object, null, 2)}`;
+export async function writeJSObject(rootDir, name, object, objectName, type) {
+  const content = `
+/**
+ * @type {${type}}
+ */
+const ${objectName} = ${JSON.stringify(object, null, 2)}
+
+export default ${objectName};
+`;
   await asyncFs.writeFile(resolve(rootDir, name), content, {
     encoding: "utf8",
   });

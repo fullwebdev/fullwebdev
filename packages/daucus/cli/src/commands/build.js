@@ -87,7 +87,13 @@ export class BuildCommand {
       })
     );
 
-    await writeJSObject(this.config.output, "routes.js", routes);
+    await writeJSObject(
+      this.config.output,
+      "routes.js",
+      routes,
+      "routes",
+      "import('@daucus/cli/src/routing/Route').I18NRoutesConfig"
+    );
     this._closeLogProgress();
     // TODO: copy js files
   }
