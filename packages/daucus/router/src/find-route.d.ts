@@ -5,6 +5,11 @@ export interface RouteMatch {
   route?: Partial<Route> | null;
 }
 
+export interface PositiveRouteMatch {
+  projectName: string;
+  route: Partial<Route>;
+}
+
 export interface I18NRouteMatch extends RouteMatch {
   lang: string;
 }

@@ -68,6 +68,7 @@ export class DaucusRouterWC extends HTMLElement {
       "navigation-end",
       "route-redirection",
       "route-match",
+      "project-change",
     ];
     for (const type of routerEventTypes) {
       this._router.addEventListener(type, (e) =>

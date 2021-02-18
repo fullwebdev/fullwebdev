@@ -8,10 +8,13 @@ export interface Route {
   title: string;
 }
 
-export interface ProjectRoutesConfig extends Partial<Route> {
+export interface RouteWithChildren extends Partial<Route> {
   children?: {
-    [key: string]: Partial<Route>;
+    [key: string]: RouteWithChildren;
   };
+}
+
+export interface ProjectRoutesConfig extends RouteWithChildren {
   menu?: string;
 }
 

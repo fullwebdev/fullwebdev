@@ -1,3 +1,4 @@
+/* eslint-disable max-classes-per-file */
 import { AbstractRouter } from "@modern-helpers/router";
 import { routeFinder } from "./route-finder.js";
 
@@ -6,9 +7,37 @@ import { routeFinder } from "./route-finder.js";
  * @typedef {import('./RoutesConfig').Route} Route
  * @typedef {import("@modern-helpers/router/src/navigation").NavigationOptions} NavigationOptions
  * @typedef {[string, NavigationOptions | undefined]} Navigation
- * @typedef {import('./route-match-event').RouteMatchEvent} RouteMatchEvent
- * @typedef {import('./route-match-event').RouteMatchEventDetail} RouteMatchEventDetail
+ * @typedef {import('./find-route').PositiveRouteMatch} PositiveRouteMatch
  */
+
+export class ProjectChangeEvent extends CustomEvent {
+  /**
+   * @param {string} projectName
+   */
+  constructor(projectName) {
+    super("project-change", {
+      detail: { projectName },
+    });
+  }
+}
+
+export class RouteMatchEvent extends CustomEvent {
+  /**
+   * @param {PositiveRouteMatch} routeMatch
+   * @param {string} base
+   */
+  constructor(routeMatch, base) {
+    super("route-match", {
+      detail: {
+        projectName: routeMatch.projectName,
+        route: routeMatch.route,
+        templateHRef: `${base + routeMatch.projectName}/${
+          routeMatch.route.templateUrl
+        }`,
+      },
+    });
+  }
+}
 
 export class DaucusRouter extends AbstractRouter {
   /**
@@ -28,6 +57,7 @@ export class DaucusRouter extends AbstractRouter {
     this.defaultPath = defaultPath;
     this._defaultDaucusRouteMatch = defaultDaucusRouteMatch;
     this.baseDir = baseDir;
+    this.currentProject = "";
   }
 
   /**
@@ -45,17 +75,13 @@ export class DaucusRouter extends AbstractRouter {
       const redirection = [this.defaultPath, options];
       return redirection;
     }
+    if (routeMatch.projectName !== this.currentProject) {
+      this.currentProject = routeMatch.projectName;
+      this.dispatchEvent(new ProjectChangeEvent(this.currentProject));
+    }
     this.dispatchEvent(
-      new CustomEvent("route-match", {
-        /** @type {RouteMatchEventDetail} */
-        detail: {
-          projectName: routeMatch.projectName,
-          route: routeMatch.route,
-          templateHRef: `${
-            (this.base || "/") + this.baseDir + routeMatch.projectName
-          }/${routeMatch.route.templateUrl}`,
-        },
-      })
+      // @ts-ignore routeMatch.route is truthy
+      new RouteMatchEvent(routeMatch, (this.base || "/") + this.baseDir)
     );
     return null;
   }
