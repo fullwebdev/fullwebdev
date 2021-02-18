@@ -26,7 +26,7 @@ function updateTitlePressed(menuEl, shouldBePressed) {
 
 export class DaucusMenu extends HTMLElement {
   static get observedAttributes() {
-    return ["project", "active-path"];
+    return ["active-path"];
   }
 
   constructor() {
@@ -38,115 +38,26 @@ export class DaucusMenu extends HTMLElement {
     /** @type {{ [key:string]: { menu: string }}} */
     this._routes = {};
     const shadowRoot = this.attachShadow({ mode: "open" });
-    shadowRoot.addEventListener("click", this.__handleClick.bind(this));
+    this.addEventListener("click", this.__handleClick.bind(this));
 
     const style = document.createElement("style");
     style.innerHTML = DaucusMenu.styles;
     shadowRoot.append(style);
-    this._wrapper = document.createElement("div");
-    shadowRoot.append(this._wrapper);
+    this._slot = document.createElement("slot");
+    this._slot.addEventListener("slotchange", () => {
+      if (this._activeSection) {
+        this._updateActiveSection(this._activeSection);
+      }
+    });
+    shadowRoot.append(this._slot);
   }
 
   static get styles() {
     return `
       :host {
-        padding: 2rem 2.5rem;
-        margin: 0 auto;
-        max-width: 740px;
         display: block;
-        text-align: left;
-      }
-
-      .menu-title {
-        font-weight: bold;
-        font-size: 20px;
-      }
-
-      ul {
-        list-style: none;
-      }
-
-      li {
-        padding: 7px 0;
-      }
-
-      button {
-        background: none;
-        border: none;
-        padding: 0;
-        font-family: inherit;
-        cursor: pointer;
-        font-size: 1em;
-        color: var(--color-entry-without-index, #666);
-        display: flex;
-        align-items: center;
-        width: 100%;
-      }
-
-      button:after {
-        content: "›";
-        width: 1em;
-        height: 1em;
-        font-weight: bold;
-        color: var(--color-entry-without-index, #666);
-        text-align: center;
-        transition: all 0.1s;
-        transform-origin: center;
-        line-height: 1em;
-        margin-left: .5em;
-      }
-
-      button[aria-pressed="true"]:after {
-        transform: rotate(90deg);
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .menu {
-        padding: 0;
-      }
-
-      .child-menu {
-        padding: 7px 0 0px 20px;
-        overflow: hidden;
-        max-height: 0px;
-        transition: max-height 150ms ease-out;
-      }
-
-      .child-menu.open {
-        max-height: 50vh;
-        transition: max-height 1s ease-out;
-      }
-
-      .section-title.active {
-        color: var(--color-active-title, #B20000);
-        font-weight: bold
       }
     `;
-  }
-
-  get routes() {
-    return this._routes;
-  }
-
-  set routes(routes) {
-    this._routes = routes;
-    this._render();
-  }
-
-  get project() {
-    return this.getAttribute("project");
-  }
-
-  set project(project) {
-    if (!project) {
-      this.removeAttribute("project");
-    } else {
-      this.setAttribute("project", project);
-    }
   }
 
   get activePath() {
@@ -157,12 +68,6 @@ export class DaucusMenu extends HTMLElement {
     this.setAttribute("active-path", path || "");
   }
 
-  get menuTemplate() {
-    if (!this.project || !this.routes || !this.routes[this.project])
-      return null;
-    return this.routes[this.project].menu;
-  }
-
   /**
    * @param {string} name
    * @param {string} oldValue
@@ -171,22 +76,19 @@ export class DaucusMenu extends HTMLElement {
   attributeChangedCallback(name, oldValue, newValue) {
     if (oldValue !== newValue) {
       if (name === "active-path") {
-        const anchor = this._wrapper.querySelector(`a[href="${newValue}"]`);
+        const anchor = this.querySelector(`a[href="${newValue}"]`);
         if (anchor) this._updateActiveSection(anchor);
-      } else if (name === "project") {
-        this._render();
       }
     }
   }
 
   connectedCallback() {
-    this._render();
+    this._clear();
   }
 
-  _render() {
+  _clear() {
     this._openedMenus.clear();
     this._activeSection = null;
-    this._wrapper.innerHTML = this.menuTemplate || "";
   }
 
   /**
@@ -198,7 +100,6 @@ export class DaucusMenu extends HTMLElement {
     if (target instanceof HTMLAnchorElement) {
       // FIXME: baseUrl
       this.activePath = new URL(target.href).pathname;
-      return;
     }
     this._updateActiveSection(target);
   }

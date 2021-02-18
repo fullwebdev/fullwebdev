@@ -6,16 +6,6 @@
       "description": "render the menu of a Daucus project from its configuration",
       "properties": [
         {
-          "name": "routes",
-          "type": "Object",
-          "description": "Daucus Routes configuration object"
-        },
-        {
-          "name": "project",
-          "type": "string",
-          "description": "name of the current Daucus project"
-        },
-        {
           "name": "activePath",
           "type": "string",
           "description": "route path to select in the menu"
