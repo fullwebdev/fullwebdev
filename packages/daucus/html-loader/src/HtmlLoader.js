@@ -1,8 +1,21 @@
+/* eslint-disable max-classes-per-file */
 /**
  * @param {string} msg
  */
 const errMsg = (msg) => `<p class="html-loader__error">${msg}</p>`;
 
+export class HTMLLoadingErrorEvent extends CustomEvent {
+  /**
+   * @param {Error} error
+   */
+  constructor(error) {
+    super("html-loading-error", {
+      detail: {
+        error,
+      },
+    });
+  }
+}
 export class HTMLLoaderElement extends HTMLElement {
   static get observedAttributes() {
     return ["href"];
@@ -31,20 +44,26 @@ export class HTMLLoaderElement extends HTMLElement {
   }
 
   /**
-   * @param {string | Node} nodeOrString
+   * @param {string | Node} [nodeOrString]
    */
   staticContent(nodeOrString) {
     this.href = "";
+    if (!nodeOrString) {
+      this.textContent = "";
+      return;
+    }
     if (typeof nodeOrString === "string") {
       this.innerHTML = nodeOrString;
-    } else if (nodeOrString instanceof Node) {
-      this.innerHTML = "";
-      this.appendChild(nodeOrString);
-    } else {
-      throw new Error(
-        "HTMLLoaderElement.staticContent() can only render a Node or a string"
-      );
+      return;
     }
+    if (nodeOrString instanceof Node) {
+      this.textContent = "";
+      this.appendChild(nodeOrString);
+      return;
+    }
+    throw new Error(
+      "HTMLLoaderElement.staticContent() can only render a Node or a string"
+    );
   }
 
   /**
@@ -91,6 +110,7 @@ export class HTMLLoaderElement extends HTMLElement {
       if (this.fallback && shouldFallback) {
         return this._loadHTML(this.fallback, false);
       }
+      this.dispatchEvent(new HTMLLoadingErrorEvent(err));
       html = errMsg(err.message);
     }
     const template = document.createElement("template");
