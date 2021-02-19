@@ -37,7 +37,7 @@ Conférence présentée le 20 mars 2019 de 13:30 à 16:30 au [Breizhcamp](https:
 
 > Consulter le [support de présentation](/slides/wof1/breizhcamp-2019.html){target="\_blank"} en ligne.
 
-### Autres présentations
+## Autres présentations
 
 <!-- prettier-ignore -->
 | date  | heure | évènement | support | vidéo |
@@ -45,14 +45,14 @@ Conférence présentée le 20 mars 2019 de 13:30 à 16:30 au [Breizhcamp](https:
 | 2019-12-10 | 14:00 | [Paris Open Source Summit](https://2019.opensourcesummit.paris/){target="\_blank"} | [poss19](/slides/wof/poss19/index.html){target="\_blank"}
 | 2019-10-11 | 12:00 | [ParisWeb](https://www.paris-web.fr/2019/conferences/the-web-is-on-fire.php){target="\_blank"} | [parisweb19](/slides/wof/parisweb19/index.html){target="\_blank"} | [vimeo](https://vimeo.com/380989996){target="\_blank"} |
 
-## Version longue en anglais
+### Version longue en anglais
 
 Présentée le 4 novembre 2019 à 13:30 au [Devoxx Belgium](https://devoxx.be/speaker-details/?id=50822){target="\_blank"}
 
-- [slides](/slides/wof/devoxxbe19/index.html){target="\_blank"}
-- [(vidéo](https://youtu.be/lfubOlz3JLI){target="\_blank"}
+- [supports](/slides/wof/devoxxbe19/index.html){target="\_blank"}
+- [vidéo](https://youtu.be/lfubOlz3JLI){target="\_blank"}
 
-## Sans oublier...
+### Sans oublier...
 
 Nous avons organisé avec [Wolfgang Goedel](https://twitter.com/wgoedel){target="\_blank"} une table ronde sur le sujet au [Best of Web](https://www.bestofweb.paris/2019/){target="\_blank"} le 6 juin 2019, de 14:00 à 16:00.
 
