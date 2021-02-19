@@ -292,7 +292,7 @@ export class AppRouter extends AbstractRouter {
     this._forcedLanguage = null;
 
     /** @private @type {HTMLLoaderElement | null} */
-    this._outlet = null;
+    this._possibleOutlet = null;
 
     window.addEventListener("languagechange", () => {
       this.navigate(this.currentPath, { skipLocationChange: true });
@@ -317,11 +317,15 @@ export class AppRouter extends AbstractRouter {
 
   /** @type {HTMLLoaderElement} */
   get outlet() {
-    if (!this._outlet) {
-      const outlet = /** @type {HTMLLoaderElement} */ (document.querySelector(
+    if (!this._possibleOutlet) {
+      let outlet = /** @type {HTMLLoaderElement} */ (document.querySelector(
         "html-loader"
       ));
-      if (!outlet) throw new Error("no html-loader element could be found");
+      if (!outlet) {
+        outlet = /** @type {HTMLLoaderElement} */ (document.createElement(
+          "html-loader"
+        ));
+      }
       outlet.addEventListener("html-loaded", async () => {
         const { stylePage } = await import("./pages.js");
         stylePage(this.outlet);
@@ -336,9 +340,9 @@ export class AppRouter extends AbstractRouter {
       outlet.addEventListener("html-loading-error", () => {
         this.navigate("/network-error", { skipLocationChange: true });
       });
-      this._outlet = outlet;
+      this._possibleOutlet = outlet;
     }
-    return this._outlet;
+    return this._possibleOutlet;
   }
 
   /** @private @type {HTMLElement} */
@@ -444,13 +448,9 @@ export class AppRouter extends AbstractRouter {
     fragment.append(...initialContent);
     this._appRoutes["/"].template = () => fragment.cloneNode(true);
 
-    const outlet = /** @type {HTMLLoaderElement} */ (document.createElement(
-      "html-loader"
-    ));
     pageContainer.innerHTML = "";
-    pageContainer.appendChild(outlet);
-    outlet.staticContent(fragment.cloneNode(true));
-    this._outlet = outlet;
+    pageContainer.appendChild(this.outlet);
+    this.outlet.staticContent(fragment.cloneNode(true));
   }
 
   /** @type {Language} */
