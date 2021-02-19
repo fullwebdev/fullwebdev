@@ -1,6 +1,6 @@
 {
   "name": "@modern-helpers/template",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "create pre-rendered elements with an HyperHTML syntax",
   "main": "index.js",
   "module": "index.js",

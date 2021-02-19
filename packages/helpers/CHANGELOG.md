@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/fullwebdev/fullwebdev/compare/helpers@v0.2.1...helpers@v0.3.0) (2021-02-19)
+
+### Features
+
+- **helpers:** new router helper ([ca0eeee](https://github.com/fullwebdev/fullwebdev/commit/ca0eeeedca486d563401365c0852710e7df68cce))
+- **helpers-router:** allow anchor child element ([9af9fcb](https://github.com/fullwebdev/fullwebdev/commit/9af9fcb15df49512e65e4efed4b876348edc6695))
+- **helpers-router:** handle get parameters ([88820e0](https://github.com/fullwebdev/fullwebdev/commit/88820e0a313ab68883146f780076e1cc308c8323))
+- **helpers-router:** restrict click listener ([ef1724a](https://github.com/fullwebdev/fullwebdev/commit/ef1724a78e8e620c3378ca3c3aedba4b50b49eb0))
+
+### Bug Fixes
+
+- **helpers-router:** links in shadow dom ([8a1c161](https://github.com/fullwebdev/fullwebdev/commit/8a1c1619129185852b4e1f65fea0cd75f933082d))
+
 ### [0.2.1](https://github.com/fullwebdev/fullwebdev/compare/helpers@v0.2.0...helpers@v0.2.1) (2020-12-10)
 
 ### Bug Fixes

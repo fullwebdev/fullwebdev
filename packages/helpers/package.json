@@ -1,6 +1,6 @@
 {
   "name": "modern-helpers",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Minimalistic helper functions for Modern Web Apps development.",
   "scripts": {
     "start": "es-dev-server --compatibility none",
