@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+
 import { MDCDrawer } from "@material/drawer";
 
 /** @typedef {import('./languages').Language} Language */
@@ -22,7 +24,9 @@ export class AppShell {
     this._elementsCache = new Map();
 
     router.addEventListener("navigation-start", () => {
-      this.querySelector("#edit-page-button").classList.add("hidden");
+      const editPageButton = this.querySelector("#edit-page-button");
+      editPageButton.classList.add("hidden");
+      editPageButton.removeAttribute("href");
       const pageSpinner = this.querySelector("#page-spinner");
       pageSpinner.classList.add("pending");
       setTimeout(() => {
@@ -65,16 +69,20 @@ export class AppShell {
     router.addEventListener("app-route-matched", (e) =>
       this._updateAppMenu(/** @type {AppRouteMatchedEvent} */ (e))
     );
-
-    this._mobileMediaQuery = window.matchMedia("(max-width: 1023px)");
-    this._mobileMediaQuery.addEventListener("change", () => {
-      // FIXME: menus doesn't always update there display after a window resize
-      this._updateDaucusMenu();
-    });
   }
 
   get w() {
     return this._wordings[this._router.preferredLanguage];
+  }
+
+  get daucusMenus() {
+    return [
+      this.querySelector("#mobile-menu"),
+      this.querySelector("#standard-menu"),
+    ].map((container) => ({
+      container,
+      menu: /** @type {DaucusMenu} */ (container.querySelector("daucus-menu")),
+    }));
   }
 
   initDrawer() {
@@ -121,7 +129,6 @@ export class AppShell {
        * @param {number} i
        */
       const addNavLinksText = (el, i) => {
-        // eslint-disable-next-line no-param-reassign
         /** @type {HTMLElement} */ (el).innerText = this.w.navLinks[i];
       };
 
@@ -149,12 +156,10 @@ export class AppShell {
       /** @type {MouseEvent} */ event
     ) => {
       event.preventDefault();
-      // eslint-disable-next-line no-param-reassign
       this._languageChanged = true;
-      const daucusMenu = /** @type {DaucusMenu} */ (this._currentMenuContainer.querySelector(
-        "daucus-menu"
-      ));
-      daucusMenu.activePath = "";
+      this.daucusMenus.forEach(({ menu }) => {
+        menu.activePath = "";
+      });
       this._router.preferredLanguage = /** @type {EventTarget & { dataset: {lang: Language } }}*/ (event.target).dataset.lang;
       this.updateShellLang();
       window.scrollTo(0, 0);
@@ -225,18 +230,16 @@ export class AppShell {
       this._daucusMenuModule = true;
     }
 
-    const menuContainer = this._currentMenuContainer;
-    const daucusMenu = /** @type {DaucusMenu} */ (menuContainer.querySelector(
-      "daucus-menu"
-    ));
-    if (oldProjectName !== newProjectName || this._languageChanged) {
-      daucusMenu.innerHTML = menuHTML;
-      menuContainer.style.display = "block";
-      this._languageChanged = false;
-    }
-    if (path !== daucusMenu.activePath) {
-      daucusMenu.activePath = path;
-    }
+    this.daucusMenus.forEach(({ container, menu }) => {
+      if (oldProjectName !== newProjectName || this._languageChanged) {
+        menu.innerHTML = menuHTML;
+        container.style.display = "block";
+      }
+      if (path !== menu.activePath) {
+        menu.activePath = path;
+      }
+    });
+    this._languageChanged = false;
   }
 
   /**
@@ -262,11 +265,5 @@ export class AppShell {
         el.setAttribute("aria-current", "page");
       }
     });
-  }
-
-  get _currentMenuContainer() {
-    return this._mobileMediaQuery.matches
-      ? this.querySelector("#mobile-menu")
-      : this.querySelector("#standard-menu");
   }
 }

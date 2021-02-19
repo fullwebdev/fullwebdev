@@ -224,9 +224,35 @@ const networkErrorTemplate = (w) => /* HTML */ `
 //#endregion networkError
 
 export class AppRouter extends AbstractRouter {
-  /** @type {import('./app-routes').AppRoutes} */
-  static get APP_ROUTES() {
+  static get WORDINGS() {
     return {
+      en: {
+        noTranslation: (/** @type {string} */ contributionFilePath) =>
+          `<p>There is no English version of this page.</p><p><a href="${AppRouter.GITHUB_REPO.url}/new/${AppRouter.GITHUB_REPO.branch}?filename=${contributionFilePath}" target="_blank" rel="noopener noreferer">Create one on Github</a></p>`,
+      },
+      fr: {
+        noTranslation: (/** @type {string} */ contributionFilePath) =>
+          `<p>Cette page n'existe pas en français.</p><p><a href="${AppRouter.GITHUB_REPO.url}/new/${AppRouter.GITHUB_REPO.branch}?filename=${contributionFilePath}" target="_blank" rel="noopener noreferer">Démarrer la traduction sur Github</a></p>`,
+      },
+    };
+  }
+
+  static get GITHUB_REPO() {
+    return {
+      url: "https://github.com/fullwebdev/fullwebdev/",
+      branch: "master",
+    };
+  }
+
+  /**
+   * @param {I18NRoutesConfig} daucusRoutesConfig
+   * @param {string} fragmentsDirectory
+   */
+  constructor(daucusRoutesConfig, fragmentsDirectory) {
+    super();
+
+    /** @type {import('./app-routes').AppRoutes} */
+    this._appRoutes = {
       "/": {
         templateName: "homepage",
       },
@@ -256,34 +282,7 @@ export class AppRouter extends AbstractRouter {
         wordings: "news",
       },
     };
-  }
 
-  static get WORDINGS() {
-    return {
-      en: {
-        noTranslation: (/** @type {string} */ contributionFilePath) =>
-          `<p>There is no English version of this page.</p><p><a href="${AppRouter.GITHUB_REPO.url}/new/${AppRouter.GITHUB_REPO.branch}?filename=${contributionFilePath}" target="_blank" rel="noopener noreferer">Create one on Github</a></p>`,
-      },
-      fr: {
-        noTranslation: (/** @type {string} */ contributionFilePath) =>
-          `<p>Cette page n'existe pas en français.</p><p><a href="${AppRouter.GITHUB_REPO.url}/new/${AppRouter.GITHUB_REPO.branch}?filename=${contributionFilePath}" target="_blank" rel="noopener noreferer">Démarrer la traduction sur Github</a></p>`,
-      },
-    };
-  }
-
-  static get GITHUB_REPO() {
-    return {
-      url: "https://github.com/fullwebdev/fullwebdev/",
-      branch: "master",
-    };
-  }
-
-  /**
-   * @param {I18NRoutesConfig} daucusRoutesConfig
-   * @param {string} fragmentsDirectory
-   */
-  constructor(daucusRoutesConfig, fragmentsDirectory) {
-    super();
     /** @private */
     this._findDaucusRoute = i18nRouteFinder(daucusRoutesConfig);
     /** @private */
@@ -303,7 +302,7 @@ export class AppRouter extends AbstractRouter {
       this.outlet.staticContent("");
     });
 
-    /** @type {string | null} */
+    /** @private @type {string | null} */
     this._currentDaucusProject = null;
 
     this._isUsingDaucus = false;
@@ -443,7 +442,7 @@ export class AppRouter extends AbstractRouter {
     const initialContent = pageContainer.childNodes;
     const fragment = document.createDocumentFragment();
     fragment.append(...initialContent);
-    AppRouter.APP_ROUTES["/"].template = () => fragment.cloneNode(true);
+    this._appRoutes["/"].template = () => fragment.cloneNode(true);
 
     const outlet = /** @type {HTMLLoaderElement} */ (document.createElement(
       "html-loader"
@@ -457,9 +456,13 @@ export class AppRouter extends AbstractRouter {
   /** @type {Language} */
   get preferredLanguage() {
     if (this._forcedLanguage) return this._forcedLanguage;
-    // only use english if user doesn't want/undestand french at all as may
-    // french speaking developers set their preferred language to "en"
-    // FIXME: this isn't the logic behing localized index files
+    /**
+     * only use english if user doesn't want/undestand french at all as many
+     * french speaking developers set their preferred language to "en"
+     *
+     * TODO: message to make this explicit to users as firebase does not
+     * follow the same logic for localized index files
+     */
     if (!window.navigator.languages.find((code) => code.startsWith("fr")))
       return "en";
     return "fr";
@@ -503,7 +506,7 @@ export class AppRouter extends AbstractRouter {
    * @private
    */
   async _findRoute(path) {
-    const appRoute = AppRouter.APP_ROUTES[path];
+    const appRoute = this._appRoutes[path];
     /** @type {string | null} */
     let templateUrl = null;
     /** @type {string | Node | null} */
