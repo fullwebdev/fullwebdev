@@ -50,6 +50,7 @@
     "release": "standard-version",
     "release:test": "standard-version --dry-run",
     "release:helpers": "cd packages/helpers && standard-version",
+    "release:daucus": "cd packages/daucus && standard-version",
     "release:wof-slides": "cd materials/slides/wof-2 && standard-version",
     "release:vanilla-slides": "cd materials/slides/vanilla-1 && standard-version",
     "update-subtrees": "monocli update",
