@@ -29,7 +29,7 @@ dist/
 /website/public/index.html
 /website/public/styles/build/*.css
 /website/public/styles/build/*.css.map
-/livre-build/public
+/dpawm-build/public
 _daucus_
 
 ## generated types
