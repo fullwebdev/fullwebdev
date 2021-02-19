@@ -15,6 +15,7 @@ package-lock.json
 /website/src/fragments/
 /packages/daucus/snowpack-template/src/templates/
 /website/src/styles/*.css
+/dpawm-build/public
 
 ## should stay as-is
 /packages/**/test-node/**/snapshots
