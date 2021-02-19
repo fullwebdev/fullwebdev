@@ -45,18 +45,18 @@ If you just want to help, but don't know where to start, you can simply [send a 
 
 ### <a name="website"></a> The [fullweb.dev](https://fullweb.dev) website
 
-Documentations and learning materials are at the core of FullWebDev. This is why most of this project revolves around our website.
+Documentations and learning materials are at the core of FullWebDev. This is why most of this project revolves around the website.
 
-> If you just want to make a small contribution to a page (e.g. to fix a typo), the easiest solution is to open this page in your browser (via [https://fullweb.dev](https://fullweb.dev)) and to click on the **Edit this page on GitHub** or **Éditer cette page sur GitHub** link at the bottom. This will help you create of fork of this repository, and open the source (markdown or js) of the page directly in GitHub.
+> If you just want to make a small contribution to a page (e.g. to fix a typo), the easiest solution is to open this page in your browser (via [https://fullweb.dev](https://fullweb.dev)) and to click on the **edit** or **éditer** button in the upper right corner. This will help you create of fork of this repository, and open the source (markdown or js) of the page directly in GitHub.
 >
 > Just make sure to follow our [commit message guidelines](#commit) when you're done.
 
 The [/website] folder makes the basis of this website, and most packages and/or their documentation are added to it to make even more pages, demonstrations, etc...
 
-Using our own static website generator, [Daucus](./packages/daucus), we devide the website source code and content into two parts:
+<!-- Using our own static website generator, [Daucus](./packages/daucus), we devide the website source code and content into two parts:
 
 1. "core" templates, pages and code, in the [/website](./website) directory
-2. additionnal contents from some other sub-projects in the [/packages/\*](./packages) directories
+2. additionnal contents from some other sub-projects in the [/packages/\*](./packages) directories -->
 
 ### <a name="packages"></a> Packages
 
@@ -65,13 +65,13 @@ Most packages are also parts of the website, but may provide more than that.
 <!-- prettier-ignore -->
 | package | usage |
 | ------- | ----- |
-| [/materials/benchmark/](https://github.com/fullwebdev/benchmark/) (submodule) | _WIP_ |
-| [/materials/code-samples/](./materials/code-samples/) | [/fundamentals/code-samples/](https://fullweb.dev/fundamentals/code-samples/) |
+| [/materials/benchmark/](https://github.com/fullwebdev/benchmark/) (submodule) | fork of [js-framework-benchmark](https://github.com/krausest/js-framework-benchmark) with  more "vanillajs" projects |
+| [/materials/code-samples/](./materials/code-samples/) | _WIP_ |
 | [/materials/codelabs/](./materials/codelabs/) | [/codelabs/](https://fullweb.dev/codelabs/) |
 | [/materials/data-driven-pwa/](./materials/data-driven-pwa/) | base project for the associated [codelab](https://fullweb.dev/codelabs/doc/modern-data-driven_fr/index.html) |
 | [/packages/helpers/](./packages/helpers/) | _helpers functions_ |
 | [/materials/illustrations/](./materials/illustrations/) | _images and more_ |
-| /materials/eni-dpawm/ (private) | [/fundamentals/materials/](https://fullweb.dev/fundamentals/materials/) |
+| /materials/eni-dpawm/ (private) | closed sources of the ["Applications Web Modernes" book](https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523) |
 | [/packages/daucus/](./packages/daucus/) | _static website generator_ |
 | [/materials/perf/](./materials/perf/) | _WIP_ |
 | [/materials/slides/wof-1/](./materials/slides/wof-1/) | [/slides/wof1/](https://fullweb.dev/slides/wof1/) (for historical purposes only) |
@@ -85,17 +85,11 @@ You'll find more information about each of these projects in their respective RE
 To run and build the website locally, you'll first need to install the following tools on your system:
 
 1. [Node.js & npm](https://nodejs.org/en/) current version (v14+)
-1. [pandoc](https://pandoc.org/installing.html)
 1. [Python 3](https://www.python.org/downloads/)
-1. [pandoc-import-code](https://github.com/noelmace/pandoc-import-code)
 
 Then, you'll need to install the dependencies for the whole monorepo by running `npm install` from the root directory.
 
-Finally, you can run the standalone website, without building any other packages, by going to the [/website](./website) directory and running `npm start -- --local`.
-
-> :warning: Access to the private repository associated to the `/materials/eni-dpawm/` submodule is, for now, restricted to the core team. Building the whole website (`npm run build`) requires this access, and Linux.
->
-> But don't worry: we have CI/CD for that, so there is a good chance you'll never need to do that. Just remember to always use the `--local` option when running a script in `/website`.
+Finally, you can run the standalone website, without building any other packages, by going to the [/website](./website) directory and running `npm start`.
 
 ## <a name="styleguides"></a> Styleguides
 
@@ -172,15 +166,22 @@ The following is the list of supported scopes:
 - `illustrations`
 - `eni-dpawm`
 - `perf`
-- `reveal`
 - `helpers`
 - `helpers-el`
 - `helpers-template`
 - `helpers-router`
 - `benchmark`
+- `daucus`
+- `daucus-cli`
+- `daucus-pandoc`
+- `html-loader`
+- `daucus-snowpack-template`
+- `daucus-router`
+- `daucus-menu`
+- `slides`
 - `slides-wof-1`
 - `slides-wof-2`
-- `slides-wof-3`
+- `slides-vanilla-1`
 
 Using the most precise scope (e.g. `helpers-el` and `daucus-cli`) should be prioritized over using a generic one (e.g., respectively, `helpers` and `daucus`), especially if the scope is `fix` or `feat`.
 
