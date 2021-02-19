@@ -30,6 +30,7 @@
 ## TL;DR
 
 Providing a holistic view of modern web development through learning materials, development libraries, and build tools.
+
 ## Philosophy
 
 Nowadays, Web Development is becoming more and more specialized, and dogmatic.
@@ -75,7 +76,6 @@ Opting, or not, for a framework or library, should only be based on context. Thi
 | [data-driven-pwa](https://github.com/fullwebdev/data-driven-pwa)<br>(sample app) | ![GitHub (subtree) last commit](https://img.shields.io/github/last-commit/fullwebdev/data-driven-pwa?label=subtree&logo=git) | [/materials/data-driven-pwa/](./materials/data-driven-pwa/)<br>(see the associated [codelab](https://fullweb.dev/docs/codelabs) for instructions) |
 | [slides](https://fullweb.dev/conferences/) | [![GitHub package.json version](https://img.shields.io/badge/dynamic/json?color=success&label=WoF%20S2&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ffullwebdev%2Ffullwebdev%2Fmaster%2Fpackages%2Fslides%2Fwof-2%2Fpackage.json)](https://fullweb.dev/slides/wof/latest/)<br>[![GitHub package.json version](https://img.shields.io/badge/dynamic/json?color=success&label=vanilla-1&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ffullwebdev%2Ffullwebdev%2Fmaster%2Fpackages%2Fslides%2Fvanilla-1%2Fpackage.json)](https://fullweb.dev/slides/vanilla1/latest/)<br>[![GitHub package.json version](https://img.shields.io/badge/dynamic/json?color=success&label=WoF%20S1&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ffullwebdev%2Ffullwebdev%2Fmaster%2Fpackages%2Fslides%2Fwof-1%2Fpackage.json)](https://fullweb.dev/slides/wof1/) | [/materials/slides/](./materials/slides/) |
 | [illustrations](https://github.com/fullwebdev/illustrations) | ![GitHub package.json version](https://img.shields.io/github/package-json/v/fullwebdev/illustrations) | [/materials/illustrations](./materials/illustrations)
-
 
 ## Status
 
