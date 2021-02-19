@@ -4,7 +4,7 @@
 <img src="website/public/images/favicon/android-icon-144x144.png" alt="logo"></img>
 </p>
 
-<p align="center"><b>Mastering the whole Modern Web</b></p>
+<p align="center"><b>A new perspective of Web Development</b></p>
 
 <!-- markdownlint-disable header-style -->
 
@@ -27,6 +27,23 @@
 <a href="https://github.com/fullwebdev/fullwebdev/actions?query=workflow%3A%22Deploy+to+dev%22"><img src="https://github.com/fullwebdev/fullwebdev/workflows/Deploy%20to%20dev/badge.svg" alt="Deploy to dev"></a>
 </p>
 
+## TL;DR
+
+Providing a holistic view of modern web development through learning materials, development libraries, and build tools.
+## Philosophy
+
+Nowadays, Web Development is becoming more and more specialized, and dogmatic.
+
+_"Which framework should I learn first?" "Which one should I choose for my project?"_ Nobody has a clear answer to those questions. And yet, those are the ones we hear the most.
+
+Developers are pushed to adopt one framework and to stick with it. To start learning web development with one of those, and then to become an "expert" on it. Even though people behind those frameworks are often working together, our community is torn apart by some trolls who never miss an opportunity to tell everyone how any other choice than theirs is wrong.
+
+From this, it's tempting to reject them all. To hope the framework era is close to its end. And to do everything on our own, without any external tool.
+
+We, at FullWeb.dev, think all these approaches can complete each other. That they don't contradict each other.
+
+Opting, or not, for a framework or library, should only be based on context. This requires a full understanding of the consequences of this choice.
+
 ## Projects
 
 ### Website
@@ -46,38 +63,19 @@
 |         | Releases | Directory |
 | ------- | -------- | --------- |
 | [static site generator](https://www.npmjs.com/package/@daucus/cli) | ![npm](https://img.shields.io/npm/v/@daucus/cli) | [/packages/daucus/](./packages/daucus/) |
-| [helpers](https://www.npmjs.com/package/modern-helpers) | ![npm](https://img.shields.io/npm/v/modern-helpers) | [/packages/helpers/](./packages/helpers/) |
+| [modern-helpers](https://www.npmjs.com/package/modern-helpers) | ![npm](https://img.shields.io/npm/v/modern-helpers) | [/packages/helpers/](./packages/helpers/) |
 
-### Modules
-
-> "submodules" of the website and subtrees of this monorepo which can also be used as part of other projects
+### Learning materials
 
 <!-- prettier-ignore -->
 |         | Releases | Directory |
 | ------- | -------- | --------- |
-| [code samples](https://fullweb.dev/fundamentals/code-samples/) | [![GitHub package.json version](https://img.shields.io/github/package-json/v/fullwebdev/code-samples?label=sandox&logo=codesandbox)](https://codesandbox.io/s/github/fullwebdev/fullwebdev/tree/master/materials/code-samples/src/) | [/materials/code-samples/](./materials/code-samples/) |
-| [codelabs](https://fullweb.dev/codelabs/) | ![GitHub package.json version](https://img.shields.io/badge/dynamic/json?color=important&label=version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ffullwebdev%2Ffullwebdev%2Fmaster%2Fpackages%2Fcodelabs%2Fpackage.json) | [/materials/codelabs/](./materials/codelabs/) |
-| [data-driven-pwa](https://github.com/fullwebdev/data-driven-pwa)<br>(sample app) | ![GitHub (subtree) last commit](https://img.shields.io/github/last-commit/fullwebdev/data-driven-pwa?label=subtree&logo=git) | [/materials/data-driven-pwa/](./materials/data-driven-pwa/)<br>(see the associated [codelab](https://fullweb.dev/codelabs) for instructions) |
+| code samples | [![GitHub package.json version](https://img.shields.io/github/package-json/v/fullwebdev/code-samples?label=sandox&logo=codesandbox)](https://codesandbox.io/s/github/fullwebdev/fullwebdev/tree/master/materials/code-samples/src/) | [/materials/code-samples/](./materials/code-samples/) |
+| [codelabs](https://fullweb.dev/docs/codelabs) | ![GitHub package.json version](https://img.shields.io/badge/dynamic/json?color=important&label=version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ffullwebdev%2Ffullwebdev%2Fmaster%2Fpackages%2Fcodelabs%2Fpackage.json) | [/materials/codelabs/](./materials/codelabs/) |
+| [data-driven-pwa](https://github.com/fullwebdev/data-driven-pwa)<br>(sample app) | ![GitHub (subtree) last commit](https://img.shields.io/github/last-commit/fullwebdev/data-driven-pwa?label=subtree&logo=git) | [/materials/data-driven-pwa/](./materials/data-driven-pwa/)<br>(see the associated [codelab](https://fullweb.dev/docs/codelabs) for instructions) |
 | [slides](https://fullweb.dev/conferences/) | [![GitHub package.json version](https://img.shields.io/badge/dynamic/json?color=success&label=WoF%20S2&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ffullwebdev%2Ffullwebdev%2Fmaster%2Fpackages%2Fslides%2Fwof-2%2Fpackage.json)](https://fullweb.dev/slides/wof/latest/)<br>[![GitHub package.json version](https://img.shields.io/badge/dynamic/json?color=success&label=vanilla-1&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ffullwebdev%2Ffullwebdev%2Fmaster%2Fpackages%2Fslides%2Fvanilla-1%2Fpackage.json)](https://fullweb.dev/slides/vanilla1/latest/)<br>[![GitHub package.json version](https://img.shields.io/badge/dynamic/json?color=success&label=WoF%20S1&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ffullwebdev%2Ffullwebdev%2Fmaster%2Fpackages%2Fslides%2Fwof-1%2Fpackage.json)](https://fullweb.dev/slides/wof1/) | [/materials/slides/](./materials/slides/) |
 | [illustrations](https://github.com/fullwebdev/illustrations) | ![GitHub package.json version](https://img.shields.io/github/package-json/v/fullwebdev/illustrations) | [/materials/illustrations](./materials/illustrations)
 
-## About
-
-Nowadays, Web Development is becoming more and more specialized, and dogmatic.
-
-_"Which framework should I learn first?" "Which one should I choose for my project?"_ Nobody has a clear answer to those questions. And yet, those are the ones we hear the most.
-
-Developers are pushed to adopt one framework and to stick with it. To start learning web development with one of those, and then to become an "expert" on it. Even though people behind those frameworks are often working together, our community is torn apart by some trolls who never miss an opportunity to tell everyone how any other choice than theirs is wrong.
-
-From this, it's tempting to reject them all. To hope the framework era is close to its end. And to do everything on our own, without any external tool.
-
-We, at FullWeb.dev, think **all these approaches can complete each other**. That they don't contradict each other.
-
-Opting, or not, for a framework or library, should only be based on context. This requires a full understanding of the consequences of this choice.
-
-**Our goal**: helping everyone to see the whole picture.
-
-**Our method** : studying and explaining each part of modern web development, one after the other. Not through the prism of one framework or library. But with the help of the Web standards. Allowing us to really understand and objectively compare each approach.
 
 ## Status
 
@@ -86,7 +84,7 @@ This website and the associated contents are still at a very early stage of deve
 If you want to be informed of the latest evolutions, subscribe to (i.e. "watch") this project's releases
 and follow [Noël Macé](https://twitter.com/intent/follow?screen_name=noel_mace) on Twitter.
 
-Contributions are very welcomed too, so do not hesitate to open an issue and to fork this repository and send a Pull-Request.
+Contributions are very welcomed too, so do not hesitate to open an issue and to fork this repository and send a Pull-Request. Don't forget to read [CONTRIBUTING.md](./CONTRIBUTING.md) first.
 
 ## License
 
