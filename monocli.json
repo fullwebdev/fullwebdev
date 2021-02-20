@@ -1,11 +1,6 @@
 {
   "projects": [
     {
-      "scope": "data-driven-pwa",
-      "directory": "materials/data-driven-pwa",
-      "url": "git@github.com:fullwebdev/data-driven-pwa.git"
-    },
-    {
       "scope": "illustrations",
       "directory": "materials/illustrations",
       "url": "git@github.com:fullwebdev/illustrations.git"

@@ -68,7 +68,6 @@ Most packages are also parts of the website, but may provide more than that.
 | [/materials/benchmark/](https://github.com/fullwebdev/benchmark/) (submodule) | fork of [js-framework-benchmark](https://github.com/krausest/js-framework-benchmark) with  more "vanillajs" projects |
 | [/materials/code-samples/](./materials/code-samples/) | _WIP_ |
 | [/materials/codelabs/](./materials/codelabs/) | [/codelabs/](https://fullweb.dev/codelabs/) |
-| [/materials/data-driven-pwa/](./materials/data-driven-pwa/) | base project for the associated [codelab](https://fullweb.dev/codelabs/doc/modern-data-driven_fr/index.html) |
 | [/packages/helpers/](./packages/helpers/) | _helpers functions_ |
 | [/materials/illustrations/](./materials/illustrations/) | _images and more_ |
 | /materials/eni-dpawm/ (private) | closed sources of the ["Applications Web Modernes" book](https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523) |
@@ -129,7 +128,7 @@ Any line of the commit message cannot be longer than 100 characters.
   │       │             │
   │       │             └─⫸ Summary in present tense. Not capitalized. No period at the end.
   │       │
-  │       └─⫸ Commit Scope: website | code-samples | codelabs | data-driven-pwa | illustrations |
+  │       └─⫸ Commit Scope: website | code-samples | codelabs | illustrations |
   │                          eni-dpawm | perf | slides-(vanilla-1|wof-1|wof-2) | helpers |
   │                          helpers-(el|template|router) | benchmark | daucus |
   |                          daucus-(cli|router|snowpack-starter|pandoc) | html-loader
@@ -162,7 +161,6 @@ The following is the list of supported scopes:
 - `website`
 - `code-samples`
 - `codelabs`
-- `data-driven-pwa`
 - `illustrations`
 - `eni-dpawm`
 - `perf`

@@ -33,14 +33,6 @@
       "type": "json"
     },
     {
-      "filename": "materials/data-driven-pwa/package.json",
-      "type": "json"
-    },
-    {
-      "filename": "materials/data-driven-pwa/package-lock.json",
-      "type": "json"
-    },
-    {
       "filename": "materials/illustrations/package.json",
       "type": "json"
     },
