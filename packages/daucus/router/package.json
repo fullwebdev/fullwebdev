@@ -1,6 +1,6 @@
 {
   "name": "@daucus/router",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "runtime routing & navigation for Daucus",
   "license": "MIT",
   "main": "index.js",
@@ -25,6 +25,6 @@
     "email": "contact@noelmace.com"
   },
   "dependencies": {
-    "@modern-helpers/router": "^0.2.1"
+    "@modern-helpers/router": "^0.3.0"
   }
 }
