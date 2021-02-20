@@ -23,7 +23,6 @@
 <p align="center">
 <a href="https://github.com/fullwebdev/fullwebdev/actions?query=workflow%3ADeploy"><img src="https://github.com/fullwebdev/fullwebdev/workflows/Deploy/badge.svg" alt="Deploy"></a>
 <a href="https://github.com/fullwebdev/fullwebdev/actions?query=workflow%3A%22Release+Subtrees%22"><img src="https://github.com/fullwebdev/fullwebdev/workflows/Release%20Subtrees/badge.svg" alt="Release Subtrees"></a>
-<a href="https://github.com/fullwebdev/fullwebdev/actions?query=workflow%3A%22Audit+Website%22"><img src="https://github.com/fullwebdev/fullwebdev/workflows/Audit%20Website/badge.svg" alt="Audit Website"></a>
 <a href="https://github.com/fullwebdev/fullwebdev/actions?query=workflow%3A%22Deploy+to+dev%22"><img src="https://github.com/fullwebdev/fullwebdev/workflows/Deploy%20to%20dev/badge.svg" alt="Deploy to dev"></a>
 </p>
 
@@ -63,8 +62,8 @@ Opting, or not, for a framework or library, should only be based on context. Thi
 <!-- prettier-ignore -->
 |         | Releases | Directory |
 | ------- | -------- | --------- |
-| [static site generator](https://www.npmjs.com/package/@daucus/cli) | ![npm](https://img.shields.io/npm/v/@daucus/cli) | [/packages/daucus/](./packages/daucus/) |
-| [modern-helpers](https://www.npmjs.com/package/modern-helpers) | ![npm](https://img.shields.io/npm/v/modern-helpers) | [/packages/helpers/](./packages/helpers/) |
+| [(semi-)static site generator](https://www.npmjs.com/package/@daucus/cli) | [![npm](https://img.shields.io/npm/v/@daucus/cli)](https://www.npmjs.com/search?q=%40daucus) | [/packages/daucus/](./packages/daucus/) |
+| [modern-helpers](https://www.npmjs.com/package/modern-helpers) | [![npm](https://img.shields.io/npm/v/modern-helpers)](https://www.npmjs.com/search?q=%40modern-helpers) | [/packages/helpers/](./packages/helpers/) |
 
 ### Learning materials
 
@@ -72,7 +71,7 @@ Opting, or not, for a framework or library, should only be based on context. Thi
 |         | Releases | Directory |
 | ------- | -------- | --------- |
 | code samples | [![GitHub package.json version](https://img.shields.io/github/package-json/v/fullwebdev/code-samples?label=sandox&logo=codesandbox)](https://codesandbox.io/s/github/fullwebdev/fullwebdev/tree/master/materials/code-samples/src/) | [/materials/code-samples/](./materials/code-samples/) |
-| [codelabs](https://fullweb.dev/docs/codelabs) | ![GitHub package.json version](https://img.shields.io/badge/dynamic/json?color=important&label=version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ffullwebdev%2Ffullwebdev%2Fmaster%2Fpackages%2Fcodelabs%2Fpackage.json) | [/materials/codelabs/](./materials/codelabs/) |
+| [codelabs](https://fullweb.dev/docs/codelabs) | ![GitHub package.json version](https://img.shields.io/badge/dynamic/json?color=important&label=version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ffullwebdev%2Ffullwebdev%2Fmaster%2Fmaterials%2Fcodelabs%2Fpackage.json) | [/materials/codelabs/](./materials/codelabs/) |
 | [data-driven-pwa](https://github.com/fullwebdev/data-driven-pwa)<br>(sample app) | ![GitHub (subtree) last commit](https://img.shields.io/github/last-commit/fullwebdev/data-driven-pwa?label=subtree&logo=git) | [/materials/data-driven-pwa/](./materials/data-driven-pwa/)<br>(see the associated [codelab](https://fullweb.dev/docs/codelabs) for instructions) |
 | [slides](https://fullweb.dev/conferences/) | [![GitHub package.json version](https://img.shields.io/badge/dynamic/json?color=success&label=WoF%20S2&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ffullwebdev%2Ffullwebdev%2Fmaster%2Fpackages%2Fslides%2Fwof-2%2Fpackage.json)](https://fullweb.dev/slides/wof/latest/)<br>[![GitHub package.json version](https://img.shields.io/badge/dynamic/json?color=success&label=vanilla-1&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ffullwebdev%2Ffullwebdev%2Fmaster%2Fpackages%2Fslides%2Fvanilla-1%2Fpackage.json)](https://fullweb.dev/slides/vanilla1/latest/)<br>[![GitHub package.json version](https://img.shields.io/badge/dynamic/json?color=success&label=WoF%20S1&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ffullwebdev%2Ffullwebdev%2Fmaster%2Fpackages%2Fslides%2Fwof-1%2Fpackage.json)](https://fullweb.dev/slides/wof1/) | [/materials/slides/](./materials/slides/) |
 | [illustrations](https://github.com/fullwebdev/illustrations) | ![GitHub package.json version](https://img.shields.io/github/package-json/v/fullwebdev/illustrations) | [/materials/illustrations](./materials/illustrations)
