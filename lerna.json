@@ -1,13 +1,16 @@
 {
   "packages": [
     "dpawm-build",
+    "materials/code-samples",
+    "materials/codelabs",
+    "materials/illustrations",
+    "materials/perf",
     "materials/slides/*",
     "packages/helpers",
     "packages/helpers/el",
     "packages/helpers/router",
     "packages/helpers/template",
     "packages/daucus/*",
-    "materials/*",
     "website"
   ],
   "version": "independent"

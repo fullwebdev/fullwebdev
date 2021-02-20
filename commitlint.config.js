@@ -8,7 +8,6 @@ module.exports = {
         "website",
         "code-samples",
         "codelabs",
-        "data-driven-pwa",
         "illustrations",
         "eni-dpawm",
         "perf",

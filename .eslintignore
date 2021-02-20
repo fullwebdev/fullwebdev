@@ -31,7 +31,6 @@ __mocks__
 ## compatibility / consistency
 /materials/code-samples/src/index.html
 /materials/perf/benchmarks
-/materials/data-driven-pwa
 
 ## generated
 /website/public/index.html
