@@ -28,7 +28,7 @@
           <dia:boolean val="true"/>
         </dia:attribute>
         <dia:attribute name="scaling">
-          <dia:real val="4"/>
+          <dia:real val="3"/>
         </dia:attribute>
         <dia:attribute name="fitto">
           <dia:boolean val="false"/>
@@ -131,16 +131,16 @@
     </dia:object>
     <dia:object type="Flowchart - Box" version="0" id="O2">
       <dia:attribute name="obj_pos">
-        <dia:point val="13.3156,13.55"/>
+        <dia:point val="13.3125,13.55"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="13.2156,13.45;39.5531,29.25"/>
+        <dia:rectangle val="13.2125,13.45;50.0469,29.25"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="13.3156,13.55"/>
+        <dia:point val="13.3125,13.55"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="26.137500000000003"/>
+        <dia:real val="36.634399999999999"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="15.599999999999998"/>
@@ -169,7 +169,7 @@
             <dia:real val="0.88476662992503918"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="26.3844,21.5484"/>
+            <dia:point val="31.6297,21.5484"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -182,19 +182,19 @@
     </dia:object>
     <dia:object type="Flowchart - Box" version="0" id="O3">
       <dia:attribute name="obj_pos">
-        <dia:point val="14.2237,14.2244"/>
+        <dia:point val="14.1047,14.0627"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="14.1737,14.1744;35.8987,18.4378"/>
+        <dia:rectangle val="14.0547,14.0127;49.2047,18.5994"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="14.2237,14.2244"/>
+        <dia:point val="14.1047,14.0627"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="21.625"/>
+        <dia:real val="35.049999999999983"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="4.1633332222700119"/>
+        <dia:real val="4.4866665378212929"/>
       </dia:attribute>
       <dia:attribute name="border_width">
         <dia:real val="0.10000000149011612"/>
@@ -212,17 +212,17 @@
         <dia:composite type="text">
           <dia:attribute name="string">
             <dia:string>#
-(implementation de l'ensemble des fonctionnalités de
-la plateforme Web + acceleration graphique)#</dia:string>
+(implémentation de l'ensemble des fonctionnalités de la plateforme Web
++ accélération graphique)#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="Liberation Sans" style="0" name="Courier"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="0.98777773976325989"/>
+            <dia:real val="1.1288888454437256"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="25.0362,15.5398"/>
+            <dia:point val="31.6297,15.4303"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -235,16 +235,16 @@ la plateforme Web + acceleration graphique)#</dia:string>
     </dia:object>
     <dia:object type="Flowchart - Box" version="0" id="O4">
       <dia:attribute name="obj_pos">
-        <dia:point val="14.2237,19.0989"/>
+        <dia:point val="13.7325,19.0989"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="14.1737,19.0489;32.4563,22.8489"/>
+        <dia:rectangle val="13.6825,19.0489;43.1088,22.8489"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="14.2237,19.0989"/>
+        <dia:point val="13.7325,19.0989"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="18.182500000000005"/>
+        <dia:real val="29.326299999999996"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="3.6999999999999993"/>
@@ -271,10 +271,10 @@ la plateforme Web + acceleration graphique)#</dia:string>
             <dia:font family="Liberation Sans" style="0" name="Courier"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="0.98777773976325989"/>
+            <dia:real val="1.1288888454437256"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="23.315,20.6765"/>
+            <dia:point val="28.3956,20.6376"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -287,10 +287,10 @@ la plateforme Web + acceleration graphique)#</dia:string>
     </dia:object>
     <dia:object type="Standard - Text" version="1" id="O5">
       <dia:attribute name="obj_pos">
-        <dia:point val="26.3844,21.35"/>
+        <dia:point val="31.6297,21.35"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="26.3844,20.7706;26.3844,21.4856"/>
+        <dia:rectangle val="31.6297,20.7706;31.6297,21.4856"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -304,7 +304,7 @@ la plateforme Web + acceleration graphique)#</dia:string>
             <dia:real val="0.80000000000000004"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="26.3844,21.35"/>
+            <dia:point val="31.6297,21.35"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -323,10 +323,10 @@ la plateforme Web + acceleration graphique)#</dia:string>
     </dia:object>
     <dia:object type="Standard - Text" version="1" id="O6">
       <dia:attribute name="obj_pos">
-        <dia:point val="26.3844,21.35"/>
+        <dia:point val="31.6297,21.35"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="26.3844,20.7706;26.3844,21.4856"/>
+        <dia:rectangle val="31.6297,20.7706;31.6297,21.4856"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -340,7 +340,7 @@ la plateforme Web + acceleration graphique)#</dia:string>
             <dia:real val="0.80000000000000004"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="26.3844,21.35"/>
+            <dia:point val="31.6297,21.35"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -359,10 +359,10 @@ la plateforme Web + acceleration graphique)#</dia:string>
     </dia:object>
     <dia:object type="Standard - Text" version="1" id="O7">
       <dia:attribute name="obj_pos">
-        <dia:point val="26.3844,21.35"/>
+        <dia:point val="31.6297,21.35"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="26.3844,20.7706;26.3844,21.4856"/>
+        <dia:rectangle val="31.6297,20.7706;31.6297,21.4856"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -376,7 +376,7 @@ la plateforme Web + acceleration graphique)#</dia:string>
             <dia:real val="0.80000000000000004"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="26.3844,21.35"/>
+            <dia:point val="31.6297,21.35"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -395,10 +395,10 @@ la plateforme Web + acceleration graphique)#</dia:string>
     </dia:object>
     <dia:object type="Standard - Text" version="1" id="O8">
       <dia:attribute name="obj_pos">
-        <dia:point val="36.3425,28.3625"/>
+        <dia:point val="46.7425,28.4625"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="34.225,27.596;38.46,28.5419"/>
+        <dia:rectangle val="44.205,27.5427;49.28,28.6778"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -409,10 +409,10 @@ la plateforme Web + acceleration graphique)#</dia:string>
             <dia:font family="Liberation Sans" style="80" name="Courier"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="1.0583332926034927"/>
+            <dia:real val="1.2699999511241913"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="36.3425,28.3625"/>
+            <dia:point val="46.7425,28.4625"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -428,13 +428,13 @@ la plateforme Web + acceleration graphique)#</dia:string>
     </dia:object>
     <dia:object type="Standard - Image" version="0" id="O9">
       <dia:attribute name="obj_pos">
-        <dia:point val="34.2175,22.815"/>
+        <dia:point val="44.6175,22.915"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="34.1675,22.765;38.5175,27.115"/>
+        <dia:rectangle val="44.5675,22.865;48.9175,27.215"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="34.2175,22.815"/>
+        <dia:point val="44.6175,22.915"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="4.25"/>
@@ -454,14 +454,14 @@ la plateforme Web + acceleration graphique)#</dia:string>
     </dia:object>
     <dia:object type="Standard - Line" version="0" id="O10">
       <dia:attribute name="obj_pos">
-        <dia:point val="16.3028,29.9919"/>
+        <dia:point val="16.5728,29.7413"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="16.1711,27.5419;17.4452,30.1236"/>
+        <dia:rectangle val="16.443,27.5436;17.5241,29.8711"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
-        <dia:point val="16.3028,29.9919"/>
-        <dia:point val="17.3136,27.6736"/>
+        <dia:point val="16.5728,29.7413"/>
+        <dia:point val="17.3942,27.6735"/>
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
@@ -482,16 +482,16 @@ la plateforme Web + acceleration graphique)#</dia:string>
     </dia:object>
     <dia:object type="Flowchart - Box" version="0" id="O11">
       <dia:attribute name="obj_pos">
-        <dia:point val="14.1737,23.56"/>
+        <dia:point val="13.7325,23.56"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="14.1237,23.51;22.3188,27.6733"/>
+        <dia:rectangle val="13.6825,23.51;22.76,27.6733"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="14.1737,23.56"/>
+        <dia:point val="13.7325,23.56"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="8.0950000029802318"/>
+        <dia:real val="8.9775000014901174"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="4.0633332207798958"/>
@@ -518,10 +518,10 @@ la plateforme Web + acceleration graphique)#</dia:string>
             <dia:font family="Liberation Sans" style="0" name="Courier"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="0.98777773976325989"/>
+            <dia:real val="1.1288888454437256"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="18.2213,25.3193"/>
+            <dia:point val="18.2212,25.2803"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -534,19 +534,19 @@ la plateforme Web + acceleration graphique)#</dia:string>
     </dia:object>
     <dia:object type="Flowchart - Box" version="0" id="O12">
       <dia:attribute name="obj_pos">
-        <dia:point val="23.0769,23.51"/>
+        <dia:point val="23.4627,23.6667"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="23.0269,23.46;30.2094,27.7233"/>
+        <dia:rectangle val="23.4127,23.6167;37.3358,27.5667"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="23.0769,23.51"/>
+        <dia:point val="23.4627,23.6667"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="7.0824999999999889"/>
+        <dia:real val="13.8231"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="4.1633332222700119"/>
+        <dia:real val="3.8499999999999979"/>
       </dia:attribute>
       <dia:attribute name="border_width">
         <dia:real val="0.10000000149011612"/>
@@ -564,17 +564,16 @@ la plateforme Web + acceleration graphique)#</dia:string>
         <dia:composite type="text">
           <dia:attribute name="string">
             <dia:string>#
-( bibliothèque
-graphique 2D)#</dia:string>
+( bibliothèque graphique 2D)#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="Liberation Sans" style="0" name="Courier"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="0.98777773976325989"/>
+            <dia:real val="1.1288888454437256"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="26.6181,24.8254"/>
+            <dia:point val="30.3742,25.2803"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -587,10 +586,10 @@ graphique 2D)#</dia:string>
     </dia:object>
     <dia:object type="Standard - Text" version="1" id="O13">
       <dia:attribute name="obj_pos">
-        <dia:point val="30.9675,25.983"/>
+        <dia:point val="37.9884,26.2961"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="30.9675,24.9611;31.905,26.2223"/>
+        <dia:rectangle val="37.9884,24.4566;39.6834,26.7267"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -598,13 +597,13 @@ graphique 2D)#</dia:string>
             <dia:string>#...#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
-            <dia:font family="Liberation Sans" style="0" name="Courier"/>
+            <dia:font family="Liberation Sans" style="80" name="Courier"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="1.411111056804657"/>
+            <dia:real val="2.5399999022483826"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="30.9675,25.983"/>
+            <dia:point val="37.9884,26.2961"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -620,19 +619,19 @@ graphique 2D)#</dia:string>
     </dia:object>
     <dia:object type="Standard - Image" version="0" id="O14">
       <dia:attribute name="obj_pos">
-        <dia:point val="13.5675,30.0915"/>
+        <dia:point val="12.8675,29.8415"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="13.5175,30.0415;17.8675,32.7419"/>
+        <dia:rectangle val="12.8175,29.7915;18.815,33.5"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="13.5675,30.0915"/>
+        <dia:point val="12.8675,29.8415"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="4.25"/>
+        <dia:real val="5.8975496292114276"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="2.6004237288135594"/>
+        <dia:real val="3.6085000038146937"/>
       </dia:attribute>
       <dia:attribute name="draw_border">
         <dia:boolean val="false"/>
@@ -646,10 +645,10 @@ graphique 2D)#</dia:string>
     </dia:object>
     <dia:object type="Standard - Text" version="1" id="O15">
       <dia:attribute name="obj_pos">
-        <dia:point val="23.4387,15.35"/>
+        <dia:point val="29.7135,15.4"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="23.4387,14.5835;26.6387,15.5294"/>
+        <dia:rectangle val="29.7135,14.4802;33.546,15.6153"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -660,10 +659,10 @@ graphique 2D)#</dia:string>
             <dia:font family="Liberation Sans" style="80" name="Courier"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="1.0583332926034927"/>
+            <dia:real val="1.2699999511241913"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="23.4387,15.35"/>
+            <dia:point val="29.7135,15.4"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -679,10 +678,10 @@ graphique 2D)#</dia:string>
     </dia:object>
     <dia:object type="Standard - Text" version="1" id="O16">
       <dia:attribute name="obj_pos">
-        <dia:point val="22.28,20.45"/>
+        <dia:point val="27.1544,20.45"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="22.28,19.6835;24.35,20.6294"/>
+        <dia:rectangle val="27.1544,19.5302;29.6369,20.6653"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -693,10 +692,10 @@ graphique 2D)#</dia:string>
             <dia:font family="Liberation Sans" style="80" name="Courier"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="1.0583332926034927"/>
+            <dia:real val="1.2699999511241913"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="22.28,20.45"/>
+            <dia:point val="27.1544,20.45"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -715,7 +714,7 @@ graphique 2D)#</dia:string>
         <dia:point val="17.7037,24.9715"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="17.7037,24.205;18.7387,25.1509"/>
+        <dia:rectangle val="17.7037,24.0517;18.9462,25.1868"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -726,7 +725,7 @@ graphique 2D)#</dia:string>
             <dia:font family="Liberation Sans" style="80" name="Courier"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="1.0583332926034927"/>
+            <dia:real val="1.2699999511241913"/>
           </dia:attribute>
           <dia:attribute name="pos">
             <dia:point val="17.7037,24.9715"/>
@@ -745,10 +744,10 @@ graphique 2D)#</dia:string>
     </dia:object>
     <dia:object type="Standard - Text" version="1" id="O18">
       <dia:attribute name="obj_pos">
-        <dia:point val="25.7481,24.7265"/>
+        <dia:point val="29.4981,25.0265"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="25.7481,23.96;27.4881,24.9059"/>
+        <dia:rectangle val="29.4981,24.1067;31.5881,25.2418"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -759,10 +758,108 @@ graphique 2D)#</dia:string>
             <dia:font family="Liberation Sans" style="80" name="Courier"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="1.0583332926034927"/>
+            <dia:real val="1.2699999511241913"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="25.7481,24.7265"/>
+            <dia:point val="29.4981,25.0265"/>
+          </dia:attribute>
+          <dia:attribute name="color">
+            <dia:color val="#000000"/>
+          </dia:attribute>
+          <dia:attribute name="alignment">
+            <dia:enum val="0"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Box" version="0" id="O19">
+      <dia:attribute name="obj_pos">
+        <dia:point val="13.3594,11.325"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="13.3094,11.275;49.95,13.175"/>
+      </dia:attribute>
+      <dia:attribute name="elem_corner">
+        <dia:point val="13.3594,11.325"/>
+      </dia:attribute>
+      <dia:attribute name="elem_width">
+        <dia:real val="36.540599999999998"/>
+      </dia:attribute>
+      <dia:attribute name="elem_height">
+        <dia:real val="1.7999999999999972"/>
+      </dia:attribute>
+      <dia:attribute name="border_width">
+        <dia:real val="0.10000000149011612"/>
+      </dia:attribute>
+      <dia:attribute name="inner_color">
+        <dia:color val="#ffc0cb"/>
+      </dia:attribute>
+      <dia:attribute name="show_background">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="line_style">
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="dashlength">
+        <dia:real val="0.50000000000000011"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Text" version="1" id="O20">
+      <dia:attribute name="obj_pos">
+        <dia:point val="31.6297,12.5185"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="26.7972,11.5987;36.4622,12.7338"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#Content Public APIs#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="font">
+            <dia:font family="Liberation Sans" style="80" name="Courier"/>
+          </dia:attribute>
+          <dia:attribute name="height">
+            <dia:real val="1.2699999511241913"/>
+          </dia:attribute>
+          <dia:attribute name="pos">
+            <dia:point val="31.6297,12.5185"/>
+          </dia:attribute>
+          <dia:attribute name="color">
+            <dia:color val="#000000"/>
+          </dia:attribute>
+          <dia:attribute name="alignment">
+            <dia:enum val="1"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Text" version="1" id="O21">
+      <dia:attribute name="obj_pos">
+        <dia:point val="48.7597,8.44333"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="48.7597,7.62578;49.5097,8.63472"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#...#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="font">
+            <dia:font family="Liberation Sans" style="80" name="Courier"/>
+          </dia:attribute>
+          <dia:attribute name="height">
+            <dia:real val="1.1288888454437256"/>
+          </dia:attribute>
+          <dia:attribute name="pos">
+            <dia:point val="48.7597,8.44333"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -777,58 +874,52 @@ graphique 2D)#</dia:string>
       </dia:attribute>
     </dia:object>
     <dia:group>
-      <dia:object type="Standard - Box" version="0" id="O19">
+      <dia:object type="Standard - Image" version="0" id="O22">
         <dia:attribute name="obj_pos">
-          <dia:point val="13.2594,11.325"/>
+          <dia:point val="14.2597,7.32792"/>
         </dia:attribute>
         <dia:attribute name="obj_bb">
-          <dia:rectangle val="13.2094,11.275;39.5594,13.175"/>
+          <dia:rectangle val="14.2097,7.27792;17.6047,10.6729"/>
         </dia:attribute>
         <dia:attribute name="elem_corner">
-          <dia:point val="13.2594,11.325"/>
+          <dia:point val="14.2597,7.32792"/>
         </dia:attribute>
         <dia:attribute name="elem_width">
-          <dia:real val="26.250000000000004"/>
+          <dia:real val="3.294999361038208"/>
         </dia:attribute>
         <dia:attribute name="elem_height">
-          <dia:real val="1.7999999999999972"/>
+          <dia:real val="3.2950000762939462"/>
         </dia:attribute>
-        <dia:attribute name="border_width">
-          <dia:real val="0.10000000149011612"/>
+        <dia:attribute name="draw_border">
+          <dia:boolean val="false"/>
         </dia:attribute>
-        <dia:attribute name="inner_color">
-          <dia:color val="#ffc0cb"/>
-        </dia:attribute>
-        <dia:attribute name="show_background">
+        <dia:attribute name="keep_aspect">
           <dia:boolean val="true"/>
         </dia:attribute>
-        <dia:attribute name="line_style">
-          <dia:enum val="1"/>
-        </dia:attribute>
-        <dia:attribute name="dashlength">
-          <dia:real val="0.50000000000000011"/>
+        <dia:attribute name="file">
+          <dia:string>#/home/noel/Images/Google_Chrome_icon_(September_2014).svg#</dia:string>
         </dia:attribute>
       </dia:object>
-      <dia:object type="Standard - Text" version="1" id="O20">
+      <dia:object type="Standard - Text" version="1" id="O23">
         <dia:attribute name="obj_pos">
-          <dia:point val="26.3844,12.5185"/>
+          <dia:point val="15.9072,6.40514"/>
         </dia:attribute>
         <dia:attribute name="obj_bb">
-          <dia:rectangle val="22.3531,11.7521;30.4156,12.6979"/>
+          <dia:rectangle val="14.1997,5.58758;17.6147,6.59652"/>
         </dia:attribute>
         <dia:attribute name="text">
           <dia:composite type="text">
             <dia:attribute name="string">
-              <dia:string>#Content Public APIs#</dia:string>
+              <dia:string>#Chrome#</dia:string>
             </dia:attribute>
             <dia:attribute name="font">
               <dia:font family="Liberation Sans" style="80" name="Courier"/>
             </dia:attribute>
             <dia:attribute name="height">
-              <dia:real val="1.0583332926034927"/>
+              <dia:real val="1.1288888454437256"/>
             </dia:attribute>
             <dia:attribute name="pos">
-              <dia:point val="26.3844,12.5185"/>
+              <dia:point val="15.9072,6.40514"/>
             </dia:attribute>
             <dia:attribute name="color">
               <dia:color val="#000000"/>
@@ -844,32 +935,59 @@ graphique 2D)#</dia:string>
       </dia:object>
     </dia:group>
     <dia:group>
-      <dia:object type="Standard - Text" version="1" id="O21">
+      <dia:object type="Standard - Image" version="0" id="O24">
         <dia:attribute name="obj_pos">
-          <dia:point val="38.5156,9.69386"/>
+          <dia:point val="20.5019,7.78"/>
         </dia:attribute>
         <dia:attribute name="obj_bb">
-          <dia:rectangle val="38.5156,8.67191;39.4531,9.93309"/>
+          <dia:rectangle val="20.4519,7.73;23.5969,10.875"/>
+        </dia:attribute>
+        <dia:attribute name="elem_corner">
+          <dia:point val="20.5019,7.78"/>
+        </dia:attribute>
+        <dia:attribute name="elem_width">
+          <dia:real val="3.0450003147125244"/>
+        </dia:attribute>
+        <dia:attribute name="elem_height">
+          <dia:real val="3.0450000762939462"/>
+        </dia:attribute>
+        <dia:attribute name="draw_border">
+          <dia:boolean val="false"/>
+        </dia:attribute>
+        <dia:attribute name="keep_aspect">
+          <dia:boolean val="true"/>
+        </dia:attribute>
+        <dia:attribute name="file">
+          <dia:string>#/home/noel/Images/Samsung_Internet_logo.svg#</dia:string>
+        </dia:attribute>
+      </dia:object>
+      <dia:object type="Standard - Text" version="1" id="O25">
+        <dia:attribute name="obj_pos">
+          <dia:point val="22.0244,6.20305"/>
+        </dia:attribute>
+        <dia:attribute name="obj_bb">
+          <dia:rectangle val="19.9906,5.38549;24.0581,7.52332"/>
         </dia:attribute>
         <dia:attribute name="text">
           <dia:composite type="text">
             <dia:attribute name="string">
-              <dia:string>#...#</dia:string>
+              <dia:string>#Samsung
+Internet#</dia:string>
             </dia:attribute>
             <dia:attribute name="font">
-              <dia:font family="Liberation Sans" style="0" name="Courier"/>
+              <dia:font family="Liberation Sans" style="80" name="Courier"/>
             </dia:attribute>
             <dia:attribute name="height">
-              <dia:real val="1.411111056804657"/>
+              <dia:real val="1.1288888454437256"/>
             </dia:attribute>
             <dia:attribute name="pos">
-              <dia:point val="38.5156,9.69386"/>
+              <dia:point val="22.0244,6.20305"/>
             </dia:attribute>
             <dia:attribute name="color">
               <dia:color val="#000000"/>
             </dia:attribute>
             <dia:attribute name="alignment">
-              <dia:enum val="0"/>
+              <dia:enum val="1"/>
             </dia:attribute>
           </dia:composite>
         </dia:attribute>
@@ -877,373 +995,250 @@ graphique 2D)#</dia:string>
           <dia:enum val="3"/>
         </dia:attribute>
       </dia:object>
-      <dia:group>
-        <dia:object type="Standard - Image" version="0" id="O22">
-          <dia:attribute name="obj_pos">
-            <dia:point val="13.3656,7.655"/>
-          </dia:attribute>
-          <dia:attribute name="obj_bb">
-            <dia:rectangle val="13.3156,7.605;16.7106,11"/>
-          </dia:attribute>
-          <dia:attribute name="elem_corner">
-            <dia:point val="13.3656,7.655"/>
-          </dia:attribute>
-          <dia:attribute name="elem_width">
-            <dia:real val="3.294999361038208"/>
-          </dia:attribute>
-          <dia:attribute name="elem_height">
-            <dia:real val="3.2950000762939462"/>
-          </dia:attribute>
-          <dia:attribute name="draw_border">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-          <dia:attribute name="keep_aspect">
-            <dia:boolean val="true"/>
-          </dia:attribute>
-          <dia:attribute name="file">
-            <dia:string>#/home/noel/Images/Google_Chrome_icon_(September_2014).svg#</dia:string>
-          </dia:attribute>
-        </dia:object>
-        <dia:object type="Standard - Text" version="1" id="O23">
-          <dia:attribute name="obj_pos">
-            <dia:point val="15.0131,6.73222"/>
-          </dia:attribute>
-          <dia:attribute name="obj_bb">
-            <dia:rectangle val="13.5081,5.96575;16.5181,6.91164"/>
-          </dia:attribute>
-          <dia:attribute name="text">
-            <dia:composite type="text">
-              <dia:attribute name="string">
-                <dia:string>#Chrome#</dia:string>
-              </dia:attribute>
-              <dia:attribute name="font">
-                <dia:font family="Liberation Sans" style="0" name="Courier"/>
-              </dia:attribute>
-              <dia:attribute name="height">
-                <dia:real val="1.0583332926034927"/>
-              </dia:attribute>
-              <dia:attribute name="pos">
-                <dia:point val="15.0131,6.73222"/>
-              </dia:attribute>
-              <dia:attribute name="color">
-                <dia:color val="#000000"/>
-              </dia:attribute>
-              <dia:attribute name="alignment">
-                <dia:enum val="1"/>
-              </dia:attribute>
-            </dia:composite>
-          </dia:attribute>
-          <dia:attribute name="valign">
-            <dia:enum val="3"/>
-          </dia:attribute>
-        </dia:object>
-      </dia:group>
-      <dia:group>
-        <dia:object type="Standard - Image" version="0" id="O24">
-          <dia:attribute name="obj_pos">
-            <dia:point val="17.9405,7.78"/>
-          </dia:attribute>
-          <dia:attribute name="obj_bb">
-            <dia:rectangle val="17.8905,7.73;21.0355,10.875"/>
-          </dia:attribute>
-          <dia:attribute name="elem_corner">
-            <dia:point val="17.9405,7.78"/>
-          </dia:attribute>
-          <dia:attribute name="elem_width">
-            <dia:real val="3.0450003147125244"/>
-          </dia:attribute>
-          <dia:attribute name="elem_height">
-            <dia:real val="3.0450000762939462"/>
-          </dia:attribute>
-          <dia:attribute name="draw_border">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-          <dia:attribute name="keep_aspect">
-            <dia:boolean val="true"/>
-          </dia:attribute>
-          <dia:attribute name="file">
-            <dia:string>#/home/noel/Images/Samsung_Internet_logo.svg#</dia:string>
-          </dia:attribute>
-        </dia:object>
-        <dia:object type="Standard - Text" version="1" id="O25">
-          <dia:attribute name="obj_pos">
-            <dia:point val="19.463,6.20305"/>
-          </dia:attribute>
-          <dia:attribute name="obj_bb">
-            <dia:rectangle val="17.6767,5.43659;21.2492,7.4408"/>
-          </dia:attribute>
-          <dia:attribute name="text">
-            <dia:composite type="text">
-              <dia:attribute name="string">
-                <dia:string>#Samsung
-Internet#</dia:string>
-              </dia:attribute>
-              <dia:attribute name="font">
-                <dia:font family="Liberation Sans" style="0" name="Courier"/>
-              </dia:attribute>
-              <dia:attribute name="height">
-                <dia:real val="1.0583332926034927"/>
-              </dia:attribute>
-              <dia:attribute name="pos">
-                <dia:point val="19.463,6.20305"/>
-              </dia:attribute>
-              <dia:attribute name="color">
-                <dia:color val="#000000"/>
-              </dia:attribute>
-              <dia:attribute name="alignment">
-                <dia:enum val="1"/>
-              </dia:attribute>
-            </dia:composite>
-          </dia:attribute>
-          <dia:attribute name="valign">
-            <dia:enum val="3"/>
-          </dia:attribute>
-        </dia:object>
-      </dia:group>
-      <dia:group>
-        <dia:object type="Standard - Image" version="0" id="O26">
-          <dia:attribute name="obj_pos">
-            <dia:point val="22.2653,7.84308"/>
-          </dia:attribute>
-          <dia:attribute name="obj_bb">
-            <dia:rectangle val="22.2153,7.79308;25.256,10.8119"/>
-          </dia:attribute>
-          <dia:attribute name="elem_corner">
-            <dia:point val="22.2653,7.84308"/>
-          </dia:attribute>
-          <dia:attribute name="elem_width">
-            <dia:real val="2.9407000541687012"/>
-          </dia:attribute>
-          <dia:attribute name="elem_height">
-            <dia:real val="2.9188361167907706"/>
-          </dia:attribute>
-          <dia:attribute name="draw_border">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-          <dia:attribute name="keep_aspect">
-            <dia:boolean val="true"/>
-          </dia:attribute>
-          <dia:attribute name="file">
-            <dia:string>#/home/noel/Images/Logo_Microsoft_Edge.png#</dia:string>
-          </dia:attribute>
-        </dia:object>
-        <dia:object type="Standard - Text" version="1" id="O27">
-          <dia:attribute name="obj_pos">
-            <dia:point val="23.6919,6.73222"/>
-          </dia:attribute>
-          <dia:attribute name="obj_bb">
-            <dia:rectangle val="22.7044,5.96575;24.6794,6.91164"/>
-          </dia:attribute>
-          <dia:attribute name="text">
-            <dia:composite type="text">
-              <dia:attribute name="string">
-                <dia:string>#Edge#</dia:string>
-              </dia:attribute>
-              <dia:attribute name="font">
-                <dia:font family="Liberation Sans" style="0" name="Courier"/>
-              </dia:attribute>
-              <dia:attribute name="height">
-                <dia:real val="1.0583332926034927"/>
-              </dia:attribute>
-              <dia:attribute name="pos">
-                <dia:point val="23.6919,6.73222"/>
-              </dia:attribute>
-              <dia:attribute name="color">
-                <dia:color val="#000000"/>
-              </dia:attribute>
-              <dia:attribute name="alignment">
-                <dia:enum val="1"/>
-              </dia:attribute>
-            </dia:composite>
-          </dia:attribute>
-          <dia:attribute name="valign">
-            <dia:enum val="3"/>
-          </dia:attribute>
-        </dia:object>
-      </dia:group>
-      <dia:group>
-        <dia:object type="Standard - Image" version="0" id="O28">
-          <dia:attribute name="obj_pos">
-            <dia:point val="26.2721,7.84312"/>
-          </dia:attribute>
-          <dia:attribute name="obj_bb">
-            <dia:rectangle val="26.2221,7.79312;29.2774,10.8119"/>
-          </dia:attribute>
-          <dia:attribute name="elem_corner">
-            <dia:point val="26.2721,7.84312"/>
-          </dia:attribute>
-          <dia:attribute name="elem_width">
-            <dia:real val="2.9552555084228516"/>
-          </dia:attribute>
-          <dia:attribute name="elem_height">
-            <dia:real val="2.9187700748443595"/>
-          </dia:attribute>
-          <dia:attribute name="draw_border">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-          <dia:attribute name="keep_aspect">
-            <dia:boolean val="true"/>
-          </dia:attribute>
-          <dia:attribute name="file">
-            <dia:string>#/home/noel/Images/Opera_2015_icon.svg#</dia:string>
-          </dia:attribute>
-        </dia:object>
-        <dia:object type="Standard - Text" version="1" id="O29">
-          <dia:attribute name="obj_pos">
-            <dia:point val="27.7497,6.73222"/>
-          </dia:attribute>
-          <dia:attribute name="obj_bb">
-            <dia:rectangle val="26.5747,5.96575;28.9247,6.91164"/>
-          </dia:attribute>
-          <dia:attribute name="text">
-            <dia:composite type="text">
-              <dia:attribute name="string">
-                <dia:string>#Opera#</dia:string>
-              </dia:attribute>
-              <dia:attribute name="font">
-                <dia:font family="Liberation Sans" style="0" name="Courier"/>
-              </dia:attribute>
-              <dia:attribute name="height">
-                <dia:real val="1.0583332926034927"/>
-              </dia:attribute>
-              <dia:attribute name="pos">
-                <dia:point val="27.7497,6.73222"/>
-              </dia:attribute>
-              <dia:attribute name="color">
-                <dia:color val="#000000"/>
-              </dia:attribute>
-              <dia:attribute name="alignment">
-                <dia:enum val="1"/>
-              </dia:attribute>
-            </dia:composite>
-          </dia:attribute>
-          <dia:attribute name="valign">
-            <dia:enum val="3"/>
-          </dia:attribute>
-        </dia:object>
-      </dia:group>
-      <dia:group>
-        <dia:object type="Standard - Image" version="0" id="O30">
-          <dia:attribute name="obj_pos">
-            <dia:point val="30.4552,7.93994"/>
-          </dia:attribute>
-          <dia:attribute name="obj_bb">
-            <dia:rectangle val="30.4052,7.88994;33.6267,10.7151"/>
-          </dia:attribute>
-          <dia:attribute name="elem_corner">
-            <dia:point val="30.4552,7.93994"/>
-          </dia:attribute>
-          <dia:attribute name="elem_width">
-            <dia:real val="3.1215579509735107"/>
-          </dia:attribute>
-          <dia:attribute name="elem_height">
-            <dia:real val="2.7251200675964355"/>
-          </dia:attribute>
-          <dia:attribute name="draw_border">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-          <dia:attribute name="keep_aspect">
-            <dia:boolean val="true"/>
-          </dia:attribute>
-          <dia:attribute name="file">
-            <dia:string>#/home/noel/Images/Android_logo_2019.svg#</dia:string>
-          </dia:attribute>
-        </dia:object>
-        <dia:object type="Standard - Text" version="1" id="O31">
-          <dia:attribute name="obj_pos">
-            <dia:point val="32.0159,6.73222"/>
-          </dia:attribute>
-          <dia:attribute name="obj_bb">
-            <dia:rectangle val="30.2434,5.96575;33.7884,6.91164"/>
-          </dia:attribute>
-          <dia:attribute name="text">
-            <dia:composite type="text">
-              <dia:attribute name="string">
-                <dia:string>#WebView#</dia:string>
-              </dia:attribute>
-              <dia:attribute name="font">
-                <dia:font family="Liberation Sans" style="0" name="Courier"/>
-              </dia:attribute>
-              <dia:attribute name="height">
-                <dia:real val="1.0583332926034927"/>
-              </dia:attribute>
-              <dia:attribute name="pos">
-                <dia:point val="32.0159,6.73222"/>
-              </dia:attribute>
-              <dia:attribute name="color">
-                <dia:color val="#000000"/>
-              </dia:attribute>
-              <dia:attribute name="alignment">
-                <dia:enum val="1"/>
-              </dia:attribute>
-            </dia:composite>
-          </dia:attribute>
-          <dia:attribute name="valign">
-            <dia:enum val="3"/>
-          </dia:attribute>
-        </dia:object>
-      </dia:group>
-      <dia:group>
-        <dia:object type="Standard - Image" version="0" id="O32">
-          <dia:attribute name="obj_pos">
-            <dia:point val="34.8045,7.955"/>
-          </dia:attribute>
-          <dia:attribute name="obj_bb">
-            <dia:rectangle val="34.7545,7.905;37.5495,10.7"/>
-          </dia:attribute>
-          <dia:attribute name="elem_corner">
-            <dia:point val="34.8045,7.955"/>
-          </dia:attribute>
-          <dia:attribute name="elem_width">
-            <dia:real val="2.695000171661377"/>
-          </dia:attribute>
-          <dia:attribute name="elem_height">
-            <dia:real val="2.6949999332427979"/>
-          </dia:attribute>
-          <dia:attribute name="draw_border">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-          <dia:attribute name="keep_aspect">
-            <dia:boolean val="true"/>
-          </dia:attribute>
-          <dia:attribute name="file">
-            <dia:string>#/home/noel/Images/Brave_lion.png#</dia:string>
-          </dia:attribute>
-        </dia:object>
-        <dia:object type="Standard - Text" version="1" id="O33">
-          <dia:attribute name="obj_pos">
-            <dia:point val="36.152,6.73222"/>
-          </dia:attribute>
-          <dia:attribute name="obj_bb">
-            <dia:rectangle val="35.047,5.96575;37.257,6.91164"/>
-          </dia:attribute>
-          <dia:attribute name="text">
-            <dia:composite type="text">
-              <dia:attribute name="string">
-                <dia:string>#Brave#</dia:string>
-              </dia:attribute>
-              <dia:attribute name="font">
-                <dia:font family="Liberation Sans" style="0" name="Courier"/>
-              </dia:attribute>
-              <dia:attribute name="height">
-                <dia:real val="1.0583332926034927"/>
-              </dia:attribute>
-              <dia:attribute name="pos">
-                <dia:point val="36.152,6.73222"/>
-              </dia:attribute>
-              <dia:attribute name="color">
-                <dia:color val="#000000"/>
-              </dia:attribute>
-              <dia:attribute name="alignment">
-                <dia:enum val="1"/>
-              </dia:attribute>
-            </dia:composite>
-          </dia:attribute>
-          <dia:attribute name="valign">
-            <dia:enum val="3"/>
-          </dia:attribute>
-        </dia:object>
-      </dia:group>
+    </dia:group>
+    <dia:group>
+      <dia:object type="Standard - Image" version="0" id="O26">
+        <dia:attribute name="obj_pos">
+          <dia:point val="26.4841,7.61004"/>
+        </dia:attribute>
+        <dia:attribute name="obj_bb">
+          <dia:rectangle val="26.4341,7.56004;29.4748,10.5789"/>
+        </dia:attribute>
+        <dia:attribute name="elem_corner">
+          <dia:point val="26.4841,7.61004"/>
+        </dia:attribute>
+        <dia:attribute name="elem_width">
+          <dia:real val="2.9407000541687012"/>
+        </dia:attribute>
+        <dia:attribute name="elem_height">
+          <dia:real val="2.9188361167907706"/>
+        </dia:attribute>
+        <dia:attribute name="draw_border">
+          <dia:boolean val="false"/>
+        </dia:attribute>
+        <dia:attribute name="keep_aspect">
+          <dia:boolean val="true"/>
+        </dia:attribute>
+        <dia:attribute name="file">
+          <dia:string>#/home/noel/Images/Logo_Microsoft_Edge.png#</dia:string>
+        </dia:attribute>
+      </dia:object>
+      <dia:object type="Standard - Text" version="1" id="O27">
+        <dia:attribute name="obj_pos">
+          <dia:point val="27.9107,6.49918"/>
+        </dia:attribute>
+        <dia:attribute name="obj_bb">
+          <dia:rectangle val="26.8057,5.68162;29.0157,6.69056"/>
+        </dia:attribute>
+        <dia:attribute name="text">
+          <dia:composite type="text">
+            <dia:attribute name="string">
+              <dia:string>#Edge#</dia:string>
+            </dia:attribute>
+            <dia:attribute name="font">
+              <dia:font family="Liberation Sans" style="80" name="Courier"/>
+            </dia:attribute>
+            <dia:attribute name="height">
+              <dia:real val="1.1288888454437256"/>
+            </dia:attribute>
+            <dia:attribute name="pos">
+              <dia:point val="27.9107,6.49918"/>
+            </dia:attribute>
+            <dia:attribute name="color">
+              <dia:color val="#000000"/>
+            </dia:attribute>
+            <dia:attribute name="alignment">
+              <dia:enum val="1"/>
+            </dia:attribute>
+          </dia:composite>
+        </dia:attribute>
+        <dia:attribute name="valign">
+          <dia:enum val="3"/>
+        </dia:attribute>
+      </dia:object>
+    </dia:group>
+    <dia:group>
+      <dia:object type="Standard - Image" version="0" id="O28">
+        <dia:attribute name="obj_pos">
+          <dia:point val="31.9007,7.61009"/>
+        </dia:attribute>
+        <dia:attribute name="obj_bb">
+          <dia:rectangle val="31.8507,7.56009;34.906,10.5789"/>
+        </dia:attribute>
+        <dia:attribute name="elem_corner">
+          <dia:point val="31.9007,7.61009"/>
+        </dia:attribute>
+        <dia:attribute name="elem_width">
+          <dia:real val="2.9552555084228516"/>
+        </dia:attribute>
+        <dia:attribute name="elem_height">
+          <dia:real val="2.9187700748443595"/>
+        </dia:attribute>
+        <dia:attribute name="draw_border">
+          <dia:boolean val="false"/>
+        </dia:attribute>
+        <dia:attribute name="keep_aspect">
+          <dia:boolean val="true"/>
+        </dia:attribute>
+        <dia:attribute name="file">
+          <dia:string>#/home/noel/Images/Opera_2015_icon.svg#</dia:string>
+        </dia:attribute>
+      </dia:object>
+      <dia:object type="Standard - Text" version="1" id="O29">
+        <dia:attribute name="obj_pos">
+          <dia:point val="33.3783,6.49919"/>
+        </dia:attribute>
+        <dia:attribute name="obj_bb">
+          <dia:rectangle val="32.0721,5.68163;34.6846,6.69057"/>
+        </dia:attribute>
+        <dia:attribute name="text">
+          <dia:composite type="text">
+            <dia:attribute name="string">
+              <dia:string>#Opera#</dia:string>
+            </dia:attribute>
+            <dia:attribute name="font">
+              <dia:font family="Liberation Sans" style="80" name="Courier"/>
+            </dia:attribute>
+            <dia:attribute name="height">
+              <dia:real val="1.1288888454437256"/>
+            </dia:attribute>
+            <dia:attribute name="pos">
+              <dia:point val="33.3783,6.49919"/>
+            </dia:attribute>
+            <dia:attribute name="color">
+              <dia:color val="#000000"/>
+            </dia:attribute>
+            <dia:attribute name="alignment">
+              <dia:enum val="1"/>
+            </dia:attribute>
+          </dia:composite>
+        </dia:attribute>
+        <dia:attribute name="valign">
+          <dia:enum val="3"/>
+        </dia:attribute>
+      </dia:object>
+    </dia:group>
+    <dia:group>
+      <dia:object type="Standard - Image" version="0" id="O30">
+        <dia:attribute name="obj_pos">
+          <dia:point val="37.6867,7.75533"/>
+        </dia:attribute>
+        <dia:attribute name="obj_bb">
+          <dia:rectangle val="37.6367,7.70533;40.8582,10.5304"/>
+        </dia:attribute>
+        <dia:attribute name="elem_corner">
+          <dia:point val="37.6867,7.75533"/>
+        </dia:attribute>
+        <dia:attribute name="elem_width">
+          <dia:real val="3.1215579509735107"/>
+        </dia:attribute>
+        <dia:attribute name="elem_height">
+          <dia:real val="2.7251200675964355"/>
+        </dia:attribute>
+        <dia:attribute name="draw_border">
+          <dia:boolean val="false"/>
+        </dia:attribute>
+        <dia:attribute name="keep_aspect">
+          <dia:boolean val="true"/>
+        </dia:attribute>
+        <dia:attribute name="file">
+          <dia:string>#/home/noel/Images/Android_logo_2019.svg#</dia:string>
+        </dia:attribute>
+      </dia:object>
+      <dia:object type="Standard - Text" version="1" id="O31">
+        <dia:attribute name="obj_pos">
+          <dia:point val="39.2474,6.54761"/>
+        </dia:attribute>
+        <dia:attribute name="obj_bb">
+          <dia:rectangle val="37.282,5.73005;41.2128,6.73899"/>
+        </dia:attribute>
+        <dia:attribute name="text">
+          <dia:composite type="text">
+            <dia:attribute name="string">
+              <dia:string>#WebView#</dia:string>
+            </dia:attribute>
+            <dia:attribute name="font">
+              <dia:font family="Liberation Sans" style="80" name="Courier"/>
+            </dia:attribute>
+            <dia:attribute name="height">
+              <dia:real val="1.1288888454437256"/>
+            </dia:attribute>
+            <dia:attribute name="pos">
+              <dia:point val="39.2474,6.54761"/>
+            </dia:attribute>
+            <dia:attribute name="color">
+              <dia:color val="#000000"/>
+            </dia:attribute>
+            <dia:attribute name="alignment">
+              <dia:enum val="1"/>
+            </dia:attribute>
+          </dia:composite>
+        </dia:attribute>
+        <dia:attribute name="valign">
+          <dia:enum val="3"/>
+        </dia:attribute>
+      </dia:object>
+    </dia:group>
+    <dia:group>
+      <dia:object type="Standard - Image" version="0" id="O32">
+        <dia:attribute name="obj_pos">
+          <dia:point val="43.6388,7.77792"/>
+        </dia:attribute>
+        <dia:attribute name="obj_bb">
+          <dia:rectangle val="43.5888,7.72792;46.3838,10.5229"/>
+        </dia:attribute>
+        <dia:attribute name="elem_corner">
+          <dia:point val="43.6388,7.77792"/>
+        </dia:attribute>
+        <dia:attribute name="elem_width">
+          <dia:real val="2.695000171661377"/>
+        </dia:attribute>
+        <dia:attribute name="elem_height">
+          <dia:real val="2.6949999332427979"/>
+        </dia:attribute>
+        <dia:attribute name="draw_border">
+          <dia:boolean val="false"/>
+        </dia:attribute>
+        <dia:attribute name="keep_aspect">
+          <dia:boolean val="true"/>
+        </dia:attribute>
+        <dia:attribute name="file">
+          <dia:string>#/home/noel/Images/Brave_lion.png#</dia:string>
+        </dia:attribute>
+      </dia:object>
+      <dia:object type="Standard - Text" version="1" id="O33">
+        <dia:attribute name="obj_pos">
+          <dia:point val="44.9863,6.55514"/>
+        </dia:attribute>
+        <dia:attribute name="obj_bb">
+          <dia:rectangle val="43.73,5.73758;46.2425,6.74652"/>
+        </dia:attribute>
+        <dia:attribute name="text">
+          <dia:composite type="text">
+            <dia:attribute name="string">
+              <dia:string>#Brave#</dia:string>
+            </dia:attribute>
+            <dia:attribute name="font">
+              <dia:font family="Liberation Sans" style="80" name="Courier"/>
+            </dia:attribute>
+            <dia:attribute name="height">
+              <dia:real val="1.1288888454437256"/>
+            </dia:attribute>
+            <dia:attribute name="pos">
+              <dia:point val="44.9863,6.55514"/>
+            </dia:attribute>
+            <dia:attribute name="color">
+              <dia:color val="#000000"/>
+            </dia:attribute>
+            <dia:attribute name="alignment">
+              <dia:enum val="1"/>
+            </dia:attribute>
+          </dia:composite>
+        </dia:attribute>
+        <dia:attribute name="valign">
+          <dia:enum val="3"/>
+        </dia:attribute>
+      </dia:object>
     </dia:group>
   </dia:layer>
 </dia:diagram>
