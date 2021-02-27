@@ -11,6 +11,7 @@
     "packages/helpers/router",
     "packages/helpers/template",
     "packages/daucus/*",
+    "packages/custom-element-name",
     "website"
   ],
   "version": "independent"
