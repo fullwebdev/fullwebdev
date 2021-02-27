@@ -8,7 +8,7 @@ export const selector = "app-projects-list";
  * @typedef {import('./projects-list').ProjectListWording} ProjectListWording
  * @typedef {import('./projects-list').ProjectListWordings} ProjectListWordings
  * @typedef {import('./projects-list').Project} Project
- * @typedef {import('./languages').Language} Language
+ * @typedef {import('../languages').Language} Language
  */
 
 /**
@@ -59,7 +59,7 @@ export default class ProjectsListElement extends LitElement {
   static get properties() {
     return {
       lang: { type: String },
-      wordings: { type: Object, attribute: false },
+      wording: { type: Object, attribute: false },
     };
   }
 

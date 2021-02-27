@@ -1,5 +1,5 @@
-/** @type {import('../../projects-list').ProjectListWording} */
-export default {
+/** @type {import('../../views/projects-list').ProjectListWording} */
+const wording = {
   title: "Actualités",
   abstract: "Annonces et articles de blog.",
   items: [
@@ -22,3 +22,5 @@ export default {
     },
   ],
 };
+
+export default wording;
