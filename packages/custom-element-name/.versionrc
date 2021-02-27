@@ -1,0 +1,15 @@
+{
+  "path": ".",
+  "bumpFiles": [
+    {
+      "filename": "package.json",
+      "type": "json"
+    },
+    {
+      "filename": "package-lock.json",
+      "type": "json"
+    }
+  ],
+  "tag-prefix": "custom-element-name@v",
+  "releaseCommitMessageFormat": "chore: custom-element-name@{{currentTag}}"
+}

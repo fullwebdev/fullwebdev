@@ -23,6 +23,9 @@
       "path": "./packages/daucus/router/tsconfig.json"
     },
     {
+      "path": "./packages/custom-element-name/tsconfig.json"
+    },
+    {
       "path": "./packages/helpers/el/tsconfig.json"
     },
     {
