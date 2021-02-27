@@ -98,10 +98,10 @@
     </dia:object>
     <dia:object type="Standard - Text" version="1" id="O1">
       <dia:attribute name="obj_pos">
-        <dia:point val="14.9441,21.6052"/>
+        <dia:point val="14.867,21.6052"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="13.5779,21.0942;16.3103,22.4304"/>
+        <dia:rectangle val="13.5007,21.0942;16.2332,22.4304"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -116,7 +116,7 @@ Draft#</dia:string>
             <dia:real val="0.70555552840232849"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="14.9441,21.6052"/>
+            <dia:point val="14.867,21.6052"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#ff0000"/>
@@ -481,31 +481,31 @@ Draft#</dia:string>
     </dia:object>
     <dia:object type="Standard - Text" version="1" id="O15">
       <dia:attribute name="obj_pos">
-        <dia:point val="18.0856,17.8273"/>
+        <dia:point val="13.5007,17.5189"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="13.0093,17.3674;23.1619,18.57"/>
+        <dia:rectangle val="13.5007,17.0079;24.7207,18.344"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
           <dia:attribute name="string">
-            <dia:string>#période permettant à un membre de commité
+            <dia:string>#période permettant à un membre du comité
 de se retirer de l'accord d'accès libre de droit#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="Liberation Sans" style="0" name="Courier"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="0.63499997556209564"/>
+            <dia:real val="0.70555552840232849"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="18.0856,17.8273"/>
+            <dia:point val="13.5007,17.5189"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000099"/>
           </dia:attribute>
           <dia:attribute name="alignment">
-            <dia:enum val="1"/>
+            <dia:enum val="0"/>
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
@@ -578,10 +578,10 @@ de se retirer de l'accord d'accès libre de droit#</dia:string>
     </dia:object>
     <dia:object type="Standard - Text" version="1" id="O18">
       <dia:attribute name="obj_pos">
-        <dia:point val="19.5181,22.8036"/>
+        <dia:point val="17.1277,22.8807"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="17.6406,22.3437;21.3956,23.5463"/>
+        <dia:rectangle val="17.1277,22.3697;21.3127,23.7059"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -593,16 +593,16 @@ du TC39#</dia:string>
             <dia:font family="Liberation Sans" style="0" name="Courier"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="0.63499997556209564"/>
+            <dia:real val="0.70555552840232849"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="19.5181,22.8036"/>
+            <dia:point val="17.1277,22.8807"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#025302"/>
           </dia:attribute>
           <dia:attribute name="alignment">
-            <dia:enum val="1"/>
+            <dia:enum val="0"/>
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
@@ -675,26 +675,26 @@ du TC39#</dia:string>
     </dia:object>
     <dia:object type="Standard - Text" version="1" id="O21">
       <dia:attribute name="obj_pos">
-        <dia:point val="25.6508,22.5955"/>
+        <dia:point val="27.1083,22.8807"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="20.6146,22.1356;30.687,23.9732"/>
+        <dia:rectangle val="21.7321,22.3697;32.4846,24.4114"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
           <dia:attribute name="string">
             <dia:string>#révision par l'Assemblée générale
-de l'ECMA (ECMA GA)
-   (modifications rédactionnelles uniquement)#</dia:string>
+de l'Ecma (Ecma GA)
+(modifications rédactionnelles uniquement)#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="Liberation Sans" style="0" name="Courier"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="0.63499997556209564"/>
+            <dia:real val="0.70555552840232849"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="25.6508,22.5955"/>
+            <dia:point val="27.1083,22.8807"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#a52a2a"/>
@@ -710,16 +710,16 @@ de l'ECMA (ECMA GA)
     </dia:object>
     <dia:object type="Standard - ZigZagLine" version="1" id="O22">
       <dia:attribute name="obj_pos">
-        <dia:point val="30.0174,19.8081"/>
+        <dia:point val="29.9432,19.8467"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="29.9174,18.7865;33.1201,19.9081"/>
+        <dia:rectangle val="29.8432,18.8251;33.0459,19.9467"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
-        <dia:point val="30.0174,19.8081"/>
-        <dia:point val="30.0174,18.8865"/>
-        <dia:point val="33.0201,18.8865"/>
-        <dia:point val="33.0201,19.8081"/>
+        <dia:point val="29.9432,19.8467"/>
+        <dia:point val="29.9432,18.9251"/>
+        <dia:point val="32.9459,18.9251"/>
+        <dia:point val="32.9459,19.8467"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -738,31 +738,31 @@ de l'ECMA (ECMA GA)
     </dia:object>
     <dia:object type="Standard - Text" version="1" id="O23">
       <dia:attribute name="obj_pos">
-        <dia:point val="31.5422,17.8273"/>
+        <dia:point val="33.0459,17.5574"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="28.5009,17.3674;34.5834,18.57"/>
+        <dia:rectangle val="26.2659,17.0307;33.0616,18.4141"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
           <dia:attribute name="string">
             <dia:string>#approbation d'une nouvelle
-norme par l'ECMA GA#</dia:string>
+norme par l'Ecma GA#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="Liberation Sans" style="0" name="Courier"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="0.63499997556209564"/>
+            <dia:real val="0.70555552840232849"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="31.5422,17.8273"/>
+            <dia:point val="33.0459,17.5574"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#ff0000"/>
           </dia:attribute>
           <dia:attribute name="alignment">
-            <dia:enum val="1"/>
+            <dia:enum val="2"/>
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
