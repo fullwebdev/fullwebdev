@@ -270,16 +270,23 @@ export class AppRouter extends AbstractRouter {
         },
       },
       "/learn": {
-        componentURL: "./projects-list.js",
+        componentURL: "./views/projects-list.js",
         wordings: "learn",
       },
       "/build": {
-        componentURL: "./projects-list.js",
+        componentURL: "./views/projects-list.js",
         wordings: "build",
       },
       "/news": {
-        componentURL: "./projects-list.js",
+        componentURL: "./views/projects-list.js",
         wordings: "news",
+      },
+      "/tools/ce-name": {
+        componentURL: "./views/ce-name.js",
+        wordings: "ce-name",
+      },
+      "/eni/ce-name": {
+        redirectTo: "/tools/ce-name",
       },
     };
 
@@ -376,10 +383,18 @@ export class AppRouter extends AbstractRouter {
       templatePath,
       daucusProject,
       menuHTML,
+      redirection,
     } = await this._findRoute(path);
 
+    if (redirection) {
+      return [redirection, { ...options, redirection: true }];
+    }
+
     if (!staticContent && !templateUrl) {
-      return ["/404", { ...options, skipLocationChange: true }];
+      return [
+        "/404",
+        { ...options, skipLocationChange: true, redirection: true },
+      ];
     }
 
     if (daucusProject) {
@@ -419,10 +434,10 @@ export class AppRouter extends AbstractRouter {
       );
     }
 
-    if (staticContent !== null) {
+    if (staticContent) {
       this.outlet.staticContent(staticContent);
       this.dispatchEvent(new CustomEvent("route-loaded"));
-    } else if (templateUrl !== null) {
+    } else if (templateUrl) {
       this.outlet.href = templateUrl;
     }
 
@@ -522,6 +537,10 @@ export class AppRouter extends AbstractRouter {
     let menuHTML;
 
     if (appRoute) {
+      if (appRoute.redirectTo) {
+        return { redirection: appRoute.redirectTo };
+      }
+
       if (appRoute.template) {
         staticContent = appRoute.template(this.preferredLanguage);
       } else if (appRoute.componentURL) {

@@ -1,8 +1,8 @@
-import { Wordings } from "./languages";
+import { Wordings } from "../languages";
 
 export interface Project {
   href?: string;
-  type: string;
+  type?: string;
   spotlight?: boolean;
   wip?: boolean;
   date?: string;

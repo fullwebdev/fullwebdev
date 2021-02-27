@@ -22,6 +22,9 @@
     },
     {
       "path": "../packages/daucus/menu/tsconfig.json"
+    },
+    {
+      "path": "../packages/custom-element-name/tsconfig.json"
     }
   ],
   "include": ["src"],
