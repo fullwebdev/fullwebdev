@@ -14,7 +14,7 @@ export const matchPotentialCustomElementName = (str) => {
      < = > ? @ [ \ ] ^ ` { | } ~
      ¡ ¢ £ ¤ ¥ ¦ § ¨ © ª « ¬ ® ¯
      ° ± ² ³ ´ µ ¶ */
-    "-|.|[0-9]|_|[a-z]|·",
+    "-|\\.|[0-9]|_|[a-z]|·",
     // Latin 1 Letters
     // exclude multiplication division signs
     "[À-Ö]|[Ø-ö]|[ø-ÿ]",
@@ -41,5 +41,5 @@ export const matchPotentialCustomElementName = (str) => {
   const PotentialCustomElementName = `[a-z](${PCEnChar})*-(${PCEnChar})*`;
   //#endregion PotentialCustomElementName
 
-  return new RegExp(PotentialCustomElementName, "u").test(str);
+  return new RegExp(`^${PotentialCustomElementName}$`, "u").test(str);
 };
