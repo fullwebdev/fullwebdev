@@ -12,6 +12,7 @@
 - [ ] benchmarks
 - [ ] code-samples
 - [ ] presentations/conferences
+- [ ] custom-element-name
 - [ ] other: .....
 
 ## Description
