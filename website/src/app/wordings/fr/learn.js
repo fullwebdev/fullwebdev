@@ -41,6 +41,21 @@ const wording = {
       ],
     },
     {
+      type: "Documentation",
+      href: "/docs/rendering/benchmark",
+      date: "mars 2021",
+      desc: {
+        title: "Optimiser le rendering",
+        subtitle:
+          "Étudier les différentes méthodes de rendering, et comparer leurs performances.",
+      },
+      img: {
+        src: "/images/web-illustrations/speed-test.svg",
+        alt: "speed test",
+        height: 175,
+      },
+    },
+    {
       type: "Atelier",
       href:
         "https://fullweb.dev/codelabs/doc/modern-data-driven_fr/index.html?index=/learn",

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<svg width="600" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:se="http://svg-edit.googlecode.com" data-name="Layer 1">
+ <title>speed test</title>
+
+ <g class="layer">
+  <title>Layer 1</title>
+  <path d="m435.3103,74.13721l-119.9295,99.45849a54.31348,54.31348 0 1 1 -83.525,69.26789l-107.52169,89.16858l172.35559,207.83062l310.97619,-257.895l-172.35559,-207.83058z" fill="#f2f2f2" id="svg_1" transform="translate(-94, -53)"/>
+  <path d="m529.71667,633a226.92219,226.92219 0 0 0 32.28333,-117c0,-125.921 -102.0791,-228 -228,-228s-228,102.079 -228,228a226.92219,226.92219 0 0 0 32.28333,117l391.43334,0z" fill="#3f3d56" id="svg_2" transform="translate(-94, -53)"/>
+  <circle cx="240" cy="448" fill="#ffffff" id="svg_3" r="22"/>
+  <circle cx="65" cy="484" fill="#ffffff" id="svg_4" r="11"/>
+  <circle cx="71.45435" cy="388.72636" fill="#ffffff" id="svg_5" r="10.999996"/>
+  <circle cx="126.05636" cy="310.38515" fill="#ffffff" id="svg_6" r="11"/>
+  <circle cx="213.20813" cy="271.35574" fill="#ffffff" id="svg_7" r="11"/>
+  <circle cx="308.01341" cy="282.78748" fill="#ffffff" id="svg_8" r="11"/>
+  <circle cx="383.38961" cy="341.41472" fill="#ffffff" id="svg_9" r="11"/>
+  <circle cx="417.80436" cy="430.48969" fill="#ffffff" id="svg_10" r="11"/>
+  <circle cx="401.42656" cy="524.56675" fill="#ffffff" id="svg_11" r="11"/>
+  <line fill="none" id="svg_12" stroke="#ffffff" stroke-miterlimit="10" stroke-width="4" x1="240" x2="353" y1="448" y2="362"/>
+  <circle cx="344.54207" cy="23.352" fill="none" id="svg_13" r="14.755554" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="2"/>
+  <circle cx="428.54207" cy="195.352" fill="#3f3d56" id="svg_14" r="14.755554"/>
+  <circle cx="180.22291" cy="156.16552" fill="#f2f2f2" id="svg_15" r="42.777084"/>
+ </g>
+</svg>
