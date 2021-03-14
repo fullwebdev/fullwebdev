@@ -285,8 +285,20 @@ export class AppRouter extends AbstractRouter {
         componentURL: "./views/ce-name.js",
         wordings: "ce-name",
       },
+      "/rendering/benchmark/table": {
+        componentURL: "./views/benchmark-table.js",
+      },
       "/eni/ce-name": {
         redirectTo: "/tools/ce-name",
+      },
+      "/eni/benchmark": {
+        redirectTo: "/docs/rendering",
+      },
+      "/eni/chrome-perf": {
+        redirectTo: "/docs/rendering/chrome-perf",
+      },
+      "/rendering": {
+        redirectTo: "/docs/rendering",
       },
     };
 

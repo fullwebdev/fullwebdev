@@ -5,6 +5,20 @@ const wording = {
   intro: "Introduction",
   items: [
     {
+      type: "Documentation",
+      href: "/docs/rendering/benchmark",
+      date: "march 2021",
+      desc: {
+        title: "Rendering benchmarks",
+        subtitle: "Comparing different rendering approaches and solutions",
+      },
+      img: {
+        src: "/images/web-illustrations/speed-test.svg",
+        alt: "speed test",
+        height: 175,
+      },
+    },
+    {
       type: "Lecture",
       href: "/docs/conferences/wof",
       date: "2019",
