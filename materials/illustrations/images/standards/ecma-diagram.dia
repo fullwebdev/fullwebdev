@@ -79,6 +79,9 @@
       <dia:attribute name="elem_height">
         <dia:real val="3.3000000000000007"/>
       </dia:attribute>
+      <dia:attribute name="border_width">
+        <dia:real val="0.10000000149011612"/>
+      </dia:attribute>
       <dia:attribute name="show_background">
         <dia:boolean val="true"/>
       </dia:attribute>
@@ -89,16 +92,16 @@
         <dia:composite type="text">
           <dia:attribute name="string">
             <dia:string>#Assemblée générale
-(ECMA GA)#</dia:string>
+(Ecma GA)#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="sans" style="0" name="Helvetica"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="0.80000000000000004"/>
+            <dia:real val="0.98777773976325989"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="18.975,11.4434"/>
+            <dia:point val="18.975,11.3457"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -111,19 +114,22 @@
     </dia:object>
     <dia:object type="Flowchart - Box" version="0" id="O1">
       <dia:attribute name="obj_pos">
-        <dia:point val="20.8006,14.4123"/>
+        <dia:point val="20.2093,14.2245"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="20.7506,14.3623;26.8631,17.1623"/>
+        <dia:rectangle val="20.1593,14.1745;27.4544,17.3501"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="20.8006,14.4123"/>
+        <dia:point val="20.2093,14.2245"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="6.0124999999999993"/>
+        <dia:real val="7.1950000014901168"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="2.7000000000000002"/>
+        <dia:real val="3.0755554810166359"/>
+      </dia:attribute>
+      <dia:attribute name="border_width">
+        <dia:real val="0.10000000149011612"/>
       </dia:attribute>
       <dia:attribute name="show_background">
         <dia:boolean val="true"/>
@@ -141,10 +147,10 @@ comité éxécutif#</dia:string>
             <dia:font family="sans" style="0" name="Helvetica"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="0.80000000000000004"/>
+            <dia:real val="0.98777773976325989"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="23.8069,15.6057"/>
+            <dia:point val="23.8068,15.508"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -157,19 +163,22 @@ comité éxécutif#</dia:string>
     </dia:object>
     <dia:object type="Flowchart - Box" version="0" id="O2">
       <dia:attribute name="obj_pos">
-        <dia:point val="12.3979,16.0556"/>
+        <dia:point val="12.3979,15.9617"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="12.3479,16.0056;17.9552,18.0056"/>
+        <dia:rectangle val="12.3479,15.9117;17.9552,18.0995"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="12.3979,16.0556"/>
+        <dia:point val="12.3979,15.9617"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="5.5073289097621512"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="1.9000000000000001"/>
+        <dia:real val="2.087777741253376"/>
+      </dia:attribute>
+      <dia:attribute name="border_width">
+        <dia:real val="0.10000000149011612"/>
       </dia:attribute>
       <dia:attribute name="show_background">
         <dia:boolean val="true"/>
@@ -186,10 +195,10 @@ comité éxécutif#</dia:string>
             <dia:font family="sans" style="0" name="Helvetica"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="0.80000000000000004"/>
+            <dia:real val="0.98777773976325989"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="15.1516,17.249"/>
+            <dia:point val="15.1516,17.2452"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -216,6 +225,9 @@ comité éxécutif#</dia:string>
       <dia:attribute name="elem_height">
         <dia:real val="3.0499999999999972"/>
       </dia:attribute>
+      <dia:attribute name="border_width">
+        <dia:real val="0.10000000149011612"/>
+      </dia:attribute>
       <dia:attribute name="show_background">
         <dia:boolean val="true"/>
       </dia:attribute>
@@ -231,10 +243,10 @@ comité éxécutif#</dia:string>
             <dia:font family="sans" style="0" name="Helvetica"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="0.80000000000000004"/>
+            <dia:real val="0.98777773976325989"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="13.2297,22.4935"/>
+            <dia:point val="13.2297,22.4897"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -261,6 +273,9 @@ comité éxécutif#</dia:string>
       <dia:attribute name="elem_height">
         <dia:real val="3.0499999999999972"/>
       </dia:attribute>
+      <dia:attribute name="border_width">
+        <dia:real val="0.10000000149011612"/>
+      </dia:attribute>
       <dia:attribute name="show_background">
         <dia:boolean val="true"/>
       </dia:attribute>
@@ -276,10 +291,10 @@ comité éxécutif#</dia:string>
             <dia:font family="sans" style="0" name="Helvetica"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="0.80000000000000004"/>
+            <dia:real val="0.98777773976325989"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="18.993,22.4935"/>
+            <dia:point val="18.993,22.4897"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -306,6 +321,9 @@ comité éxécutif#</dia:string>
       <dia:attribute name="elem_height">
         <dia:real val="3.0499999999999972"/>
       </dia:attribute>
+      <dia:attribute name="border_width">
+        <dia:real val="0.10000000149011612"/>
+      </dia:attribute>
       <dia:attribute name="show_background">
         <dia:boolean val="true"/>
       </dia:attribute>
@@ -321,10 +339,10 @@ comité éxécutif#</dia:string>
             <dia:font family="sans" style="0" name="Helvetica"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="0.80000000000000004"/>
+            <dia:real val="0.98777773976325989"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="24.31,22.4935"/>
+            <dia:point val="24.31,22.4897"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -351,6 +369,9 @@ comité éxécutif#</dia:string>
       <dia:attribute name="elem_height">
         <dia:real val="3.0499999999999972"/>
       </dia:attribute>
+      <dia:attribute name="border_width">
+        <dia:real val="0.10000000149011612"/>
+      </dia:attribute>
       <dia:attribute name="show_background">
         <dia:boolean val="true"/>
       </dia:attribute>
@@ -366,10 +387,10 @@ comité éxécutif#</dia:string>
             <dia:font family="sans" style="0" name="Helvetica"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="0.80000000000000004"/>
+            <dia:real val="0.98777773976325989"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="29.365,22.4935"/>
+            <dia:point val="29.365,22.4897"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -396,6 +417,9 @@ comité éxécutif#</dia:string>
       <dia:attribute name="elem_height">
         <dia:real val="2.0899999999999999"/>
       </dia:attribute>
+      <dia:attribute name="border_width">
+        <dia:real val="0.10000000149011612"/>
+      </dia:attribute>
       <dia:attribute name="show_background">
         <dia:boolean val="true"/>
       </dia:attribute>
@@ -411,10 +435,10 @@ comité éxécutif#</dia:string>
             <dia:font family="sans" style="0" name="Helvetica"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="0.80000000000000004"/>
+            <dia:real val="0.98777773976325989"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="20.4316,26.679"/>
+            <dia:point val="20.4316,26.6752"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -441,6 +465,9 @@ comité éxécutif#</dia:string>
       <dia:attribute name="elem_height">
         <dia:real val="2.0899999999999999"/>
       </dia:attribute>
+      <dia:attribute name="border_width">
+        <dia:real val="0.10000000149011612"/>
+      </dia:attribute>
       <dia:attribute name="show_background">
         <dia:boolean val="true"/>
       </dia:attribute>
@@ -456,10 +483,10 @@ comité éxécutif#</dia:string>
             <dia:font family="sans" style="0" name="Helvetica"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="0.80000000000000004"/>
+            <dia:real val="0.98777773976325989"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="17.5921,26.679"/>
+            <dia:point val="17.5921,26.6752"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -486,6 +513,9 @@ comité éxécutif#</dia:string>
       <dia:attribute name="elem_height">
         <dia:real val="2.0899999999999999"/>
       </dia:attribute>
+      <dia:attribute name="border_width">
+        <dia:real val="0.10000000149011612"/>
+      </dia:attribute>
       <dia:attribute name="show_background">
         <dia:boolean val="true"/>
       </dia:attribute>
@@ -501,10 +531,10 @@ comité éxécutif#</dia:string>
             <dia:font family="sans" style="0" name="Helvetica"/>
           </dia:attribute>
           <dia:attribute name="height">
-            <dia:real val="0.80000000000000004"/>
+            <dia:real val="0.98777773976325989"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="24.3165,26.679"/>
+            <dia:point val="24.3165,26.6752"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -643,13 +673,13 @@ comité éxécutif#</dia:string>
     </dia:object>
     <dia:object type="Standard - Line" version="0" id="O16">
       <dia:attribute name="obj_pos">
-        <dia:point val="20.8006,15.7623"/>
+        <dia:point val="20.2093,15.7623"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="18.9452,15.7122;20.8507,15.8149"/>
+        <dia:rectangle val="18.9452,15.7122;20.2595,15.8149"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
-        <dia:point val="20.8006,15.7623"/>
+        <dia:point val="20.2093,15.7623"/>
         <dia:point val="18.9953,15.7648"/>
       </dia:attribute>
       <dia:attribute name="numcp">
@@ -664,11 +694,11 @@ comité éxécutif#</dia:string>
         <dia:point val="17.9052,17.0056"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="17.8544,16.9368;19.0348,17.0564"/>
+        <dia:rectangle val="17.8544,16.9367;19.0348,17.0564"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="17.9052,17.0056"/>
-        <dia:point val="18.984,16.9876"/>
+        <dia:point val="18.984,16.9875"/>
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>

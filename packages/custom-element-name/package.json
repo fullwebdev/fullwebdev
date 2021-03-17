@@ -1,0 +1,47 @@
+{
+  "name": "custom-element-name",
+  "version": "0.1.1",
+  "description": "Check if a given string can REALLY be used as a custom element name",
+  "author": {
+    "name": "Noël Macé",
+    "url": "https://noelmace.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fullwebdev/fullwebdev.git",
+    "directory": "packages/custom-element-name"
+  },
+  "keywords": [
+    "custom-element",
+    "custom",
+    "elements",
+    "custom element",
+    "custom element name",
+    "web components",
+    "web-component",
+    "web",
+    "component",
+    "standard",
+    "validate",
+    "validator",
+    "check",
+    "tag",
+    "name",
+    "compatibility",
+    "html"
+  ],
+  "type": "module",
+  "main": "index.js",
+  "module": "index.js",
+  "typings": "./types/index.d.ts",
+  "files": [
+    "*.js",
+    "*.d.ts",
+    "src"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fullwebdev/fullwebdev/issues"
+  },
+  "homepage": "https://github.com/fullwebdev/fullwebdev#readme"
+}

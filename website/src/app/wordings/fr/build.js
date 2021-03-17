@@ -1,35 +1,37 @@
-/** @type {import('../../projects-list').ProjectListWording} */
-export default {
+/** @type {import('../../views/projects-list').ProjectListWording} */
+const wording = {
   title: "Outils",
   abstract:
     "Bibliothèques et outils de développement pour vous aider à créer de meilleurs projets.",
   items: [
     {
+      type: "En ligne et sur npm",
+      href: "/tools/ce-name",
+      desc: {
+        title: "custom-element-name",
+        subtitle:
+          "Vérifier si une chaîne de caractère peut vraiment être utilisée pour nommer un élément personnalisé.",
+      },
+      img: {
+        src: "/images/web-illustrations/ce-name.png",
+        alt: "<ce-?>",
+        height: 75,
+      },
+    },
+    {
       type: "Bibliothèques Web & Outils de build",
-      spotlight: true,
+      href:
+        "https://github.com/fullwebdev/fullwebdev/tree/master/packages/daucus",
       date: "beta",
       desc: {
         title: "Daucus",
-        subtitle: `Micro-bibliothèques et outils de build pour la création de sites Web semi-statiques simples et performants. Actuellement en version Beta, Daucus fut créé pour ce site web ainsi que le livre "développement et architecture des applications web modernes". Il permettra ainsi, dans sa version finale, de générer de nombreux formats complémentaires (pdf, epub, odt, etc.) à partir d'une même source unique d'information.`,
+        subtitle: `Micro-bibliothèques et outils de build pour la création de sites Web semi-statiques simples et performants.`,
       },
       img: {
         src: "/images/web-illustrations/umbel_200.png",
         alt: "alt",
-        height: 200,
+        height: 150,
       },
-      cta: [
-        {
-          href:
-            "https://github.com/fullwebdev/fullwebdev/tree/master/packages/daucus",
-          primary: true,
-          text: "sources",
-        },
-        // {
-        //   href:
-        //     "/daucus/",
-        //   text: "documentation",
-        // },
-      ],
     },
     {
       href:
@@ -63,3 +65,5 @@ export default {
     },
   ],
 };
+
+export default wording;

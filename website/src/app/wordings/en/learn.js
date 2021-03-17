@@ -1,5 +1,5 @@
-/** @type {import('../../projects-list').ProjectListWording} */
-export default {
+/** @type {import('../../views/projects-list').ProjectListWording} */
+const wording = {
   title: "Learn",
   abstract: `Gain an holistic and pragmatique view of Web Development at your own pace.`,
   intro: "Introduction",
@@ -70,3 +70,5 @@ export default {
     },
   ],
 };
+
+export default wording;

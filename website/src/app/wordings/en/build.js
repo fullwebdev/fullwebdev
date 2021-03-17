@@ -1,9 +1,23 @@
-/** @type {import('../../projects-list').ProjectListWording} */
-export default {
+/** @type {import('../../views/projects-list').ProjectListWording} */
+const wording = {
   title: "Tools",
   abstract:
     "Libraries and build tools built to help you create better projets.",
   items: [
+    {
+      type: "Online & NPM",
+      href: "/tools/ce-name",
+      desc: {
+        title: "custom-element-name",
+        subtitle:
+          "Check if a given string can really be used as a custom element name.",
+      },
+      img: {
+        src: "/images/web-illustrations/ce-name.png",
+        alt: "<ce-?>",
+        height: 75,
+      },
+    },
     {
       type: "Runtime Libraries & Build Tools",
       spotlight: true,
@@ -63,3 +77,5 @@ export default {
     },
   ],
 };
+
+export default wording;

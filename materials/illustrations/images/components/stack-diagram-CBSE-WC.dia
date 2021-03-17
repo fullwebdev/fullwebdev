@@ -195,12 +195,12 @@
         <dia:point val="18.5,9.5"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="18.5,8.92062;31.02,9.63562"/>
+        <dia:rectangle val="18.5,8.90275;30.6829,9.67137"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
           <dia:attribute name="string">
-            <dia:string>#Développement Web orienté composants#</dia:string>
+            <dia:string>#Développement Web orienté composant#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="Liberation Sans" style="80" name="Courier"/>
@@ -254,7 +254,7 @@
       <dia:attribute name="text">
         <dia:composite type="text">
           <dia:attribute name="string">
-            <dia:string>#Développement orienté Web Components#</dia:string>
+            <dia:string>#Développement orienté Web Component#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="Liberation Sans" style="80" name="Courier"/>
@@ -263,7 +263,7 @@
             <dia:real val="0.80000000000000004"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="24.175,7.12937"/>
+            <dia:point val="24.175,7.12938"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>

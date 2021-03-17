@@ -53,6 +53,7 @@
     "release:daucus": "cd packages/daucus && standard-version",
     "release:wof-slides": "cd materials/slides/wof-2 && standard-version",
     "release:vanilla-slides": "cd materials/slides/vanilla-1 && standard-version",
+    "release:custom-element-name": "cd packages/custom-element-name && standard-version",
     "update-subtrees": "monocli update",
     "lhci": "npm run lhci:collect && npm run lhci:assert; npm run lhci:open",
     "lhci:collect": "lhci collect --config lighthouserc.local.js",
