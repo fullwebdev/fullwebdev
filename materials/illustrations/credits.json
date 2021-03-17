@@ -699,6 +699,26 @@
     "URL": "https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM"
   },
   {
+    "id": "micralNPrototype",
+    "accessed": { "date-parts": [[2021, 3, 16]] },
+    "archive": "Conservatoire national des Arts et Métiers",
+    "archive_location": "/illustrations/images/third-party/micral.jpg",
+    "author": [
+      { "family": "Gernelle", "given": "François" },
+      { "literal": "Rama" },
+      { "family": "Gernelle", "given": "François" }
+    ],
+    "citation-label": "micralNPrototype",
+    "dimensions": "Length: 43 cm (16.9 in) ; Height: 13 cm (5.1 in) ; Width: 39 cm (15.3 in) dimensions QS:P2043,+43U174728 dimensions QS:P2048,+13U174728 dimensions QS:P2049,+39U174728",
+    "issued": { "date-parts": [[1973]] },
+    "medium": "metal and plastic",
+    "source": "Wikimedia Commons",
+    "title": "Micral N prototype-PR082label QS:Len,\"Micral N prototype-PR082\"",
+    "title-short": "Micral N prototype-PR082label QS",
+    "type": "graphic",
+    "URL": "https://commons.wikimedia.org/wiki/File:CNAM-IMG_0584.jpg"
+  },
+  {
     "id": "mozillaDinoLogo",
     "accessed": { "date-parts": [[2020, 10, 30]] },
     "archive": "Mozilla",
@@ -1652,5 +1672,18 @@
     "title": "Windows 3.1 disk 1992",
     "type": "graphic",
     "URL": "https://www.flickr.com/photos/fdecomite/7871353730/"
+  },
+  {
+    "id": "xeroxAlto",
+    "accessed": { "date-parts": [[2021, 3, 16]] },
+    "archive": "Own work",
+    "author": [{ "family": "Kozlenko", "given": "Maksym" }],
+    "citation-label": "xeroxAlto",
+    "issued": { "literal": "15 February 2015, 04:54:47" },
+    "source": "Wikimedia Commons",
+    "title": "Xerox Alto computer",
+    "title-short": "English",
+    "type": "graphic",
+    "URL": "https://commons.wikimedia.org/wiki/File:Xerox_Alto_computer.jpg"
   }
 ]

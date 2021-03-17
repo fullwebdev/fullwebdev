@@ -7,5 +7,9 @@ export default {
       src: "**/*.md",
       root: "docs",
     },
+    blog: {
+      src: "**/*.md",
+      root: "blog",
+    },
   },
 };
