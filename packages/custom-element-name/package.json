@@ -1,6 +1,6 @@
 {
   "name": "custom-element-name",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Check if a given string can REALLY be used as a custom element name",
   "author": {
     "name": "Noël Macé",

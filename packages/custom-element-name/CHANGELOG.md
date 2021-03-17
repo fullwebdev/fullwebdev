@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/fullwebdev/fullwebdev/compare/custom-element-name@v0.1.0...custom-element-name@v0.1.1) (2021-03-17)
+
+### Bug Fixes
+
+- **custom-element-name:** bad regexs ([bf4beb3](https://github.com/fullwebdev/fullwebdev/commit/bf4beb32d37866abedc633be4e2513b53f0dadf6))
+
 ## 0.1.0 (2021-02-27)
 
 ### Features
