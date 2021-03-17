@@ -19,32 +19,20 @@ const wording = {
       },
     },
     {
+      href:
+        "https://github.com/fullwebdev/fullwebdev/tree/master/packages/daucus",
       type: "Runtime Libraries & Build Tools",
-      spotlight: true,
       date: "beta",
       desc: {
         title: "Daucus",
         subtitle:
-          "Micro-libraries & build tools for (semi-)static site generation. Daucus is currently in beta version, and will soon evolve with this website. In its stable version, it will also allow you to generate other file formats (pdf, epub, odt, etc.) from a single source of documentation.",
+          "Micro-libraries & build tools for (semi-)static site generation. Daucus is currently in beta version, and will soon evolve with this website.",
       },
       img: {
         src: "/images/web-illustrations/umbel_200.png",
         alt: "alt",
         height: 200,
       },
-      cta: [
-        {
-          href:
-            "https://github.com/fullwebdev/fullwebdev/tree/master/packages/daucus",
-          primary: true,
-          text: "sources",
-        },
-        // {
-        //   href:
-        //     "/daucus/",
-        //   text: "documentation",
-        // },
-      ],
     },
     {
       href:
