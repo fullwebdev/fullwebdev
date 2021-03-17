@@ -5,7 +5,7 @@ export default {
   items: [
     {
       desc: {
-        title: "En construction",
+        title: "Travail en cours...",
         subtitle: "De nouveaux articles seront bientôt partagés ici.",
       },
       img: {
@@ -19,6 +19,21 @@ export default {
           text: "Articles sur Dev.to",
         },
       ],
+    },
+    {
+      href: "/blog/qui-a-invente-hypertexte",
+      spotlight: false,
+      type: "blog",
+      date: "2021-03-16",
+      desc: {
+        title: "L'invention des ordis et de l'hypertexte",
+        subtitle: `Quelques compléments après ma chronique pour Les Briques du Web S01E01`,
+      },
+      img: {
+        src: "/illustrations/images/third-party/SRI-Bill-English-1968.png",
+        alt: "The Mother of all Demos",
+        height: 250,
+      },
     },
   ],
 };
