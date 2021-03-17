@@ -21,7 +21,7 @@ So, are you ready for the future of the web?
 ## Recording
 
 <div class="video-16x9">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/lfubOlz3JLI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/lfubOlz3JLI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Youtube video: The Web is on FIRE, presented by Noël Macé at Devoxx Belgium (2019)"></iframe>
 </div>
 
 Recorded on November 4, 2019, 13:30 at [Devoxx Belgium](https://devoxx.be/speaker-details/?id=50822){target="\_blank"}.

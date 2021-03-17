@@ -20,7 +20,7 @@ Alors, prêts pour le futur du web ?!
 ### Version courte
 
 <div class="video-16x9">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_byWU9V4fXw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_byWU9V4fXw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Vidéo Youtube : The Web is on FIRE, présenté par Noël Macé au DevFest Nantes (2019)"></iframe>
 </div>
 
 Conférence présentée le 22 octobre 2019 à 11:20 au [Devfest Nantes](https://devfest2019.gdgnantes.com/sessions/the_web_is_on__f_i_r_e________conference_/){target="\_blank"}.
@@ -30,7 +30,7 @@ Conférence présentée le 22 octobre 2019 à 11:20 au [Devfest Nantes](https://
 ## Version longue
 
 <div class="video-16x9">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/OQ-dr-7pLaA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/OQ-dr-7pLaA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Vidéo Youtube : The Web is still on FIRE, présenté par Noël Macé au Breizhcamp (2019)"></iframe>
 </div>
 
 Conférence présentée le 20 mars 2019 de 13:30 à 16:30 au [Breizhcamp](https://2019.breizhcamp.org/conference/programme/){target="\_blank"}.

@@ -13,7 +13,7 @@ Après une longue année dépourvue de conférences, quoi de mieux, pour une pre
 Pour commencer, voici la capture de la conférence en entier :
 
 <div class="video-16x9" >
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yJDv-zdhzMY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yJDv-zdhzMY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Vidéo Youtube : The Mother of All Demos, presented by Douglas Engelbart (1968)"></iframe>
 </div>
 
 J'avoue être personnellement assez fan de ce type d'image, après avoir regardé en boucle [Planète interdite](https://youtu.be/BieQ7FIJXig) étant gosse, et avoir dévoré [les premières saisons de Doctor Who](https://youtu.be/O-9M69-rdE8) par la suite. Bon, je me doute bien que ce n'est pas le cas de tout le monde.

@@ -13,7 +13,7 @@ Hear my story, traveler! My old eyes have seen him in these lands! Let me tell y
 ## Recording (in french)
 
 <div class="video-16x9">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-d_Ka7OE4Xk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-d_Ka7OE4Xk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Youtube video (fr): Brace yourself, Vanilla is coming back, presented by Noël Macé at DevFest Toulouse (2019)"></iframe>
 </div>
 
 Recorded on October 03, 2019 at 3:30 pm at [Devfest Toulouse](https://2019.devfesttoulouse.fr/sessions/brace_yourself__vanilla_is_coming__back__/)

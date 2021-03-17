@@ -14,7 +14,7 @@ Sache, voyageur, qu’elle est déjà passée par nos contrées. Viens, et écou
 ## Enregistrement
 
 <div class="video-16x9">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-d_Ka7OE4Xk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-d_Ka7OE4Xk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Vidéo Youtube : Brace yourself, Vanilla is coming back, présenté par Noël Macé au DevFest Toulouse (2019)"></iframe>
 </div>
 
 Conférence présentée le 3 octobre 2019 à 15:30 au [Devfest Toulouse](https://2019.devfesttoulouse.fr/sessions/brace_yourself__vanilla_is_coming__back__/){target="\_blank"}

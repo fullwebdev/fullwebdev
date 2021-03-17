@@ -18,7 +18,7 @@ Alors on y va !
 ## Enregistrement
 
 <div class="video-16x9">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YSn8r0BDKTY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YSn8r0BDKTY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Vidéo Youtube : Il est temps de rejoindre les 4 fantastiques du Web, présenté par Noël Macé au Best of Web Paris (2019)"></iframe>
 </div>
 
 Conférence présentée le 7 juin 2019 de 17:20 à 17:50 au _Best of Web 2019_.
