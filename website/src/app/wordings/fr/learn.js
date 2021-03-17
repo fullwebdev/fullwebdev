@@ -24,7 +24,19 @@ export default {
           href:
             "https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523",
           primary: true,
-          text: "précommander",
+          text: "éditions ENI",
+        },
+        {
+          href:
+            "https://www.leslibraires.fr/livre/18531129-developpement-et-architecture-des-applications--noel-mace-editions-eni",
+          primary: true,
+          text: "leslibraires.fr",
+        },
+        {
+          href:
+            "https://www.librel.be/livre/9782409029523-developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-noel-mace/",
+          primary: true,
+          text: "librel.be",
         },
       ],
     },
