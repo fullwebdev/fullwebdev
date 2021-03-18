@@ -16,7 +16,7 @@ class CENameTestElement extends LitElement {
     return {
       _msg: { type: String, attribute: false },
       lang: { type: String },
-      wordings: { type: Object, attribute: false },
+      wording: { type: Object, attribute: false },
       value: { type: String },
     };
   }
