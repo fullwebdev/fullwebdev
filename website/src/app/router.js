@@ -285,6 +285,10 @@ export class AppRouter extends AbstractRouter {
         componentURL: "./views/ce-name.js",
         wordings: "ce-name",
       },
+      "/tools/chrome-perf": {
+        componentURL: "./views/chrome-perf.js",
+        wordings: "chrome-perf",
+      },
       "/rendering/benchmark/table": {
         componentURL: "./views/benchmark-table.js",
       },
@@ -295,7 +299,8 @@ export class AppRouter extends AbstractRouter {
         redirectTo: "/docs/rendering",
       },
       "/eni/chrome-perf": {
-        redirectTo: "/docs/rendering/chrome-perf",
+        // redirectTo: "/docs/rendering/chrome-perf",
+        redirectTo: "/tools/chrome-perf",
       },
       "/rendering": {
         redirectTo: "/docs/rendering",

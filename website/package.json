@@ -46,6 +46,7 @@
     "@daucus/menu": "^0.1.0",
     "@daucus/router": "^0.1.0",
     "@material/drawer": "^10.0.0",
+    "@modern-helpers/el": "^0.3.0",
     "@modern-helpers/router": "^0.3.0",
     "custom-element-name": "^0.1.0",
     "lit-element": "^2.4.0",

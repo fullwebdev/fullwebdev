@@ -25,6 +25,9 @@
     },
     {
       "path": "../packages/custom-element-name/tsconfig.json"
+    },
+    {
+      "path": "../packages/helpers/el/tsconfig.json"
     }
   ],
   "include": ["src"],
