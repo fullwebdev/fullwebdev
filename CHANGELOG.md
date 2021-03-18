@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.2](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2021-03-18)
+
+### Features
+
+- **custom-element-name:** initial commit ([62d325d](https://github.com/fullwebdev/fullwebdev/commit/62d325de541c07e8404a3ab350e56456e0bfca12))
+- **illustrations:** images for the first blog post ([07c9a82](https://github.com/fullwebdev/fullwebdev/commit/07c9a82d2f1824f106c36f7d05a39bb24b0d1f8e))
+- **illustrations:** new rendering benchmark plot ([26283bd](https://github.com/fullwebdev/fullwebdev/commit/26283bd9ae7214cc40a37250216f8f8e8e519340))
+- **website:** add /eni/chrome-perf route ([9ccf9a6](https://github.com/fullwebdev/fullwebdev/commit/9ccf9a684fef68a8e1a51d29a9044ff43f276084))
+- **website:** add ce-name ([201c53c](https://github.com/fullwebdev/fullwebdev/commit/201c53ce54d0885af75cee7dde671a6cfb4d95f8))
+- **website:** first blog post ([8b1f337](https://github.com/fullwebdev/fullwebdev/commit/8b1f3376cbb393e7c3f40f74e0d8d74c6ac59adf))
+- **website:** new rendering section ([4db6a06](https://github.com/fullwebdev/fullwebdev/commit/4db6a06bdd59fd4f228901bcc19f761fea016cae))
+
+### Bug Fixes
+
+- **custom-element-name:** bad regexs ([bf4beb3](https://github.com/fullwebdev/fullwebdev/commit/bf4beb32d37866abedc633be4e2513b53f0dadf6))
+- **daucus-router:** dependency to @modern-helpers/router 0.3 ([701bb8f](https://github.com/fullwebdev/fullwebdev/commit/701bb8fd2ae37f2d8538e1d50d33d094a8fa9d4e))
+- **illustrations:** eni review ([2d33019](https://github.com/fullwebdev/fullwebdev/commit/2d330190e8722137b72907a78b231cd4bc326253))
+- **website:** a11y - missing iframe titles ([ff29218](https://github.com/fullwebdev/fullwebdev/commit/ff2921850ae6b7cd49d4ea91de28b702cfbdd95b)), closes [/www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/criteres/#topic2](https://github.com/fullwebdev//www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/criteres//issues/topic2)
+- **website:** blockquotes & figures ([6b59308](https://github.com/fullwebdev/fullwebdev/commit/6b593089a73b9b42a302dcd3381c51e79557df73))
+- **website:** fr - DPAWM order cta ([5c68dbd](https://github.com/fullwebdev/fullwebdev/commit/5c68dbd965637d83c6f5ea91dcd4090d04253b39))
+
 ## [1.0.0-beta.1](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-alpha.1...v1.0.0-beta.1) (2021-02-19)
 
 ### Features
