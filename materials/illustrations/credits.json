@@ -55,6 +55,20 @@
     "type": "graphic"
   },
   {
+    "id": "cambridgeDifferentialAnalyser1938",
+    "accessed": { "date-parts": [[2021, 4, 11]] },
+    "archive": "http://www.cl.cam.ac.uk/Relics/archive_photos.html",
+    "archive_location": "/images/history/Cambridge_differential_analyser.jpg",
+    "author": [{ "literal": "University of Cambridge" }],
+    "citation-label": "cambridgeDifferentialAnalyser1938",
+    "issued": { "date-parts": [[1938]] },
+    "medium": "CC BY 2.0",
+    "source": "Wikimedia Commons",
+    "title": "Cambridge differential analyser",
+    "type": "graphic",
+    "URL": "https://commons.wikimedia.org/wiki/File:Cambridge_differential_analyser.jpg"
+  },
+  {
     "id": "captureFBAttenteArtificielle",
     "archive_location": "/images/third-party/facebook-artificial-wait.jpg",
     "citation-label": "captureFBAttenteArtificielle",
@@ -593,6 +607,23 @@
     "title": "Internet Society Logo",
     "type": "graphic",
     "URL": "https://assets.internetsociety.org/Styleguide/#page/029105C2-BD06-4184-9C413CD5BAB15B76"
+  },
+  {
+    "id": "libraryQuartierEmbrouilleVingtieme2013",
+    "abstract": "Un quartier embrouillé\nRobida, a writer and caricaturist, was exploring futuristic themes at the same time as his countryman Jules Verne, but with a satirical eye.\n\nGift of Peter Halasz\n\nTitle: Le vingtième siècle: La vie électrique \nCreator: Albert Robida, 1848-1926\nDate: 1893\nPublished: Paris: La Librairie Illustrée, 1893\nIdentifier: FT-28 op page 128 un quartier embrouille\nFormat: Book\nRights: Public domain\nCourtesy: <a href=\"http://www.torontopubliclibrary.ca/digital-archive/\" rel=\"noreferrer nofollow\">Toronto Public Library</a>. \n\n\nThis image was featured in the <i> Flight: A Thrilling History of an Idea</i> exhibit in the <a href=\"http://www.torontopubliclibrary.ca/programs-and-classes/exhibits/trl-exhibits.jsp\" rel=\"noreferrer nofollow\">TD Gallery</a> of the <a href=\"http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB018&amp;R=LIB018\" rel=\"noreferrer nofollow\"> Toronto Reference Library</a> from July 13 to September 22, 2013.\n\nYou can order <a href=\"http://www.torontopubliclibrary.ca/using-the-library/computer-services/reproduction-services/\" rel=\"noreferrer nofollow\">order a print or high-resolution copy</a>.",
+    "accessed": { "date-parts": [[2021, 4, 11]] },
+    "archive_location": "/images/history/robida_quartier-embrouille.jpg",
+    "author": [
+      { "family": "Library", "given": "Special Collections Toronto Public" }
+    ],
+    "citation-label": "libraryQuartierEmbrouilleVingtieme2013",
+    "issued": { "date-parts": [[2013, 5, 16]] },
+    "medium": "photo",
+    "source": "Flickr",
+    "title": "Un quartier embrouillé: Le vingtième siècle: La vie électrique",
+    "title-short": "Un quartier embrouillé",
+    "type": "graphic",
+    "URL": "https://www.flickr.com/photos/43021516@N06/9209004717/"
   },
   {
     "id": "LogoEcmaInternational",
