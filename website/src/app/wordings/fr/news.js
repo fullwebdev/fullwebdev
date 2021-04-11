@@ -21,6 +21,21 @@ const wording = {
       ],
     },
     {
+      href: "/blog/as-we-may-think",
+      spotlight: false,
+      type: "blog",
+      date: "2021-04-11",
+      desc: {
+        title: "Vannevar Bush et la naissance des NTIC",
+        subtitle: `Quelques compléments après ma chronique pour Les Briques du Web S01E02`,
+      },
+      img: {
+        src: "/illustrations/images/third-party/The_Memex.png",
+        alt: "The Memex",
+        height: 250,
+      },
+    },
+    {
       href: "/blog/qui-a-invente-hypertexte",
       spotlight: false,
       type: "blog",
