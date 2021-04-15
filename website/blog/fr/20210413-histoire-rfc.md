@@ -5,7 +5,8 @@ Infos complémentaires pour :
 
 - la chronique « Les anecdotes historiques » présentée durant _Les briques du Web_ S01E03 le 13 avril 2021
 - le _Chapitre 1 : Comprendre l'histoire du Web et de ses standards - section 2. IETF, les réseaux et Internet_ (p25-30) du livre _[Applications Web Modernes](https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523)_.
-  :::
+
+:::
 
 :::warning
 
@@ -29,7 +30,8 @@ Forcément, je joue avec ces différents sens dans cette chronique.
 - Audi Paul, « [Sémantique de l'autorité (quelques remarques)](https://www.cairn.info/revue-lettre-de-l-enfance-et-de-l-adolescence-2002-4-page-15.htm) », La lettre de l'enfance et de l'adolescence, 2002/4 (no 50), p. 15-22
 - Podcast : Hannah Arendt et la crise de la culture - [Épisode 1 : Qu’est-ce que l’autorité ?](https://www.franceculture.fr/emissions/les-chemins-de-la-philosophie/hannah-arendt-et-la-crise-de-la-culture-1-quest-ce-que), Les chemins de la philosophie, France Culture, 8 février 2016
 - Collognat Annie, [_Auctoritas - AUTORITÉ : un mot, une notion clé_](https://eduscol.education.fr/odysseum/auctoritas), Odysseum
-  :::
+
+:::
 
 ## Steve Crocker et la naissance des RFC
 
