@@ -1295,6 +1295,22 @@
     "type": "graphic"
   },
   {
+    "id": "serviceEnglishJonPostel1994",
+    "accessed": { "date-parts": [[2021, 4, 14]] },
+    "archive": "http://www.postel.org/pr.htm (actual picture)",
+    "archive_location": "/images/history/Jon_Postel.jpg",
+    "author": [
+      { "family": "Service", "given": "Irene Fertik", "suffix": "USC News" }
+    ],
+    "citation-label": "serviceEnglishJonPostel1994",
+    "issued": { "literal": "Taken in 1994" },
+    "source": "Wikimedia Commons",
+    "title": "English:  Jon Postel at work",
+    "title-short": "English",
+    "type": "graphic",
+    "URL": "https://commons.wikimedia.org/wiki/File:Jon_Postel.jpg"
+  },
+  {
     "id": "spyglassMosaicFloppy",
     "accessed": { "date-parts": [[2020, 10, 29]] },
     "citation-label": "spyglassMosaicFloppy",
