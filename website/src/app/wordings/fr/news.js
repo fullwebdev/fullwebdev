@@ -21,6 +21,21 @@ const wording = {
       ],
     },
     {
+      href: "/blog/histoire-rfc",
+      spotlight: false,
+      type: "blog",
+      date: "2021-04-13",
+      desc: {
+        title: "L'Histoire des Request For Comments",
+        subtitle: `Quelques compléments après ma chronique pour Les Briques du Web S01E03`,
+      },
+      img: {
+        src: "/illustrations/images/third-party/ietf-rfc1-heading.png",
+        alt: "RFC1 Heading",
+        height: 250,
+      },
+    },
+    {
       href: "/blog/as-we-may-think",
       spotlight: false,
       type: "blog",
