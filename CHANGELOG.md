@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.3](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2021-04-16)
+
+### Features
+
+- **illustrations:** images for 'As We May Think' blog post ([36560f0](https://github.com/fullwebdev/fullwebdev/commit/36560f070e9f6ea76702fb9afbe87b28fe09c638))
+- **illustrations:** images for "RFC History" blog post ([d2eb436](https://github.com/fullwebdev/fullwebdev/commit/d2eb4364010ef6fbcdd9573d36df97b89bed1e64))
+- **website:** 'As We May Think' blog post ([635ae3c](https://github.com/fullwebdev/fullwebdev/commit/635ae3c2a3021d915490c94bc1c68145bbc6cb72))
+- **website:** meta tags for blog posts ([b15504a](https://github.com/fullwebdev/fullwebdev/commit/b15504ab5715c6eceaa337f77dbeac636e962c86))
+- **website:** RFC History blog post ([1d938cf](https://github.com/fullwebdev/fullwebdev/commit/1d938cf32ad4618062d2f53b7778f6bae784bd6e))
+
+### Bug Fixes
+
+- **website:** remove fr news warning ([c484bc6](https://github.com/fullwebdev/fullwebdev/commit/c484bc6005b8ff0eeeb8e2720427a5a4143cdccb))
+- **website:** typo in blog post ([0007ea3](https://github.com/fullwebdev/fullwebdev/commit/0007ea3de2e57d5f8672bbc95f3c1bbfdeca67ac))
+
 ## [1.0.0-beta.2](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2021-03-18)
 
 ### Features
