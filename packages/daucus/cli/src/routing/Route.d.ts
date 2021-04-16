@@ -4,7 +4,6 @@ export interface Route {
   templateUrl: string;
   path: string;
   title: string;
-  data?: any;
 }
 
 export interface RouteWithChildren extends Partial<Route> {

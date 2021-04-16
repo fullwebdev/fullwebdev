@@ -223,14 +223,6 @@ const networkErrorTemplate = (w) => /* HTML */ `
 `;
 //#endregion networkError
 
-const PAGE_META = [
-  "og:image",
-  "og:title",
-  "og:description",
-  "twitter:image:alt",
-  "og:type",
-];
-
 export class AppRouter extends AbstractRouter {
   static get WORDINGS() {
     return {
@@ -258,9 +250,6 @@ export class AppRouter extends AbstractRouter {
    */
   constructor(daucusRoutesConfig, fragmentsDirectory) {
     super();
-
-    /** @type {Record<string, string>} */
-    this._defaultMeta = {};
 
     /** @type {import('./app-routes').AppRoutes} */
     this._appRoutes = {
@@ -412,7 +401,6 @@ export class AppRouter extends AbstractRouter {
       daucusProject,
       menuHTML,
       redirection,
-      data,
     } = await this._findRoute(path);
 
     if (redirection) {
@@ -463,8 +451,6 @@ export class AppRouter extends AbstractRouter {
       );
     }
 
-    this.updatePageMeta(data || {});
-
     if (staticContent) {
       this.outlet.staticContent(staticContent);
       this.dispatchEvent(new CustomEvent("route-loaded"));
@@ -497,29 +483,6 @@ export class AppRouter extends AbstractRouter {
     pageContainer.innerHTML = "";
     pageContainer.appendChild(this.outlet);
     this.outlet.staticContent(fragment.cloneNode(true));
-  }
-
-  /**
-   * @param {Record<string, string>} data
-   */
-  updatePageMeta(data) {
-    for (const property of PAGE_META) {
-      const metaEl =
-        document.head.querySelector(`meta[property="${property}"]`) ||
-        document.head.querySelector(`meta[name="${property}"]`);
-      if (!metaEl) {
-        throw new Error(`can't find any ${property} meta tag`);
-      }
-      const previousContent = metaEl.getAttribute("content");
-      if (!this._defaultMeta[property] && previousContent) {
-        this._defaultMeta[property] = previousContent;
-      }
-      if (data[property]) {
-        metaEl.setAttribute("content", data[property]);
-      } else if (this._defaultMeta[property]) {
-        metaEl.setAttribute("content", this._defaultMeta[property]);
-      }
-    }
   }
 
   /** @type {Language} */
@@ -589,7 +552,6 @@ export class AppRouter extends AbstractRouter {
     let daucusProject = null;
     /** @type {string | undefined} */
     let menuHTML;
-    let data;
 
     if (appRoute) {
       if (appRoute.redirectTo) {
@@ -635,7 +597,6 @@ export class AppRouter extends AbstractRouter {
             menuHTML = daucusRoutes[daucusProject][this.preferredLanguage].menu;
           }
         }
-        data = daucusRouteMatch.route.data;
       }
     }
 
@@ -646,7 +607,6 @@ export class AppRouter extends AbstractRouter {
       translationTemplatePath,
       daucusProject,
       menuHTML,
-      data,
     };
   }
 }

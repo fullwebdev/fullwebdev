@@ -49,14 +49,17 @@
       type="image/png"
       href="/images/favicon/favicon-96x96.png"
     />
-    <meta name="description" content="{{meta.description}}" />
-    <meta property="og:image" content="{{{meta.twitterCard}}}" />
-    <meta property="og:title" content="fullweb.dev" />
-    <meta property="og:type" content="website" />
+    <meta name="description" content="{{meta.description.short}}" />
+    <meta
+      property="og:image"
+      content="https://fullweb.dev/images/favicon/icon-384x384.png"
+    />
     <meta property="og:site_name" content="fullweb.dev" />
-    <meta property="og:description" content="{{meta.description}}" />
+    <meta property="og:description" content="{{meta.description.long}}" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image:alt" content="{{meta.description}}" />
+    <meta name="twitter:image" content="{{{meta.twitterCard}}}" />
+    <meta name="twitter:image:alt" content="{{meta.description.short}}" />
+    <meta name="twitter:title" content="fullweb.dev" />
   </head>
   <body>
     <aside class="mdc-drawer mdc-drawer--modal" id="mobile-drawer">

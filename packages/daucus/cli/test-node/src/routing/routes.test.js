@@ -54,11 +54,5 @@ describe("routes", () => {
         createRouteFor("", filePath);
       }).to.throw(PathMustBeRelativeException, filePath);
     });
-    it("save metadata", () => {
-      const filePath = "foo/bar/index.html";
-      const metadata = { title: "Test" };
-      const rslt = createRouteFor("", filePath, metadata);
-      expect(rslt[1].data).equals(metadata);
-    });
   });
 });

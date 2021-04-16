@@ -111,16 +111,4 @@ describe("BuildCommand", () => {
     ).equals("Hello World!");
     expect(await output.html.list()).to.deep.equal(["docs/hello-world.html"]);
   });
-
-  it("convert docs w/ metadata", async () => {
-    const wp = await fixtureWorkspace("metadata");
-    const cmd = new BuildCommand(wp);
-
-    await cmd.run();
-
-    const { output } = await workspaceInfos(wp);
-
-    const routes = await output.routes();
-    expect(routes.config).to.deep.equal(routes.snapshot);
-  });
 });

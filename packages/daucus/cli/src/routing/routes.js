@@ -13,11 +13,10 @@ const parseHTML = HTMLparser.parse;
  *
  * @param {string} html
  * @param {string} filePath
- * @param {any} [metadata]
  *
  * @returns {[string | null, Route]}
  */
-export function createRouteFor(html, filePath, metadata) {
+export function createRouteFor(html, filePath) {
   const fileUrl = posixVPath.normalize(filePath);
   if (fileUrl[0] === "/") {
     throw new PathMustBeRelativeException(filePath);
@@ -51,10 +50,6 @@ export function createRouteFor(html, filePath, metadata) {
     templateUrl: "",
     title: "",
   };
-
-  if (metadata) {
-    route.data = metadata;
-  }
 
   if (ext === ".html") {
     /* views/fr/05-foo/1a-bar.html */

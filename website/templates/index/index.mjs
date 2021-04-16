@@ -4,7 +4,10 @@ import homepage from "../homepage/index.mjs";
 import { readTemplate, readSource } from "../utils.mjs";
 
 const meta = {
-  description: "Relearn Web Development",
+  description: {
+    short: "Relearn Web Development",
+    long: "Acquire Web Development expertise by taking a comprehensive view.",
+  },
   twitterCard: "https://fullweb.dev/images/social/social_en.png",
 };
 

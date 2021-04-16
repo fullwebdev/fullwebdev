@@ -25,7 +25,6 @@ export const configs = {
     "import-snippet",
     "daucus.config.json"
   ),
-  metadata: resolve(esmDirName(import.meta), "metadata", "daucus.config.json"),
 };
 
 /**
