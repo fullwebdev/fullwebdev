@@ -1,11 +1,14 @@
 {
+  "functions": {
+    "source": "./website/functions"
+  },
   "hosting": {
     "public": "dist",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
         "source": "**",
-        "destination": "/index.html"
+        "function": "httpRequestHandler"
       }
     ],
     "i18n": {

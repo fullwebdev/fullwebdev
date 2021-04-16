@@ -12,7 +12,8 @@
     "packages/helpers/template",
     "packages/daucus/*",
     "packages/custom-element-name",
-    "website"
+    "website",
+    "website/functions"
   ],
   "version": "independent"
 }
