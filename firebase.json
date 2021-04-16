@@ -8,7 +8,7 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "/index.html"
+        "function": "httpRequestHandler"
       }
     ],
     "i18n": {

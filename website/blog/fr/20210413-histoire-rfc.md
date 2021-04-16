@@ -3,7 +3,7 @@
 ::: tip
 Infos complémentaires pour :
 
-- la chronique « Les anecdotes historiques » présentée durant _Les briques du Web_ S01E03 le 13 avril 2021
+- la chronique « Les anecdotes historiques » présentée durant [_Les briques du Web_ S01E03](https://www.youtube.com/watch?v=xGntn3gOYDE) le 13 avril 2021
 - le _Chapitre 1 : Comprendre l'histoire du Web et de ses standards - section 2. IETF, les réseaux et Internet_ (p25-30) du livre _[Applications Web Modernes](https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523)_.
 
 :::

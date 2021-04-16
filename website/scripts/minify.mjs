@@ -38,7 +38,7 @@ const options = {
     preventAttributesEscaping: false,
     processConditionalComments: true,
     removeAttributeQuotes: true,
-    removeComments: true,
+    removeComments: false,
     removeEmptyAttributes: true,
     removeOptionalTags: true,
     removeRedundantAttributes: true,

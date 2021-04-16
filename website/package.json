@@ -10,7 +10,8 @@
     "prestart": "npm run prebuild",
     "start": "snowpack dev --reload",
     "build:sass": "sass src/styles/:public/styles/build/ --load-path=node_modules",
-    "postbuild": "npm run minify",
+    "postbuild": "npm run minify && npm run build:functions",
+    "build:functions": "node ./scripts/fn-assets.mjs",
     "minify": "node ./scripts/minify.mjs"
   },
   "repository": {
