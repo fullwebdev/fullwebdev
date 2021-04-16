@@ -5,7 +5,7 @@ import { readTemplate, readSource } from "../utils.mjs";
 
 const meta = {
   description: "Relearn Web Development",
-  twitterCard: "https://fullweb.dev/images/social/social_en.png"
+  twitterCard: "https://fullweb.dev/images/social/social_en.png",
 };
 
 const scriptWordings = {

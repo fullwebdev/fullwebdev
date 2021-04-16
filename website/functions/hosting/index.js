@@ -11,7 +11,6 @@ const INDEX_TEMPLATE = fs
 function metasForRoute(route) {
   let metas = "";
   for (const [key, value] of Object.entries(route)) {
-    console.log(`meta: ${key} = ${value}`);
     metas += `<meta ${
       key.startsWith("og:") ? "property" : "name"
     }="${key}" content="${value}" />`;
