@@ -1,4 +1,4 @@
-import { promises as asyncFs } from "fs";
+import { promises as asyncFs, constants as fsConstants } from "fs";
 import { extname, dirname, basename, relative, resolve, join } from "path";
 import HTMLMin from "html-minifier";
 import globby from "globby";
@@ -138,9 +138,25 @@ export async function buildProject(
 
           await writeCompiledFile(projectOutDir, relativeOutputFilePath, html);
 
+          const metaFilePath = `${filePath.substr(
+            0,
+            filePath.lastIndexOf(".")
+          )}.meta.json`;
+          let metadata = null;
+          try {
+            await asyncFs.access(metaFilePath, fsConstants.R_OK);
+            const fileContent = await asyncFs.readFile(metaFilePath, {
+              encoding: "utf-8",
+            });
+            metadata = JSON.parse(fileContent) || null;
+          } catch {
+            // nothing for now
+          }
+
           const [routeKey, route] = createRouteFor(
             html,
-            relativeOutputFilePath
+            relativeOutputFilePath,
+            metadata
           );
 
           routesConfigBuilder.push(routeKey, route);
