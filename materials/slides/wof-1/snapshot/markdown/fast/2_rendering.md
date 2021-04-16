@@ -1,0 +1,24 @@
+<!-- .slide: class="transition-white fire-bg-blue fire-specific-slide" data-background="css/theme/legacy/images/background_blue.png" -->
+
+# Rendering
+
+##==##
+
+<!-- .slide: class="full-center" -->
+
+# The "Pixel Pipeline"
+
+![h-300](./assets/images/pixel_pipeline.png)
+
+##==##
+
+# Performance : CSS
+
+<br>
+
+![center h-700](./assets/images/css_preformance_trigger.png)
+
+https://csstriggers.com
+
+<!-- .element: class="center" -->
+<br>

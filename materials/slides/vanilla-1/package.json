@@ -12,9 +12,10 @@
     "prewatch": "npm run clean",
     "watch": "webpack --watch --mode development",
     "watch-no-remote": "webpack --watch --mode development --env.no-remote=true",
-    "prebuild": "npm run clean",
-    "build": "webpack --mode production",
-    "postbuild": "rimraf dist && mkdirp dist && copyfiles -u 3 -a \"build/slides/vanilla1/latest/**/*\" dist/ && copyup -a \"snapshots/**/*\" dist"
+    "build": "rimraf dist && mkdirp dist && copyup -a \"snapshots/**/*\" dist",
+    "prerebuild": "npm run clean",
+    "rebuild": "webpack --mode production",
+    "postrebuild": "rimraf snapshots/latest && mkdirp snapshots/latest && copyfiles -u 3 -a \"build/slides/vanilla1/latest/**/*\" snapshots/latest/ && npm run build"
   },
   "author": {
     "name": "Noël Macé",
