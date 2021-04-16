@@ -4,23 +4,6 @@ const wording = {
   abstract: "Annonces et articles de blog.",
   items: [
     {
-      desc: {
-        title: "Travail en cours...",
-        subtitle: "De nouveaux articles seront bientôt partagés ici.",
-      },
-      img: {
-        src: "/images/web-illustrations/noted.svg",
-        alt: "noted for later",
-      },
-      cta: [
-        {
-          href: "https://dev.to/noelmace",
-          primary: true,
-          text: "Articles sur Dev.to",
-        },
-      ],
-    },
-    {
       href: "/blog/histoire-rfc",
       spotlight: false,
       type: "blog",
