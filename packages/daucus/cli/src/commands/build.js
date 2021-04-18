@@ -11,9 +11,21 @@ import { buildProject } from "../compilers/build.js";
  * @typedef {import('../config/WorkSpace').WorkSpace} WorkSpace
  * @typedef {import('../routing/Route').ProjectRoutesConfig} ProjectRoutesConfig
  * @typedef {import('../routing/Route').RoutesConfig} RoutesConfig
+ * @typedef {import('./AbstractCommand').Command<BuildCommandOptions>} BuildCommandInterface
+ * @typedef {import('./AbstractCommand').CommandConstructor<BuildCommandOptions>} BuildCommandConstructor
+ *
+ * @typedef {{ project?: string }} BuildCommandOptions
  */
 
+/**
+ * @implements BuildCommandInterface
+ * @type BuildCommandConstructor
+ */
 export class BuildCommand {
+  static help = "generate static assets";
+
+  static synopsis = "[project]";
+
   static options = [
     {
       name: "project",
@@ -39,7 +51,7 @@ export class BuildCommand {
   }
 
   /**
-   * @param {{ project?: string }} [params] command parameters
+   * @param {BuildCommandOptions} [params] command parameters
    */
   async run(params = {}) {
     const config = await this.workspace.getConfig();

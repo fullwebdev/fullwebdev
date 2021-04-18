@@ -1,5 +1,6 @@
 import commandLineArgs from "command-line-args";
-import { commandsMap } from "../commands/index.js";
+// eslint-disable-next-line import/named
+import { commands } from "../commands/index.js";
 import { findWorkspace } from "../config/workspace.js";
 
 export class DaucusCLI {
@@ -20,13 +21,13 @@ export class DaucusCLI {
     let cmdName = mainOptions.command;
     const cmdArgs = mainOptions._unknown || [];
 
-    if (!commandsMap.has(cmdName)) {
+    if (!commands[cmdName]) {
       cmdName = "help";
     }
 
     this.workspace = findWorkspace(cwd);
 
-    const Command = commandsMap.get(cmdName);
+    const Command = commands[cmdName];
     if (!Command) {
       throw new Error(`command not found`);
     }
