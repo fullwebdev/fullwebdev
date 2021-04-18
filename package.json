@@ -46,6 +46,16 @@
     "prebuild:eni-dpawm": "npm run build:illustrations",
     "build:code-samples:index": "lerna run build:index --scope=@fullweb/code-samples",
     "serve": "firebase emulators:start",
+    "docs:api": "node ./scripts/typedoc.mjs",
+    "build:daucus:config-schema": "typescript-json-schema packages/daucus/cli/src/config/DaucusConfig.d.ts DaucusConfig -o packages/daucus/cli/src/config/daucus-config.schema.json",
+    "build:ce:daucus:router": "wca analyze packages/daucus/router/src/DaucusRouterWC.js --format json --outFile packages/daucus/router/custom-elements.json",
+    "docs:ce:daucus:router": "wca analyze packages/daucus/router/src/DaucusRouterWC.js --format markdown --outFile packages/daucus/router/custom-elements.md",
+    "build:ce:daucus:menu": "wca analyze packages/daucus/menu/src/DaucusMenu.js --format json --outFile packages/daucus/menu/custom-elements.json",
+    "docs:ce:daucus:menu": "wca analyze packages/daucus/menu/src/DaucusMenu.js --format markdown --outFile packages/daucus/menu/custom-elements.md",
+    "build:ce:daucus:html-loader": "wca analyze packages/daucus/html-loader/src/HtmlLoader.js --format json --outFile packages/daucus/html-loader/custom-elements.json",
+    "docs:ce:daucus:html-loader": "wca analyze packages/daucus/html-loader/src/HtmlLoader.js --format markdown --outFile packages/daucus/html-loader/custom-elements.md",
+    "build:ce": "run-s build:ce:**",
+    "docs:ce": "run-s docs:ce:**",
     "==c==": "========================= CI & releases =======================",
     "release": "standard-version",
     "release:test": "standard-version --dry-run",
@@ -107,7 +117,11 @@
     "sinon": "^9.2.4",
     "sinon-chai": "^3.5.0",
     "standard-version": "^9.1.0",
-    "typescript": "^4.1.5"
+    "typedoc": "^0.20.35",
+    "typedoc-plugin-markdown": "^3.7.1",
+    "typescript": "^4.1.5",
+    "typescript-json-schema": "^0.50.0",
+    "web-component-analyzer": "^1.1.6"
   },
   "husky": {
     "hooks": {
