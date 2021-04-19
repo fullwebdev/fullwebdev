@@ -14,9 +14,12 @@ class UtilsComponent extends ContextAwareRendererComponent {
   initialize() {
     super.initialize();
 
-    MarkdownTheme.HANDLEBARS.registerHelper("relativeURL", (url) => {
-      const relativeUrl = this.getRelativeUrl(url.replace(/(.*).md/, "$1"));
-      return this.publicPath ? this.publicPath + relativeUrl : relativeUrl;
+    // override https://github.com/tgreyuk/typedoc-plugin-markdown/blob/0b9588b/packages/typedoc-plugin-markdown/src/components/options.ts#L49-L55
+    MarkdownTheme.HANDLEBARS.registerHelper("relativeURL", (url: string) => {
+      if (!url) return url;
+      const urlWithoutExt = url.replace(/(.*).md/, "$1");
+      if (!this.publicPath) return this.getRelativeUrl(urlWithoutExt);
+      return this.publicPath + urlWithoutExt;
     });
   }
 }

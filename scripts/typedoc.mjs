@@ -78,6 +78,7 @@ packages.forEach(async ({ root }, name) => {
     excludePrivate: true,
     entryPoints: [index],
     hideBreadcrumbs: true,
+    categorizeByGroup: false,
     hideInPageTOC: true,
     // eslint-disable-next-line prefer-template
     publicPath: path.join(path.relative(path.join(repoRoot, "packages"), root), 'API') + '/',
