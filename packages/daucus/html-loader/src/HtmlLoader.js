@@ -16,6 +16,16 @@ export class HTMLLoadingErrorEvent extends CustomEvent {
     });
   }
 }
+
+/**
+ * @element html-loader
+ *
+ * Load and render remote HTML template files
+ *
+ * @fires html-reset Element's content reset
+ * @fires html-loaded HTML template successfully loaded
+ * @fires html-loading-error An error occured when trying to load an HTML template
+ */
 export class HTMLLoaderElement extends HTMLElement {
   static get observedAttributes() {
     return ["href"];
@@ -23,7 +33,9 @@ export class HTMLLoaderElement extends HTMLElement {
 
   constructor() {
     super();
+    /** @private */
     this._cache = new Map();
+    /** @private */
     this._staticCache = new Map();
   }
 
@@ -90,7 +102,7 @@ export class HTMLLoaderElement extends HTMLElement {
 
   // TODO: debounce
   /**
-   *
+   * @private
    * @param {string} href
    * @param {boolean} shouldFallback
    *
@@ -123,7 +135,7 @@ export class HTMLLoaderElement extends HTMLElement {
   }
 
   /**
-   *
+   * @private
    * @param {string} href
    */
   async _renderHRef(href) {
