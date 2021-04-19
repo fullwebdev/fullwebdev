@@ -579,7 +579,9 @@ export class AppRouter extends AbstractRouter {
         daucusRouteMatch = this._findDaucusRoute(path, this.fallbackLanguage);
       }
       if (daucusRouteMatch.route && daucusRouteMatch.route.templateUrl) {
-        templatePath = `${daucusRouteMatch.projectName}/${daucusRouteMatch.lang}/${daucusRouteMatch.route.templateUrl}`;
+        const langDir =
+          daucusRouteMatch.lang === "__" ? "" : `${daucusRouteMatch.lang}/`;
+        templatePath = `${daucusRouteMatch.projectName}/${langDir}${daucusRouteMatch.route.templateUrl}`;
         if (useFallbackLang) {
           translationTemplatePath = `${daucusRouteMatch.projectName}/${this.preferredLanguage}/${daucusRouteMatch.route.templateUrl}`;
         }
@@ -591,7 +593,12 @@ export class AppRouter extends AbstractRouter {
           daucusRoutes[daucusProject] &&
           daucusRoutes[daucusProject][daucusRouteMatch.lang]
         ) {
-          if (useFallbackLang && daucusRouteMatch.lang === "__") {
+          if (
+            (useFallbackLang ||
+              !daucusRoutes[daucusProject][this.preferredLanguage]) &&
+            daucusRouteMatch.lang === "__" &&
+            daucusRoutes[daucusProject].__.menu
+          ) {
             menuHTML = daucusRoutes[daucusProject].__.menu;
           } else {
             menuHTML = daucusRoutes[daucusProject][this.preferredLanguage].menu;
