@@ -231,6 +231,7 @@ h2 {
 
 .main-content {
   margin: 0 auto;
+  flex-grow: 1;
 }
 
 #standard-menu {

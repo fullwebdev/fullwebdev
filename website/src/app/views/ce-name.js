@@ -150,6 +150,7 @@ export default class CENameView extends LitElement {
         display: block;
         max-width: 936px;
         text-align: justify;
+        margin: 0 auto;
       }
 
       h1 {
