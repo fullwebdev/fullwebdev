@@ -24,6 +24,12 @@ function updateTitlePressed(menuEl, shouldBePressed) {
   );
 }
 
+/**
+ * render the menu of a Daucus project from its configuration
+ *
+ * @element daucus-menu
+ *
+ */
 export class DaucusMenu extends HTMLElement {
   static get observedAttributes() {
     return ["active-path"];
@@ -31,11 +37,20 @@ export class DaucusMenu extends HTMLElement {
 
   constructor() {
     super();
-    /** @type {Set<Element>} */
+    /**
+     * @type {Set<Element>}
+     * @private
+     */
     this._openedMenus = new Set();
-    /** @type {Element | null} */
+    /**
+     * @type {Element | null}
+     * @private
+     */
     this._activeSection = null;
-    /** @type {{ [key:string]: { menu: string }}} */
+    /**
+     * @type {{ [key:string]: { menu: string }}}
+     * @private
+     */
     this._routes = {};
     const shadowRoot = this.attachShadow({ mode: "open" });
     this.addEventListener("click", this.__handleClick.bind(this));
@@ -43,6 +58,7 @@ export class DaucusMenu extends HTMLElement {
     const style = document.createElement("style");
     style.innerHTML = DaucusMenu.styles;
     shadowRoot.append(style);
+    /** @private */
     this._slot = document.createElement("slot");
     this._slot.addEventListener("slotchange", () => {
       if (this._activeSection) {
@@ -60,6 +76,9 @@ export class DaucusMenu extends HTMLElement {
     `;
   }
 
+  /**
+   * route path to select in the menu
+   */
   get activePath() {
     return this.getAttribute("active-path");
   }
@@ -86,12 +105,16 @@ export class DaucusMenu extends HTMLElement {
     this._clear();
   }
 
+  /**
+   * @private
+   */
   _clear() {
     this._openedMenus.clear();
     this._activeSection = null;
   }
 
   /**
+   * @private
    * @param {Event} event
    */
   __handleClick(event) {
@@ -105,7 +128,7 @@ export class DaucusMenu extends HTMLElement {
   }
 
   /**
-   *
+   * @private
    * @param {Element} anchor
    */
   _updateActiveSection(anchor) {

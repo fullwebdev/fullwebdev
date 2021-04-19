@@ -1,19 +1,22 @@
 {
-  "version": 2,
+  "version": "experimental",
   "tags": [
     {
       "name": "daucus-menu",
+      "path": "./src/DaucusMenu.js",
       "description": "render the menu of a Daucus project from its configuration",
+      "attributes": [
+        {
+          "name": "active-path"
+        }
+      ],
       "properties": [
         {
           "name": "activePath",
-          "type": "string",
-          "description": "route path to select in the menu"
+          "description": "route path to select in the menu",
+          "type": "string | null"
         }
-      ],
-      "events": [],
-      "slots": [],
-      "cssProperties": []
+      ]
     }
   ]
 }
