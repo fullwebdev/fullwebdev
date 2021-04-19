@@ -9,9 +9,14 @@ export class ProjectRoutesConfigBuilder {
    * @param {string} projectName
    */
   constructor(projectName) {
-    /** @type {ProjectRoutesConfig} */
+    /**
+     * @type {ProjectRoutesConfig}
+     * @private
+     */
     this._projectRoutesConfig = { children: {} };
+    /** @private */
     this._isComplete = false;
+    /** @private */
     this._projectName = projectName;
   }
 

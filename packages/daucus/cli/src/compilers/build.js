@@ -107,6 +107,7 @@ export async function buildProject(
       const root = lang ? join(projectConfig.root, lang) : projectConfig.root;
       const paths = await globby(projectConfig.src, {
         absolute: true,
+        ignore: ["**/node_modules/**"],
         cwd: root,
       });
 

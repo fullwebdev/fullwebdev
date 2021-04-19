@@ -43,6 +43,7 @@ export class VPath {
    */
   constructor(platform) {
     this.sep = platform?.startsWith("win32") ? "\\" : "/";
+    /** @private */
     this._prefixInPathRegex = new RegExp(
       `(^${prefixRegexStr})|((?<=\\${this.sep})(${prefixRegexStr}))`,
       "g"

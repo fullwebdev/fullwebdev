@@ -67,6 +67,7 @@ export class WorkSpace {
       this.root = resolve(root);
     }
 
+    /** @private */
     this._configPromise = (
       configFileLoading || Promise.resolve(config)
     ).then((loadedConfig) =>

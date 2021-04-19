@@ -40,6 +40,7 @@ export class BuildCommand {
    */
   constructor(workspace) {
     this.workspace = workspace;
+    /** @private */
     this._compileLog = {
       gauge: new Gauge(process.stdout, {
         updateInterval: 50,
@@ -119,6 +120,7 @@ export class BuildCommand {
 
   /**
    * @param {string} msg
+   * @private
    */
   _logCompileProgress(msg, step = 0) {
     this._compileLog.progress += step;
@@ -128,6 +130,9 @@ export class BuildCommand {
     );
   }
 
+  /**
+   * @private
+   */
   _closeLogProgress() {
     this._compileLog.gauge.disable();
     this._compileLog.progress = 0;
