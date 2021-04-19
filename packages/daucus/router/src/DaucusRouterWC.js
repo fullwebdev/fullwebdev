@@ -4,9 +4,28 @@ import { DaucusRouter } from "./daucus-router.js";
  * @typedef {import('./RoutesConfig').RoutesConfig} RoutesConfig
  */
 
+/**
+ * Routing wrapper element for Daucus Routes
+ *
+ * Wrap the programmatic DaucusRouter for declarative usage.
+ *
+ * @see https://www.npmjs.com/package/@modern-helpers/router
+ *
+ * @element daucus-router
+ *
+ * @fires navigation-start New navigation begins
+ * @fires navigation-end A navigation ended without error
+ * @fires route-redirection A navigation led to a redirection to another route
+ * @fires route-match A corresponding route was found for a navigation
+ * @fires project-change A navigation led to a route from another Daucus Project
+ */
 export class DaucusRouterWC extends HTMLElement {
   /**
+   * Path of the default route
+   *
    * @type {string}
+   * @attr default-path
+   * @default /docs/
    */
   get defaultPath() {
     return this.getAttribute("default-path") || "/docs/";
@@ -16,30 +35,26 @@ export class DaucusRouterWC extends HTMLElement {
     this.setAttribute("default-path", path);
   }
 
-  /**
-   * @type {string}
-   */
-  get outletTagName() {
-    return this.getAttribute("outlet-tag") || "daucus-router-outlet";
-  }
-
-  set outletTagName(tagName) {
-    this.setAttribute("outlet-tag", tagName);
+  set routes(routes) {
+    /** @private */
+    this._routes = routes;
   }
 
   /**
+   * Daucus Routes
+   *
    * @type {RoutesConfig | undefined}
    */
   get routes() {
     return this._routes;
   }
 
-  set routes(routes) {
-    this._routes = routes;
-  }
-
   /**
+   * Directory where templates are published, relative to the baseHRef (should end with a '/')
+   *
    * @type {string}
+   * @attr base-dir
+   * @default templates/
    */
   get baseDir() {
     return this.getAttribute("base-dir") || "templates/";
@@ -53,10 +68,14 @@ export class DaucusRouterWC extends HTMLElement {
     this.upgradeProperty("routes");
     this.upgradeProperty("defaultPath");
 
-    if (!this._routes)
+    if (!this._routes) {
       throw new Error("no routes available in the DaucusRouter component");
-    if (this._router) throw new Error("can't define router more than once");
+    }
+    if (this._router) {
+      throw new Error("can't define router more than once");
+    }
 
+    /** @private */
     this._router = new DaucusRouter(
       this._routes,
       this.defaultPath,
@@ -81,7 +100,7 @@ export class DaucusRouterWC extends HTMLElement {
   }
 
   /**
-   *
+   * @private
    * @param {string} prop
    */
   upgradeProperty(prop) {

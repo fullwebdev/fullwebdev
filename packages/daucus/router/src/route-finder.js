@@ -39,6 +39,7 @@ function findRoute(routes, paths) {
 }
 
 /**
+ * Generate a function to find routes
  *
  * @param {RoutesConfig} routes
  *
@@ -60,6 +61,7 @@ export const routeFinder = (routes) => {
 
 // TODO: create an associated router & WC
 /**
+ * Generate a function to find internationalized routes
  *
  * @param {I18NRoutesConfig} routes
  *

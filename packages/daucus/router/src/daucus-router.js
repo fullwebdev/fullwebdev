@@ -47,7 +47,9 @@ export class DaucusRouter extends AbstractRouter {
    */
   constructor(routes, defaultPath, baseDir) {
     super();
+    /** @private */
     this._findDaucusRoute = routeFinder(routes).bind(this);
+    /** @private */
     const defaultDaucusRouteMatch = this._findDaucusRoute(defaultPath);
 
     if (!defaultDaucusRouteMatch) {
@@ -55,6 +57,7 @@ export class DaucusRouter extends AbstractRouter {
     }
 
     this.defaultPath = defaultPath;
+    /** @private */
     this._defaultDaucusRouteMatch = defaultDaucusRouteMatch;
     this.baseDir = baseDir;
     this.currentProject = "";
