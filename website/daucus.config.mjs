@@ -1,4 +1,5 @@
-export default {
+/** @type {import('@daucus/cli/src/config/DaucusConfig').DaucusConfig}*/
+const config = {
   defaultCompiler: "pandoc",
   output: "src/fragments/",
   i18n: true,
@@ -11,5 +12,17 @@ export default {
       src: "**/*.md",
       root: "blog",
     },
+    daucus: {
+      src: "**/*.md",
+      root: "../packages/daucus",
+      usePathAsTitle: true,
+      exclude: [
+        "**/node_modules/**",
+        "**/fixtures/**",
+        "**/snowpack-template/docs/**"
+      ]
+    }
   },
 };
+
+export default config;
