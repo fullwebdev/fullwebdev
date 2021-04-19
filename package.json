@@ -47,6 +47,7 @@
     "build:code-samples:index": "lerna run build:index --scope=@fullweb/code-samples",
     "serve": "firebase emulators:start",
     "docs:api": "node ./scripts/typedoc.mjs",
+    "predocs:api": "tsc --build scripts/typedoc-theme/tsconfig.json",
     "build:daucus:config-schema": "typescript-json-schema packages/daucus/cli/src/config/DaucusConfig.d.ts DaucusConfig -o packages/daucus/cli/src/config/daucus-config.schema.json",
     "build:ce:daucus:router": "wca analyze packages/daucus/router/src/DaucusRouterWC.js --format json --outFile packages/daucus/router/custom-elements.json",
     "docs:ce:daucus:router": "wca analyze packages/daucus/router/src/DaucusRouterWC.js --format markdown --outFile packages/daucus/router/custom-elements.md",

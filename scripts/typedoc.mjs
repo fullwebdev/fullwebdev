@@ -77,7 +77,12 @@ packages.forEach(async ({ root }, name) => {
     excludeInternal: true,
     excludePrivate: true,
     entryPoints: [index],
+    hideBreadcrumbs: true,
+    hideInPageTOC: true,
+    // eslint-disable-next-line prefer-template
+    publicPath: path.join(path.relative(path.join(repoRoot, "packages"), root), 'API') + '/',
     tsconfig,
+    theme: path.join(__dirname, 'typedoc-theme', 'dist'),
     readme: "none",
     plugin: 'typedoc-plugin-markdown',
     name
