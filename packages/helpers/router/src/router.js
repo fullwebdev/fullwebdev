@@ -46,6 +46,8 @@ function processGetParams(pathWithParams, mergeWithLocationSearch) {
 export class AbstractRouter extends EventTarget {
   constructor() {
     super();
+
+    /** @private */
     this._base = baseHRef();
   }
 
@@ -58,6 +60,7 @@ export class AbstractRouter extends EventTarget {
   }
 
   /**
+   * @private
    * @param {string} pathWithParams
    * @param {NavigationOptions} options
    *
