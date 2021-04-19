@@ -141,7 +141,8 @@ export async function buildProject(
 
           const [routeKey, route] = createRouteFor(
             html,
-            relativeOutputFilePath
+            relativeOutputFilePath,
+            projectConfig.usePathAsTitle
           );
 
           routesConfigBuilder.push(routeKey, route);

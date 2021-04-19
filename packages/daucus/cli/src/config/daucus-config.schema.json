@@ -1,29 +1,2356 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "ProjectConfig": {
+    "Agent": {
       "properties": {
-        "compiler": {
-          "anyOf": [
-            {
-              "enum": ["pandoc", "snarkdown"],
-              "type": "string"
-            },
-            {
-              "type": "object"
-            }
-          ],
-          "description": "Specify which converter to use.\nSee the defaultCompiler global option for more details."
+        "freeSockets": {
+          "$ref": "#/definitions/NodeJS.ReadOnlyDict<Socket[]>"
         },
-        "root": {
-          "description": "The root of the source files.",
+        "maxFreeSockets": {
+          "type": "number"
+        },
+        "maxSockets": {
+          "type": "number"
+        },
+        "requests": {
+          "$ref": "#/definitions/NodeJS.ReadOnlyDict<IncomingMessage[]>"
+        },
+        "sockets": {
+          "$ref": "#/definitions/NodeJS.ReadOnlyDict<Socket[]>"
+        }
+      },
+      "type": "object"
+    },
+    "Chai.Assertion": {
+      "properties": {
+        "Arguments": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "NaN": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "Throw": {
+          "$ref": "#/definitions/Chai.Throw"
+        },
+        "a": {
+          "$ref": "#/definitions/Chai.TypeComparison"
+        },
+        "above": {
+          "$ref": "#/definitions/Chai.NumberComparer"
+        },
+        "all": {
+          "$ref": "#/definitions/Chai.KeyFilter"
+        },
+        "always": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "an": {
+          "$ref": "#/definitions/Chai.TypeComparison"
+        },
+        "and": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "any": {
+          "$ref": "#/definitions/Chai.KeyFilter"
+        },
+        "approximately": {
+          "$ref": "#/definitions/Chai.CloseTo"
+        },
+        "arguments": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "at": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "be": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "been": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "below": {
+          "$ref": "#/definitions/Chai.NumberComparer"
+        },
+        "but": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "called": {
+          "$ref": "#/definitions/Chai.Assertion",
+          "description": "true if the spy was called at least once."
+        },
+        "calledOnce": {
+          "$ref": "#/definitions/Chai.Assertion",
+          "description": "true if the spy was called exactly once."
+        },
+        "calledThrice": {
+          "$ref": "#/definitions/Chai.Assertion",
+          "description": "true if the spy was called exactly thrice."
+        },
+        "calledTwice": {
+          "$ref": "#/definitions/Chai.Assertion",
+          "description": "true if the spy was called exactly twice."
+        },
+        "calledWithNew": {
+          "$ref": "#/definitions/Chai.Assertion",
+          "description": "Returns true if spy/stub was called with the new operator. Beware that\nthis is inferred based on the value of the this object and the spy\nfunction's prototype, so it may give false positives if you actively\nreturn the right kind of object."
+        },
+        "change": {
+          "$ref": "#/definitions/Chai.PropertyChange"
+        },
+        "changes": {
+          "$ref": "#/definitions/Chai.PropertyChange"
+        },
+        "closeTo": {
+          "$ref": "#/definitions/Chai.CloseTo"
+        },
+        "contain": {
+          "$ref": "#/definitions/Chai.Include"
+        },
+        "contains": {
+          "$ref": "#/definitions/Chai.Include"
+        },
+        "decrease": {
+          "$ref": "#/definitions/Chai.PropertyChange"
+        },
+        "decreases": {
+          "$ref": "#/definitions/Chai.PropertyChange"
+        },
+        "deep": {
+          "$ref": "#/definitions/Chai.Deep"
+        },
+        "displayed": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "does": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "empty": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "eq": {
+          "$ref": "#/definitions/Chai.Equal"
+        },
+        "eql": {
+          "$ref": "#/definitions/Chai.Equal"
+        },
+        "eqls": {
+          "$ref": "#/definitions/Chai.Equal"
+        },
+        "equal": {
+          "$ref": "#/definitions/Chai.Equal"
+        },
+        "equals": {
+          "$ref": "#/definitions/Chai.Equal"
+        },
+        "exist": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "extensible": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "false": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "finite": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "frozen": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "greaterThan": {
+          "$ref": "#/definitions/Chai.NumberComparer"
+        },
+        "gt": {
+          "$ref": "#/definitions/Chai.NumberComparer"
+        },
+        "gte": {
+          "$ref": "#/definitions/Chai.NumberComparer"
+        },
+        "has": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "have": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "haveOwnProperty": {
+          "$ref": "#/definitions/Chai.Property"
+        },
+        "haveOwnPropertyDescriptor": {
+          "$ref": "#/definitions/Chai.OwnPropertyDescriptor"
+        },
+        "include": {
+          "$ref": "#/definitions/Chai.Include"
+        },
+        "includes": {
+          "$ref": "#/definitions/Chai.Include"
+        },
+        "increase": {
+          "$ref": "#/definitions/Chai.PropertyChange"
+        },
+        "increases": {
+          "$ref": "#/definitions/Chai.PropertyChange"
+        },
+        "instanceOf": {
+          "$ref": "#/definitions/Chai.InstanceOf"
+        },
+        "instanceof": {
+          "$ref": "#/definitions/Chai.InstanceOf"
+        },
+        "is": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "itself": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "keys": {
+          "$ref": "#/definitions/Chai.Keys"
+        },
+        "least": {
+          "$ref": "#/definitions/Chai.NumberComparer"
+        },
+        "length": {
+          "$ref": "#/definitions/Chai.Length"
+        },
+        "lengthOf": {
+          "$ref": "#/definitions/Chai.Length"
+        },
+        "lessThan": {
+          "$ref": "#/definitions/Chai.NumberComparer"
+        },
+        "lt": {
+          "$ref": "#/definitions/Chai.NumberComparer"
+        },
+        "lte": {
+          "$ref": "#/definitions/Chai.NumberComparer"
+        },
+        "match": {
+          "$ref": "#/definitions/Chai.Match"
+        },
+        "matches": {
+          "$ref": "#/definitions/Chai.Match"
+        },
+        "members": {
+          "$ref": "#/definitions/Chai.Members"
+        },
+        "most": {
+          "$ref": "#/definitions/Chai.NumberComparer"
+        },
+        "nested": {
+          "$ref": "#/definitions/Chai.Nested"
+        },
+        "not": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "null": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "of": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "ok": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "ordered": {
+          "$ref": "#/definitions/Chai.Ordered"
+        },
+        "own": {
+          "$ref": "#/definitions/Chai.Own"
+        },
+        "ownProperty": {
+          "$ref": "#/definitions/Chai.Property"
+        },
+        "ownPropertyDescriptor": {
+          "$ref": "#/definitions/Chai.OwnPropertyDescriptor"
+        },
+        "property": {
+          "$ref": "#/definitions/Chai.Property"
+        },
+        "respondTo": {
+          "$ref": "#/definitions/Chai.RespondTo"
+        },
+        "respondsTo": {
+          "$ref": "#/definitions/Chai.RespondTo"
+        },
+        "same": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "satisfies": {
+          "$ref": "#/definitions/Chai.Satisfy"
+        },
+        "satisfy": {
+          "$ref": "#/definitions/Chai.Satisfy"
+        },
+        "sealed": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "that": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "throw": {
+          "$ref": "#/definitions/Chai.Throw"
+        },
+        "throws": {
+          "$ref": "#/definitions/Chai.Throw"
+        },
+        "to": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "trimmed": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "true": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "undefined": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "visible": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "which": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "with": {
+          "$ref": "#/definitions/Chai.Assertion"
+        }
+      },
+      "type": "object"
+    },
+    "Chai.CloseTo": {
+      "type": "object"
+    },
+    "Chai.Deep": {
+      "properties": {
+        "contain": {
+          "$ref": "#/definitions/Chai.Include"
+        },
+        "contains": {
+          "$ref": "#/definitions/Chai.Include"
+        },
+        "eq": {
+          "$ref": "#/definitions/Chai.Equal"
+        },
+        "equal": {
+          "$ref": "#/definitions/Chai.Equal"
+        },
+        "equals": {
+          "$ref": "#/definitions/Chai.Equal"
+        },
+        "include": {
+          "$ref": "#/definitions/Chai.Include"
+        },
+        "includes": {
+          "$ref": "#/definitions/Chai.Include"
+        },
+        "keys": {
+          "$ref": "#/definitions/Chai.Keys"
+        },
+        "members": {
+          "$ref": "#/definitions/Chai.Members"
+        },
+        "nested": {
+          "$ref": "#/definitions/Chai.Nested"
+        },
+        "ordered": {
+          "$ref": "#/definitions/Chai.Ordered"
+        },
+        "own": {
+          "$ref": "#/definitions/Chai.Own"
+        },
+        "property": {
+          "$ref": "#/definitions/Chai.Property"
+        }
+      },
+      "type": "object"
+    },
+    "Chai.Equal": {
+      "type": "object"
+    },
+    "Chai.Include": {
+      "properties": {
+        "all": {
+          "$ref": "#/definitions/Chai.KeyFilter"
+        },
+        "any": {
+          "$ref": "#/definitions/Chai.KeyFilter"
+        },
+        "deep": {
+          "$ref": "#/definitions/Chai.Deep"
+        },
+        "keys": {
+          "$ref": "#/definitions/Chai.Keys"
+        },
+        "members": {
+          "$ref": "#/definitions/Chai.Members"
+        },
+        "ordered": {
+          "$ref": "#/definitions/Chai.Ordered"
+        }
+      },
+      "type": "object"
+    },
+    "Chai.InstanceOf": {
+      "type": "object"
+    },
+    "Chai.KeyFilter": {
+      "properties": {
+        "keys": {
+          "$ref": "#/definitions/Chai.Keys"
+        },
+        "members": {
+          "$ref": "#/definitions/Chai.Members"
+        }
+      },
+      "type": "object"
+    },
+    "Chai.Keys": {
+      "type": "object"
+    },
+    "Chai.Length": {
+      "properties": {
+        "above": {
+          "$ref": "#/definitions/Chai.NumberComparer"
+        },
+        "always": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "and": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "at": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "be": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "been": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "below": {
+          "$ref": "#/definitions/Chai.NumberComparer"
+        },
+        "but": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "does": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "greaterThan": {
+          "$ref": "#/definitions/Chai.NumberComparer"
+        },
+        "gt": {
+          "$ref": "#/definitions/Chai.NumberComparer"
+        },
+        "gte": {
+          "$ref": "#/definitions/Chai.NumberComparer"
+        },
+        "has": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "have": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "is": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "least": {
+          "$ref": "#/definitions/Chai.NumberComparer"
+        },
+        "lessThan": {
+          "$ref": "#/definitions/Chai.NumberComparer"
+        },
+        "lt": {
+          "$ref": "#/definitions/Chai.NumberComparer"
+        },
+        "lte": {
+          "$ref": "#/definitions/Chai.NumberComparer"
+        },
+        "most": {
+          "$ref": "#/definitions/Chai.NumberComparer"
+        },
+        "of": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "same": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "that": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "to": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "which": {
+          "$ref": "#/definitions/Chai.Assertion"
+        },
+        "with": {
+          "$ref": "#/definitions/Chai.Assertion"
+        }
+      },
+      "type": "object"
+    },
+    "Chai.Match": {
+      "type": "object"
+    },
+    "Chai.Members": {
+      "type": "object"
+    },
+    "Chai.Nested": {
+      "properties": {
+        "contain": {
+          "$ref": "#/definitions/Chai.Include"
+        },
+        "contains": {
+          "$ref": "#/definitions/Chai.Include"
+        },
+        "include": {
+          "$ref": "#/definitions/Chai.Include"
+        },
+        "includes": {
+          "$ref": "#/definitions/Chai.Include"
+        },
+        "members": {
+          "$ref": "#/definitions/Chai.Members"
+        },
+        "property": {
+          "$ref": "#/definitions/Chai.Property"
+        }
+      },
+      "type": "object"
+    },
+    "Chai.NumberComparer": {
+      "type": "object"
+    },
+    "Chai.Ordered": {
+      "properties": {
+        "members": {
+          "$ref": "#/definitions/Chai.Members"
+        }
+      },
+      "type": "object"
+    },
+    "Chai.Own": {
+      "properties": {
+        "contain": {
+          "$ref": "#/definitions/Chai.Include"
+        },
+        "contains": {
+          "$ref": "#/definitions/Chai.Include"
+        },
+        "include": {
+          "$ref": "#/definitions/Chai.Include"
+        },
+        "includes": {
+          "$ref": "#/definitions/Chai.Include"
+        },
+        "property": {
+          "$ref": "#/definitions/Chai.Property"
+        }
+      },
+      "type": "object"
+    },
+    "Chai.OwnPropertyDescriptor": {
+      "type": "object"
+    },
+    "Chai.Property": {
+      "type": "object"
+    },
+    "Chai.PropertyChange": {
+      "type": "object"
+    },
+    "Chai.RespondTo": {
+      "type": "object"
+    },
+    "Chai.Satisfy": {
+      "type": "object"
+    },
+    "Chai.Throw": {
+      "type": "object"
+    },
+    "Chai.TypeComparison": {
+      "properties": {
+        "instanceOf": {
+          "$ref": "#/definitions/Chai.InstanceOf"
+        },
+        "instanceof": {
+          "$ref": "#/definitions/Chai.InstanceOf"
+        }
+      },
+      "type": "object"
+    },
+    "CompatibilityOptions": {
+      "description": "Fine grained configuration for compatibility option",
+      "properties": {
+        "colors": {
+          "description": "A hash of compatibility options related to color",
+          "properties": {
+            "opacity": {
+              "description": "Controls `rgba()` / `hsla()` color support; defaults to `true`",
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "properties": {
+          "description": "A hash of properties that can be set with compatibility",
+          "properties": {
+            "backgroundClipMerging": {
+              "description": "Controls background-clip merging into shorthand; defaults to `true`",
+              "type": "boolean"
+            },
+            "backgroundOriginMerging": {
+              "description": "Controls background-origin merging into shorthand; defaults to `true`",
+              "type": "boolean"
+            },
+            "backgroundSizeMerging": {
+              "description": "Controls background-size merging into shorthand; defaults to `true`",
+              "type": "boolean"
+            },
+            "colors": {
+              "description": "controls color optimizations; defaults to `true`",
+              "type": "boolean"
+            },
+            "ieBangHack": {
+              "description": "Controls keeping IE bang hack; defaults to `false`",
+              "type": "boolean"
+            },
+            "ieFilters": {
+              "description": "Controls keeping IE `filter` / `-ms-filter`; defaults to `false`",
+              "type": "boolean"
+            },
+            "iePrefixHack": {
+              "description": "Controls keeping IE prefix hack; defaults to `false`",
+              "type": "boolean"
+            },
+            "ieSuffixHack": {
+              "description": "Controls keeping IE suffix hack; defaults to `false`",
+              "type": "boolean"
+            },
+            "merging": {
+              "description": "Controls property merging based on understandably; defaults to `true`",
+              "type": "boolean"
+            },
+            "shorterLengthUnits": {
+              "description": "Controls shortening pixel units into `pc`, `pt`, or `in` units; defaults to `false`",
+              "enum": [false],
+              "type": "boolean"
+            },
+            "spaceAfterClosingBrace": {
+              "description": "Controls keeping space after closing brace - `url() no-repeat` into `url()no-repeat`; defaults to `true`",
+              "enum": [true],
+              "type": "boolean"
+            },
+            "urlQuotes": {
+              "description": "Controls keeping quoting inside `url()`; defaults to `false`",
+              "type": "boolean"
+            },
+            "zeroUnits": {
+              "description": "Controls removal of units `0` value; defaults to `true`",
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "selectors": {
+          "description": "A hash of options related to compatibility of selectors",
+          "properties": {
+            "adjacentSpace": {
+              "description": "Controls extra space before `nav` element; defaults to `false`",
+              "type": "boolean"
+            },
+            "ie7Hack": {
+              "description": "Controls removal of IE7 selector hacks, e.g. `*+html...`; defaults to `true`",
+              "type": "boolean"
+            },
+            "mergeLimit": {
+              "description": "Controls maximum number of selectors in a single rule (since 4.1.0); defaults to `8191`",
+              "type": "number"
+            },
+            "mergeablePseudoClasses": {
+              "description": "Controls a whitelist of mergeable pseudo classes; defaults to `[':active', ...]`",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "mergeablePseudoElements": {
+              "description": "Controls a whitelist of mergeable pseudo elements; defaults to `['::after', ...]`",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "multiplePseudoMerging": {
+              "description": "Controls merging of rules with multiple pseudo classes / elements (since 4.1.0); defaults to `true`",
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "units": {
+          "description": "A hash of options related to comparability of supported units",
+          "properties": {
+            "ch": {
+              "description": "Controls treating `ch` as a supported unit; defaults to `true`",
+              "type": "boolean"
+            },
+            "in": {
+              "description": "Controls treating `in` as a supported unit; defaults to `true`",
+              "type": "boolean"
+            },
+            "pc": {
+              "description": "Controls treating `pc` as a supported unit; defaults to `true`",
+              "type": "boolean"
+            },
+            "pt": {
+              "description": "Controls treating `pt` as a supported unit; defaults to `true`",
+              "type": "boolean"
+            },
+            "rem": {
+              "description": "Controls treating `rem` as a supported unit; defaults to `true`",
+              "type": "boolean"
+            },
+            "vh": {
+              "description": "Controls treating `vh` as a supported unit; defaults to `true`",
+              "type": "boolean"
+            },
+            "vm": {
+              "description": "Controls treating `vm` as a supported unit; defaults to `true`",
+              "type": "boolean"
+            },
+            "vmax": {
+              "description": "Controls treating `vmax` as a supported unit; defaults to `true`",
+              "type": "boolean"
+            },
+            "vmin": {
+              "description": "Controls treating `vmin` as a supported unit; defaults to `true`",
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "CompressOptions": {
+      "properties": {
+        "arguments": {
+          "default": true,
+          "description": "Replace `arguments[index]` with function parameter name whenever possible.",
+          "type": "boolean"
+        },
+        "assignments": {
+          "default": "ture",
+          "description": "Apply optimizations to assignment expressions",
+          "type": "boolean"
+        },
+        "booleans": {
+          "default": true,
+          "description": "Various optimizations for boolean context, for example `!!a ? b : c → a ? b : c`",
+          "type": "boolean"
+        },
+        "collapse_vars": {
+          "default": true,
+          "description": "Collapse single-use non-constant variables, side effects permitting.",
+          "type": "boolean"
+        },
+        "comparisons": {
+          "default": true,
+          "description": "Apply certain optimizations to binary nodes, e.g. `!(a <= b) → a > b,` attempts to negate binary nodes, e.g. `a = !b && !c && !d && !e → a=!(b||c||d||e)` etc",
+          "type": "boolean"
+        },
+        "conditionals": {
+          "default": true,
+          "description": "Apply optimizations for `if-s` and conditional expressions.",
+          "type": "boolean"
+        },
+        "dead_code": {
+          "default": true,
+          "description": "Remove unreachable code",
+          "type": "boolean"
+        },
+        "directives": {
+          "default": true,
+          "description": "remove redundant or non-standard directives",
+          "type": "boolean"
+        },
+        "drop_console": {
+          "default": true,
+          "description": "Pass `true` to discard calls to console.* functions.\nIf you wish to drop a specific function call such as `console.info` and/or retain side effects from function\narguments after dropping the function call then use `pure_funcs` instead.",
+          "type": "boolean"
+        },
+        "drop_debugger": {
+          "default": true,
+          "description": "Remove `debugger;` statements",
+          "type": "boolean"
+        },
+        "evaluate": {
+          "default": true,
+          "description": "Attempt to evaluate constant expressions",
+          "type": "boolean"
+        },
+        "expression": {
+          "default": false,
+          "description": "Pass `true` to preserve completion values from terminal statements without `return`, e.g. in bookmarklets.",
+          "type": "boolean"
+        },
+        "functions": {
+          "default": true,
+          "description": "convert declarations from varto function whenever possible",
+          "type": "boolean"
+        },
+        "global_defs": {
+          "additionalProperties": true,
+          "default": {},
+          "properties": {},
+          "type": "object"
+        },
+        "hoist_funs": {
+          "default": false,
+          "description": "hoist function declarations",
+          "type": "boolean"
+        },
+        "hoist_props": {
+          "default": true,
+          "description": "Hoist properties from constant object and array literals into regular variables subject to a set of constraints.\nFor example: `var o={p:1, q:2}; f(o.p, o.q);` is converted to `f(1, 2);`. Note: `hoist_props` works best with mangle enabled,\nthe compress option passes set to 2 or higher, and the compress option toplevel enabled.",
+          "type": "boolean"
+        },
+        "hoist_vars": {
+          "default": false,
+          "description": "Hoist var declarations (this is `false` by default because it seems to increase the size of the output in general)",
+          "type": "boolean"
+        },
+        "if_return": {
+          "default": true,
+          "description": "Optimizations for if/return and if/continue",
+          "type": "boolean"
+        },
+        "inline": {
+          "default": true,
+          "description": "Inline calls to function with simple/return statement\n- false -- same as `Disabled`\n- `Disabled` -- disabled inlining\n- `SimpleFunctions` -- inline simple functions\n- `WithArguments` -- inline functions with arguments\n- `WithArgumentsAndVariables` -- inline functions with arguments and variables\n- true -- same as `WithArgumentsAndVariables`",
+          "enum": [0, 1, 2, 3, false, true]
+        },
+        "join_vars": {
+          "default": true,
+          "description": "join consecutive `var` statements",
+          "type": "boolean"
+        },
+        "keep_fargs": {
+          "default": "'strict'",
+          "description": "Prevents the compressor from discarding unused function arguments.\nYou need this for code which relies on `Function.length`",
+          "enum": [false, "strict", true]
+        },
+        "keep_fnames": {
+          "default": false,
+          "description": "Pass true to prevent the compressor from discarding function names.\nUseful for code relying on `Function.prototype.name`.",
+          "type": "boolean"
+        },
+        "keep_infinity": {
+          "default": false,
+          "description": "Pass true to prevent Infinity from being compressed into `1/0`, which may cause performance issues on `Chrome`",
+          "type": "boolean"
+        },
+        "loops": {
+          "default": true,
+          "description": "Optimizations for `do`, `while` and `for` loops when we can statically determine the condition.",
+          "type": "boolean"
+        },
+        "merge_vars": {
+          "default": true,
+          "description": "combine and reuse variables.",
+          "type": "boolean"
+        },
+        "negate_iife": {
+          "default": true,
+          "description": "negate `Immediately-Called Function Expressions` where the return value is discarded,\nto avoid the parens that the code generator would insert.",
+          "type": "boolean"
+        },
+        "objects": {
+          "default": true,
+          "description": "compact duplicate keys in object literals",
+          "type": "boolean"
+        },
+        "passes": {
+          "default": 1,
+          "description": "The maximum number of times to run compress.\nIn some cases more than one pass leads to further compressed code.\nKeep in mind more passes will take more time.",
+          "type": "number"
+        },
+        "properties": {
+          "default": true,
+          "description": "Rewrite property access using the dot notation, for example `foo[\"bar\"]` to `foo.bar`",
+          "type": "boolean"
+        },
+        "pure_funcs": {
+          "default": null,
+          "description": "An array of names and UglifyJS will assume that those functions do not produce side effects.\nDANGER: will not check if the name is redefined in scope.\nAn example case here, for instance `var q = Math.floor(a/b)`.\nIf variable q is not used elsewhere, UglifyJS will drop it, but will still keep the `Math.floor(a/b)`,\nnot knowing what it does. You can pass `pure_funcs: [ 'Math.floor' ]` to let it know that this function\nwon't produce any side effect, in which case the whole statement would get discarded. The current\nimplementation adds some overhead (compression will be slower).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "pure_getters": {
+          "default": "'strict'",
+          "description": "If you pass true for this, UglifyJS will assume that object property access\n(e.g. foo.bar or foo[\"bar\"]) doesn't have any side effects.\nSpecify \"strict\" to treat foo.bar as side-effect-free only when foo is certain to not throw,\ni.e. not null or undefine",
+          "enum": [false, "strict", true]
+        },
+        "reduce_funcs": {
+          "default": true,
+          "description": "Allows single-use functions to be inlined as function expressions when permissible allowing further optimization.\nEnabled by default. Option depends on reduce_vars being enabled. Some code runs faster in the Chrome V8 engine if\nthis option is disabled. Does not negatively impact other major browsers.",
+          "type": "boolean"
+        },
+        "reduce_vars": {
+          "default": true,
+          "description": "Improve optimization on variables assigned with and used as constant values.",
+          "type": "boolean"
+        },
+        "sequences": {
+          "default": true,
+          "description": "join consecutive simple statements using the comma operator.\nMay be set to a positive integer to specify the maximum number of\nconsecutive comma sequences that will be generated.\nIf this option is set to true then the default sequences limit is 200.\nSet option to false or 0 to disable. The smallest sequences length is 2.\nA sequences value of 1 is grandfathered to be equivalent to true and as such means 200.\nOn rare occasions the default sequences limit leads to very slow compress times in which case\na value of 20 or less is recommended",
+          "type": "boolean"
+        },
+        "side_effects": {
+          "default": true,
+          "description": "Pass false to disable potentially dropping functions marked as \"pure\".",
+          "type": "boolean"
+        },
+        "strings": {
+          "default": true,
+          "description": "compact string concatenations",
+          "type": "boolean"
+        },
+        "switches": {
+          "default": true,
+          "description": "De-duplicate and remove unreachable `switch` branches.",
+          "type": "boolean"
+        },
+        "top_retain": {
+          "default": null,
+          "description": "Prevent specific toplevel functions and variables from unused removal\n(can be array, comma-separated, RegExp or function. Implies toplevel)",
+          "type": "boolean"
+        },
+        "toplevel": {
+          "default": false,
+          "description": "Drop unreferenced functions (\"funcs\") and/or variables (\"vars\") in the top level scope (false by default,\ntrue to drop both unreferenced functions and variables)",
+          "type": "boolean"
+        },
+        "typeofs": {
+          "default": true,
+          "description": "Transforms typeof foo == \"undefined\" into foo === void 0.\nNote: recommend to set this value to false for IE10 and earlier versions due to known issues",
+          "type": "boolean"
+        },
+        "unsafe": {
+          "default": false,
+          "description": "apply \"unsafe\" transformations (discussion below)",
+          "type": "boolean"
+        },
+        "unsafe_Function": {
+          "default": false,
+          "description": "Compress and mangle `Function(args, code)` when both args and code are string literals.",
+          "type": "boolean"
+        },
+        "unsafe_comps": {
+          "default": false,
+          "description": "Compress expressions like a `<= b` assuming none of the operands can be (coerced to) `NaN`.",
+          "type": "boolean"
+        },
+        "unsafe_math": {
+          "default": false,
+          "description": "Optimize numerical expressions like `2 * x * 3` into `6 * x`,\nwhich may give imprecise floating point results.",
+          "type": "boolean"
+        },
+        "unsafe_proto": {
+          "default": false,
+          "description": "Optimize expressions like `Array.prototype.slice.call(a)` into `[].slice.call(a)`",
+          "type": "boolean"
+        },
+        "unsafe_regexp": {
+          "default": false,
+          "description": "Enable substitutions of variables with `RegExp` values the same way as if they are constants.",
+          "type": "boolean"
+        },
+        "unsafe_undefined": {
+          "default": false,
+          "description": "substitute void 0 if there is a variable named undefined in scope\n(variable name will be mangled, typically reduced to a single character)",
+          "type": "boolean"
+        },
+        "unused": {
+          "default": true,
+          "description": "drop unreferenced functions and variables\n(simple direct variable assignments do not count as references unless set to \"keep_assign\")",
+          "type": "boolean"
+        },
+        "varify": {
+          "default": true,
+          "description": "convert block-scoped declaractions into `var`\nwhenever safe to do so",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "FormatOptions": {
+      "description": "Fine grained options for configuring the CSS formatting",
+      "properties": {
+        "breakWith": {
+          "description": "Controls the new line character, can be `'\\r\\n'` or `'\\n'`(aliased as `'windows'` and `'unix'`\nor `'crlf'` and `'lf'`); defaults to system one, so former on Windows and latter on Unix",
           "type": "string"
         },
-        "src": {
-          "description": "Globby glob pattern matching the source files (default: ).",
+        "breaks": {
+          "description": "Controls where to insert breaks",
+          "properties": {
+            "afterAtRule": {
+              "description": "Controls if a line break comes after an at-rule; e.g. `@charset`; defaults to `false`",
+              "type": "boolean"
+            },
+            "afterBlockBegins": {
+              "description": "Controls if a line break comes after a block begins; e.g. `@media`; defaults to `false`",
+              "type": "boolean"
+            },
+            "afterBlockEnds": {
+              "description": "Controls if a line break comes after a block ends, defaults to `false`",
+              "type": "boolean"
+            },
+            "afterComment": {
+              "description": "Controls if a line break comes after a comment; defaults to `false`",
+              "type": "boolean"
+            },
+            "afterProperty": {
+              "description": "Controls if a line break comes after a property; defaults to `false`",
+              "type": "boolean"
+            },
+            "afterRuleBegins": {
+              "description": "Controls if a line break comes after a rule begins; defaults to `false`",
+              "type": "boolean"
+            },
+            "afterRuleEnds": {
+              "description": "Controls if a line break comes after a rule ends; defaults to `false`",
+              "type": "boolean"
+            },
+            "beforeBlockEnds": {
+              "description": "Controls if a line break comes before a block ends; defaults to `false`",
+              "type": "boolean"
+            },
+            "betweenSelectors": {
+              "description": "Controls if a line break comes between selectors; defaults to `false`",
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "indentBy": {
+          "description": "Controls number of characters to indent with; defaults to `0`",
+          "type": "number"
+        },
+        "indentWith": {
+          "description": "Controls a character to indent with, can be `'space'` or `'tab'`; defaults to `'space'`",
+          "enum": ["space", "tab"],
+          "type": "string"
+        },
+        "semicolonAfterLastProperty": {
+          "description": "Controls removing trailing semicolons in rule; defaults to `false` - means remove",
+          "type": "boolean"
+        },
+        "spaces": {
+          "description": "Controls where to insert spaces",
+          "properties": {
+            "aroundSelectorRelation": {
+              "description": "Controls if spaces come around selector relations; e.g. `div > a`; defaults to `false`",
+              "type": "boolean"
+            },
+            "beforeBlockBegins": {
+              "description": "Controls if a space comes before a block begins; e.g. `.block {`; defaults to `false`",
+              "type": "boolean"
+            },
+            "beforeValue": {
+              "description": "Controls if a space comes before a value; e.g. `width: 1rem`; defaults to `false`",
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "wrapAt": {
+          "anyOf": [
+            {
+              "enum": [false],
+              "type": "boolean"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "description": "Controls maximum line length; defaults to `false`"
+        }
+      },
+      "type": "object"
+    },
+    "Function": {
+      "properties": {
+        "arguments": {},
+        "caller": {
+          "$ref": "#/definitions/Function"
+        },
+        "length": {
+          "type": "number"
+        },
+        "name": {
+          "type": "string"
+        },
+        "prototype": {}
+      },
+      "type": "object"
+    },
+    "KeyObject": {
+      "properties": {
+        "passphrase": {
+          "description": "Optional passphrase.",
+          "type": "string"
+        },
+        "pem": {
+          "anyOf": [
+            {
+              "description": "Raw data is stored in instances of the Buffer class.\nA Buffer is similar to an array of integers but corresponds to a raw memory allocation outside the V8 heap.  A Buffer cannot be resized.\nValid string encodings: 'ascii'|'utf8'|'utf16le'|'ucs2'(alias of 'utf16le')|'base64'|'binary'(deprecated)|'hex'",
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "description": "Private keys in PEM format."
+        }
+      },
+      "type": "object"
+    },
+    "MangleOptions": {
+      "properties": {
+        "eval": {
+          "description": "Pass true to mangle names visible in scopes where `eval` or with are used.",
+          "type": "boolean"
+        },
+        "keep_fnames": {
+          "description": "Pass true to not mangle function names. Useful for code relying on `Function.prototype.name`.",
+          "type": "boolean"
+        },
+        "properties": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/ManglePropertiesOptions"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
+        },
+        "reserved": {
+          "description": "Pass an array of identifiers that should be excluded from mangling. Example: `[\"foo\", \"bar\"]`.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "toplevel": {
+          "description": "Pass true to mangle names declared in the top level scope.",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "ManglePropertiesOptions": {
+      "properties": {
+        "builtins": {
+          "description": "Use true to allow the mangling of builtin DOM properties. Not recommended to override this setting.",
+          "type": "boolean"
+        },
+        "debug": {
+          "description": "Mangle names with the original name still present. Pass an empty string \"\" to enable, or a non-empty string to set the debug suffix.",
+          "type": "boolean"
+        },
+        "keep_quoted": {
+          "description": "Only mangle unquoted property names",
+          "type": "boolean"
+        },
+        "regex": {
+          "$ref": "#/definitions/RegExp",
+          "description": "Pass a RegExp literal to only mangle property names matching the regular expression."
+        },
+        "reserved": {
+          "description": "Do not mangle property names listed in the reserved array",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "MinifyOptions": {
+      "properties": {
+        "compress": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/CompressOptions"
+            },
+            {
+              "enum": [false],
+              "type": "boolean"
+            }
+          ],
+          "default": {},
+          "description": "Pass `false` to skip compressing entirely.\nPass an object to specify custom compress options."
+        },
+        "ie8": {
+          "default": false,
+          "description": "Set to true to support IE8",
+          "type": "boolean"
+        },
+        "keep_fnames": {
+          "default": false,
+          "description": "Pass true to prevent discarding or mangling of function names.\nUseful for code relying on Function.prototype.name.",
+          "type": "boolean"
+        },
+        "mangle": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/MangleOptions"
+            },
+            {
+              "type": "boolean"
+            }
+          ],
+          "default": true,
+          "description": "Pass `false` to skip mangling names,\nor pass an object to specify mangle options (see below)."
+        },
+        "nameCache": {
+          "additionalProperties": true,
+          "description": "Pass an empty object {} or a previously used nameCache object\nif you wish to cache mangled variable and property names across multiple invocations of minify().\nNote: this is a read/write property. `minify()` will read the name cache state of this object\nand update it during minification so that it may be reused or externally persisted by the user",
+          "properties": {},
+          "type": "object"
+        },
+        "output": {
+          "$ref": "#/definitions/OutputOptions",
+          "description": "Pass an object if you wish to specify additional output options.\nThe defaults are optimized for best compression"
+        },
+        "parse": {
+          "$ref": "#/definitions/ParseOptions",
+          "description": "Pass an object if you wish to specify some additional parse options."
+        },
+        "sourceMap": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/SourceMapOptions"
+            },
+            {
+              "type": "boolean"
+            }
+          ],
+          "default": false,
+          "description": "Pass an object if you wish to specify source map options."
+        },
+        "toplevel": {
+          "default": false,
+          "description": "Set to `true` if you wish to enable top level variable and function name mangling\nand to drop unused variables and functions.",
+          "type": "boolean"
+        },
+        "warnings": {
+          "default": false,
+          "description": "Pass `true` to return compressor warnings in result.warnings.\nUse the value `verbose` for more detailed warnings.",
+          "enum": [false, true, "verbose"]
+        }
+      },
+      "type": "object"
+    },
+    "NodeJS.ReadOnlyDict<IncomingMessage[]>": {
+      "additionalProperties": {
+        "$ref": "#/definitions/T"
+      },
+      "type": "object"
+    },
+    "NodeJS.ReadOnlyDict<Socket[]>": {
+      "additionalProperties": {
+        "$ref": "#/definitions/T"
+      },
+      "type": "object"
+    },
+    "Object": {
+      "properties": {
+        "constructor": {
+          "$ref": "#/definitions/Function"
+        },
+        "should": {
+          "$ref": "#/definitions/Chai.Assertion"
+        }
+      },
+      "type": "object"
+    },
+    "OptimizationsOptions": {
+      "description": "Fine grained options for configuring optimizations",
+      "properties": {
+        "1": {
+          "properties": {
+            "all": {
+              "description": "Sets all optimizations at this level unless otherwise specified",
+              "type": "boolean"
+            },
+            "cleanupCharsets": {
+              "description": "Controls `@charset` moving to the front of a stylesheet; defaults to `true`",
+              "type": "boolean"
+            },
+            "normalizeUrls": {
+              "description": "Controls URL normalization; defaults to `true`",
+              "type": "boolean"
+            },
+            "optimizeBackground": {
+              "description": "Controls `background` property optimizations; defaults to `true`",
+              "type": "boolean"
+            },
+            "optimizeBorderRadius": {
+              "description": "Controls `border-radius` property optimizations; defaults to `true`",
+              "type": "boolean"
+            },
+            "optimizeFilter": {
+              "description": "Controls `filter` property optimizations; defaults to `true`",
+              "type": "boolean"
+            },
+            "optimizeFont": {
+              "description": "Controls `font` property optimizations; defaults to `true`",
+              "type": "boolean"
+            },
+            "optimizeFontWeight": {
+              "description": "Controls `font-weight` property optimizations; defaults to `true`",
+              "type": "boolean"
+            },
+            "optimizeOutline": {
+              "description": "Controls `outline` property optimizations; defaults to `true`",
+              "type": "boolean"
+            },
+            "removeEmpty": {
+              "description": "Controls removing empty rules and nested blocks; defaults to `true`",
+              "type": "boolean"
+            },
+            "removeNegativePaddings": {
+              "description": "Controls removing negative paddings; defaults to `true`",
+              "type": "boolean"
+            },
+            "removeQuotes": {
+              "description": "Controls removing quotes when unnecessary; defaults to `true`",
+              "type": "boolean"
+            },
+            "removeWhitespace": {
+              "description": "Controls removing unused whitespace; defaults to `true`",
+              "type": "boolean"
+            },
+            "replaceMultipleZeros": {
+              "description": "Contols removing redundant zeros; defaults to `true`",
+              "type": "boolean"
+            },
+            "replaceTimeUnits": {
+              "description": "Controls replacing time units with shorter values; defaults to `true`",
+              "type": "boolean"
+            },
+            "replaceZeroUnits": {
+              "description": "Controls replacing zero values with units; defaults to `true`",
+              "type": "boolean"
+            },
+            "roundingPrecision": {
+              "description": "Rounds pixel values to `N` decimal places; `false` disables rounding; defaults to `false`",
+              "type": "boolean"
+            },
+            "selectorsSortingMethod": {
+              "description": "denotes selector sorting method; can be `'natural'` or `'standard'`, `'none'`, or false (the last two\nsince 4.1.0); defaults to `'standard'`",
+              "enum": ["natural", "none", "standard"],
+              "type": "string"
+            },
+            "specialComments": {
+              "description": "denotes a number of /*! ... * / comments preserved; defaults to `all`",
+              "type": "string"
+            },
+            "tidyAtRules": {
+              "description": "Controls at-rules (e.g. `@charset`, `@import`) optimizing; defaults to `true`",
+              "type": "boolean"
+            },
+            "tidyBlockScopes": {
+              "description": "Controls block scopes (e.g. `@media`) optimizing; defaults to `true`",
+              "type": "boolean"
+            },
+            "tidySelectors": {
+              "description": "Controls selectors optimizing; defaults to `true`",
+              "type": "boolean"
+            },
+            "transform": {
+              "description": "Defines a callback for fine-grained property optimization; defaults to no-op",
+              "type": "object"
+            }
+          },
+          "type": "object"
+        },
+        "2": {
+          "properties": {
+            "all": {
+              "description": "Sets all optimizations at this level unless otherwise specified",
+              "type": "boolean"
+            },
+            "mergeAdjacentRules": {
+              "description": "Controls adjacent rules merging; defaults to true",
+              "type": "boolean"
+            },
+            "mergeIntoShorthands": {
+              "description": "Controls merging properties into shorthands; defaults to true",
+              "type": "boolean"
+            },
+            "mergeMedia": {
+              "description": "Controls `@media` merging; defaults to true",
+              "type": "boolean"
+            },
+            "mergeNonAdjacentRules": {
+              "description": "Controls non-adjacent rule merging; defaults to true",
+              "type": "boolean"
+            },
+            "mergeSemantically": {
+              "description": "Controls semantic merging; defaults to false",
+              "type": "boolean"
+            },
+            "overrideProperties": {
+              "description": "Controls property overriding based on understandably; defaults to true",
+              "type": "boolean"
+            },
+            "reduceNonAdjacentRules": {
+              "description": "Controls non-adjacent rule reducing; defaults to true",
+              "type": "boolean"
+            },
+            "removeDuplicateFontRules": {
+              "description": "Controls duplicate `@font-face` removing; defaults to true",
+              "type": "boolean"
+            },
+            "removeDuplicateMediaBlocks": {
+              "description": "Controls duplicate `@media` removing; defaults to true",
+              "type": "boolean"
+            },
+            "removeDuplicateRules": {
+              "description": "Controls duplicate rules removing; defaults to true",
+              "type": "boolean"
+            },
+            "removeEmpty": {
+              "description": "Controls removing empty rules and nested blocks; defaults to `true`",
+              "type": "boolean"
+            },
+            "removeUnusedAtRules": {
+              "description": "Controls unused at rule removing; defaults to false (available since 4.1.0)",
+              "type": "boolean"
+            },
+            "restructureRules": {
+              "description": "Controls rule restructuring; defaults to false",
+              "type": "boolean"
+            },
+            "skipProperties": {
+              "description": "Controls which properties won't be optimized, defaults to `[]` which means all will be optimized (since 4.1.0)",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "Options": {
+      "properties": {
+        "caseSensitive": {
+          "type": "boolean"
+        },
+        "collapseBooleanAttributes": {
+          "type": "boolean"
+        },
+        "collapseInlineTagWhitespace": {
+          "type": "boolean"
+        },
+        "collapseWhitespace": {
+          "description": "Collapse white space that contributes to text nodes in a document tree",
+          "type": "boolean"
+        },
+        "conservativeCollapse": {
+          "type": "boolean"
+        },
+        "continueOnParseError": {
+          "default": false,
+          "description": "Handle parse errors instead of aborting",
+          "type": "boolean"
+        },
+        "customAttrAssign": {
+          "items": {
+            "$ref": "#/definitions/RegExp"
+          },
+          "type": "array"
+        },
+        "customAttrCollapse": {
+          "$ref": "#/definitions/RegExp"
+        },
+        "customAttrSurround": {
+          "items": {
+            "$ref": "#/definitions/RegExp"
+          },
+          "type": "array"
+        },
+        "customEventAttributes": {
+          "items": {
+            "$ref": "#/definitions/RegExp"
+          },
+          "type": "array"
+        },
+        "decodeEntities": {
+          "type": "boolean"
+        },
+        "html5": {
+          "type": "boolean"
+        },
+        "ignoreCustomComments": {
+          "items": {
+            "$ref": "#/definitions/RegExp"
+          },
+          "type": "array"
+        },
+        "ignoreCustomFragments": {
+          "items": {
+            "$ref": "#/definitions/RegExp"
+          },
+          "type": "array"
+        },
+        "includeAutoGeneratedTags": {
+          "type": "boolean"
+        },
+        "keepClosingSlash": {
+          "type": "boolean"
+        },
+        "maxLineLength": {
+          "type": "number"
+        },
+        "minifyCSS": {
+          "anyOf": [
+            {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/OptionsBase"
+                },
+                {
+                  "properties": {
+                    "returnPromise": {
+                      "description": "If you prefer clean-css to return a Promise object then you need to explicitly ask for it; defaults to `false`",
+                      "enum": [true],
+                      "type": "boolean"
+                    }
+                  },
+                  "type": "object"
+                }
+              ],
+              "description": "Options when returning a promise"
+            },
+            {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/OptionsBase"
+                },
+                {
+                  "properties": {
+                    "returnPromise": {
+                      "description": "If you prefer clean-css to return a Promise object then you need to explicitly ask for it; defaults to `false`",
+                      "enum": [false],
+                      "type": "boolean"
+                    }
+                  },
+                  "type": "object"
+                }
+              ],
+              "description": "Options when returning an output"
+            },
+            {
+              "type": ["object", "boolean"]
+            }
+          ]
+        },
+        "minifyJS": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/MinifyOptions"
+            },
+            {
+              "type": ["object", "boolean"]
+            }
+          ]
+        },
+        "minifyURLs": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Options_1"
+            },
+            {
+              "type": ["object", "boolean"]
+            }
+          ]
+        },
+        "preserveLineBreaks": {
+          "type": "boolean"
+        },
+        "preventAttributesEscaping": {
+          "type": "boolean"
+        },
+        "processConditionalComments": {
+          "type": "boolean"
+        },
+        "processScripts": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "quoteCharacter": {
+          "type": "string"
+        },
+        "removeAttributeQuotes": {
+          "description": "Remove quotes around attributes when possible",
+          "type": "boolean"
+        },
+        "removeComments": {
+          "description": "Strip HTML comments",
+          "type": "boolean"
+        },
+        "removeEmptyAttributes": {
+          "description": "Remove all attributes with whitespace-only values",
+          "type": ["object", "boolean"]
+        },
+        "removeEmptyElements": {
+          "description": "Remove all elements with empty contents",
+          "type": "boolean"
+        },
+        "removeOptionalTags": {
+          "description": "Remove optional tags",
+          "type": "boolean"
+        },
+        "removeRedundantAttributes": {
+          "description": "Remove attributes when value matches default.",
+          "type": "boolean"
+        },
+        "removeScriptTypeAttributes": {
+          "type": "boolean"
+        },
+        "removeStyleLinkTypeAttributes": {
+          "type": "boolean"
+        },
+        "removeTagWhitespace": {
+          "type": "boolean"
+        },
+        "sortAttributes": {
+          "description": "Sort attributes by frequency\n\nMinifier options like sortAttributes and sortClassName won't impact the plain-text size\nof the output. However, they form long repetitive chains of characters that should improve\ncompression ratio of gzip used in HTTP compression.",
+          "type": "boolean"
+        },
+        "sortClassName": {
+          "description": "Sort style classes by frequency\n\nMinifier options like sortAttributes and sortClassName won't impact the plain-text size\nof the output. However, they form long repetitive chains of characters that should improve\ncompression ratio of gzip used in HTTP compression.",
+          "type": "boolean"
+        },
+        "trimCustomFragments": {
+          "type": "boolean"
+        },
+        "useShortDoctype": {
+          "description": "Replaces the doctype with the short (HTML5) doctype",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "OptionsBase": {
+      "description": "Shared options passed when initializing a new instance of CleanCSS that returns either a promise or output",
+      "properties": {
+        "compatibility": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/CompatibilityOptions"
+            },
+            {
+              "enum": ["*", "ie7", "ie8", "ie9"],
+              "type": "string"
+            }
+          ],
+          "description": "Controls compatibility mode used; defaults to ie10+ using `'*'`.\n Compatibility hash exposes the following properties: `colors`, `properties`, `selectors`, and `units`"
+        },
+        "fetch": {
+          "description": "Controls a function for handling remote requests; Defaults to the build in `loadRemoteResource` function",
+          "type": "object"
+        },
+        "format": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FormatOptions"
+            },
+            {
+              "enum": ["beautify", false, "keep-breaks"]
+            }
+          ],
+          "description": "Controls output CSS formatting; defaults to `false`.\n Format hash exposes the following properties: `breaks`, `breakWith`, `indentBy`, `indentWith`, `spaces`, and `wrapAt`."
+        },
+        "inline": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "enum": [false],
+              "type": "boolean"
+            }
+          ],
+          "description": "inline option whitelists which @import rules will be processed.  Defaults to `'local'`\nAccepts the following values:\n 'local': enables local inlining;\n 'remote': enables remote inlining;\n 'none': disables all inlining;\n 'all': enables all inlining, same as ['local', 'remote'];\n '[uri]': enables remote inlining from the specified uri;\n '![url]': disables remote inlining from the specified uri;"
+        },
+        "inlineRequest": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/RequestOptions"
+            },
+            {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/RequestOptions"
+                },
+                {
+                  "$ref": "#/definitions/SecureContextOptions"
+                },
+                {
+                  "properties": {
+                    "rejectUnauthorized": {
+                      "type": "boolean"
+                    },
+                    "servername": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              ]
+            }
+          ],
+          "description": "Controls extra options for inlining remote @import rules"
+        },
+        "inlineTimeout": {
+          "description": "Controls number of milliseconds after which inlining a remote @import fails; defaults to `5000`;",
+          "type": "number"
+        },
+        "level": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/OptimizationsOptions"
+            },
+            {
+              "enum": [0, 1, 2],
+              "type": "number"
+            }
+          ],
+          "description": "Controls optimization level used; defaults to `1`.\nLevel hash exposes `1`, and `2`."
+        },
+        "rebase": {
+          "description": "Controls URL rebasing; defaults to `true`;",
+          "type": "boolean"
+        },
+        "rebaseTo": {
+          "description": "controls a directory to which all URLs are rebased, most likely the directory under which the output file\nwill live; defaults to the current directory;",
+          "type": "string"
+        },
+        "sourceMap": {
+          "description": "Controls whether an output source map is built; defaults to `false`",
+          "type": "boolean"
+        },
+        "sourceMapInlineSources": {
+          "description": "Controls embedding sources inside a source map's `sourcesContent` field; defaults to `false`",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "Options_1": {
+      "properties": {
+        "defaultPorts": {
+          "$ref": "#/definitions/Object",
+          "description": "Type: Object\nDefault value: {ftp:21, http:80, https:443}\n\nExtend the list with any ports you need. Any URLs containing these default ports will have them removed. Example: http://example.com:80/ will become http://example.com/."
+        },
+        "directoryIndexes": {
+          "description": "Type: Array\nDefault value: [\"index.html\"]\n\nExtend the list with any resources you need. Works with options.removeDirectoryIndexes.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "ignore_www": {
+          "description": "Type: Boolean\nDefault value: false\n\nThis will, for example, consider any domains containing http://www.example.com/ to be related to any that contain http://example.com/.",
+          "type": "boolean"
+        },
+        "output": {
+          "description": "Type: constant or String\nChoices: RelateUrl.ABSOLUTE,RelateUrl.PATH_RELATIVE,RelateUrl.ROOT_RELATIVE,RelateUrl.SHORTEST\nChoices: \"absolute\",\"pathRelative\",\"rootRelative\",\"shortest\"\nDefault value: RelateUrl.SHORTEST\n\nRelateUrl.ABSOLUTE will produce an absolute URL. Overrides options.schemeRelative with a value of false.\nRelateUrl.PATH_RELATIVE will produce something like ../child-of-parent/etc/.\nRelateUrl.ROOT_RELATIVE will produce something like /child-of-root/etc/.\nRelateUrl.SHORTEST will choose whichever is shortest between root- and path-relative.",
+          "type": "string"
+        },
+        "rejectedSchemes": {
+          "description": "Type: Array\nDefault value: [\"data\",\"javascript\",\"mailto\"]\n\nExtend the list with any additional schemes. Example: javascript:something will not be modified.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "removeAuth": {
+          "description": "Type: Boolean\nDefault value: false\n\nRemove user authentication information from the output URL.",
+          "type": "boolean"
+        },
+        "removeDirectoryIndexes": {
+          "description": "Type: Boolean\nDefault value: true\n\nRemove any resources that match any found in options.directoryIndexes.",
+          "type": "boolean"
+        },
+        "removeEmptyQueries": {
+          "description": "Type: Boolean\nDefault value: false\n\nRemove empty query variables. Example: http://domain.com/?var1&var2=&var3=asdf will become http://domain.com/?var3=adsf. This does not apply to unrelated URLs (with other protocols, auths, hosts and/or ports).",
+          "type": "boolean"
+        },
+        "removeRootTrailingSlash": {
+          "description": "Type: Boolean\nDefault value: true\n\nRemove trailing slashes from root paths. Example: http://domain.com/?var will become http://domain.com?var while http://domain.com/dir/?var will not be modified.",
+          "type": "boolean"
+        },
+        "schemeRelative": {
+          "description": "Type: Boolean\nDefault value: true\n\nOutput URLs relative to the scheme. Example: http://example.com/ will become //example.com/.",
+          "type": "boolean"
+        },
+        "site": {
+          "description": "Type: String\nDefault value: undefined\n\nAn options-based version of the from argument. If both are specified, from takes priority.",
+          "type": "string"
+        },
+        "slashesDenoteHost": {
+          "description": "Type: Boolean\nDefault value: true\n\nPassed to Node's url.parse.",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "OutgoingHttpHeaders": {
+      "type": "object"
+    },
+    "OutputOptions": {
+      "properties": {
+        "ascii_only": {
+          "type": "boolean"
+        },
+        "beautify": {
+          "type": "boolean"
+        },
+        "braces": {
+          "type": "boolean"
+        },
+        "comments": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/RegExp"
+            },
+            {
+              "enum": ["all", false, "some", true]
+            }
+          ]
+        },
+        "indent_level": {
+          "type": "number"
+        },
+        "indent_start": {
+          "type": "boolean"
+        },
+        "inline_script": {
+          "type": "boolean"
+        },
+        "keep_quoted_props": {
+          "type": "boolean"
+        },
+        "max_line_len": {
+          "type": ["number", "boolean"]
+        },
+        "preamble": {
+          "type": "string"
+        },
+        "preserve_line": {
+          "type": "boolean"
+        },
+        "quote_keys": {
+          "type": "boolean"
+        },
+        "quote_style": {
+          "$ref": "#/definitions/OutputQuoteStyle"
+        },
+        "semicolons": {
+          "type": "boolean"
+        },
+        "shebang": {
+          "type": "boolean"
+        },
+        "webkit": {
+          "type": "boolean"
+        },
+        "width": {
+          "type": "number"
+        },
+        "wrap_iife": {
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "OutputQuoteStyle": {
+      "enum": [0, 1, 2, 3],
+      "type": "number"
+    },
+    "ParseOptions": {
+      "properties": {
+        "bare_returns": {
+          "default": false,
+          "description": "Support top level `return` statements",
+          "type": "boolean"
+        },
+        "html5_comments": {
+          "default": true,
+          "type": "boolean"
+        },
+        "shebang": {
+          "default": true,
+          "description": "Support `#!command` as the first line",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "PxfObject": {
+      "properties": {
+        "buf": {
+          "anyOf": [
+            {
+              "description": "Raw data is stored in instances of the Buffer class.\nA Buffer is similar to an array of integers but corresponds to a raw memory allocation outside the V8 heap.  A Buffer cannot be resized.\nValid string encodings: 'ascii'|'utf8'|'utf16le'|'ucs2'(alias of 'utf16le')|'base64'|'binary'(deprecated)|'hex'",
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "description": "PFX or PKCS12 encoded private key and certificate chain."
+        },
+        "passphrase": {
+          "description": "Optional passphrase.",
           "type": "string"
         }
       },
+      "type": "object"
+    },
+    "RawSourceMap": {
+      "properties": {
+        "file": {
+          "type": "string"
+        },
+        "mappings": {
+          "type": "string"
+        },
+        "names": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "sourceRoot": {
+          "type": "string"
+        },
+        "sources": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "sourcesContent": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "Record<string,ProjectConfig>": {
+      "type": "object"
+    },
+    "RegExp": {
+      "properties": {
+        "dotAll": {
+          "type": "boolean"
+        },
+        "flags": {
+          "type": "string"
+        },
+        "global": {
+          "type": "boolean"
+        },
+        "ignoreCase": {
+          "type": "boolean"
+        },
+        "lastIndex": {
+          "type": "number"
+        },
+        "multiline": {
+          "type": "boolean"
+        },
+        "source": {
+          "type": "string"
+        },
+        "sticky": {
+          "type": "boolean"
+        },
+        "unicode": {
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "RequestOptions": {
+      "properties": {
+        "_defaultAgent": {
+          "$ref": "#/definitions/Agent"
+        },
+        "agent": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Agent"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
+        },
+        "auth": {
+          "type": "string"
+        },
+        "createConnection": {
+          "type": "object"
+        },
+        "defaultPort": {
+          "type": ["string", "number"]
+        },
+        "family": {
+          "type": "number"
+        },
+        "headers": {
+          "$ref": "#/definitions/OutgoingHttpHeaders"
+        },
+        "host": {
+          "type": "string"
+        },
+        "hostname": {
+          "type": "string"
+        },
+        "localAddress": {
+          "type": "string"
+        },
+        "maxHeaderSize": {
+          "default": 8192,
+          "type": "number"
+        },
+        "method": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "port": {
+          "type": ["string", "number"]
+        },
+        "protocol": {
+          "type": "string"
+        },
+        "setHost": {
+          "type": "boolean"
+        },
+        "socketPath": {
+          "type": "string"
+        },
+        "timeout": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "SecureContextOptions": {
+      "properties": {
+        "ca": {
+          "anyOf": [
+            {
+              "description": "Raw data is stored in instances of the Buffer class.\nA Buffer is similar to an array of integers but corresponds to a raw memory allocation outside the V8 heap.  A Buffer cannot be resized.\nValid string encodings: 'ascii'|'utf8'|'utf16le'|'ucs2'(alias of 'utf16le')|'base64'|'binary'(deprecated)|'hex'",
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            {
+              "items": {
+                "anyOf": [
+                  {
+                    "description": "Raw data is stored in instances of the Buffer class.\nA Buffer is similar to an array of integers but corresponds to a raw memory allocation outside the V8 heap.  A Buffer cannot be resized.\nValid string encodings: 'ascii'|'utf8'|'utf16le'|'ucs2'(alias of 'utf16le')|'base64'|'binary'(deprecated)|'hex'",
+                    "items": {
+                      "type": "number"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "type": "array"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "description": "Optionally override the trusted CA certificates. Default is to trust\nthe well-known CAs curated by Mozilla. Mozilla's CAs are completely\nreplaced when CAs are explicitly specified using this option."
+        },
+        "cert": {
+          "anyOf": [
+            {
+              "description": "Raw data is stored in instances of the Buffer class.\nA Buffer is similar to an array of integers but corresponds to a raw memory allocation outside the V8 heap.  A Buffer cannot be resized.\nValid string encodings: 'ascii'|'utf8'|'utf16le'|'ucs2'(alias of 'utf16le')|'base64'|'binary'(deprecated)|'hex'",
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            {
+              "items": {
+                "anyOf": [
+                  {
+                    "description": "Raw data is stored in instances of the Buffer class.\nA Buffer is similar to an array of integers but corresponds to a raw memory allocation outside the V8 heap.  A Buffer cannot be resized.\nValid string encodings: 'ascii'|'utf8'|'utf16le'|'ucs2'(alias of 'utf16le')|'base64'|'binary'(deprecated)|'hex'",
+                    "items": {
+                      "type": "number"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "type": "array"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "description": "Cert chains in PEM format. One cert chain should be provided per\nprivate key. Each cert chain should consist of the PEM formatted\ncertificate for a provided private key, followed by the PEM\nformatted intermediate certificates (if any), in order, and not\nincluding the root CA (the root CA must be pre-known to the peer,\nsee ca). When providing multiple cert chains, they do not have to\nbe in the same order as their private keys in key. If the\nintermediate certificates are not provided, the peer will not be\nable to validate the certificate, and the handshake will fail."
+        },
+        "ciphers": {
+          "description": "Cipher suite specification, replacing the default. For more\ninformation, see modifying the default cipher suite. Permitted\nciphers can be obtained via tls.getCiphers(). Cipher names must be\nuppercased in order for OpenSSL to accept them.",
+          "type": "string"
+        },
+        "clientCertEngine": {
+          "description": "Name of an OpenSSL engine which can provide the client certificate.",
+          "type": "string"
+        },
+        "crl": {
+          "anyOf": [
+            {
+              "description": "Raw data is stored in instances of the Buffer class.\nA Buffer is similar to an array of integers but corresponds to a raw memory allocation outside the V8 heap.  A Buffer cannot be resized.\nValid string encodings: 'ascii'|'utf8'|'utf16le'|'ucs2'(alias of 'utf16le')|'base64'|'binary'(deprecated)|'hex'",
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            {
+              "items": {
+                "anyOf": [
+                  {
+                    "description": "Raw data is stored in instances of the Buffer class.\nA Buffer is similar to an array of integers but corresponds to a raw memory allocation outside the V8 heap.  A Buffer cannot be resized.\nValid string encodings: 'ascii'|'utf8'|'utf16le'|'ucs2'(alias of 'utf16le')|'base64'|'binary'(deprecated)|'hex'",
+                    "items": {
+                      "type": "number"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "type": "array"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "description": "PEM formatted CRLs (Certificate Revocation Lists)."
+        },
+        "dhparam": {
+          "anyOf": [
+            {
+              "description": "Raw data is stored in instances of the Buffer class.\nA Buffer is similar to an array of integers but corresponds to a raw memory allocation outside the V8 heap.  A Buffer cannot be resized.\nValid string encodings: 'ascii'|'utf8'|'utf16le'|'ucs2'(alias of 'utf16le')|'base64'|'binary'(deprecated)|'hex'",
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "description": "Diffie Hellman parameters, required for Perfect Forward Secrecy. Use\nopenssl dhparam to create the parameters. The key length must be\ngreater than or equal to 1024 bits or else an error will be thrown.\nAlthough 1024 bits is permissible, use 2048 bits or larger for\nstronger security. If omitted or invalid, the parameters are\nsilently discarded and DHE ciphers will not be available."
+        },
+        "ecdhCurve": {
+          "description": "A string describing a named curve or a colon separated list of curve\nNIDs or names, for example P-521:P-384:P-256, to use for ECDH key\nagreement. Set to auto to select the curve automatically. Use\ncrypto.getCurves() to obtain a list of available curve names. On\nrecent releases, openssl ecparam -list_curves will also display the\nname and description of each available elliptic curve. Default:\ntls.DEFAULT_ECDH_CURVE.",
+          "type": "string"
+        },
+        "honorCipherOrder": {
+          "description": "Attempt to use the server's cipher suite preferences instead of the\nclient's. When true, causes SSL_OP_CIPHER_SERVER_PREFERENCE to be\nset in secureOptions",
+          "type": "boolean"
+        },
+        "key": {
+          "anyOf": [
+            {
+              "description": "Raw data is stored in instances of the Buffer class.\nA Buffer is similar to an array of integers but corresponds to a raw memory allocation outside the V8 heap.  A Buffer cannot be resized.\nValid string encodings: 'ascii'|'utf8'|'utf16le'|'ucs2'(alias of 'utf16le')|'base64'|'binary'(deprecated)|'hex'",
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            {
+              "items": {
+                "anyOf": [
+                  {
+                    "description": "Raw data is stored in instances of the Buffer class.\nA Buffer is similar to an array of integers but corresponds to a raw memory allocation outside the V8 heap.  A Buffer cannot be resized.\nValid string encodings: 'ascii'|'utf8'|'utf16le'|'ucs2'(alias of 'utf16le')|'base64'|'binary'(deprecated)|'hex'",
+                    "items": {
+                      "type": "number"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "$ref": "#/definitions/KeyObject"
+                  }
+                ]
+              },
+              "type": "array"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "description": "Private keys in PEM format. PEM allows the option of private keys\nbeing encrypted. Encrypted keys will be decrypted with\noptions.passphrase. Multiple keys using different algorithms can be\nprovided either as an array of unencrypted key strings or buffers,\nor an array of objects in the form {pem: <string|buffer>[,\npassphrase: <string>]}. The object form can only occur in an array.\nobject.passphrase is optional. Encrypted keys will be decrypted with\nobject.passphrase if provided, or options.passphrase if it is not."
+        },
+        "maxVersion": {
+          "$ref": "#/definitions/SecureVersion",
+          "description": "Optionally set the maximum TLS version to allow. One\nof `'TLSv1.3'`, `'TLSv1.2'`, `'TLSv1.1'`, or `'TLSv1'`. Cannot be specified along with the\n`secureProtocol` option, use one or the other.\n**Default:** `'TLSv1.3'`, unless changed using CLI options. Using\n`--tls-max-v1.2` sets the default to `'TLSv1.2'`. Using `--tls-max-v1.3` sets the default to\n`'TLSv1.3'`. If multiple of the options are provided, the highest maximum is used."
+        },
+        "minVersion": {
+          "$ref": "#/definitions/SecureVersion",
+          "description": "Optionally set the minimum TLS version to allow. One\nof `'TLSv1.3'`, `'TLSv1.2'`, `'TLSv1.1'`, or `'TLSv1'`. Cannot be specified along with the\n`secureProtocol` option, use one or the other.  It is not recommended to use\nless than TLSv1.2, but it may be required for interoperability.\n**Default:** `'TLSv1.2'`, unless changed using CLI options. Using\n`--tls-v1.0` sets the default to `'TLSv1'`. Using `--tls-v1.1` sets the default to\n`'TLSv1.1'`. Using `--tls-min-v1.3` sets the default to\n'TLSv1.3'. If multiple of the options are provided, the lowest minimum is used."
+        },
+        "passphrase": {
+          "description": "Shared passphrase used for a single private key and/or a PFX.",
+          "type": "string"
+        },
+        "pfx": {
+          "anyOf": [
+            {
+              "description": "Raw data is stored in instances of the Buffer class.\nA Buffer is similar to an array of integers but corresponds to a raw memory allocation outside the V8 heap.  A Buffer cannot be resized.\nValid string encodings: 'ascii'|'utf8'|'utf16le'|'ucs2'(alias of 'utf16le')|'base64'|'binary'(deprecated)|'hex'",
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            {
+              "items": {
+                "anyOf": [
+                  {
+                    "description": "Raw data is stored in instances of the Buffer class.\nA Buffer is similar to an array of integers but corresponds to a raw memory allocation outside the V8 heap.  A Buffer cannot be resized.\nValid string encodings: 'ascii'|'utf8'|'utf16le'|'ucs2'(alias of 'utf16le')|'base64'|'binary'(deprecated)|'hex'",
+                    "items": {
+                      "type": "number"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "$ref": "#/definitions/PxfObject"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "type": "array"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "description": "PFX or PKCS12 encoded private key and certificate chain. pfx is an\nalternative to providing key and cert individually. PFX is usually\nencrypted, if it is, passphrase will be used to decrypt it. Multiple\nPFX can be provided either as an array of unencrypted PFX buffers,\nor an array of objects in the form {buf: <string|buffer>[,\npassphrase: <string>]}. The object form can only occur in an array.\nobject.passphrase is optional. Encrypted PFX will be decrypted with\nobject.passphrase if provided, or options.passphrase if it is not."
+        },
+        "privateKeyEngine": {
+          "description": "Name of an OpenSSL engine to get private key from. Should be used\ntogether with privateKeyIdentifier.",
+          "type": "string"
+        },
+        "privateKeyIdentifier": {
+          "description": "Identifier of a private key managed by an OpenSSL engine. Should be\nused together with privateKeyEngine. Should not be set together with\nkey, because both options define a private key in different ways.",
+          "type": "string"
+        },
+        "secureOptions": {
+          "description": "Optionally affect the OpenSSL protocol behavior, which is not\nusually necessary. This should be used carefully if at all! Value is\na numeric bitmask of the SSL_OP_* options from OpenSSL Options",
+          "type": "number"
+        },
+        "secureProtocol": {
+          "description": "Legacy mechanism to select the TLS protocol version to use, it does\nnot support independent control of the minimum and maximum version,\nand does not support limiting the protocol to TLSv1.3. Use\nminVersion and maxVersion instead. The possible values are listed as\nSSL_METHODS, use the function names as strings. For example, use\n'TLSv1_1_method' to force TLS version 1.1, or 'TLS_method' to allow\nany TLS protocol version up to TLSv1.3. It is not recommended to use\nTLS versions less than 1.2, but it may be required for\ninteroperability. Default: none, see minVersion.",
+          "type": "string"
+        },
+        "sessionIdContext": {
+          "description": "Opaque identifier used by servers to ensure session state is not\nshared between applications. Unused by clients.",
+          "type": "string"
+        },
+        "sigalgs": {
+          "description": "Colon-separated list of supported signature algorithms. The list\ncan contain digest algorithms (SHA256, MD5 etc.), public key\nalgorithms (RSA-PSS, ECDSA etc.), combination of both (e.g\n'RSA+SHA384') or TLS v1.3 scheme names (e.g. rsa_pss_pss_sha512).",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "SecureVersion": {
+      "enum": ["TLSv1", "TLSv1.1", "TLSv1.2", "TLSv1.3"],
+      "type": "string"
+    },
+    "SourceMapOptions": {
+      "properties": {
+        "content": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/RawSourceMap"
+            },
+            {
+              "enum": ["inline"],
+              "type": "string"
+            }
+          ]
+        },
+        "filename": {
+          "type": "string"
+        },
+        "includeSources": {
+          "type": "boolean"
+        },
+        "names": {
+          "default": true,
+          "description": "Include symbol names in the source map",
+          "type": "boolean"
+        },
+        "root": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "T": {
       "type": "object"
     }
   },
@@ -41,22 +2368,23 @@
       "description": "Default converter used for every project.\nBy default, 'pandoc' will be used if @daucus/pandoc was installed, or 'snarkdown' if it wasn't."
     },
     "htmlMinifierOptions": {
-      "description": "custom html-minifier options (see: https://www.npmjs.com/package/html-minifier#options-quick-reference)"
+      "$ref": "#/definitions/Options",
+      "description": "custom html-minifier options"
     },
     "i18n": {
+      "default": false,
       "description": "Enable internationalization.",
       "type": "boolean"
     },
     "output": {
-      "description": "The root of the generated files (default: \"_daucus_\")",
+      "default": "_daucus_",
+      "description": "The root of the generated files",
       "type": "string"
     },
     "projects": {
-      "additionalProperties": {
-        "$ref": "#/definitions/ProjectConfig"
-      },
-      "description": "Daucus projects config (default: { \"docs\": {src: \"**\\/*.md\", root: \"docs\"}})",
-      "type": "object"
+      "$ref": "#/definitions/Record<string,ProjectConfig>",
+      "default": "{ docs: { src: \"**\\/*.md\", root: \"docs\" } }",
+      "description": "Daucus projects config"
     }
   },
   "type": "object"

@@ -1,5 +1,6 @@
 import HTMLparser from "node-html-parser";
 import { posixVPath, PathMustBeRelativeException } from "../fs/vpath.js";
+import { spaceCase } from "../utils/case.js";
 
 /**
  * @type {(import('node-html-parser').parse)}
@@ -11,12 +12,13 @@ const parseHTML = HTMLparser.parse;
 
 /**
  *
- * @param {string} html
- * @param {string} filePath
+ * @param {string} html template source code
+ * @param {string} filePath path to the HTML template file
+ * @param {boolean} usePathAsTitle generate title from filename instead of first h1
  *
  * @returns {[string | null, Route]}
  */
-export function createRouteFor(html, filePath) {
+export function createRouteFor(html, filePath, usePathAsTitle = false) {
   const fileUrl = posixVPath.normalize(filePath);
   if (fileUrl[0] === "/") {
     throw new PathMustBeRelativeException(filePath);
@@ -29,17 +31,22 @@ export function createRouteFor(html, filePath) {
   /** @type {string | null} */
   let key = splittedPrefix[1];
 
+  let pathTitle = "";
+
   // TODO: position of a chapter where it has no index
   // (and therefor no Route entry)
 
   let path;
   if (["README", "index"].includes(key)) {
     key = null;
-    [position] = posixVPath.splitPrefix(posixVPath.basename(dir)) || [""];
+    [position, pathTitle] = posixVPath.splitPrefix(
+      posixVPath.basename(dir)
+    ) || ["", ""];
     path = dir;
     id = "";
   } else {
     path = (dir ? `${dir}/` : "") + key;
+    pathTitle = key;
   }
 
   /** @type {Route} */
@@ -54,7 +61,10 @@ export function createRouteFor(html, filePath) {
   if (ext === ".html") {
     /* views/fr/05-foo/1a-bar.html */
     route.templateUrl = fileUrl;
-    route.title = parseHTML(html)?.querySelector("h1")?.rawText || "";
+    route.title =
+      usePathAsTitle && pathTitle
+        ? spaceCase(pathTitle)
+        : parseHTML(html)?.querySelector("h1")?.rawText || "";
     // TODO: route.script (mdjs)
   }
   // TODO: elsif .js -> component.url ; component.title ; (component.selector (WC) || component.fn (lit-html))

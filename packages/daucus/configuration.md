@@ -66,6 +66,12 @@ The root of the source files.
 
 Globby glob pattern matching the source files.
 
+### usePathAsTitle
+
+• **usePathAsTitle**: _boolean_
+
+Use file name as menu title instead of first h1
+
 ## Compiler
 
 > :warning: For now, Daucus can only convert Markdown to HTML.

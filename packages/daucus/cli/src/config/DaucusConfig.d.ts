@@ -3,7 +3,7 @@ import { Compiler } from "../compilers/compiler";
 
 export interface ProjectConfig {
   /**
-   * Globby glob pattern matching the source files.
+   * Glob pattern matching the source files.
    */
   src: string;
 
@@ -17,6 +17,11 @@ export interface ProjectConfig {
    * See the defaultCompiler global option for more details.
    */
   compiler?: Compiler;
+
+  /**
+   * Use file name as menu title instead of first h1
+   */
+  usePathAsTitle?: boolean;
 }
 
 export interface DaucusConfig {
