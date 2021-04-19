@@ -75,8 +75,10 @@ packages.forEach(async ({ root }, name) => {
     excludeExternals: true,
     // excludeNotDocumented: true,
     excludeInternal: true,
+    excludePrivate: true,
     entryPoints: [index],
     tsconfig,
+    readme: "none",
     plugin: 'typedoc-plugin-markdown',
     name
   })
@@ -91,7 +93,7 @@ packages.forEach(async ({ root }, name) => {
     program
   );
 
-  const outDir = path.join(root, "typedocs");
+  const outDir = path.join(root, "API");
 
   if (fs.existsSync(outDir)) {
     fs.rmSync(outDir, { recursive: true });
