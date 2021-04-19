@@ -18,9 +18,9 @@ export class HTMLLoadingErrorEvent extends CustomEvent {
 }
 
 /**
- * @element html-loader
- *
  * Load and render remote HTML template files
+ *
+ * @element html-loader
  *
  * @fires html-reset Element's content reset
  * @fires html-loaded HTML template successfully loaded
@@ -47,12 +47,18 @@ export class HTMLLoaderElement extends HTMLElement {
     }
   }
 
+  /**
+   * Template's URL
+   */
   get href() {
-    return this.getAttribute("href");
+    return this.getAttribute("href") || "";
   }
 
+  /**
+   * Default template's URL
+   */
   get fallback() {
-    return this.getAttribute("fallback");
+    return this.getAttribute("fallback") || "";
   }
 
   /**

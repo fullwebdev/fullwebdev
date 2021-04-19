@@ -1,24 +1,44 @@
 {
-  "version": 2,
+  "version": "experimental",
   "tags": [
     {
       "name": "html-loader",
-      "description": "load and render html template files",
-      "properties": [
+      "path": "./src/HtmlLoader.js",
+      "description": "Load and render remote HTML template files",
+      "attributes": [
         {
           "name": "href",
-          "type": "string",
-          "description": "url of the template"
-        },
-        {
-          "name": "fallback",
-          "type": "string",
-          "description": "url of the default template"
+          "description": "Template's URL",
+          "type": "string"
         }
       ],
-      "events": ["html-loaded", "html-reset"],
-      "slots": [],
-      "cssProperties": []
+      "properties": [
+        {
+          "name": "fallback",
+          "description": "Default template's URL",
+          "type": "string"
+        },
+        {
+          "name": "href",
+          "attribute": "href",
+          "description": "Template's URL",
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "html-reset",
+          "description": "Element's content reset"
+        },
+        {
+          "name": "html-loaded",
+          "description": "HTML template successfully loaded"
+        },
+        {
+          "name": "html-loading-error",
+          "description": "An error occured when trying to load an HTML template"
+        }
+      ]
     }
   ]
 }
