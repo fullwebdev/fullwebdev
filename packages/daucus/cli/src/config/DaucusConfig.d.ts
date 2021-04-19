@@ -8,6 +8,14 @@ export interface ProjectConfig {
   src: string;
 
   /**
+   * Glob patterns to exclude matches.
+   *
+   * @default ["**\/node_modules\/**"]
+   *
+   */
+  exclude?: string[];
+
+  /**
    * The root of the source files.
    */
   root: string;

@@ -64,7 +64,13 @@ The root of the source files.
 
 • **src**: _string_
 
-Globby glob pattern matching the source files.
+Glob pattern matching the source files
+
+### exclude
+
+• **exclude**: _string[]_
+
+Glob patterns to exclude matches.
 
 ### usePathAsTitle
 
