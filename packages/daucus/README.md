@@ -1,11 +1,11 @@
 # Daucus
 
-<figure align="center">
-<img src="logo-title.png" alt="Daucus" width="300px" style="margin: 1rem">
-<figcaption>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/7578400/115269003-29b80400-a13b-11eb-8b21-168df07e743b.png" alt="Daucus" width="300px" style="margin: 1rem">
+</p>
+<p align="center">
   Modern static stuff generator
-</figcaption>
-</figure>
+</p>
 
 > Automate the generation of multiple static outputs from a unique source using the converters and formats of your choice.
 
@@ -23,13 +23,13 @@ Generation of "books" (odt, epub & pdf) will be added soon. Other input and outp
 
 Boostrap a new Daucus + LitElement + Snowpack project using [create-snowpack-app](https://github.com/snowpackjs/snowpack/tree/main/create-snowpack-app/cli):
 
-```shell
+```bash
 npx create-snowpack-app my-project --template @daucus/snowpack-template
 ```
 
 ## CLI
 
-```shell
+```bash
 npm install -g @daucus/cli
 daucus help
 ```
@@ -42,7 +42,7 @@ See [./configuration.md](./configuration.md)
 
 We recommend using Pandoc via the @daucus/pandoc npm package.
 
-```shell
+```bash
 npm install -D @daucus/cli @daucus/pandoc
 daucus build
 ```
