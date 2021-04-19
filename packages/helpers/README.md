@@ -33,9 +33,9 @@ You can test them right now in your browser thanks to [codesandbox.io](https://c
 
 ## Credits
 
-Modern-helpers is part of the FullWeb.dev project.
+This package is part of the [fullwebdev](https://github.com/fullwebdev/fullwebdev) project.
 
-Check out our [fullweb.dev](https://fullweb.dev) for more information.
+Check out our [website](https://fullweb.dev) for more information.
 
 \
 \
