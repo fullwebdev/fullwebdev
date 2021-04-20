@@ -14,7 +14,7 @@ import { buildProject } from "../compilers/build.js";
  * @typedef {import('./AbstractCommand').Command<BuildCommandOptions>} BuildCommandInterface
  * @typedef {import('./AbstractCommand').CommandConstructor<BuildCommandOptions>} BuildCommandConstructor
  *
- * @typedef {{ project?: string }} BuildCommandOptions
+ * @typedef {import('./build.options').BuildCommandOptions} BuildCommandOptions
  */
 
 /**
