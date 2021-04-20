@@ -1,4 +1,4 @@
-/** @type {import('@daucus/cli/src/config/DaucusConfig').DaucusConfig}*/
+/** @type {import('@daucus/cli').DaucusJSConfig}*/
 const config = {
   defaultCompiler: "pandoc",
   output: "src/fragments/",
