@@ -1,12 +1,70 @@
 # Daucus CLI Configuration
 
-All configuration parameters are optionnal.
+## Configuration file
 
-Simply add a `daucus.config.json` or `daucus.config.js` (or `.mjs`) file to the root of your repository to customize the CLI behavior.
+With daucus, configuration is optional.
 
-A [JSON Schema](packages/daucus/cli/src/config/daucus-config.schema.json) is available to validate your json config.
+Use a JavaScript or JSON file (`daucus-config.js`, `daucus-config.mjs`, or `daucus-config.json`) to specify configuration information for an entire directory and all of its subdirectories (i.e. your Daucus Workspace).
 
-Some configuration options are only available when using a JavaScript file.
+### JSON
+
+You can use the JSON Schema `@daucus/cli/daucus-config.schema.json` to validate your JSON configuration file and enable autocompletion in most code editors:
+
+```json
+{
+  "$schema": "./node_modules/@daucus/cli/daucus-config.schema.json",
+  ...
+}
+```
+
+Some configuration features (like ["compiler functions"](#Compiler)) are only avaible in JavaScript.
+
+### JavaScript
+
+When using JavaScript, be sure to use the right file extension depending on the nearest npm package [configuration](https://nodejs.org/api/packages.html#packages_type).
+
+For most cases, we recommend to use the ES Module format with a `daucus-config.mjs` file:
+
+```js
+/** @type {import('@daucus/cli').DaucusJSConfig}*/
+const config = {
+  // your configuration...
+};
+
+export default config;
+```
+
+> ⚠️ Setting your npm package `"type"` to `"module"` in your package.json may lead to some conflits with other tools, like Snowpack.
+
+You can also use the CJS format with a `daucus-config.js` file :
+
+```js
+/** @type {import('@daucus/cli').DaucusJSConfig}*/
+const config = {
+  // your configuration...
+};
+
+module.exports = config;
+```
+
+## Compiler
+
+> :warning: For now, Daucus can only convert Markdown to HTML.
+
+By default, Daucus will use `@daucus/pandoc` if available, or snarkdown.
+
+You can force using one of these compilers by setting a project `compiler` option or the global `defaultCompiler` option to `"pandoc"` or `"snarkdown"`.
+
+You can also use your own compiler function in a JS configuration file with the following signature:
+
+```ts
+(source: string, root: string) => Promise<string> | string;
+```
+
+Where :
+
+- `source` represents the source file content
+- `root` represents the path to the project's root directory
 
 ## Global options
 
@@ -77,22 +135,3 @@ Glob patterns to exclude matches.
 • **usePathAsTitle**: _boolean_
 
 Use file name as menu title instead of first h1
-
-## Compiler
-
-> :warning: For now, Daucus can only convert Markdown to HTML.
-
-By default, Daucus will use `@daucus/pandoc` if available, or snarkdown.
-
-You can force using one of these compilers by setting a project `compiler` option or the global `defaultCompiler` option to `"pandoc"` or `"snarkdown"`.
-
-You can also use your own compiler function in a JS configuration file with the following signature:
-
-```ts
-(source: string, root: string) => Promise<string> | string;
-```
-
-Where :
-
-- `source` represents the source file content
-- `root` represents the path to the project's root directory
