@@ -55,7 +55,7 @@ export interface DaucusConfig {
    * Daucus projects config
    * @default { docs: { src: "**\/*.md", root: "docs" } }
    */
-  projects: Record<string, ProjectConfig>;
+  projects: { [key: string]: ProjectConfig };
 
   /**
    * custom html-minifier options

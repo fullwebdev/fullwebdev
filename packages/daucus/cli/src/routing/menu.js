@@ -31,7 +31,7 @@ export function menuTemplate(routes, projectName) {
         }
       </div>
       ${
-        route.children && depth < 3
+        route.children && depth < 4
           ? `
             <ul class="${
               (depth > 0 ? "child-menu" : "menu") +

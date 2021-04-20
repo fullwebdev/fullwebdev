@@ -1,3 +1,4 @@
 {
+  "$schema": "../../../src/config/daucus-config.schema.json",
   "defaultCompiler": "snarkdown"
 }
