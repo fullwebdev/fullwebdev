@@ -4,6 +4,7 @@ import { AbstractRouter } from "../index.js";
 
 describe("router", () => {
   const fakeBase = "/mock/base";
+  /** @type {Function} */
   let fakeCb;
   /** @type {AbstractRouter} */
   let abstractRouter;
@@ -15,12 +16,17 @@ describe("router", () => {
 
   beforeEach(() => {
     const getTagStub = stub(document, "getElementsByTagName");
-    getTagStub.withArgs("base").returns([document.createElement("base")]);
+    const fakeBaseEl = document.createElement("base");
+    fakeBaseEl.setAttribute("href", fakeBase);
+
+    // @ts-ignore HTMLCollectionOf
+    getTagStub.withArgs("base").returns([fakeBaseEl]);
 
     Object.defineProperty(document, "baseURI", {
       value: `https://fullweb.dev${fakeBase}/`,
     });
 
+    // @ts-ignore missing argument
     fakeCb = fake.returns(new Promise((resolve) => resolve()));
     abstractRouter = new AbstractRouter();
 

@@ -1,5 +1,3 @@
-// TODO: export
-
 /**
  * emulate "normal" link behaviors on click
  *
@@ -56,9 +54,10 @@ export const clickEventHandler = (/** @type {string} */ baseUrl) => (
   }
 
   if (`${baseUrl}${fullHref}` !== window.location.href) {
-    // FIXME: bad url when opening in a new window
     const path = hrefAttr.startsWith("./")
-      ? window.location.pathname + hrefAttr.slice(2)
+      ? window.location.pathname
+          .replace(new RegExp(`^${baseUrl}(.*)`), "$1")
+          .replace(/(.*)\/$/, "$1") + hrefAttr.slice(1)
       : new URL(fullHref).pathname;
 
     pathUpdatedCallback(path, e);

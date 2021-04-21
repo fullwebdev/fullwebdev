@@ -1,8 +1,11 @@
 import { clickEventHandler } from "./links.js";
 
 function baseHRef() {
-  if (document.getElementsByTagName("base").length === 0) return "";
-  return new URL(document.baseURI).pathname.replace(/\/$/, "");
+  const baseEls = document.getElementsByTagName("base");
+  if (baseEls.length === 0) return "";
+  const href = baseEls[0].getAttribute("href");
+  if (!href) return "";
+  return href.replace(/\/$/, "");
 }
 
 /**
