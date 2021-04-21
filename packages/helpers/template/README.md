@@ -1,5 +1,26 @@
-import { Template, part } from "../index.js";
+# `@modern-helpers/template`
 
+> Minimalistic (<5kb) HTML Template preprocessing at runtime with an HyperScript syntax
+>
+> :book: [Documentation](https://fullweb.dev/helpers/template)
+>
+> :arrow_upper_right: [Demos](https://github.com/fullwebdev/fullwebdev/tree/master/demos/helpers)
+
+## Usage Example
+
+### Simple Counter
+
+> :arrow_upper_right: [Open in CodeSandbox](https://codesandbox.io/s/github/fullwebdev/fullwebdev/tree/master/demos/helpers/template-simple-counter).
+
+```js
+import {
+  Template,
+  part,
+} from "https://cdn.skypack.dev/@modern-helpers/template";
+// or with npm i @modern-helpers/template
+// import { Template, part } from "@modern-helpers/template";
+
+// preprocessing
 const incrementTemplate = new Template("div", { classList: "incrementDemo" }, [
   [
     "p",
@@ -29,6 +50,7 @@ const incrementTemplate = new Template("div", { classList: "incrementDemo" }, [
   ],
 ]);
 
+// optimized rendering
 const incrementEl = incrementTemplate.render({ count: 0 });
 
 incrementEl.addEventListener("click", (e) => {
@@ -41,3 +63,4 @@ incrementEl.addEventListener("click", (e) => {
 });
 
 document.body.appendChild(incrementEl);
+```

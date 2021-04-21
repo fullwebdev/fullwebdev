@@ -22,6 +22,7 @@
     "src"
   ],
   "scripts": {
+    "start": "es-dev-server --compatibility none --app-index demo/index.html",
     "types:copy": "copyfiles \"./src/**/*.d.ts\" \"./*.d.ts\" types"
   },
   "types": "types/index.d.ts",

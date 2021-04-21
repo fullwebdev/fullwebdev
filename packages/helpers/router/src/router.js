@@ -1,5 +1,13 @@
 import { clickEventHandler } from "./links.js";
 
+/**
+ * @typedef {import('./navigation').NavigationListener} NavigationListener
+ * @typedef {import('./navigation').NavigationOptions} NavigationOptions
+ */
+
+/**
+ * @internal
+ */
 function baseHRef() {
   const baseEls = document.getElementsByTagName("base");
   if (baseEls.length === 0) return "";
@@ -9,6 +17,7 @@ function baseHRef() {
 }
 
 /**
+ * @internal
  * @param {string} pathWithParams
  * @param {boolean} mergeWithLocationSearch
  */
@@ -42,10 +51,14 @@ function processGetParams(pathWithParams, mergeWithLocationSearch) {
 }
 
 /**
- * @typedef {import('./navigation').NavigationListener} NavigationListener
- * @typedef {import('./navigation').NavigationOptions} NavigationOptions
+ * Minimalistic programmatic router for modern web apps.
+ *
+ * Extend this class and override the `renderOrRedirect` method to define a router.
+ *
+ * Fires `navigation-start`, `navigation-end` and `route-redirection` events.
+ *
+ * @see EventTarget
  */
-
 export class AbstractRouter extends EventTarget {
   constructor() {
     super();
@@ -54,10 +67,18 @@ export class AbstractRouter extends EventTarget {
     this._base = baseHRef();
   }
 
+  /**
+   * base href (i.e. the URL prefix added to all route paths)
+   *
+   * @type {string}
+   */
   get base() {
     return this._base;
   }
 
+  /**
+   * Last path leading to successful navigation (from window.location)
+   */
   get currentPath() {
     return window.location.pathname.replace(this.base, "") || "/";
   }
@@ -113,7 +134,9 @@ export class AbstractRouter extends EventTarget {
   }
 
   /**
-   * @param {string} path
+   * Navigate to a view using a route path.
+   *
+   * @param {string} path path of a defined route
    * @param {NavigationOptions} options
    *
    * @returns {Promise<void>}
@@ -131,6 +154,12 @@ export class AbstractRouter extends EventTarget {
     return this._navigate(path, options);
   }
 
+  /**
+   * Initialize the router and bind it to the DOM to handle popstate and click events
+   *
+   * @param {HTMLElement} root root element where events will be listened
+   * @param {boolean} navigate run a navigation using the current path
+   */
   async run(root = document.body, navigate = true) {
     root.addEventListener(
       "click",
@@ -149,11 +178,15 @@ export class AbstractRouter extends EventTarget {
   }
 
   /**
-   * @param {string} path
-   * @param {NavigationOptions} options
-   * @param {Record<string, any> | null} [params]
+   * Match and render a defined route, or return a new path to redirect to.
    *
-   * @returns {[path: string, options?: NavigationOptions] | null | Promise<[path: string, options?: NavigationOptions] | null>}
+   * SHOULD BE OVERRIDEN in your own Router class!
+   *
+   * @param {string} path navigation path
+   * @param {NavigationOptions} options navigation options
+   * @param {Record<string, any> | null} [params] get parameters
+   *
+   * @returns {[path: string, options?: NavigationOptions] | null | Promise<[path: string, options?: NavigationOptions] | null>} path and navigation options to use for redirection
    */
   // eslint-disable-next-line class-methods-use-this, @typescript-eslint/no-unused-vars
   renderOrRedirect(path, options, params) {
