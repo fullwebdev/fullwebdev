@@ -28,6 +28,7 @@ module.exports = {
         "slides-wof-2",
         "slides-vanilla-1",
         "custom-element-name",
+        "demos",
       ],
     ],
     "subject-case": [0, "always", "lowerCase"],
