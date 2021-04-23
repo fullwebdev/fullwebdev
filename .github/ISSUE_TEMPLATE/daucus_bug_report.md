@@ -2,13 +2,13 @@
 name: Daucus - 🐞 Bug report
 about: Create a report to help us improve Daucus
 title: "[Daucus] "
-labels: "bug, comp: panpress"
+labels: "bug, comp: daucus"
 assignees: ""
 ---
 
 <!--- Provide a general summary of the issue in the Title above -->
 
-# Panpress - 🐞 Bug report
+# Daucus - 🐞 Bug report
 
 <!-- Please confirm you will submit an issue. -->
 <!-- (Update "[ ]" to "[x]" to check a box) -->
