@@ -1,7 +1,7 @@
 import { DaucusRouter } from "./daucus-router.js";
 
 /**
- * @typedef {import('./RoutesConfig').RoutesConfig} RoutesConfig
+ * @typedef {import('@daucus/core').SimpleRoutesConfig} SimpleRoutesConfig
  */
 
 /**
@@ -43,7 +43,7 @@ export class DaucusRouterWC extends HTMLElement {
   /**
    * Daucus Routes
    *
-   * @type {RoutesConfig | undefined}
+   * @type {SimpleRoutesConfig | undefined}
    */
   get routes() {
     return this._routes;

@@ -1,5 +1,5 @@
-/** @typedef {import('./Route').ProjectRoutesConfig} ProjectRoutesConfig */
-/** @typedef {import('./Route').Route} Route */
+/** @typedef {import('@daucus/core').ProjectRoutesConfig} ProjectRoutesConfig */
+/** @typedef {import('@daucus/core').Route} Route */
 
 import HTMLMin from "html-minifier";
 import { menuTemplate } from "./menu.js";

@@ -41,7 +41,8 @@
     "snarkdown": "^2.0.0"
   },
   "optionalDependencies": {
-    "@daucus/pandoc": "~0.1.0"
+    "@daucus/pandoc": "~0.1.0",
+    "@daucus/core": "~0.1.0"
   },
   "devDependencies": {
     "@types/command-line-usage": "^5.0.1",

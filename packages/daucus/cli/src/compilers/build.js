@@ -15,12 +15,12 @@ import { posixVPath } from "../fs/vpath.js";
  * @typedef {import('../config/DaucusConfig').ProjectConfig} ProjectConfig
  * @typedef {(filePath: string, nbrOfFiles: number) => any} FileProcessedCallback
  * @typedef {import('./compiler').Compiler} Compiler
- * @typedef {import('../routing/Route').Route} Route
+ * @typedef {import('@daucus/core').Route} Route
  * @typedef {import('./compiler').FunctionCompiler} FunctionCompiler
- * @typedef {import('../routing/Route').ProjectRoutesConfig} ProjectRoutesConfig
- * @typedef {import('./language-code').LanguageCode} LanguageCode
- * @typedef {import('./language-code').LanguageCodeOrDefault} LanguageCodeOrDefault
- * @typedef {import('../routing/Route').I18NProjectRoutesConfig} I18NProjectRoutesConfig
+ * @typedef {import('@daucus/core').ProjectRoutesConfig} ProjectRoutesConfig
+ * @typedef {import('@daucus/core').LanguageCode} LanguageCode
+ * @typedef {import('@daucus/core').LanguageCodeOrDefault} LanguageCodeOrDefault
+ * @typedef {import('@daucus/core').I18NProjectRoutesConfig} I18NProjectRoutesConfig
  */
 
 /**
@@ -33,7 +33,7 @@ import { posixVPath } from "../fs/vpath.js";
  *
  * @returns {Promise<string | null>} - html string
  */
-export async function compileFile(compiler, filePath, root) {
+ export async function compileFile(compiler, filePath, root) {
   const stat = await asyncFs.lstat(filePath);
   // TODO: allow other extensions
   if (stat.isFile() && extname(filePath) === ".md") {

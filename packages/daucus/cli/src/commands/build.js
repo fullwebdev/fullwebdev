@@ -9,8 +9,8 @@ import { buildProject } from "../compilers/build.js";
  * @typedef {import('../config/DaucusConfig').DaucusConfig} DaucusConfig
  * @typedef {import('../config/DaucusConfig').ProjectConfig} ProjectConfig
  * @typedef {import('../config/WorkSpace').WorkSpace} WorkSpace
- * @typedef {import('../routing/Route').ProjectRoutesConfig} ProjectRoutesConfig
- * @typedef {import('../routing/Route').RoutesConfig} RoutesConfig
+ * @typedef {import('@daucus/core').ProjectRoutesConfig} ProjectRoutesConfig
+ * @typedef {import('@daucus/core').RoutesConfig} RoutesConfig
  * @typedef {import('./AbstractCommand').Command<BuildCommandOptions>} BuildCommandInterface
  * @typedef {import('./AbstractCommand').CommandConstructor<BuildCommandOptions>} BuildCommandConstructor
  *
@@ -105,7 +105,7 @@ export class BuildCommand {
       "routes.js",
       routes,
       "routes",
-      "import('@daucus/cli/src/routing/Route').I18NRoutesConfig"
+      "import('@daucus/core').I18NRoutesConfig"
     );
     this._closeLogProgress();
     // TODO: copy js files

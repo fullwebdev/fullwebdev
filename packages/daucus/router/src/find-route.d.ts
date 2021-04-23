@@ -1,4 +1,4 @@
-import { Route } from "./RoutesConfig";
+import { Route } from "@daucus/core";
 
 export interface RouteMatch {
   projectName: string;

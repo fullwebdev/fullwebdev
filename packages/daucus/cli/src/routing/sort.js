@@ -1,10 +1,10 @@
-/** @typedef {import('./Route').Route} Route */
+/** @typedef {import('@daucus/core')} Route */
 
 /**
  * @param {[string, Partial<Route>]} entryA
  * @param {[string, Partial<Route>]} entryB
  */
-export function sortRoutesChildEntriesByPosition(entryA, entryB) {
+ export function sortRoutesChildEntriesByPosition(entryA, entryB) {
   const positionA = (entryA && entryA[1] && entryA[1].position
     ? entryA[1].position
     : ""

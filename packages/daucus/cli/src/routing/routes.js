@@ -8,7 +8,7 @@ import { spaceCase } from "../utils/case.js";
 // @ts-ignore TODO: open an issue for node-html-parser
 const parseHTML = HTMLparser.parse;
 
-/** @typedef {import('./Route').Route} Route */
+/** @typedef {import('@daucus/core').Route} Route */
 
 /**
  *
@@ -32,9 +32,6 @@ export function createRouteFor(html, filePath, usePathAsTitle = false) {
   let key = splittedPrefix[1];
 
   let pathTitle = "";
-
-  // TODO: position of a chapter where it has no index
-  // (and therefor no Route entry)
 
   let path;
   if (["README", "index"].includes(key)) {

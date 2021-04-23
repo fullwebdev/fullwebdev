@@ -1,11 +1,12 @@
 /**
- * @typedef {import('./RoutesConfig').RoutesConfig} RoutesConfig
- * @typedef {import('./RoutesConfig').I18NRoutesConfig} I18NRoutesConfig
- * @typedef {import('./RoutesConfig').Route} Route
+ * @typedef {import('@daucus/core').SimpleRoutesConfig} SimpleRoutesConfig
+ * @typedef {import('@daucus/core').I18NRoutesConfig} I18NRoutesConfig
+ * @typedef {import('@daucus/core').Route} Route
+ * @typedef {import('@daucus/core').LanguageCodeOrDefault} LanguageCodeOrDefault
  * @typedef {import('./find-route').RouteMatch} RouteMatch
  * @typedef {import('./find-route').FindRouteFn} FindRouteFn
  * @typedef {import('./find-route').FindI18NRouteFn} FindI18NRouteFn
- * @typedef {import('./RoutesConfig').ProjectRoutesConfig} ProjectRoutesConfig
+ * @typedef {import('@daucus/core').ProjectRoutesConfig} ProjectRoutesConfig
  */
 
 /**
@@ -41,7 +42,7 @@ function findRoute(routes, paths) {
 /**
  * Generate a function to find routes
  *
- * @param {RoutesConfig} routes
+ * @param {SimpleRoutesConfig} routes
  *
  * @returns {FindRouteFn}
  */

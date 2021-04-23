@@ -3,8 +3,8 @@ import { AbstractRouter } from "@modern-helpers/router";
 import { routeFinder } from "./route-finder.js";
 
 /**
- * @typedef {import('./RoutesConfig').RoutesConfig} RoutesConfig
- * @typedef {import('./RoutesConfig').Route} Route
+ * @typedef {import('@daucus/core').SimpleRoutesConfig} SimpleRoutesConfig
+ * @typedef {import('@daucus/core').Route} Route
  * @typedef {import("@modern-helpers/router/src/navigation").NavigationOptions} NavigationOptions
  * @typedef {[string, NavigationOptions | undefined]} Navigation
  * @typedef {import('./find-route').PositiveRouteMatch} PositiveRouteMatch
@@ -38,7 +38,6 @@ export class RouteMatchEvent extends CustomEvent {
     });
   }
 }
-
 export class DaucusRouter extends AbstractRouter {
   /**
    * @param {RoutesConfig} routes

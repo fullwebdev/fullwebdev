@@ -1,5 +1,5 @@
-/** @typedef {import('./Route').RoutesConfig} RoutesConfig */
-/** @typedef {import('./Route').ProjectRoutesConfig} ProjectRoutesConfig */
+/** @typedef {import('@daucus/core').RoutesConfig} RoutesConfig */
+/** @typedef {import('@daucus/core').ProjectRoutesConfig} ProjectRoutesConfig */
 
 import { sortRoutesChildEntriesByPosition } from "./sort.js";
 
