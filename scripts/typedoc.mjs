@@ -2,7 +2,7 @@ import typedoc from "typedoc";
 import path from "path";
 import { fileURLToPath } from "url";
 import fs from "fs";
-import ts from 'typescript';
+import ts from "typescript";
 import { packages as packagesConfig } from "../workspace-packages.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -34,12 +34,10 @@ packagesConfig.forEach((config) => {
   );
 
   const packageName = packageJSONData.name;
-  packages.set(packageName, { config, root: path.join(
-    repoRoot,
-    projectRoot,
-    config.scope,
-    config.name,
-  )});
+  packages.set(packageName, {
+    config,
+    root: path.join(repoRoot, projectRoot, config.scope, config.name),
+  });
 });
 
 const cmdArgs = process.argv.slice(2);
@@ -49,7 +47,7 @@ if (cmdArgs[0]) {
     console.error(`can't find any ${cmdArgs[0]} project`);
     process.exit(1);
   }
-  packages = new Map([[cmdArgs[0], packages.get(cmdArgs[0])]])
+  packages = new Map([[cmdArgs[0], packages.get(cmdArgs[0])]]);
 }
 
 packages.forEach(async ({ root }, name) => {
@@ -59,16 +57,23 @@ packages.forEach(async ({ root }, name) => {
 
   app.options.addReader(new typedoc.TSConfigReader());
 
-  const index = path.join(root, "index.js");
+  // workaroud: typedef transpile to aliases
+  let index = path.join(root, "index.d.ts");
 
   if (!fs.existsSync(index)) {
-    console.error(`can't find ${path.relative(process.cwd(), index)}`)
+    index = path.join(root, "index.doc.d.ts");
+    if (!fs.existsSync(index)) {
+      index = path.join(root, "types", "index.d.ts");
+      if (!fs.existsSync(index)) {
+        console.error(`can't find ${path.relative(process.cwd(), index)}`);
+      }
+    }
   }
 
-  const tsconfig = path.join(root, "tsconfig.json");
+  const tsconfig = path.join(root, "tsconfig.doc.json");
 
   if (!fs.existsSync(index)) {
-    console.error(`can't find ${path.relative(process.cwd(), index)}`)
+    console.error(`can't find ${path.relative(process.cwd(), index)}`);
   }
 
   app.bootstrap({
@@ -80,14 +85,17 @@ packages.forEach(async ({ root }, name) => {
     hideBreadcrumbs: true,
     categorizeByGroup: false,
     hideInPageTOC: true,
-    // eslint-disable-next-line prefer-template
-    publicPath: path.join(path.relative(path.join(repoRoot, "packages"), root), 'API') + '/',
+    publicPath: `${path.join(
+      path.relative(path.join(repoRoot, "packages"), root),
+      "API"
+    )}/`,
     tsconfig,
-    theme: path.join(__dirname, 'typedoc-theme', 'dist'),
+    theme: path.join(__dirname, "typedoc-theme", "dist"),
     readme: "none",
-    plugin: 'typedoc-plugin-markdown',
-    name
-  })
+    plugin: "typedoc-plugin-markdown",
+    name: "API",
+    namedAnchors: true,
+  });
 
   const program = ts.createProgram(
     app.options.getFileNames(),
@@ -95,7 +103,7 @@ packages.forEach(async ({ root }, name) => {
   );
 
   const project = app.converter.convert(
-    app.expandInputFiles(app.options.getValue('entryPoints')),
+    app.expandInputFiles(app.options.getValue("entryPoints")),
     program
   );
 
@@ -112,7 +120,3 @@ packages.forEach(async ({ root }, name) => {
     throw new Error(`Error creating the TypeScript API docs for ${name}.`);
   }
 });
-
-
-
-

@@ -89,6 +89,7 @@ packageDirnameMap.forEach(
     );
 
     const tsconfigPath = path.join(pkgDir, "tsconfig.json");
+    const tsDocsConfigPath = path.join(pkgDir, "tsconfig.doc.json");
 
     let tsConfigOverride = {};
     const tsConfigOverridePath = path.join(pkgDir, "tsconfig.override.json");
@@ -159,6 +160,30 @@ packageDirnameMap.forEach(
     fs.writeFileSync(
       tsconfigPath,
       TSCONFIG_COMMENT + JSON.stringify(tsconfigData, null, "  ")
+    );
+    const tsDocsConfigData = merge(
+      {
+        extends: baseConfig,
+        compilerOptions: {
+          // module: pkg.environment === "browser" ? "ESNext" : "commonjs",
+          module: "ESNext",
+          rootDir: ".",
+          composite: true,
+          allowJs: true,
+          checkJs: pkg.type === "js" ? true : undefined,
+          emitDeclarationOnly: pkg.type === "js" ? true : undefined,
+          noImplicitAny: projectRoot !== "materials",
+        },
+        references,
+        include: ["src", "*.js", "*.d.ts", "types"],
+        exclude: ["dist"],
+      },
+      tsConfigOverride,
+      { arrayMerge: overwriteMerge }
+    );
+    fs.writeFileSync(
+      tsDocsConfigPath,
+      TSCONFIG_COMMENT + JSON.stringify(tsDocsConfigData, null, "  ")
     );
   }
 );
