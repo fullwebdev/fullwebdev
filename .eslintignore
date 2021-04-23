@@ -37,3 +37,5 @@ __mocks__
 /website/public/localized-files/en_ALL/index.html
 /website/public/localized-files/fr_ALL/index.html
 /website/src/app/builds
+/website/functions/hosting/index.html
+API/
