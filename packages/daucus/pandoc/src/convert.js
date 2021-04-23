@@ -51,7 +51,6 @@ export function md2html(md, root, filters = [], luaFilters = [], opts = []) {
     "html",
     md,
     root,
-    // TODO : don't rely on a global dependency & check if python is available
     ["pandoc-import-code", ...filters],
     [FILTERS["standard-code"], ...luaFilters],
     ["no-highlight", ...opts]

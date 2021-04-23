@@ -1,9 +1,32 @@
 # `@daucus/pandoc`
 
-> Work In Progress
+Install & use [Pandoc](https://pandoc.org/) in Nodejs.
 
-## Credits
+> Conceived for Daucus, but can also be used independently.
+>
+> :book: [Documentation](https://fullweb.dev/daucus)
 
-This package is part of the [fullwebdev](https://github.com/fullwebdev/fullwebdev) project.
+```bash
+npm i @daucus/pandoc
+```
 
-Check out our [website](https://fullweb.dev) for more information.
+```js
+import { convert } from "@daucus/pandoc";
+
+const markdown = `# Hello World
+
+Welcome to Pandoc :wave:
+`;
+
+const html = convert("markdown+emoji", "html", markdown);
+
+console.log(html);
+// <h1 id="hello-world">Hello World</h1>
+// <p>Welcome to Pandoc <span class="emoji" data-emoji="wave">👋</span></p>
+```
+
+## Prerequisites
+
+When installed, `@daucus/pandoc` will automatically download the Pandoc binary. Therefor, you'll never depend on any Pandoc local installation.
+
+Yet, other dependencies may be needed for advanced usages, like Python (when using some Pandoc filters) or LaTeX (to create PDFs). Refer to the [Pandoc installation](https://pandoc.org/installing.html) documentation for more information.
