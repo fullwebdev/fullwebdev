@@ -1,4 +1,4 @@
-import { Route } from "@daucus/core";
+import { Route, LanguageCodeOrDefault } from "@daucus/core";
 
 export interface RouteMatch {
   projectName: string;
@@ -14,5 +14,14 @@ export interface I18NRouteMatch extends RouteMatch {
   lang: string;
 }
 
+/**
+ * Match a path with a Daucus route
+ */
 export type FindRouteFn = (path: string) => RouteMatch;
-export type FindI18NRouteFn = (path: string, lang: string) => I18NRouteMatch;
+/**
+ * Match a path with a Daucus route (when the i18n option was set to true)
+ */
+export type FindI18NRouteFn = (
+  path: string,
+  lang: LanguageCodeOrDefault
+) => I18NRouteMatch;

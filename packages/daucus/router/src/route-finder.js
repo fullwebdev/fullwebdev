@@ -71,12 +71,15 @@ export const routeFinder = (routes) => {
 export const i18nRouteFinder = (routes) => {
   const projectsNames = Object.keys(routes);
 
-  return (/** @type {string} */ path, /** @type {string} */ lang) => {
+  return (
+    /** @type {string} */ path,
+    /** @type {LanguageCodeOrDefault} */ lang
+  ) => {
     const { projectName, paths } = parsePath(path);
 
     if (!projectsNames.includes(projectName)) return { projectName, lang };
 
-    /** @type {ProjectRoutesConfig} */
+    /** @type {ProjectRoutesConfig | undefined} */
     let routesConfigForLang;
     let langUsed = lang;
     if (!lang || !routes[projectName][lang]) {
