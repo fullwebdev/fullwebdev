@@ -56,13 +56,17 @@ export class HTMLLoaderElement extends HTMLElement {
 
   /**
    * Default template's URL
+   *
+   * @attr fallback - (not observed)
    */
   get fallback() {
     return this.getAttribute("fallback") || "";
   }
 
   /**
-   * @param {string | Node} [nodeOrString]
+   * Instantly render a static content instead of a remote HTML template
+   *
+   * @param {string | Node} [nodeOrString] The HTML string or Node to render.
    */
   staticContent(nodeOrString) {
     this.href = "";

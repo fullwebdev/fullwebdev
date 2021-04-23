@@ -7,6 +7,11 @@
       "description": "Load and render remote HTML template files",
       "attributes": [
         {
+          "name": "fallback",
+          "description": "Default template's URL",
+          "type": "string"
+        },
+        {
           "name": "href",
           "description": "Template's URL",
           "type": "string"
@@ -15,6 +20,7 @@
       "properties": [
         {
           "name": "fallback",
+          "attribute": "fallback",
           "description": "Default template's URL",
           "type": "string"
         },
