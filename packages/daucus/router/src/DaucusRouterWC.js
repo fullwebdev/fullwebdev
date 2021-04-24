@@ -64,6 +64,9 @@ export class DaucusRouterWC extends HTMLElement {
     this.setAttribute("base-dir", path);
   }
 
+  /**
+   * @internal
+   */
   connectedCallback() {
     this.upgradeProperty("routes");
     this.upgradeProperty("defaultPath");

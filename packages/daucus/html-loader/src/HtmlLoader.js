@@ -27,6 +27,9 @@ export class HTMLLoadingErrorEvent extends CustomEvent {
  * @fires html-loading-error An error occured when trying to load an HTML template
  */
 export class HTMLLoaderElement extends HTMLElement {
+  /**
+   * @internal
+   */
   static get observedAttributes() {
     return ["href"];
   }
@@ -104,6 +107,9 @@ export class HTMLLoaderElement extends HTMLElement {
     }
   }
 
+  /**
+   * @internal
+   */
   connectedCallback() {
     if (!this.style.display) {
       this.style.display = "block";

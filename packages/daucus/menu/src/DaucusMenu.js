@@ -33,6 +33,9 @@ function updateTitlePressed(menuEl, shouldBePressed) {
  *
  */
 export class DaucusMenu extends HTMLElement {
+  /**
+   * @internal
+   */
   static get observedAttributes() {
     return ["active-path"];
   }
@@ -70,6 +73,9 @@ export class DaucusMenu extends HTMLElement {
     shadowRoot.append(this._slot);
   }
 
+  /**
+   * @internal
+   */
   static get styles() {
     return `
       :host {
@@ -105,6 +111,9 @@ export class DaucusMenu extends HTMLElement {
     }
   }
 
+  /**
+   * @internal
+   */
   connectedCallback() {
     this._clear();
   }
