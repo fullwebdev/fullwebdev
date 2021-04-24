@@ -55,12 +55,18 @@ export const clickEventHandler = (/** @type {string} */ baseUrl) => (
   }
 
   if (`${baseUrl}${fullHref}` !== window.location.href) {
-    const path = hrefAttr.startsWith("./")
-      ? window.location.pathname
-          .replace(new RegExp(`^${baseUrl}(.*)`), "$1")
-          .replace(/(.*)\/$/, "$1") + hrefAttr.slice(1)
-      : new URL(fullHref).pathname;
+    let path = "";
+    const url = new URL(fullHref);
 
-    pathUpdatedCallback(path, e);
+    if (hrefAttr.startsWith("./")) {
+      const previousPath = window.location.pathname
+        .replace(new RegExp(`^${baseUrl}(.*)`), "$1")
+        .replace(/(.*)\/$/, "$1");
+      path = previousPath + hrefAttr.slice(1);
+    } else {
+      path = url.pathname;
+    }
+
+    pathUpdatedCallback(path + url.search + url.hash, e);
   }
 };

@@ -12,7 +12,10 @@ describe("router", () => {
   let fakeRouter;
   /** @type {AbstractRouter} */
   let fakeRouterWithRedirection;
-  const fakeRedirection = ["another-path", {}];
+  /**
+   * @type {[path: string, options?: import('../index.js').NavigationOptions]}
+   */
+  const fakeRedirection = ["/another-path", {}];
 
   beforeEach(() => {
     const getTagStub = stub(document, "getElementsByTagName");
@@ -31,21 +34,34 @@ describe("router", () => {
     abstractRouter = new AbstractRouter();
 
     fakeRouter = new (class extends AbstractRouter {
-      renderOrRedirect(path, options, params) {
-        fakeCb(path, options, params);
+      /**
+       * @param {string} path
+       * @param {import("../index.doc.js").NavigationOptions} options
+       * @param {URLSearchParams} params
+       * @param {string} hash
+       */
+      renderOrRedirect(path, options, params, hash) {
+        fakeCb(path, options, params, hash);
         return null;
       }
     })();
 
     fakeRouterWithRedirection = new (class extends AbstractRouter {
-      renderOrRedirect(path, options, params) {
-        fakeCb(path, options, params);
+      /**
+       * @param {string} path
+       * @param {import("../index.doc.js").NavigationOptions} options
+       * @param {URLSearchParams} params
+       * @param {string} hash
+       */
+      renderOrRedirect(path, options, params, hash) {
+        fakeCb(path, options, params, hash);
         return fakeRedirection;
       }
     })();
   });
 
   afterEach(() => {
+    // @ts-ignore Stub
     document.getElementsByTagName.restore();
   });
 
@@ -57,9 +73,13 @@ describe("router", () => {
   });
 
   afterEach(() => {
+    // @ts-ignore Stub
     window.history.replaceState.restore();
+    // @ts-ignore Stub
     window.history.pushState.restore();
+    // @ts-ignore Stub
     window.addEventListener.restore();
+    // @ts-ignore Stub
     document.body.addEventListener.restore();
   });
 
@@ -73,7 +93,18 @@ describe("router", () => {
       expect(fakeCb).to.have.been.calledWithExactly(
         "/foo/bar",
         {},
-        { p: "test", empty: "" }
+        new URLSearchParams({ p: "test", empty: "" }),
+        ""
+      );
+    });
+
+    it("process hash", async () => {
+      await fakeRouter.navigate("/foo/bar?p=test&empty#myhash");
+      expect(fakeCb).to.have.been.calledWithExactly(
+        "/foo/bar",
+        {},
+        new URLSearchParams({ p: "test", empty: "" }),
+        "myhash"
       );
     });
 

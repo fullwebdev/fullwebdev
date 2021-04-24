@@ -17,35 +17,23 @@ function baseHRef() {
 
 /**
  * @internal
- * @param {string} pathWithParams
+ * @param {string} initialPath
  * @param {boolean} mergeWithLocationSearch
  */
-function processGetParams(pathWithParams, mergeWithLocationSearch) {
-  let initialGetParams = null;
+function pathToURL(initialPath, mergeWithLocationSearch) {
+  const url = new URL(initialPath, window.location.origin);
   if (mergeWithLocationSearch && window.location.search) {
-    initialGetParams = Object.fromEntries(
-      new URLSearchParams(window.location.search)
-    );
+    url.search = new URLSearchParams({
+      ...new URLSearchParams(window.location.search),
+      ...url.searchParams,
+    }).toString();
   }
-
-  const splittedPath = pathWithParams.split("?");
-  if (splittedPath.length > 2)
-    throw new Error(`${pathWithParams} isn't a valid path`);
-  const [path, pathParamsString] = splittedPath;
-  const pathParams = pathParamsString
-    ? Object.fromEntries(new URLSearchParams(pathParamsString))
-    : null;
+  const { pathname, searchParams, hash } = url;
 
   return {
-    path,
-    params:
-      initialGetParams || pathParams
-        ? {
-            ...initialGetParams,
-            // @ts-ignore URLSearchParams are iterable
-            ...Object.fromEntries(new URLSearchParams(pathParams)),
-          }
-        : null,
+    path: pathname,
+    searchParams,
+    hash,
   };
 }
 
@@ -62,6 +50,8 @@ export class AbstractRouter extends EventTarget {
 
     /** @private */
     this._base = baseHRef();
+    /** @private */
+    this._redirectionCount = 0;
   }
 
   /**
@@ -90,12 +80,17 @@ export class AbstractRouter extends EventTarget {
    * @returns {Promise<void>}
    */
   async _navigate(pathWithParams, options = {}) {
-    const { path, params } = processGetParams(
+    const { path, searchParams, hash } = pathToURL(
       pathWithParams,
       !!options.redirection
     );
 
-    const newRoute = await this.renderOrRedirect(path, options, params);
+    const newRoute = await this.renderOrRedirect(
+      path,
+      options,
+      searchParams,
+      hash.replace(/^#/, "")
+    );
     if (newRoute && newRoute[0] !== path) {
       /**
        * @type {import('./navigation').RedirectionEventDetail}
@@ -112,12 +107,19 @@ export class AbstractRouter extends EventTarget {
           detail,
         })
       );
-      return this._navigate(newRoute[0], newRoute[1]);
+      if (this._redirectionCount <= 3) {
+        this._redirectionCount += 1;
+        return this._navigate(newRoute[0], newRoute[1]);
+      }
+      return;
     }
+    this._redirectionCount = 0;
 
-    const newURL = `${this.base}${path}${
-      params ? `?${new URLSearchParams(params)}` : ""
-    }`;
+    const newURL =
+      this.base +
+      path +
+      (searchParams.entries.length > 0 ? searchParams.toString() : "") +
+      (hash || "");
 
     if (options.redirection) {
       window.history.replaceState(options.state, "", newURL);
@@ -193,12 +195,13 @@ export class AbstractRouter extends EventTarget {
    *
    * @param {string} path navigation path
    * @param {NavigationOptions} options navigation options
-   * @param {Record<string, any> | null} [params] get parameters
+   * @param {URLSearchParams | null} [params] get parameters
+   * @param {string} [hash] fragment identifier (without '#')
    *
    * @returns {[path: string, options?: NavigationOptions] | null | Promise<[path: string, options?: NavigationOptions] | null>} path and navigation options to use for redirection
    */
   // eslint-disable-next-line class-methods-use-this, @typescript-eslint/no-unused-vars
-  renderOrRedirect(path, options, params) {
+  renderOrRedirect(path, options, params, hash) {
     return null;
   }
 }
