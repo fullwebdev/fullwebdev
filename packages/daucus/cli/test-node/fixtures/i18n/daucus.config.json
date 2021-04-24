@@ -1,5 +1,5 @@
 {
-  "$schema": "../../../src/config/daucus-config.schema.json",
+  "$schema": "../../../daucus-config.schema.json",
   "i18n": true,
   "projects": {
     "docs": {

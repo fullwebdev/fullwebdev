@@ -2,7 +2,7 @@ import { Options as HTMLMinifierOptions } from "html-minifier";
 import { Compiler } from "../compilers/compiler";
 
 /**
- * Computed project configuration.
+ * Project configuration.
  */
 export interface ProjectConfig {
   /**
