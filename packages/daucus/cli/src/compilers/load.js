@@ -1,28 +1,32 @@
 import snarkdown from "snarkdown";
 
 /**
- * TODO: remplace by a generic plugin system
+ * @type {import('./compiler').FunctionCompiler}
  */
+function snarkdownCompiler(source) {
+  return snarkdown(source);
+}
 
 /**
- * @typedef {import('./compiler').FunctionCompiler} FunctionCompiler
+ * TODO: remplace by a generic plugin system
  */
 
 /**
  *
  * @param {import('./compiler').CompilerId | undefined} name
  *
- * @returns {Promise<FunctionCompiler>}
+ * @returns {Promise<import('./compiler').FunctionCompiler>}
  */
 export async function loadCompiler(name) {
   if (name === "snarkdown") {
-    return snarkdown;
+    return snarkdownCompiler;
   }
 
   try {
-    // @ts-ignore for build
+    // @ts-ignore pandoc is an optionnal dependency
     const { md2html } = await import("@daucus/pandoc");
-    return md2html;
+
+    return (source, params) => md2html(source, params.root);
   } catch (e) {
     if (name === "pandoc") {
       throw new Error("can't find the @daucus/pandoc package");
@@ -30,6 +34,6 @@ export async function loadCompiler(name) {
     console.warn(
       "can't find @daucus/pandoc package - falling back to snarkdown"
     );
-    return snarkdown;
+    return snarkdownCompiler;
   }
 }

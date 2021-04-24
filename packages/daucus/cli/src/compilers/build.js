@@ -28,12 +28,12 @@ import { posixVPath } from "../fs/vpath.js";
  * for now, this function only support markdown sources
  *
  * @param {FunctionCompiler} compiler
- * @param {string} filePath - path to source file
- * @param {string} root - path to root source directory
+ * @param {import('./compiler').CompilerParams} params
  *
  * @returns {Promise<string | null>} - html string
  */
- export async function compileFile(compiler, filePath, root) {
+export async function compileFile(compiler, params) {
+  const { filePath } = params;
   const stat = await asyncFs.lstat(filePath);
   // TODO: allow other extensions
   if (stat.isFile() && extname(filePath) === ".md") {
@@ -46,7 +46,7 @@ import { posixVPath } from "../fs/vpath.js";
     }
     try {
       // TODO: allow other extensions & better compatibility with other compilers
-      const html = await compiler(md, root);
+      const html = await compiler(md, params);
       if (!html) {
         return null;
       }
@@ -119,7 +119,13 @@ export async function buildProject(
         paths.map(async (filePath) => {
           const relativeFilePath = relative(root, filePath);
 
-          let html = (await compileFile(compiler, filePath, root)) || "";
+          let html =
+            (await compileFile(compiler, {
+              filePath,
+              lang,
+              root,
+              project: { name: projectName, config: projectConfig },
+            })) || "";
 
           const relativeOutputFilePath = join(
             dirname(relativeFilePath),
