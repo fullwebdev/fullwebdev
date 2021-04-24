@@ -39,20 +39,18 @@ export function convert(
  * convert markdown to html
  *
  * @param {String} md markdown content
- * @param {String} [root] working directory
- * @param {Array<String>} [filters] additionnal python filters
- * @param {Array<String>} [luaFilters] additionnal lua filters
- * @param {Array<String>} [opts] additionnal options (long format w/o "--")
+ * @param {import('./convertion-params.js').ConvertionParams} [params]
  */
-export function md2html(md, root, filters = [], luaFilters = [], opts = []) {
+export function md2html(md, params = {}) {
+  const { root, filters = [], luaFilters = [], options = [] } = params;
   return convert(
     // @ts-ignore TODO: add markdown extensions to definition
     "markdown+emoji",
     "html",
     md,
     root,
-    ["pandoc-import-code", ...filters],
+    filters,
     [FILTERS["standard-code"], ...luaFilters],
-    ["no-highlight", ...opts]
+    ["no-highlight", ...options]
   );
 }

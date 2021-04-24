@@ -29,4 +29,4 @@ console.log(html);
 
 When installed, `@daucus/pandoc` will automatically download the Pandoc binary. Therefor, you'll never depend on any Pandoc local installation.
 
-Yet, other dependencies may be needed for advanced usages, like Python (when using some Pandoc filters) or LaTeX (to create PDFs). Refer to the [Pandoc installation](https://pandoc.org/installing.html) documentation for more information.
+Yet, other dependencies may be needed for advanced usages, like Python (when using some Pandoc filters like [`pandoc-import-code`](https://pypi.org/project/pandoc-import-code/)) or LaTeX (to create PDFs). Refer to the [Pandoc installation](https://pandoc.org/installing.html) documentation for more information.
