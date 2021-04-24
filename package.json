@@ -50,6 +50,7 @@
     "docs:api": "node ./scripts/typedoc.mjs",
     "predocs:api": "tsc --build scripts/typedoc-theme/tsconfig.json",
     "build:daucus:config-schema": "typescript-json-schema packages/daucus/cli/src/config/DaucusJSONConfig.d.ts DaucusJSONConfig -o packages/daucus/cli/daucus-config.schema.json",
+    "postbuild:daucus:config-schema": "prettier --write packages/daucus/cli/daucus-config.schema.json",
     "docs:ce": "run-s docs:ce:**",
     "docs:ce:daucus:router": "wca analyze packages/daucus/router/src/DaucusRouterWC.js --format json --outFile packages/daucus/router/custom-elements.json",
     "docs:ce:daucus:menu": "wca analyze packages/daucus/menu/src/DaucusMenu.js --format json --outFile packages/daucus/menu/custom-elements.json",
