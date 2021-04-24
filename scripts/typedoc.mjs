@@ -90,7 +90,14 @@ packages.forEach(async ({ root }, name) => {
       "API"
     )}/`,
     tsconfig,
-    theme: path.join(__dirname, "..", "packages", "daucus", "typedoc-theme", "dist"),
+    theme: path.join(
+      __dirname,
+      "..",
+      "packages",
+      "daucus",
+      "typedoc-theme",
+      "dist"
+    ),
     readme: "none",
     plugin: "typedoc-plugin-markdown",
     name: "API",
