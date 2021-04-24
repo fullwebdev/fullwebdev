@@ -1,7 +1,8 @@
 /**
  * Validate against PotentialCustomElementName
- * @see https://html.spec.whatwg.org/multipage/custom-elements.html#prod-potentialcustomelementname
- * @see https://github.com/whatwg/html/issues/1754
+ *
+ * @see {@link https://html.spec.whatwg.org/multipage/custom-elements.html#prod-potentialcustomelementname|HTML Living Standard - PotentialCustomElementName}
+ * @see {@link https://github.com/whatwg/html/issues/1754|Consider restricting custom element names to ASCII}
  *
  * @param {string} str custom element name to validate
  */

@@ -1,12 +1,12 @@
 # custom-element-name
 
 <p align="center">
-  <img src="./logo/ce-name.png">
+  <img src="https://user-images.githubusercontent.com/7578400/115881107-b1f41d00-a44b-11eb-985d-ad9733f12593.png">
 </p>
 
 > Check if a given string can _really_ be used as a custom element name.
 >
-> A fullweb.dev package.
+> :book: [Documentation](https://fullweb.dev/custom-element-name)
 
 ```js
 import {
@@ -80,9 +80,3 @@ See :
 
 - <https://github.com/whatwg/html/issues/1754>
 - <https://stackoverflow.com/questions/60608372/how-to-create-a-custom-element-that-contains-special-characters-in-its-name>
-
-## Credits
-
-This package is part of the [fullwebdev](https://github.com/fullwebdev/fullwebdev) project.
-
-Check out our [website](https://fullweb.dev) for more information.
