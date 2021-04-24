@@ -9,7 +9,7 @@ import "@daucus/html-loader/html-loader";
 /** @typedef {import('@daucus/router/src/daucus-router').RouteMatchEvent} RouteMatchEvent */
 /** @typedef {import('@daucus/router/src/daucus-router').NavigationOptions} NavigationOptions */
 /** @typedef {import('./languages').Language} Language */
-/** @typedef {import("@daucus/router/src/RoutesConfig").I18NRoutesConfig} I18NRoutesConfig */
+/** @typedef {import("@daucus/router").I18NRoutesConfig} I18NRoutesConfig */
 /** @typedef {import("./network-error").NetworkErrorWording} NetworkErrorWording */
 
 //#region networkError
@@ -359,6 +359,17 @@ export class AppRouter extends AbstractRouter {
           heading.tabIndex = -1;
           heading.focus();
         }
+        if (this._scrollAnchor) {
+          const el = outlet.querySelector(`#${this._scrollAnchor}`);
+          if (el) {
+            // el.scrollIntoView({behavior: "smooth", block: "start"});
+            window.scrollTo({
+              // header (3.6rem x 16 -> px) + small margin
+              top: el.getBoundingClientRect().top - 75,
+              behavior: "smooth",
+            });
+          }
+        }
         this.dispatchEvent(new CustomEvent("route-loaded"));
       });
       outlet.addEventListener("html-loading-error", () => {
@@ -388,11 +399,12 @@ export class AppRouter extends AbstractRouter {
   /**
    * @param {string} path
    * @param {NavigationOptions} [options]
+   * @param {URLSearchParams} [params]
+   * @param {string} [hash]
    *
    * @returns {Promise<[path: string, options?: NavigationOptions] | null>}
-   *
    */
-  async renderOrRedirect(path, options) {
+  async renderOrRedirect(path, options, params, hash) {
     const {
       staticContent,
       templateUrl,
@@ -402,6 +414,9 @@ export class AppRouter extends AbstractRouter {
       menuHTML,
       redirection,
     } = await this._findRoute(path);
+
+    /** @private */
+    this._scrollAnchor = hash;
 
     if (redirection) {
       return [redirection, { ...options, redirection: true }];
@@ -465,6 +480,11 @@ export class AppRouter extends AbstractRouter {
       this._pageMessageBox.style.display = "block";
     } else {
       this._pageMessageBox.style.display = "none";
+    }
+
+    if (hash) {
+      const el = this.outlet.querySelector(`#${hash}`);
+      el?.scrollIntoView({ behavior: "smooth" });
     }
 
     return null;
