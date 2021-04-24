@@ -19,9 +19,10 @@ Load and render remote HTML template files
 
 #### Methods
 
+<!-- prettier-ignore -->
 | Method          | Type                    | Description |
-| --------------- | ----------------------- | ----------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `staticContent` | `(nodeOrString?: string | Node        | undefined): void` | Instantly render a static content instead of a remote HTML template<br /><br />**nodeOrString**: The HTML string or Node to render. |
+| --------------- | ----------------------- | ----------- |
+| `staticContent` | `(nodeOrString?: string | Node | undefined): void` | Instantly render a static content instead of a remote HTML template<br /><br />**nodeOrString**: The HTML string or Node to render. |
 
 #### Events
 

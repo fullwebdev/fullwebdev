@@ -17,9 +17,10 @@ Render the menu of a Daucus project from its configuration.
 
 #### Properties
 
+<!-- prettier-ignore -->
 | Property     | Attribute     | Type    | Description |
-| ------------ | ------------- | ------- | ----------- | -------------------------------- |
-| `activePath` | `active-path` | `string | null`       | route path to select in the menu |
+| ------------ | ------------- | ------- | ----------- |
+| `activePath` | `active-path` | `string | null` | route path to select in the menu |
 
 #### Slots
 
