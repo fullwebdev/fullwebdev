@@ -23,10 +23,12 @@ export interface NavigationOptions {
   event?: Event | null;
 }
 
-export type NavigationListener = (
-  path: string,
-  options: NavigationOptions
-) =>
-  | Promise<[string, NavigationOptions | undefined] | undefined>
-  | [string, NavigationOptions | undefined]
-  | undefined;
+export interface NavigationEventDetail {
+  path: string;
+  options: NavigationOptions;
+}
+
+export interface RedirectionEventDetail {
+  oldValue: NavigationEventDetail;
+  newValue: NavigationEventDetail;
+}

@@ -1,8 +1,9 @@
 /**
- * emulate "normal" link behaviors on click
+ * Emulate "normal" link behaviors on click.
  *
- * inspired by the router helper from Polymer/pwa-helper
- * @see https://github.com/Polymer/pwa-helpers/blob/v0.9.1/src/router.ts
+ * Inspired by the router helper from {@link https://github.com/Polymer/pwa-helpers/blob/v0.9.1/src/router.ts|polymer pwa-helper v0.9.1 - router.ts}
+ *
+ * @param baseUrl Prefix to ignore in location pathname when generating a path from an anchor href
  *
  */
 export const clickEventHandler = (/** @type {string} */ baseUrl) => (

@@ -1,7 +1,6 @@
 import { clickEventHandler } from "./links.js";
 
 /**
- * @typedef {import('./navigation').NavigationListener} NavigationListener
  * @typedef {import('./navigation').NavigationOptions} NavigationOptions
  */
 
@@ -56,8 +55,6 @@ function processGetParams(pathWithParams, mergeWithLocationSearch) {
  * Extend this class and override the `renderOrRedirect` method to define a router.
  *
  * Fires `navigation-start`, `navigation-end` and `route-redirection` events.
- *
- * @see EventTarget
  */
 export class AbstractRouter extends EventTarget {
   constructor() {
@@ -68,7 +65,9 @@ export class AbstractRouter extends EventTarget {
   }
 
   /**
-   * base href (i.e. the URL prefix added to all route paths)
+   * URL prefix preserved when generating and recognizing URLs.
+   *
+   * This value is inferred from the first HTML `<base>` element in the document or "/" if there is none.
    *
    * @type {string}
    */
@@ -98,15 +97,19 @@ export class AbstractRouter extends EventTarget {
 
     const newRoute = await this.renderOrRedirect(path, options, params);
     if (newRoute && newRoute[0] !== path) {
+      /**
+       * @type {import('./navigation').RedirectionEventDetail}
+       */
+      const detail = {
+        oldValue: {
+          path,
+          options,
+        },
+        newValue: { path: newRoute[0], options: newRoute[1] || {} },
+      };
       this.dispatchEvent(
         new CustomEvent("route-redirection", {
-          detail: {
-            oldValue: {
-              path,
-              options,
-            },
-            newValue: { path: newRoute[0], options: newRoute[1] },
-          },
+          detail,
         })
       );
       return this._navigate(newRoute[0], newRoute[1]);
@@ -116,19 +119,22 @@ export class AbstractRouter extends EventTarget {
       params ? `?${new URLSearchParams(params)}` : ""
     }`;
 
-    // TODO: params
     if (options.redirection) {
       window.history.replaceState(options.state, "", newURL);
     } else if (!options.skipLocationChange) {
       window.history.pushState(options.state, "", newURL);
     }
 
+    /**
+     * @type {import('./navigation').NavigationEventDetail}
+     */
+    const detail = {
+      path,
+      options,
+    };
     this.dispatchEvent(
       new CustomEvent("navigation-end", {
-        detail: {
-          path,
-          options,
-        },
+        detail,
       })
     );
   }
@@ -142,13 +148,16 @@ export class AbstractRouter extends EventTarget {
    * @returns {Promise<void>}
    */
   async navigate(path, options = {}) {
-    // TODO: vérifier si j'ai pas mis "details" ailleurs par inatention
+    /**
+     * @type {import('./navigation').NavigationEventDetail}
+     */
+    const detail = {
+      path,
+      options,
+    };
     this.dispatchEvent(
       new CustomEvent("navigation-start", {
-        detail: {
-          path,
-          options,
-        },
+        detail,
       })
     );
     return this._navigate(path, options);
