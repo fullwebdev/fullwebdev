@@ -1,8 +1,8 @@
 # New Project
 
-> ✨ Bootstrapped with Create Snowpack App (CSA) using [`@daucus/snowpack-template](https://github.com/fullwebdev/fullwebdev/tree/master/packages/daucus/snowpack-template)
+> ✨ Bootstrapped with Create Snowpack App (CSA) using [`@daucus/snowpack-template`](https://github.com/fullwebdev/fullwebdev/tree/master/packages/daucus/snowpack-template)
 >
-> Visit [fullweb.dev](https://fullweb.dev) for more information.
+> Visit [fullweb.dev/daucus](https://fullweb.dev/daucus) for more information.
 
 ## Available Scripts
 
