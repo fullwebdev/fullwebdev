@@ -30,7 +30,7 @@
         {
           "name": "routes",
           "description": "Daucus Routes",
-          "type": "RoutesConfig | undefined"
+          "type": "SimpleRoutesConfig | undefined"
         },
         {
           "name": "baseDir",

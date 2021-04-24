@@ -1,7 +1,5 @@
 /** @typedef {import('./src/find-route').FindRouteFn} FindRouteFn */
 /** @typedef {import('./src/find-route').FindI18NRouteFn} FindI18NRouteFn */
-/** @typedef {import('./src/route-match-event').RouteMatchEvent} RouteMatchEvent */
-/** @typedef {import('./src/route-match-event').RouteMatchEventDetail} RouteMatchEventDetail */
 /** @typedef {import('@daucus/core').Route} Route */
 /** @typedef {import('@daucus/core').I18NRoutesConfig} I18NRoutesConfig */
 /** @typedef {import('@daucus/core').RoutesConfig} RoutesConfig */

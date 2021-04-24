@@ -77,11 +77,11 @@ Wrap the programmatic DaucusRouter for declarative usage.
 #### Properties
 
 <!-- prettier-ignore -->
-| Property      | Attribute      | Type                | Default      | Description                                                                               |
-| ------------- | -------------- | ------------------- | ------------ | ----------------------------------------------------------------------------------------- |
-| `baseDir`     | `base-dir`     | `string`            | "templates/" | Directory where templates are published, relative to the baseHRef (should end with a '/') |
-| `defaultPath` | `default-path` | `string`            | "/docs/"     | Path of the default route                                                                 |
-| `routes`      |                | `SimpleRoutesConfig | undefined`   |  | Daucus Routes |
+| Property      | Attribute      | Type                              | Default      | Description                                                               |
+|---------------|----------------|-----------------------------------|--------------|---------------------------------------------------------------------------|
+| `baseDir`     | `base-dir`     | `string`                          | "templates/" | Directory where templates are published, relative to the baseHRef (should end with a '/') |
+| `defaultPath` | `default-path` | `string`                          | "/docs/"     | Path of the default route                        |
+| `routes`      |                | `SimpleRoutesConfig | undefined` |               | Daucus Routes                                    |
 
 #### Events
 

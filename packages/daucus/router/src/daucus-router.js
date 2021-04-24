@@ -24,9 +24,11 @@ export class ProjectChangeEvent extends CustomEvent {
 export class RouteMatchEvent extends CustomEvent {
   /**
    * @param {PositiveRouteMatch} routeMatch
-   * @param {string} base
+   * @param {string} base base href
+   * @param {URLSearchParams | null} [params] get parameters
+   * @param {string} [hash] fragment identifier (without '#')
    */
-  constructor(routeMatch, base) {
+  constructor(routeMatch, base, params, hash) {
     super("route-match", {
       detail: {
         projectName: routeMatch.projectName,
@@ -34,6 +36,8 @@ export class RouteMatchEvent extends CustomEvent {
         templateHRef: `${base + routeMatch.projectName}/${
           routeMatch.route.templateUrl
         }`,
+        hash,
+        params,
       },
     });
   }
@@ -81,9 +85,10 @@ export class DaucusRouter extends AbstractRouter {
    * @internal
    * @param {string} path
    * @param {import("@modern-helpers/router").NavigationOptions} [options]
+   * @param {URLSearchParams} [params]
+   * @param {string} [hash]
    */
-  // eslint-disable-next-line class-methods-use-this
-  async renderOrRedirect(path, options) {
+  async renderOrRedirect(path, options, params, hash) {
     const routeMatch =
       path === this._defaultPath
         ? this._defaultDaucusRouteMatch
@@ -98,8 +103,13 @@ export class DaucusRouter extends AbstractRouter {
       this.dispatchEvent(new ProjectChangeEvent(this._currentProject));
     }
     this.dispatchEvent(
-      // @ts-ignore routeMatch.route is truthy
-      new RouteMatchEvent(routeMatch, (this.base || "/") + this._baseDir)
+      new RouteMatchEvent(
+        // @ts-ignore routeMatch.route is truthy
+        routeMatch,
+        (this.base || "/") + this._baseDir,
+        params,
+        hash
+      )
     );
     return null;
   }
