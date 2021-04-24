@@ -16,7 +16,7 @@
     "postinstall": "lerna bootstrap && pip install -r py-requirements.txt && npm run setup",
     "setup": "npm run setup:ts-configs",
     "setup:ts-configs": "node scripts/generate-ts-configs.mjs",
-    "postsetup:ts-configs": "prettier \"./**/tsconfig.json\" --write",
+    "postsetup:ts-configs": "prettier \"./**/tsconfig{.doc,}.json\" --write",
     "==v==": "=========================== validation ========================",
     "validate": "run-s test types lint",
     "test": "npm run test:node && npm run test:web",
