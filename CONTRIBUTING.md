@@ -131,8 +131,8 @@ Any line of the commit message cannot be longer than 100 characters.
   │       └─⫸ Commit Scope: website | code-samples | codelabs | illustrations |
   │                          eni-dpawm | perf | slides-(vanilla-1|wof-1|wof-2) | helpers |
   │                          helpers-(el|template|router) | benchmark | daucus |
-  |                          daucus-(cli|router|snowpack-starter|pandoc) | html-loader |
-  |                          custom-element-name | demos
+  |                          daucus-(cli|core|menu|pandoc|router|snowpack-starter|typedoc-theme) |
+  |                          html-loader | custom-element-name | demos
   │
   └─⫸ Commit Type: build | ci | docs | feat | fix | perf | refactor | style | test
 ```
@@ -172,11 +172,13 @@ The following is the list of supported scopes:
 - `benchmark`
 - `daucus`
 - `daucus-cli`
-- `daucus-pandoc`
+- `daucus-core`
 - `html-loader`
-- `daucus-snowpack-template`
-- `daucus-router`
 - `daucus-menu`
+- `daucus-pandoc`
+- `daucus-router`
+- `daucus-snowpack-template`
+- `daucus-typedoc-theme`
 - `slides`
 - `slides-wof-1`
 - `slides-wof-2`
