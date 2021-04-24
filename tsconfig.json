@@ -8,6 +8,9 @@
       "path": "./packages/helpers/router/tsconfig.json"
     },
     {
+      "path": "./packages/daucus/core/tsconfig.json"
+    },
+    {
       "path": "./packages/daucus/cli/tsconfig.json"
     },
     {
