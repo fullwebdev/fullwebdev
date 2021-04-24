@@ -20,14 +20,15 @@ Load and render remote HTML template files
 #### Methods
 
 <!-- prettier-ignore -->
-| Method          | Type                    | Description |
-| --------------- | ----------------------- | ----------- |
+| Method          | Type                                               | Description                                      |
+|-----------------|----------------------------------------------------|--------------------------------------------------------------------------------------------------|
 | `staticContent` | `(nodeOrString?: string | Node | undefined): void` | Instantly render a static content instead of a remote HTML template<br /><br />**nodeOrString**: The HTML string or Node to render. |
 
 #### Events
 
-| Event                | Type                             | Description                                           |
-| -------------------- | -------------------------------- | ----------------------------------------------------- |
+<!-- prettier-ignore -->
+| Event                | Type           | Description                                                             |
+|----------------------|----------------|-------------------------------------------------------------------------|
 | `html-loaded`        | `CustomEvent<{ href: string; }>` | HTML template successfully loaded                     |
 | `html-loading-error` |                                  | An error occured when trying to load an HTML template |
 | `html-reset`         | `CustomEvent<any>`               | Element's content reset                               |
