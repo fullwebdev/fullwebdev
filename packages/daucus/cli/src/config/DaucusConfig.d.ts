@@ -30,6 +30,11 @@ export interface ProjectConfig {
   compiler?: Compiler;
 
   /**
+   * Options passed to the compiler.
+   */
+  compilerOptions?: Record<string, any>;
+
+  /**
    * Use file name as menu title instead of first h1
    */
   usePathAsTitle?: boolean;
@@ -56,6 +61,11 @@ export interface WorkspaceConfig {
    * By default, 'pandoc' will be used if @daucus/pandoc was installed, or 'snarkdown' if it wasn't.
    */
   defaultCompiler?: Compiler;
+
+  /**
+   * Options passed to the compiler by default.
+   */
+  defaultCompilerOptions?: Record<string, any>;
 
   /**
    * Daucus projects config

@@ -26,7 +26,7 @@ export async function loadCompiler(name) {
     // @ts-ignore pandoc is an optionnal dependency
     const { md2html } = await import("@daucus/pandoc");
 
-    return (source, params) => md2html(source, params.root);
+    return md2html;
   } catch (e) {
     if (name === "pandoc") {
       throw new Error("can't find the @daucus/pandoc package");

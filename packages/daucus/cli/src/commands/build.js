@@ -85,6 +85,7 @@ export class BuildCommand {
           projectName,
           {
             compiler: config.defaultCompiler,
+            compilerOptions: config.defaultCompilerOptions,
             ...projectConfig,
           },
           config.output,

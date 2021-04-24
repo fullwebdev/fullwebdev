@@ -1,4 +1,7 @@
 {
   "$schema": "../../../daucus-config.schema.json",
-  "defaultCompiler": "pandoc"
+  "defaultCompiler": "pandoc",
+  "defaultCompilerOptions": {
+    "filters": ["pandoc-import-code"]
+  }
 }

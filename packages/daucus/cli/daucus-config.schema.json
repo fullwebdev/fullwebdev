@@ -6,7 +6,7 @@
       "enum": ["pandoc", "snarkdown"],
       "type": "string"
     },
-    "HtmlMinifierJSONOptions": {
+    "GenericOptionsObj": {
       "additionalProperties": {
         "anyOf": [
           {
@@ -16,10 +16,10 @@
             "type": "array"
           },
           {
-            "$ref": "#/definitions/HtmlMinifierJSONOptions"
+            "$ref": "#/definitions/GenericOptionsObj"
           },
           {
-            "type": ["string", "boolean"]
+            "type": ["string", "number", "boolean"]
           }
         ]
       },
@@ -30,6 +30,10 @@
         "compiler": {
           "$ref": "#/definitions/CompilerId",
           "description": "Specify which converter to use."
+        },
+        "compilerOptions": {
+          "$ref": "#/definitions/GenericOptionsObj",
+          "description": "Options passed to the compiler."
         },
         "exclude": {
           "default": ["**/node_modules/**"],
@@ -60,8 +64,12 @@
       "$ref": "#/definitions/CompilerId",
       "description": "Default converter used for every project.\n\nBy default, 'pandoc' will be used if @daucus/pandoc was installed, or 'snarkdown' if it wasn't."
     },
+    "defaultCompilerOptions": {
+      "$ref": "#/definitions/GenericOptionsObj",
+      "description": "Options passed to the compiler by default."
+    },
     "htmlMinifierOptions": {
-      "$ref": "#/definitions/HtmlMinifierJSONOptions",
+      "$ref": "#/definitions/GenericOptionsObj",
       "description": "Custom html-minifier options."
     },
     "i18n": {

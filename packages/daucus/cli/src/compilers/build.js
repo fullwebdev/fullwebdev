@@ -119,12 +119,15 @@ export async function buildProject(
         paths.map(async (filePath) => {
           const relativeFilePath = relative(root, filePath);
 
+          const { compilerOptions = {}, ...config } = projectConfig;
+
           let html =
             (await compileFile(compiler, {
               filePath,
               lang,
               root,
-              project: { name: projectName, config: projectConfig },
+              project: { name: projectName, config },
+              ...compilerOptions,
             })) || "";
 
           const relativeOutputFilePath = join(

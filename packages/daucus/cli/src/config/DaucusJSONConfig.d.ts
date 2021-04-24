@@ -1,16 +1,21 @@
 import { CompilerId } from "../compilers/compiler";
 import { WorkspaceConfig, ProjectConfig } from "./DaucusConfig";
 
+type GenericOptionsObj = {
+  [key: string]: boolean | string | string[] | number | GenericOptionsObj;
+};
+
 interface ProjectJSONConfig extends ProjectConfig {
   /**
    * Specify which converter to use.
    */
   compiler?: CompilerId;
-}
 
-type HtmlMinifierJSONOptions = {
-  [key: string]: boolean | string | string[] | HtmlMinifierJSONOptions;
-};
+  /**
+   * Options passed to the compiler.
+   */
+  compilerOptions?: GenericOptionsObj;
+}
 
 export interface DaucusJSONConfig extends Partial<WorkspaceConfig> {
   /**
@@ -21,18 +26,23 @@ export interface DaucusJSONConfig extends Partial<WorkspaceConfig> {
   defaultCompiler?: CompilerId;
 
   /**
+   * Options passed to the compiler by default.
+   */
+  defaultCompilerOptions?: GenericOptionsObj;
+
+  /**
    * Custom html-minifier options.
    *
    * @see {@link https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/html-minifier/index.d.ts|@types/html-minifier}
    */
-  htmlMinifierOptions?: HtmlMinifierJSONOptions;
+  htmlMinifierOptions?: GenericOptionsObj;
 
   /**
    * Daucus projects config
    *
    * @default { "docs": { "src": "**\u002F*.md", "root": "docs" } }
    *
-   * @see {@link https://github.com/YousefED/typescript-json-schema/issues/337| typescript-json-schema - Issue 337 - first class TS advances types stringified instead of expanded }
+   * @see {@link https://github.com/YousefED/typescript-json-schema/issues/337|typescript-json-schema - Issue 337 - first class TS advances types stringified instead of expanded }
    */
   projects?: { [key: string]: ProjectJSONConfig };
 }

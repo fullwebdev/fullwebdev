@@ -30,6 +30,8 @@ interface CompilerParams {
      */
     config: ProjectConfig;
   };
+
+  [key: string]: any;
 }
 
 /**
