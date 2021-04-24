@@ -57,7 +57,7 @@ export class HelpCommand {
       }
       console.log();
       console.log(
-        "See 'git help <command>' to read about a specific subcommand"
+        "See 'daucus help <command>' to read about a specific subcommand"
       );
     } else if (commands[params.command]) {
       const cmd = commands[params.command];

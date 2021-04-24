@@ -1,7 +1,6 @@
 /**
  * parameters for the "build" command
  *
- * @see {@link BuildCommand}
  */
 export interface BuildCommandOptions {
   /**

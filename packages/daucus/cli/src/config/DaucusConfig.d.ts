@@ -1,6 +1,9 @@
 import { Options as HTMLMinifierOptions } from "html-minifier";
 import { Compiler } from "../compilers/compiler";
 
+/**
+ * Computed project configuration.
+ */
 export interface ProjectConfig {
   /**
    * Glob pattern matching the source files.
@@ -32,7 +35,10 @@ export interface ProjectConfig {
   usePathAsTitle?: boolean;
 }
 
-export interface DaucusConfig {
+/**
+ * Computed workspace configuration.
+ */
+export interface WorkspaceConfig {
   /**
    * The root of the generated files
    * @default "_daucus_"
@@ -55,11 +61,17 @@ export interface DaucusConfig {
    * Daucus projects config
    * @default { docs: { src: "**\/*.md", root: "docs" } }
    */
-  projects: { [key: string]: ProjectConfig };
+  projects: Record<string, ProjectConfig>;
 
   /**
    * custom html-minifier options
-   * @see https://www.npmjs.com/package/html-minifier#options-quick-reference
+   *
+   * @see {@link https://www.npmjs.com/package/html-minifier#options-quick-reference|html-minifier - Options Quick Reference}
    */
   htmlMinifierOptions: HTMLMinifierOptions;
 }
+
+/**
+ * Daucus workspace configuration as defined in a JSON or JS configuration file.
+ */
+export type DaucusJSConfig = Partial<WorkspaceConfig>;

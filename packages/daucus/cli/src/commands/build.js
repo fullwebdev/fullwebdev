@@ -6,7 +6,7 @@ import { writeJSObject } from "../fs/write.js";
 import { buildProject } from "../compilers/build.js";
 
 /**
- * @typedef {import('../config/DaucusConfig').DaucusConfig} DaucusConfig
+ * @typedef {import('../config/DaucusConfig').WorkspaceConfig} DaucusConfig
  * @typedef {import('../config/DaucusConfig').ProjectConfig} ProjectConfig
  * @typedef {import('../config/WorkSpace').WorkSpace} WorkSpace
  * @typedef {import('@daucus/core').ProjectRoutesConfig} ProjectRoutesConfig

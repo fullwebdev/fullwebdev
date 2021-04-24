@@ -1,5 +1,5 @@
-import { DaucusConfig } from "./DaucusConfig";
+import { WorkspaceConfig } from "./DaucusConfig";
 
-export interface DaucusJSONConfig extends Partial<DaucusConfig> {
+export interface DaucusJSONConfig extends Partial<WorkspaceConfig> {
   htmlMinifierOptions: any;
 }

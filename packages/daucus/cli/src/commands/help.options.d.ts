@@ -1,7 +1,6 @@
 /**
  * parameters for the "help" command
  *
- * @see {@link HelpCommand}
  */
 export interface HelpCommandOptions {
   /**

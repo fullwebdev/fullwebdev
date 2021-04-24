@@ -1,5 +1,5 @@
 /**
- * @typedef {Partial<import('./src/config/DaucusConfig').DaucusConfig>} DaucusJSConfig
+ * @typedef {import('./src/config/DaucusConfig').DaucusJSConfig} DaucusJSConfig
  * @typedef {import('./src/commands/build.options').BuildCommandOptions} BuildCommandOptions
  */
 

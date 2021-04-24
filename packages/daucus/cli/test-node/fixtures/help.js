@@ -13,7 +13,7 @@ Commands
   build		generate static assets
   help		display help information about Daucus
 
-See 'git help <command>' to read about a specific subcommand
+See 'daucus help <command>' to read about a specific subcommand
 `,
   build: `
 Daucus-build
