@@ -171,6 +171,11 @@ export default class CENameView extends LitElement {
       .btn-example {
         margin: 0.5em;
       }
+
+      blockquote {
+        background-color: #f3f5f7;
+        padding: 1.5rem;
+      }
     `;
   }
 

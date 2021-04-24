@@ -15,13 +15,20 @@ const config = {
     daucus: {
       src: "**/*.md",
       root: "../packages/daucus",
-      usePathAsTitle: true,
       exclude: [
         "**/node_modules/**",
         "**/fixtures/**",
-        "**/snowpack-template/docs/**"
-      ]
-    }
+        "**/snowpack-template/**",
+      ],
+    },
+    helpers: {
+      src: "**/*.md",
+      root: "../packages/helpers",
+    },
+    "custom-element-name": {
+      src: "**/*.md",
+      root: "../packages/custom-element-name",
+    },
   },
 };
 
