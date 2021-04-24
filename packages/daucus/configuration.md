@@ -6,6 +6,13 @@ With daucus, configuration is optional.
 
 Use a JavaScript or JSON file (`daucus-config.js`, `daucus-config.mjs`, or `daucus-config.json`) to specify configuration information for an entire directory and all of its subdirectories (i.e. your Daucus Workspace).
 
+## Options
+
+All options are defined and documented in the `@daucus/cli` package using TypeScript interfaces:
+
+- [`WorkspaceConfig`](/daucus/cli/API/interfaces/workspaceconfig)
+- [`ProjectConfig`](/daucus/cli/API/interfaces/projectconfig)
+
 ### JSON
 
 You can use the JSON Schema `@daucus/cli/daucus-config.schema.json` to validate your JSON configuration file and enable autocompletion in most code editors:
@@ -17,13 +24,13 @@ You can use the JSON Schema `@daucus/cli/daucus-config.schema.json` to validate 
 }
 ```
 
-Some configuration features (like ["compiler functions"](#Compiler)) are only avaible in JavaScript.
+Some configuration features (e.g. _compiler functions_) are only avaible in JavaScript.
 
 ### JavaScript
 
 When using JavaScript, be sure to use the right file extension depending on the nearest npm package [configuration](https://nodejs.org/api/packages.html#packages_type).
 
-For most cases, we recommend to use the ES Module format with a `daucus-config.mjs` file:
+For most cases, we recommend using the ES Module format with a `daucus-config.mjs` file:
 
 ```js
 /** @type {import('@daucus/cli').DaucusJSConfig}*/
@@ -33,8 +40,6 @@ const config = {
 
 export default config;
 ```
-
-> ⚠️ Setting your npm package `"type"` to `"module"` in your package.json may lead to some conflits with other tools, like Snowpack.
 
 You can also use the CJS format with a `daucus-config.js` file :
 
@@ -47,91 +52,26 @@ const config = {
 module.exports = config;
 ```
 
+::: danger
+Avoid setting your npm package `"type"` to `"module"` in your package.json as it may lead to some conflits with other tools, like Snowpack.
+:::
+
 ## Compiler
 
-> :warning: For now, Daucus can only convert Markdown to HTML.
+::: warning
+For now, Daucus can only convert Markdown to HTML.
+:::
 
 By default, Daucus will use `@daucus/pandoc` if available, or snarkdown.
 
-You can force using one of these compilers by setting a project `compiler` option or the global `defaultCompiler` option to `"pandoc"` or `"snarkdown"`.
+Specifying a [CompilerId](daucus/cli/API#CompilerId) in the configuration (via the `<project>.compiler` or `defaultCompiler` options) will lead to an error if the associated compiler isn't available.
 
-You can also use your own compiler function in a JS configuration file with the following signature:
+::: warning
+You'll have to install [`pandoc-import-code`](https://pypi.org/project/pandoc-import-code/) (`pip install pandoc-import-code`) before using the Pandoc compiler, even if you don't use the related syntax (see [#74](https://github.com/fullwebdev/fullwebdev/issues/74)).
+:::
 
-```ts
-(source: string, root: string) => Promise<string> | string;
-```
+### Defining a custom compiler
 
-Where :
+Daucus can use any function matching the [FunctionCompiler](/daucus/cli/API#FunctionCompiler) signature.
 
-- `source` represents the source file content
-- `root` represents the path to the project's root directory
-
-## Global options
-
-### defaultCompiler
-
-• **defaultCompiler**: Compiler
-
-Default converter used for every project.
-
-### htmlMinifierOptions
-
-• **htmlMinifierOptions**: Options
-
-Custom html-minifier options.
-
-**`see`** <https://www.npmjs.com/package/html-minifier#options-quick-reference>
-
-### i18n
-
-• **i18n**: _boolean_
-
-Enable internationalization.
-
-**`default`** false
-
-### output
-
-• **output**: _string_
-
-The root of the generated files
-
-**`default`** "\_daucus\_"
-
-### projects
-
-• **projects**: Record<string, ProjectConfig>
-
-**`default`** { docs: { src: "\*_/_.md", root: "docs" } }
-
-## Project Configuration Options
-
-### compiler
-
-• **compiler**: Compiler
-
-Specify which converter to use.
-
-### root
-
-• **root**: _string_
-
-The root of the source files.
-
-### src
-
-• **src**: _string_
-
-Glob pattern matching the source files
-
-### exclude
-
-• **exclude**: _string[]_
-
-Glob patterns to exclude matches.
-
-### usePathAsTitle
-
-• **usePathAsTitle**: _boolean_
-
-Use file name as menu title instead of first h1
+Such custom compilers can be defined in a JS configuration file via the `<project>.compiler` or `defaultCompiler` options.

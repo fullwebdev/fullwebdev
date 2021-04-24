@@ -9,7 +9,7 @@
 
 > Automate the generation of multiple static outputs from a unique source using the converters and formats of your choice.
 
-## :warning: Beta Version
+## Status
 
 This project is still in a very early stage of development. It isn't feature complete, and frequent breaking changes should be expected.
 
@@ -21,7 +21,7 @@ Generation of "books" (odt, epub & pdf) will be added soon. Other input and outp
 
 ## Quick start
 
-Boostrap a new Daucus + LitElement + Snowpack project using [create-snowpack-app](https://github.com/snowpackjs/snowpack/tree/main/create-snowpack-app/cli):
+Boostrap a new Daucus + LitElement + Snowpack project using [create-snowpack-app](https://github.com/snowpackjs/snowpack/tree/main/create-snowpack-app/cli) with [`@daucus/snowpack-template`](https://github.com/fullwebdev/fullwebdev/tree/master/packages/daucus/snowpack-template):
 
 ```bash
 npx create-snowpack-app my-project --template @daucus/snowpack-template
@@ -34,29 +34,35 @@ npm install -g @daucus/cli
 daucus help
 ```
 
+For more information, refer to the [CLI documentation](https://fullweb.dev/daucus/cli).
+
 ## Configuration
 
-See [./configuration.md](./configuration.md)
+- [configuration documentation](./configuration.md)
 
 ### Converters
 
 We recommend using Pandoc via the @daucus/pandoc npm package.
+
+Just install the `@daucus/pandoc` package, and it will be automattically detected by the CLI:
 
 ```bash
 npm install -D @daucus/cli @daucus/pandoc
 daucus build
 ```
 
-## Runtime libraries
+For more details, see the [Compiler](./configuration.md#Compiler) section of the configuration documentation.
 
-### Router
+## Building a modern web app with Daucus
 
-### Menu
+Daucus generates simple HTML templates and JS files. You can use it with any build tools, runtime web library and framerworks.
 
-### html-loader
+However, we recommend a _Modern Web App_ approache ([1](https://modern-web.dev/), [2](https://www.snowpack.dev/)), preverably with [Lit](https://lit.dev).
 
-## Credits
+Since this can lead to a lot of custom development, the following runtime libraries and web components are provided to facilitate this process.
 
-This project is maintained as part of the [fullwebdev](https://github.com/fullwebdev/fullwebdev) initiative.
-
-Check out our [website](https://fullweb.dev) for more information.
+| package name                           | purpouse                                                           |
+| -------------------------------------- | ------------------------------------------------------------------ |
+| [`@daucus/router`](./router/)          | automatic and extensible router for Daucus generated routes        |
+| [`@daucus/menu`](./menu/)              | simple menu Web Component using the generated navigation templates |
+| [`@daucus/html-loader`](./html-loader) | Web Component loading and redering generated HTML Template         |
