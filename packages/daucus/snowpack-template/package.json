@@ -29,7 +29,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-proposal-decorators": "^7.10.5",
-    "@daucus/cli": "~0.2.0",
+    "@daucus/cli": "~0.2.1",
     "@daucus/pandoc": "~0.2.0",
     "@snowpack/plugin-babel": "^2.1.6",
     "@snowpack/plugin-dotenv": "^2.0.5",
