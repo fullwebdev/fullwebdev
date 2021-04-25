@@ -16,8 +16,10 @@ This feature should impact:
 
 <!-- (Update "[ ]" to "[x]" to check a box) -->
 
-- [ ] build time (cli)
-- [ ] run time (starter, etc...)
+- [ ] `@modern-helpers/el`
+- [ ] `@modern-helpers/router`
+- [ ] `@modern-helpers/template`
+- [ ] other: ...
 
 <!--- Provide a detailed description of the change or addition you are proposing -->
 

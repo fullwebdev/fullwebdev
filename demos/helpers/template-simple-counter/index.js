@@ -1,4 +1,5 @@
-import { Template, part } from "../index.js";
+// import { Template, part } from "https://cdn.skypack.dev/@modern-helpers/template";
+import { Template, part } from "@modern-helpers/template";
 
 const incrementTemplate = new Template("div", { classList: "incrementDemo" }, [
   [

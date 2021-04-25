@@ -1,7 +1,18 @@
 /** @type {import('../../views/ce-name').CeNameWording} */
 const wording = {
   title: "Naming a Custom Element",
-  intro: /* HTML */ `<p>
+  intro: /* HTML */ `<blockquote>
+      The examples below are performed using the
+      <a
+        href="https://www.npmjs.com/package/custom-element-name"
+        target="_blank"
+        rel="noopener noreferrer"
+        >custom-element-name</a
+      >
+      npm package. Go check its
+      <a href="/custom-element-name">documentation</a> for more information.
+    </blockquote>
+    <p>
       When using <code>customElements.define(name, clazz)</code>, the
       <code>name</code> string should :
     </p>

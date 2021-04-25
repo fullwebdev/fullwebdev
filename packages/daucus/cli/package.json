@@ -29,6 +29,7 @@
     "types:copy": "copyfiles \"./src/**/*.d.ts\" \"./*.d.ts\" types"
   },
   "dependencies": {
+    "chalk": "^2.4.2",
     "command-line-args": "^5.1.1",
     "file-type": "^16.2.0",
     "fs-extra": "^9.1.0",
@@ -40,9 +41,11 @@
     "snarkdown": "^2.0.0"
   },
   "optionalDependencies": {
-    "@daucus/pandoc": "~0.1.0"
+    "@daucus/pandoc": "~0.1.0",
+    "@daucus/core": "~0.1.0"
   },
   "devDependencies": {
+    "@types/command-line-usage": "^5.0.1",
     "@types/rimraf": "^3.0.0"
   }
 }

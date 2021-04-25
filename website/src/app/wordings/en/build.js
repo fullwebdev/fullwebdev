@@ -19,8 +19,7 @@ const wording = {
       },
     },
     {
-      href:
-        "https://github.com/fullwebdev/fullwebdev/tree/master/packages/daucus",
+      href: "/daucus",
       type: "Runtime Libraries & Build Tools",
       date: "beta",
       desc: {
@@ -35,8 +34,7 @@ const wording = {
       },
     },
     {
-      href:
-        "https://github.com/fullwebdev/fullwebdev/tree/master/packages/helpers",
+      href: "/helpers",
       type: "Helpers",
       date: "v0",
       desc: {

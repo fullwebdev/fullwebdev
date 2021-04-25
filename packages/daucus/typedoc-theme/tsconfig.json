@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "experimentalDecorators": true,
+    "lib": ["es2018", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "removeComments": false,
+    "sourceMap": false,
+    "strictNullChecks": true,
+    "target": "es2018",
+    "outDir": "./dist"
+  },
+  "exclude": ["./dist", "./test", "**/*.spec.ts"]
+}

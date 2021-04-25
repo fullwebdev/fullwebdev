@@ -16,15 +16,11 @@
     "name": "Noël Macé",
     "url": "https://noelmace.com"
   },
-  "files": [
-    "*.d.ts",
-    "*.js",
-    "src"
-  ],
   "scripts": {
+    "start": "es-dev-server --compatibility none --app-index demo/index.html",
     "types:copy": "copyfiles \"./src/**/*.d.ts\" \"./*.d.ts\" types"
   },
-  "types": "types/index.d.ts",
+  "types": "./types/index.d.ts",
   "license": "MIT",
   "repository": {
     "type": "git",

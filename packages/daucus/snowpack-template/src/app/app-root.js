@@ -29,9 +29,13 @@ class AppRoot extends LitElement {
   constructor() {
     super();
     this.message = 'Become a full web developer';
+    /** @private */
     this._handleNavigationEnd = this.__handleNavigationEnd.bind(this);
+    /** @private */
     this._handleRouteMatch = this.__handleRouteMatch.bind(this);
+    /** @private */
     this._handleProjectChange = this.__handleProjectChange.bind(this);
+    /** @private */
     this._currentProject = '';
   }
 
@@ -182,6 +186,7 @@ class AppRoot extends LitElement {
   }
 
   /**
+   * @private
    * @param {CustomEvent & { detail: { path: string; }; }} e
    */
   __handleNavigationEnd(e) {
@@ -189,6 +194,7 @@ class AppRoot extends LitElement {
   }
 
   /**
+   * @private
    * @param {{ detail: { templateHRef: string; }; }} e
    */
   __handleRouteMatch(e) {
@@ -196,6 +202,7 @@ class AppRoot extends LitElement {
   }
 
   /**
+   * @private
    * @param {{ detail: { projectName: string; }; }} e
    */
   __handleProjectChange(e) {

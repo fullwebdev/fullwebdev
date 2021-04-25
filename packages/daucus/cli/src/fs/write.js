@@ -5,7 +5,7 @@ import { ensureDir } from "./path.js";
 /**
  * @param {string} rootDir
  * @param {string} name
- * @param {import("../routing/Route").RoutesConfig} object
+ * @param {import('@daucus/core').RoutesConfig} object
  * @param {string} objectName
  * @param {string} type
  */

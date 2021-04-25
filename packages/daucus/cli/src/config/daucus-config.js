@@ -1,7 +1,7 @@
 import { defaultConfig } from "./defaultConfig.js";
 import { absoluteFrom } from "../fs/path.js";
 
-/** @typedef {import('./DaucusConfig').DaucusConfig} DaucusConfig */
+/** @typedef {import('./DaucusConfig').WorkspaceConfig} DaucusConfig */
 
 export const CONFIG_FILE_EXTENSIONS = [".json", ".js", ".mjs", ".cjs"];
 
@@ -42,6 +42,9 @@ export function makeAllPathsAbsolute(config, from = process.cwd()) {
   }
   if (config.defaultCompiler) {
     rslt.defaultCompiler = config.defaultCompiler;
+  }
+  if (config.defaultCompilerOptions) {
+    rslt.defaultCompilerOptions = config.defaultCompilerOptions;
   }
   if (config.htmlMinifierOptions) {
     rslt.htmlMinifierOptions = config.htmlMinifierOptions;

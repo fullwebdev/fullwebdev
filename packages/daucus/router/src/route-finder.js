@@ -1,11 +1,12 @@
 /**
- * @typedef {import('./RoutesConfig').RoutesConfig} RoutesConfig
- * @typedef {import('./RoutesConfig').I18NRoutesConfig} I18NRoutesConfig
- * @typedef {import('./RoutesConfig').Route} Route
+ * @typedef {import('@daucus/core').SimpleRoutesConfig} SimpleRoutesConfig
+ * @typedef {import('@daucus/core').I18NRoutesConfig} I18NRoutesConfig
+ * @typedef {import('@daucus/core').Route} Route
+ * @typedef {import('@daucus/core').LanguageCodeOrDefault} LanguageCodeOrDefault
  * @typedef {import('./find-route').RouteMatch} RouteMatch
  * @typedef {import('./find-route').FindRouteFn} FindRouteFn
  * @typedef {import('./find-route').FindI18NRouteFn} FindI18NRouteFn
- * @typedef {import('./RoutesConfig').ProjectRoutesConfig} ProjectRoutesConfig
+ * @typedef {import('@daucus/core').ProjectRoutesConfig} ProjectRoutesConfig
  */
 
 /**
@@ -39,8 +40,9 @@ function findRoute(routes, paths) {
 }
 
 /**
+ * Generate a function to find routes
  *
- * @param {RoutesConfig} routes
+ * @param {SimpleRoutesConfig} routes
  *
  * @returns {FindRouteFn}
  */
@@ -60,6 +62,7 @@ export const routeFinder = (routes) => {
 
 // TODO: create an associated router & WC
 /**
+ * Generate a function to find internationalized routes
  *
  * @param {I18NRoutesConfig} routes
  *
@@ -68,12 +71,15 @@ export const routeFinder = (routes) => {
 export const i18nRouteFinder = (routes) => {
   const projectsNames = Object.keys(routes);
 
-  return (/** @type {string} */ path, /** @type {string} */ lang) => {
+  return (
+    /** @type {string} */ path,
+    /** @type {LanguageCodeOrDefault} */ lang
+  ) => {
     const { projectName, paths } = parsePath(path);
 
     if (!projectsNames.includes(projectName)) return { projectName, lang };
 
-    /** @type {ProjectRoutesConfig} */
+    /** @type {ProjectRoutesConfig | undefined} */
     let routesConfigForLang;
     let langUsed = lang;
     if (!lang || !routes[projectName][lang]) {

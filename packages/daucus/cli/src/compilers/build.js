@@ -8,17 +8,19 @@ import { loadCompiler } from "./load.js";
 import { writeCompiledFile } from "../fs/write.js";
 import { ProjectRoutesConfigBuilder } from "../routing/route-config.js";
 import { i18nSubdirs } from "./i18n.js";
+import { isAbsoluteUrl } from "../utils/urls.js";
+import { posixVPath } from "../fs/vpath.js";
 
 /**
  * @typedef {import('../config/DaucusConfig').ProjectConfig} ProjectConfig
  * @typedef {(filePath: string, nbrOfFiles: number) => any} FileProcessedCallback
  * @typedef {import('./compiler').Compiler} Compiler
- * @typedef {import('../routing/Route').Route} Route
+ * @typedef {import('@daucus/core').Route} Route
  * @typedef {import('./compiler').FunctionCompiler} FunctionCompiler
- * @typedef {import('../routing/Route').ProjectRoutesConfig} ProjectRoutesConfig
- * @typedef {import('./language-code').LanguageCode} LanguageCode
- * @typedef {import('./language-code').LanguageCodeOrDefault} LanguageCodeOrDefault
- * @typedef {import('../routing/Route').I18NProjectRoutesConfig} I18NProjectRoutesConfig
+ * @typedef {import('@daucus/core').ProjectRoutesConfig} ProjectRoutesConfig
+ * @typedef {import('@daucus/core').LanguageCode} LanguageCode
+ * @typedef {import('@daucus/core').LanguageCodeOrDefault} LanguageCodeOrDefault
+ * @typedef {import('@daucus/core').I18NProjectRoutesConfig} I18NProjectRoutesConfig
  */
 
 /**
@@ -26,18 +28,12 @@ import { i18nSubdirs } from "./i18n.js";
  * for now, this function only support markdown sources
  *
  * @param {FunctionCompiler} compiler
- * @param {string} filePath - path to source file
- * @param {string} root - path to root source directory
- * @param {HTMLMin.Options} htmlMinifierOptions
+ * @param {import('./compiler').CompilerParams} params
  *
  * @returns {Promise<string | null>} - html string
  */
-export async function compileFile(
-  compiler,
-  filePath,
-  root,
-  htmlMinifierOptions
-) {
+export async function compileFile(compiler, params) {
+  const { filePath } = params;
   const stat = await asyncFs.lstat(filePath);
   // TODO: allow other extensions
   if (stat.isFile() && extname(filePath) === ".md") {
@@ -50,11 +46,11 @@ export async function compileFile(
     }
     try {
       // TODO: allow other extensions & better compatibility with other compilers
-      const html = await compiler(md, root);
+      const html = await compiler(md, params);
       if (!html) {
         return null;
       }
-      return HTMLMin.minify(html, htmlMinifierOptions);
+      return html;
     } catch (e) {
       console.warn(`failed conversion of ${filePath} to html:`);
       console.warn(e.message);
@@ -107,6 +103,7 @@ export async function buildProject(
       const root = lang ? join(projectConfig.root, lang) : projectConfig.root;
       const paths = await globby(projectConfig.src, {
         absolute: true,
+        ignore: projectConfig.exclude || ["**/node_modules/**"],
         cwd: root,
       });
 
@@ -122,13 +119,16 @@ export async function buildProject(
         paths.map(async (filePath) => {
           const relativeFilePath = relative(root, filePath);
 
-          const html =
-            (await compileFile(
-              compiler,
+          const { compilerOptions = {}, ...config } = projectConfig;
+
+          let html =
+            (await compileFile(compiler, {
               filePath,
+              lang,
               root,
-              htmlMinifierOptions
-            )) || "";
+              project: { name: projectName, config },
+              ...compilerOptions,
+            })) || "";
 
           const relativeOutputFilePath = join(
             dirname(relativeFilePath),
@@ -136,11 +136,36 @@ export async function buildProject(
             `${basename(relativeFilePath, ".md")}.html`
           );
 
-          await writeCompiledFile(projectOutDir, relativeOutputFilePath, html);
-
           const [routeKey, route] = createRouteFor(
             html,
-            relativeOutputFilePath
+            relativeOutputFilePath,
+            projectConfig.usePathAsTitle
+          );
+
+          html = html.replace(
+            /(<a [^>]*href=")([^"]*)("[^>]*>)/g,
+            (matched, start, href, end) => {
+              let newHref = href;
+              if (
+                href &&
+                !isAbsoluteUrl(href) &&
+                !href.startsWith(projectName) &&
+                !href.startsWith("/")
+              ) {
+                newHref = posixVPath.removePrefixes(
+                  posixVPath
+                    .join(projectName, route.path, href)
+                    .replace(/(.*)\.md/, "$1")
+                );
+              }
+              return start + newHref + end;
+            }
+          );
+
+          await writeCompiledFile(
+            projectOutDir,
+            relativeOutputFilePath,
+            HTMLMin.minify(html, htmlMinifierOptions)
           );
 
           routesConfigBuilder.push(routeKey, route);

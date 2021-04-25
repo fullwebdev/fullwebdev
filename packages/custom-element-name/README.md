@@ -1,6 +1,12 @@
 # custom-element-name
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/7578400/115881107-b1f41d00-a44b-11eb-985d-ad9733f12593.png">
+</p>
+
 > Check if a given string can _really_ be used as a custom element name.
+>
+> :book: [Documentation](https://fullweb.dev/custom-element-name)
 
 ```js
 import {

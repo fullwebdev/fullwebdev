@@ -2,13 +2,13 @@
 name: Daucus - 🚀 Feature request
 about: Suggest an idea for Daucus
 title: "[Daucus] "
-labels: "enhancement, comp: panpress"
+labels: "enhancement, comp: daucus"
 assignees: ""
 ---
 
 <!--- Provide a general summary of the issue in the Title above -->
 
-# Panpress - 🚀 Feature request
+# Daucus - 🚀 Feature request
 
 ## Detailed Description
 

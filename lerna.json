@@ -13,7 +13,8 @@
     "packages/daucus/*",
     "packages/custom-element-name",
     "website",
-    "website/functions"
+    "website/functions",
+    "demos/*/*"
   ],
   "version": "independent"
 }

@@ -1,6 +1,8 @@
-import { el } from "../index.js";
+// import { el } from "https://cdn.skypack.dev/@modern-helpers/el";
+import { el } from "@modern-helpers/el";
 
-let counter, decrementBtn;
+let counter;
+let decrementBtn;
 const incrementEl = el("div", { className: "incrementDemo" }, [
   (counter = el("p", { className: "count" })),
   el("div", { className: "actions" }, [
@@ -40,10 +42,10 @@ const update = ({ count }) => {
 let count = 0;
 
 incrementEl.addEventListener("click", (e) => {
-  const el = e.target;
-  if (el.closest(".increment")) {
+  const { target } = e;
+  if (target.closest(".increment")) {
     count += 1;
-  } else if (el.closest(".decrement")) {
+  } else if (target.closest(".decrement")) {
     count -= 1;
   }
   update({ count });

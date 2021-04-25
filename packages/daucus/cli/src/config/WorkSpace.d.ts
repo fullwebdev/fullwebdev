@@ -1,6 +1,6 @@
-import { DaucusConfig } from "./DaucusConfig";
+import { WorkspaceConfig } from "./DaucusConfig";
 
 export interface WorkSpace {
   root: string;
-  getConfig(): Promise<DaucusConfig>;
+  getConfig(): Promise<WorkspaceConfig>;
 }

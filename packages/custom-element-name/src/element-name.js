@@ -1,21 +1,20 @@
 /**
  * Validate against Name Production
- * (see https://www.w3.org/TR/xml/#NT-Name)
  *
- * ValidCustomElementName:
- * (see https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)
+ * @see {@link https://www.w3.org/TR/xml/#NT-Name|Extensible Markup Language (XML) 1.0 (Fifth Edition)}
+ *
+ * @see {@link https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name|ValidCustomElementName}
  *
  * "They can always be created with createElement() and
  * createElementNS(), which have restrictions that go beyond
  * the parser's."
  *
- * createElement:
- * (see https://dom.spec.whatwg.org/#dom-document-createelement)
+ * @see {@link https://dom.spec.whatwg.org/#dom-document-createelement|createElement}
  *
  * "If localName does not match the Name production, then
  * throw an "InvalidCharacterError" DOMException."
  *
- * Discussion in https://stackoverflow.com/questions/60608372/how-to-create-a-custom-element-that-contains-special-characters-in-its-name
+ * @see Discussion in {@link https://stackoverflow.com/questions/60608372/how-to-create-a-custom-element-that-contains-special-characters-in-its-name|How to create a custom element that contains special characters in its name?}
  *
  * @param {string} str
  */

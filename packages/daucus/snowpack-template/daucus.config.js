@@ -1,10 +1,6 @@
-module.exports = {
+/** @type {import('@daucus/cli').DaucusJSConfig} */
+const config = {
   output: 'src/templates',
-  // defaultCompiler: "pandoc",
-  // projects: {
-  //   docs: {
-  //     src: "**/*.md",
-  //     root: "docs"
-  //   }
-  // }
 };
+
+module.exports = config;

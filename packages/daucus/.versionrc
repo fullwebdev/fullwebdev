@@ -52,6 +52,14 @@
     {
       "filename": "snowpack-template/package-lock.json",
       "type": "json"
+    },
+    {
+      "filename": "core/package.json",
+      "type": "json"
+    },
+    {
+      "filename": "typedoc-theme/package.json",
+      "type": "json"
     }
   ],
   "tag-prefix": "daucus@v",

@@ -16,14 +16,29 @@ export class HTMLLoadingErrorEvent extends CustomEvent {
     });
   }
 }
+
+/**
+ * Load and render remote HTML template files
+ *
+ * @element html-loader
+ *
+ * @fires html-reset Element's content reset
+ * @fires html-loaded HTML template successfully loaded
+ * @fires html-loading-error An error occured when trying to load an HTML template
+ */
 export class HTMLLoaderElement extends HTMLElement {
+  /**
+   * @internal
+   */
   static get observedAttributes() {
     return ["href"];
   }
 
   constructor() {
     super();
+    /** @private */
     this._cache = new Map();
+    /** @private */
     this._staticCache = new Map();
   }
 
@@ -35,16 +50,26 @@ export class HTMLLoaderElement extends HTMLElement {
     }
   }
 
+  /**
+   * Template's URL
+   */
   get href() {
-    return this.getAttribute("href");
-  }
-
-  get fallback() {
-    return this.getAttribute("fallback");
+    return this.getAttribute("href") || "";
   }
 
   /**
-   * @param {string | Node} [nodeOrString]
+   * Default template's URL
+   *
+   * @attr fallback - (not observed)
+   */
+  get fallback() {
+    return this.getAttribute("fallback") || "";
+  }
+
+  /**
+   * Instantly render a static content instead of a remote HTML template
+   *
+   * @param {string | Node} [nodeOrString] The HTML string or Node to render.
    */
   staticContent(nodeOrString) {
     this.href = "";
@@ -82,6 +107,9 @@ export class HTMLLoaderElement extends HTMLElement {
     }
   }
 
+  /**
+   * @internal
+   */
   connectedCallback() {
     if (!this.style.display) {
       this.style.display = "block";
@@ -90,7 +118,7 @@ export class HTMLLoaderElement extends HTMLElement {
 
   // TODO: debounce
   /**
-   *
+   * @private
    * @param {string} href
    * @param {boolean} shouldFallback
    *
@@ -123,7 +151,7 @@ export class HTMLLoaderElement extends HTMLElement {
   }
 
   /**
-   *
+   * @private
    * @param {string} href
    */
   async _renderHRef(href) {

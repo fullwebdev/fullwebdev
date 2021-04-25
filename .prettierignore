@@ -17,6 +17,8 @@ package-lock.json
 /website/src/styles/*.css
 /dpawm-build/public
 /website/src/app/builds
+/website/functions/hosting/index.html
+API/
 
 ## should stay as-is
 /packages/**/test-node/**/snapshots

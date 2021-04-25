@@ -1,3 +1,6 @@
+/**
+ * ISO 639-1 code
+ */
 export type LanguageCode =
   | "aa"
   | "ab"
@@ -185,4 +188,7 @@ export type LanguageCode =
   | "zh"
   | "zu";
 
+/**
+ * ISO 639-1 plus __ for default language
+ */
 export type LanguageCodeOrDefault = LanguageCode | "__";

@@ -1,9 +1,13 @@
 # Modern helpers
 
-<figure align="center">
-  <img alt="logo" src="./logo.png">
-  <figcaption><br><i>Minimalistic helper functions for Modern Web Apps development.</i></figcaption>
-</figure>
+<p align="center">
+  <img alt="logo" src="https://user-images.githubusercontent.com/7578400/115315056-ce0b6c00-a176-11eb-8767-15874a509942.png" width="150px">
+</p>
+<p align="center"><br><i>Minimalistic helper functions for Modern Web Apps development.</i></p>
+
+> :book: [Documentation](https://fullweb.dev/helpers)
+>
+> :arrow_upper_right: [Demos](https://github.com/fullwebdev/fullwebdev/tree/master/demos/helpers)
 
 ## Installation
 
@@ -19,24 +23,8 @@ npm i --save @modern-helpers/el
 
 ## Helpers
 
-| package                    | description                                             |
-| -------------------------- | ------------------------------------------------------- |
-| `@modern-helpers/router`   | extensible router & easy navigation for SPA             |
-| `@modern-helpers/el`       | minimalistic HyperHTML function to create HTML elements |
-| `@modern-helpers/template` | create pre-rendered elements with an HyperHTML syntax   |
-
-## Demos
-
-Each helper is delivered with a "demo" folder where you'll find an example of how to use it.
-
-You can test them right now in your browser thanks to [codesandbox.io](https://codesandbox.io/s/github/fullwebdev/fullwebdev/tree/master/packages/helpers).
-
-## Credits
-
-Modern-helpers is part of the FullWeb.dev project.
-
-Check out our [fullweb.dev](https://fullweb.dev) for more information.
-
-\
-\
-_Logo made by [mynamepong](https://www.flaticon.com/authors/mynamepong)._
+| package                                  | description                                               |
+| ---------------------------------------- | --------------------------------------------------------- |
+| [`@modern-helpers/router`](./router)     | extensible router & easy navigation for SPA               |
+| [`@modern-helpers/el`](./el)             | minimalistic HyperScript function to create HTML elements |
+| [`@modern-helpers/template`](./template) | create pre-rendered elements with an HyperScript syntax   |
