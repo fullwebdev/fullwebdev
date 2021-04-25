@@ -2,6 +2,40 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.4](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2021-04-25)
+
+### Features
+
+- **daucus:** typedoc-theme ([13bcbf4](https://github.com/fullwebdev/fullwebdev/commit/13bcbf48eca20c79e8dd8bbae782589dc0c0f2c8)), closes [#75](https://github.com/fullwebdev/fullwebdev/issues/75)
+- **daucus-cli:** compiler options ([a653ba2](https://github.com/fullwebdev/fullwebdev/commit/a653ba254426a61d40c4a70ac77a778e9c965d00)), closes [#74](https://github.com/fullwebdev/fullwebdev/issues/74)
+- **daucus-cli:** exclude project source files ([3e15faf](https://github.com/fullwebdev/fullwebdev/commit/3e15fafad9af74f2163b421d61d0040a62495a0b))
+- **daucus-cli:** help command ([17a8c3a](https://github.com/fullwebdev/fullwebdev/commit/17a8c3a00c3c7c36b316199bd7f680e0ecc67568))
+- **daucus-cli:** json configuration schema ([fcbea01](https://github.com/fullwebdev/fullwebdev/commit/fcbea019108c23a80f4eb03c4fa87e2b19690f60))
+- **daucus-cli:** more permissive function compilers ([2343fd2](https://github.com/fullwebdev/fullwebdev/commit/2343fd23ee32ab90e0574f0d5117892353faf1fb))
+- **daucus-cli:** rewrite relative urls ([0213bb3](https://github.com/fullwebdev/fullwebdev/commit/0213bb329301e85c228fa2309ecd6aff616c95d7))
+- **daucus-cli:** use filepath for route title ([3576979](https://github.com/fullwebdev/fullwebdev/commit/35769795e983ac47ce3e439d49ac29c9cb41a368))
+- **daucus-router:** URL fragment & params ([6b4f494](https://github.com/fullwebdev/fullwebdev/commit/6b4f4948471c0ddeaadea471c3f84291a4aaedd5)), closes [#76](https://github.com/fullwebdev/fullwebdev/issues/76)
+- **helpers-router:** URL fragments ([79ba6b4](https://github.com/fullwebdev/fullwebdev/commit/79ba6b4d030e84d9db891f2a46c875de88e0f772)), closes [#76](https://github.com/fullwebdev/fullwebdev/issues/76)
+- **website:** add ce-name & helpers docs ([5efe3d8](https://github.com/fullwebdev/fullwebdev/commit/5efe3d8988a87bbf8c5012ff0763751a03e7ce15))
+- **website:** add daucus documentation ([808cc04](https://github.com/fullwebdev/fullwebdev/commit/808cc04c1cc110123ff5d380e1ed47075e8d703a))
+- **website:** scroll to anchor ([156cb0c](https://github.com/fullwebdev/fullwebdev/commit/156cb0c2196944fe4ed0d12963c846f83e9dee62))
+
+### Bug Fixes
+
+- **daucus-cli:** configuration typings ([8d81cf0](https://github.com/fullwebdev/fullwebdev/commit/8d81cf0fb6cf4b008d0c4e8057055708cd97dcf2))
+- **daucus-cli:** sort menu entries without prefix ([d5f270a](https://github.com/fullwebdev/fullwebdev/commit/d5f270ad557af15f758277b3e610e1c673d657a9))
+- **daucus-pandoc:** remove dependency to Python ([70857ce](https://github.com/fullwebdev/fullwebdev/commit/70857ce9e52dfbfdc69b56ed9272602a558e9fd2)), closes [#74](https://github.com/fullwebdev/fullwebdev/issues/74)
+- **daucus-router:** typings and custom-elements.json ([cf4c484](https://github.com/fullwebdev/fullwebdev/commit/cf4c4840951743be3273ededc3ff471260065430))
+- **daucus-router:** use @modern-helpers/router 0.4 ([a90d729](https://github.com/fullwebdev/fullwebdev/commit/a90d72962dcb510e1b9bce5ddf93c2224837c8c5))
+- **daucus-snowpack-template:** daucus config typings ([ec88397](https://github.com/fullwebdev/fullwebdev/commit/ec88397d5c4501ebda1c61d17c9426c5c4137422))
+- **helpers-router:** relative links with baseHref ([365dd7f](https://github.com/fullwebdev/fullwebdev/commit/365dd7f3e060adebd8b018542f9c75ee48f9f3f3))
+- **html-loader:** update custom-elements.json ([d694518](https://github.com/fullwebdev/fullwebdev/commit/d694518cb91e7933798ae3a68837514505cb0834))
+- **website:** add missing en docs for blog ([986e1a5](https://github.com/fullwebdev/fullwebdev/commit/986e1a57f8aa5f3bd534a9d3d1885e7c4b0af954))
+- **website:** center ce-name view ([8e5533e](https://github.com/fullwebdev/fullwebdev/commit/8e5533e3835fb8270362366d05ffd7258c916a34))
+- **website:** daucus project without i18n ([f5f563e](https://github.com/fullwebdev/fullwebdev/commit/f5f563ecd369f6d93f6de4647d3734b514ceab0d))
+- **website:** header width ([9404a1d](https://github.com/fullwebdev/fullwebdev/commit/9404a1d4c2859fd93505a9a48fd779a408c4bcff))
+- **website:** page content width ([d887f36](https://github.com/fullwebdev/fullwebdev/commit/d887f3671f7ea5449a29fd4bc7217c762ca12a72))
+
 ## [1.0.0-beta.3](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2021-04-16)
 
 ### Features

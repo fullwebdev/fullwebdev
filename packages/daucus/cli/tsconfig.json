@@ -12,7 +12,11 @@
     "emitDeclarationOnly": true,
     "noImplicitAny": true
   },
-  "references": [],
+  "references": [
+    {
+      "path": "../../daucus/core/tsconfig.json"
+    }
+  ],
   "include": ["src", "*.js"],
   "exclude": ["dist", "types"]
 }

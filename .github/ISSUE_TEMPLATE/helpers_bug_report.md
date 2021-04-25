@@ -17,6 +17,15 @@ assignees: ""
 
 <!-- Please ask questions via a "🗣 General discussion" issue. -->
 
+## Affected Package
+
+<!-- (Update "[ ]" to "[x]" to check a box) -->
+
+- [ ] `@modern-helpers/el`
+- [ ] `@modern-helpers/router`
+- [ ] `@modern-helpers/template`
+- [ ] other: ...
+
 ## Description
 
 <!--- ✍️ edit: Provide a more detailed introduction to the issue itself, and why you consider it to be a bug -->

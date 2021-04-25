@@ -1,0 +1,16 @@
+{
+  "name": "@fwdemos/modern-helpers-router-basehref",
+  "private": true,
+  "version": "0.3.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "wds --node-resolve --open --app-index my-base/index.html"
+  },
+  "dependencies": {
+    "@modern-helpers/router": "^0.4.0"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.1.14"
+  }
+}

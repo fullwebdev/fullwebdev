@@ -1,5 +1,5 @@
-/** @typedef {import('./Route').RoutesConfig} RoutesConfig */
-/** @typedef {import('./Route').ProjectRoutesConfig} ProjectRoutesConfig */
+/** @typedef {import('@daucus/core').RoutesConfig} RoutesConfig */
+/** @typedef {import('@daucus/core').ProjectRoutesConfig} ProjectRoutesConfig */
 
 import { sortRoutesChildEntriesByPosition } from "./sort.js";
 
@@ -31,7 +31,7 @@ export function menuTemplate(routes, projectName) {
         }
       </div>
       ${
-        route.children && depth < 3
+        route.children && depth < 4
           ? `
             <ul class="${
               (depth > 0 ? "child-menu" : "menu") +

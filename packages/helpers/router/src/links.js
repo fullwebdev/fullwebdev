@@ -1,10 +1,9 @@
-// TODO: export
-
 /**
- * emulate "normal" link behaviors on click
+ * Emulate "normal" link behaviors on click.
  *
- * inspired by the router helper from Polymer/pwa-helper
- * @see https://github.com/Polymer/pwa-helpers/blob/v0.9.1/src/router.ts
+ * Inspired by the router helper from {@link https://github.com/Polymer/pwa-helpers/blob/v0.9.1/src/router.ts|polymer pwa-helper v0.9.1 - router.ts}
+ *
+ * @param baseUrl Prefix to ignore in location pathname when generating a path from an anchor href
  *
  */
 export const clickEventHandler = (/** @type {string} */ baseUrl) => (
@@ -56,11 +55,18 @@ export const clickEventHandler = (/** @type {string} */ baseUrl) => (
   }
 
   if (`${baseUrl}${fullHref}` !== window.location.href) {
-    // FIXME: bad url when opening in a new window
-    const path = hrefAttr.startsWith("./")
-      ? window.location.pathname + hrefAttr.slice(2)
-      : new URL(fullHref).pathname;
+    let path = "";
+    const url = new URL(fullHref);
 
-    pathUpdatedCallback(path, e);
+    if (hrefAttr.startsWith("./")) {
+      const previousPath = window.location.pathname
+        .replace(new RegExp(`^${baseUrl}(.*)`), "$1")
+        .replace(/(.*)\/$/, "$1");
+      path = previousPath + hrefAttr.slice(1);
+    } else {
+      path = url.pathname;
+    }
+
+    pathUpdatedCallback(path + url.search + url.hash, e);
   }
 };

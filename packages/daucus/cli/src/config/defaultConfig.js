@@ -9,7 +9,7 @@ export const defaultProject = {
 };
 
 /**
- * @type {import('./DaucusConfig').DaucusConfig}
+ * @type {import('./DaucusConfig').WorkspaceConfig}
  */
 export const defaultConfig = {
   output: "_daucus_",

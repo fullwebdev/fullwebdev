@@ -1,130 +1,176 @@
 import { clickEventHandler } from "./links.js";
 
+/**
+ * @typedef {import('./navigation').NavigationOptions} NavigationOptions
+ */
+
+/**
+ * @internal
+ */
 function baseHRef() {
-  if (document.getElementsByTagName("base").length === 0) return "";
-  return new URL(document.baseURI).pathname.replace(/\/$/, "");
+  const baseEls = document.getElementsByTagName("base");
+  if (baseEls.length === 0) return "";
+  const href = baseEls[0].getAttribute("href");
+  if (!href) return "";
+  return href.replace(/\/$/, "");
 }
 
 /**
- * @param {string} pathWithParams
+ * @internal
+ * @param {string} initialPath
  * @param {boolean} mergeWithLocationSearch
  */
-function processGetParams(pathWithParams, mergeWithLocationSearch) {
-  let initialGetParams = null;
+function pathToURL(initialPath, mergeWithLocationSearch) {
+  const url = new URL(initialPath, window.location.origin);
   if (mergeWithLocationSearch && window.location.search) {
-    initialGetParams = Object.fromEntries(
-      new URLSearchParams(window.location.search)
-    );
+    url.search = new URLSearchParams({
+      ...new URLSearchParams(window.location.search),
+      ...url.searchParams,
+    }).toString();
   }
-
-  const splittedPath = pathWithParams.split("?");
-  if (splittedPath.length > 2)
-    throw new Error(`${pathWithParams} isn't a valid path`);
-  const [path, pathParamsString] = splittedPath;
-  const pathParams = pathParamsString
-    ? Object.fromEntries(new URLSearchParams(pathParamsString))
-    : null;
+  const { pathname, searchParams, hash } = url;
 
   return {
-    path,
-    params:
-      initialGetParams || pathParams
-        ? {
-            ...initialGetParams,
-            // @ts-ignore URLSearchParams are iterable
-            ...Object.fromEntries(new URLSearchParams(pathParams)),
-          }
-        : null,
+    path: pathname,
+    searchParams,
+    hash,
   };
 }
 
 /**
- * @typedef {import('./navigation').NavigationListener} NavigationListener
- * @typedef {import('./navigation').NavigationOptions} NavigationOptions
+ * Minimalistic programmatic router for modern web apps.
+ *
+ * Extend this class and override the `renderOrRedirect` method to define a router.
+ *
+ * Fires `navigation-start`, `navigation-end` and `route-redirection` events.
  */
-
 export class AbstractRouter extends EventTarget {
   constructor() {
     super();
+
+    /** @private */
     this._base = baseHRef();
+    /** @private */
+    this._redirectionCount = 0;
   }
 
+  /**
+   * URL prefix preserved when generating and recognizing URLs.
+   *
+   * This value is inferred from the first HTML `<base>` element in the document or "/" if there is none.
+   *
+   * @type {string}
+   */
   get base() {
     return this._base;
   }
 
+  /**
+   * Last path leading to successful navigation (from window.location)
+   */
   get currentPath() {
     return window.location.pathname.replace(this.base, "") || "/";
   }
 
   /**
+   * @private
    * @param {string} pathWithParams
    * @param {NavigationOptions} options
    *
    * @returns {Promise<void>}
    */
   async _navigate(pathWithParams, options = {}) {
-    const { path, params } = processGetParams(
+    const { path, searchParams, hash } = pathToURL(
       pathWithParams,
       !!options.redirection
     );
 
-    const newRoute = await this.renderOrRedirect(path, options, params);
+    const newRoute = await this.renderOrRedirect(
+      path,
+      options,
+      searchParams,
+      hash.replace(/^#/, "")
+    );
     if (newRoute && newRoute[0] !== path) {
+      /**
+       * @type {import('./navigation').RedirectionEventDetail}
+       */
+      const detail = {
+        oldValue: {
+          path,
+          options,
+        },
+        newValue: { path: newRoute[0], options: newRoute[1] || {} },
+      };
       this.dispatchEvent(
         new CustomEvent("route-redirection", {
-          detail: {
-            oldValue: {
-              path,
-              options,
-            },
-            newValue: { path: newRoute[0], options: newRoute[1] },
-          },
+          detail,
         })
       );
-      return this._navigate(newRoute[0], newRoute[1]);
+      if (this._redirectionCount <= 3) {
+        this._redirectionCount += 1;
+        return this._navigate(newRoute[0], newRoute[1]);
+      }
+      return;
     }
+    this._redirectionCount = 0;
 
-    const newURL = `${this.base}${path}${
-      params ? `?${new URLSearchParams(params)}` : ""
-    }`;
+    const newURL =
+      this.base +
+      path +
+      (searchParams.entries.length > 0 ? searchParams.toString() : "") +
+      (hash || "");
 
-    // TODO: params
     if (options.redirection) {
       window.history.replaceState(options.state, "", newURL);
     } else if (!options.skipLocationChange) {
       window.history.pushState(options.state, "", newURL);
     }
 
+    /**
+     * @type {import('./navigation').NavigationEventDetail}
+     */
+    const detail = {
+      path,
+      options,
+    };
     this.dispatchEvent(
       new CustomEvent("navigation-end", {
-        detail: {
-          path,
-          options,
-        },
+        detail,
       })
     );
   }
 
   /**
-   * @param {string} path
+   * Navigate to a view using a route path.
+   *
+   * @param {string} path path of a defined route
    * @param {NavigationOptions} options
    *
    * @returns {Promise<void>}
    */
   async navigate(path, options = {}) {
-    // TODO: vérifier si j'ai pas mis "details" ailleurs par inatention
+    /**
+     * @type {import('./navigation').NavigationEventDetail}
+     */
+    const detail = {
+      path,
+      options,
+    };
     this.dispatchEvent(
       new CustomEvent("navigation-start", {
-        detail: {
-          path,
-          options,
-        },
+        detail,
       })
     );
     return this._navigate(path, options);
   }
 
+  /**
+   * Initialize the router and bind it to the DOM to handle popstate and click events
+   *
+   * @param {HTMLElement} root root element where events will be listened
+   * @param {boolean} navigate run a navigation using the current path
+   */
   async run(root = document.body, navigate = true) {
     root.addEventListener(
       "click",
@@ -143,14 +189,19 @@ export class AbstractRouter extends EventTarget {
   }
 
   /**
-   * @param {string} path
-   * @param {NavigationOptions} options
-   * @param {Record<string, any> | null} [params]
+   * Match and render a defined route, or return a new path to redirect to.
    *
-   * @returns {[path: string, options?: NavigationOptions] | null | Promise<[path: string, options?: NavigationOptions] | null>}
+   * SHOULD BE OVERRIDEN in your own Router class!
+   *
+   * @param {string} path navigation path
+   * @param {NavigationOptions} options navigation options
+   * @param {URLSearchParams | null} [params] get parameters
+   * @param {string} [hash] fragment identifier (without '#')
+   *
+   * @returns {[path: string, options?: NavigationOptions] | null | Promise<[path: string, options?: NavigationOptions] | null>} path and navigation options to use for redirection
    */
   // eslint-disable-next-line class-methods-use-this, @typescript-eslint/no-unused-vars
-  renderOrRedirect(path, options, params) {
+  renderOrRedirect(path, options, params, hash) {
     return null;
   }
 }

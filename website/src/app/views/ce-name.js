@@ -150,6 +150,7 @@ export default class CENameView extends LitElement {
         display: block;
         max-width: 936px;
         text-align: justify;
+        margin: 0 auto;
       }
 
       h1 {
@@ -169,6 +170,11 @@ export default class CENameView extends LitElement {
 
       .btn-example {
         margin: 0.5em;
+      }
+
+      blockquote {
+        background-color: #f3f5f7;
+        padding: 1.5rem;
       }
     `;
   }

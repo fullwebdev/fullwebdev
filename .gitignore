@@ -32,6 +32,8 @@ dist/
 /website/functions/hosting/index.html
 /dpawm-build/public
 _daucus_
+/docs
+API/
 
 ## generated types
 packages/*/*/types

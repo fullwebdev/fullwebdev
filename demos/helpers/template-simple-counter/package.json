@@ -1,0 +1,16 @@
+{
+  "name": "@fwdemos/modern-helpers-template-simple-counter",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "wds --node-resolve --open --app-index index.html"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.1.14"
+  },
+  "dependencies": {
+    "@modern-helpers/template": "^0.4.0"
+  }
+}

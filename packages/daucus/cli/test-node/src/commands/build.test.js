@@ -111,4 +111,20 @@ describe("BuildCommand", () => {
     ).equals("Hello World!");
     expect(await output.html.list()).to.deep.equal(["docs/hello-world.html"]);
   });
+
+  it("rewrite relative URLs", async () => {
+    const wp = await fixtureWorkspace("default");
+    const cmd = new BuildCommand(wp);
+
+    await cmd.run();
+
+    const { output } = await workspaceInfos(wp);
+
+    expect(
+      output.html
+        .parse("docs/02-second-part/index.html")
+        .querySelector("a")
+        .getAttribute("href")
+    ).equals("docs/second-part/first-file");
+  });
 });

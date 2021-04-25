@@ -6,14 +6,26 @@ import { writeJSObject } from "../fs/write.js";
 import { buildProject } from "../compilers/build.js";
 
 /**
- * @typedef {import('../config/DaucusConfig').DaucusConfig} DaucusConfig
+ * @typedef {import('../config/DaucusConfig').WorkspaceConfig} DaucusConfig
  * @typedef {import('../config/DaucusConfig').ProjectConfig} ProjectConfig
  * @typedef {import('../config/WorkSpace').WorkSpace} WorkSpace
- * @typedef {import('../routing/Route').ProjectRoutesConfig} ProjectRoutesConfig
- * @typedef {import('../routing/Route').RoutesConfig} RoutesConfig
+ * @typedef {import('@daucus/core').ProjectRoutesConfig} ProjectRoutesConfig
+ * @typedef {import('@daucus/core').RoutesConfig} RoutesConfig
+ * @typedef {import('./AbstractCommand').Command<BuildCommandOptions>} BuildCommandInterface
+ * @typedef {import('./AbstractCommand').CommandConstructor<BuildCommandOptions>} BuildCommandConstructor
+ *
+ * @typedef {import('./build.options').BuildCommandOptions} BuildCommandOptions
  */
 
+/**
+ * @implements BuildCommandInterface
+ * @type BuildCommandConstructor
+ */
 export class BuildCommand {
+  static help = "generate static assets";
+
+  static synopsis = "[project]";
+
   static options = [
     {
       name: "project",
@@ -28,6 +40,7 @@ export class BuildCommand {
    */
   constructor(workspace) {
     this.workspace = workspace;
+    /** @private */
     this._compileLog = {
       gauge: new Gauge(process.stdout, {
         updateInterval: 50,
@@ -39,7 +52,7 @@ export class BuildCommand {
   }
 
   /**
-   * @param {{ project?: string }} [params] command parameters
+   * @param {BuildCommandOptions} [params] command parameters
    */
   async run(params = {}) {
     const config = await this.workspace.getConfig();
@@ -72,6 +85,7 @@ export class BuildCommand {
           projectName,
           {
             compiler: config.defaultCompiler,
+            compilerOptions: config.defaultCompilerOptions,
             ...projectConfig,
           },
           config.output,
@@ -92,7 +106,7 @@ export class BuildCommand {
       "routes.js",
       routes,
       "routes",
-      "import('@daucus/cli/src/routing/Route').I18NRoutesConfig"
+      "import('@daucus/core').I18NRoutesConfig"
     );
     this._closeLogProgress();
     // TODO: copy js files
@@ -107,6 +121,7 @@ export class BuildCommand {
 
   /**
    * @param {string} msg
+   * @private
    */
   _logCompileProgress(msg, step = 0) {
     this._compileLog.progress += step;
@@ -116,6 +131,9 @@ export class BuildCommand {
     );
   }
 
+  /**
+   * @private
+   */
   _closeLogProgress() {
     this._compileLog.gauge.disable();
     this._compileLog.progress = 0;

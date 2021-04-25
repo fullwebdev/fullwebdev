@@ -1,0 +1,27 @@
+{
+  "name": "@daucus/core",
+  "version": "0.2.0",
+  "description": "Daucus core utility library",
+  "license": "MIT",
+  "main": "index.js",
+  "module": "index.js",
+  "type": "module",
+  "types": "./index.d.ts",
+  "author": {
+    "name": "Noël Macé",
+    "email": "contact@noelmace.com",
+    "url": "https://noelmace.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullwebdev/fullwebdev.git",
+    "directory": "packages/daucus/router"
+  },
+  "bugs": {
+    "url": "https://github.com/fullwebdev/fullwebdev/issues",
+    "email": "contact@noelmace.com"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

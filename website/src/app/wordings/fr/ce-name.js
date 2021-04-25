@@ -1,9 +1,17 @@
 /** @type {import('../../views/ce-name').CeNameWording} */
 const wording = {
   title: "Nommer un élément personnalisé",
-  intro: /* HTML */ `
+  intro: /* HTML */ `<blockquote>
+      Vous pouvez reproduire les tests suivants via le paquet npm
+      <a
+        href="https://www.npmjs.com/package/custom-element-name"
+        target="_blank"
+        rel="noopener noreferrer"
+        >custom-element-name</a
+      >. Rendez-vous sur la <a href="/custom-element-name">documentation</a> de
+      ce paquet pour plus d'informations.
+    </blockquote>
     <p>Le nom d'un élément personnalisé doit :</p>
-    <p></p>
     <ul>
       <li>contenir un tiret</li>
       <li>commencer par une lettre minuscule non accentuée</li>
@@ -18,22 +26,14 @@ const wording = {
       donc s'en tenir, dans la "vraie vie", aux lettres minuscules et chiffres.
     </p>
     <p>
-      Mais soyons joueurs. Le formulaire ci-dessous permet, en utilisant le
-      paquet npm
-      <a
-        href="https://www.npmjs.com/package/custom-element-name"
-        target="_blank"
-        rel="noopener noreferrer"
-        >custom-element-name</a
-      >, de tester si une chaîne de caractère peut véritablement être utilisée
-      comme nom pour un élément personnalisé. Chaque erreur y est expliquée en
-      détail.
+      Mais soyons joueurs. Le formulaire ci-dessous permet de tester si une
+      chaîne de caractère peut véritablement être utilisée comme nom pour un
+      élément personnalisé. Chaque erreur y est expliquée en détail.
     </p>
     <p>
       Vous pouvez également cliquer sur un des boutons suivants pour tester les
       4 résultats possibles.
-    </p>
-  `,
+    </p> `,
   test: {
     nameInfo: {
       invalidElementNameError: (name) => /* HTML */ `

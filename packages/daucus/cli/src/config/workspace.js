@@ -4,7 +4,7 @@ import { findUp } from "../fs/path.js";
 import { CONFIG_FILE_NAME } from "./defaultConfig.js";
 import * as daucusConfig from "./daucus-config.js";
 
-/** @typedef {import('./DaucusConfig').DaucusConfig} DaucusConfig */
+/** @typedef {import('../../').DaucusJSConfig} DaucusJSConfig */
 /** @typedef {import('./WorkSpace').WorkSpace} IWorkSpace */
 
 /**
@@ -51,7 +51,7 @@ export class WorkSpace {
 
   /**
    * create a
-   * @param {string | Partial<DaucusConfig>} [pathOrConfig] configuration object, or the path to a configuration file (absolute or relative CWD)
+   * @param {string | DaucusJSConfig} [pathOrConfig] configuration object, or the path to a configuration file (absolute or relative CWD)
    * @param {string} [root] workspace's root directory
    */
   constructor(pathOrConfig = {}, root = "") {
@@ -67,6 +67,7 @@ export class WorkSpace {
       this.root = resolve(root);
     }
 
+    /** @private */
     this._configPromise = (
       configFileLoading || Promise.resolve(config)
     ).then((loadedConfig) =>

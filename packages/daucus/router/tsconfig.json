@@ -15,6 +15,9 @@
   "references": [
     {
       "path": "../../helpers/router/tsconfig.json"
+    },
+    {
+      "path": "../../daucus/core/tsconfig.json"
     }
   ],
   "include": ["src", "*.js"],

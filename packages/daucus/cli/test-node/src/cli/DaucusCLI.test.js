@@ -1,9 +1,17 @@
 import chai from "chai";
+import { expectedHelpMessages } from "../../fixtures/help.js";
 import { exec, workspaceInfos } from "../../fixtures/index.js";
+import { ConsoleStub } from "../../utils/log.js";
 
 const { expect } = chai;
 
 describe("CLI", async () => {
+  let consoleStub;
+
+  beforeEach(() => {
+    consoleStub = new ConsoleStub();
+  });
+
   it("build", async () => {
     const cmd = await exec("build", "default/docs");
     const { output } = await workspaceInfos(cmd.workspace);
@@ -23,5 +31,27 @@ describe("CLI", async () => {
     expect(
       output.html.parse("docs/hello-world.html").querySelector("h1").rawText
     ).equals("Hello World!");
+
+    expect(consoleStub.logs).equals(`compiling projects
+done ✓
+`);
+  });
+
+  it("help", async () => {
+    const cmd = await exec("help help", "default/docs");
+    await workspaceInfos(cmd.workspace);
+
+    expect(consoleStub.logs).equals(expectedHelpMessages.help);
+  });
+
+  it("print help message by default", async () => {
+    const cmd = await exec("", "default/docs");
+    await workspaceInfos(cmd.workspace);
+
+    expect(consoleStub.logs).equals(expectedHelpMessages.global);
+  });
+
+  afterEach(() => {
+    consoleStub.stub.restore();
   });
 });

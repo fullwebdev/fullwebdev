@@ -1,6 +1,6 @@
 {
   "name": "@modern-helpers/router",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "minimalistic SPA router",
   "main": "./index.js",
   "module": "./index.js",
@@ -16,19 +16,18 @@
     "name": "Noël Macé",
     "url": "https://noelmace.com"
   },
-  "files": [
-    "*.d.ts",
-    "*.js",
-    "src"
-  ],
   "scripts": {
+    "start": "es-dev-server --compatibility none --app-index demo/index.html",
     "types:copy": "copyfiles \"./src/**/*.d.ts\" \"./*.d.ts\" types"
   },
-  "types": "types/index.d.ts",
+  "types": "./types/index.d.ts",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/fullwebdev/fullwebdev.git",
     "directory": "packages/helpers/router"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

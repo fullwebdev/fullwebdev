@@ -1,5 +1,5 @@
-/** @typedef {import('./Route').ProjectRoutesConfig} ProjectRoutesConfig */
-/** @typedef {import('./Route').Route} Route */
+/** @typedef {import('@daucus/core').ProjectRoutesConfig} ProjectRoutesConfig */
+/** @typedef {import('@daucus/core').Route} Route */
 
 import HTMLMin from "html-minifier";
 import { menuTemplate } from "./menu.js";
@@ -9,9 +9,14 @@ export class ProjectRoutesConfigBuilder {
    * @param {string} projectName
    */
   constructor(projectName) {
-    /** @type {ProjectRoutesConfig} */
+    /**
+     * @type {ProjectRoutesConfig}
+     * @private
+     */
     this._projectRoutesConfig = { children: {} };
+    /** @private */
     this._isComplete = false;
+    /** @private */
     this._projectName = projectName;
   }
 

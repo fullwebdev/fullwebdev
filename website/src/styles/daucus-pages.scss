@@ -50,6 +50,9 @@
     border: 0;
     border-top: 1px solid var(--neutral-color-300);
   }
+  [align="center"] {
+    text-align: center !important;
+  }
 
   @media screen and (max-width: 719px) {
     table, thead, tbody, th, td, tr {
@@ -222,6 +225,10 @@
     margin: 0 auto;
     display: block;
     max-width: 100%;
+  }
+
+  [align="center"] img {
+    display: inline;
   }
 
   figure {
