@@ -13,6 +13,7 @@
 - [ ] code-samples
 - [ ] presentations/conferences
 - [ ] custom-element-name
+- [ ] demos
 - [ ] other: .....
 
 ## Description
