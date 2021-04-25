@@ -108,6 +108,7 @@ export class ChromePerfTestElement extends HTMLElement {
           text-align: center;
           display: block;
           max-width: 936px;
+          margin: 0 auto;
         }
         ${selector} .test-btn-container, ${selector} .test-inputs {
           text-align: center;
