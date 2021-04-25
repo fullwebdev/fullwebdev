@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/fullwebdev/fullwebdev/compare/helpers@v0.3.0...helpers@v0.4.0) (2021-04-25)
+
+### Features
+
+- **helpers-router:** URL fragments ([79ba6b4](https://github.com/fullwebdev/fullwebdev/commit/79ba6b4d030e84d9db891f2a46c875de88e0f772)), closes [#76](https://github.com/fullwebdev/fullwebdev/issues/76)
+
+### Bug Fixes
+
+- **helpers-router:** relative links with baseHref ([365dd7f](https://github.com/fullwebdev/fullwebdev/commit/365dd7f3e060adebd8b018542f9c75ee48f9f3f3))
+
 ## [0.3.0](https://github.com/fullwebdev/fullwebdev/compare/helpers@v0.2.1...helpers@v0.3.0) (2021-02-19)
 
 ### Features
