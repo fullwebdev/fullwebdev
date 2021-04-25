@@ -1,7 +1,6 @@
 {
   "name": "@fwdemos/modern-helpers-template-simple-counter",
   "private": true,
-  "version": "0.3.0",
   "type": "module",
   "main": "index.js",
   "license": "MIT",
@@ -12,6 +11,6 @@
     "@web/dev-server": "^0.1.14"
   },
   "dependencies": {
-    "@modern-helpers/template": "^0.3.0"
+    "@modern-helpers/template": "^0.4.0"
   }
 }
