@@ -31,5 +31,8 @@
   "dependencies": {
     "download": "^8.0.0"
   },
-  "types": "./types/index.d.ts"
+  "types": "./types/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  }
 }

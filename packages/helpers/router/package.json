@@ -26,5 +26,8 @@
     "type": "git",
     "url": "git+ssh://git@github.com/fullwebdev/fullwebdev.git",
     "directory": "packages/helpers/router"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

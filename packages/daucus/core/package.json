@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/fullwebdev/fullwebdev/issues",
     "email": "contact@noelmace.com"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

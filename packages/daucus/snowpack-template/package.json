@@ -35,5 +35,8 @@
     "@snowpack/plugin-dotenv": "^2.0.5",
     "prettier": "^2.0.5",
     "snowpack": "^3.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
