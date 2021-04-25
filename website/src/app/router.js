@@ -482,11 +482,6 @@ export class AppRouter extends AbstractRouter {
       this._pageMessageBox.style.display = "none";
     }
 
-    if (hash) {
-      const el = this.outlet.querySelector(`#${hash}`);
-      el?.scrollIntoView({ behavior: "smooth" });
-    }
-
     return null;
   }
 
