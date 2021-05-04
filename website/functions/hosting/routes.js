@@ -25,3 +25,17 @@ exports.routes = {
     "twitter:image:alt": "En-tête de la toute première RFC de l'IETF",
   },
 };
+
+exports.dirs = [
+  [
+    "/daucus",
+    {
+      "og:title": "Daucus",
+      "og:description":
+        "Simple static stuff generator and libraries for the modern web",
+      "og:image":
+        "https://github.com/fullwebdev/fullwebdev/blob/master/packages/daucus/social.png",
+      "twitter:image:alt": "Daucus: the static stuff generator",
+    },
+  ],
+];
