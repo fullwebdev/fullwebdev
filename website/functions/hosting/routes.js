@@ -32,6 +32,13 @@ exports.routes = {
       "https://fullweb.dev/illustrations/images/third-party/konqueror.png",
     "twitter:image:alt": "logo du navigateur Konqueror",
   },
+  "/blog/limites-foss": {
+    "og:type": "article",
+    "og:title": "Joies et limites de l'Open Source",
+    "og:description": "Compléments pour Les Briques du Web S01E05",
+    "og:image": "/images/web-illustrations/richard-balog-open-unsplash.jpg",
+    "twitter:image:alt": "Come in we're open",
+  },
 };
 
 exports.dirs = [

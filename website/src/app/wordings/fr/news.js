@@ -4,6 +4,22 @@ const wording = {
   abstract: "Annonces et articles de blog.",
   items: [
     {
+      href: "/blog/limites-foss",
+      spotlight: false,
+      wip: true,
+      type: "draft",
+      date: "2021-05-11",
+      desc: {
+        title: "Joies et limites de l'Open Source",
+        subtitle: `Quelques compléments après ma chronique pour Les Briques du Web S01E05`,
+      },
+      img: {
+        src: "/images/web-illustrations/richard-balog-open-unsplash.jpg",
+        alt: "Come in we're open",
+        height: 250,
+      },
+    },
+    {
       href: "/blog/revolution-khtml",
       spotlight: false,
       type: "blog",
