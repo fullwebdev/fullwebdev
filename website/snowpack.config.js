@@ -3,13 +3,13 @@ module.exports = {
   mount: {
     public: { url: "/", static: true },
     src: { url: "/dist" },
-    apps: { url: "/apps", static: true },
   },
+  workspaceRoot: "..",
   plugins: [],
   routes: [
     {
       match: "routes",
-      src: "(?!/dist/fragments/)(?!/apps/).*",
+      src: "(?!/dist/fragments/).*",
       dest: "/index.html",
       // dest: "/localized-files/fr_ALL/index.html",
       // dest: "/localized-files/en_ALL/index.html",
