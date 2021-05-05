@@ -13,6 +13,7 @@ import { DaucusCLI } from "../../src/cli/DaucusCLI.js";
  */
 export const configs = {
   default: resolve(esmDirName(import.meta), "default", "daucus.config.json"),
+  reverse: resolve(esmDirName(import.meta), "reverse", "daucus.config.json"),
   i18n: resolve(esmDirName(import.meta), "i18n", "daucus.config.json"),
   jsConfig: resolve(esmDirName(import.meta), "js-config", "daucus.config.js"),
   snarkdown: resolve(

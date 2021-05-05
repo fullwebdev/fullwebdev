@@ -38,6 +38,11 @@ export interface ProjectConfig {
    * Use file name as menu title instead of first h1
    */
   usePathAsTitle?: boolean;
+
+  /**
+   * Reverse menu entries.
+   */
+  reverseMenu?: boolean;
 }
 
 /**
