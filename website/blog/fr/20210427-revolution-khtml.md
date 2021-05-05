@@ -2,6 +2,8 @@
 
 # Quand Linux et le logiciel libre ont révolutionné le Web
 
+<div class="wc-text-content">
+
 ::: tip
 Infos complémentaires pour :
 
@@ -201,6 +203,8 @@ Mais si vous êtes assez fou pour tenter l'opération, faites le moi savoir 😃
 
 :::
 
+</div>
+
 [^env]:
     Personnellement, j'ai toujours préféré faire mes propres choix, au cas par cas.
     Alors forcément, KDE n'a jamais été mon environnement de travail quotidien.
@@ -225,7 +229,11 @@ Mais si vous êtes assez fou pour tenter l'opération, faites le moi savoir 😃
 - Angwin J. « [Sun Valley: Schmidt Didn’t Want to Build Chrome Initially, He Says](http://archive.wikiwix.com/cache/index2.php?url=http%3A%2F%2Fblogs.wsj.com%2Fdigits%2F2009%2F07%2F09%2Fsun-valley-schmidt-didnt-want-to-build-chrome-initially-he-says%2F) ». _The Wall Street Journal_. 9 juillet 2009.
 - Then, E. « [Xfce creator talks Linux, Moblin, netbooks and open-source](https://www.slashgear.com/xfce-creator-talks-linux-moblin-netbooks-and-open-source-0633329/) ». SlashGear. 7 février 2009
 
+<hr>
+
 ## Script de la chronique
+
+<div class="wc-text-content speak-time">
 
 Voyons voyons, de quoi je vous ai parlé jusque-là...\
 les RFC en 1964, c'est fait...\
@@ -364,3 +372,5 @@ Bon après, si votre projet a du succès, y a quand même de grandes chances qu'
 Histoire de renforcer un monopole, nourrir quelques projets inhumains, ou juste faire du pognon dont vous ne verrez jamais la couleur.
 
 Allez, bon courage pour vos projets, mais n'oubliez pas de jeter aussi un coup d'œil au mouvement Ethical Source pour défendre votre travail et vos droits.
+
+</div>
