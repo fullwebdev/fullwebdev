@@ -43,8 +43,7 @@ exports.dirs = [
       "og:title": "Modern Helpers",
       "og:description":
         "Minimalistic helper functions for Modern Web Apps development.",
-      "og:image":
-        "https://user-images.githubusercontent.com/7578400/115315056-ce0b6c00-a176-11eb-8767-15874a509942.png",
+      "og:image": "https://fullweb.dev/images/social/helpers.png",
     },
   ],
 ];
