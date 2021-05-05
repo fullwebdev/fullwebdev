@@ -24,6 +24,13 @@ exports.routes = {
       "https://fullweb.dev/illustrations/images/third-party/ietf-rfc1-heading.png",
     "twitter:image:alt": "En-tête de la toute première RFC de l'IETF",
   },
+  "/blog/revolution-khtml": {
+    "og:type": "article",
+    "og:title": "Quand Linux et le logiciel libre ont révolutionné le Web",
+    "og:description": "Compléments pour Les Briques du Web S01E04",
+    "og:image": "/illustrations/images/third-party/konqueror.png",
+    "twitter:image:alt": "logo du navigateur Konqueror",
+  },
 };
 
 exports.dirs = [

@@ -242,6 +242,18 @@
     "type": "graphic"
   },
   {
+    "id": "filiusOpenCultureCoherent",
+    "abstract": "Download scientific diagram | Open culture as a coherent entity of open fields. from publication: Trend report Open and Online Education 2015 | | ResearchGate, the professional network for scientists.",
+    "accessed": { "date-parts": [[2021, 5, 2]] },
+    "archive_location": "/images/third-party/Open-culture-as-a-coherent-entity-of-open-fields.png",
+    "author": [{ "family": "Filius", "given": "Renée Marianne" }],
+    "citation-label": "filiusOpenCultureCoherent",
+    "language": "en",
+    "title": "Open culture as a coherent entity of open fields.",
+    "type": "graphic",
+    "URL": "https://www.researchgate.net/figure/Open-culture-as-a-coherent-entity-of-open-fields_fig4_284182930"
+  },
+  {
     "id": "FirefoxLogosHistory",
     "archive_location": "/images/history/patchworks/firefox-logos.png (source: .xcf)",
     "author": [{ "family": "Macé", "given": "Noël" }],
@@ -1600,6 +1612,21 @@
     "language": "fr",
     "title": "UML URLSearchParams",
     "type": "graphic"
+  },
+  {
+    "id": "uriherreraandotherskdevisualdesigngroupIconKonquerorBreeze2014",
+    "accessed": { "date-parts": [[2021, 4, 26]] },
+    "archive": "KDE github;",
+    "archive_location": "/images/third-party/konqueror.svg",
+    "author": [
+      { "literal": "Uri Herrera and others, KDE Visual Design Group" }
+    ],
+    "citation-label": "uriherreraandotherskdevisualdesigngroupIconKonquerorBreeze2014",
+    "issued": { "literal": "15 May 2014 ;" },
+    "source": "Wikimedia Commons",
+    "title": "Icon of Konqueror from the Breeze icon theme.",
+    "type": "graphic",
+    "URL": "https://commons.wikimedia.org/wiki/File:Breezeicons-apps-48-konqueror.svg"
   },
   {
     "id": "V8Logo2018",
