@@ -51,11 +51,7 @@ export default {
     "public/localized-files/fr_ALL/index.html": {
       css,
       meta: {
-        description: {
-          short: "Redécouvrir le développement Web",
-          long:
-            "Développez votre expertise du développement Web en adoptant une nouvelle vision d'ensemble",
-        },
+        description: "Redécouvrir le développement Web",
         twitterCard: "https://fullweb.dev/images/social/social_fr.png",
       },
       nav: scriptWordings.fr.navLinks,
