@@ -1,5 +1,7 @@
 # Vannevar Bush et la naissance des NTIC
 
+<div class="wc-text-content">
+
 ::: tip
 Infos complémentaires pour la chronique "Les anecdotes historiques" présentée durant [Les briques du Web S01E02](https://youtu.be/rI6xUkOnyB0?t=2621) le 30 mars 2021.
 :::
@@ -308,6 +310,8 @@ En 2021, la conclusion de Bush semble toujours d'actualité :
 >
 > Les applications de la science ont fourni à l’homme une maison bien équipée et elles lui apprennent à vivre sereinement. Elles lui ont permis de faire s’affronter des peuples avec des armes cruelles. Elles peuvent encore lui permettre de développer un savoir commun et de grandir dans la sagesse de l’expérience ainsi accumulée. L’humanité périra peut être dans un conflit avant d’apprendre à manier ce savoir pour le bien commun. Pourtant, dans l’application de la science aux besoins et aux désirs de l’homme, ce serait un bien mauvais moment pour interrompre ce processus, ou perdre espoir quant à son issue. »
 
+</div>
+
 ## Ressources
 
 - Vannevar Bush, « [As We May Think](https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/) », _The Atlantic_, juillet 1945
@@ -317,7 +321,11 @@ En 2021, la conclusion de Bush semble toujours d'actualité :
 - Pierre Musso, _[Critique des réseaux](https://www.cairn.info/critique-des-reseaux--9782130501374.htm)_, PUF, 2003
 - Paul N. Edwards, _[Un monde clos](https://editions-b2.com/les-livres/7-un-monde-clos.html)_, éditions B2, 2013 (texte original [publié aux MIT press](https://mitpress.mit.edu/books/closed-world) en 1996)
 
+<hr>
+
 ## Script de la chronique
+
+<div class="wc-text-content speak-time">
 
 Jingle\
 🎶 Père Noël, raconte nous des histoires 🎶\
@@ -478,3 +486,5 @@ Si vous être sur Youtube, les liens devraient se trouver ci-dessous.
 
 Merci à tous, à vous, le studios.
 (j'ai toujours rêvé de dire ça)
+
+</div>

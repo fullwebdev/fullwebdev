@@ -1,5 +1,7 @@
 # Qui a inventé les ordis et l'hypertexte ?
 
+<div class="wc-text-content">
+
 ::: tip
 Infos complémentaires pour la chronique "Les anecdotes historiques" présentée durant [Les briques du Web S01E01](https://www.youtube.com/watch?v=czAx81Upp_U) le 16 mars 2021.
 :::
@@ -123,9 +125,11 @@ De l'aveu de Tim, son amour des petits trains a fortement contribué à sa passi
 
 En somme, nous pouvons donc affirmer sans détour que le Web n'aurait jamais vu le jour sans les petits trains !
 
-<hr style="margin-top: 5rem">
+<hr>
 
-<h2 style="text-align: center">Transcript de la chronique</h2>
+## Script de la chronique
+
+<div class="wc-text-content speak-time">
 
 Alors aujourd'hui, on va parler de la création du Web.\
 Allez, on commence par une question facile :\
@@ -218,3 +222,5 @@ En fait, rien de ce qu'on crée aujourd'hui n'est jamais véritablement "nouveau
 Derrières les "révolutions" et "disruptions" se cachent souvent un simple recyclage d'une vieille idée.
 
 De nombreuses idées, plus ou moins anciennes, attendent simplement leur "bon moment".
+
+</div>
