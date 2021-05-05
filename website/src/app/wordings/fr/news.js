@@ -4,6 +4,21 @@ const wording = {
   abstract: "Annonces et articles de blog.",
   items: [
     {
+      href: "/blog/revolution-khtml",
+      spotlight: false,
+      type: "blog",
+      date: "2021-04-27",
+      desc: {
+        title: "Quand Linux et le logiciel libre ont révolutionné le Web",
+        subtitle: `Quelques compléments après ma chronique pour Les Briques du Web S01E04`,
+      },
+      img: {
+        src: "/illustrations/images/third-party/konqueror.svg",
+        alt: "logo du navigateur Konqueror",
+        height: 250,
+      },
+    },
+    {
       href: "/blog/histoire-rfc",
       spotlight: false,
       type: "blog",

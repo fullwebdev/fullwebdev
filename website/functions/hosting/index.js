@@ -2,7 +2,7 @@
 const functions = require("firebase-functions");
 const fs = require("fs");
 const path = require("path");
-const { routes } = require("./routes");
+const { routes, dirs } = require("./routes");
 
 const INDEX_TEMPLATE = fs
   .readFileSync(path.resolve(__dirname, "index.html"))
@@ -43,7 +43,14 @@ function isBot(userAgent) {
 }
 
 exports.httpRequestHandler = functions.https.onRequest((request, result) => {
-  const route = routes[request.path];
+  let route = routes[request.path];
+
+  if (!route) {
+    const found = dirs.find(
+      ([key, dirRoute]) => request.path.startsWith(key) && dirRoute
+    );
+    if (found) [, route] = found;
+  }
 
   let indexHTML = INDEX_TEMPLATE;
 
