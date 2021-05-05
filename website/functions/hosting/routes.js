@@ -28,7 +28,8 @@ exports.routes = {
     "og:type": "article",
     "og:title": "Quand Linux et le logiciel libre ont révolutionné le Web",
     "og:description": "Compléments pour Les Briques du Web S01E04",
-    "og:image": "/illustrations/images/third-party/konqueror.png",
+    "og:image":
+      "https://fullweb.dev/illustrations/images/third-party/konqueror.png",
     "twitter:image:alt": "logo du navigateur Konqueror",
   },
 };
