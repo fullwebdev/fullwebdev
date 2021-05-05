@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.5](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2021-05-05)
+
+### Features
+
+- **illustrations:** images for KDE/FOSS blog post ([cc87897](https://github.com/fullwebdev/fullwebdev/commit/cc87897ea5d1fd46a6de593a61789b1dfe930a93))
+- **website:** KDE blog post ([befb982](https://github.com/fullwebdev/fullwebdev/commit/befb98265480e97bcd0045565d76983deaee9d72))
+- **website:** meta tags for /daucus docs ([cc12dd9](https://github.com/fullwebdev/fullwebdev/commit/cc12dd9a873a679818e3ffc69c9c7204fd329eaa))
+- **website:** meta tags for /helpers docs ([34dcc39](https://github.com/fullwebdev/fullwebdev/commit/34dcc39c5872fdec219ae037d2ee43c56fb9d94a))
+- **website:** show reading time ([e75a46e](https://github.com/fullwebdev/fullwebdev/commit/e75a46ec9fe5a148c730e8f898c3f6ac2287e3b7))
+
+### Bug Fixes
+
+- **website:** typo in fr index meta ([fed20f6](https://github.com/fullwebdev/fullwebdev/commit/fed20f629592f6441f8a833c3dda3bd006b9956b))
+
 ## [1.0.0-beta.4](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2021-04-25)
 
 ### Features
