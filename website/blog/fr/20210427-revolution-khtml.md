@@ -122,7 +122,7 @@ Il est alors (et est toujours aujourd'hui) nommé Konqueror.
 ![Logo de Konqueror, le navigateur web de KDE.](/illustrations/images/third-party/konqueror.svg){height=200px}
 
 Mais Konqueror n'aura qu'un rôle secondaire dans la première guerre des navigateurs.
-Beaucoup d'utilisateurs Linux continue à préférer Netscape au navigateur KDE.
+Beaucoup d'utilisateurs Linux continuent de préférer Netscape au navigateur KDE.
 Surtout, Linux est très peu utilisé en comparaison de Windows.
 Un navigateur spécialement dédié à ce système n'a donc aucune chance de rivaliser avec Internet Explorer, dont l'installation est imposée sur Windows.
 
@@ -228,6 +228,7 @@ Mais si vous êtes assez fou pour tenter l'opération, faites le moi savoir 😃
 - Eylenburg A. « [Historical market shares of operating systems](https://maps-and-tables.blogspot.com/2016/01/historical-market-shares-of-operating.html) ». _Maps and Tables_. 12 janvier 2019.
 - Angwin J. « [Sun Valley: Schmidt Didn’t Want to Build Chrome Initially, He Says](http://archive.wikiwix.com/cache/index2.php?url=http%3A%2F%2Fblogs.wsj.com%2Fdigits%2F2009%2F07%2F09%2Fsun-valley-schmidt-didnt-want-to-build-chrome-initially-he-says%2F) ». _The Wall Street Journal_. 9 juillet 2009.
 - Then, E. « [Xfce creator talks Linux, Moblin, netbooks and open-source](https://www.slashgear.com/xfce-creator-talks-linux-moblin-netbooks-and-open-source-0633329/) ». SlashGear. 7 février 2009
+- « [Google Chrome Comic](https://www.google.com/googlebooks/chrome/) ». 2 septembre 2008
 
 <hr>
 
@@ -353,7 +354,7 @@ La première version est finalement annoncée en 2008, via une BD.
 
 <!-- markdownlint-disable no-emphasis-as-heading -->
 
-_(j'vous mettrai le lien sur mon blog)_
+_[(j'vous mettrai le lien sur mon blog)](https://www.google.com/googlebooks/chrome/)_
 
 La suite, tout le monde la connait.\
 En 2007, l'iphone fait son apparition.\
