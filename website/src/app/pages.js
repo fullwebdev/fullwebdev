@@ -27,7 +27,7 @@ function uid() {
 /**
  * @param {Element} root
  */
-async function responsiveTables(root) {
+function responsiveTables(root) {
   const tables = root.querySelectorAll("table");
   if (tables.length < 1) return;
   const style = document.createElement("style");
@@ -58,7 +58,28 @@ async function responsiveTables(root) {
 /**
  * @param {Element} root
  */
+function addReadingTime(root) {
+  const texts = root.querySelectorAll(".wc-text-content");
+  for (const text of texts) {
+    const words = text.innerHTML
+      .replace(/<[^>]*>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+      .split(" ");
+    const wordsPerMinute = text.classList.contains("speak-time") ? 160 : 250;
+    const readingTime = Math.round(words.length / wordsPerMinute);
+    const readingTimeEl = document.createElement("p");
+    readingTimeEl.classList.add("reading-time");
+    readingTimeEl.textContent = `${readingTime} minutes`;
+    text.prepend(readingTimeEl);
+  }
+}
+
+/**
+ * @param {Element} root
+ */
 export async function stylePage(root) {
   await codeStyle(root);
-  await responsiveTables(root);
+  responsiveTables(root);
+  addReadingTime(root);
 }

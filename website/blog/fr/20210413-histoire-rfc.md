@@ -1,5 +1,7 @@
 # L'Histoire des _Request For Comments_
 
+<div class="wc-text-content">
+
 ::: tip
 Infos complémentaires pour :
 
@@ -208,6 +210,8 @@ Voici mes préférées :
 Enfin, je trouve que la [RFC8962](https://tools.ietf.org/html/rfc8962) est, cette année, particulièrement bienvenue et d'actualité.
 Il était grand temps que l'IETF fasse à son tour preuve d'autorité, en adoptant un régime policier !
 
+</div>
+
 ## Chronologie d'ARPAnet et des protocoles Internet
 
 ### 1958-1969 : fondations théoriques
@@ -295,7 +299,11 @@ Il était grand temps que l'IETF fasse à son tour preuve d'autorité, en adopta
 - Clark A. « Initial commit, based on Yarn RFCs repo · [reactjs/rfcs@59b512b](https://github.com/reactjs/rfcs/commit/59b512b) ». In : <em>GitHub</em>
 - Katz Y. <span>« Initial sketch of the RFC process · [yarnpkg/rfcs@8831cfa](https://github.com/yarnpkg/rfcs/commit/8831cfa) »</span>. In : <em>GitHub</em>
 
+<hr>
+
 ## Script de la chronique
+
+<div class="wc-text-content speak-time">
 
 Bon, déjà, faut qu'j'vous dise un truc.\
 C'est un truc qui me taraude depuis un moment, donc voila, je vide mon sac...
@@ -423,3 +431,5 @@ Pas sur ce que vous prétendez être.
 Votre boulot, votre position hiérarchique, votre violence, vos privilèges, bref, le pouvoir que vous avez de forcer les autres, n'est jamais pertinent.
 
 Pensez le contraire, et vous le payerez lourdement.
+
+</div>
