@@ -13,10 +13,6 @@
       "type": "json"
     },
     {
-      "filename": "website/package-lock.json",
-      "type": "json"
-    },
-    {
       "filename": "materials/code-samples/package.json",
       "type": "json"
     },
