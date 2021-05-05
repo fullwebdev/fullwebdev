@@ -33,8 +33,7 @@ exports.dirs = [
       "og:title": "Daucus",
       "og:description":
         "Simple static stuff generator and libraries for the modern web",
-      "og:image":
-        "https://github.com/fullwebdev/fullwebdev/blob/master/packages/daucus/social.png",
+      "og:image": "https://fullweb.dev/images/social/daucus.png",
       "twitter:image:alt": "Daucus: the static stuff generator",
     },
   ],
