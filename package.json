@@ -148,7 +148,7 @@
     "*.{css,yml,json}": [
       "prettier --write"
     ],
-    "*.{js,html,ts,tsx,jsx,.mjs,.cjs,vue}": [
+    "*.{js,html,ts,tsx,jsx,mjs,cjs,vue}": [
       "eslint --fix",
       "prettier --write"
     ]
