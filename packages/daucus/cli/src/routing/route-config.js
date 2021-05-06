@@ -70,10 +70,11 @@ export class ProjectRoutesConfigBuilder {
 
   /**
    * @param {HTMLMin.Options} htmlMinifierOptions
+   * @param {boolean} [reverse]
    */
-  complete(htmlMinifierOptions) {
+  complete(htmlMinifierOptions, reverse) {
     this._projectRoutesConfig.menu = HTMLMin.minify(
-      menuTemplate(this._projectRoutesConfig, this._projectName),
+      menuTemplate(this._projectRoutesConfig, this._projectName, reverse),
       htmlMinifierOptions
     );
     this._isComplete = true;

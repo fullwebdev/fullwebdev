@@ -40,6 +40,20 @@ describe("BuildCommand", () => {
     expect(routes.config).to.deep.equal(routes.snapshot);
   });
 
+  it("can reverse menu entries", async () => {
+    const wp = await fixtureWorkspace("reverse");
+    const cmd = new BuildCommand(wp);
+
+    await cmd.run();
+
+    const { output, config } = await workspaceInfos(wp);
+
+    expect(config.defaultCompiler).to.not.be.ok;
+
+    const routes = await output.routes();
+    expect(routes.config).to.deep.equal(routes.snapshot);
+  });
+
   it("handle i18n", async () => {
     const wp = await fixtureWorkspace("i18n");
     const cmd = new BuildCommand(wp);

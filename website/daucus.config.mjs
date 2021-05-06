@@ -14,6 +14,7 @@ const config = {
     blog: {
       src: "**/*.md",
       root: "blog",
+      reverseMenu: true,
     },
     daucus: {
       src: "**/*.md",

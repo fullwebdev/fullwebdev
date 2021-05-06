@@ -177,7 +177,10 @@ export async function buildProject(
         })
       );
 
-      routesConfigBuilder.complete(htmlMinifierOptions);
+      routesConfigBuilder.complete(
+        htmlMinifierOptions,
+        projectConfig.reverseMenu
+      );
       /** @type {[LanguageCodeOrDefault, ProjectRoutesConfig]} */
       const config = [lang || "__", routesConfigBuilder.config];
       return config;

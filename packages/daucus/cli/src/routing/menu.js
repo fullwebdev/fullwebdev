@@ -4,13 +4,13 @@
 import { sortRoutesChildEntriesByPosition } from "./sort.js";
 
 /**
- *
  * @param {ProjectRoutesConfig} routes
  * @param {string} projectName
+ * @param {boolean} [reverse]
  *
  * @returns {string} HTML template
  */
-export function menuTemplate(routes, projectName) {
+export function menuTemplate(routes, projectName, reverse) {
   /**
    *
    * @param {ProjectRoutesConfig} route
@@ -20,6 +20,17 @@ export function menuTemplate(routes, projectName) {
    * @returns {string}
    */
   function menu(route, depth, routeName) {
+    /** @type {[string, import('@daucus/core').RouteWithChildren][]} */
+    let sortedChildren = [];
+    if (route.children) {
+      sortedChildren = Object.entries(route.children).sort(
+        sortRoutesChildEntriesByPosition
+      );
+      if (reverse) {
+        sortedChildren.reverse();
+      }
+    }
+
     return `
       <div class="${depth === 0 ? "menu-title" : ""} section-title">
         ${
@@ -37,8 +48,7 @@ export function menuTemplate(routes, projectName) {
               (depth > 0 ? "child-menu" : "menu") +
               (route.path === undefined ? " collapsible" : "")
             }">
-              ${Object.entries(route.children)
-                .sort(sortRoutesChildEntriesByPosition)
+              ${sortedChildren
                 .map(
                   ([childRouteName, childRoute]) =>
                     `<li>
