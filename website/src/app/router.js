@@ -319,6 +319,7 @@ export class AppRouter extends AbstractRouter {
     this._possibleOutlet = null;
 
     window.addEventListener("languagechange", () => {
+      this._forcedLanguage = null;
       this.navigate(this.currentPath, { skipLocationChange: true });
     });
 
@@ -405,11 +406,11 @@ export class AppRouter extends AbstractRouter {
    * @returns {Promise<[path: string, options?: NavigationOptions] | null>}
    */
   async renderOrRedirect(path, options, params, hash) {
-    const langMatchInPath = /^\/(en|fr)(\/.*)/.exec(path);
+    const langMatchInPath = /^\/(en|fr)(\/.*)?/.exec(path);
     if (!langMatchInPath) {
       return [`/${this.preferredLanguage}${path}`, { ...options }];
     }
-    const [, lang, pathWithoutLang] = langMatchInPath;
+    const [, lang, pathWithoutLang = "/"] = langMatchInPath;
     this._forcedLanguage = /** @type {Language} */ (lang);
     const {
       staticContent,
