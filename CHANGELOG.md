@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.6](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2021-05-11)
+
+### Features
+
+- **daucus-cli:** reverse menu entries ([3822d19](https://github.com/fullwebdev/fullwebdev/commit/3822d19501538e1dc4b4420102e4e37795084f33))
+- **website:** OSS limits blog post draft ([48dccce](https://github.com/fullwebdev/fullwebdev/commit/48dccce1619733cababeb5d6c0e130a233c7b57f))
+
+### Bug Fixes
+
+- **website:** missing link in KDE blog post ([b96782d](https://github.com/fullwebdev/fullwebdev/commit/b96782d27ae4857c9bb85305c19fb8eddb566b00))
+- **website:** reverse order of blog posts in menu ([a804fcb](https://github.com/fullwebdev/fullwebdev/commit/a804fcb3ece388701a080ce12bbd2253d7eddab3))
+
 ## [1.0.0-beta.5](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2021-05-05)
 
 ### Features
