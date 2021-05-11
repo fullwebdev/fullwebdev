@@ -36,7 +36,8 @@ exports.routes = {
     "og:type": "article",
     "og:title": "Joies et limites de l'Open Source",
     "og:description": "Compléments pour Les Briques du Web S01E05",
-    "og:image": "/images/web-illustrations/richard-balog-open-unsplash.jpg",
+    "og:image":
+      "https://fullweb.dev/images/web-illustrations/richard-balog-open-unsplash.jpg",
     "twitter:image:alt": "Come in we're open",
   },
 };
