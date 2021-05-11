@@ -1,6 +1,6 @@
 {
   "name": "fullwebdev",
-  "version": "1.0.0-beta.5",
+  "version": "1.0.0-beta.6",
   "private": true,
   "description": "A transverse vision of modern web development",
   "license": "MIT",
@@ -148,7 +148,7 @@
     "*.{css,yml,json}": [
       "prettier --write"
     ],
-    "*.{js,html,ts,tsx,jsx,.mjs,.cjs,vue}": [
+    "*.{js,html,ts,tsx,jsx,mjs,cjs,vue}": [
       "eslint --fix",
       "prettier --write"
     ]
