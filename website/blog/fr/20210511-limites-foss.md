@@ -4,12 +4,6 @@
 
 <div class="wc-text-content">
 
-::: danger
-
-Cet article n'est encore qu'un brouillon en cours de finalisation.
-
-:::
-
 ::: tip
 
 Infos complémentaires pour :
@@ -25,11 +19,10 @@ Cet article (comme la chronique) fait directement suite à l'épisode précéden
 
 Le mouvement du logiciel libre[^foss] est le digne héritier de la sous-culture hacker et d'une certaine vision de la recherche universitaire.
 Il repose sur un idéal de collaboration et de partage sans entrave des connaissances.
-Une sorte de vision utopique d'un "esprit de ruche" à l'échelle de l'humanité, en quelque sorte.
 
-Notre société, forcément, ne correspond pas à cette utopie.
+Mais notre société ne correspond pas à cet idéal.
 Il a donc fallut définir des règles.
-Des licences libres, donc, qui permettent de garantir par le droit quatre libertés fondamentales :
+Des licences, dites libres, qui permettent de garantir par le droit quatre libertés fondamentales :
 
 - la liberté d'utiliser le logiciel
 - la liberté de copier le logiciel
@@ -37,28 +30,36 @@ Des licences libres, donc, qui permettent de garantir par le droit quatre libert
 - la liberté de modifier le logiciel et de redistribuer les versions modifiées
 
 L'objectif principal était, au départ, de lutter contre la culture du secret.
-De garantir que tout le monde puisse "bidouiller" le logiciel en sa possession, pour l'améliorer, ou simplement pour apprendre.
+De garantir que tout le monde puisse "bidouiller" (_hack_) le logiciel en sa possession, pour l'améliorer, ou simplement pour apprendre.
 
-Le logiciel libre permet à la fois de limiter et d'étendre le droit de propriété intellectuelle.
-En utilisant une licence libre, les propriétaires d'un logiciel :
+Pour ce faire, le logiciel s'appuie sur la législation de la propriété intellectuelle, qui associe trois droits :
 
-- limitent leur _usus_ (utilisation et contrôle de l'utilisation du bien) ;
-- abandonnent leur _abusus_ (aliénation / destruction du bien) ;
-- et, souvent, étendent le _fructus_ (récolte des fruits, c’est-à-dire des profits, du bien) à l'ensemble de la société.
+- le droit d'utiliser pleinement et donc de contrôler le bien, dit _usus_ ;
+- le droit de céder (par la vente ou le don) et détruire le bien, dit _abusus_ ;
+- et enfin, le droit de récolter les bénéfices (les "fruits") issus du bien, dit _fructus_[^usufruit].
 
-Ce faisant, ils établissent une certaine forme légale de bien commun ^[On parle alors de _"biens communs informationnels"_.].
+En utilisant une licence libre, les propriétaires d'un logiciel vont donc :
+
+- limiter leur _usus_ ;
+- abandonnent leur _abusus_ ;
+- et, souvent, étendent le _fructus_ à l'ensemble de la société.
+
+Ce faisant, les licences libres permettent de donner un statut public^[ici, _public_ souligne les libertés acquises par rapport à un bien _privé_, mais ne suppose aucune organisation collective permettant la gestion du bien, contrairement au terme _commun_] à une œuvre, et de la protéger contre les abus.
 
 Le mouvement du logiciel libre a même, depuis, donné naissance à la _culture libre_ (Open Culture), étendant cette logique à d'autres domaines, avec la neutralité du net (Open Communication) ainsi que le libre accès aux publications scientifiques (Open Science) et aux documents et procédures gouvernementales (Open Government).
 
 ![Open culture as a coherent entity of open fields, de Renée Marianne Filius](/illustrations/images/third-party/Open-culture-as-a-coherent-entity-of-open-fields.png){height=400px}
 
-Toutes ces applications nous montrent bien l'importance d'une telle "collectivisation".
+Cette généralisation, encore plus que le simple logiciel libre, permettent de mettre en évidence toute la force et l'importance de ces méthodes.
 Le libre accès à la connaissance constitue un moyen important d'émancipation.
 C'est un droit important que nous nous devons de toujours défendre.
 
+Rien, cependant, ne vient ici définir clairement la manière dont sera géré et utilisé ce bien public.
+Ce qui ouvre malheureusement la porte à d'autres types d'abus.
+
 ## Main mise sur les communautés
 
-Cela dit, les logiciels ne sont pas des œuvres intellectuelles comme les autres.
+Les logiciels ne sont pas des œuvres intellectuelles comme les autres.
 Ils sont des outils, avant d'être des vecteurs de savoir.
 La structure de notre société dépend énormément de la manière dont ces outils sont conçus et utilisés.
 
@@ -82,23 +83,31 @@ Le hors marché contribuait bien entendu à ce processus, mais restait marginal.
 Nous entrons dans un nouveau capitalisme "de l'influence" [^capinf].
 La première économie n'est plus celle des savoirs, mais des "communautés" [^community].
 
-Les grandes entreprises n'ont plus besoin de "posséder" un logiciel pour en récolter les fruits.
-Il leur suffit de détenir l'usufruit[^usufruit] exclusif de ce qui va autour : _l'image de marque_.
-Ce capital symbolique, nourrit par le capital économique, permet de s'emparer d'un capital social.
+Les licences libres permettent d'établir un code, un logiciel, comme "biens communs en accès libre", pour reprendre l'expression de Yochai Benkler^[Benkler Y. « [L'économie politique des bienscommuns](https://www.april.org/files/documents/PoliticalEconomyCommonsFr.pdf) ». _Upgrade_ Vol. IV, issue n°3, Juin 2003, traduction de Cyril Hansen].
+À quelques exceptions près, un logiciel libre doit cependant évoluer dans le temps (nouvelles fonctionnalités, corrections d'anomalies, mais aussi sa marque, sa documentation, etc.).
+Historiquement, ces évolutions ont le plus souvent été spontanément régulées par l'auto-organisation collective des contributeurs.
+Des règles plus ou moins formelles sont nécessairement mises en places, faisant émerger un « espace institutionnel » dans lequel évolue le logiciel, que nous avons pris l'habitude d'appeler "communauté".
+Ce sont donc bien les relations sociales entre individu qui permettent de donner au logiciel libre son statut de _commun_^[Dardot P. & Laval C. [_Commun_](https://www.editionsladecouverte.fr/commun-9782707186737). La Découverte. 2014, p. 148].
 
-En maitrisant les moyens de communication et d'innovation, l'entreprise détient tous les pouvoirs.
+Rapidement, les communautés de l'Open Source se sont matérialisées en ligne, construisant un ensemble d'espaces d'échange bien définis (organisation Github, canaux IRC, listes de diffusion, forums, évènements physiques, etc.).
+Ces espaces sont très souvent, avec le logiciel en lui-même, regroupés derrière une personne morale (entreprise, association, fondation) permettant de l'identifier va un nom, une marque et une identité visuelle.
+Cette organisation est alors la seule garante de l'existence légale de la communauté.
+Ce qui permet de gérer des finances qui, à leur tout, garantissent le fonctionnement des espaces d'échange.
+Le projet Open Source ne peut donc être un _commun_ sans que les membres de sa communauté détiennent collectivement les pleins pouvoir sur cette entité.
+
+Ce qui constitue, dans notre système actuel, une faille évidente, dans laquelle les entreprises se sont empressées de s'engouffrer.
+
+À présent, la très grande majorité des projets Open Source sont créés^[ou appropriés, comme nous le verrons plus loin] par des entreprises.
+Mais en maitrisant "l'identité collective"[^trademark], les moyens de communication et d'innovation, l'entreprise détient tous les pouvoirs.
 La "communauté" (développeurs bénévoles, utilisateurs et "fans") est privée de son organisation collective spontanée.
-Améliorer l'image du produit devient sa seule raison d'être.
-Car aucune entreprise n'existe pour "faire le bien".
-L'objectif est toujours, quoi qu'on en dise, de faire fructifier le capital des propriétaires de l'entreprise.
-Ni celui de ses salariés, ni celui de la société dans son ensemble[^devrel].
+Améliorer l'image du produit devient sa seule raison d'être[^devrel].
 
-La relation entreprise-communauté est toujours déséquilibrée.
+Dans ce contexte, la relation entreprise-communauté est toujours déséquilibrée.
 L'entreprise possède la marque du produit ainsi que les équipes responsables de son développement.
 La communauté fait donc partie de son capital immatériel.
 Elle "appartient" à l'entreprise, qui peut en user et en abuser à sa guise.
 
-L'Open Source devient, entre les mains des grands multinationales de la tech, un formidable outil d'appropriation.
+Par ce truchement, l'Open Source offre aux grandes entreprise un formidable outil d'exploitation sociale et d'appropriation.
 
 ## Travail gratuit et burn-out
 
@@ -114,11 +123,10 @@ Disons-le une bonne fois pour toutes : c'est un mensonge !
 Un mensonge toxique et dangereux.
 
 Toxique, car tout le monde ne dispose pas du même "capital temps et sympathie" de départ.
-Le recrutement basé sur les "contributions" est forcément discriminatoire.
-Il renforce une inégalité de départ.
+Le recrutement basé sur les "contributions" renforce nécessairement les discriminations systémiques.
 On notera d'ailleurs que les femmes et personnes racisées sont [encore moins présentes](https://www.wired.com/2017/06/diversity-open-source-even-worse-tech-overall/) dans l'Open Source que dans l'informatique en général.
 
-Dangereux, car ce genre de mentalité pousse un grand nombre de personnes au burn-out.
+Dangereux, ensuite, car ce genre de mentalité pousse un grand nombre de personnes au burn-out.
 Personne ne devrait se sentir obligé de continuer à travailler pour d'autres personnes en plus de son emploi.
 
 Et c'est finalement un mensonge, car nous n'augmentons que très rarement et très faiblement notre capital symbolique en contribuant à des projets Open Source "clés" (donc gérés par de grandes entreprises) sur notre temps libre.
@@ -127,19 +135,45 @@ Or, créer un projet personnel (libre ou non) revient à investir dans votre pro
 
 ## Prédation et jeux de pouvoir
 
-::: warning
-
-:construction: Écriture en cours :construction:
-
-:::
-
 Et c'est précisément ici que [l'histoire de KDE](/blog/revolution-khtml), et de Linux en général, est instructive.
 
 Les GAFAM, en particulier Google et Amazon, se sont fait une spécialité ces dix dernières années d'utiliser l'Open Source pour leur bénéfice personnel.
 
-Prenons l'exemple de Chrome :
+Prenons l'exemple de Chrome.
+[Peter Krumins](https://twitter.com/pkrumins) a investigué le code de Chrome dès sa sortie et identifié 25 projets Open Source tiers utilisés pour le construire^[Peter Krumins « [Code Reuse in Google Chrome Browser](https://catonmat.net/code-reuse-in-google-chrome-browser) ». 5 septembre 2008].
 
-- Peter Krumins « [Code Reuse in Google Chrome Browser](https://catonmat.net/code-reuse-in-google-chrome-browser) ». 5 septembre 2008
+On y retrouve bien entendu WebKit, un grand nombre de bibliothèques Google (GoogleTest, breakpad, GoogleURL, V8), pas mal de librairies tierces (comme [Skia](https://skia.org) ou Hunspell), mais aussi du code Netscape et Mozilla (NSPR, NSS) et même Microsoft.
+
+Les "philosophies" du logiciel libre et de l'Open Source ne se soucient que très peu de ce genre de cas.
+Ces principes n'ont après tout été établis que pour garantir une innovation "non-faussée", et donc un progrès technique idéalisé.
+
+Comme le dit très bien Krumins en prenant un angle d'analyse purement technique : « les bons développeurs développent, les très bons développent développeurs réutilisent ».
+
+Mais ce type de pratique dépasse largement le cadre de l'innovation et de la technique.
+
+Des compagnies telles que Google sont parfaitement en capacité de produire elles-mêmes de telles bibliothèques.
+Mais effectuer un tel développement a un coût non négligeable.
+Elles décident donc d'utiliser ce code tiers principalement par soucis de rentabilité.
+Des économies qui ne sont bien entendu pas négligeables, mais qui ne représentent qu'une goute d'eau dans les fonds gargantuesque donc elles disposent.
+Comment pourrions-nous dire alors qu'une grande multinationale devrait bénéficier de tels avantages au même titre que de petites entreprises et des développeurs indépendants ?
+Comment penser qu'une incitation à minimiser l'investissement dans la recherche et le développement nourrit l'innovation ?
+
+Bien sûr, nous pourrons argumenter ici qu'un projet libre ressort grandi de ce type de réutilisation, puisque de nombreux salariés de la multinationale vont alors contribuer à son développement.
+
+Il faut tout d'abord prendre en compte que certaines multinationales sortent totalement de cette relation.
+Amazon, en particulier, agit régulièrement en « passager clandestin ».
+Des bénéfices conséquent sont générés grâces à l'utilisation de projets Open Source, sans que l'entreprise ne contribue en retour à leur évolution.
+
+Ce type de situation extrême mise à part, l'entrée d'un acteur tel que Google ou Apple sur un projet Open Source n'est jamais sans conséquence pour la communauté qui avait établi un semblant de commun.
+
+Tout d'abord, un nouveau nom (comme WebKit) ou un projet de plus grande envergure avec une marque plus forte (comme Chromium), est créé.
+Face à cette nouvelle entité, l'identité initiale du projet est soit reléguée au second plan, soit absorbée dans une nouvelle organisation.
+Organisation qui est bien évidemment dictée par l'entreprise ayant réutilisé le projet[^webkitorg].
+Ce qui lui permet d'orienter l'évolution du projet, voir de tout un écosystème, pour appuyer sa propre stratégie globale.
+
+La position dominante de Chrome et WebKit, appuyés par celle d'Android et iOS, permet notamment à Google et Apple de peser considérablement sur l'évolution du Web dans son ensemble.
+
+L'interdiction d'utiliser un autre moteur que WebKit sur iOS, les Accelerated Mobile Pages, le Federated Learning of Cohorts, le projet Fugu et même les Progressive Web Apps, sont autant d'exemples de s
 
 <!--
 - prédations des petits projets (Google, Linux = Android / Chrome OS, Konqueror = Chrome)
@@ -157,6 +191,8 @@ Prenons l'exemple de Chrome :
 :::
 
 <!--
+L'illusion du fork (ex : MariaDB & LibreOffice)
+
 Erreur : étendre le droit des personnes aux "personnes morales"
 
 Réponse : garantir les 4 libertés au niveau individuel, mais les restreindre sur le plan économique
@@ -236,25 +272,37 @@ Licences "à discrimination"
     Pour ce qui est des entreprises, il faut lire entre les lignes et comprendre : "dont le travail est exploité pour permettre à notre client d'atteindre ses objectifs".
 
 [^devrel]:
-    Capitalisme mis à part, je ne pense pas que cette relation soit toujours et nécessairement néfaste.
+    Le petit Robert définit l'entreprise comme une « Organisation de production de biens ou de services à caractère commercial ».
+    Toute entreprise a pour objectif premier, comme le souligne l'usage du terme "commercial", d'engranger des bénéfices sur un maché.
+    Autrement dit, de faire fructifier le capital de ses propriétaires / actionnaires.
+
+    Cela dit, capitalisme mis à part, je ne pense pas qu'une relation entreprise-communauté, aussi déséquilibrée qu'elle puisse être, soit toujours et nécessairement néfaste.
 
     L'entreprise améliore son produit et son organisation en écoutant la communauté.
     Communauté qui, en retour, bénéficie d'un meilleur produit, voir de contreparties supplémentaires (cadeaux, offres promotionnelles, évènements, formations, etc.).
     Cette relation peut donc, dés le départ, être "gagnant-gagnant".
 
     Les salariés en charge de la "gestion" de la communauté peuvent (je dirais même, doivent) utiliser leur position pour "maximiser le gain" d'un maximum d'individus (contributeurs ou non).
-    Transmettre un maximum de compétences, aider un maximum d'individus, et faire grandir les biens communs informationnels.
+    Transmettre un maximum de compétences, aider un maximum d'individus, et contribuer aux communs informationnels (y compris et surtout en dehors de leur entreprise, celle-ci étant comme nous l'avons vue incompatible avec cette praxis).
 
-    C'est précisément ce qui m'a donné envie de devenir Developer Advocate au départ.
-    Le Community Management (à ne pas confondre avec le Social Media Management) et la Developer Relation ont une place cruciale dans notre société.
+    C'est précisément ce qui m'a amené il y a quelques années à devenir Developer Advocate.
+    Le Community Management et les Developer Relations ont une place cruciale dans notre société.
     Elles devraient à mon goût être plus et mieux développées.
 
     Toute entreprise devrait à minima entretenir un rapport bienveillant et gagnant-gagnant avec ses utilisateurs.
     Ce qui implique de leur offrir un réel pouvoir de décision, tout en évitant d'exploiter leur travail.
-    Malheureusement, je constate que cela se fait de plus en plus rare.
+    Malheureusement, je constate que cela est à présent devenu une exception.
 
 [^usufruit]: L'_usufruit_ est l'association de l'_usus_ et du _fructus_.
-[^perso]: Beaucoup de projets "personnels" ayant eu du succès ont d'ailleurs été créés via une société, qu'elle fut créée ou non pour l'occasion. Même sans cela, consacrer son temps à créer un produit qui porte votre nom revient à investir votre temps dans une "entreprise" dont vous détenez le "capital immatériel".
+[^perso]: Beaucoup de projets "personnels" ayant eu du succès ont d'ailleurs été créés via une entreprise, qu'elle fut créée ou non pour l'occasion. Même sans cela, consacrer son temps à créer un produit qui porte votre nom revient à investir votre temps dans une "entreprise" dont vous détenez le "capital immatériel".
+[^trademark]: On remarque par la même occasion que la très grande majorité des projets Open Source sont associés à une marque déposée, qui est donc bien, légalement, la propriété d'une organisation. La longue [bataille entre Debian et Mozilla](https://www.pcworld.com/article/3036509/iceweasel-will-be-renamed-firefox-as-relations-between-debian-and-mozilla-thaw.html) constitue un bon exemple de problème que ce type de pratique peut soulever.
+[^webkitorg]:
+    Apple a notamment signé l'arrêt de mort de KHTML en décidant de la forker plutôt que d'y contribuer.
+
+    Aujourd'hui 68% des reviewers (52/77), 52% des committers (40/77) de Webkit sont affiliés à Apple, tandis qu'ils ne représentent que 17% (87/524) des "contributors"[^données issues de [webkit.org/team/](https://webkit.org/team/)]
+
+    KHTML, de son côté, n'a pas pu être activement maintenu depuis 2016 [faute de contributions](https://github.com/KDE/khtml/graphs/contributors).
+    Konqueror a donc progressivement fait la transition vers Webkit, tandis que KHTML devrait être [définitivement retiré de KDE à partir de la version 6](https://phabricator.kde.org/T11543).
 
 ## Ressources
 
@@ -287,12 +335,12 @@ Licences "à discrimination"
 ### Propriétarisation des logiciels
 
 - Gates W. « [An open letter to hobbyists](https://www.digibarn.com/collections/newsletters/homebrew/V2_01/gatesletter.html) ». [_Homebrew Computer Club Newsletter_ Volume 2, Issue 1](https://www.digibarn.com/collections/newsletters/homebrew/V2_01/index.html). 3 février 1976
-  - (réponse) Hayes M. « [](https://www.digibarn.com/collections/newsletters/homebrew/V2_02/homebrew_V2_02_p2.jpg) ». [_Homebrew Computer Club Newsletter_ Volume 2, Issue 2](https://www.digibarn.com/collections/newsletters/homebrew/V2_02/index.html). 20 février 1976
 
-<br>
+  - (réponse) Hayes M. « [](https://www.digibarn.com/collections/newsletters/homebrew/V2_02/homebrew_V2_02_p2.jpg) ». [_Homebrew Computer Club Newsletter_ Volume 2, Issue 2](https://www.digibarn.com/collections/newsletters/homebrew/V2_02/index.html). 20 février 1976
 
 - Nussbaum J.L. « [Apple Computer, Inc. v. Franklin ComputerCorporation Puts the Byte Back into CopyrightProtection for Computer Programs](https://digitalcommons.law.ggu.edu/cgi/viewcontent.cgi) ». _Golden Gate University Law Review_ Volume 14, Issue 2. Janvier 1984
 - Hassett R. « [Impact of Apple vs. Franklin Decision](http://internetlegal.com/impact-of-apple-vs-franklin-decision/) ». _InternetLegal.Com_. 1983
+- Hoffman C. « ["Iceweasel" will be renamed "Firefox" as relations between Debian and Mozilla thaw.](https://www.pcworld.com/article/3036509/iceweasel-will-be-renamed-firefox-as-relations-between-debian-and-mozilla-thaw.html) ». _PCWorld_. 24 février 2016
 
 ### Linus Torvalds
 
