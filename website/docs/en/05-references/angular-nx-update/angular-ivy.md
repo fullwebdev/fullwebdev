@@ -40,9 +40,9 @@
 
 Only match direct children by default.
 
-:stop_sign: `Uncaught TypeError: Cannot read property 'bar' of undefined`
+🛑 `Uncaught TypeError: Cannot read property 'bar' of undefined`
 
-:hammer_and_wrench: `@ContentChildren('foo', {descendants: true}) foos: QueryList<ElementRef>;` (or rewrite template)
+🛠️ `@ContentChildren('foo', {descendants: true}) foos: QueryList<ElementRef>;` (or rewrite template)
 
 ### Inheritance w/ DI
 
@@ -50,9 +50,9 @@ Only match direct children by default.
 
 All classes that use Angular DI must have an Angular class-level decorator.
 
-:stop_sign: `ERROR: This constructor is not compatible with Angular Dependency Injection...`
+🛑 `ERROR: This constructor is not compatible with Angular Dependency Injection...`
 
-:hammer_and_wrench: Add a decorator (`@Injectable` or `@Directive`)
+🛠️ Add a decorator (`@Injectable` or `@Directive`)
 
 ### Change detection: newer use something before its definition
 
@@ -60,9 +60,9 @@ All classes that use Angular DI must have an Angular class-level decorator.
 
 In Ivy, bindings are checked in the order they are defined in the template, and the template is processed in just one pass.
 
-:stop*sign: \_no error, but some rendering "bugs"* OR `Error: ExpressionChangedAfterItHasBeenCheckedError:...`
+🛑 \_no error, but some rendering "bugs"\* OR `Error: ExpressionChangedAfterItHasBeenCheckedError:...`
 
-:hammer_and_wrench: Rewrite template in a procedural way (e.g. When using `*ngFor`, use `<option [selected]>` instead of `<select [value]>`)
+🛠️ Rewrite template in a procedural way (e.g. When using `*ngFor`, use `<option [selected]>` instead of `<select [value]>`)
 
 ### No more `metadata.json` for libraries
 
@@ -70,6 +70,10 @@ In Ivy, bindings are checked in the order they are defined in the template, and 
 
 Libraries metadatas are extracted from the `.d.ts` files.
 
-:stop*sign: \_compilation error* (e.g. `error NG1010: selector must be a string`)
+🛑 \_compilation error\* (e.g. `error NG1010: selector must be a string`)
 
-:hammer_and_wrench: don't export variables (use `const`)
+🛠️ don't export variables (use `const`)
+
+### `@ContentChild(TemplateRef)`
+
+Ivy can't find the templateRef

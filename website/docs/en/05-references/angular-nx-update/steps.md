@@ -1,62 +1,4 @@
-# Updating an Nx Angular Monorepo (8 :arrow_right: 12)
-
-- [Angular](./angular.md)
-- [Ivy](./angular-ivy.md)
-- [NgRx](./ngrx.md)
-- [Developer eXperience](./dx.md)
-- [TypeScript](./typescript.md)
-
-## Docs
-
-- [Updating Nx](https://nx.dev/latest/angular/core-concepts/updating-nx)
-- [Nx CLI: migrate](https://nx.dev/latest/angular/cli/migrate#migrate)
-- [Angular Update Guide](https://update.angular.io)
-- [Keeping your Angular projects up-to-date](https://angular.io/guide/updating)
-
-## Sources
-
-- [Nx migrations schematics](https://github.com/nrwl/nx/tree/master/packages/workspace/src/migrations)
-- nx-exemple step-by-step-update: [package.json](https://github.com/noelmace/nx-examples/blame/step-by-step-update/package.json)
-
-:warning: Nx doesn't really follow semver (e.g. [breaking change in 8.12.3](https://github.com/nrwl/nx/commit/c7d075df499518916f0102651ead88843e9a5ef6)). See [versions.csv](./versions.csv)
-
-## Versions
-
-| step | change | \@nrwl/workspace | \@angular/cli | angular | ngrx   | typescript |
-| ---- | ------ | ---------------- | ------------- | ------- | ------ | ---------- |
-| 1    | major  | 12.3.4           | 12.0.1        | 12.0.1  | 12.0.0 | 4.2.4      |
-| 1    | none   | 12.2.0           | 11.2.13       | 11.2.14 | 11.1.0 | 4.0.7      |
-| 0    | none   | 12.1.1           | 11.2.13       | 11.2.14 | 11.1.0 | 4.0.7      |
-| 0    | none   | 12.0.8           | 11.2.13       | 11.2.14 | 11.0.0 | 4.0.7      |
-| 0    | none   | 11.6.3           | 11.2.13       | 11.2.14 | 11.0.0 | 4.0.7      |
-| 0    | none   | 11.5.2           | 11.2.13       | 11.2.14 | 11.0.0 | 4.0.7      |
-| 0    | none   | 11.4.0           | 11.2.13       | 11.2.14 | 11.0.0 | 4.0.7      |
-| 0    | major  | 11.3.2           | 11.2.13       | 11.2.14 | 11.0.0 | 4.0.7      |
-| 0    | minor  | 11.2.12          | 11.0.7        | 11.2.14 | 10.0.0 | 4.0.7      |
-| 0    | none   | 11.1.5           | 11.0.7        | 11.2.14 | 10.0.0 | 4.0.7      |
-| 0    | major  | 11.0.20          | 11.0.7        | 11.2.14 | 10.0.0 | 4.0.7      |
-| 1    | none   | 10.4.15          | 10.1.7        | 10.2.5  | 10.0.0 | 4.0.7      |
-| 0    | none   | 10.3.3           | 10.1.7        | 10.2.5  | 10.0.0 | 4.0.7      |
-| 0    | major  | 10.2.1           | 10.0.8        | 10.2.5  | 10.0.0 | 3.9.9      |
-| 0    | none   | 10.1.0           | 10.0.8        | 10.2.5  | 9.1.0  | 3.9.9      |
-| 0    | major  | 10.0.13          | 10.0.8        | 10.2.5  | 9.1.0  | 3.9.9      |
-| 1    | none   | 9.8.0            | 9.1.15        | 9.1.13  | 9.1.0  | 3.8.3      |
-| 0    | none   | 9.6.0            | 9.1.15        | 9.1.13  | 9.1.0  | 3.8.3      |
-| 0    | none   | 9.5.1            | 9.1.15        | 9.1.13  | 9.1.0  | 3.8.3      |
-| 0    | none   | 9.4.5            | 9.1.15        | 9.1.13  | 9.1.0  | 3.8.3      |
-| 0    | minor  | 9.3.0            | 9.1.15        | 9.1.13  | 9.1.0  | 3.8.3      |
-| 0    | minor  | 9.2.4            | 9.1.15        | 9.1.13  | 9.0.0  | 3.8.3      |
-| 0    | none   | 9.1.4            | 9.0.7         | 9.1.13  | 9.0.0  | 3.7.7      |
-| 0    | major  | 9.0.4            | 9.0.7         | 9.1.13  | 9.0.0  | 3.7.7      |
-| 1    | minor  | 8.12.11          | 8.3.23        | 8.2.14  | 8.3.0  | 3.5.3      |
-
-### Releases
-
-- [\@nrwl/workspace npm versions](https://www.npmjs.com/package/@nrwl/workspace)
-- [nrwl/nx releases](https://github.com/nrwl/nx/releases)
-- [Angular CHANGELOG](https://github.com/angular/angular/blob/master/CHANGELOG.md)
-- [Angular releases](https://github.com/angular/angular/releases)
-- [NgRx CHANGELOG](https://github.com/ngrx/platform/blob/master/CHANGELOG.md)
+# Migration Steps
 
 ## Set Up (latest 8)
 
@@ -74,9 +16,13 @@ nx migrate 8.12.11
 yarn start --prod
 ```
 
+1. Clean `package.json` (remove unnecessary transitive dependencies from root and use consistent version).
+2. Use versions from Nx 8.12.11 (`npx create-nx-workspace@8.12.11 --preset=angular`)
+3. Audit dependencies (see [npm](/docs/references/angular-nx-update/npm))
+
 ## 8 :arrow_right: 9
 
-- Angular 9: [Release Note](https://blog.angular.io/version-9-of-angular-now-available-project-ivy-has-arrived-23c97b63cfa3) (+ [9.1](https://blog.angular.io/version-9-1-of-angular-now-available-typescript-3-8-faster-builds-and-more-eb292f989428)), [Update Docs](https://v9.angular.io/guide/updating-to-version-9), [Deprecations](https://v9.angular.io/guide/deprecations), [Update 8.2 to 9.1](https://update.angular.io/?l=3&v=8.2-9.1)
+- Angular 9: [Release Note](https://blog.angular.io/version-9-of-angular-now-available-project-ivy-has-arrived-23c97b63cfa3) (+ [9.1](https://blog.angular.io/version-9-1-of-angular-now-available-typescript-3-8-faster-builds-and-more-eb292f989428)), [Update Docs](https://v9.angular.io/guide/updating-to-version-9), [Deprecations](https://v9.angular.io/guide/deprecations), [Update 8.2 to 9.1](https://update.angular.io/?l=3&v=8.2-9.1), [breaking changes](https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-5)
 - NgRx 9: [Release Note](https://medium.com/ngrx/announcing-ngrx-version-9-immutability-out-of-the-box-customizable-effects-and-more-e4cf71be1a5b), [Update Guide](https://ngrx.io/guide/migration/v9)
 
 ### Nx 9.0
