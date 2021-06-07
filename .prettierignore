@@ -15,6 +15,7 @@ package-lock.json
 /website/src/fragments/
 /packages/daucus/snowpack-template/src/templates/
 /website/src/styles/*.css
+/website/public/prism-components/
 /dpawm-build/public
 /website/src/app/builds
 /website/functions/hosting/index.html
