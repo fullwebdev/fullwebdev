@@ -4,6 +4,22 @@ const wording = {
   abstract: "Annonces et articles de blog.",
   items: [
     {
+      href: "/blog/naissance-whatwg",
+      spotlight: false,
+      wip: false,
+      type: "blog",
+      date: "2021-06-08",
+      desc: {
+        title: "WHATWG & W3C : la réunion de la discorde",
+        subtitle: `Quelques compléments après ma chronique pour Les Briques du Web S01E07`,
+      },
+      img: {
+        src: "/images/web-illustrations/two-foxes.jpg",
+        alt: "deux renards se battant dans la neige",
+        height: 250,
+      },
+    },
+    {
       href: "/blog/limites-foss",
       spotlight: false,
       wip: true,
