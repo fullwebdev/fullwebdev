@@ -1,6 +1,20 @@
 /** @type {import('prismjs') | null} */
 let Prism = null;
 
+const loadedPrismLanguages = [
+  "markup",
+  "html",
+  "xml",
+  "svg",
+  "mathml",
+  "ssml",
+  "atom",
+  "rss",
+  "css",
+  "clike",
+  "javascript",
+];
+
 /**
  * @param {Element} root
  */
@@ -11,6 +25,25 @@ async function codeStyle(root) {
       Prism = await import("prismjs");
     }
     for (let i = 0; i < codes.length; i += 1) {
+      let language;
+      const codeEl = codes[i];
+      for (let j = 0; j < codeEl.classList.length; j += 1) {
+        const clazz = codeEl.classList[j];
+        if (clazz.startsWith("language-")) {
+          language = clazz.replace("language-", "");
+          break;
+        }
+      }
+      if (language && !loadedPrismLanguages.includes(language)) {
+        try {
+          // eslint-disable-next-line no-await-in-loop
+          await import(`/prism-components/prism-${language}.min.js`);
+          loadedPrismLanguages.push(language);
+        } catch (err) {
+          // console.warn(`can't import language ${language} for Prism`);
+          // console.log(err);
+        }
+      }
       Prism.highlightElement(codes[i]);
     }
   }

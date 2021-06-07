@@ -28,5 +28,22 @@
     "**/_daucus_": true,
     "**/coverage": true,
     "**/types": true
-  }
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#004594",
+    "activityBar.activeBorder": "#20000f",
+    "activityBar.background": "#004594",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#20000f",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "statusBar.background": "#002d61",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#004594",
+    "titleBar.activeBackground": "#002d61",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#002d6199",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#002d61"
 }

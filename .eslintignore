@@ -13,6 +13,7 @@ __mocks__
 /packages/**/test-node/**/snapshots
 /packages/**/types
 /packages/**/demo
+/website/public/prism-components/
 
 ## projects with other conventions
 /materials/benchmark

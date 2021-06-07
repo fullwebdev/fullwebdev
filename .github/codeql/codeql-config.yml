@@ -4,3 +4,4 @@ paths-ignore:
   - "**/snapshots/**/*"
   - "materials/slides/**/plugin/**/*"
   - "materials/slides/**/reveal.js"
+  - "website/public/prism-components/**/*"

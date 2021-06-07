@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.7](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2021-06-07)
+
+### Features
+
+- **website:** Angular & Nx update reference ([a1cb624](https://github.com/fullwebdev/fullwebdev/commit/a1cb6242bb20d31da947d23e2022becb670707ea))
+
+### Bug Fixes
+
+- **website:** load missing prism languages ([2eff866](https://github.com/fullwebdev/fullwebdev/commit/2eff8668a908696e3bb48e992c16aa72dd1e942a))
+
 ## [1.0.0-beta.6](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2021-05-11)
 
 ### Features
