@@ -103,6 +103,8 @@ git add -A
 git commit -m "chore: update angular material to ${MAT_VERSION}"
 ```
 
+> See [nxup](https://github.com/noelmace/dotfiles/blob/master/scripts/bin/nxup) in my _dotfiles_ projet for a more advanced script.
+
 Other packages (like `ngx-bootstrap` & `@angular-builders/custom-webpack`) don't provide any migration schematic for v9.
 
 Therefore, running `nx migrate ngx-bootstrap@6.2.0` (for example) only updates the version number in `package.json`, without generating a `migrations.json` file.
