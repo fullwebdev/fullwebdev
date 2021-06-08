@@ -33,8 +33,13 @@ describe("HelpCommand", () => {
     expect(consoleStub.logs).equals(expectedHelpMessages.build);
   });
 
-  afterEach(() => {
-    consoleStub.stub.restore();
+  it("print help message for the watch command", async () => {
+    const wp = await fixtureWorkspace("default");
+    const cmd = new HelpCommand(wp);
+
+    await cmd.run({ command: "watch" });
+
+    expect(consoleStub.logs).equals(expectedHelpMessages.watch);
   });
 
   it("print help message for the help command", async () => {
