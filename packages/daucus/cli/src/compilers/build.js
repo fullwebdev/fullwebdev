@@ -63,6 +63,92 @@ export async function compileFile(compiler, params) {
 }
 
 /**
+ * @param {string} html
+ * @param {string} projectName
+ * @param {string} routePath
+ */
+export function rewriteHTMLLinks(html, projectName, routePath) {
+  return html.replace(
+    /(<a [^>]*href=")([^"]*)("[^>]*>)/g,
+    (matched, start, href, end) => {
+      let newHref = href;
+      if (
+        href &&
+        !isAbsoluteUrl(href) &&
+        !href.startsWith(projectName) &&
+        !href.startsWith("/")
+      ) {
+        newHref = posixVPath.removePrefixes(
+          posixVPath
+            .join(projectName, routePath, href)
+            .replace(/(.*)\.md/, "$1")
+        );
+      }
+      return start + newHref + end;
+    }
+  );
+}
+
+/**
+ * @param {import("./compiler").FunctionCompiler} compiler
+ * @param {ProjectConfig} projectConfig
+ * @param {string} projectOutDir
+ * @param {HTMLMin.Options} htmlMinifierOptions - options for html-minifier
+ * @param {string} filePath
+ * @param {LanguageCode | ""} lang
+ * @param {string} root
+ * @param {string} projectName
+ */
+export async function compileAndWriteFile(
+  compiler,
+  filePath,
+  lang,
+  root,
+  projectName,
+  projectConfig,
+  projectOutDir,
+  htmlMinifierOptions
+) {
+  const relativeFilePath = relative(root, filePath);
+
+  const { compilerOptions = {}, ...config } = projectConfig;
+
+  let html =
+    (await compileFile(compiler, {
+      filePath,
+      lang,
+      root,
+      project: { name: projectName, config },
+      ...compilerOptions,
+    })) || "";
+
+  const relativeOutputFilePath = join(
+    dirname(relativeFilePath),
+    // TODO: allow other extensions
+    `${basename(relativeFilePath, ".md")}.html`
+  );
+
+  const [routeKey, route] = createRouteFor(
+    html,
+    relativeOutputFilePath,
+    projectConfig.usePathAsTitle
+  );
+
+  html = rewriteHTMLLinks(html, projectName, route.path);
+
+  await writeCompiledFile(
+    projectOutDir,
+    relativeOutputFilePath,
+    HTMLMin.minify(html, htmlMinifierOptions)
+  );
+
+  return {
+    routeKey,
+    route,
+  };
+}
+
+/**
  * compile a Daucus Project and generate its routes configuration object
  * for now, only markdown source files can be used
  * @param {string} projectName
@@ -117,55 +203,15 @@ export async function buildProject(
 
       await Promise.all(
         paths.map(async (filePath) => {
-          const relativeFilePath = relative(root, filePath);
-
-          const { compilerOptions = {}, ...config } = projectConfig;
-
-          let html =
-            (await compileFile(compiler, {
-              filePath,
-              lang,
-              root,
-              project: { name: projectName, config },
-              ...compilerOptions,
-            })) || "";
-
-          const relativeOutputFilePath = join(
-            dirname(relativeFilePath),
-            // TODO: allow other extensions
-            `${basename(relativeFilePath, ".md")}.html`
-          );
-
-          const [routeKey, route] = createRouteFor(
-            html,
-            relativeOutputFilePath,
-            projectConfig.usePathAsTitle
-          );
-
-          html = html.replace(
-            /(<a [^>]*href=")([^"]*)("[^>]*>)/g,
-            (matched, start, href, end) => {
-              let newHref = href;
-              if (
-                href &&
-                !isAbsoluteUrl(href) &&
-                !href.startsWith(projectName) &&
-                !href.startsWith("/")
-              ) {
-                newHref = posixVPath.removePrefixes(
-                  posixVPath
-                    .join(projectName, route.path, href)
-                    .replace(/(.*)\.md/, "$1")
-                );
-              }
-              return start + newHref + end;
-            }
-          );
-
-          await writeCompiledFile(
+          const { routeKey, route } = await compileAndWriteFile(
+            compiler,
+            filePath,
+            lang,
+            root,
+            projectName,
+            projectConfig,
             projectOutDir,
-            relativeOutputFilePath,
-            HTMLMin.minify(html, htmlMinifierOptions)
+            htmlMinifierOptions
           );
 
           routesConfigBuilder.push(routeKey, route);
