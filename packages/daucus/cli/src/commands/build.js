@@ -127,7 +127,7 @@ export class BuildCommand {
             projectConfig,
             workspaceConfig
           );
-          /** @type {[string, chokidar.FSWatcher} */
+          /** @type {[string, chokidar.FSWatcher]} */
           const rslt = [projectName, watcher];
           return rslt;
         }

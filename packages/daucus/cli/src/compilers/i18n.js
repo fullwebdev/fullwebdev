@@ -41,9 +41,10 @@ export async function i18nSubdirs(root) {
 export function getLangFromPath(filePath, root) {
   const relativeFilePath = path.relative(root, filePath);
   /** @type {LanguageCode} */
-  const rootDirName = /** @type {LanguageCode | ""} */ relativeFilePath.split(
+  // prettier-ignore
+  const rootDirName = (/** @type {LanguageCode} */ relativeFilePath.split(
     path.delimiter
-  )[0];
+  )[0]);
   if (!rootDirName || !rootDirName.match(ISO639_1_REGEXP)) {
     return "";
   }
