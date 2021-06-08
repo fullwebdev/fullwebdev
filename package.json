@@ -14,7 +14,7 @@
     "start": "lerna run start --scope=@fullweb/website",
     "==i==": "============================ install ==========================",
     "postinstall": "lerna bootstrap --no-ci && pip install -r py-requirements.txt && npm run setup",
-    "setup": "npm run setup:ts-configs",
+    "setup": "run-s setup:ts-configs types",
     "setup:ts-configs": "node scripts/generate-ts-configs.mjs",
     "postsetup:ts-configs": "prettier \"./**/tsconfig{.doc,}.json\" --write",
     "==v==": "=========================== validation ========================",
