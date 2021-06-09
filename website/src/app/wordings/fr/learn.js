@@ -1,6 +1,6 @@
 /** @type {import('../../views/projects-list').ProjectListWording} */
 const wording = {
-  title: "Apprendre",
+  title: "Ressources",
   abstract:
     "Acquérir une vision d'ensemble pragmatique du développement web, à votre propre rythme.",
   intro: "Introduction",
@@ -29,13 +29,13 @@ const wording = {
         {
           href:
             "https://www.leslibraires.fr/livre/18531129-developpement-et-architecture-des-applications--noel-mace-editions-eni",
-          primary: true,
+          primary: false,
           text: "leslibraires.fr",
         },
         {
           href:
             "https://www.librel.be/livre/9782409029523-developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-noel-mace/",
-          primary: true,
+          primary: false,
           text: "librel.be",
         },
       ],

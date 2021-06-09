@@ -1,6 +1,6 @@
 /** @type {import('../../views/projects-list').ProjectListWording} */
 const wording = {
-  title: "Actualités",
+  title: "Blog",
   abstract: "Annonces et articles de blog.",
   items: [
     {

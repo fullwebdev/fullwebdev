@@ -1,6 +1,6 @@
 /** @type {import('../../views/projects-list').ProjectListWording} */
 const wording = {
-  title: "Learn",
+  title: "Resources",
   abstract: `Gain an holistic and pragmatique view of Web Development at your own pace.`,
   intro: "Introduction",
   items: [
