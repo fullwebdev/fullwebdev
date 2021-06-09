@@ -13,6 +13,7 @@ const loadedPrismLanguages = [
   "css",
   "clike",
   "javascript",
+  "js",
 ];
 
 /**
