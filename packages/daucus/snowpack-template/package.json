@@ -2,7 +2,9 @@
   "name": "@daucus/snowpack-template",
   "version": "0.2.0",
   "scripts": {
-    "start": "snowpack dev",
+    "start": "concurrently npm:start:daucus npm:start:server",
+    "start:server": "snowpack dev",
+    "start:daucus": "daucus watch",
     "build": "snowpack build",
     "prestart": "npm run prebuild",
     "prebuild": "daucus build",
@@ -33,6 +35,7 @@
     "@daucus/pandoc": "~0.2.0",
     "@snowpack/plugin-babel": "^2.1.6",
     "@snowpack/plugin-dotenv": "^2.0.5",
+    "concurrently": "^6.2.0",
     "prettier": "^2.0.5",
     "snowpack": "^3.0.1"
   },

@@ -15,6 +15,7 @@ module.exports = {
     // "bundle": true,
   },
   packageOptions: {
+    knownEntrypoints: ['@modern-helpers/router'],
     /* ... */
   },
   devOptions: {

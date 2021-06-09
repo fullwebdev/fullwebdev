@@ -38,6 +38,11 @@ export class DaucusCLI {
   }
 
   async run() {
-    return this.command.run(this.cmdParams);
+    try {
+      await this.command.run(this.cmdParams);
+    } catch (err) {
+      console.error(err);
+      process.exit(1);
+    }
   }
 }

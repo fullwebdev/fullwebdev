@@ -1,9 +1,18 @@
 import rimraf from "rimraf";
 // @ts-ignore no definition available
 import Gauge from "gauge";
+import * as chokidar from "chokidar";
+import * as path from "path";
 import { ensureDirSync } from "../fs/path.js";
 import { writeJSObject } from "../fs/write.js";
-import { buildProject } from "../compilers/build.js";
+import {
+  buildProject,
+  compileAndWriteFile,
+  compilerFromConfig,
+  getProjectOutDir,
+} from "../compilers/build.js";
+import { getLangFromPath } from "../compilers/i18n.js";
+import { watchProject } from "../compilers/watch.js";
 
 /**
  * @typedef {import('../config/DaucusConfig').WorkspaceConfig} DaucusConfig
@@ -31,7 +40,12 @@ export class BuildCommand {
       name: "project",
       type: String,
       defaultOption: true,
-      description: "project to build (default: all)",
+      description: "Project to build (default: all).",
+    },
+    {
+      name: "watch",
+      type: Boolean,
+      description: "Run build when files change.",
     },
   ];
 
@@ -53,16 +67,18 @@ export class BuildCommand {
 
   /**
    * @param {BuildCommandOptions} [params] command parameters
+   *
+   * @returns {Promise<Map<string, chokidar.FSWatcher> | undefined>}
    */
   async run(params = {}) {
-    const config = await this.workspace.getConfig();
-    this.config = config;
+    const workspaceConfig = await this.workspace.getConfig();
+    this.config = workspaceConfig;
 
     this.clear();
 
     if (
       params.project &&
-      !Object.keys(config.projects).includes(params.project)
+      !Object.keys(workspaceConfig.projects).includes(params.project)
     ) {
       throw new Error(`no configuration found for project ${params.project}`);
     }
@@ -71,26 +87,30 @@ export class BuildCommand {
      * @type {Array<[string, ProjectConfig]>}
      */
     const projects = params.project
-      ? [[params.project, config.projects[params.project]]]
-      : Object.entries(config.projects);
+      ? [[params.project, workspaceConfig.projects[params.project]]]
+      : Object.entries(workspaceConfig.projects);
 
     console.log("compiling projects");
     this._logCompileProgress("init...");
 
     /** @type {RoutesConfig} */
     const routes = {};
-    await Promise.all(
-      projects.map(async ([projectName, projectConfig]) => {
+    const mayberWatchers = await Promise.all(
+      projects.map(async ([projectName, staticProjectConfig]) => {
+        /** @type {ProjectConfig} */
+        const projectConfig = {
+          compiler: workspaceConfig.defaultCompiler,
+          compilerOptions: workspaceConfig.defaultCompilerOptions,
+          ...staticProjectConfig,
+        };
+
+        const compiler = await compilerFromConfig(projectConfig);
+
         routes[projectName] = await buildProject(
+          compiler,
           projectName,
-          {
-            compiler: config.defaultCompiler,
-            compilerOptions: config.defaultCompilerOptions,
-            ...projectConfig,
-          },
-          config.output,
-          config.htmlMinifierOptions,
-          config.i18n,
+          projectConfig,
+          workspaceConfig,
           (filePath, nbrOfFiles) => {
             this._logCompileProgress(
               `[${projectName}] ${filePath}`,
@@ -98,6 +118,19 @@ export class BuildCommand {
             );
           }
         );
+
+        let watcher = null;
+        if (params.watch) {
+          watcher = watchProject(
+            compiler,
+            projectName,
+            projectConfig,
+            workspaceConfig
+          );
+          /** @type {[string, chokidar.FSWatcher]} */
+          const rslt = [projectName, watcher];
+          return rslt;
+        }
       })
     );
 
@@ -110,6 +143,11 @@ export class BuildCommand {
     );
     this._closeLogProgress();
     // TODO: copy js files
+
+    if (params.watch) {
+      // @ts-ignore type enforced using params.watch
+      return new Map(mayberWatchers);
+    }
   }
 
   clear() {
