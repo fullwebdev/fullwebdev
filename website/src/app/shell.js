@@ -200,6 +200,10 @@ export class AppShell {
       /** @type {HTMLElement}*/ (document.querySelector(
         "#edit-page-button .text"
       )).textContent = this.w.editButton;
+
+      if (this._router.preferredLanguage) {
+        document.documentElement.lang = this._router.preferredLanguage;
+      }
     }
 
     const languageSwitchAnchor = footerLanguageSwitchEl.querySelector("a");

@@ -46,6 +46,7 @@ export default {
       script,
       editButton: scriptWordings.en.editButton,
       language: {
+        code: "en",
         otherCode: "fr",
         isFrench: "false",
         switch: scriptWordings.en.languageSwitch,
@@ -64,6 +65,7 @@ export default {
       script,
       editButton: scriptWordings.fr.editButton,
       language: {
+        code: "fr",
         otherCode: "en",
         isFrench: "true",
         switch: scriptWordings.fr.languageSwitch,
