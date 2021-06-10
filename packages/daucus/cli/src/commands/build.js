@@ -1,17 +1,9 @@
 import rimraf from "rimraf";
 // @ts-ignore no definition available
 import Gauge from "gauge";
-import * as chokidar from "chokidar";
-import * as path from "path";
 import { ensureDirSync } from "../fs/path.js";
 import { writeJSObject } from "../fs/write.js";
-import {
-  buildProject,
-  compileAndWriteFile,
-  compilerFromConfig,
-  getProjectOutDir,
-} from "../compilers/build.js";
-import { getLangFromPath } from "../compilers/i18n.js";
+import { buildProject, compilerFromConfig } from "../compilers/build.js";
 import { watchProject } from "../compilers/watch.js";
 
 /**
@@ -22,6 +14,7 @@ import { watchProject } from "../compilers/watch.js";
  * @typedef {import('@daucus/core').RoutesConfig} RoutesConfig
  * @typedef {import('./AbstractCommand').Command<BuildCommandOptions>} BuildCommandInterface
  * @typedef {import('./AbstractCommand').CommandConstructor<BuildCommandOptions>} BuildCommandConstructor
+ * @typedef {import('chokidar').FSWatcher} FSWatcher
  *
  * @typedef {import('./build.options').BuildCommandOptions} BuildCommandOptions
  */
@@ -68,7 +61,7 @@ export class BuildCommand {
   /**
    * @param {BuildCommandOptions} [params] command parameters
    *
-   * @returns {Promise<Map<string, chokidar.FSWatcher> | undefined>}
+   * @returns {Promise<Map<string, FSWatcher> | undefined>}
    */
   async run(params = {}) {
     const workspaceConfig = await this.workspace.getConfig();
@@ -127,7 +120,7 @@ export class BuildCommand {
             projectConfig,
             workspaceConfig
           );
-          /** @type {[string, chokidar.FSWatcher]} */
+          /** @type {[string, FSWatcher]} */
           const rslt = [projectName, watcher];
           return rslt;
         }
