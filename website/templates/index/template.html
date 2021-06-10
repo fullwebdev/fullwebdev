@@ -68,6 +68,21 @@
           >
         </div>
         <nav class="mdc-list">
+          <div id="nav__language-switch">
+            <button
+              role="switch"
+              aria-checked="{{language.isFrench}}"
+              id="languageSwitchNav"
+              class="i18n-switch"
+              data-lang="{{language.otherCode}}"
+            >
+              <span aria-label="français">fr</span>
+              <span aria-label="english">en</span>
+            </button>
+            <label for="languageSwitchNav" class="switch sr-only"
+              >{{language.switcherLabel}}</label
+            >
+          </div>
           <hr class="mdc-list-divider" />
           <div id="modal-navigation">
             <a class="mdc-list-item" href="/learn">
@@ -87,6 +102,7 @@
             <hr class="mdc-list-divider" />
             <daucus-menu></daucus-menu>
           </div>
+
           <div class="external-icons">
             <hr class="mdc-list-divider" />
             <a
@@ -159,6 +175,21 @@
                 >
               </li>
             </ul>
+            <div id="header__language-switch">
+              <button
+                role="switch"
+                aria-checked="{{language.isFrench}}"
+                id="languageSwitchHeader"
+                class="i18n-switch"
+                data-lang="{{language.otherCode}}"
+              >
+                <span aria-label="français">fr</span>
+                <span aria-label="english">en</span>
+              </button>
+              <label for="languageSwitchHeader" class="switch sr-only"
+                >{{language.switcherLabel}}</label
+              >
+            </div>
             <div class="external-icons-container">
               <a
                 class="icon"

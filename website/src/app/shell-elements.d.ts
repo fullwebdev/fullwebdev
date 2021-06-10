@@ -9,6 +9,8 @@ export type ShellElementSelector =
   | "#mobile-drawer"
   | "#burger-menu"
   | "#header-navigation"
+  | "#nav__language-switch"
+  | "#header__language-switch"
   | "#main-footer .language-switch";
 
 export type ShellElementListSelector =
