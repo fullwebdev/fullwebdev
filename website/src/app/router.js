@@ -420,6 +420,7 @@ export class AppRouter extends AbstractRouter {
       daucusProject,
       menuHTML,
       redirection,
+      templateLang,
     } = await this._findRoute(pathWithoutLang);
 
     /** @private */
@@ -487,6 +488,10 @@ export class AppRouter extends AbstractRouter {
       this._pageMessageBox.style.display = "block";
     } else {
       this._pageMessageBox.style.display = "none";
+    }
+
+    if (templateLang) {
+      this.outlet.lang = templateLang;
     }
 
     return null;
@@ -635,6 +640,9 @@ export class AppRouter extends AbstractRouter {
       templatePath,
       translationTemplatePath,
       daucusProject,
+      templateLang: useFallbackLang
+        ? this.fallbackLanguage
+        : this.preferredLanguage,
       menuHTML,
     };
   }
