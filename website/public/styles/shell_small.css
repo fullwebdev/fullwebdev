@@ -12,6 +12,10 @@
   display: none;
 }
 
+#header__language-switch {
+  display: none;
+}
+
 /*#endregion navbar */
 
 /*#region content */

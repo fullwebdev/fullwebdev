@@ -14,12 +14,14 @@ const scriptWordings = {
     languageSwitch:
       'Ce site et des contenus supplémentaires sont également disponibles en <a href="" data-lang="fr" aria-label="passer en français">français</a>.',
     editButton: "edit",
+    languageSwitcherLabel: `Passer le site de l'anglais au français`,
   },
   fr: {
     navLinks: ["Ressources", "Outils", "Blog"],
     languageSwitch:
       'This website is also available in <a href="" data-lang="en" aria-label="switch to english">English</a>.',
     editButton: "éditer",
+    languageSwitcherLabel: "Switch from french to English",
   },
 };
 
@@ -44,7 +46,10 @@ export default {
       script,
       editButton: scriptWordings.en.editButton,
       language: {
+        otherCode: "fr",
+        isFrench: "false",
         switch: scriptWordings.en.languageSwitch,
+        switcherLabel: scriptWordings.en.languageSwitcherLabel,
       },
       globalClass,
     },
@@ -59,7 +64,10 @@ export default {
       script,
       editButton: scriptWordings.fr.editButton,
       language: {
+        otherCode: "en",
+        isFrench: "true",
         switch: scriptWordings.fr.languageSwitch,
+        switcherLabel: scriptWordings.fr.languageSwitcherLabel,
       },
       globalClass,
     },
