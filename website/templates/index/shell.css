@@ -332,4 +332,8 @@ label.switch {
 #page-spinner {
   display: none;
 }
+
+#toaster {
+  display: none;
+}
 /*#endregion content */

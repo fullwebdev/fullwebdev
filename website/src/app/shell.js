@@ -164,6 +164,14 @@ export class AppShell {
     window.scrollTo(0, 0);
   }
 
+  showToaster() {
+    this.querySelector("#toaster").classList.add("active");
+  }
+
+  hideToaster() {
+    this.querySelector("#toaster").classList.remove("active");
+  }
+
   updateShellLang(skipContentUpdate = false) {
     if (!this.querySelector("#main-footer .language-switch"))
       throw new Error("can't find .language-switch element in the main footer");
@@ -211,6 +219,11 @@ export class AppShell {
 
       if (this._router.preferredLanguage) {
         document.documentElement.lang = this._router.preferredLanguage;
+        if (this._router.preferredLanguage === "en") {
+          this.showToaster();
+        } else {
+          this.hideToaster();
+        }
       }
     }
 

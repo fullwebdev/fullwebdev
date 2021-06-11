@@ -11,6 +11,7 @@ export type ShellElementSelector =
   | "#header-navigation"
   | "#nav__language-switch"
   | "#header__language-switch"
+  | "#toaster"
   | "#main-footer .language-switch";
 
 export type ShellElementListSelector =
