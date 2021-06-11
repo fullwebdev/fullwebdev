@@ -138,6 +138,12 @@
     }
   }
 
+  @media screen and (min-width: 1024px) {
+    h1 {
+      margin-bottom: 3rem;
+    }
+  }
+
   /*#region content*/
   .custom-block .custom-block-title {
     font-weight: 600;
