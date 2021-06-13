@@ -10,14 +10,14 @@ const meta = {
 
 const scriptWordings = {
   en: {
-    navLinks: ["Resources", "Tools", "Blog"],
+    navLinks: ["Resources", "Tools", "Blog", "About"],
     languageSwitch:
       'Ce site et des contenus supplémentaires sont également disponibles en <a href="" data-lang="fr" aria-label="passer en français">français</a>.',
     editButton: "edit",
     languageSwitcherLabel: `Passer le site de l'anglais au français`,
   },
   fr: {
-    navLinks: ["Ressources", "Outils", "Blog"],
+    navLinks: ["Ressources", "Outils", "Blog", "À propos"],
     languageSwitch:
       'This website is also available in <a href="" data-lang="en" aria-label="switch to english">English</a>.',
     editButton: "éditer",

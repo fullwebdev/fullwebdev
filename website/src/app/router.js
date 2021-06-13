@@ -259,6 +259,9 @@ export class AppRouter extends AbstractRouter {
       "/404": {
         templateName: "not-found",
       },
+      "/about": {
+        templateName: "about",
+      },
       "/network-error": {
         template: (/** @type {Language} */ lang) => {
           // could be optimized by creating both templates ahead of time
