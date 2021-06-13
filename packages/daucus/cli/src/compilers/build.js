@@ -204,11 +204,11 @@ export async function compileAndWriteFile(
  * for now, only markdown source files can be used
  * @param {string} projectName
  * @param {ProjectConfig} projectConfig
- * @param {FileProcessedCallback} fileProcessedCallback - this function will
-be called after each file has been processed
+ be called after each file has been processed
  * @returns {Promise<ProjectRoutesConfig | I18NProjectRoutesConfig>} - routes configuration object for the project
  * @param {FunctionCompiler} compiler
  * @param {import('../config/DaucusConfig').WorkspaceConfig} workspaceConfig
+ * @param {FileProcessedCallback} [fileProcessedCallback] - this function will
  */
 export async function buildProject(
   compiler,
@@ -254,10 +254,12 @@ export async function buildProject(
 
           routesConfigBuilder.push(routeKey, route);
 
-          fileProcessedCallback(
-            relative(projectConfig.root, filePath),
-            paths.length
-          );
+          if (fileProcessedCallback) {
+            fileProcessedCallback(
+              relative(projectConfig.root, filePath),
+              paths.length
+            );
+          }
         })
       );
 

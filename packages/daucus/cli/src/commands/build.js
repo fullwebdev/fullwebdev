@@ -88,7 +88,7 @@ export class BuildCommand {
 
     /** @type {RoutesConfig} */
     const routes = {};
-    const mayberWatchers = await Promise.all(
+    const maybeWatchers = await Promise.all(
       projects.map(async ([projectName, staticProjectConfig]) => {
         /** @type {ProjectConfig} */
         const projectConfig = {
@@ -139,7 +139,7 @@ export class BuildCommand {
 
     if (params.watch) {
       // @ts-ignore type enforced using params.watch
-      return new Map(mayberWatchers);
+      return new Map(maybeWatchers);
     }
   }
 

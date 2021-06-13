@@ -92,8 +92,6 @@ If you don't, just use "daucus build --watch" instead.`;
       )
     );
 
-    console.log("watching for file changes...");
-
     return watchers;
   }
 }

@@ -25,6 +25,20 @@ export default ${objectName};
 
 /**
  * @param {string} rootDir
+ * @param {string} name
+ * @param {string} projectName
+ * @param {import('@daucus/core').ProjectRoutesConfig | import('@daucus/core').I18NProjectRoutesConfig} projectRoutesConfig
+ * @param {string} objectName
+ * @param {string} type
+ */
+ export async function updateFileJSObject(rootDir, name, projectName, projectRoutesConfig, objectName, type) {
+  const object = (await import(resolve(rootDir, name))).default;
+  object[projectName] = projectRoutesConfig;
+  return writeJSObject(rootDir, name, object, objectName, type);
+}
+
+/**
+ * @param {string} rootDir
  * @param {string} relativeDir
  * @param {string} content
  */
