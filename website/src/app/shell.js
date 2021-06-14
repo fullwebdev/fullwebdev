@@ -205,6 +205,10 @@ export class AppShell {
         "#edit-page-button .text"
       )).textContent = this.w.editButton;
 
+      /** @type {HTMLElement}*/ (document.querySelector(
+        "#main-footer .footer__license"
+      )).innerHTML = this.w.copyright;
+
       if (this._router.preferredLanguage) {
         document.documentElement.lang = this._router.preferredLanguage;
       }

@@ -5,6 +5,7 @@ export interface ShellWording {
   languageSwitch: string;
   languageSwitcherLabel: string;
   editButton: string;
+  copyright: string;
 }
 
 export type ShellWordings = Record<Language, ShellWording>;
