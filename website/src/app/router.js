@@ -284,6 +284,18 @@ export class AppRouter extends AbstractRouter {
         componentURL: "./views/projects-list.js",
         wordings: "news",
       },
+      "/services": {
+        componentURL: "./views/services.js",
+        wordings: "services/index"
+      },
+      "/services/individual": {
+        componentURL: "./views/projects-list.js",
+        wordings: "services/individual"
+      },
+      "/services/company": {
+        componentURL: "./views/projects-list.js",
+        wordings: "services/company"
+      },
       "/tools/ce-name": {
         componentURL: "./views/ce-name.js",
         wordings: "ce-name",
