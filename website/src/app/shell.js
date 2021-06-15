@@ -48,6 +48,7 @@ export class AppShell {
     });
 
     router.addEventListener("enter-daucus", () => {
+      this.querySelector("#page-container").classList.remove("fullwidth");
       this.querySelector("#page-container").classList.add("daucus-page");
     });
 
@@ -76,9 +77,15 @@ export class AppShell {
       }
     });
 
-    router.addEventListener("app-route-matched", (e) =>
-      this._updateAppMenu(/** @type {AppRouteMatchedEvent} */ (e))
-    );
+    router.addEventListener("app-route-matched", (e) => {
+      // @ts-ignore event detail
+      if (e.detail.fullwidth) {
+        this.querySelector("#page-container").classList.add("fullwidth");
+      } else {
+        this.querySelector("#page-container").classList.remove("fullwidth");
+      }
+      return this._updateAppMenu(/** @type {AppRouteMatchedEvent} */ (e));
+    });
 
     this._languageSwitchersSelectors.forEach((selector) => {
       const el = this.querySelector(selector);

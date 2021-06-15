@@ -425,6 +425,7 @@ export class AppRouter extends AbstractRouter {
       menuHTML,
       redirection,
       templateLang,
+      fullwidth,
     } = await this._findRoute(pathWithoutLang);
 
     /** @private */
@@ -473,6 +474,7 @@ export class AppRouter extends AbstractRouter {
         new CustomEvent("app-route-matched", {
           detail: {
             path: pathWithoutLang,
+            fullwidth,
           },
         })
       );
@@ -587,8 +589,12 @@ export class AppRouter extends AbstractRouter {
     let daucusProject = null;
     /** @type {string | undefined} */
     let menuHTML;
+    let fullwidth = false;
 
     if (appRoute) {
+      if (appRoute.fullwidth) {
+        fullwidth = true;
+      }
       if (appRoute.redirectTo) {
         return { redirection: appRoute.redirectTo };
       }
@@ -652,6 +658,7 @@ export class AppRouter extends AbstractRouter {
         ? this.fallbackLanguage
         : this.preferredLanguage,
       menuHTML,
+      fullwidth,
     };
   }
 }

@@ -16,6 +16,7 @@ export interface AppRoute {
   wordings?: string;
   props?: ComponentProps;
   redirectTo?: string;
+  fullwidth?: boolean;
 }
 
 export type AppRoutes = Record<string, AppRoute>;
