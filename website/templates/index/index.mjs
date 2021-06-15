@@ -8,20 +8,81 @@ const meta = {
   twitterCard: "https://fullweb.dev/images/social/social_en.png",
 };
 
+const copyrightTemplate = (props) => /* HTML */ `
+  <p>
+    Copyright &copy; 2018-${new Date().getFullYear()} Noël Macé, fullweb.dev
+  </p>
+  <div class="cc-license-icons">
+    <span class="cc-icon"
+      ><img
+        alt="cc logo"
+        src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" /></span
+    ><span class="cc-icon"
+      ><img
+        alt="cc attribution logo"
+        src="https://mirrors.creativecommons.org/presskit/icons/by.svg" /></span
+    ><span class="cc-icon"
+      ><img
+        alt="cc non commercial logo"
+        src="https://mirrors.creativecommons.org/presskit/icons/nc-eu.svg" /></span
+    ><span class="cc-icon"
+      ><img
+        alt="cc share alike logo"
+        src="https://mirrors.creativecommons.org/presskit/icons/sa.svg"
+    /></span>
+  </div>
+  <p>
+    ${props.license
+      .map((elmt) => {
+        if (elmt.href) {
+          return /* HTML */ `
+            <a href="${elmt.href}" target="_blank" rel="noopener noreferrer"
+              >${elmt.text}</a
+            >
+          `;
+        }
+        return elmt;
+      })
+      .join("")}
+  </p>
+`;
+
 const scriptWordings = {
   en: {
-    navLinks: ["Resources", "Tools", "Blog"],
+    navLinks: ["Resources", "Tools", "Blog", "About"],
     languageSwitch:
       'Ce site et des contenus supplémentaires sont également disponibles en <a href="" data-lang="fr" aria-label="passer en français">français</a>.',
     editButton: "edit",
     languageSwitcherLabel: `Passer le site de l'anglais au français`,
+    copyright: copyrightTemplate({
+      license: [
+        "Except where otherwise noted, content of this site is licensed under a ",
+        {
+          href: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          text:
+            "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
+        },
+        "license.",
+      ],
+    }),
   },
   fr: {
-    navLinks: ["Ressources", "Outils", "Blog"],
+    navLinks: ["Ressources", "Outils", "Blog", "À propos"],
     languageSwitch:
       'This website is also available in <a href="" data-lang="en" aria-label="switch to english">English</a>.',
     editButton: "éditer",
     languageSwitcherLabel: "Switch from french to English",
+    copyright: copyrightTemplate({
+      license: [
+        "Sauf mention contraire, le contenu de ce site est distribué sous licence ",
+        {
+          href: "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr",
+          text:
+            "Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International (CC BY-NC-SA 4.0)",
+        },
+        ".",
+      ],
+    }),
   },
 };
 
@@ -51,6 +112,7 @@ export default {
         isFrench: "false",
         switch: scriptWordings.en.languageSwitch,
         switcherLabel: scriptWordings.en.languageSwitcherLabel,
+        copyright: scriptWordings.en.copyright,
       },
       globalClass,
     },
@@ -70,6 +132,7 @@ export default {
         isFrench: "true",
         switch: scriptWordings.fr.languageSwitch,
         switcherLabel: scriptWordings.fr.languageSwitcherLabel,
+        copyright: scriptWordings.fr.copyright,
       },
       globalClass,
     },

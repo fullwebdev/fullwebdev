@@ -84,7 +84,6 @@ export default class ProjectsListElement extends LitElement {
       }
 
       .abstract {
-        margin-bottom: 2rem;
         max-width: 960px;
 
         text-align: center;
@@ -206,6 +205,15 @@ export default class ProjectsListElement extends LitElement {
       .call-to-action.primary {
         background-color: var(--primary-color-softer);
         color: white;
+      }
+
+      @media screen and (min-width: 720px) {
+        h1 {
+          margin-top: 2rem;
+        }
+        .abstract {
+          margin-bottom: 6rem;
+        }
       }
 
       @media screen and (min-width: 865px) {

@@ -1,6 +1,7 @@
 import { fileURLToPath } from "url";
 import { dirname, resolve } from "path";
 
+import about from "./about/index.mjs";
 import homepage from "./homepage/index.mjs";
 import notFound from "./not-found/index.mjs";
 import index from "./index/index.mjs";
@@ -19,7 +20,7 @@ for (const [file, data] of Object.entries(index.files)) {
   createHTMLFile(outFilePath, index.template, data);
 }
 
-const templates = { homepage, "not-found": notFound };
+const templates = { homepage, "not-found": notFound, about };
 
 const appFragmentsDir = resolve(__dirname, "..", "src", "fragments", "app");
 

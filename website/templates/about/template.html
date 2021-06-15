@@ -1,0 +1,41 @@
+<style>
+  {{{css}}}
+</style>
+<div id="about">
+  <h1>{{title}}</h1>
+  <section class="author">
+    <div>
+      <img
+        src="/images/web-illustrations/nma-profil-devoxx.jpg"
+        alt="Noël Macé"
+      />
+    </div>
+    <div class="about__card-content">
+      <h2>{{author.title}}</h2>
+      <p class="subtitle">{{author.subtitle}}</p>
+      {{&author.content}}
+    </div>
+  </section>
+  <section class="contributors">
+    <h2>{{team.title}}</h2>
+    {{#team.contributors}}
+    <h3>{{title}}</h3>
+    <div class="about__list">
+      {{#people}}
+      <a href="https://github.com/{{github}}">
+        <figure>
+          <img
+            src="{{picture}}{{^noPictureOpts}}?s=175{{/noPictureOpts}}"
+            alt="profile picture"
+            class="contributor-profile-picture"
+            width="175"
+            height="175"
+          />
+          <figcaption>{{name}}</figcaption>
+        </figure>
+      </a>
+      {{/people}}
+    </div>
+    {{/team.contributors}}
+  </section>
+</div>
