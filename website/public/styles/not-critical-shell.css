@@ -103,3 +103,14 @@ h6 {
   animation-delay: -1s;
 }
 /*#endregion spinner*/
+
+/*#region contents*/
+.call-to-action:hover {
+  background-color: var(--stronger-bg-color);
+}
+
+.call-to-action.primary:hover {
+  background-color: var(--primary-color);
+}
+/*#endregion contents*/
+
