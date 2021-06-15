@@ -3,7 +3,7 @@
 </style>
 <div id="about">
   <h1>{{title}}</h1>
-  <div class="author">
+  <section class="author">
     <div>
       <img
         src="/images/web-illustrations/nma-profil-devoxx.jpg"
@@ -15,8 +15,8 @@
       <p class="subtitle">{{author.subtitle}}</p>
       {{&author.content}}
     </div>
-  </div>
-  <div class="contributors">
+  </section>
+  <section class="contributors">
     <h2>{{team.title}}</h2>
     {{#team.contributors}}
     <h3>{{title}}</h3>
@@ -37,5 +37,5 @@
       {{/people}}
     </div>
     {{/team.contributors}}
-  </div>
+  </section>
 </div>
