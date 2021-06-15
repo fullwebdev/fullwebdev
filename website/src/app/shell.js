@@ -57,6 +57,10 @@ export class AppShell {
       this.querySelector("#standard-menu").style.display = "none";
     });
 
+    router.addEventListener("lang-changed", () => {
+      this.updateShellLang();
+    });
+
     router.addEventListener("daucus-route-matched", (e) => {
       this._updateDaucusMenu(/** @type {DaucusRouteMatchedEvent} */ (e));
       this._updateAppMenu(/** @type {AppRouteMatchedEvent} */ (e));
