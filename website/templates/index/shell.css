@@ -118,7 +118,7 @@ h2 {
 }
 
 .call-to-action {
-  padding: .8rem 34px;
+  padding: 0.8rem 34px;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.2rem;
@@ -137,14 +137,6 @@ h2 {
 .call-to-action.primary {
   background-color: var(--primary-color-softer);
   color: white;
-}
-
-.call-to-action:hover {
-  background-color: var(--stronger-bg-color);
-}
-
-.call-to-action.primary:hover {
-  background-color: var(--primary-color);
 }
 
 /*#endregion globals*/

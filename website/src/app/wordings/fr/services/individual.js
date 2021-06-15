@@ -11,7 +11,20 @@ const wording = {
       },
       backgroundImg:
         "/images/web-illustrations/new-data-services-UO-QYR28hS0-unsplash.jpg",
-      cta: [{ href: "test", text: "réserver un rdv gratuit", primary: true }],
+      cta: [
+        {
+          onclick: () => {
+            if (window.Calendly) {
+              window.Calendly.initPopupWidget({
+                url: "https://calendly.com/noelmace",
+              });
+            }
+            return false;
+          },
+          text: "organiser un entretient gratuit",
+          primary: true,
+        },
+      ],
     },
     {
       desc: {

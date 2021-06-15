@@ -7,10 +7,32 @@ export const selector = "app-projects-list";
 
 /**
  * @typedef {import('./projects-list').ProjectListWording} ProjectListWording
+ * @typedef {import('./projects-list').CallToActionParams} CallToActionParams
  * @typedef {import('./projects-list').ProjectListWordings} ProjectListWordings
  * @typedef {import('./projects-list').Project} Project
  * @typedef {import('../languages').Language} Language
  */
+
+const callToAction = (/** @type {CallToActionParams} */ cta) => {
+  if (cta.href) {
+    return html`<a
+      href="${cta.href}"
+      class="call-to-action ${classMap({ primary: !!cta.primary })}"
+      rel=${cta.href.startsWith("http") ? "noopener noreferrer" : ""}
+      target=${cta.href.startsWith("http") ? "_blank" : ""}
+      >${cta.text}</a
+    >`;
+  }
+  if (cta.onclick) {
+    return html`<button
+      class="call-to-action ${classMap({ primary: !!cta.primary })}"
+      @click=${cta.onclick}
+    >
+      ${cta.text}
+    </button> `;
+  }
+  return "";
+};
 
 /**
  * @param {Project} item
@@ -47,18 +69,7 @@ const projectCard = (item) => html`<a
     <h2>${item.desc.title}</h2>
     <p class="content">${item.desc.subtitle}</p>
     ${item.cta
-      ? html`<div class="actions">
-          ${item.cta.map(
-            (cta) =>
-              html`<a
-                href="${cta.href}"
-                class="call-to-action ${classMap({ primary: !!cta.primary })}"
-                rel=${cta.href.startsWith("http") ? "noopener noreferrer" : ""}
-                target=${cta.href.startsWith("http") ? "_blank" : ""}
-                >${cta.text}</a
-              >`
-          )}
-        </div> `
+      ? html`<div class="actions">${item.cta.map(callToAction)}</div> `
       : ""}
   </div>
 </a>`;
@@ -129,6 +140,7 @@ export default class ProjectsListElement extends LitElement {
         color: #fff;
         position: relative;
         background-position: center;
+        background-color: var(--neutral-color-600);
       }
 
       .bg-card * {
@@ -255,6 +267,7 @@ export default class ProjectsListElement extends LitElement {
         margin: 0.5rem;
         background-color: var(--soft-bg-color);
         color: var(--primary-text-color-stronger);
+        border: none;
       }
 
       .call-to-action.primary {
@@ -361,27 +374,14 @@ export default class ProjectsListElement extends LitElement {
   render() {
     return html`
       <h1>${this.w.title}</h1>
-      ${this.w.abstract
-        ? html`<section class="abstract">
-            <p>${this.w.abstract}</p>
-            ${this.w.cta
-              ? html`<div class="cta-container">
-                  ${this.w.cta.map(
-                    (cta) => html`<p>
-                      <a
-                        class=${classMap({
-                          "call-to-action": true,
-                          primary: !!cta.primary,
-                        })}
-                        href=${cta.href}
-                        >${cta.text}</a
-                      >
-                    </p>`
-                  )}
-                </div>`
-              : ""}
-          </section>`
-        : ""}
+      <section class="abstract">
+        ${this.w.abstract ? html`<p>${this.w.abstract}</p>` : ""}
+        ${this.w.cta
+          ? html`<div class="cta-container">
+              ${this.w.cta.map(callToAction)}
+            </div>`
+          : ""}
+      </section>
       ${typeof this.w.items === "string"
         ? html`<p class="empty-grid">${this.w.items}</p>`
         : html`<section class="grid">

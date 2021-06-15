@@ -10,7 +10,20 @@ const wording = {
       },
       backgroundImg:
         "/images/web-illustrations/new-data-services-UO-QYR28hS0-unsplash.jpg",
-      cta: [{ href: "test", text: "make a free appointment", primary: true }],
+      cta: [
+        {
+          onclick: () => {
+            if (window.Calendly) {
+              window.Calendly.initPopupWidget({
+                url: "https://calendly.com/noelmace",
+              });
+            }
+            return false;
+          },
+          text: "schedule a free meeting",
+          primary: true,
+        },
+      ],
     },
 
     {
@@ -21,8 +34,8 @@ const wording = {
       backgroundImg:
         "/images/web-illustrations/lagos-techie-BVr3XaBiWLU-unsplash.jpg",
       cta: [
-        { href: "test", text: "prochaines sessions", primary: true },
-        { href: "test", text: "en savoir plus", primary: false },
+        { href: "test", text: "next sessions", primary: true },
+        { href: "test", text: "learn more", primary: false },
       ],
     },
     {
