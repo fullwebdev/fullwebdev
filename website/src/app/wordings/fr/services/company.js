@@ -2,8 +2,23 @@
 const wording = {
   title: "Services aux entreprises",
   cta: [
-    { text: "Nous contacter", href: "TODO", primary: true },
-    { text: "Réserver un rdv", href: "TODO", primary: true },
+    {
+      text: "Nous contacter",
+      href: "mailto:contact@noelmace.com",
+      primary: true,
+    },
+    {
+      text: "Organiser un rendez-vous",
+      onclick: () => {
+        if (window.Calendly) {
+          window.Calendly.initPopupWidget({
+            url: "https://calendly.com/noelmace",
+          });
+        }
+        return false;
+      },
+      primary: true,
+    },
   ],
   items: [
     {
@@ -35,7 +50,7 @@ const wording = {
           "Améliorez l'expérience de développement de vos produits et les liens avec votre communauté.",
       },
       backgroundImg:
-        "/images/web-illustrations/photo-1550305080-4e029753abcf.webp",
+        "/images/web-illustrations/jaime-lopes-0RDBOAdnbWM-unsplash.jpg",
       cta: [{ href: "test", text: "nos services", primary: true }],
     },
     {

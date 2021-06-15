@@ -223,6 +223,10 @@ const networkErrorTemplate = (w) => /* HTML */ `
 `;
 //#endregion networkError
 
+const preloadCalendly = async () => {
+  const { loadCalendly } = await import("./utils/calendly.js");
+  return loadCalendly();
+};
 export class AppRouter extends AbstractRouter {
   static get WORDINGS() {
     return {
@@ -286,15 +290,17 @@ export class AppRouter extends AbstractRouter {
       },
       "/services": {
         componentURL: "./views/services.js",
-        wordings: "services/index"
+        wordings: "services/index",
       },
       "/services/individual": {
         componentURL: "./views/projects-list.js",
-        wordings: "services/individual"
+        wordings: "services/individual",
+        prerun: preloadCalendly,
       },
       "/services/company": {
         componentURL: "./views/projects-list.js",
-        wordings: "services/company"
+        wordings: "services/company",
+        prerun: preloadCalendly,
       },
       "/tools/ce-name": {
         componentURL: "./views/ce-name.js",
@@ -437,7 +443,13 @@ export class AppRouter extends AbstractRouter {
       menuHTML,
       redirection,
       templateLang,
+      routeCallback,
     } = await this._findRoute(pathWithoutLang);
+
+    if (routeCallback) {
+      // Warning: don't wait for promise for better performance
+      routeCallback();
+    }
 
     /** @private */
     this._scrollAnchor = hash;
@@ -598,8 +610,10 @@ export class AppRouter extends AbstractRouter {
     let daucusProject = null;
     /** @type {string | undefined} */
     let menuHTML;
+    let routeCallback;
 
     if (appRoute) {
+      routeCallback = appRoute.prerun;
       if (appRoute.redirectTo) {
         return { redirection: appRoute.redirectTo };
       }
@@ -663,6 +677,7 @@ export class AppRouter extends AbstractRouter {
         ? this.fallbackLanguage
         : this.preferredLanguage,
       menuHTML,
+      routeCallback,
     };
   }
 }

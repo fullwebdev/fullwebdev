@@ -112,5 +112,13 @@ h6 {
 .call-to-action.primary:hover {
   background-color: var(--primary-color);
 }
-/*#endregion contents*/
 
+.calendly-overlay {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.calendly-overlay .calendly-popup-close {
+  width: 25px !important;
+  height: 25px !important;
+}
+/*#endregion contents*/

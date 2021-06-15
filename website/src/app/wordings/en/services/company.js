@@ -3,7 +3,18 @@ const wording = {
   title: "Corporate services",
   cta: [
     { text: "Contact us", href: "mailto:contact@noelmace.com", primary: true },
-    { text: "Réserver un rdv", href: "TODO", primary: true },
+    {
+      text: "Schedule a meeting",
+      onclick: () => {
+        if (window.Calendly) {
+          window.Calendly.initPopupWidget({
+            url: "https://calendly.com/noelmace",
+          });
+        }
+        return false;
+      },
+      primary: true,
+    },
   ],
   items: [
     {
@@ -35,7 +46,7 @@ const wording = {
           "Improve your products developer experience and your relations with the community. ",
       },
       backgroundImg:
-        "/images/web-illustrations/photo-1550305080-4e029753abcf.webp",
+        "/images/web-illustrations/jaime-lopes-0RDBOAdnbWM-unsplash.jpg",
       cta: [{ href: "test", text: "our services", primary: true }],
     },
     {
