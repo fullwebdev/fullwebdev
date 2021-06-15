@@ -411,6 +411,7 @@ export class AppRouter extends AbstractRouter {
       return [`/${this.preferredLanguage}${path}`, { ...options }];
     }
     const [, lang, pathWithoutLang = "/"] = langMatchInPath;
+    const langHasChanged = this.preferredLanguage !== lang;
     this._forcedLanguage = /** @type {Language} */ (lang);
     const {
       staticContent,
@@ -492,6 +493,10 @@ export class AppRouter extends AbstractRouter {
 
     if (templateLang) {
       this.outlet.lang = templateLang;
+    }
+
+    if (langHasChanged) {
+      this.dispatchEvent(new CustomEvent("lang-changed"));
     }
 
     return null;
