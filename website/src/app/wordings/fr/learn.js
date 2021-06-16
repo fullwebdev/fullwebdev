@@ -41,6 +41,20 @@ const wording = {
       ],
     },
     {
+      type: "Conférence",
+      href: "/docs/conferences/navigateurs",
+      date: "juillet 2021",
+      desc: {
+        title: "Il était une fois... les navigateurs",
+        subtitle: "L'Histoire des navigateurs web en dessins.",
+      },
+      img: {
+        src: "/images/web-illustrations/maestro.jpg",
+        alt: "Maestro de la série il était une fois",
+        height: 200,
+      },
+    },
+    {
       type: "Documentation",
       href: "/docs/rendering/benchmark",
       date: "mars 2021",
@@ -52,7 +66,7 @@ const wording = {
       img: {
         src: "/images/web-illustrations/speed-test.svg",
         alt: "speed test",
-        height: 175,
+        height: 200,
       },
     },
     {

@@ -373,3 +373,6 @@ Mandrake
 Lua
 entreprenariale
 beta
+sketchnote
+meetup
+GDG
