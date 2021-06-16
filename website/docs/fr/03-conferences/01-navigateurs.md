@@ -1,11 +1,13 @@
 # :man_artist: Il était une fois ... les navigateurs :boat:
 
+> _De grandes batailles et de grandes innovations, racontées et dessinées en live !_
+
 ::: tip
-Conférence avec Pierre Tibulle, en cours d'évaluation via plusieurs CFPs.
+Conférence réalisée et présentée avec [Pierre Tibulle](/about).
+
+La première sera donnée à [Riviera Dev](https://2021.rivieradev.fr), le 2 juillet 2021.
 
 :::
-
-> _De grandes batailles et de grandes innovations, racontées et dessinées en live !_
 
 ## Résumé
 
