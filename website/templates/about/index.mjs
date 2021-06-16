@@ -10,6 +10,12 @@ const contributors = [
       github: "hsablonniere",
     },
     {
+      name: "Pierre Tibulle",
+      picture: "/images/web-illustrations/ptibulle-175.jpg",
+      github: "ptibulle",
+      noPictureOpts: true,
+    },
+    {
       name: "Wassim Chegham",
       picture: "https://avatars.githubusercontent.com/u/1699357",
       github: "manekinekko",
@@ -95,10 +101,9 @@ export default {
           </p>`,
       },
       team: {
-        title: "Contributors",
         contributors: [
           {
-            title: "Invited Authors",
+            title: "cooperations",
             people: contributors[0],
           },
           {
@@ -144,10 +149,9 @@ export default {
           </p> `,
       },
       team: {
-        title: "Contributeurs",
         contributors: [
           {
-            title: "Auteurs invités",
+            title: "Coopérations",
             people: contributors[0],
           },
           {
