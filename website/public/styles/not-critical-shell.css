@@ -121,4 +121,8 @@ h6 {
   width: 25px !important;
   height: 25px !important;
 }
+
+.calendly-popup-content.calendly-mobile {
+  overflow-y: visible;
+}
 /*#endregion contents*/
