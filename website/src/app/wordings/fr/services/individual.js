@@ -34,7 +34,9 @@ const wording = {
       },
       backgroundImg:
         "/images/web-illustrations/markus-winkler-aId-xYRTlEc-unsplash.jpg",
-      cta: [{ href: "test", text: "s'inscrire gratuitement", primary: true }],
+      cta: [
+        { href: "/newsletter", text: "s'inscrire gratuitement", primary: true },
+      ],
     },
     {
       desc: {

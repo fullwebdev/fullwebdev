@@ -47,7 +47,7 @@ const wording = {
       },
       backgroundImg:
         "/images/web-illustrations/markus-winkler-aId-xYRTlEc-unsplash.jpg",
-      cta: [{ href: "test", text: "stay tuned", primary: false }],
+      cta: [{ href: "/newsletter", text: "stay tuned", primary: false }],
       wip: true,
     },
     {

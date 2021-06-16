@@ -288,6 +288,10 @@ export class AppRouter extends AbstractRouter {
         componentURL: "./views/projects-list.js",
         wordings: "news",
       },
+      "/newsletter": {
+        componentURL: "./views/newsletter.js",
+        wordings: "newsletter",
+      },
       "/services": {
         componentURL: "./views/services.js",
         wordings: "services/index",
