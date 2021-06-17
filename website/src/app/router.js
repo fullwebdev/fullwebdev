@@ -513,7 +513,6 @@ export class AppRouter extends AbstractRouter {
     const initialContent = pageContainer.childNodes;
     const fragment = document.createDocumentFragment();
     fragment.append(...initialContent);
-    this._appRoutes["/"].template = () => fragment.cloneNode(true);
 
     pageContainer.innerHTML = "";
     pageContainer.appendChild(this.outlet);
