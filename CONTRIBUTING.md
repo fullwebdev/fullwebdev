@@ -90,6 +90,16 @@ Then, you'll need to install the dependencies for the whole monorepo by running 
 
 Finally, you can run the standalone website, without building any other packages, by going to the [/website](./website) directory and running `npm start`.
 
+## :warning: Quirks
+
+### Daucus
+
+#### Snowpack-template
+
+When testing the Daucus Snowpack Template package (e.g. using `npm run lerna -- run start --scope "@daucus/snowpack-template"`), you need to specify the Snowpack `workspaceRoot` (i.e. add `workspaceRoot: "../../../"` to `packages/daucus/snowpack-template/snowpack.config.js`).
+
+See the [Snowpack documentation](https://www.snowpack.dev/reference/configuration#workspaceroot) for more information.
+
 ## <a name="styleguides"></a> Styleguides
 
 ### <a name="commit"></a> Commit Message Format
