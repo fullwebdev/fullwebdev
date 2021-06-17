@@ -1,6 +1,6 @@
 {
   "name": "@daucus/cli",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "publishConfig": {
     "access": "public"
   },
@@ -32,7 +32,7 @@
     "types:copy": "copyfiles \"./src/**/*.d.ts\" \"./*.d.ts\" types"
   },
   "dependencies": {
-    "@daucus/core": "~0.2.0",
+    "@daucus/core": "~0.3.0",
     "chalk": "^2.4.2",
     "chokidar": "^3.5.1",
     "command-line-args": "^5.1.1",

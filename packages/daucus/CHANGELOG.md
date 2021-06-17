@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/fullwebdev/fullwebdev/compare/daucus@v0.2.0...daucus@v0.3.0) (2021-06-17)
+
+### Features
+
+- **daucus-cli:** rebuild on file change ([a4d9cfa](https://github.com/fullwebdev/fullwebdev/commit/a4d9cfafa5cbfa13d25eb6fcaeae9f3e7b19a689))
+- **daucus-cli:** reverse menu entries ([3822d19](https://github.com/fullwebdev/fullwebdev/commit/3822d19501538e1dc4b4420102e4e37795084f33))
+- **daucus-snowpack-template:** add watch script ([b2646f3](https://github.com/fullwebdev/fullwebdev/commit/b2646f343cf491b3357f246d2f84a8be51bf3652))
+
 ## [0.2.0](https://github.com/fullwebdev/fullwebdev/compare/daucus@v0.1.0...daucus@v0.2.0) (2021-04-25)
 
 ### Features
