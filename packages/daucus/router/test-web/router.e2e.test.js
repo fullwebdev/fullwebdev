@@ -5,7 +5,7 @@ import {
   fixtureCleanup,
   elementUpdated,
 } from "@open-wc/testing";
-import { html } from "lit-html";
+import { html } from "lit";
 import { stub, fake } from "sinon";
 import routesFixture from "./fixtures/routes.js";
 
