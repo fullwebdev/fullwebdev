@@ -5,10 +5,9 @@
     <title>lit-element - hello world</title>
   </head>
   <body>
-    <h1>lit-element - hello world</h1>
-    <h2>basic</h2>
-    <fwd-helloworld></fwd-helloworld>
-    <h2>async</h2>
+    <h1>
+      lit-element - async hello world with es-module-shims
+    </h1>
     <fwd-async-hw></fwd-async-hw>
     <script
       type="module-shim"
@@ -17,10 +16,8 @@
     <script type="importmap-shim">
       {
         "imports": {
-          "lit-html/": "https://cdn.skypack.dev/lit-html@1.3.0/",
-          "lit-html": "https://cdn.skypack.dev/lit-html@1.3.0",
-          "lit-element/": "https://cdn.skypack.dev/lit-element@2.4.0/",
-          "lit-element": "https://cdn.skypack.dev/lit-element@2.4.0"
+          "lit/": "https://cdn.skypack.dev/lit@2.0.0-rc.2/",
+          "lit": "https://cdn.skypack.dev/lit@2.0.0-rc.2"
         }
       }
     </script>

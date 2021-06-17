@@ -2,9 +2,9 @@ import {
   LitElement,
   html,
   css,
-} from "https://cdn.skypack.dev/lit-element@2.4.0";
+} from "https://cdn.skypack.dev/lit@2.0.0-rc.2";
 // FIXME: duplicated dependency
-import { until } from "https://cdn.skypack.dev/lit-html@1.3.0/directives/until.js";
+import { until } from "https://cdn.skypack.dev/lit@2.0.0-rc.2/directives/until.js";
 
 function loadMsg() {
   return new Promise((resolve) => {
