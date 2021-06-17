@@ -8,7 +8,8 @@
   "files": [
     "*.d.ts",
     "*.js",
-    "src"
+    "src",
+    "scripts"
   ],
   "author": {
     "name": "Noël Macé",
