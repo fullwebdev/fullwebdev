@@ -62,4 +62,36 @@ exports.dirs = [
       "og:image": "https://fullweb.dev/images/social/helpers.png",
     },
   ],
+  [
+    "/tools/ce-name",
+    {
+      default: {
+        "og:image": "https://fullweb.dev/images/web-illustrations/ce-name.png",
+        "twitter:image:alt": "<ce-?>",
+        "og:title": "custom-element-name",
+      },
+      fr: {
+        "og:description": "Nommer un élément personnalisé",
+      },
+      en: {
+        "og:description": "Naming a Custom Element",
+      },
+    },
+  ],
+  [
+    "/news",
+    {
+      default: {
+        "og:title": "Full Web Dev Blog",
+      },
+      fr: {
+        "og:description":
+          "Annonces et articles de blog pour les Full Web Developers",
+      },
+      en: {
+        "og:description":
+          "Announcements, updates and blog posts for the Full Web Developers",
+      },
+    },
+  ],
 ];

@@ -52,7 +52,8 @@
   }
 
   #homepage .welcome {
-    padding-top: 3rem;
+    padding-top: 7rem;
+    padding-bottom: 5rem;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;

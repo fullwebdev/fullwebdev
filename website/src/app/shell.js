@@ -20,6 +20,12 @@ export class AppShell {
     this._wordings = wordings;
     this._router = router;
 
+    /** @type {ShellElementSelector[]} */
+    this._languageSwitchersSelectors = [
+      "#nav__language-switch",
+      "#header__language-switch",
+    ];
+
     /** @private @type {Map<ShellElementSelector | ShellElementListSelector, HTMLElement | NodeList>} */
     this._elementsCache = new Map();
 
@@ -51,6 +57,10 @@ export class AppShell {
       this.querySelector("#standard-menu").style.display = "none";
     });
 
+    router.addEventListener("lang-changed", () => {
+      this.updateShellLang();
+    });
+
     router.addEventListener("daucus-route-matched", (e) => {
       this._updateDaucusMenu(/** @type {DaucusRouteMatchedEvent} */ (e));
       this._updateAppMenu(/** @type {AppRouteMatchedEvent} */ (e));
@@ -69,6 +79,13 @@ export class AppShell {
     router.addEventListener("app-route-matched", (e) =>
       this._updateAppMenu(/** @type {AppRouteMatchedEvent} */ (e))
     );
+
+    this._languageSwitchersSelectors.forEach((selector) => {
+      const el = this.querySelector(selector);
+      el.addEventListener("click", (event) =>
+        this._languageSwitchClickListener(event)
+      );
+    });
   }
 
   get w() {
@@ -115,11 +132,49 @@ export class AppShell {
     }
   }
 
+  /**
+   * @param {ShellElementSelector} selector
+   */
+  _updateLanguageSwitcherContent(selector) {
+    const switcherContainer = this.querySelector(selector);
+    /** @type {HTMLElement | null} */
+    // prettier-ignore
+    const switcherButton =
+      (/** @type {HTMLElement | null } */ switcherContainer.firstElementChild);
+    if (!switcherButton) throw new Error(`can't find ${selector} first child`);
+    const isFrench = this._router.preferredLanguage === "fr";
+    switcherButton.setAttribute("aria-checked", isFrench.toString());
+    switcherButton.dataset.lang = isFrench ? "en" : "fr";
+    const switcherLabel = switcherContainer.lastElementChild;
+    if (!switcherLabel) throw new Error(`can't find ${selector} last child`);
+    switcherLabel.textContent = this.w.languageSwitcherLabel;
+  }
+
+  /**
+   * @param {MouseEvent} event
+   */
+  _languageSwitchClickListener(event) {
+    event.preventDefault();
+    this._languageChanged = true;
+    this.daucusMenus.forEach(({ menu }) => {
+      menu.activePath = "";
+    });
+    this._router.preferredLanguage = /** @type {EventTarget & { dataset: {lang: Language } }}*/ (event.target).dataset.lang;
+    this.updateShellLang();
+    window.scrollTo(0, 0);
+  }
+
   updateShellLang(skipContentUpdate = false) {
     if (!this.querySelector("#main-footer .language-switch"))
       throw new Error("can't find .language-switch element in the main footer");
 
-    const languageSwitchEl = this.querySelector(
+    if (!this.querySelector("#nav__language-switch"))
+      throw new Error("can't find language-switcher in nav");
+
+    if (!this.querySelector("#header__language-switch"))
+      throw new Error("can't find language-switcher in header");
+
+    const footerLanguageSwitchEl = this.querySelector(
       "#main-footer .language-switch"
     );
 
@@ -140,30 +195,33 @@ export class AppShell {
         addNavLinksText
       );
 
-      languageSwitchEl.innerHTML = this.w.languageSwitch;
+      this._languageSwitchersSelectors.forEach((selector) =>
+        this._updateLanguageSwitcherContent(selector)
+      );
+
+      footerLanguageSwitchEl.innerHTML = this.w.languageSwitch;
 
       /** @type {HTMLElement}*/ (document.querySelector(
         "#edit-page-button .text"
       )).textContent = this.w.editButton;
+
+      /** @type {HTMLElement}*/ (document.querySelector(
+        "#main-footer .footer__license"
+      )).innerHTML = this.w.copyright;
+
+      if (this._router.preferredLanguage) {
+        document.documentElement.lang = this._router.preferredLanguage;
+      }
     }
 
-    const languageSwitchAnchor = languageSwitchEl.querySelector("a");
+    const languageSwitchAnchor = footerLanguageSwitchEl.querySelector("a");
 
     if (!languageSwitchAnchor)
       throw new Error("can't find the language switch anchor");
 
-    languageSwitchAnchor.addEventListener("click", (
-      /** @type {MouseEvent} */ event
-    ) => {
-      event.preventDefault();
-      this._languageChanged = true;
-      this.daucusMenus.forEach(({ menu }) => {
-        menu.activePath = "";
-      });
-      this._router.preferredLanguage = /** @type {EventTarget & { dataset: {lang: Language } }}*/ (event.target).dataset.lang;
-      this.updateShellLang();
-      window.scrollTo(0, 0);
-    });
+    languageSwitchAnchor.addEventListener("click", (event) =>
+      this._languageSwitchClickListener(event)
+    );
   }
 
   /**
@@ -177,7 +235,7 @@ export class AppShell {
     ));
     if (!el) {
       el = /** @type {HTMLElement} */ (document.querySelector(selector));
-      if (!el) throw new Error(`can't find element with id "${selector}"`);
+      if (!el) throw new Error(`can't find element "${selector}"`);
       this._elementsCache.set(selector, el);
     }
     return el;

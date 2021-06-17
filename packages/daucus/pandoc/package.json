@@ -1,6 +1,6 @@
 {
   "name": "@daucus/pandoc",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "description": "Install & use pandoc in Nodejs",
   "license": "MIT",
   "type": "module",
@@ -8,7 +8,8 @@
   "files": [
     "*.d.ts",
     "*.js",
-    "src"
+    "src",
+    "scripts"
   ],
   "author": {
     "name": "Noël Macé",

@@ -259,6 +259,9 @@ export class AppRouter extends AbstractRouter {
       "/404": {
         templateName: "not-found",
       },
+      "/about": {
+        templateName: "about",
+      },
       "/network-error": {
         template: (/** @type {Language} */ lang) => {
           // could be optimized by creating both templates ahead of time
@@ -319,6 +322,7 @@ export class AppRouter extends AbstractRouter {
     this._possibleOutlet = null;
 
     window.addEventListener("languagechange", () => {
+      this._forcedLanguage = null;
       this.navigate(this.currentPath, { skipLocationChange: true });
     });
 
@@ -405,6 +409,13 @@ export class AppRouter extends AbstractRouter {
    * @returns {Promise<[path: string, options?: NavigationOptions] | null>}
    */
   async renderOrRedirect(path, options, params, hash) {
+    const langMatchInPath = /^\/(en|fr)(\/.*)?/.exec(path);
+    if (!langMatchInPath) {
+      return [`/${this.preferredLanguage}${path}`, { ...options }];
+    }
+    const [, lang, pathWithoutLang = "/"] = langMatchInPath;
+    const langHasChanged = this.preferredLanguage !== lang;
+    this._forcedLanguage = /** @type {Language} */ (lang);
     const {
       staticContent,
       templateUrl,
@@ -413,7 +424,8 @@ export class AppRouter extends AbstractRouter {
       daucusProject,
       menuHTML,
       redirection,
-    } = await this._findRoute(path);
+      templateLang,
+    } = await this._findRoute(pathWithoutLang);
 
     /** @private */
     this._scrollAnchor = hash;
@@ -437,7 +449,7 @@ export class AppRouter extends AbstractRouter {
       this.dispatchEvent(
         new CustomEvent("daucus-route-matched", {
           detail: {
-            path,
+            path: pathWithoutLang,
             oldProjectName: this._currentDaucusProject,
             newProjectName: daucusProject,
             editURL:
@@ -460,7 +472,7 @@ export class AppRouter extends AbstractRouter {
       this.dispatchEvent(
         new CustomEvent("app-route-matched", {
           detail: {
-            path,
+            path: pathWithoutLang,
           },
         })
       );
@@ -480,6 +492,14 @@ export class AppRouter extends AbstractRouter {
       this._pageMessageBox.style.display = "block";
     } else {
       this._pageMessageBox.style.display = "none";
+    }
+
+    if (templateLang) {
+      this.outlet.lang = templateLang;
+    }
+
+    if (langHasChanged) {
+      this.dispatchEvent(new CustomEvent("lang-changed"));
     }
 
     return null;
@@ -517,7 +537,7 @@ export class AppRouter extends AbstractRouter {
 
   set preferredLanguage(lang) {
     this._forcedLanguage = lang;
-    this.navigate(this.currentPath, { skipLocationChange: true });
+    this.navigate(this.currentPath.replace(/^\/(en|fr)/, `/${lang}`));
   }
 
   /**
@@ -628,6 +648,9 @@ export class AppRouter extends AbstractRouter {
       templatePath,
       translationTemplatePath,
       daucusProject,
+      templateLang: useFallbackLang
+        ? this.fallbackLanguage
+        : this.preferredLanguage,
       menuHTML,
     };
   }

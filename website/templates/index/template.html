@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{language.code}}">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,6 +42,7 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
+    <link rel="preconnect" href="https://mirrors.creativecommons.org" />
 
     <link rel="manifest" href="/manifest.json" />
     <link
@@ -68,6 +69,21 @@
           >
         </div>
         <nav class="mdc-list">
+          <div id="nav__language-switch">
+            <button
+              role="switch"
+              aria-checked="{{language.isFrench}}"
+              id="languageSwitchNav"
+              class="i18n-switch"
+              data-lang="{{language.otherCode}}"
+            >
+              <span aria-label="français">fr</span>
+              <span aria-label="english">en</span>
+            </button>
+            <label for="languageSwitchNav" class="switch sr-only"
+              >{{language.switcherLabel}}</label
+            >
+          </div>
           <hr class="mdc-list-divider" />
           <div id="modal-navigation">
             <a class="mdc-list-item" href="/learn">
@@ -82,11 +98,16 @@
               <span class="mdc-list-item__ripple"></span>
               <span class="mdc-list-item__text">{{nav.2}}</span>
             </a>
+            <a class="mdc-list-item" href="/about">
+              <span class="mdc-list-item__ripple"></span>
+              <span class="mdc-list-item__text">{{nav.3}}</span>
+            </a>
           </div>
           <div id="mobile-menu">
             <hr class="mdc-list-divider" />
             <daucus-menu></daucus-menu>
           </div>
+
           <div class="external-icons">
             <hr class="mdc-list-divider" />
             <a
@@ -158,7 +179,27 @@
                   ><span class="nav-link-inner">{{nav.2}}</span></a
                 >
               </li>
+              <li>
+                <a class="nav-link" href="/about"
+                  ><span class="nav-link-inner">{{nav.3}}</span></a
+                >
+              </li>
             </ul>
+            <div id="header__language-switch">
+              <button
+                role="switch"
+                aria-checked="{{language.isFrench}}"
+                id="languageSwitchHeader"
+                class="i18n-switch"
+                data-lang="{{language.otherCode}}"
+              >
+                <span aria-label="français">fr</span>
+                <span aria-label="english">en</span>
+              </button>
+              <label for="languageSwitchHeader" class="switch sr-only"
+                >{{language.switcherLabel}}</label
+              >
+            </div>
             <div class="external-icons-container">
               <a
                 class="icon"
@@ -233,6 +274,9 @@
       <footer id="main-footer">
         <div class="language-switch">
           {{#language.switch}}{{{language.switch}}}{{/language.switch}}
+        </div>
+        <div class="footer__license">
+          {{#language.copyright}}{{{&language.copyright}}}{{/language.copyright}}
         </div>
       </footer>
     </div>

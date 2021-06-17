@@ -1,6 +1,6 @@
 {
   "name": "@fullweb/website",
-  "version": "1.0.0-beta.7",
+  "version": "1.0.0-beta.8",
   "private": true,
   "scripts": {
     "build:daucus": "daucus build",
@@ -8,7 +8,8 @@
     "prebuild": "npm run build:daucus && npm run build:templates && npm run build:sass",
     "build": "snowpack build --reload",
     "prestart": "npm run prebuild",
-    "start": "snowpack dev --reload",
+    "start": "concurrently \"npm:start:daucus\" \"snowpack dev --reload\"",
+    "start:daucus": "daucus watch",
     "build:sass": "sass src/styles/:public/styles/build/ --load-path=node_modules",
     "postbuild": "npm run minify && npm run build:functions",
     "build:functions": "node ./scripts/fn-assets.mjs",
@@ -24,9 +25,10 @@
     "url": "https://github.com/fullwebdev/fullwebdev/issues"
   },
   "devDependencies": {
-    "@daucus/cli": "^0.2.1",
-    "@daucus/pandoc": "^0.2.0",
+    "@daucus/cli": "*",
+    "@daucus/pandoc": "*",
     "@types/prismjs": "^1.16.1",
+    "concurrently": "^6.2.0",
     "csso": "^4.2.0",
     "globby": "^9.2.0",
     "html-minifier": "^4.0.0",
@@ -43,13 +45,13 @@
     "terser": "^4.8.0"
   },
   "dependencies": {
-    "@daucus/html-loader": "^0.2.0",
-    "@daucus/menu": "^0.2.0",
-    "@daucus/router": "^0.2.0",
+    "@daucus/html-loader": "*",
+    "@daucus/menu": "*",
+    "@daucus/router": "*",
     "@material/drawer": "^10.0.0",
-    "@modern-helpers/el": "^0.4.0",
-    "@modern-helpers/router": "^0.4.0",
-    "custom-element-name": "^0.1.0",
+    "@modern-helpers/el": "*",
+    "@modern-helpers/router": "*",
+    "custom-element-name": "*",
     "lit-element": "^2.4.0",
     "lit-html": "^1.3.0",
     "prismjs": "^1.21.0"

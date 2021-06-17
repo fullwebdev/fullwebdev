@@ -42,14 +42,47 @@ function isBot(userAgent) {
   return false;
 }
 
+const DEFAULT_METAS = {
+  fr: {
+    "og:title": "fullweb.dev",
+    "og:description": "Redécouvrir le développement Web",
+    "og:image": "https://fullweb.dev/images/social/social_fr.png",
+  },
+  en: {
+    "og:title": "fullweb.dev",
+    "og:description": "Relearn Web Development",
+    "og:image": "https://fullweb.dev/images/social/social_en.png",
+  },
+};
+
 exports.httpRequestHandler = functions.https.onRequest((request, result) => {
-  let route = routes[request.path];
+  let reqPath = request.path;
+  let lang = "fr";
+  const langPathMatch = /^\/(en|fr)(\/.*)/.exec(reqPath);
+  if (langPathMatch) {
+    [, lang, reqPath] = langPathMatch;
+  }
+  let route = routes[reqPath];
 
   if (!route) {
     const found = dirs.find(
-      ([key, dirRoute]) => request.path.startsWith(key) && dirRoute
-    );
-    if (found) [, route] = found;
+      ([key, dirRoute]) => reqPath.startsWith(key) && dirRoute
+    ) || ["", {}];
+    [, route] = found;
+    if (route[lang]) {
+      if (route.default) {
+        route = {
+          ...route.default,
+          ...route[lang],
+        };
+      } else {
+        route = route[lang];
+      }
+    }
+    route = {
+      ...DEFAULT_METAS[lang],
+      ...route,
+    };
   }
 
   let indexHTML = INDEX_TEMPLATE;

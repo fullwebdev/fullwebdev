@@ -63,6 +63,10 @@ export class HelpCommand {
       const cmd = commands[params.command];
       console.log(header(`Daucus-${params.command}`));
       console.log(line(cmd.help));
+      if (cmd.description) {
+        console.log(header("Description"));
+        cmd.description.split("\n").forEach((ln) => console.log(line(ln)));
+      }
       console.log(header("Synopsis"));
       console.log(synopsis(`daucus ${params.command} ${cmd.synopsis}`));
       console.log(header("Options"));

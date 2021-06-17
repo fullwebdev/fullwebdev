@@ -1,14 +1,14 @@
 import { OptionDefinition } from "command-line-args";
 import { WorkSpace } from "../config/WorkSpace";
 
-interface CommandOption extends OptionDefinition {
+export interface CommandOption extends OptionDefinition {
   description: string;
 }
 
 export interface Command<T> {
   workspace: WorkSpace;
 
-  run(params?: T): Promise<void>;
+  run(params?: T): Promise<unknown>;
 }
 
 export type CommandConstructor<T> = {
@@ -16,4 +16,5 @@ export type CommandConstructor<T> = {
   help: string;
   options: CommandOption[];
   synopsis: string;
+  description?: string;
 };

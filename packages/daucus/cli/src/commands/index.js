@@ -2,6 +2,7 @@
 
 import { BuildCommand } from "./build.js";
 import { HelpCommand } from "./help.js";
+import { WatchCommand } from "./watch.js";
 
 /**
  * @template T
@@ -14,4 +15,5 @@ import { HelpCommand } from "./help.js";
 export const commands = {
   build: BuildCommand,
   help: HelpCommand,
+  watch: WatchCommand,
 };

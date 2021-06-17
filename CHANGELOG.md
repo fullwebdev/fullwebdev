@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.8](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.7...v1.0.0-beta.8) (2021-06-17)
+
+### Features
+
+- **daucus-cli:** rebuild on file change ([a4d9cfa](https://github.com/fullwebdev/fullwebdev/commit/a4d9cfafa5cbfa13d25eb6fcaeae9f3e7b19a689))
+- **daucus-snowpack-template:** add watch script ([b2646f3](https://github.com/fullwebdev/fullwebdev/commit/b2646f343cf491b3357f246d2f84a8be51bf3652))
+- **website:** about page ([4b2e994](https://github.com/fullwebdev/fullwebdev/commit/4b2e994914f7d99b779904e9907d3b4fa700b087))
+- **website:** add a language switch button ([98e524a](https://github.com/fullwebdev/fullwebdev/commit/98e524a1ac8ed8f7850ca668a13f5f7781ef348d)), closes [#80](https://github.com/fullwebdev/fullwebdev/issues/80)
+- **website:** conf proposal (fr) - navigateurs ([692534d](https://github.com/fullwebdev/fullwebdev/commit/692534de899d259cede783d2330ca2b24ec60c32))
+- **website:** copyright notice ([c26e7f7](https://github.com/fullwebdev/fullwebdev/commit/c26e7f79071eb1c2057110947d72a7f26d3b486b))
+- **website:** meta data for i18n links ([53661c2](https://github.com/fullwebdev/fullwebdev/commit/53661c20a4433d07b5aa9e1f48cdfedac41dc0c1))
+
+### Bug Fixes
+
+- **daucus-pandoc:** add missing scripts directory ([8225388](https://github.com/fullwebdev/fullwebdev/commit/822538843c3d68001cd3336fd093ec831922cf13))
+- **website:** cleaner look on large screen ([e1ec723](https://github.com/fullwebdev/fullwebdev/commit/e1ec723495b8c9cf4f77d7045fd056fe39369756))
+- **website:** don't try to load prism-js ([5b218b7](https://github.com/fullwebdev/fullwebdev/commit/5b218b762a58755cf7cbade5214ebe944ada6ad8))
+- **website:** lang attribute on document ([9087c20](https://github.com/fullwebdev/fullwebdev/commit/9087c20c415aa87f71dbc8234b5a35bec8becb41))
+- **website:** lang attribute on router outlet ([f5a51a7](https://github.com/fullwebdev/fullwebdev/commit/f5a51a77ff96fd1a33ce87a985230321359363cd)), closes [#25](https://github.com/fullwebdev/fullwebdev/issues/25)
+- **website:** reflect lang in URL ([01d7bb7](https://github.com/fullwebdev/fullwebdev/commit/01d7bb7997d24f988fc72ebd8a3b1d78dfa22472)), closes [#73](https://github.com/fullwebdev/fullwebdev/issues/73)
+- **website:** update shell lang on navigation ([67dee41](https://github.com/fullwebdev/fullwebdev/commit/67dee41f50d9e1fc779098c4a21fc83c85f8df68))
+
 ## [1.0.0-beta.7](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2021-06-07)
 
 ### Features

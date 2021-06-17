@@ -1,6 +1,6 @@
 {
   "name": "@daucus/cli",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "publishConfig": {
     "access": "public"
   },
@@ -32,7 +32,9 @@
     "types:copy": "copyfiles \"./src/**/*.d.ts\" \"./*.d.ts\" types"
   },
   "dependencies": {
+    "@daucus/core": "~0.3.0",
     "chalk": "^2.4.2",
+    "chokidar": "^3.5.1",
     "command-line-args": "^5.1.1",
     "file-type": "^16.2.0",
     "fs-extra": "^9.1.0",
@@ -41,8 +43,7 @@
     "html-minifier": "^4.0.0",
     "node-html-parser": "^2.0.2",
     "rimraf": "^3.0.2",
-    "snarkdown": "^2.0.0",
-    "@daucus/core": "~0.2.0"
+    "snarkdown": "^2.0.0"
   },
   "devDependencies": {
     "@types/command-line-usage": "^5.0.1",

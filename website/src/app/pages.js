@@ -1,19 +1,98 @@
 /** @type {import('prismjs') | null} */
 let Prism = null;
 
-const loadedPrismLanguages = [
-  "markup",
-  "html",
-  "xml",
-  "svg",
-  "mathml",
-  "ssml",
-  "atom",
-  "rss",
-  "css",
-  "clike",
-  "javascript",
-];
+/**
+ * @type {Record<string, string>}
+ *
+ * @see {@link https://github.com/PrismJS/prism/blob/c4f6b2c/plugins/autoloader/prism-autoloader.js|prism-autoloader}
+ * @da
+ */
+const PRISM_LANG_ALIASES = {
+  html: "markup",
+  xml: "markup",
+  svg: "markup",
+  mathml: "markup",
+  ssml: "markup",
+  atom: "markup",
+  rss: "markup",
+  js: "javascript",
+  g4: "antlr4",
+  adoc: "asciidoc",
+  shell: "bash",
+  shortcode: "bbcode",
+  rbnf: "bnf",
+  oscript: "bsl",
+  cs: "csharp",
+  dotnet: "csharp",
+  cfc: "cfscript",
+  coffee: "coffeescript",
+  conc: "concurnas",
+  jinja2: "django",
+  "dns-zone": "dns-zone-file",
+  dockerfile: "docker",
+  gv: "dot",
+  eta: "ejs",
+  xlsx: "excel-formula",
+  xls: "excel-formula",
+  gamemakerlanguage: "gml",
+  hbs: "handlebars",
+  hs: "haskell",
+  idr: "idris",
+  gitignore: "ignore",
+  hgignore: "ignore",
+  npmignore: "ignore",
+  webmanifest: "json",
+  kt: "kotlin",
+  kts: "kotlin",
+  kum: "kumir",
+  tex: "latex",
+  context: "latex",
+  ly: "lilypond",
+  emacs: "lisp",
+  elisp: "lisp",
+  "emacs-lisp": "lisp",
+  md: "markdown",
+  moon: "moonscript",
+  n4jsd: "n4js",
+  nani: "naniscript",
+  objc: "objectivec",
+  qasm: "openqasm",
+  objectpascal: "pascal",
+  px: "pcaxis",
+  pcode: "peoplecode",
+  pq: "powerquery",
+  mscript: "powerquery",
+  pbfasm: "purebasic",
+  purs: "purescript",
+  py: "python",
+  qs: "qsharp",
+  rkt: "racket",
+  rpy: "renpy",
+  robot: "robotframework",
+  rb: "ruby",
+  "sh-session": "shell-session",
+  shellsession: "shell-session",
+  smlnj: "sml",
+  sol: "solidity",
+  sln: "solution-file",
+  rq: "sparql",
+  t4: "t4-cs",
+  trig: "turtle",
+  ts: "typescript",
+  tsconfig: "typoscript",
+  uscript: "unrealscript",
+  uc: "unrealscript",
+  url: "uri",
+  vb: "visual-basic",
+  vba: "visual-basic",
+  mathematica: "wolfram",
+  nb: "wolfram",
+  wl: "wolfram",
+  xeoracube: "xeora",
+  yml: "yaml",
+};
+
+const loadedPrismLanguages = ["markup", "css", "clike", "javascript"];
 
 /**
  * @param {Element} root
@@ -30,7 +109,8 @@ async function codeStyle(root) {
       for (let j = 0; j < codeEl.classList.length; j += 1) {
         const clazz = codeEl.classList[j];
         if (clazz.startsWith("language-")) {
-          language = clazz.replace("language-", "");
+          const languageCode = clazz.replace("language-", "");
+          language = PRISM_LANG_ALIASES[languageCode] || languageCode;
           break;
         }
       }

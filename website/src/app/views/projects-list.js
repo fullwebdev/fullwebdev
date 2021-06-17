@@ -84,7 +84,6 @@ export default class ProjectsListElement extends LitElement {
       }
 
       .abstract {
-        margin-bottom: 2rem;
         max-width: 960px;
 
         text-align: center;
@@ -208,6 +207,15 @@ export default class ProjectsListElement extends LitElement {
         color: white;
       }
 
+      @media screen and (min-width: 720px) {
+        h1 {
+          margin-top: 2rem;
+        }
+        .abstract {
+          margin-bottom: 6rem;
+        }
+      }
+
       @media screen and (min-width: 865px) {
         :host {
           max-width: 960px;
@@ -292,7 +300,13 @@ export default class ProjectsListElement extends LitElement {
       <h1>${this.w.title}</h1>
       <section class="abstract">
         <p>${this.w.abstract}</p>
-        ${this.w.intro ? html`<p><a href="/docs/">${this.w.intro}</a></p>` : ""}
+        ${this.w.intro
+          ? html`<p>
+              <a class="call-to-action primary" href="/docs/"
+                >${this.w.intro}</a
+              >
+            </p>`
+          : ""}
       </section>
       ${typeof this.w.items === "string"
         ? html`<p class="empty-grid">${this.w.items}</p>`

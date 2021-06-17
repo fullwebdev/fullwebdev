@@ -1,6 +1,6 @@
 /** @type {import('../../views/projects-list').ProjectListWording} */
 const wording = {
-  title: "Apprendre",
+  title: "Ressources",
   abstract:
     "Acquérir une vision d'ensemble pragmatique du développement web, à votre propre rythme.",
   intro: "Introduction",
@@ -29,16 +29,30 @@ const wording = {
         {
           href:
             "https://www.leslibraires.fr/livre/18531129-developpement-et-architecture-des-applications--noel-mace-editions-eni",
-          primary: true,
+          primary: false,
           text: "leslibraires.fr",
         },
         {
           href:
             "https://www.librel.be/livre/9782409029523-developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-noel-mace/",
-          primary: true,
+          primary: false,
           text: "librel.be",
         },
       ],
+    },
+    {
+      type: "Conférence",
+      href: "/docs/conferences/navigateurs",
+      date: "juillet 2021",
+      desc: {
+        title: "Il était une fois... les navigateurs",
+        subtitle: "L'Histoire des navigateurs web en dessins.",
+      },
+      img: {
+        src: "/images/web-illustrations/maestro.jpg",
+        alt: "Maestro de la série il était une fois",
+        height: 200,
+      },
     },
     {
       type: "Documentation",
@@ -52,7 +66,7 @@ const wording = {
       img: {
         src: "/images/web-illustrations/speed-test.svg",
         alt: "speed test",
-        height: 175,
+        height: 200,
       },
     },
     {

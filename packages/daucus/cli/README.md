@@ -20,6 +20,7 @@ Commands
 
   build   generate static assets
   help    display help information about Daucus
+  watch   Compile a source file when it changes
 
 See 'daucus help <command>' to read about a specific subcommand
 

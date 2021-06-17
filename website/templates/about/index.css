@@ -1,0 +1,81 @@
+#about {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+#about h1,
+#about h2,
+#about h3,
+#about .subtitle {
+  text-align: center;
+}
+
+#about h3 {
+  margin-top: 3rem;
+}
+
+#about .subtitle {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: var(--primary-color-stronger);
+}
+
+#about .author {
+  margin-bottom: 3rem;
+}
+
+#about .author img {
+  max-width: 100%;
+}
+
+#about .about__list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#about .about__list figure {
+  text-align: center;
+  padding: 1rem;
+}
+
+#about .about__list figure:hover {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+#about .about__list figcaption {
+  margin-top: 1.5rem;
+}
+
+#about .about__list a {
+  text-decoration: none;
+  color: var(--primary-color-stronger);
+}
+
+@media screen and (min-width: 720px) {
+  #about .author {
+    display: flex;
+    flex-direction: row;
+    padding-top: 3rem;
+  }
+
+  #about .author h2 {
+    margin-top: 0;
+  }
+
+  #about .author img {
+    max-width: 350px;
+  }
+
+  .about__card-content {
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #about .author img {
+    box-shadow: rgba(0, 0, 0, 0.3) 40px 54px 54px;
+    margin: 0 70px 70px 0;
+  }
+}
