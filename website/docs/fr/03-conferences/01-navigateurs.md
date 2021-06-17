@@ -32,33 +32,32 @@ Pas de slides : le discours est soutenu par une illustration créée en direct.
 
 > _Plan global, susceptible de changer sur quelques détails d'ici la conférence. Le tout sera complété par des anecdotes peu connues et des détails techniques._
 
-    Il était une fois... les navigateurs
-    ├── Premiers pas
-    │   ├── Préhistoire: hypertexte et société de l'information
-    │   ├── Naissance du Web: CERN & Tim BL
-    │   ├── Premiers navigateurs (1993-1994)
-    │   │   ├── libwww
-    │   │   ├── Erwise
-    │   │   ├── ViolaWWW
-    │   │   ├── Midas
-    │   │   └── NCSA Mosaic
-    │   └── Dynamiser le web (1994-1995): Naissance de Netscape et du JavaScript
-    ├── De Netscape à Internet Explorer
-    │   ├── Première guerre des navigateurs (1992-2001)
-    │   ├── Naissance de Mozilla (1995-2004)
-    │   └── IE vs Firefox (2004-2010)
-    ├── Chrome & Safari
-    │   ├── Comment Linux et l'Open Source ont donnés naissance à Chrome (1996-2008)
-    │   ├── Chrome : de nombreuses innovations
-    │   └── Différences clés entre Chrome et Safari
-    ├── L'entrée dans le Web moderne
-    │   ├── Le succès des smartphones (2011-2017)
-    │   └── Le règne de Google (2017-?)
-    └── Le Web du futur ?
-        ├── Une nouvelle guerre ?
-        ├── Google dicte-t-il l'avenir du Web ?
-        │   ├── Rôle de Chromium dans le futur du Web (usages et standardisation)
-        │   └── PWA & Projet Fugu
-        └── Rôle des navigateurs dans le Web Moderne
-            ├── ESM & Web Components
-            └── Chrome, Polymer & Lit
+- Premiers pas
+  - Préhistoire: hypertexte et société de l'information
+  - Naissance du Web: CERN & Tim BL
+  - Premiers navigateurs (1993-1994)
+    - libwww
+    - Erwise
+    - ViolaWWW
+    - Midas
+    - NCSA Mosaic
+  - Dynamiser le web (1994-1995): Naissance de Netscape et du JavaScript
+- De Netscape à Internet Explorer
+  - Première guerre des navigateurs (1992-2001)
+  - Naissance de Mozilla (1995-2004)
+  - IE vs Firefox (2004-2010)
+- Chrome & Safari
+  - Comment Linux et l'Open Source ont donnés naissance à Chrome (1996-2008)
+  - Chrome : de nombreuses innovations
+  - Différences clés entre Chrome et Safari
+- L'entrée dans le Web moderne
+  - Le succès des smartphones (2011-2017)
+  - Le règne de Google (2017-?)
+- Le Web du futur ?
+  - Une nouvelle guerre ?
+  - Google dicte-t-il l'avenir du Web ?
+    - Rôle de Chromium dans le futur du Web (usages et standardisation)
+    - PWA & Projet Fugu
+  - Rôle des navigateurs dans le Web Moderne
+    - ESM & Web Components
+    - Chrome, Polymer & Lit
