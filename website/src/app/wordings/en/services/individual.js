@@ -15,7 +15,7 @@ const wording = {
           onclick: () => {
             if (window.Calendly) {
               window.Calendly.initPopupWidget({
-                url: "https://calendly.com/noelmace",
+                url: "https://calendly.com/noelmace/coaching-interview",
               });
             }
             return false;
