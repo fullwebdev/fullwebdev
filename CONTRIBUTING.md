@@ -71,6 +71,7 @@ Most packages are also parts of the website, but may provide more than that.
 | [/packages/helpers/](./packages/helpers/) | _helpers functions_ |
 | [/materials/illustrations/](./materials/illustrations/) | _images and more_ |
 | /materials/eni-dpawm/ (private) | closed sources of the ["Applications Web Modernes" book](https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523) |
+| /materials/modern-web-apps/ | open source resources from eni-dpawm |
 | [/packages/daucus/](./packages/daucus/) | _static website generator_ |
 | [/materials/perf/](./materials/perf/) | _WIP_ |
 | [/materials/slides/wof-1/](./materials/slides/wof-1/) | [/slides/wof1/](https://fullweb.dev/slides/wof1/) (for historical purposes only) |
@@ -142,7 +143,7 @@ Any line of the commit message cannot be longer than 100 characters.
   │                          eni-dpawm | perf | slides-(vanilla-1|wof-1|wof-2) | helpers |
   │                          helpers-(el|template|router) | benchmark | daucus |
   |                          daucus-(cli|core|menu|pandoc|router|snowpack-starter|typedoc-theme) |
-  |                          html-loader | custom-element-name | demos
+  |                          html-loader | custom-element-name | demos | modern-web-apps
   │
   └─⫸ Commit Type: build | ci | docs | feat | fix | perf | refactor | style | test
 ```
@@ -174,6 +175,7 @@ The following is the list of supported scopes:
 - `codelabs`
 - `illustrations`
 - `eni-dpawm`
+- `modern-web-apps`
 - `perf`
 - `helpers`
 - `helpers-el`
