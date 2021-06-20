@@ -16,6 +16,10 @@ const config = {
       root: "blog",
       reverseMenu: true,
     },
+    "browsers-history": {
+      src: "**/*.md",
+      root: "../materials/browsers-history",
+    },
     daucus: {
       src: "**/*.md",
       root: "../packages/daucus",
