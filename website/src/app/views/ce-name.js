@@ -1,7 +1,7 @@
 /* eslint-disable max-classes-per-file */
-import { LitElement, html, css } from "lit";
-import { unsafeHTML } from "lit/directives/unsafe-html.js";
-import { live } from "lit/directives/live.js";
+import { LitElement, html, css } from "lit-element";
+import { unsafeHTML } from "lit-html/directives/unsafe-html";
+import { live } from "lit-html/directives/live";
 import {
   validateAndCreateElement,
   InvalidElementNameError,
@@ -14,7 +14,7 @@ export const selector = "app-ce-name";
 class CENameTestElement extends LitElement {
   static get properties() {
     return {
-      _msg: { type: String, state: true },
+      _msg: { type: String, attribute: false },
       lang: { type: String },
       wording: { type: Object, attribute: false },
       value: { type: String },

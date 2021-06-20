@@ -6,7 +6,7 @@
  */
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { LitElement, html, css } from "lit";
+import { LitElement, html, css } from "lit-element";
 
 class AsyncHelloWorld extends LitElement {
   //#region styles

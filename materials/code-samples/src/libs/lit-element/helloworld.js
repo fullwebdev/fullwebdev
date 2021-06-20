@@ -2,7 +2,7 @@
 import {
   LitElement,
   html,
-} from "https://cdn.skypack.dev/lit@2.0.0-rc.2";
+} from "https://cdn.skypack.dev/lit-element@2.4.0";
 
 //#region component
 class HelloWorld extends LitElement {
