@@ -1,6 +1,6 @@
-import { LitElement, html, css } from "lit-element";
-import { ifDefined } from "lit-html/directives/if-defined.js";
-import { classMap } from "lit-html/directives/class-map.js";
+import { LitElement, html, css } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { classMap } from "lit/directives/class-map.js";
 
 export const selector = "app-projects-list";
 

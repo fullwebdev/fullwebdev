@@ -3,7 +3,7 @@
 <div class="wc-text-content">
 
 ::: tip
-Infos complémentaires pour la chronique "Les anecdotes historiques" présentée durant [Les briques du Web S01E02](https://youtu.be/rI6xUkOnyB0?t=2621) le 30 mars 2021.
+Infos complémentaires pour la chronique "Les anecdotes historiques" présentée durant [Les briques du Web S01E02](https://rdv-speakers.fr/les-briques-du-web/episodes/S01E02/) le 30 mars 2021.
 :::
 
 ::: warning

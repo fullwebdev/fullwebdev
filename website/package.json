@@ -1,6 +1,6 @@
 {
   "name": "@fullweb/website",
-  "version": "1.0.0-beta.9",
+  "version": "1.0.0-beta.10",
   "private": true,
   "scripts": {
     "build:daucus": "daucus build",
@@ -52,8 +52,7 @@
     "@modern-helpers/el": "*",
     "@modern-helpers/router": "*",
     "custom-element-name": "*",
-    "lit-element": "^2.4.0",
-    "lit-html": "^1.3.0",
+    "lit": "~2.0.0-rc.2",
     "prismjs": "^1.21.0"
   }
 }

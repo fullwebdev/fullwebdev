@@ -9,7 +9,7 @@ import {
   LitElement,
   html,
   css,
-} from "https://cdn.skypack.dev/lit-element@2.4.0";
+} from "https://cdn.skypack.dev/lit@2.0.0-rc.2";
 
 class AsyncHelloWorld extends LitElement {
   //#region styles
