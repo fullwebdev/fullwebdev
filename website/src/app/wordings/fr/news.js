@@ -8,7 +8,7 @@ const wording = {
       spotlight: false,
       wip: false,
       type: "blog",
-      date: "2021-06-08",
+      date: "2021-06-22",
       desc: {
         title: "WHATWG & W3C : la réunion de la discorde",
         subtitle: `Quelques compléments après ma chronique pour Les Briques du Web S01E07`,

@@ -1,6 +1,6 @@
 # WHATWG & W3C : la réunion de la discorde
 
-Pour une fois, ma chronique pour _Les briques du Web_ S01E07 du 8 juin 2021 aborde une anecdote assez simple. Il n'y aura donc pas d'article de blog complet pour approfondir le sujet, car toutes les infos sont dans le script ci-dessous.
+Pour une fois, ma chronique pour [_Les briques du Web_ S01E07](https://rdv-speakers.fr/les-briques-du-web/episodes/S01E07/) du 22 juin 2021 aborde une anecdote assez simple. Il n'y aura donc pas d'article de blog complet pour approfondir le sujet, car toutes les infos sont dans le script ci-dessous.
 
 Vous retrouverez cela dit plusieurs ressources complémentaires en bas de page.
 
