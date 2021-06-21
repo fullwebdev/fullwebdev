@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.9](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.8...v1.0.0-beta.9) (2021-06-21)
+
+### Bug Fixes
+
+- **website:** homepage loading ([06458f6](https://github.com/fullwebdev/fullwebdev/commit/06458f6b408ebd919961b95c597e907d722afb69)), closes [#104](https://github.com/fullwebdev/fullwebdev/issues/104)
+
 ## [1.0.0-beta.8](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.7...v1.0.0-beta.8) (2021-06-17)
 
 ### Features
