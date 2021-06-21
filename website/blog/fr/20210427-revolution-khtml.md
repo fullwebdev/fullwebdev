@@ -7,7 +7,7 @@
 ::: tip
 Infos complémentaires pour :
 
-- la chronique « Les anecdotes historiques » présentée durant Les briques du Web S01E04 le 27 avril 2021
+- la chronique « Les anecdotes historiques » présentée durant [Les briques du Web S01E04](https://rdv-speakers.fr/les-briques-du-web/episodes/S01E04/) le 27 avril 2021
 - le _Chapitre 2 : Suivre les évolutions de la plateforme - section 3. Naissance de Chrome et de Safari_ (p102-104) du livre _[Applications Web Modernes](https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523)_.
 
 :::

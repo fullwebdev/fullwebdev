@@ -14,7 +14,7 @@ Cet article n'est encore qu'un brouillon en cours de finalisation.
 
 Infos complémentaires pour :
 
-- la chronique « Les anecdotes historiques » présentée durant Les briques du Web S01E05 le 11 mai 2021
+- la chronique « Les anecdotes historiques » présentée durant [Les briques du Web S01E05](https://rdv-speakers.fr/les-briques-du-web/episodes/S01E05/) le 11 mai 2021
 - mon livre _[Applications Web Modernes](https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523)_.
 
 Cet article (comme la chronique) fait directement suite à l'épisode précédent « [Quand Linux et le logiciel libre ont révolutionné le Web](/blog/revolution-khtml) ».
