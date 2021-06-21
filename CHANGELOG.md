@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.10](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.9...v1.0.0-beta.10) (2021-06-21)
+
+### Features
+
+- **website:** new blog post - BdW S01E07 ([014fe1f](https://github.com/fullwebdev/fullwebdev/commit/014fe1f34cfd55fa06f9dec80feab15d3bf73334))
+
+### Bug Fixes
+
+- **code-samples:** show Lit until sample ([8b91dba](https://github.com/fullwebdev/fullwebdev/commit/8b91dbaefd044e12e0dfa15a1a94c37d2d770c66)), closes [#50](https://github.com/fullwebdev/fullwebdev/issues/50)
+- **website:** bdw s01e07 new date ([e81af6f](https://github.com/fullwebdev/fullwebdev/commit/e81af6fafc625e2dcd19e33965dd83ade730519d))
+- **website:** links to BdW episodes ([0d60b80](https://github.com/fullwebdev/fullwebdev/commit/0d60b800fa713aa154a084f9baec08645b64ca5a))
+
 ## [1.0.0-beta.9](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.8...v1.0.0-beta.9) (2021-06-21)
 
 ### Bug Fixes
