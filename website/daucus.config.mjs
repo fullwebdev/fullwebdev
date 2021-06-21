@@ -18,7 +18,7 @@ const config = {
     },
     "browsers-history": {
       src: "**/*.md",
-      root: "../materials/browsers-history",
+      root: "../materials/browsers-history/docs",
     },
     daucus: {
       src: "**/*.md",
