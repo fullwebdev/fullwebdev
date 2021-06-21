@@ -6,11 +6,12 @@ import { FILTERS } from "./binaries.js";
  *
  * @param {import('./io-formats').PandocInputFormat} from source format
  * @param {import('./io-formats').PandocOutputFormat} to output format
- * @param {String} content source content to convert
- * @param {String} [cwd] pandoc working directory
- * @param {Array<String>} [filters] name of filters
- * @param {Array<String>} [luaFilters] paths to lua filters
- * @param {Array<String>} [opts] other options (long format w/o "--")
+ * @param {string} content source content to convert
+ * @param {string} [cwd] pandoc working directory
+ * @param {Array<string>} [filters] name of filters
+ * @param {Array<string>} [luaFilters] paths to lua filters
+ * @param {Array<string>} [bibliographies] paths to bibliographic data files
+ * @param {Record<string, string | boolean | number>} [opts] other options (long format w/o "--")
  */
 export function convert(
   from,
@@ -19,7 +20,8 @@ export function convert(
   cwd,
   filters = [],
   luaFilters = [],
-  opts = []
+  bibliographies = [],
+  opts = {}
 ) {
   return run(
     [
@@ -28,7 +30,14 @@ export function convert(
       ...filters.map((filter) => `--filter=${filter}`),
       // requires an absolute path to the filter
       ...luaFilters.map((filter) => `--lua-filter=${filter}`),
-      ...opts.map((opt) => `--${opt}`),
+      ...bibliographies.map((bib) => `--bibliography=${bib}`),
+      ...Object.entries(opts).map(([key, value]) => {
+        const opt = `--${key}`;
+        if (value === true) {
+          return opt;
+        }
+        return `${opt}=${value}`;
+      }),
     ],
     cwd,
     content
@@ -42,7 +51,23 @@ export function convert(
  * @param {import('./convertion-params.js').ConvertionParams} [params]
  */
 export function md2html(md, params = {}) {
-  const { root, filters = [], luaFilters = [], options = [] } = params;
+  const {
+    root,
+    filters = [],
+    luaFilters = [],
+    bibliographies,
+    options = {},
+  } = params;
+  /**
+   * @type {Record<string, boolean | string | number>}
+   */
+  const opts = {
+    "no-highlight": true,
+    ...options,
+  };
+  if (bibliographies && bibliographies.length > 0) {
+    opts.citeproc = true;
+  }
   return convert(
     // @ts-ignore TODO: add markdown extensions to definition
     "markdown+emoji",
@@ -51,6 +76,7 @@ export function md2html(md, params = {}) {
     root,
     filters,
     [FILTERS["standard-code"], ...luaFilters],
-    ["no-highlight", ...options]
+    bibliographies,
+    opts
   );
 }
