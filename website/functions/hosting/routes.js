@@ -40,6 +40,13 @@ exports.routes = {
       "https://fullweb.dev/images/web-illustrations/richard-balog-open-unsplash.jpg",
     "twitter:image:alt": "Come in we're open",
   },
+  "/blog/naissance-whatwg": {
+    "og:type": "article",
+    "og:title": "WHATWG & W3C : la réunion de la discorde",
+    "og:description": "Compléments pour Les Briques du Web S01E07",
+    "og:image": "https://fullweb.dev/images/web-illustrations/two-foxes.jpg",
+    "twitter:image:alt": "deux renards se battant dans la neige",
+  },
 };
 
 exports.dirs = [
