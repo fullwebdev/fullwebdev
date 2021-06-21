@@ -1,5 +1,7 @@
 # Chronologie
 
+![Évolution des parts d'utilisation des navigateurs web de 1997 à 2021 (ref. browsersShare94-21)](/illustrations/images/history/browser-share/graph-browser-share-1994-2021.png)
+
 ## Les débuts (1990-1995)
 
 ### Tim BL, le CERN et la naissance du Web (1990-1991)
@@ -14,7 +16,7 @@
   - Robert Cailliau le rejoint pour travailler à la création d’un navigateur pour Macintosh
   - _www_ (le navigateur en ligne de commande) a été créé par un étudiant du CERN, Nicola Pellow
   - seules les utilisateurs de NeXT pouvaient vraiment comprendre le Web - un journaliste aurait même écrit à l’époque “The Web is a way of finding information by typing numbers”
-- 1992 : création de Line Mode Browser (LMB / pas le même a priori)
+- 1992 : création de [Line Mode Browser](https://line-mode.cern.ch/)
 - 1991-1992 : une partie de WorldWideWeb est réécrit en portable C
 - octobre 1992 : ce travail donne naissance à the [Common Library 1.0](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/Library/Features.html)
   - intégrée à CERNLIB (CERN Program Library, largement utilisée dans le milieu de la recherche en physique des particules)
@@ -67,6 +69,8 @@
 - 9 septembre 1994 : la MCC publie la version beta 0.4 de son propre fork de Mosaic
 - 14 nombre 1994 : MCC et son navigateur sont renommés Netscape pour éviter tout contentieux avec le NCSA
 
+![Logo "NCSA Mosaic from Spyglass" tel que présent sur les disquettes de l'époque (ref. spyglassMosaicFloppy)](/illustrations/images/third-party/spyglass-mosaic.png){ width=9cm }
+
 > ### et Lynx
 >
 > - 1992 : création de Lynx, un navigateur hypertexte en ligne de commande
@@ -88,7 +92,9 @@
 
 ## Première guerre des navigateurs (1995-2001)
 
-> à compléter
+![Évolutions du logo de Interner Explorer au fil de l'Histoire (ref. IELogosHistory)](/illustrations/images/history/patchworks/ie-logos.png)
+
+![Évolution des parts d'utilisation des navigateurs web durant la première guerre des navigateurs (ref. browsersShare94-02)](/illustrations/images/history/browser-share/graph-browser-share-1994-2002.png)
 
 - 10 avril 1995 : première version d'Opera
 - 16 aout 1995 : publication de Internet Explorer 1.0
@@ -111,6 +117,16 @@
 ## La relève se prépare (1998-2003)
 
 ### La naissance de Mozilla et Firefox (1998-2004)
+
+<!-- prettier-ignore -->
+![Premier logo de Mozilla (ref. mozillaDinoLogo)](/illustrations/images/third-party/1024px-Mozilla_dinosaur_head_logo.png){ width=6cm }
+
+<!-- prettier-ignore -->
+![Statue de "Mozilla" à l'AOL Campus de Dulles, Virginie, USA. (ref. MozillaStatueAOL)](/illustrations/images/third-party/mozilla-statue-aol.png){ width=6cm }
+
+![Phoenix 0.1 sur Windows XP](/illustrations/images/third-party/Phoenix_0.1.png)
+
+![Évolution des logos de Firefox au fil de l'Histoire (ref. FirefoxLogosHistory)](/illustrations/images/history/patchworks/firefox-logos.png)
 
 - 7 décembre 1998 : démonstrations et publication pour les développeurs d'une première préversion de Gecko
   - date de naissance de la suite Mozilla
@@ -155,6 +171,10 @@
 
 ## Seconde Guerre des navigateurs (2004-2020)
 
+![Évolution des parts d'utilisation des navigateurs web durant la première phase de la seconde guerre des navigateurs (ref. browsersShare03-10)](/illustrations/images/history/browser-share/graph-browser-share-2003-2010.png)
+
+![Évolution des parts d'utilisation des navigateurs web durant la seconde phase de la seconde guerre des navigateurs (ref. browsersShare10-17)](/illustrations/images/history/browser-share/graph-browser-share-2010-2017.png)
+
 ### Firefox vs IE (2004-2010)
 
 - 2003 : Microsoft décide de lier les mises à jours de IE à celles de Windows
@@ -187,6 +207,8 @@
 
 ### Le Web mobile (2011-2017)
 
+![Parts d'utilisation de navigateurs sur Android (ref. graphNavigateursAndroid)](/illustrations/images/history/browser-share/graph-browser-share-android_GS.png)
+
 - 2013 : 16% des visites de sites web sont effectuées depuis un smartphone
 - 2014 : Google privilégie Chrome pour Android face à l'Android Browser
 - 2017 : une courte majorité des consultations de sites web se fait depuis un mobile
@@ -195,6 +217,10 @@
   - Nokia et Firefox OS ont été des échecs
 
 ### Chrome devient le roi incontesté du Web (2017-2019)
+
+![Composants principaux de Chromium (ref. ChromiumArchitecture2020)](/illustrations/images/fundamentals/chromium-architecture.png)
+
+![Parts de marché des navigateurs web en octobre 2020 (ref. partsNavigateursOct2020)](/illustrations/images/history/browser-share/graph-browser-share-latest.png)
 
 - 2013 : Opera 15 abandonne Presto et Carakan au profit de Chromium
 - 3 avril 2014 : Brendan Eich démissionne de son poste de CEO de Mozilla après seulement 11 jours, suite aux révélations depuis 2012 de ses dons répétés à des campagnes anti mariage gay entre 2008 et 2010
