@@ -3,7 +3,7 @@
 <div class="wc-text-content">
 
 ::: tip
-Infos complémentaires pour la chronique "Les anecdotes historiques" présentée durant [Les briques du Web S01E01](https://www.youtube.com/watch?v=czAx81Upp_U) le 16 mars 2021.
+Infos complémentaires pour la chronique "Les anecdotes historiques" présentée durant [Les briques du Web S01E01](https://rdv-speakers.fr/les-briques-du-web/episodes/S01E01/) le 16 mars 2021.
 :::
 
 ![Bill English, membre de l'équipe de Douglas Engelbart à l'ARC, en pleine préparation de la "mère de toutes les démos"](/illustrations/images/third-party/SRI-Bill-English-1968.png)
