@@ -20,7 +20,11 @@ const config = {
       src: "**/*.md",
       root: "../materials/browsers-history/docs",
       compilerOptions: {
-        bibliographies: ["../../../modern-web-apps/bibliography.json"],
+        bibliographies: [
+          "../../bibliography.json",
+          "../../../modern-web-apps/bibliography.json",
+          "../../../illustrations/credits.json",
+        ],
         options: {
           csl: "../../../modern-web-apps/modeles/french1.csl",
         },

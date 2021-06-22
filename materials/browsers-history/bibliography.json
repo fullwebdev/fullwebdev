@@ -1,0 +1,81 @@
+[
+  {
+    "id": "achieverTimBL2007",
+    "accessed": { "date-parts": [[2021, 6, 23]] },
+    "citation-label": "achieverTimBL2007",
+    "container-title": "Academy of Achievement",
+    "issued": { "date-parts": [[2007, 1, 22]] },
+    "language": "en-US",
+    "title": "Interview: Sir Tim Berners-Lee, father of the World Wide Web",
+    "type": "article-magazine",
+    "URL": "https://achievement.org/achiever/sir-timothy-berners-lee/"
+  },
+  {
+    "id": "HopgoodHistoryWeb2001",
+    "accessed": { "date-parts": [[2021, 6, 22]] },
+    "author": [{ "family": "Hopgood", "given": "Bob" }],
+    "citation-label": "HopgoodHistoryWeb2001",
+    "issued": { "date-parts": [[2001]] },
+    "publisher": "Oxford Brookes University",
+    "title": "History of the Web",
+    "type": "article",
+    "URL": "https://www.w3.org/2012/08/history-of-the-web/origins.htm"
+  },
+  {
+    "id": "insiderInterviewTimBL2017",
+    "abstract": "Axel Springer CEO Mathias Döpfner sat down with Sir Tim Berners-Lee, the inventor of the World Wide Web, for a far-ranging conversation.",
+    "accessed": { "date-parts": [[2021, 6, 23]] },
+    "author": [{ "family": "Döpfner", "given": "Mathias" }],
+    "citation-label": "insiderInterviewTimBL2017",
+    "container-title": "Business Insider",
+    "issued": { "date-parts": [[2017, 5, 7]] },
+    "language": "en-US",
+    "title": "The inventor of the web Tim Berners-Lee on the future of the internet, 'fake news,' and why net neutrality is so important",
+    "type": "article-magazine",
+    "URL": "https://www.businessinsider.com/mathias-dopfner-tim-berners-lee-world-wide-web-interview-2017-5"
+  },
+  {
+    "id": "segalHistInternetCern1995",
+    "accessed": { "date-parts": [[2021, 6, 22]] },
+    "author": [{ "family": "Segal", "given": "Ben" }],
+    "citation-label": "segalHistInternetCern1995",
+    "issued": { "date-parts": [[1995, 4]] },
+    "publisher": "CERN IT-PDP-TE",
+    "title": "A Short History of Internet Protocols at CERN",
+    "type": "article",
+    "URL": "https://ben.web.cern.ch/ben/TCPHIST.html"
+  },
+  {
+    "id": "SocialHireTimBL",
+    "abstract": "As most of us realise at some point, it’s all very well and good having a hobby; but how do we...",
+    "accessed": { "date-parts": [[2021, 6, 22]] },
+    "author": [{ "literal": "Alice Murray" }],
+    "citation-label": "SocialHireTimBL",
+    "container-title": "Social Hire",
+    "language": "en",
+    "title": "Here’s everything you NEVER knew about internet marvel Tim Berners-Lee…",
+    "type": "article-magazine",
+    "URL": "https://social-hire.com/blog/candidate/everything-you-never-knew-about-tim-berners-lee/"
+  },
+  {
+    "id": "TimBLKids",
+    "accessed": { "date-parts": [[2021, 6, 22]] },
+    "author": [{ "family": "Berners-Lee", "given": "Tim" }],
+    "citation-label": "TimBLKids",
+    "container-title": "w3.org",
+    "title": "Answers for young people - Tim Berners-Lee",
+    "type": "webpage",
+    "URL": "https://www.w3.org/People/Berners-Lee/Kids.html"
+  },
+  {
+    "id": "TimBLUnivUtil",
+    "accessed": { "date-parts": [[2021, 6, 23]] },
+    "author": [{ "family": "Berners-Lee", "given": "Tim" }],
+    "citation-label": "TimBLUnivUtil",
+    "issued": { "date-parts": [[1998]] },
+    "publisher": "W3C",
+    "title": "Tim Berners-Lee: WWW and UU and I",
+    "type": "article",
+    "URL": "https://www.w3.org/People/Berners-Lee/UU.html"
+  }
+]

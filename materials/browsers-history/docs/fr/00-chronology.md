@@ -6,20 +6,33 @@
 
 ### Tim BL, le CERN et la naissance du Web (1990-1991)
 
+- juin à décembre 1980 : première mission de Tim BL au CERN
+  - création de ENQUIRE
+- septembre 1984 : Tim BL retourne au CERN
+- janvier 1989 : le CERN se connecte à Internet [@segalHistInternetCern1995]
+  - en 1990, le CERN est le plus important site Internet d'Europe et joue un rôle immense dans son développement
+- mars 1989 : Tim BL écrit une proposition pour un système de gestion de l'information au CERN [@TimBLCERNProposal]
+- mai 1990 : Tim BL finalise sa proposition [@TimBLCERNProposal]
 - mars 1989 - mai 1990 : WorldWideWeb (écrit en Objective-C, uniquement compatible NeXTStep) est créé au CERN par Tim BL
   - rebaptisé Nexus "bien plus tard"
+- octobre/novembre (?) 1990 : Tim BL développe (en un mois) le navigateur WorldWideWeb [@briefHistoryTimBL]
+  - il lui faudra un mois de plus pour ajouter les fonctionnalités d'édition
+- 20 décembre 1990 : publication de <info.cern.ch>, le premier site Web
+  - <http://info.cern.ch/hypertext/WWW/TheProject.html> étant la toute première page publiée
+  - le site tournait sur l'ordinateur NeXT qui avait été affecté à Tim BL pour développer le système d'information, dans les locaux du CERN
 
 ![Le tout premier serveur Web tel qu'exposé au CERN en 2008, accompagné d'un exemplaire de "Enquire Within upon Everything". L'étiquette, d'époque, indique : "Cette machine est un serveur. NE PAS ÉTEINDRE !" (ref. timNextCube)](/illustrations/images/third-party/premier-serveur-web.png){width=20cm }
 
 - été 1991 : Tim BL partage le serveur NeXTStep et le navigateur en ligne de commande sur Internet (via FTP, puis via le groupe Usenet alt.hypertext)
   - voir <https://line-mode.cern.ch>
   - Robert Cailliau le rejoint pour travailler à la création d’un navigateur pour Macintosh
-  - _www_ (le navigateur en ligne de commande) a été créé par un étudiant du CERN, Nicola Pellow
-  - seules les utilisateurs de NeXT pouvaient vraiment comprendre le Web - un journaliste aurait même écrit à l’époque “The Web is a way of finding information by typing numbers”
-- 1992 : création de [Line Mode Browser](https://line-mode.cern.ch/)
+  - [Line Mode Browser](https://line-mode.cern.ch/), ou _www_, a été créé par un étudiant du CERN, Nicola Pellow
+  - seules les utilisateurs de NeXT pouvaient vraiment comprendre le Web - un journaliste aurait même écrit à l’époque “The Web is a way of finding information by typing numbers” [@TimBLFAQ]
+- 1992 : création de
 - 1991-1992 : une partie de WorldWideWeb est réécrit en portable C
 - octobre 1992 : ce travail donne naissance à the [Common Library 1.0](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/Library/Features.html)
   - intégrée à CERNLIB (CERN Program Library, largement utilisée dans le milieu de la recherche en physique des particules)
+- 30 avril 1993 : WorldWideWeb est publié dans le domaine publique
 - [mai 1993](https://www.w3.org/News/9305.html) : the Common Libray est renommé libwww et publié dans le domaine publique
 
 ### Les précurseurs (1992)
