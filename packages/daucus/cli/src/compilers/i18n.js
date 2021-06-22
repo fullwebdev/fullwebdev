@@ -43,7 +43,7 @@ export function getLangFromPath(filePath, root) {
   /** @type {LanguageCode} */
   // prettier-ignore
   const rootDirName = (/** @type {LanguageCode} */ relativeFilePath.split(
-    path.delimiter
+    path.sep
   )[0]);
   if (!rootDirName || !rootDirName.match(ISO639_1_REGEXP)) {
     return "";

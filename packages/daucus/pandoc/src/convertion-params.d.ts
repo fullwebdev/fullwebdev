@@ -12,6 +12,10 @@ export interface ConvertionParams {
    */
   luaFilters?: string[];
   /**
+   * Paths to bibliographic data files.
+   */
+  bibliographies?: string[];
+  /**
    * Additionnal options (long format w/o "--")
    */
   options?: string[];

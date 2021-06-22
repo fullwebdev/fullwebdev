@@ -70,6 +70,23 @@
     content: "🗣"
   }
 
+  .references {
+    border-top: 1px solid var(--neutral-color-300);
+    margin-top: 5rem;
+  }
+
+  .csl-entry {
+    margin: 1rem 0;
+  }
+
+  .csl-left-margin, .csl-right-inline {
+    display: inline;
+  }
+
+  .csl-right-inline {
+    margin-left: 1rem;
+  }
+
   @media screen and (max-width: 719px) {
     table, thead, tbody, th, td, tr {
       display: block;
