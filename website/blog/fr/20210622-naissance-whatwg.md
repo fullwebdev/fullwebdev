@@ -10,7 +10,7 @@ On aura prochainement l'occasion de revenir plus en détails sur l'Histoire du X
 
 <div class="wc-text-content speak-time">
 
-Deux tiers de l'histoire du Web ont été dominés par de petites disputes, de grands désaccords, bref, le brol, la zizanie, la chaos.\
+Deux tiers de l'histoire du Web ont été dominés par de petites disputes, de grands désaccords, bref, le brol, la zizanie, le chaos.\
 J'ai nommé :
 
 <!-- markdownlint-disable no-emphasis-as-header -->
@@ -111,17 +111,17 @@ Le même langage est standardisé deux fois !
 
 Il aura fallu attendre 2019 pour que les deux groupes décident enfin de passer un accord déléguant pour de bon la responsabilité de l'HTML et du DOM au WHATWG.
 
-Bon, on final, ça nous apprends quoi tout ça ?
+Bon, au final, ça nous apprend quoi tout ça ?
 
 Quoi qu'on en dise, les organismes de standardisation du Web ne sont pas UNIQUEMENT des espaces d'échange et de débats pacifiques.\
 Diriger les standards est un enjeu stratégique immense pour de nombreuses entreprises.\
 Celles-ci chercheront donc toujours à acquérir plus de pouvoir de décision.
 
 La création du WHATWG a été sans aucun doute, globalement, une très bonne chose pour le Web.\
-Certaines entreprises "extérieures" au Web, comme Adobe et IBM, y prenaient une place beaucoup trop importante.\
+Certaines entreprises "extérieures" au Web, comme Adobe et IBM, prenaient une place beaucoup trop importante au W3C.\
 L'arrivée de HTML5 et du WICG ont, en partie, permis de résoudre ce problème.
 
-Mais les navigateur ont surtout créé le WHATWG pour gagner en indépendance, donc en autorité.
+Mais les navigateurs ont surtout créé le WHATWG pour gagner en indépendance, donc en autorité.
 
 ...
 
