@@ -19,6 +19,12 @@ const config = {
     "browsers-history": {
       src: "**/*.md",
       root: "../materials/browsers-history/docs",
+      compilerOptions: {
+        bibliographies: ["../../../modern-web-apps/bibliography.json"],
+        options: {
+          csl: "../../../modern-web-apps/modeles/french1.csl",
+        },
+      },
     },
     daucus: {
       src: "**/*.md",
