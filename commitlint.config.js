@@ -10,6 +10,7 @@ module.exports = {
         "codelabs",
         "illustrations",
         "eni-dpawm",
+        "modern-web-apps",
         "perf",
         "helpers",
         "helpers-el",
