@@ -1,21 +1,28 @@
 import { Wordings } from "../languages";
 
+export interface CallToActionParams {
+  href?: string;
+  text: string;
+  primary?: boolean;
+  onclick?: EventListener;
+}
 export interface Project {
   href?: string;
   type?: string;
   spotlight?: boolean;
   wip?: boolean;
   date?: string;
-  img: { src: string; alt: string; height?: number };
+  backgroundImg?: string;
+  img?: { src: string; alt: string; height?: number };
   desc: { title: string; subtitle: string };
-  cta?: Array<{ href: string; text: string; primary?: boolean }>;
+  cta?: Array<CallToActionParams>;
 }
 
 export interface ProjectListWording {
   title: string;
-  abstract: string;
+  abstract?: string;
   items: Array<Project> | string;
-  intro?: string;
+  cta?: Array<CallToActionParams>;
 }
 
 export type ProjectListWordings = Wordings<ProjectListWording>;

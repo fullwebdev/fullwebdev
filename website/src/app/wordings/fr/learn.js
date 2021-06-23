@@ -3,7 +3,7 @@ const wording = {
   title: "Ressources",
   abstract:
     "Acquérir une vision d'ensemble pragmatique du développement web, à votre propre rythme.",
-  intro: "Introduction",
+  cta: [{ text: "Introduction", href: "/docs/", primary: true }],
   items: [
     {
       type: "Livre",
