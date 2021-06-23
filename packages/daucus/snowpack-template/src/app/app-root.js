@@ -1,7 +1,7 @@
-import { LitElement, html, css } from 'lit-element';
-import { ifDefined } from 'lit-html/directives/if-defined';
-import { live } from 'lit-html/directives/live';
-import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
+import { LitElement, html, css } from 'lit';
+import { ifDefined } from 'lit/directives/if-defined.js';
+import { live } from 'lit/directives/live.js';
+import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 /*
  * You can also use @daucus/html-loader and/or @modern-helpers/router
  * instead of @daucus/router if you need less abstraction
@@ -21,8 +21,8 @@ class AppRoot extends LitElement {
   static get properties() {
     return {
       message: { type: String },
-      _activePath: { type: String, attribute: false },
-      _templateHRef: { type: String, attribute: false },
+      _activePath: { type: String, state: true },
+      _templateHRef: { type: String, state: true },
     };
   }
 

@@ -1,7 +1,7 @@
 /* eslint-disable lit-a11y/click-events-have-key-events */
-import { html } from "lit-html";
-import { unsafeHTML } from "lit-html/directives/unsafe-html";
-import { ifDefined } from "lit-html/directives/if-defined";
+import { html } from "lit";
+import { unsafeHTML } from "lit/directives/unsafe-html.js";
+import { ifDefined } from "lit/directives/if-defined.js";
 import routes from "../demo/routes.js";
 import "../daucus-menu.js";
 
