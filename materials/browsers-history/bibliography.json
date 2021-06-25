@@ -11,6 +11,30 @@
     "URL": "https://achievement.org/achiever/sir-timothy-berners-lee/"
   },
   {
+    "id": "CelloBrowserHome",
+    "accessed": { "date-parts": [[2021, 6, 25]] },
+    "citation-label": "CelloBrowserHome",
+    "issued": { "date-parts": [[2004, 2, 17]] },
+    "title": "Cello: an Internet Browser",
+    "title-short": "Cello",
+    "type": "webpage",
+    "URL": "https://web.archive.org/web/20040217003215/http://www.law.cornell.edu/cello/"
+  },
+  {
+    "id": "guardianXanaduRelease2014",
+    "abstract": "Xanadu, which began development in 1960, now has a working release, OpenXanadu. By Alex Hern",
+    "accessed": { "date-parts": [[2021, 6, 24]] },
+    "author": [{ "family": "Hern", "given": "Alex" }],
+    "citation-label": "guardianXanaduRelease2014",
+    "container-title": "the Guardian",
+    "issued": { "date-parts": [[2014, 6, 6]] },
+    "language": "en",
+    "section": "Technology",
+    "title": "World's most delayed software released after 54 years of development",
+    "type": "article-magazine",
+    "URL": "http://www.theguardian.com/technology/2014/jun/06/vapourware-software-54-years-xanadu-ted-nelson-chapman"
+  },
+  {
     "id": "HopgoodHistoryWeb2001",
     "accessed": { "date-parts": [[2021, 6, 22]] },
     "author": [{ "family": "Hopgood", "given": "Bob" }],
@@ -35,6 +59,37 @@
     "URL": "https://www.businessinsider.com/mathias-dopfner-tim-berners-lee-world-wide-web-interview-2017-5"
   },
   {
+    "id": "LivingInternetInventionWWW",
+    "abstract": "Creation Of The Web -- History, Tim Berners-Lee, Robert Cailliau, CERN, First Server, Birth, Invention",
+    "accessed": { "date-parts": [[2021, 6, 24]] },
+    "citation-label": "LivingInternetInventionWWW",
+    "container-title": "LivingInternet",
+    "language": "en-US",
+    "title": "Tim Berners-Lee, Robert Cailliau, And Invention of The World Wide Web",
+    "type": "post-weblog",
+    "URL": "https://www.livinginternet.com/w/wi_lee.htm"
+  },
+  {
+    "id": "LivingInternetWebBrowserHist",
+    "accessed": { "date-parts": [[2021, 6, 24]] },
+    "citation-label": "LivingInternetWebBrowserHist",
+    "container-title": "LivingInternet",
+    "language": "en-US",
+    "title": "Web Browser History - First, Early",
+    "type": "post-weblog",
+    "URL": "https://www.livinginternet.com/w/wi_browse.htm"
+  },
+  {
+    "id": "raischRFCStyle93",
+    "accessed": { "date-parts": [[2021, 6, 25]] },
+    "author": [{ "family": "Raisch", "given": "Rob" }],
+    "citation-label": "raischRFCStyle93",
+    "issued": { "date-parts": [[1993, 6, 10]] },
+    "title": "Request for Comments: STYLESHEETS (www-talk)",
+    "type": "personal_communication",
+    "URL": "http://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/443.html"
+  },
+  {
     "id": "segalHistInternetCern1995",
     "accessed": { "date-parts": [[2021, 6, 22]] },
     "author": [{ "family": "Segal", "given": "Ben" }],
@@ -44,6 +99,16 @@
     "title": "A Short History of Internet Protocols at CERN",
     "type": "article",
     "URL": "https://ben.web.cern.ch/ben/TCPHIST.html"
+  },
+  {
+    "id": "sinkMemoirsBrowserWars2003",
+    "accessed": { "date-parts": [[2021, 6, 25]] },
+    "author": [{ "family": "Sink", "given": "Eric" }],
+    "citation-label": "sinkMemoirsBrowserWars2003",
+    "issued": { "date-parts": [[2003, 4, 15]] },
+    "title": "Memoirs From the Browser Wars",
+    "type": "post-weblog",
+    "URL": "https://web.archive.org/web/20060715104818/http://biztech.ericsink.com/Browser_Wars.html"
   },
   {
     "id": "SocialHireTimBL",
@@ -77,5 +142,47 @@
     "title": "Tim Berners-Lee: WWW and UU and I",
     "type": "article",
     "URL": "https://www.w3.org/People/Berners-Lee/UU.html"
+  },
+  {
+    "id": "TimBLViolaReview",
+    "accessed": { "date-parts": [[2021, 6, 25]] },
+    "author": [{ "family": "Berners-Lee", "given": "Tim" }],
+    "citation-label": "TimBLViolaReview",
+    "title": "Review -- /Viola",
+    "type": "article",
+    "URL": "https://www.w3.org/History/19921103-hypertext/hypertext/Viola/Review.html"
+  },
+  {
+    "id": "wiredCurseXanadu1995",
+    "abstract": "It was the most radical computer dream of the hacker era. Ted Nelson's Xanadu project was supposed to be the universal, democratic hypertext library that would help human life evolve into an entirely new form.",
+    "accessed": { "date-parts": [[2021, 6, 24]] },
+    "author": [{ "family": "Wolf", "given": "Gary" }],
+    "citation-label": "wiredCurseXanadu1995",
+    "container-title": "Wired",
+    "ISSN": "1059-1028",
+    "issued": { "date-parts": [[1995, 6, 1]] },
+    "language": "en-US",
+    "source": "www.wired.com",
+    "title": "The Curse of Xanadu",
+    "type": "article-magazine",
+    "URL": "https://www.wired.com/1995/06/xanadu/"
+  },
+  {
+    "id": "wwwTalkViolaStylesheet",
+    "accessed": { "date-parts": [[2021, 6, 25]] },
+    "author": [{ "family": "Wei", "given": "Pei Y." }],
+    "citation-label": "wwwTalkViolaStylesheet",
+    "issued": { "date-parts": [[1993, 10, 22]] },
+    "title": "Stylesheet Language (www-talk)",
+    "type": "personal_communication",
+    "URL": "http://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q4.messages/263.html"
+  },
+  {
+    "id": "XanaduHome",
+    "accessed": { "date-parts": [[2021, 6, 24]] },
+    "citation-label": "XanaduHome",
+    "title": "PROJECT XANADU Home Page",
+    "type": "webpage",
+    "URL": "https://xanadu.com/xuhome.html"
   }
 ]
