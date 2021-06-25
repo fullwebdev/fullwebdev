@@ -49,6 +49,7 @@ Qu'un vieux livre poussiéreux allait faire office de grimoire pour le petit Tim
   - 24 lignes / 64 caractères
   - créé vision d'ensemble de tout le système
   - affiche détails en cliquant sur des parties
+- HyperCard (Apple)
 
 ### Enquire
 
@@ -70,12 +71,13 @@ Qu'un vieux livre poussiéreux allait faire office de grimoire pour le petit Tim
   - ➕ grand site d'Europe
 - mars 1989 - mai 1990 : proposition [@TimBLCERNProposal]
 
+- ordi NeXTStep
+
 - octobre/novembre (?) 1990 : WorldWideWeb (en un mois) [@briefHistoryTimBL]
 
   - ➕ 1 mois pour l'édition
+  - déjà Collaboration (Web 2.0 😆)
   - renommé Nexus bien plus tard
-
-- ordi NeXTStep
 
 ## Après publication
 
@@ -93,8 +95,9 @@ Qu'un vieux livre poussiéreux allait faire office de grimoire pour le petit Tim
 - X Window System
 - grosse pression
 - mais pas de budget
-  - Robert Cailliau le rejoint pour créer un navigateur pour Macintosh
-- il va, avec lui, faire le tour des centres de recherche en physique des particules, pour motiver des étudiants
+
+- réécriture (partielle) de WorldWideWeb/Nexus : objective C ➡️ portable C
+  - MAIS n'aboutira qu'en octobre 1992 (the Common Library 1.0 / libwww)
 
 <hr>
 
