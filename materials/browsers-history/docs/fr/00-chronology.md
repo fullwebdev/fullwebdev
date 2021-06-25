@@ -28,9 +28,14 @@
   - Robert Cailliau le rejoint pour travailler à la création d’un navigateur pour Macintosh
   - [Line Mode Browser](https://line-mode.cern.ch/), ou _www_, a été créé par un étudiant du CERN, Nicola Pellow
   - seules les utilisateurs de NeXT pouvaient vraiment comprendre le Web - un journaliste aurait même écrit à l’époque “The Web is a way of finding information by typing numbers” [@TimBLFAQ]
-- 1992 : création de
 - 1991-1992 : une partie de WorldWideWeb est réécrit en portable C
-- octobre 1992 : ce travail donne naissance à the [Common Library 1.0](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/Library/Features.html)
+- juin-août 1992 : séjour de 3 mois de Tim BL aux USA pour le CERN [@LivingInternetInventionWWW]
+  - il visite le laboratoire d'informatique du MIT
+  - puis se rend à la conférence de l'IETF à Boston
+  - puis au parc Xerox à Palo Alto, Californie
+  - il rend également une visite à Ted Nelson, l'inventeur de l'hypertexte dans les années 60 (cf. projet Xanadu)
+    - Note : le projet Xanadu avait beau être, sur le papier, "bien meilleur" que le Web (en tout cas, d'après ses créateurs [@XanaduHome]), il n'a été "finalisé" qu'en 2014[@wiredCurseXanadu1995; @guardianXanaduRelease2014]
+- octobre 1992 : la réécriture de WorldWideWeb en C donne naissance à the [Common Library 1.0](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/Library/Features.html)
   - intégrée à CERNLIB (CERN Program Library, largement utilisée dans le milieu de la recherche en physique des particules)
 - 30 avril 1993 : WorldWideWeb est publié dans le domaine publique
 - [mai 1993](https://www.w3.org/News/9305.html) : the Common Libray est renommé libwww et publié dans le domaine publique
@@ -50,6 +55,7 @@
 - mai 1992 : première version publique de ViolaWWW
 - août 1992 : le code source de Erwise est librement partagé via le groupe de discussion Usenet _www-talk_
 - 16 novembre 1992 : publication de Midas, navigateur X Windows System développé par Tony Johnson pour le SLAC (centre le l'accélérateur linéaire de Stanford)
+- fin 1992 : Nicola Pellow finalise le développement de Samba, navigateur pour Macintosh initié par Robert Cailliau [@LivingInternetWebBrowserHist]
 
 ### De Mosaic à Netscape (1993-1994)
 
@@ -79,6 +85,7 @@
   - il quitte le NCSA pour EIT (Enterprise Integration Technologies), en Californie, [entreprise fondée par Jay Martin Tenenbaum en 1990](https://web.archive.org/web/20101206231907/https://alum.mit.edu/news/AlumniProfiles/Archive/Marty_Tenenbaum_-2764-2C_EE_-2766-2C_SM_-2766), à l'origine de la première transaction commerciale, transaction Web sécurisée, et vente aux enchères sur Internet.
 - avril 1994 : Marc Andreessen fonde avec Jim Clark la "Mosaic Communications Corporation"
   - il s'agit alors de la toute première entreprise à but commerciale dédiée au Web (mais pas Internet, évidemment)
+- août 1994 : le NCSA transmet les droits commerciaux de Mosaic à Spyglass [@LivingInternetWebBrowserHist]
 - 9 septembre 1994 : la MCC publie la version beta 0.4 de son propre fork de Mosaic
 - 14 nombre 1994 : MCC et son navigateur sont renommés Netscape pour éviter tout contentieux avec le NCSA
 
