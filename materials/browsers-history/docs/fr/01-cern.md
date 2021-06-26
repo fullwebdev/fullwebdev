@@ -49,7 +49,6 @@ Qu'un vieux livre poussiéreux allait faire office de grimoire pour le petit Tim
   - 24 lignes / 64 caractères
   - créé vision d'ensemble de tout le système
   - affiche détails en cliquant sur des parties
-- HyperCard (Apple)
 
 ### Enquire
 
@@ -59,6 +58,15 @@ Qu'un vieux livre poussiéreux allait faire office de grimoire pour le petit Tim
 - hypertexte
 - fermé (base de donnée, édition en direct dans le "navigateur")
 - (Wiki) "ma petite encyclopédie à moi"
+- multi-utilisateur
+- multi-OS
+
+- HyperCard (Apple)
+  - de 1984 à 2004
+  - système de "pile de cartes"
+  - similaire à de l'hypertexte
+    - mais pas de texte clickable
+  - uniquement sur Mac
 
 ## Seconde période au CERN
 
@@ -67,8 +75,17 @@ Qu'un vieux livre poussiéreux allait faire office de grimoire pour le petit Tim
 
   - Remote Procedure Call (RPC)
 
+- Tim porte Enquire sur VMS [@TimBLCERNProposal]
+
+  - utilisation perso
+    - suivre les projets, personnes, groupes, expérimentations, modules logiciels et périphériques matériels
+  - aucun effort pour le rendre utilisable par d'autres
+    - mais quand même un peu utilisé
+
 - janvier 1989 : le CERN se "connecte à Internet" ("Big Bang IP") [@segalHistInternetCern1995]
+
   - ➕ grand site d'Europe
+
 - mars 1989 - mai 1990 : proposition [@TimBLCERNProposal]
 
 - ordi NeXTStep
