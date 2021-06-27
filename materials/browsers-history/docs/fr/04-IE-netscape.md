@@ -79,7 +79,7 @@
 - « Les actions de Microsoft démontrent qu'ils se pensaient incapable de gagner une compétition uniquement basée sur le mérite. »
 - Un des cadres supérieurs de Microsoft l'a franchement reconnu : « nous avions peur de perdre si l'utilisateur voyait Netscape Navigator côte à côte avec Internet Explorer. »
 
-## La lente descente aux enfers de Netscape (1996-2001)
+## La descente aux enfers de Netscape (1996-2001)
 
 - Juin 1997 : Netcape 4
 - changement de stratégie marketing de Netscape
@@ -92,9 +92,7 @@
 - 22 janvier 1998 : Jim Barksdale, CEO de Netscape, annonce :
 
   - navigator gratuit
-  - code source de Communicator 5.0 distribué gratuitement
-  - nom du code du projet : Mozilla
-  - démarrage rapide du développement d'un tout nouveau moteur de rendu, nommé Raptor, puis NGLayout, et enfin Gecko
+  - (plus voir plus loin)
 
 - (?) 1998 : licenciements massifs chez Netscape
 
@@ -104,3 +102,5 @@
 
 - 1999 : IE dépasse Netscape en nombre d'utilisateurs
 - 2001 : IE dépasse les 90% de parts d'utilisations, position qu'il conservera pendant près de 10 ans
+
+IE règne sans partage sur le Web pendant plus de 7 ans

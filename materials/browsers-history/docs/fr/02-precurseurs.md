@@ -98,7 +98,7 @@
   - 3ème X Window Systeme
   - Centre de l'accélérateur linéaire de Stanford
 
-- fin 1992 : Samba
+- fin 1992 : Samba / MacWWW
 
   - navigateur pour Macintosh
   - initié par Robert Cailliau [@LivingInternetWebBrowserHist]
@@ -118,8 +118,7 @@
   - 1996 : Lynx utilise libwww
   - toujours utilisé aujourd'hui
 
-- Militaires
-  - NCSA
+- NCSA
   - Mosaic
 
 <hr>
