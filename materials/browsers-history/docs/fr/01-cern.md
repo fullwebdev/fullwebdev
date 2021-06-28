@@ -61,6 +61,9 @@ Qu'un vieux livre poussiéreux allait faire office de grimoire pour le petit Tim
 - multi-utilisateur
 - multi-OS
 
+- En Pascal [@MunzApparitionWWW]
+- sur un Norsk Data [@IndependantAboutTheNet1996] (SYNTRAN III)
+
 - HyperCard (Apple)
   - de 1984 à 2004
   - système de "pile de cartes"
@@ -100,7 +103,7 @@ Qu'un vieux livre poussiéreux allait faire office de grimoire pour le petit Tim
 
 - navigation en ligne de commande / RPC
 
-  - [DEMO](https://line-mode.cern.ch/www/hypertext/WWW/TheProject.html)
+  -
   - peu de gens comprennent
   - « Le Web est un moyen de trouver des informations en tapant des nombres » 😅
 
