@@ -11,6 +11,26 @@
     "URL": "https://achievement.org/achiever/sir-timothy-berners-lee/"
   },
   {
+    "id": "alexandrejouxAndroidCommissionEuropeenne",
+    "abstract": "Considérant que Google mobilise Android pour imposer Google Search et Chrome sur le marché, la Commission inflige au géant américain la plus forte amende jamais exigée en Europe.",
+    "accessed": { "date-parts": [[2021, 6, 27]] },
+    "author": [{ "family": "Alexandre Joux", "given": "" }],
+    "citation-label": "alexandrejouxAndroidCommissionEuropeenne",
+    "language": "fr-FR",
+    "title": "Android : la Commission européenne sanctionne Google",
+    "title-short": "Android",
+    "type": "post-weblog",
+    "URL": "https://la-rem.eu/2018/12/android-la-commission-europeenne-sanctionne-google/"
+  },
+  {
+    "id": "BrowsersEvoltOrg",
+    "accessed": { "date-parts": [[2021, 6, 27]] },
+    "citation-label": "BrowsersEvoltOrg",
+    "title": "browsers.evolt.org",
+    "type": "webpage",
+    "URL": "https://browsers.evolt.org/"
+  },
+  {
     "id": "CelloBrowserHome",
     "accessed": { "date-parts": [[2021, 6, 25]] },
     "citation-label": "CelloBrowserHome",
@@ -46,6 +66,28 @@
     "URL": "https://www.w3.org/2012/08/history-of-the-web/origins.htm"
   },
   {
+    "id": "ImageComputerSystemsAbout",
+    "accessed": { "date-parts": [[2021, 6, 27]] },
+    "citation-label": "ImageComputerSystemsAbout",
+    "title": "Image Computer Systems - About",
+    "type": "webpage",
+    "URL": "https://www.imagecomputersystems.com/about.asp"
+  },
+  {
+    "id": "IndependantAboutTheNet1996",
+    "abstract": "Interactive, independent of corporate control, and conceived by an Englishman - the Web is not always what you expect.Its developers have a long way to go before it matches the ideas of its creator.",
+    "accessed": { "date-parts": [[2021, 6, 27]] },
+    "author": [{ "family": "Grossman", "given": "Wendy" }],
+    "citation-label": "IndependantAboutTheNet1996",
+    "container-title": "The Independent",
+    "issued": { "date-parts": [[1996, 7, 14]] },
+    "language": "en",
+    "section": "Lifestyle",
+    "title": "All you never knew about the Net ...",
+    "type": "article-journal",
+    "URL": "https://www.independent.co.uk/life-style/all-you-never-knew-about-the-net-1328898.html"
+  },
+  {
     "id": "insiderInterviewTimBL2017",
     "abstract": "Axel Springer CEO Mathias Döpfner sat down with Sir Tim Berners-Lee, the inventor of the World Wide Web, for a far-ranging conversation.",
     "accessed": { "date-parts": [[2021, 6, 23]] },
@@ -57,6 +99,33 @@
     "title": "The inventor of the web Tim Berners-Lee on the future of the internet, 'fake news,' and why net neutrality is so important",
     "type": "article-magazine",
     "URL": "https://www.businessinsider.com/mathias-dopfner-tim-berners-lee-world-wide-web-interview-2017-5"
+  },
+  {
+    "id": "JusticeAmericaineContre2020",
+    "abstract": "Le gouvernement américain, auquel se sont joints onze Etats du pays, accuse l’entreprise d’avoir maintenu indûment son monopole dans la recherche en ligne, grâce à des accords rémunérés passés avec les fabricants de smartphones, dont Apple.",
+    "accessed": { "date-parts": [[2021, 6, 27]] },
+    "citation-label": "JusticeAmericaineContre2020",
+    "container-title": "Le Monde.fr",
+    "issued": { "date-parts": [[2020, 10, 20]] },
+    "language": "fr",
+    "source": "Le Monde",
+    "title": "La justice américaine contre Google, une enquête limitée, mais cruciale",
+    "type": "article-newspaper",
+    "URL": "https://www.lemonde.fr/economie/article/2020/10/20/la-justice-americaine-contre-google-une-enquete-limitee-mais-cruciale_6056739_3234.html"
+  },
+  {
+    "id": "lanneroDejaVuRe",
+    "abstract": "Web browser emulators let you surf todays web with browser dinosaurs like Cern linemode browser and Mosaic Netscape.",
+    "accessed": { "date-parts": [[2021, 6, 27]] },
+    "author": [{ "family": "Lannerö", "given": "Pär" }],
+    "citation-label": "lanneroDejaVuRe",
+    "genre": "Text.Homepage",
+    "language": "eng",
+    "publisher": "Metamatrix AB",
+    "title": "Deja Vu: (re-)creating web history",
+    "title-short": "Deja Vu",
+    "type": "webpage",
+    "URL": "https://www.dejavu.org/"
   },
   {
     "id": "LivingInternetInventionWWW",
@@ -80,6 +149,47 @@
     "URL": "https://www.livinginternet.com/w/wi_browse.htm"
   },
   {
+    "id": "MonopoleAndroidGoogle2019",
+    "abstract": "Le géant californien va instaurer un système d'enchères pour permettre à ses concurrents de figurer parmi les moteurs de recherche proposés à l'utilisateur lors de la configuration du système d'exploitation. Une manière de transformer en opportunité commerciale l'amende de 4,3 milliards infligée par la Commission européenne.",
+    "accessed": { "date-parts": [[2021, 6, 27]] },
+    "citation-label": "MonopoleAndroidGoogle2019",
+    "container-title": "Les Echos",
+    "issued": { "date-parts": [[2019, 8, 2]] },
+    "language": "fr",
+    "section": "Tech - Médias",
+    "title": "Monopole sur Android : Google répercute l'amende de Bruxelles sur la concurrence",
+    "title-short": "Monopole sur Android",
+    "type": "webpage",
+    "URL": "https://www.lesechos.fr/tech-medias/hightech/monopole-sur-android-google-repercute-lamende-de-bruxelles-sur-la-concurrence-1122041"
+  },
+  {
+    "id": "MunzApparitionWWW",
+    "abstract": "Comment est apparu le World Wide Web et comment s'est-il développé.",
+    "accessed": { "date-parts": [[2021, 6, 27]] },
+    "author": [{ "family": "Münz", "given": "Stefan" }],
+    "citation-label": "MunzApparitionWWW",
+    "issued": { "date-parts": [[2004, 5, 20]] },
+    "language": "fr",
+    "publisher": "Serge François, selfhtml@fr.selfhtml.org",
+    "title": "SELFHTML: Introduction / Internet et le WWW / Apparition du World Wide Web",
+    "title-short": "SELFHTML",
+    "type": "webpage",
+    "URL": "http://www.info.univ-angers.fr/~gh/selfhtml_fr/introduction/internet/www.htm"
+  },
+  {
+    "id": "PratiquesAnticoncurrentiellesCommission",
+    "abstract": "Pratiques anticoncurrentielles: la Commission inflige à Google une amende de 4.34 milliards d'euros pour pratiques illégales concernant les appareils mobiles Android en vue de renforcer la position dominante de son moteur de recherche",
+    "accessed": { "date-parts": [[2021, 6, 27]] },
+    "citation-label": "PratiquesAnticoncurrentiellesCommission",
+    "container-title": "European Commission - European Commission",
+    "genre": "Text",
+    "language": "fr",
+    "title": "Pratiques anticoncurrentielles: la Commission inflige à Google une amende de 4.34 milliards d'euros pour abus de position dominante en ce qu",
+    "title-short": "Pratiques anticoncurrentielles",
+    "type": "webpage",
+    "URL": "https://ec.europa.eu/commission/presscorner/detail/fr/IP_18_4581"
+  },
+  {
     "id": "raischRFCStyle93",
     "accessed": { "date-parts": [[2021, 6, 25]] },
     "author": [{ "family": "Raisch", "given": "Rob" }],
@@ -88,6 +198,17 @@
     "title": "Request for Comments: STYLESHEETS (www-talk)",
     "type": "personal_communication",
     "URL": "http://ksi.cpsc.ucalgary.ca/archives/WWW-TALK/www-talk-1993q2.messages/443.html"
+  },
+  {
+    "id": "ReleasesKDEKwebkitpart",
+    "abstract": "WebKit browser component available as KPart. Contribute to KDE/kwebkitpart development by creating an account on GitHub.",
+    "accessed": { "date-parts": [[2021, 6, 27]] },
+    "citation-label": "ReleasesKDEKwebkitpart",
+    "container-title": "GitHub",
+    "language": "en",
+    "title": "Releases · KDE/kwebkitpart",
+    "type": "webpage",
+    "URL": "https://github.com/KDE/kwebkitpart/releases"
   },
   {
     "id": "segalHistInternetCern1995",
@@ -121,6 +242,28 @@
     "title": "Here’s everything you NEVER knew about internet marvel Tim Berners-Lee…",
     "type": "article-magazine",
     "URL": "https://social-hire.com/blog/candidate/everything-you-never-knew-about-tim-berners-lee/"
+  },
+  {
+    "id": "StanfordLinearAccelerator",
+    "abstract": "Stanford Linear Accelerator Center (SLAC) - First North American (N.A.) Web Site, History",
+    "accessed": { "date-parts": [[2021, 6, 27]] },
+    "citation-label": "StanfordLinearAccelerator",
+    "container-title": "LivingInternet",
+    "language": "en-US",
+    "title": "Stanford Linear Accelerator Center (SLAC) - First North American (N.A.) Web Site, History",
+    "type": "post-weblog",
+    "URL": "https://www.livinginternet.com/w/wi_slac.htm"
+  },
+  {
+    "id": "TedNelsonWho",
+    "abstract": "Ted Nelson - Hypertext, Xanadu, Web History",
+    "accessed": { "date-parts": [[2021, 6, 27]] },
+    "citation-label": "TedNelsonWho",
+    "container-title": "LivingInternet",
+    "language": "en-US",
+    "title": "Ted Nelson - Who invented Hypertext, Web History",
+    "type": "post-weblog",
+    "URL": "https://www.livinginternet.com/w/wi_nelson.htm"
   },
   {
     "id": "TimBLKids",
