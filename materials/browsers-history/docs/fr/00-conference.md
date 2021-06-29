@@ -609,7 +609,7 @@ pour créer un autre navigateur Open Source
 
 > 3 fiches
 >
-> Limite : 28 - 35"
+> Limite : 29 - 36"
 
 ### KDE & KHTMLW
 
@@ -664,7 +664,7 @@ w/ Konqueror 🎉
 
 > 3 fiches
 >
-> Limite : 32 - 38"
+> Limite : 32 - 40"
 
 ### Webkit & Safari
 
@@ -715,7 +715,7 @@ _Mais_ ❌ explosion
 
 > 3 fiches
 >
-> Limite : 35 - 42"
+> Limite : 35 - 43"
 
 ### Annonce
 
