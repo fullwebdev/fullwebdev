@@ -196,6 +196,30 @@
     "URL": "https://www.livinginternet.com/w/wi_browse.htm"
   },
   {
+    "id": "maceTwitterDiscussionDevice2020",
+    "abstract": "My bad, WebKit is not alone on this one.\n\nI really don't understand why this situation can't be solved in @wicg_/@w3c tho...",
+    "accessed": { "date-parts": [[2021, 6, 29]] },
+    "author": [{ "family": "Macé", "given": "Noël" }],
+    "citation-label": "maceTwitterDiscussionDevice2020",
+    "container-title": "Twitter",
+    "issued": { "date-parts": [[2020, 7, 1]] },
+    "language": "fr",
+    "title": "Twitter discussion about Device Sensors",
+    "type": "post",
+    "URL": "https://twitter.com/noel_mace/status/1278240129598046209"
+  },
+  {
+    "id": "MarcosCaceresTwitter",
+    "abstract": "@noel_mace @wicg_ @w3c It can be solved (or even have been!) and we are actively working on solving a bunch. \n\nDon’t fixate on the APIs, they are a red herring: What we are interested in is finding different means of solving those use cases without slapping a permission prompt in front of users.",
+    "accessed": { "date-parts": [[2021, 6, 29]] },
+    "citation-label": "MarcosCaceresTwitter",
+    "container-title": "Twitter",
+    "language": "fr",
+    "title": "Marcos Cáceres 💉💉 sur Twitter",
+    "type": "webpage",
+    "URL": "https://twitter.com/marcosc/status/1278245476572164096"
+  },
+  {
     "id": "MicrosoftEndsIE",
     "abstract": "MacIE had one of the strangest and saddest histories I've seen, of any product.MacIE 5 was an awesome release, critically aclaimed and everything, with a good development team and a strong testing team, that included daily performance measurement.And yet, almost immediately after 5.0 was released, t...",
     "accessed": { "date-parts": [[2021, 6, 29]] },
@@ -241,6 +265,17 @@
     "title": "NCSA Unix software descriptions",
     "type": "webpage",
     "URL": "https://web.archive.org/web/19961223062339/http://www.ncsa.uiuc.edu/SDG/Software/UnixSoftDesc.html"
+  },
+  {
+    "id": "NewCapabilitiesStatus",
+    "abstract": "Our latest news, updates, and stories for developers",
+    "accessed": { "date-parts": [[2021, 6, 29]] },
+    "citation-label": "NewCapabilitiesStatus",
+    "container-title": "web.dev",
+    "language": "en",
+    "title": "New capabilities status",
+    "type": "webpage",
+    "URL": "https://web.dev/fugu-status/"
   },
   {
     "id": "PratiquesAnticoncurrentiellesCommission",
@@ -360,6 +395,34 @@
     "title": "Review -- /Viola",
     "type": "article",
     "URL": "https://www.w3.org/History/19921103-hypertext/hypertext/Viola/Review.html"
+  },
+  {
+    "id": "TrackingPreventionWebKit2020a",
+    "abstract": "WebKit has implemented tracking prevention technologies, spanning from 2003 with Safari 1.0 until today.",
+    "accessed": { "date-parts": [[2021, 6, 29]] },
+    "citation-label": "TrackingPreventionWebKit2020a",
+    "container-title": "WebKit",
+    "issued": { "date-parts": [[2020, 6, 24]] },
+    "title": "Tracking Prevention in WebKit",
+    "type": "post-weblog",
+    "URL": "https://webkit.org/tracking-prevention/"
+  },
+  {
+    "id": "WbsResponseCall",
+    "accessed": { "date-parts": [[2021, 6, 29]] },
+    "citation-label": "WbsResponseCall",
+    "title": "[wbs] response to 'Call for Review: Devices and Sensors Working Group Charter' from Tantek Çelik via WBS Mailer on 2020-06-19 (public-new-work@w3.org from June 2020)",
+    "type": "webpage",
+    "URL": "https://lists.w3.org/Archives/Public/public-new-work/2020Jun/0012.html"
+  },
+  {
+    "id": "WebCapabilitiesProject",
+    "abstract": "Home of the Chromium Open Source Project",
+    "accessed": { "date-parts": [[2021, 6, 29]] },
+    "citation-label": "WebCapabilitiesProject",
+    "title": "Web Capabilities (Project Fugu 🐡) - The Chromium Projects",
+    "type": "webpage",
+    "URL": "https://www.chromium.org/teams/web-capabilities-fugu"
   },
   {
     "id": "wiredCurseXanadu1995",

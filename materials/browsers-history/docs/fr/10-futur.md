@@ -1,6 +1,7 @@
 # Quel futur pour le Web ?
 
 - PWA
+  - Device Sensors [@maceTwitterDiscussionDevice2020]
 - FLoC
 
 ➡️ Vie privée

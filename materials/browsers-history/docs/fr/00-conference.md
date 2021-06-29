@@ -607,53 +607,223 @@ pour créer un autre navigateur Open Source
 
 <!-- #region part-3 -->
 
+> 3 fiches
+>
 > Limite : 28 - 35"
 
-### Transition
+### KDE & KHTMLW
 
-Nouvel acteur\
-qui va permettre de tout changer\
-de battre IE
+Windows pas seul sur IBM PC\
+**1991**: Linux
 
-cette fois c'est la bonne...
+peu de monde\
+mais très passionnés 💪
 
-> ben non, toujours pas Chrome 😆
+pas instinctif\
+❌ intégration apps
+
+**14 oct 96** : ☎️ Mathias Ettrich\
+➡️ Kool Desktop Environment ➡️ KDE\
+➡️ base commune (Qt & libs)\
+➡️ KDE HTML Widget (ou khtmlw)
+
+### Beta & KFM
+
+1 an (20 oct 97): KDE beta 1\
+➡️ KFM
+
+`http://` ✅
+
+❌ CSS & JS
+
+pas fait pour
+
+**98** = Mozilla\
+➡️ attendre ?!
+
+### KHTML
+
+❌ Lars Knoll (ajd CTO Qt)
+
+seul, "for fun"\
+hhtmlw ➡️ KHTML\
+DOM
+
+🦸 Harri Porten ➡️ JS
+
+➕ < 1 an ➡️ CSS
+
+**oct 2000**: KDE 2\
+w/ Konqueror 🎉
+
+... meh ?! 🤷
+
+❓ 🥁 ❓
 
 ## Safari & Web Mobile
 
-> Limite : 31 - 38"
+> 3 fiches
+>
+> Limite : 32 - 38"
 
-2000: ~fin investissement IE for Mac
-2001: ipod 🔥 (revenus immense)
-2003: Safari ➡️ Webkit
-2004: "project purple"
-9 janvier 2007 : annonce de l'iPhone "2G" par Steve Jobs
+### Webkit & Safari
 
-### Transition
+**2003**: 🍎 Safari\
+khtml ➡️ WebKit
 
-Et là, on arrive enfin à...
+Pourquoi ❓
 
-Oui, c'est bon, y a plus de piège, c'est bien Chrome 😜
+accord Microsoft 🍎 \
+IE défaut s/ Mac depuis 98
+
+**2001**: IE 5 for Mac\
+tt les devs ➡️ IE Win
+
+très mauvaises perfs\
+prblm sécu
+
+fin accord : **2002** 🎉
+
+### Périphériques mobiles
+
+_Mais_ 🍎 = Luxe / niche
+
+**2001**: ipod 🔥\
+revenus immense
+
+🍎 comprends mobiles = futur
+
+**2004**: "project purple"
+
+### Smartphones
+
+**2005**: Nokia 👑 (Symbian)\
+⬅️ Webkit 🎉
+
+**2007**: iPhone "2G"\
+1er avec nav "moderne" / complet
+
+lance la tendance\
+_Mais_ ❌ explosion
+
+**2008**: Android 1.0\
+⬅️ Webkit 🎉
+
+❓ 🥁 Chrome ! 🤷
 
 ## Chrome
 
-> ⚠️ Transition - WebKit / Mobile !!!
+> 3 fiches
 >
-> Limite : 36 - 45"
+> Limite : 35 - 42"
 
-23 septembre 2008 : Android 1.0
-1er septembre 2008 : annonce de Chrome
+### Annonce
 
-2013 : Opera 15 abandonne Presto et Carakan au profit de Chromium
-2015 : fin de IE / publication de Edge, avec Windows 10
-15 janvier 2020 : Edge 79 marque le passage de Edge à Chromium (de Spartan, i.e. Edge avec EdgeHTML, à Anaheim)
+**1er septembre 2008**\
+annonce BD : Scott McCloud\
+(L'Art Invisible)
 
-PWA / Projet Fugu
+stable, performance, sécurisé
 
-FLoC
+clair, minimaliste et efficient
 
-## Futur
+Open Source\
+nombreux projets tiers\
+WebKit ⬅️ équipe Android
 
-> Limite : 40 - 50"
+### Evolution
+
+(rapide, tt le monde connait)
+
+2 ans: 10% (piqués à IE)\
+3 ans: 10 de + (1ère ↘️ Firefox)
+
+**2014**: remplace Android Browser
+**2017**: mobile & Chrome > 50%
+
+**Chromium !**
+
+2015: 💀 IE ➡️ Edge\
+2020: Edge 79 = Chromium\
+(2013: Opera 15 = Chromium)
+
+### Monopole ?
+
+Google 👑 ❌ Microsoft
+
+Chrome/Android = IE/Win
+
+MAIS (inverse Microsoft):\
+Google ❤️ Web App
+
+Web ↗️ ➡️ Google ↗️
+
+_LIMITE_: 🍎 ~15%\
+⬅️ Safari 😱 Web Apps (= Microsoft)\
+⬅️ Webkit OBLIGATOIRE sur iOS\
+➕ faible budget pr WebKit\
+(= IE après Netscape)
+
+## Conclusion
+
+> 5 fiches
+>
+> Limite : 40" - 50"
+
+### ⚔️ Apps
+
+Constat **2008** (1ère phrase BD): _"Aujourd'hui, la majorité du Web n'est plus composé de pages, mais d'applications."_
+
+Chrome = ère **HTML5**\
+WD : 22 janvier
+
+isolation des processus (~ OS)\
+rendu onglets séparément
+
+2015: PWA vs Natif
+
+### Standards ?
+
+Projet Fugu\
+"Reduce the app gap"
+
+réduire les compromis\
+direct dans Chrome avant standard
+
+énorme budget marketing (DevRel 🤷)\
+appel à la popularité (sophisme) \
+"la plupart des devs veulent..." donc ✅
+
+### Devices & Sensors
+
+**juin 2020**
+
+🍎 & 🦊 ❌ (harmful)\
+Google 🏃
+
+Marcos Cáceres (ex Co-prés Web Apps WG + 🦊)
+
+_« La vie privée et la sécurité de nos utilisateurs sont primordiales, ce qui implique de faire des compromis difficiles. »_
+
+### Choix !
+
+Qu'est ce que le Web ?
+
+1️⃣ plateforme = autres ?
+
+⬅️ HTML, CSS + JS = cool ?
+
+= React Native, Flutter, etc. ?
+
+### 2️⃣ un cas à part
+
+⬅️ collaboration (standards ouverts)\
+⬅️ interop. & accessibilité\
+(pas cher, pays émergeants)\
+⬅️ vie privée & sécurité
+
+2️⃣ ❓❗ ➡️ DECIDER\
+➡️ compromis\
+➡️ meilleur résultat
 
 <!-- #endregion part-3 -->
