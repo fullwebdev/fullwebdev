@@ -1,14 +1,23 @@
 # La naissance de Mosaic et Netscape (1993-1994)
 
-- décembre 1992 : démo ViolaWWW au NCSA
+- NCSA
+- décembre 1992 : démo ViolaWWW[@briefHistoryTimBL]
 
-  - motive Marc Andreessen (étudiant)
+  - par David (Dave) Thompson
+    - lead dev X Window System pour NCSA Collage [@NCSAUnixSoftware1996; @IeeeJosephHardinNCSA]
+  - à Marc Andreessen (étudiant) & Joseph Hardin [@IeeeJosephHardinNCSA]
+    - "we can do better than that"
+
+- motive Marc Andreessen (étudiant)
+
   - rejoint par un programmeur au NCSA
   - financé par le NCSA
+  - sous la direction de Joseph Hardin [@IeeeJosephHardinNCSA]
   - X Window System
 
 - mi-1993 : première alpha
 
+  - domaine publique (? [@IeeeJosephHardinNCSA])
   - avec favoris, historique, etc.
   - liens soulignés, simple clic
   - barre d'adresse en haut

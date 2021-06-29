@@ -1,58 +1,37 @@
 # Internet Explorer contre Netscape : la première guerre des navigateurs (1995-1998)
 
-## Microsoft entre dans la bataille (1994-1995)
+| date       | IE                     | Netscape    |
+| ---------- | ---------------------- | ----------- |
+| 1994-09-09 |                        | 0.4         |
+| 1994-12    |                        | 1.0         |
+| 1995-08-16 | 1.0                    |             |
+| 1995-09-18 |                        | 2.0 (JS)    |
+| 1995-11    | 2.0 (Mac)              |
+| 1996-08-13 | 3.0 (JS)               |
+| 1996-08-19 |                        | 3.0         |
+| 1997-06    |                        | 4 (suite)   |
+| 1998-03-04 | 4.0 for Unix (Solaris) |
+| 2000       |                        | Mozilla 0.6 |
+| 2001       | 5.0 for Unix SP1       |
+| 2002       | END Unix               |
 
-- Microsoft a très tôt participé à la standardisation d'HTML
-
-  - octobre 1994 : fondation du W3C
-
-- début 1994 : Spyglass acquiert des droits d'exploitation de NCSA Mosaic
-
-  - 2 versions : NCSA (original) vs Spyglass (réécrit)
-    - refaite "from scratch" (sans se baser sur la version NCSA) [@sinkMemoirsBrowserWars2003]
-  - OEM (>120 compagnies clientes)
-    - livres, OS, ATM, décodeurs TV, kiosques, etc.
-
-- août 1994 : le NCSA transmet les droits commerciaux de Mosaic à Spyglass [@LivingInternetWebBrowserHist]
-  - dernières licences NCSA Mosaic
-- fin 1994 (?) : deal Microsoft
-
-  - travail pour l'intégrer à Windows 95
-
-- 16 aout 1995 : publication de Internet Explorer 1.0
-
-  - équivalent à Spyglass Mosaic
-  - pour Microsoft Plus!, Windows 95 & via OEM
-
-- novembre 1995 : v2
-  - également pour NT
-  - peu de modifs
-
-## La naissance du JavaScript (1995)
-
-- avril 1995: Brendan Eich recruté par Netscape
-
-  - pour créer un language de scripting
-  - sur la base de Scheme, un dialecte minimal de Lisp
-
-- SAUF QUE Netscape a conclu un partenariat avec Sun
-
-  - pour porter Java vers le navigateur
-  - décide d'imposer à Eich de respecter une syntaxe similaire
-
-- mai 1995 : Eich créé le premier prototype d'interpréteur
-
-  - en 10 jours
-  - Mocha, puis LiveScript, et enfin JavaScript.
-
-- 18 septembre 1995 : publication de Netscape 2.0, avec :
-
-  - le support de JavaScript
-  - un système de plug-ins (**à compléter**: Macromedia Shockwave Player et RealAudio Player)
-  - les frames
-
-- 13 août 1996 : IE 3.0 (JScript, CSS, ActiveX, et les applets Java)
-- 19 août 1996 : Netscape 3
+> ## La naissance du JavaScript (1995)
+>
+> - avril 1995: Brendan Eich recruté par Netscape
+>   - pour créer un language de scripting
+>   - sur la base de Scheme, un dialecte minimal de Lisp
+> - SAUF QUE Netscape a conclu un partenariat avec Sun
+>   - pour porter Java vers le navigateur
+>   - décide d'imposer à Eich de respecter une syntaxe similaire
+> - mai 1995 : Eich créé le premier prototype d'interpréteur
+>   - en 10 jours
+>   - Mocha, puis LiveScript, et enfin JavaScript.
+> - 18 septembre 1995 : publication de Netscape 2.0, avec :
+>   - le support de JavaScript
+>   - un système de plug-ins (**à compléter**: Macromedia Shockwave Player et RealAudio Player)
+>   - les frames
+> - 13 août 1996 : IE 3.0 (JScript, CSS, ActiveX, et les applets Java)
+> - 19 août 1996 : Netscape 3
 
 ## Microsoft adopte une stratégie prédatrice et illégale
 
@@ -64,11 +43,11 @@
 
 - ils ont agits rapidement pour empêcher ça
 
-  1. en proposant à Netscape un accord illégal de non-concurrence, afin de se partager le marché
+  1. **juin 1995**: en proposant à Netscape un accord illégal de non-concurrence, afin de se partager le marché
      - que Netscape ne soit pas porté sur Windows 95
      - en échange, Microsoft ne lui ferait pas concurrence sur les autres OS
      - proposition rejetée par Netscape
-  2. en menant une campagne prédatrice pour empêcher le développement de Netscape
+  2. **automne 1995**: en menant une campagne prédatrice pour empêcher le développement de Netscape
      - mais aussi de Java, Intel NSP et QuickTime
      - prix et supports améliorés pour ceux qui acceptaient d'exclure la concurrence (comme Compaq)
      - à l'opposé, prix élevés et support réduit pour les autres (comme IBM) + menaces
