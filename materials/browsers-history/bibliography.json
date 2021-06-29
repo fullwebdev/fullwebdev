@@ -23,6 +23,31 @@
     "URL": "https://la-rem.eu/2018/12/android-la-commission-europeenne-sanctionne-google/"
   },
   {
+    "id": "AolAnnouncesMozillaOrg",
+    "abstract": "America Online Pledges $2 Million to Help Launch Independent Non-Profit  Industry Leaders Reaffirm Support for Mozilla Mountain View, CA, July 15, 2003 – Mozilla.org, the organization that coordinates Mozilla ...",
+    "accessed": { "date-parts": [[2021, 6, 29]] },
+    "citation-label": "AolAnnouncesMozillaOrg",
+    "container-title": "Mozilla Press Center",
+    "language": "en-US",
+    "title": "Mozilla.org announces launch of the Mozilla Foundation to lead open-source browser efforts",
+    "type": "post-weblog",
+    "URL": "https://blog.mozilla.org/press/2003/07/mozilla-org-announces-launch-of-the-mozilla-foundation-to-lead-open-source-browser-efforts"
+  },
+  {
+    "id": "ArsTechnica30yPC2005",
+    "abstract": "It's been a long, strange trip for the personal computer over 30 years. Ars  …",
+    "accessed": { "date-parts": [[2021, 6, 28]] },
+    "author": [{ "family": "Reimer", "given": "Jeremy" }],
+    "citation-label": "ArsTechnica30yPC2005",
+    "container-title": "Ars Technica",
+    "issued": { "date-parts": [[2005, 12, 15]] },
+    "language": "en-us",
+    "title": "Total share: 30 years of personal computer market share figures",
+    "title-short": "Total share",
+    "type": "article-magazine",
+    "URL": "https://arstechnica.com/features/2005/12/total-share/"
+  },
+  {
     "id": "BrowsersEvoltOrg",
     "accessed": { "date-parts": [[2021, 6, 27]] },
     "citation-label": "BrowsersEvoltOrg",
@@ -66,6 +91,19 @@
     "URL": "https://www.w3.org/2012/08/history-of-the-web/origins.htm"
   },
   {
+    "id": "IeeeJosephHardinNCSA",
+    "abstract": "Empowering the People who Drive Technology",
+    "accessed": { "date-parts": [[2021, 6, 28]] },
+    "author": [{ "literal": "Charles Severance" }],
+    "citation-label": "IeeeJosephHardinNCSA",
+    "genre": "IEEE Computer Society",
+    "language": "en-US",
+    "title": "Joseph Hardin: NCSA Mosaic",
+    "title-short": "Joseph Hardin",
+    "type": "post-weblog",
+    "URL": "https://www.computer.org/publications/tech-news/computing-conversations/joseph-hardin-ncsa-mosaic"
+  },
+  {
     "id": "ImageComputerSystemsAbout",
     "accessed": { "date-parts": [[2021, 6, 27]] },
     "citation-label": "ImageComputerSystemsAbout",
@@ -99,6 +137,15 @@
     "title": "The inventor of the web Tim Berners-Lee on the future of the internet, 'fake news,' and why net neutrality is so important",
     "type": "article-magazine",
     "URL": "https://www.businessinsider.com/mathias-dopfner-tim-berners-lee-world-wide-web-interview-2017-5"
+  },
+  {
+    "id": "InternetExplorerHistory2003",
+    "accessed": { "date-parts": [[2021, 6, 28]] },
+    "citation-label": "InternetExplorerHistory2003",
+    "issued": { "date-parts": [[2003, 10, 2]] },
+    "title": "Internet Explorer History",
+    "type": "webpage",
+    "URL": "https://web.archive.org/web/20031002010203/http://www.microsoft.com/windows/WinHistoryIE.mspx"
   },
   {
     "id": "JusticeAmericaineContre2020",
@@ -149,6 +196,16 @@
     "URL": "https://www.livinginternet.com/w/wi_browse.htm"
   },
   {
+    "id": "MicrosoftEndsIE",
+    "abstract": "MacIE had one of the strangest and saddest histories I've seen, of any product.MacIE 5 was an awesome release, critically aclaimed and everything, with a good development team and a strong testing team, that included daily performance measurement.And yet, almost immediately after 5.0 was released, t...",
+    "accessed": { "date-parts": [[2021, 6, 29]] },
+    "citation-label": "MicrosoftEndsIE",
+    "language": "en",
+    "title": "Microsoft Ends IE for Mac - Slashdot",
+    "type": "webpage",
+    "URL": "https://slashdot.org/comments.pl?sid=171546&cid=14288661"
+  },
+  {
     "id": "MonopoleAndroidGoogle2019",
     "abstract": "Le géant californien va instaurer un système d'enchères pour permettre à ses concurrents de figurer parmi les moteurs de recherche proposés à l'utilisateur lors de la configuration du système d'exploitation. Une manière de transformer en opportunité commerciale l'amende de 4,3 milliards infligée par la Commission européenne.",
     "accessed": { "date-parts": [[2021, 6, 27]] },
@@ -175,6 +232,15 @@
     "title-short": "SELFHTML",
     "type": "webpage",
     "URL": "http://www.info.univ-angers.fr/~gh/selfhtml_fr/introduction/internet/www.htm"
+  },
+  {
+    "id": "NCSAUnixSoftware1996",
+    "accessed": { "date-parts": [[2021, 6, 28]] },
+    "citation-label": "NCSAUnixSoftware1996",
+    "issued": { "date-parts": [[1996, 12, 23]] },
+    "title": "NCSA Unix software descriptions",
+    "type": "webpage",
+    "URL": "https://web.archive.org/web/19961223062339/http://www.ncsa.uiuc.edu/SDG/Software/UnixSoftDesc.html"
   },
   {
     "id": "PratiquesAnticoncurrentiellesCommission",

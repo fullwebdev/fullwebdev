@@ -23,6 +23,11 @@
   - fin progressive de Netscape, relégué au second plan
 
 - 23 septembre 2002 : Phoenix 0.1 (nouveau nom du navigateur Mozilla suite à une refonte graphique)
+
+- 15 juillet 2003 : fondation Mozilla [@AolAnnouncesMozillaOrg]
+
+  - AOL ➡️ 2 millions $ + personnel + propriété intellectuelle
+
 - 2003 : Phoenix devient Firebird
 
 - 2004 : Firebird devient Firefox
