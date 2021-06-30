@@ -55,6 +55,21 @@ const wording = {
       },
     },
     {
+      wip: false,
+      type: "Notes & Livret",
+      href: "/browsers-history/",
+      date: "en cours...",
+      desc: {
+        title: "Histoire et avenir des navigateurs Web",
+        subtitle: "Livret en cours de rédaction",
+      },
+      img: {
+        src: "/illustrations/browsers-history/cover-x200.jpg",
+        alt: "drawing of a vintage ship",
+        height: 200,
+      },
+    },
+    {
       type: "Documentation",
       href: "/docs/rendering/benchmark",
       date: "mars 2021",
