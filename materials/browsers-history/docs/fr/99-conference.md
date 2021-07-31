@@ -3,9 +3,11 @@
 
 # Notes pour la conférence
 
-:::warning
-Tout énoncer **AU PRESENT !!!**
-:::
+> Cf. [le résumé et la description](/docs/conferences/navigateurs) de cette conférence.
+>
+> ![[Story Grid](https://storygrid.com/)](/browsers-history/story-grid-graph.jpg)
+>
+> Un [tableau Google Spreadsheets](https://docs.google.com/spreadsheets/d/1LYjSagydQDFgvW7EKFX68hBLgoERQ8uzuRQXvlhNddM/edit?usp=sharing) rassemble également la timeline, le timing de la conférence, ainsi que quelques sparklines.
 
 ## Ouverture
 
