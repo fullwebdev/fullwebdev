@@ -27,39 +27,24 @@ const wording = {
     },
 
     {
+      date: "soon",
       desc: {
         title: "Worshops",
         subtitle: "Learn with our online workshop sessions.",
       },
       backgroundImg:
         "/images/web-illustrations/lagos-techie-BVr3XaBiWLU-unsplash.jpg",
-      cta: [
-        { href: "test", text: "next sessions", primary: true },
-        { href: "test", text: "learn more", primary: false },
-      ],
-    },
-    {
-      date: "soon",
-      desc: {
-        title: "Newsletters",
-        subtitle:
-          "Tenez vous informés de l'actualité du Web sans effort grâce à nos newsletters.",
-      },
-      backgroundImg:
-        "/images/web-illustrations/markus-winkler-aId-xYRTlEc-unsplash.jpg",
       cta: [{ href: "/newsletter", text: "stay tuned", primary: false }],
       wip: true,
     },
     {
-      date: "soon",
       desc: {
-        title: "Booklets",
-        subtitle: "Master a specific topic reading short books.",
+        title: "Newsletters",
+        subtitle: "Subscribe to our newsletter.",
       },
       backgroundImg:
-        "/images/web-illustrations/rich-tervet-1jUPdfWZgps-unsplash.jpg",
-      cta: [{ href: "test", text: "stay tuned", primary: false }],
-      wip: true,
+        "/images/web-illustrations/markus-winkler-aId-xYRTlEc-unsplash.jpg",
+      cta: [{ href: "/newsletter", text: "stay tuned", primary: true }],
     },
   ],
 };

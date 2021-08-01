@@ -39,6 +39,7 @@ const wording = {
       ],
     },
     {
+      date: "prochainement",
       desc: {
         title: "Ateliers",
         subtitle:
@@ -46,10 +47,7 @@ const wording = {
       },
       backgroundImg:
         "/images/web-illustrations/lagos-techie-BVr3XaBiWLU-unsplash.jpg",
-      cta: [
-        { href: "test", text: "prochaines sessions", primary: true },
-        { href: "test", text: "en savoir plus", primary: false },
-      ],
+      cta: [{ href: "/newsletter", text: "rester informé", primary: false }],
     },
     {
       date: "prochainement",
@@ -59,7 +57,7 @@ const wording = {
       },
       backgroundImg:
         "/images/web-illustrations/rich-tervet-1jUPdfWZgps-unsplash.jpg",
-      cta: [{ href: "test", text: "rester informé", primary: false }],
+      cta: [{ href: "/newsletter", text: "rester informé", primary: false }],
       wip: true,
     },
   ],

@@ -25,7 +25,13 @@ const wording = {
       },
       backgroundImg:
         "/images/web-illustrations/fotis-fotopoulos-DuHKoV44prg-unsplash.jpg",
-      cta: [{ href: "test", text: "competencies", primary: true }],
+      cta: [
+        {
+          href: "/services-details/orgs/consulting",
+          text: "competencies",
+          primary: true,
+        },
+      ],
     },
     {
       desc: {
@@ -35,8 +41,16 @@ const wording = {
       backgroundImg:
         "/images/web-illustrations/felicia-buitenwerf-Qs_Zkak27Jk-unsplash.jpg",
       cta: [
-        { href: "test", text: "course catalog", primary: true },
-        { href: "test", text: "custom solutions", primary: false },
+        {
+          href: "/services-details/orgs/training/catalog",
+          text: "course catalog",
+          primary: true,
+        },
+        {
+          href: "/services-details/orgs/training/custom",
+          text: "custom solutions",
+          primary: false,
+        },
       ],
     },
     {
@@ -47,7 +61,13 @@ const wording = {
       },
       backgroundImg:
         "/images/web-illustrations/jaime-lopes-0RDBOAdnbWM-unsplash.jpg",
-      cta: [{ href: "test", text: "our services", primary: true }],
+      cta: [
+        {
+          href: "/services-details/orgs/devrel",
+          text: "our services",
+          primary: true,
+        },
+      ],
     },
     {
       desc: {
@@ -55,7 +75,13 @@ const wording = {
         subtitle: "Rationalisating your knowledge management and trainings.",
       },
       backgroundImg: "/images/web-illustrations/kma-SiOJXlWeWc0-unsplash.jpg",
-      cta: [{ href: "test", text: "our services", primary: true }],
+      cta: [
+        {
+          href: "/services-details/orgs/instructional-eng",
+          text: "our services",
+          primary: true,
+        },
+      ],
     },
   ],
 };
