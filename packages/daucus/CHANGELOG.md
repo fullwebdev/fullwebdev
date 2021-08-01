@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/fullwebdev/fullwebdev/compare/daucus@v0.3.0...daucus@v0.4.0) (2021-08-01)
+
+### ⚠ BREAKING CHANGES
+
+- **daucus-pandoc:** add bibliography option
+
+### Features
+
+- **daucus-pandoc:** add bibliography option ([18150ad](https://github.com/fullwebdev/fullwebdev/commit/18150add221afc514cae8adb06a14cb601c5e7ed))
+
+### Bug Fixes
+
+- **daucus-cli:** i18n root directory on watch ([8280956](https://github.com/fullwebdev/fullwebdev/commit/82809565ec8bffb042a02bcb06f223529f265726))
+- **daucus-pandoc:** add missing scripts directory ([8225388](https://github.com/fullwebdev/fullwebdev/commit/822538843c3d68001cd3336fd093ec831922cf13))
+
 ### [0.3.1](https://github.com/fullwebdev/fullwebdev/compare/daucus@v0.3.0...daucus-cli@v0.3.1) (2021-06-17)
 
 ### Bug Fixes

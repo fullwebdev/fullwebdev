@@ -1,6 +1,6 @@
 {
   "name": "@daucus/menu",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "render the menu of a Daucus project from its configuration",
   "license": "MIT",
   "main": "./index.js",
