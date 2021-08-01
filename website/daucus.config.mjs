@@ -16,6 +16,20 @@ const config = {
       root: "blog",
       reverseMenu: true,
     },
+    "browsers-history": {
+      src: "**/*.md",
+      root: "../materials/browsers-history/docs",
+      compilerOptions: {
+        bibliographies: [
+          "../../bibliography.json",
+          "../../../modern-web-apps/bibliography.json",
+          "../../../illustrations/credits.json",
+        ],
+        options: {
+          csl: "../../../modern-web-apps/modeles/french1.csl",
+        },
+      },
+    },
     daucus: {
       src: "**/*.md",
       root: "../packages/daucus",

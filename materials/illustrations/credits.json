@@ -233,6 +233,25 @@
     "URL": "https://github.com/tc39"
   },
   {
+    "id": "EnquireWithinCover112",
+    "accessed": { "date-parts": [[2021, 6, 22]] },
+    "archive_location": "/browsers-history/Enquire_Within_Upon_Everything.jpg",
+    "author": [{ "family": "Dean", "given": "Paul" }],
+    "citation-label": "EnquireWithinCover112",
+    "title": "Enquire Within Upon Everything - Cover of the 112th edition",
+    "type": "graphic",
+    "URL": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Enquire_Within_Upon_Everything.jpg"
+  },
+  {
+    "id": "ErwiseCapture",
+    "accessed": { "date-parts": [[2021, 6, 19]] },
+    "archive_location": "/browsers-history/erwise5.jpg",
+    "citation-label": "ErwiseCapture",
+    "title": "Erwise 0.1 Alpha Screen Capture",
+    "type": "graphic",
+    "URL": "https://en.wikipedia.org/wiki/File:Erwise5.jpg"
+  },
+  {
     "id": "ESJSTimelinePicture",
     "archive_location": "/images/history/js-timeline.png (source: .dia)",
     "author": [{ "family": "Macé", "given": "Noël" }],
@@ -1649,6 +1668,16 @@
     "issued": { "date-parts": [[2020, 11, 15]] },
     "title": "Venn Diagram POC/SOA/POO",
     "type": "graphic"
+  },
+  {
+    "id": "VintageEuropeanStyle",
+    "accessed": { "date-parts": [[2021, 6, 19]] },
+    "archive_location": "/browsers-history/cover.jpg",
+    "citation-label": "VintageEuropeanStyle",
+    "language": "en",
+    "title": "Vintage European style ship engraving",
+    "type": "graphic",
+    "URL": "https://www.rawpixel.com/image/556405/vintage-ship-illustration"
   },
   {
     "id": "violaWWWAbout",

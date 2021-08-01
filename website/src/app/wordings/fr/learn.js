@@ -129,16 +129,17 @@ const wording = {
     },
     {
       type: "Livret",
-      date: "prochainement",
+      href: "/browsers-history/",
+      date: "en cours...",
       wip: true,
       desc: {
-        title: "Notes pour AWM",
-        subtitle:
-          "Compléments et notes pour le livre Développement & Architecture des Applications Web Modernes",
+        title: "Histoire et avenir des navigateurs Web",
+        subtitle: "Notes (livret en cours de rédaction)",
       },
       img: {
-        src: "/images/web-illustrations/reading.svg",
-        alt: "coder par étapes",
+        src: "/illustrations/browsers-history/cover-x200.jpg",
+        alt: "drawing of a vintage ship",
+        height: 200,
       },
     },
     {

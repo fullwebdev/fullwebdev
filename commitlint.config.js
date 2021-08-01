@@ -32,6 +32,7 @@ module.exports = {
         "slides-vanilla-1",
         "custom-element-name",
         "demos",
+        "browsers-history",
       ],
     ],
     "subject-case": [0, "always", "lowerCase"],
