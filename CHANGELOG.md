@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.11](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.10...v1.0.0-beta.11) (2021-08-01)
+
+### ⚠ BREAKING CHANGES
+
+- **daucus-pandoc:** add bibliography option
+
+### Features
+
+- **browsers-history:** conf storygrid ([89c7d46](https://github.com/fullwebdev/fullwebdev/commit/89c7d46eb1378a81c3a20197f3431bd39ccc24a0))
+- **daucus-pandoc:** add bibliography option ([18150ad](https://github.com/fullwebdev/fullwebdev/commit/18150add221afc514cae8adb06a14cb601c5e7ed))
+- **website:** style daucus references section ([07568cb](https://github.com/fullwebdev/fullwebdev/commit/07568cb19a9f13558dc0afb05d70a46a2db13fe3))
+
+### Bug Fixes
+
+- **daucus-cli:** i18n root directory on watch ([8280956](https://github.com/fullwebdev/fullwebdev/commit/82809565ec8bffb042a02bcb06f223529f265726))
+- **website:** typos in latest fr blog post ([500ec66](https://github.com/fullwebdev/fullwebdev/commit/500ec66c837fbd2037c7b4e221d7638444015c30))
+- **website:** update browsers hist conf dates ([735a40b](https://github.com/fullwebdev/fullwebdev/commit/735a40b879def08287974a453de8965496228aff))
+
 ## [1.0.0-beta.10](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.9...v1.0.0-beta.10) (2021-06-21)
 
 ### Features
