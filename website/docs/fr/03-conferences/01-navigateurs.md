@@ -5,7 +5,9 @@
 ::: tip
 Conférence réalisée et présentée avec [Pierre Tibulle](/about).
 
-La première sera donnée à [Riviera Dev](https://2021.rivieradev.fr), le 2 juillet 2021.
+Première présentation : (non enregistrée) le 2 juillet 2021, pour [Riviera Dev](https://2021.rivieradev.fr).
+
+Prochaine présentation : le vendredi 10 septembre 2021 à La Rochelle, pour le [JUG SummerCamp](https://www.jugsummercamp.org/edition/12).
 
 :::
 
