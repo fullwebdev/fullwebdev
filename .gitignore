@@ -32,6 +32,7 @@ dist/
 /website/public/index.html
 /website/public/styles/build/*.css
 /website/public/styles/build/*.css.map
+/website/public/browsers-history/
 /website/functions/hosting/index.html
 /dpawm-build/public
 _daucus_
