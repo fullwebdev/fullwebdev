@@ -1,4 +1,6 @@
 import { Wordings } from "../languages";
+import { Constructor } from "../utils/constructor";
+import { WithWordingInterface } from "../utils/with-wording";
 
 export interface CallToActionParams {
   href?: string;
@@ -24,5 +26,9 @@ export interface ProjectListWording {
   items: Array<Project> | string;
   cta?: Array<CallToActionParams>;
 }
+
+export type WithProjectListWording = Constructor<
+  WithWordingInterface<ProjectListWording>
+>;
 
 export type ProjectListWordings = Wordings<ProjectListWording>;

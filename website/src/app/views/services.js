@@ -1,15 +1,12 @@
 import { LitElement, html, css } from "lit";
+import { WithWording } from "../utils/wording-mixin.js";
 
 export const selector = "app-services-index";
 
-export default class ServicesIndexElement extends LitElement {
-  static get properties() {
-    return {
-      lang: { type: String },
-      wording: { type: Object, attribute: false },
-    };
-  }
-
+/** @type {import('./services').WithServicesWording & LitElement} */
+// @ts-ignore missing props
+const LitElementWithServicesWording = WithWording(LitElement);
+export default class ServicesIndexElement extends LitElementWithServicesWording {
   static get styles() {
     return css`
       :host {
@@ -54,20 +51,6 @@ export default class ServicesIndexElement extends LitElement {
     `;
   }
 
-  constructor() {
-    super();
-    /** @type {import('../languages').Language} */
-    this.lang = "en";
-    /** @type {import('./services').ServicesWording | null} */
-    this.wording = null;
-  }
-
-  get w() {
-    if (!this.wording)
-      throw new Error(`can't find any wording for ${selector}`);
-    return this.wording;
-  }
-
   render() {
     return html`
       <h1>${this.w.title}</h1>
@@ -97,4 +80,5 @@ export default class ServicesIndexElement extends LitElement {
   }
 }
 
+// @ts-ignore missing props
 customElements.define(selector, ServicesIndexElement);

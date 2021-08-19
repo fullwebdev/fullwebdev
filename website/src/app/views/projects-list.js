@@ -2,11 +2,11 @@ import { LitElement, html, css } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { WithWording } from "../utils/wording-mixin.js";
 
 export const selector = "app-projects-list";
 
 /**
- * @typedef {import('./projects-list').ProjectListWording} ProjectListWording
  * @typedef {import('./projects-list').CallToActionParams} CallToActionParams
  * @typedef {import('./projects-list').ProjectListWordings} ProjectListWordings
  * @typedef {import('./projects-list').Project} Project
@@ -74,14 +74,11 @@ const projectCard = (item) => html`<a
   </div>
 </a>`;
 
-export default class ProjectsListElement extends LitElement {
-  static get properties() {
-    return {
-      lang: { type: String },
-      wording: { type: Object, attribute: false },
-    };
-  }
+/** @type {import('./projects-list').WithProjectListWording & LitElement} */
+// @ts-ignore missing properties
+const LitElementWithProjectListWording = WithWording(LitElement);
 
+export default class ProjectsListElement extends LitElementWithProjectListWording {
   static get styles() {
     return css`
       :host {
@@ -357,18 +354,8 @@ export default class ProjectsListElement extends LitElement {
 
   constructor() {
     super();
-    /** @type {Language} */
-    this.lang = "en";
     /** @type {Array<any>} */
     this.items = [];
-    /** @type {ProjectListWording | null} */
-    this.wording = null;
-  }
-
-  get w() {
-    if (!this.wording)
-      throw new Error(`can't find any wording for ${selector}`);
-    return this.wording;
   }
 
   render() {
@@ -401,4 +388,5 @@ export default class ProjectsListElement extends LitElement {
   }
 }
 
+// @ts-ignore missing props
 customElements.define(selector, ProjectsListElement);

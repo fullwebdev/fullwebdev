@@ -1,6 +1,7 @@
 /* eslint-disable max-classes-per-file */
 import { LitElement, html, css } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { WithWording } from "../utils/wording-mixin.js";
 
 const mailchimpClassicStyle = css`
   /* #region MailChimp Form Embed Code - Classic - 12/17/2015 v10.7 */
@@ -222,45 +223,15 @@ const mailchimpClassicStyle = css`
   }
 `;
 
-class SignupFormElement extends LitElement {
+/** @type {import('./newsletter').WithSignupFormWording & LitElement} */
+// @ts-ignore missing properties
+const LitElementWithSignupFormWording = WithWording(LitElement);
+
+class SignupFormElement extends LitElementWithSignupFormWording {
   static get properties() {
     return {
       lang: { type: String },
       _isFormValid: { type: Boolean, state: true },
-    };
-  }
-
-  /** @type {import('../languages').Wordings<any>} */
-  static get wordings() {
-    return {
-      fr: {
-        title: "S'abonner à la newsletter",
-        indicatesRequired: "indique un champs obligatoire",
-        labels: {
-          email: "Adresse email",
-          fname: "Prénom",
-          lname: "Nom de famille",
-          lang: "Langue souhaitée",
-          company: "Compagnie",
-          title: "Intitulé de poste",
-        },
-        submit: "S'inscrire",
-        invalidForm: "Veuillez compléter les champs invalides.",
-      },
-      en: {
-        title: "Subscribe to the newsletter",
-        indicatesRequired: "indicates required",
-        labels: {
-          email: "Email Address",
-          fname: "First Name",
-          lname: "Last Name",
-          lang: "Preferred Language",
-          company: "Company",
-          title: "Job Title",
-        },
-        submit: "Subscribe",
-        invalidForm: "Correct the invalid fields before submitting again.",
-      },
     };
   }
 
@@ -287,13 +258,7 @@ class SignupFormElement extends LitElement {
 
   constructor() {
     super();
-    /** @type {import('../languages').Language} */
-    this.lang = "en";
     this._isFormValid = true;
-  }
-
-  get w() {
-    return SignupFormElement.wordings[this.lang];
   }
 
   render() {
@@ -447,11 +412,16 @@ class SignupFormElement extends LitElement {
   }
 }
 
+// @ts-ignore missing props
 customElements.define("mlc-signup-form", SignupFormElement);
 
 export const selector = "app-newsletter-view";
 
-export class NewsletterView extends LitElement {
+/** @type {import('./newsletter').WithNewsletterViewWording & LitElement} */
+// @ts-ignore missing properties
+const LitElementNewsletterViewWording = WithWording(LitElement);
+
+export class NewsletterView extends LitElementNewsletterViewWording {
   static get styles() {
     return css`
       :host {
@@ -463,8 +433,14 @@ export class NewsletterView extends LitElement {
   }
 
   render() {
-    return html` <mlc-signup-form lang=${this.lang}></mlc-signup-form> `;
+    return html`
+      <mlc-signup-form
+        .lang=${this.lang}
+        .wording=${this.w.signupForm}
+      ></mlc-signup-form>
+    `;
   }
 }
 
+// @ts-ignore missing props
 customElements.define(selector, NewsletterView);

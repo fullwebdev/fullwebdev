@@ -1,4 +1,6 @@
 import { Wordings } from "../languages";
+import { Constructor } from "../utils/constructor";
+import { WithWordingInterface } from "../utils/with-wording";
 
 export interface ServicesWording {
   title: string;
@@ -7,3 +9,7 @@ export interface ServicesWording {
 }
 
 export type ServicesWordings = Wordings<ServicesWording>;
+
+export type WithServicesWording = Constructor<
+  WithWordingInterface<ServicesWording>
+>;
