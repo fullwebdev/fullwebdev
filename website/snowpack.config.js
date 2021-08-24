@@ -8,6 +8,11 @@ module.exports = {
   plugins: [],
   routes: [
     {
+      match: "all",
+      src: "/cv.html",
+      dest: "/cv.html",
+    },
+    {
       match: "routes",
       src: "(?!/dist/fragments/).*",
       dest: "/index.html",
