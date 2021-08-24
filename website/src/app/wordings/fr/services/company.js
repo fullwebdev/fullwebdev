@@ -29,6 +29,12 @@ const wording = {
       },
       backgroundImg:
         "/images/web-illustrations/fotis-fotopoulos-DuHKoV44prg-unsplash.jpg",
+      cta: [
+        {
+          href: "/cv/nma",
+          text: "profils",
+        },
+      ],
     },
     {
       desc: {

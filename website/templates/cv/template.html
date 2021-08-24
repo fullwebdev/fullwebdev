@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <base href="/" />
+    <title>CV</title>
+    <style>
+      {{{css.shell}}}
+    </style>
+  </head>
+  <body>
+    <script type="module">
+      import { selector } from "/dist/app/views/cv-nma.js";
+      const LANGS = ["en", "fr"];
+
+      (async () => {
+        let lang = new URLSearchParams(window.location.search).get("lang");
+
+        if (!LANGS.includes(lang)) {
+          lang = "fr";
+        }
+
+        const wording = (await import(`/dist/app/wordings/${lang}/cv-nma.js`))
+          .default;
+
+        const el = document.createElement(selector);
+        el.lang = lang;
+        el.wording = wording;
+        document.body.prepend(el);
+      })();
+    </script>
+  </body>
+</html>

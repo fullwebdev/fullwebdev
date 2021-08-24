@@ -29,7 +29,7 @@ dist/
 /website/public/illustrations/
 /website/src/fragments/
 /website/public/localized-files/
-/website/public/index.html
+/website/public/*.html
 /website/public/styles/build/*.css
 /website/public/styles/build/*.css.map
 /website/public/browsers-history/

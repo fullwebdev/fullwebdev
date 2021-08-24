@@ -317,6 +317,10 @@ export class AppRouter extends AbstractRouter {
       "/rendering/benchmark/table": {
         componentURL: "./views/benchmark-table.js",
       },
+      "/cv/nma": {
+        componentURL: "./views/cv-nma.js",
+        wordings: "cv-nma",
+      },
       "/eni/ce-name": {
         redirectTo: "/tools/ce-name",
       },
