@@ -1,0 +1,27 @@
+#main-header,
+#standard-menu,
+#edit-page-button,
+.no-print {
+  display: none !important;
+}
+
+#main-footer {
+  position: initial;
+  width: initial;
+}
+
+#content-container {
+  padding-top: 0;
+}
+
+.level2:not(:first-of-type) {
+  margin-top: 2rem;
+  break-before: page;
+  page-break-before: always;
+}
+
+.level3,
+.level4 {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
