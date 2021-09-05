@@ -5,6 +5,10 @@
   display: none !important;
 }
 
+#page-container {
+  margin-top: 0;
+}
+
 #main-footer {
   position: initial;
   width: initial;
