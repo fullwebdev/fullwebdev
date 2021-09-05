@@ -3,19 +3,17 @@
 
 # Notes pour la conférence
 
-> Cf. [le résumé et la description](/docs/conferences/navigateurs) de cette conférence.
->
-> ![[Story Grid](https://storygrid.com/)](/browsers-history/story-grid-graph.jpg)
->
-> Un [tableau Google Spreadsheets](https://docs.google.com/spreadsheets/d/1LYjSagydQDFgvW7EKFX68hBLgoERQ8uzuRQXvlhNddM/edit?usp=sharing) rassemble également la timeline, le timing de la conférence, ainsi que quelques sparklines.
+<blockquote class="no-print">
 
-## Ouverture
+Cf. [le résumé et la description](/docs/conferences/navigateurs) de cette conférence.
+
+![[Story Grid](https://storygrid.com/)](/browsers-history/story-grid-graph.jpg)
+
+Un [tableau Google Spreadsheets](https://docs.google.com/spreadsheets/d/1LYjSagydQDFgvW7EKFX68hBLgoERQ8uzuRQXvlhNddM/edit?usp=sharing) rassemble également la timeline, le timing de la conférence, ainsi que quelques sparklines.
+
+</blockquote>
 
 <!-- #region part-1 -->
-
-> accueil du public & générique
->
-> Limite 2"
 
 ## Intro (Enquire)
 
@@ -39,7 +37,7 @@ UI du nouveau système
 
 ### Contexte déroutant
 
-CERN = immense & "innovant" 😱
+CERN = immense & "innovant" :scream:
 
 - personnes (10000)
 - expérimentations / projets
@@ -59,7 +57,7 @@ petit Wiki (anachronique)
 - liens entre elles
 - base de donnée locale
 
-#### 🤩 "Enquire Within Uppon Everything"
+#### :star_struck: "Enquire Within Uppon Everything"
 
 "renseignez-vous sur tout"
 
@@ -75,7 +73,7 @@ grimoire
 
 ### Le retour en Angleterre
 
-_MAIS_ 😢
+_MAIS_ :cry:
 
 seulement 6 mois
 
@@ -95,7 +93,7 @@ Bournemouth, Dorset
 
 3 ans
 
-mer et campagne 🤷
+mer et campagne :shrug:
 
 directeur technique d'une petite entreprise\
 logiciels d'impression [@ImageComputerSystemsAbout]
@@ -104,7 +102,7 @@ logiciels d'impression [@ImageComputerSystemsAbout]
 
 Retourne au CERN en **1984**
 
-- nouvelle XP des réseaux 💪
+- nouvelle XP des réseaux :muscle:
 
 1ère mission : interopérabilité
 
@@ -112,7 +110,7 @@ Retourne au CERN en **1984**
 
 porte ENQUIRE sur VMS
 
-- 0️⃣ effort pour le rendre utilisable par d'autres
+- :zero: effort pour le rendre utilisable par d'autres
 - mais quand même un peu utilisé
 
 ### HyperCard
@@ -136,10 +134,10 @@ et pas vraiment hypertexte\
 
 **mars 1989**: proposition
 
-(↩️ mois) CERN 🔌 Internet\
+(↩️ mois) CERN :electric_plug: Internet\
 \+ gd site Internet d'Europe
 
-**mai 1990** ✅\
+**mai 1990** :white_check_mark:\
 ➡️ NeXT Computer
 
 - Steve Jobs (85-97, rachat Apple)
@@ -150,15 +148,15 @@ et pas vraiment hypertexte\
 
 ### 1ers dev
 
-_fin année_ 🎉 : **1er** navigateur
+_fin année_ :tada: : **1er** navigateur
 
 - 1 mois pour navigation
-- ➕ 1 mois pour édition
-  - "collaboration" (Web 2.0 😆)
+- :heavy_plus_sign: 1 mois pour édition
+  - "collaboration" (Web 2.0 :laughing:)
 - **_WorldWideWeb_**
   - _Nexus_ (bien plus tard)
 
-été **1991** 🎉🎉
+été **1991** :tada::tada:
 
 - publication (FTP)
 - Serveur HTTP NeXTStep
@@ -167,20 +165,20 @@ _ET_ ...
 
 ### Début en mode texte
 
-un autre navigateur : **_LMB_** 🤷\
+un autre navigateur : **_LMB_** :shrug:\
 créé par étudiant (Nicola Pellow)
 
 - _CAR_ pas assez NeXTStep
-- telnet 😡
+- telnet :rage:
 
-confusion: _« Le Web est un moyen de trouver des informations en tapant des nombres »_ 😅
+confusion: _« Le Web est un moyen de trouver des informations en tapant des nombres »_ :sweat_smile:
 
 <!-- **PIERRE** [DEMO](https://line-mode.cern.ch/www/hypertext/WWW/TheProject.html) -->
 
-_IL FAUT_ 💪: universités/recherche\
+_IL FAUT_ :muscle:: universités/recherche\
 UNIX ➡️ X Window System
 
-_MAIS_ 🛑 pas de moyens 😢
+_MAIS_ :stop_sign: pas de moyens :cry:
 
 ## Précurseurs
 
@@ -193,15 +191,15 @@ _MAIS_ 🛑 pas de moyens 😢
 Tim & Nicola
 
 - réécrivent WWW & LMB en C
-- juste une lib 😢
+- juste une lib :cry:
 - the Common Library (libwww)
 
-Tim: tour des centres 🙏\
+Tim: tour des centres :pray:\
 3 mois USA
 
 - MIT, conf IETF à Boston & Xerox Parc, Palo Alto
-- 🤝 Ted Nelson (hypertexte)
-- mais 0️⃣ navigateur 😢
+- :handshake: Ted Nelson (hypertexte)
+- mais :zero: navigateur :cry:
 
 _Arrive_...
 
@@ -209,13 +207,13 @@ _Arrive_...
 
 <!-- FIXME: roller-coaster émotionnel ? -->
 
-Robert Cailliau 🦸\
+Robert Cailliau :superhero:\
 ➡️ navigateur pour Mac ?
 
-🤷 tour des centres de recherche\
+:shrug: tour des centres de recherche\
 ➡️ Univ. tech. d'Helsinki
 
-- 4 étudiants 🤩
+- 4 étudiants :star_struck:
 - projet fin d'étude (X11)
 
 **Avril**: 1ère alpha
@@ -224,12 +222,12 @@ Robert Cailliau 🦸\
 - **_ERWISE_**
 - 1ER X11 HORS CERN
 
-_SAUF QUE_: Très basique 😢\
+_SAUF QUE_: Très basique :cry:\
 look "papier" (Serif/fond bleu)
 
 ### ViolaWWW
 
-Pei-Yuan Wei 🦸\
+Pei-Yuan Wei :superhero:\
 étud. Univ. Berkeley\
 de son côté / pour le plaisir\
 a déjà créé VIOLA (1an avant)
@@ -244,7 +242,7 @@ a déjà créé VIOLA (1an avant)
   - juste après ERWISE
 - **Mai**: 1ère version publique
 
-#### super complet 🎉
+#### super complet :tada:
 
 historique
 
@@ -270,12 +268,12 @@ petits projets
 Erwise
 
 - **août** code source
-- _puis..._ Rien 😢
-- études finis 👋
+- _puis..._ Rien :cry:
+- études finis :wave:
 
 ViolaWWW
 
-- OK, mais tout seul 😢
+- OK, mais tout seul :cry:
 - pas de financement = dev lent
 
 _Mais aussi..._
@@ -284,25 +282,25 @@ _Mais aussi..._
 
 ébulition
 
-Mac: **_Samba / MacWWW_** 😃\
+Mac: **_Samba / MacWWW_** :smiley:\
 Robert ➡️ Nicola\
-CERN = Osef 😢
+CERN = Osef :cry:
 
-3ème X11: **_Midas_** 😃\
+3ème X11: **_Midas_** :smiley:\
 Centre de l'acc. lin. de Stanford\
-y ➡️ Web 👍 / y reste 👎 😢
+y ➡️ Web ::thum / y reste :thumbsdown: :cry:
 
 **1993**
 
 1er Windows: **_Cello_**\
-école droit Cornell... 🤷
+école droit Cornell... :shrug:
 
 **_Lynx_** (hypertexte 92)\
 2.0 (HTML + HTTP)\
 perdure (2.8.9 ajd)\
-_Mais..._ CLI 😆
+_Mais..._ CLI :laughing:
 
-😡😡 _Ben alors ???_
+:rage::rage: _Ben alors ???_
 
 <!-- #endregion part-1 -->
 
@@ -314,7 +312,7 @@ _Mais..._ CLI 😆
 >
 > Limite : 18 - 22"
 
-😜 _Ben ... y a eu mieux !_
+:stuck*out_tongue_winking_eye: \_Ben ... y a eu mieux !*
 
 ### NCSA - 1992
 
@@ -330,8 +328,8 @@ lead dev X pour Collage\
 ➡️ "on peut faire mieux"
 
 Marc Andreessen (étudiant)\
-🔜 "vrai" projet NCSA\
-dev, 💰, direction...
+:soon: "vrai" projet NCSA\
+dev, :moneybag:, direction...
 
 ### NCSA - 1993
 
@@ -342,12 +340,12 @@ images en ligne (avant: fenêtre)
 **_MOSAIC_**
 
 ~3 mois: Mac & Win\
-**1er cross-platform** 🎉
+**1er cross-platform** :tada:
 
 ~1 mois: Commodore & Amiga
 
-➕ Serveur Unix NCSA httpd\
-(🔜 Apache)
+:heavy_plus_sign: Serveur Unix NCSA httpd\
+(:soon: Apache)
 
 ### Mosaic - 1994
 
@@ -364,14 +362,14 @@ HTML pas standardisé
 - son, video
 
 Aucune comparaison !
-➡️ ➕ que doc (dev)
+➡️ :heavy_plus_sign: que doc (dev)
 
 ### Netscape - 1994
 
-Marc 😡 / diplome déc. 93\
+Marc :rage: / diplome déc. 93\
 pas responsable du proj.
 
-"interêt commercial" (veut 💸)\
+"interêt commercial" (veut :moneybag:)\
 quitte NCSA ✈️ Californie
 
 rencontre Jim Clark\
@@ -393,9 +391,9 @@ ex : **_Spyglass_**
 1. vendre "Spyglass Mosaic"
    - _"équipementier"_ (OEM)
    - livres, OS, ATM, décodeurs TV, kiosques, etc.
-   - ❌ particuliers
+   - :x: particuliers
 2. créer un "nouveau" Mosaic
-   - from scratch 🤷 🤯
+   - from scratch :shrug: :exploding_head:
    - pas vraiment d'innovation
 
 ### Netscape innove - 1995
@@ -408,8 +406,8 @@ scripting
 
 **septembre**: Netscape 2.0
 
-➕ frames\
-➕ plug-ins\
+:heavy_plus_sign: frames\
+:heavy_plus_sign: plug-ins\
 etc...
 
 _rend fou Microsoft..._
@@ -432,23 +430,23 @@ WIndows standard de fait
 (ex. office)
 
 15 juillet 1994: accord justice US\
-❌ lier produits à Windows\
-✅ ajouter fonctionnalités\
-PAS un danger 🤷
+:x: lier produits à Windows\
+:white_check_mark: ajouter fonctionnalités\
+PAS un danger :shrug:
 
 ### Web = Danger !
 
 _SAUF QUE..._
 
-Web devient ➕ que doc\
+Web devient :heavy_plus_sign: que doc\
 ➡️ plateforme\
 ⚠️ interop
 
 SI Web ↗️ ALORS Microsoft ↘️
 
-💡 freiner Netscape
+:bulb: freiner Netscape
 
-1️⃣ License Spyglass (**fin 94**)\
+:one: License Spyglass (**fin 94**)\
 prêt à vendre leur propre Mosaic
 
 _MAIS avant..._
@@ -461,7 +459,7 @@ proposition: se partager le marché\
 Pas de Netscape sur Windows\
 = pas de Microsoft s/ autres OS
 
-🛑 fortement illégal (US !)
+:stop_sign: fortement illégal (US !)
 
 Netscape refuse
 
@@ -472,31 +470,31 @@ Netscape refuse
 
 ### Stratégies bancales
 
-1️⃣ accords PC ❌ concurrence\
-SI ✅ (Conpaq) ➡️ prix & support au TOP\
-SINON ❌ (IBM) ➡️ 😭
+:one: accords PC :x: concurrence\
+SI :white_check_mark: (Conpaq) ➡️ prix & support au TOP\
+SINON :x: (IBM) ➡️ :sob:
 
 sortie IE 1 (= spyglass) **aout**\
 ➡️ vente liée Win + IE\
-_pas un produit, feature_ 😆\
+_pas un produit, feature_ :laughing:\
 même si Microsoft Plus! (vendu à part)
 
-2️⃣ vengeance : Mac (IE 2, **nov**)
+:two: vengeance : Mac (IE 2, **nov**)
 
-MAIS Netscape 2 😝\
+MAIS Netscape 2 :stuck_out_tongue_closed_eyes:\
 1 an de retard (IE 3, **aout 96**)\
-Netscape 3 UNE SEMAINE après 😝
+Netscape 3 UNE SEMAINE après :stuck_out_tongue_closed_eyes:
 
 ### Enfoncer le clou
 
-😨 « perdre si l'utilisateur voit Netscape côte à côte avec IE »
+:fearful: « perdre si l'utilisateur voit Netscape côte à côte avec IE »
 
-3️⃣ "soudure" inutiles\
-Win 9x ➡️ Win Explorer 🤝 IE\
+:three: "soudure" inutiles\
+Win 9x ➡️ Win Explorer :handshake: IE\
 meilleure "INTEGRATION" (UX)\
-❌ désinstaller
+:x: désinstaller
 
-x3 ➡️ 💀 Netscape
+x3 ➡️ :skull: Netscape
 
 - **97** suite Communicator
 - **98** gratuit
@@ -512,7 +510,7 @@ x3 ➡️ 💀 Netscape
 
 ### Naissance
 
-7 ans sans alternative 😢
+7 ans sans alternative :cry:
 
 Nestscape **98**:\
 pas seulement "gratuit"
@@ -540,7 +538,7 @@ demo & publication pr dev
 
 performances exceptionnelles !
 
-_MAIS_ ❌ complet
+_MAIS_ :x: complet
 
 ### Lente création
 
@@ -564,17 +562,17 @@ Phoenix ➡️ Firebird
 ### Erreur de Microsoft
 
 **2004** : Firebird ➡️ Firefox \
-9 nov : v1.0 🎉
+9 nov : v1.0 :tada:
 
 **2005** : 1u/10 IE ➡️ Firefox\
 _MAIS_ ↘️ 2006
 
 _MAIS_ **2003**: màj IE ⬅️ Windows
 
-nov **2006**: Windows Vista 😆\
+nov **2006**: Windows Vista :laughing:\
 tout le monde déteste
 
-❌ Vista = XP = ❌ màj IE 🤷
+:x: Vista = XP = :x: màj IE :shrug:
 
 installation facile
 
@@ -601,7 +599,7 @@ pour créer un autre navigateur Open Source
 > Ah ben euh ... non !
 > OK ... donc faut vraiment que je reprenne la base alors ?
 >
-> Bon ben retour en 1995 alors 🤷
+> Bon ben retour en 1995 alors :shrug:
 
 <!-- #endregion part-2 -->
 
@@ -619,10 +617,10 @@ Windows pas seul sur IBM PC\
 **1991**: Linux
 
 peu de monde\
-mais très passionnés 💪
+mais très passionnés :muscle:
 
 pas instinctif\
-❌ intégration apps
+:x: intégration apps
 
 **14 oct 96** : ☎️ Mathias Ettrich\
 ➡️ Kool Desktop Environment ➡️ KDE\
@@ -634,9 +632,9 @@ pas instinctif\
 1 an (20 oct 97): KDE beta 1\
 ➡️ KFM
 
-`http://` ✅
+`http://` :white_check_mark:
 
-❌ CSS & JS
+:x: CSS & JS
 
 pas fait pour
 
@@ -645,22 +643,22 @@ pas fait pour
 
 ### KHTML
 
-❌ Lars Knoll (ajd CTO Qt)
+:x: Lars Knoll (ajd CTO Qt)
 
 seul, "for fun"\
 hhtmlw ➡️ KHTML\
 DOM
 
-🦸 Harri Porten ➡️ JS
+:superhero: Harri Porten ➡️ JS
 
-➕ < 1 an ➡️ CSS
+:heavy_plus_sign: < 1 an ➡️ CSS
 
 **oct 2000**: KDE 2\
-w/ Konqueror 🎉
+w/ Konqueror :tada:
 
-... meh ?! 🤷
+... meh ?! :shrug:
 
-❓ 🥁 ❓
+:question: :drum: :question:
 
 ## Safari & Web Mobile
 
@@ -670,12 +668,12 @@ w/ Konqueror 🎉
 
 ### Webkit & Safari
 
-**2003**: 🍎 Safari\
+**2003**: :apple: Safari\
 khtml ➡️ WebKit
 
-Pourquoi ❓
+Pourquoi :question:
 
-accord Microsoft 🍎 \
+accord Microsoft :apple: \
 IE défaut s/ Mac depuis 98
 
 **2001**: IE 5 for Mac\
@@ -684,34 +682,34 @@ tt les devs ➡️ IE Win
 très mauvaises perfs\
 prblm sécu
 
-fin accord : **2002** 🎉
+fin accord : **2002** :tada:
 
 ### Périphériques mobiles
 
-_Mais_ 🍎 = Luxe / niche
+_Mais_ :apple: = Luxe / niche
 
-**2001**: ipod 🔥\
+**2001**: ipod :fire:\
 revenus immense
 
-🍎 comprends mobiles = futur
+:apple: comprends mobiles = futur
 
 **2004**: "project purple"
 
 ### Smartphones
 
-**2005**: Nokia 👑 (Symbian)\
-⬅️ Webkit 🎉
+**2005**: Nokia :crown: (Symbian)\
+⬅️ Webkit :tada:
 
 **2007**: iPhone "2G"\
 1er avec nav "moderne" / complet
 
 lance la tendance\
-_Mais_ ❌ explosion
+_Mais_ :x: explosion
 
 **2008**: Android 1.0\
-⬅️ Webkit 🎉
+⬅️ Webkit :tada:
 
-❓ 🥁 Chrome ! 🤷
+:question: :drum: Chrome ! :shrug:
 
 ## Chrome
 
@@ -745,13 +743,13 @@ WebKit ⬅️ équipe Android
 
 **Chromium !**
 
-2015: 💀 IE ➡️ Edge\
+2015: :skull: IE ➡️ Edge\
 2020: Edge 79 = Chromium\
 (2013: Opera 15 = Chromium)
 
 ### Monopole ?
 
-Google 👑 ❌ Microsoft
+Google :crown: :x: Microsoft
 
 Chrome/Android = IE/Win
 
@@ -760,10 +758,10 @@ Google ❤️ Web App
 
 Web ↗️ ➡️ Google ↗️
 
-_LIMITE_: 🍎 ~15%\
-⬅️ Safari 😱 Web Apps (= Microsoft)\
+_LIMITE_: :apple: ~15%\
+⬅️ Safari :scream: Web Apps (= Microsoft)\
 ⬅️ Webkit OBLIGATOIRE sur iOS\
-➕ faible budget pr WebKit\
+:heavy_plus_sign: faible budget pr WebKit\
 (= IE après Netscape)
 
 ## Conclusion
@@ -792,18 +790,18 @@ Projet Fugu\
 réduire les compromis\
 direct dans Chrome avant standard
 
-énorme budget marketing (DevRel 🤷)\
+énorme budget marketing (DevRel :shrug:)\
 appel à la popularité (sophisme) \
-"la plupart des devs veulent..." donc ✅
+"la plupart des devs veulent..." donc :white_check_mark:
 
 ### Devices & Sensors
 
 **juin 2020**
 
-🍎 & 🦊 ❌ (harmful)\
-Google 🏃
+:apple: & :fox_face: :x: (harmful)\
+Google :running:
 
-Marcos Cáceres (ex Co-prés Web Apps WG + 🦊)
+Marcos Cáceres (ex Co-prés Web Apps WG + :fox_face:)
 
 _« La vie privée et la sécurité de nos utilisateurs sont primordiales, ce qui implique de faire des compromis difficiles. »_
 
@@ -811,20 +809,20 @@ _« La vie privée et la sécurité de nos utilisateurs sont primordiales, ce qu
 
 Qu'est ce que le Web ?
 
-1️⃣ plateforme = autres ?
+:one: plateforme = autres ?
 
 ⬅️ HTML, CSS + JS = cool ?
 
 = React Native, Flutter, etc. ?
 
-### 2️⃣ un cas à part
+### :two: un cas à part
 
 ⬅️ collaboration (standards ouverts)\
 ⬅️ interop. & accessibilité\
 (pas cher, pays émergeants)\
 ⬅️ vie privée & sécurité
 
-2️⃣ ❓❗ ➡️ DECIDER\
+:two: :question: :exclamation: ➡️ DECIDER\
 ➡️ compromis\
 ➡️ meilleur résultat
 

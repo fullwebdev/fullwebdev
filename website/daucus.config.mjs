@@ -27,6 +27,7 @@ const config = {
         ],
         options: {
           csl: "../../../modern-web-apps/modeles/french1.csl",
+          "section-divs": true,
         },
       },
     },
