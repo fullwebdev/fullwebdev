@@ -11,6 +11,7 @@ class CVExperienceElement extends LitElement {
     return {
       wording: { type: Object, attribute: false },
       _flatGroups: { type: Boolean, state: true },
+      align: { type: Boolean },
     };
   }
 
@@ -25,6 +26,7 @@ class CVExperienceElement extends LitElement {
     this.wording;
     this._handleBeforePrint = this.__handleBeforePrint.bind(this);
     this._handleAfterPrint = this.__handleAfterPrint.bind(this);
+    this.align = false;
   }
 
   createRenderRoot() {
@@ -50,7 +52,12 @@ class CVExperienceElement extends LitElement {
     }
     return groups.map(
       (group, i) => html`
-        <div class=${classMap({ timeline: true, mirror: i % 2 === 1 })}>
+        <div
+          class=${classMap({
+            timeline: true,
+            mirror: !this.align && i % 2 === 1,
+          })}
+        >
           ${group.map(
             (item) => html`<div class="xp-item timeline__event">
               <div
@@ -327,7 +334,19 @@ const timelineStyle = css`
   }
 `;
 
+/**
+ * @class NMACVElement
+ * @property {boolean} quiet - hide calls to action
+ */
 export default class NMACVElement extends LitElementWithCVNMAWording {
+  static get properties() {
+    return {
+      quiet: { type: Boolean },
+      align: { type: Boolean },
+      anonymous: { type: Boolean },
+    };
+  }
+
   static get styles() {
     return [
       timelineStyle,
@@ -341,32 +360,20 @@ export default class NMACVElement extends LitElementWithCVNMAWording {
           padding: 1rem;
         }
 
-        :host > section > h2 {
-          text-align: center;
-        }
-
-        .break {
-          width: 3rem;
-          margin: 0 auto;
-          border: none;
-          border-top: 1px solid #FFF;
+        h1 {
+          font-size: 2rem;
         }
 
         .first-page {
           display: grid;
-          grid-template-columns: 300px 1fr;
+          grid-template-columns: 310px 1fr;
           margin-left: auto;
           margin-right: auto;
         }
         #cv__presentation {
           background-color: var(--primary-color);
           color: var(--neutral-color-0);
-          padding: 1.5rem;
-        }
-        #cv__presentation h1,
-        #cv__presentation .subtitle,
-        #cv__presentation .note {
-          text-align: center
+          padding: 1.7rem;
         }
 
         #cv__presentation .note {
@@ -376,14 +383,9 @@ export default class NMACVElement extends LitElementWithCVNMAWording {
 
         #cv__presentation .subtitle {
           margin-bottom: 0;
-        }
-
-        #cv__presentation .subtitle {
           padding-bottom: 1rem;
-        }
-
-        section > .subtitle {
-          font-size: 1.2rem;
+          font-size: 1.1rem;
+          font-weight: bold;
         }
 
         #cv__presentation h2 {
@@ -398,8 +400,7 @@ export default class NMACVElement extends LitElementWithCVNMAWording {
         }
 
         .presentation-contents .abstract {
-          text-align: justify;
-          margin-top: 0;
+          margin: 2rem auto;
         }
 
         .presentation-contents > * {
@@ -407,7 +408,7 @@ export default class NMACVElement extends LitElementWithCVNMAWording {
         }
 
         .presentation-contents h3 {
-          margin: 0.5rem 0 0.5rem 1rem;
+          margin: 4rem 0 0.5rem 1rem;
         }
 
         .networks ul,
@@ -519,13 +520,13 @@ export default class NMACVElement extends LitElementWithCVNMAWording {
           text-decoration: underline;
         }
 
-        #cv__accomplishments,
-        #cv__misc {
+        .last-page > section {
           padding: 0 2rem;
         }
 
         .cv__accomplishments__content,
-        #cv__misc > ul {
+        #cv__misc > ul,
+        #cv__education ul {
           columns: 2;
           column-gap: 2rem;
         }
@@ -550,10 +551,16 @@ export default class NMACVElement extends LitElementWithCVNMAWording {
           margin-top: 0;
         }
 
-        #cv__education h2,
-        #cv__misc h2,
-        #cv__accomplishments h2 {
+        .last-page h2 {
           margin-bottom: 1rem;
+        }
+
+        .last-page li {
+          margin: .2em 0;
+        }
+
+        #cv__misc h2 {
+          margin-top: 0;
         }
 
         @media print {
@@ -619,7 +626,7 @@ export default class NMACVElement extends LitElementWithCVNMAWording {
           }
 
           #cv__xp,
-          #cv__education {
+          .last-page {
             border-top: 1px dashed var(--primary-color-softer);
           }
 
@@ -661,7 +668,7 @@ export default class NMACVElement extends LitElementWithCVNMAWording {
           :host > section {
             padding: 0;
           }
-          #cv__accomplishments, #cv__misc {
+          .last-page > section {
             padding: 0 1rem;
           }
           .cv__accomplishments__content, #cv__misc > ul {
@@ -671,53 +678,61 @@ export default class NMACVElement extends LitElementWithCVNMAWording {
     ];
   }
 
+  constructor() {
+    super();
+    this.quiet = false;
+    this.align = false;
+    this.anonymous = false;
+  }
+
   render() {
     return html`
       <div class="first-page">
         <section id="cv__presentation">
-          <h1>${this.w.title}</h1>
-          <p class="subtitle">${this.w.subtitle}</p>
-          <p class="note">${this.w.note}</p>
-          <hr class="break"></hr>
-          <h2>${this.w.presentation.title}</h2>
+          <div class="presentation-header">
+            <h1>${this.anonymous ? "NMA" : this.w.title}</h1>
+            <p class="subtitle">${this.w.subtitle}</p>
+            <p class="note">${this.w.note}</p>
+          </div>
           <div class="presentation-contents">
-            <p class="abstract">
-              ${this.w.presentation.abstract}
-            </p>
-            <div class="networks">
-              <h3>${this.w.presentation.networks.title}</h3>
-              <ul>
-                ${this.w.presentation.networks.content.map((item) =>
-                  item.url
-                    ? html`<a
-                        href=${item.url}
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        class="invisible-link"
-                        ><li class="networks__item">
+            <h2>${this.w.presentation.title}</h2>
+            <p class="abstract">${this.w.presentation.abstract}</p>
+          </div>
+          ${this.anonymous
+            ? ""
+            : html`<div class="networks">
+                <h3>${this.w.presentation.networks.title}</h3>
+                <ul>
+                  ${this.w.presentation.networks.content.map((item) =>
+                    item.url
+                      ? html`<a
+                          href=${item.url}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          class="invisible-link"
+                          ><li class="networks__item">
+                            <img src=${item.icon} alt=${item.alt} /><span
+                              class="networks__item__content"
+                              >${item.text}</span
+                            >
+                          </li></a
+                        > `
+                      : html`<li class="networks__item">
                           <img src=${item.icon} alt=${item.alt} /><span
                             class="networks__item__content"
                             >${item.text}</span
                           >
-                        </li></a
-                      > `
-                    : html`<li class="networks__item">
-                        <img src=${item.icon} alt=${item.alt} /><span
-                          class="networks__item__content"
-                          >${item.text}</span
-                        >
-                      </li>`
-                )}
-              </ul>
-            </div>
-            <div class="langs">
+                        </li>`
+                  )}
+                </ul>
+              </div>`}
+          <div class="langs">
             <h3>${this.w.presentation.langs.title}</h3>
             <ul>
               ${this.w.presentation.langs.content.map(
                 (lang) => html`<li>${lang}</li>`
               )}
             </ul>
-          </div>
           </div>
         </section>
         <section id="cv__intro">
@@ -737,94 +752,108 @@ export default class NMACVElement extends LitElementWithCVNMAWording {
               </ul>
             </div>`
           )}
-          <div class="cv__intro__cta">
-            <p>${this.w.intro.callToAction.text}</p>
-            <a href="https://${
-              this.w.intro.callToAction.url
-            }" rel="noreferrer noopener" target="_blank" class="call-to-action">
-              <img src=${this.w.intro.callToAction.img.src} alt=${
-      this.w.intro.callToAction.img.alt
-    } height="24px" />
-              <div class="print-only print-link">${
-                this.w.intro.callToAction.url
-              }</div>
-            </a>
-          </div>
+          ${this.quiet
+            ? html`<div></div>`
+            : html`<div class="cv__intro__cta">
+                <p>${this.w.intro.callToAction.text}</p>
+                <a
+                  href="https://${this.w.intro.callToAction.url}"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                  class="call-to-action"
+                >
+                  <img
+                    src=${this.w.intro.callToAction.img.src}
+                    alt=${this.w.intro.callToAction.img.alt}
+                    height="24px"
+                  />
+                  <div class="print-only print-link">
+                    ${this.w.intro.callToAction.url}
+                  </div>
+                </a>
+              </div>`}
         </section>
       </div>
       <section id="cv__xp">
         <h2>${this.w.experience.title}</h2>
-        <nma-cv-experience .wording=${this.w.experience}></nma-cv-experience>
+        <nma-cv-experience
+          .wording=${this.w.experience}
+          ?align=${this.align}
+        ></nma-cv-experience>
       </section>
-      <section id="cv__education">
-        <h2>${this.w.education.title}</h2>
-        <ul>
-          ${this.w.education.items.map(
-            (item) =>
-              html`<li>
-                <span class="cv__education__year">${item.year}</span> :
-                <span class="cv__education__diploma">${item.diploma}</span>,
-                <span class="cv__education__school">${item.school}</span>
-              </li>`
-          )}
-        </ul>
-      </section>
-      <section id="cv__accomplishments">
-        <h2>${this.w.accomplishments.title}</h2>
-        <div class="cv__accomplishments__content">
-          ${this.w.accomplishments.groups.map(
-            (group) => html`
-              <article class="accomplishment">
-                <h3>${group.title}</h3>
-                <ul>
-                  ${group.items.map(
-                    (item) =>
-                      html`
-                        <li>
-                          <em>
-                            ${item.href
-                              ? html`<a
-                                  href=${item.href}
-                                  target="_blank"
-                                  rel="noreferrer noopener"
-                                  >${item.headline}</a
-                                >`
-                              : item.headline}
-                          </em>
-                          ${item.links
-                            ? html` -
-                              ${item.links.map(
-                                ({ text, href }, i) =>
-                                  html`${href
-                                    ? html`<a
-                                        href=${href}
-                                        target="_blank"
-                                        rel="noreferrer noopener"
-                                        >${text}</a
-                                      >`
-                                    : // @ts-ignore item.links can't be undefined
-                                      text}${i < item.links.length - 1
-                                    ? ", "
-                                    : ""}`
-                              )}`
-                            : ""}
-                          ${item.context ? html` - ${item.context}` : ""}
-                          ${item.date ? html` - ${item.date}` : ""}
-                        </li>
-                      `
-                  )}
-                </ul>
-              </article>
-            `
-          )}
-        </div>
-      </section>
-      <section id="cv__misc">
-        <h2>${this.w.misc.title}</h2>
-        <ul>
-          ${this.w.misc.content.map((txt) => html`<li>${txt}</li>`)}
-        </ul>
-      </section>
+      <div class="last-page">
+        <section id="cv__accomplishments">
+          <h2>${this.w.accomplishments.title}</h2>
+          <div class="cv__accomplishments__content">
+            ${this.w.accomplishments.groups.map(
+              (group) => html`
+                <article class="accomplishment">
+                  <h3>${group.title}</h3>
+                  <ul>
+                    ${group.items.map(
+                      (item) =>
+                        html`
+                          <li>
+                            <em>
+                              ${item.href
+                                ? html`<a
+                                    href=${item.href}
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                    >${item.headline}</a
+                                  >`
+                                : item.headline}
+                            </em>
+                            ${item.links
+                              ? html` -
+                                ${item.links.map(
+                                  ({ text, href }, i) =>
+                                    html`${href
+                                      ? html`<a
+                                          href=${href}
+                                          target="_blank"
+                                          rel="noreferrer noopener"
+                                          >${text}</a
+                                        >`
+                                      : // @ts-ignore item.links can't be undefined
+                                        text}${i < item.links.length - 1
+                                      ? ", "
+                                      : ""}`
+                                )}`
+                              : ""}
+                            ${item.context ? html` - ${item.context}` : ""}
+                            ${item.date ? html` - ${item.date}` : ""}
+                          </li>
+                        `
+                    )}
+                  </ul>
+                </article>
+              `
+            )}
+          </div>
+        </section>
+        <section id="cv__misc">
+          <h2>${this.w.misc.title}</h2>
+          <ul>
+            ${this.w.misc.content.map(
+              (txt) => html`<li>${unsafeHTML(txt)}</li>`
+            )}
+          </ul>
+        </section>
+        <section id="cv__education">
+          <h2>${this.w.education.title}</h2>
+          <ul>
+            ${this.w.education.items.map(
+              (item) =>
+                html`<li>
+                  <span class="cv__education__year">${item.year}</span> :
+                  <span class="cv__education__diploma">${item.diploma}</span>,
+                  <span class="cv__education__school">${item.school}</span>
+                </li>`
+            )}
+          </ul>
+        </section>
+      </div>
     `;
   }
 }
