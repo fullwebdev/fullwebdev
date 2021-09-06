@@ -1,3 +1,6 @@
+const urlLivreENI =
+  "https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523";
+
 /** @type {import('../../views/cv-nma').CVNMAWording} */
 const wording = {
   title: "Noël Macé",
@@ -8,11 +11,9 @@ const wording = {
   },
   presentation: {
     title: "Présentation",
-    abstract: `Je suis avant tout un développeur curieux et passionné.
-    Dans ce domaine, le Web, changeant et évoluant sans cesse, m'offre un terrain de jeux inégalé.
-    J'ai cependant très vite compris que la technique ne pouvait se suffire à elle-même.
-    Mener à bien des projets de qualité exige également des compétences annexes.
-    Compétences que j'ai eu la chance d'acquérir et exercer dans une grande variété d'activités, de l'enseignement aux developer relations, en passant par le management et l'architecture logicielle.`,
+    abstract: `Je suis avant tout un développeur passionné et curieux.
+    Le Web est pour moi le meilleur des terrains de jeux, changeant et évoluant sans cesse.
+    Ce jeux d'équipe, le partage des connaissance, le travail collaboratif, motivent l'ensemble de mon travail, associant savoir faire technique et savoir être (humain).`,
     langs: {
       title: "Langues",
       content: [
@@ -80,17 +81,17 @@ const wording = {
           caption: "expertise",
         },
         content: [
-          /* HTML */ `focus sur les
+          /* HTML */ `Focus sur les
             <strong>standards et principes transverses</strong> (Web Components,
             Web APIs, PWAs, PRPL, a11y, performances, etc.)`,
-          /* HTML */ `maitrise de nombreux frameworks et bibliothèques (<strong
+          /* HTML */ `Maitrise de nombreux frameworks et bibliothèques (<strong
               >Lit, Open WC, Angular, React, Vue, Redux, Gatsby, 11ty,
               etc.</strong
             >)`,
-          /* HTML */ `maitrise avancée de
+          /* HTML */ `Maitrise avancée de
             <strong>Angular, Angular CLI & Nrwl/Nx</strong> (contributeur de
-            2016 à 2018, puis suivi régulier)`,
-          /* HTML */ `<strong>livre</strong> complet sur les principes
+            2016 à 2018, puis suivi&nbsp;régulier)`,
+          /* HTML */ `<strong>Livre</strong> complet sur les principes
             fondamentaux de
             <em
               ><a
@@ -110,10 +111,10 @@ const wording = {
           caption: "ligne directrice",
         },
         content: [
-          /* HTML */ `<strong>mentoring</strong> et
+          /* HTML */ `<strong>Mentoring</strong> et
             <strong>transmission de compétences</strong> sont les piliers et
-            fils conducteurs de l'ensemble de ma carrière`,
-          /* HTML */ `large expérience, en tant que formateur autonome et dans
+            fils conducteurs de l'ensemble de ma&nbsp;carrière`,
+          /* HTML */ `Large expérience, en tant que formateur autonome et dans
           la direction et l'accompagnement d'importantes équipes pédagogique ou
           de R&D`,
         ],
@@ -125,10 +126,10 @@ const wording = {
           caption: "motivations",
         },
         content: [
-          /* HTML */ `forte appétence pour l'<strong>Open Source</strong> et les
-            oeuvres libres`,
-          /* HTML */ `nombreux <strong>workshops et conférences</strong> créés
-            et présentés`,
+          /* HTML */ `Forte appétence pour l'<strong>Open Source</strong> et les
+            oeuvres&nbsp;libres`,
+          /* HTML */ `Nombreux <strong>workshops et conférences</strong> créés
+            et&nbsp;présentés`,
         ],
       },
     ],
@@ -143,8 +144,8 @@ const wording = {
     items: [
       [
         {
-          company: { name: "Freelance" },
-          startDate: "avril 2021",
+          company: { name: "Freelance", details: "fullweb.dev" },
+          startDate: "avr. 2021",
           jobTitle: "Consultant, Formateur",
           icon: "/images/web-illustrations/companies-logos/fwd.svg",
           details:
@@ -160,9 +161,16 @@ const wording = {
           endDate: "mars 2021",
           icon: "/images/web-illustrations/companies-logos/eni.svg",
           details: [
-            "rédaction du livre <strong>Développement et architecture des applications Web Modernes - Retrouver les fondamentaux</strong> (608 pages)",
+            /* HTML */ `Rédaction du livre
+              <a href=${urlLivreENI} target="_blank" rel="noferrer noopener"
+                ><strong
+                  >Développement et architecture des applications Web Modernes -
+                  Retrouver les fondamentaux</strong
+                ></a
+              >
+              (608 pages)`,
             "16500 lignes de code d'exemple, testées et executables",
-            "développement de bibliothèques, outils, scripts et projets permettant de valider et appuyer le contenu du livre, ainsi que de faciliter sa rédaction (CI/CD)",
+            "Développement de bibliothèques, outils, scripts et projets permettant de valider et appuyer le contenu du livre, ainsi que de faciliter sa rédaction (CI/CD)",
           ],
         },
         {
@@ -171,27 +179,27 @@ const wording = {
             details: "éditeur logiciel Open Source (BPM)",
           },
           jobTitle: "Developer Advocate Web",
-          startDate: "avril 2019",
+          startDate: "avr. 2019",
           endDate: "oct. 2019",
           icon: "/images/web-illustrations/companies-logos/bonitasoft.png",
           details: [
             "Mission : améliorer la satisfaction utilisateur et l'image de marque des produits Bonitasoft impliquant des technologies Web",
-            "<strong>modernisation et performance</strong> : contribution et accompagnement à une transition de <em>AngularJS</em> aux <em>Web Components</em>",
-            "mise en place d'une stratégie et d'outils facilitant la production de contenus, ainsi que la gestion de 213 évènements (via Gatsby, Netlify CMS, GitHub)",
+            "<strong>Modernisation et performance</strong> : contribution et accompagnement à une transition de <em>AngularJS</em> aux <em>Web Components</em>",
+            "Mise en place d'une stratégie et d'outils facilitant la production de contenus, ainsi que la gestion de 213 évènements (via Gatsby, Netlify CMS, GitHub)",
           ],
         },
         {
           company: { name: "SFEIR", details: "ESN, 500 employés" },
           jobTitle: "Developer Advocate / Architecte Web",
           startDate: "juin 2018",
-          endDate: "avril 2019",
+          endDate: "avr. 2019",
           icon: "/images/web-illustrations/companies-logos/sfeir.jpg",
           details: [
-            "<strong>double mission</strong> : expertise technique (3j/5) et advocacy",
-            "stabilisation et amélioration de la maintenabilité d'une application <strong>Angular, NgRx et Preact</strong> en tant que tech lead pour la Société Générale",
-            "encadrement et montée en compétence d'une équipe de <strong>30 développeurs Angular</strong> (Paris & Hong Kong) pour BNP Paribas",
-            "audit et amélioration des performances de Progressive Web Apps (Vanilla, React, Vue, Angular), migrations AngularJS-Angular, réponses à appels d'offre, etc.",
-            "gestion communautaire interne et externe (organisation d'évènements et réseaux sociaux d'entreprise)",
+            "<strong>Double mission</strong> : expertise technique (3j/5) et advocacy",
+            "Stabilisation et amélioration de la maintenabilité d'une application <strong>Angular, NgRx et Preact</strong> en tant que tech lead pour la Société Générale",
+            "Encadrement et montée en compétence d'une équipe de <strong>30 développeurs Angular</strong> (Paris & Hong Kong) pour BNP Paribas",
+            "Audit et amélioration des performances de Progressive Web Apps (Vanilla, React, Vue, Angular), migrations AngularJS-Angular, réponses à appels d'offre, etc.",
+            "Gestion communautaire interne et externe (organisation d'évènements et réseaux sociaux d'entreprise)",
             "8 conférences et 5 formations délivrées (cf. réalisations)",
           ],
         },
@@ -204,10 +212,10 @@ const wording = {
           endDate: "mai 2018",
           icon: "/images/web-illustrations/companies-logos/sedona.png",
           details: [
-            "<strong>direction technique de 8 projets</strong> front-end JavaScript (AngularJS, JQuery, PHP et Node.js) menés par 3 équipe de 12 développeurs",
-            "définition de l'architecture front-end web de référence pour Sedona ainsi que le groupe <em>Harmonie Mutuelle</em>",
-            "<strong>réponse à appels d'offre</strong> et <strong>modernisation</strong> de l'usage des technologies Web sur l'ensemble du groupe (marques Sedona, West, RedShift et Inadeo)",
-            "<em>(à partir de déc. 2016)</em> suivi, développement et mise en place des codes et outils transverses sur 3 projets, menés par 6 équipes (30 développeurs), en tant qu'<strong>architecte référant Angular</strong> pour le compte de <em>Saint Gobain</em>",
+            "<strong>Direction technique de 8 projets</strong> front-end JavaScript (AngularJS, JQuery, PHP et Node.js) menés par 3 équipe de 12 développeurs",
+            "Définition de l'architecture front-end web de référence pour Sedona ainsi que le groupe <em>Harmonie Mutuelle</em>",
+            "<strong>Réponse à appels d'offre</strong> et <strong>modernisation</strong> de l'usage des technologies Web sur l'ensemble du groupe (marques Sedona, West, RedShift et Inadeo)",
+            "<em>(À partir de déc. 2016)</em> suivi, développement et mise en place des codes et outils transverses sur 3 projets, menés par 6 équipes (30 développeurs), en tant qu'<strong>architecte référant Angular</strong> pour le compte de <em>Saint Gobain</em>",
           ],
         },
         {
@@ -220,7 +228,7 @@ const wording = {
           shortLine: true,
         },
         {
-          company: { name: "Freelance" },
+          company: { name: "Freelance", details: "NMC Consulting" },
           jobTitle: "Formateur, Consultant",
           startDate: "mai 2011",
           endDate: "juin 2015",
@@ -232,10 +240,10 @@ const wording = {
           shortLine: true,
         },
         {
-          company: { name: "Supinfo" },
+          company: { name: "Supinfo", details: "International University" },
           jobTitle: "Directeur de l'enseignement Unix",
           startDate: "juin 2010",
-          endDate: "avril 2011",
+          endDate: "avr. 2011",
           icon: "/images/web-illustrations/companies-logos/supinfo.jpg",
           details: [
             "<strong>70 formateurs recrutés</strong> et formés pour l'enseignement de <strong>3 matières (Linux, Apple & Sécurité)</strong> sur les 30 sites du groupe à l'international",
@@ -250,7 +258,7 @@ const wording = {
           endDate: "juin 2010",
           icon: "/images/web-illustrations/companies-logos/supinfo.jpg",
           details:
-            "12 unités pégagogiques enseignées sur 18 sites dans 3 pays (+ DOM)",
+            "12 unités pégagogiques enseignées sur 18 sites dans<br />3 pays (+ DOM)",
           shortLine: true,
         },
       ],
@@ -467,8 +475,7 @@ const wording = {
               "Développement et architecture des applications Web Modernes - Retrouver les fondamentaux",
             // date: "17 mars 2021",
             context: "Éditions ENI",
-            href:
-              "https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523",
+            href: urlLivreENI,
           },
           /* {
             headline: "blog",
@@ -485,7 +492,7 @@ const wording = {
           },
           {
             headline: `Livre blanc "Progressive Web Apps"`,
-            // date: "30 avril 2019",
+            // date: "30 avr. 2019",
             context: "SFEIR",
             href: "https://www.sfeir.com/fr/livre-blanc-progressive-web-app/",
           },
@@ -541,13 +548,13 @@ const wording = {
     ],
   },
   misc: {
-    title: "Orientation & Centres d'intérêt",
+    title: "Centres d'intérêt",
     content: [
       "Logiciel Libre, Open Source & Ethical Source",
       "Pédagogie et vulgarisation scientifique",
       "Histoire des technologies et sociétés",
-      "Jeux de rôle & de société",
-      "Sciences naturelles, sociales, politiques et cognitives",
+      "Jeux de rôle et de société",
+      "Sciences naturelles, sociales, politiques et&nbsp;cognitives",
       "Legos, maquettes, puzzles",
     ],
   },
