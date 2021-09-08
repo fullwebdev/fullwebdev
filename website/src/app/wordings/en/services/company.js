@@ -2,7 +2,7 @@
 const wording = {
   title: "Corporate services",
   cta: [
-    { text: "Contact us", href: "mailto:contact@noelmace.com", primary: true },
+    { text: "Contact us", href: "mailto:contact@fullweb.dev", primary: true },
     {
       text: "Schedule a meeting",
       onclick: () => {
@@ -25,13 +25,6 @@ const wording = {
       },
       backgroundImg:
         "/images/web-illustrations/fotis-fotopoulos-DuHKoV44prg-unsplash.jpg",
-      cta: [
-        {
-          href: "/services-details/orgs/consulting",
-          text: "competencies",
-          primary: true,
-        },
-      ],
     },
     {
       desc: {
@@ -40,18 +33,6 @@ const wording = {
       },
       backgroundImg:
         "/images/web-illustrations/felicia-buitenwerf-Qs_Zkak27Jk-unsplash.jpg",
-      cta: [
-        {
-          href: "/services-details/orgs/training/catalog",
-          text: "course catalog",
-          primary: true,
-        },
-        {
-          href: "/services-details/orgs/training/custom",
-          text: "custom solutions",
-          primary: false,
-        },
-      ],
     },
     {
       desc: {
@@ -61,13 +42,6 @@ const wording = {
       },
       backgroundImg:
         "/images/web-illustrations/jaime-lopes-0RDBOAdnbWM-unsplash.jpg",
-      cta: [
-        {
-          href: "/services-details/orgs/devrel",
-          text: "our services",
-          primary: true,
-        },
-      ],
     },
     {
       desc: {
@@ -75,13 +49,6 @@ const wording = {
         subtitle: "Rationalisating your knowledge management and trainings.",
       },
       backgroundImg: "/images/web-illustrations/kma-SiOJXlWeWc0-unsplash.jpg",
-      cta: [
-        {
-          href: "/services-details/orgs/instructional-eng",
-          text: "our services",
-          primary: true,
-        },
-      ],
     },
   ],
 };

@@ -25,7 +25,15 @@ const wording = {
         },
       ],
     },
-
+    {
+      desc: {
+        title: "Newsletters",
+        subtitle: "Keep up to date with the latest fullweb.dev news.",
+      },
+      backgroundImg:
+        "/images/web-illustrations/markus-winkler-aId-xYRTlEc-unsplash.jpg",
+      cta: [{ href: "/newsletter", text: "subscribe", primary: true }],
+    },
     {
       date: "soon",
       desc: {
@@ -36,15 +44,6 @@ const wording = {
         "/images/web-illustrations/lagos-techie-BVr3XaBiWLU-unsplash.jpg",
       cta: [{ href: "/newsletter", text: "stay tuned", primary: false }],
       wip: true,
-    },
-    {
-      desc: {
-        title: "Newsletters",
-        subtitle: "Subscribe to our newsletter.",
-      },
-      backgroundImg:
-        "/images/web-illustrations/markus-winkler-aId-xYRTlEc-unsplash.jpg",
-      cta: [{ href: "/newsletter", text: "stay tuned", primary: true }],
     },
   ],
 };

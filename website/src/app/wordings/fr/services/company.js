@@ -4,7 +4,7 @@ const wording = {
   cta: [
     {
       text: "Nous contacter",
-      href: "mailto:contact@noelmace.com",
+      href: "mailto:contact@fullweb.dev",
       primary: true,
     },
     {
@@ -29,13 +29,6 @@ const wording = {
       },
       backgroundImg:
         "/images/web-illustrations/fotis-fotopoulos-DuHKoV44prg-unsplash.jpg",
-      cta: [
-        {
-          href: "/services-details/orgs/consulting",
-          text: "nos compétences",
-          primary: true,
-        },
-      ],
     },
     {
       desc: {
@@ -44,18 +37,6 @@ const wording = {
       },
       backgroundImg:
         "/images/web-illustrations/felicia-buitenwerf-Qs_Zkak27Jk-unsplash.jpg",
-      cta: [
-        {
-          href: "/services-details/orgs/training/catalog",
-          text: "catalogue",
-          primary: true,
-        },
-        {
-          href: "/services-details/orgs/training/custom",
-          text: "prestations sur mesure",
-          primary: false,
-        },
-      ],
     },
     {
       desc: {
@@ -65,13 +46,6 @@ const wording = {
       },
       backgroundImg:
         "/images/web-illustrations/jaime-lopes-0RDBOAdnbWM-unsplash.jpg",
-      cta: [
-        {
-          href: "/services-details/orgs/devrel",
-          text: "nos services",
-          primary: true,
-        },
-      ],
     },
     {
       desc: {
@@ -80,13 +54,6 @@ const wording = {
           "Suivi de montée en compétence, gestion des connaissances, et mise en oeuvre et encadrement de formations initiales et professionnelles",
       },
       backgroundImg: "/images/web-illustrations/kma-SiOJXlWeWc0-unsplash.jpg",
-      cta: [
-        {
-          href: "/services-details/orgs/instructional-eng",
-          text: "nos services",
-          primary: true,
-        },
-      ],
     },
   ],
 };
