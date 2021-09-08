@@ -1,3 +1,6 @@
+import { Constructor } from "../utils/constructor";
+import { WithWordingInterface } from "../utils/with-wording";
+
 type nameInfoKey =
   | "invalidElementNameError"
   | "notAPotentialCustomElementNameError"
@@ -10,8 +13,16 @@ export interface CeNameTestWording {
   button: string;
 }
 
+export type WithCeNameTestWording = Constructor<
+  WithWordingInterface<CeNameTestWording>
+>;
+
 export interface CeNameWording {
   title: string;
   intro: string;
   test: CeNameTestWording;
 }
+
+export type WithCeNameWording = Constructor<
+  WithWordingInterface<CeNameWording>
+>;

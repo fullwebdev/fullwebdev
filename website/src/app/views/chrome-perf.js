@@ -204,6 +204,7 @@ if (override) {
       if (sizeSpan) {
         sizeSpan.textContent = value;
       }
+      // @ts-ignore cast
       this._heavyHTMLSize = value;
     });
 

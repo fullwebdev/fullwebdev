@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <base href="/" />
+    <title>CV</title>
+    <style>
+      {{{css.shell}}}
+    </style>
+  </head>
+  <body>
+    <script type="module">
+      import { selector } from "/dist/app/views/cv-nma.js";
+      const LANGS = ["en", "fr"];
+
+      (async () => {
+        const search = new URLSearchParams(window.location.search);
+
+        let lang = search.get("lang");
+        if (!LANGS.includes(lang)) {
+          lang = "fr";
+        }
+        const wording = (await import(`/dist/app/wordings/${lang}/cv-nma.js`))
+          .default;
+
+        const isQuiet = search.has("quiet") && search.get("quiet") !== "false";
+        const isAligned =
+          search.has("align") && search.get("align") !== "false";
+        const isAnonymized =
+          search.has("anonymize") && search.get("anonymize") !== "false";
+
+        const el = document.createElement(selector);
+        el.lang = lang;
+        el.wording = wording;
+        if (isQuiet) el.quiet = isQuiet;
+        if (isAligned) el.align = isAligned;
+        if (isAnonymized) el.anonymous = isAnonymized;
+        document.body.prepend(el);
+      })();
+    </script>
+  </body>
+</html>

@@ -2,6 +2,7 @@ import { fileURLToPath } from "url";
 import { dirname, resolve } from "path";
 
 import about from "./about/index.mjs";
+import cv from "./cv/index.mjs";
 import homepage from "./homepage/index.mjs";
 import notFound from "./not-found/index.mjs";
 import index from "./index/index.mjs";
@@ -13,11 +14,13 @@ import {
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-for (const [file, data] of Object.entries(index.files)) {
-  const outFilePath = resolve(__dirname, "..", ...file.split("/"));
-  ensureParentDirSync(outFilePath);
+for (const template of [index, cv]) {
+  for (const [file, data] of Object.entries(template.files)) {
+    const outFilePath = resolve(__dirname, "..", ...file.split("/"));
+    ensureParentDirSync(outFilePath);
 
-  createHTMLFile(outFilePath, index.template, data);
+    createHTMLFile(outFilePath, template.template, data);
+  }
 }
 
 const templates = { homepage, "not-found": notFound, about };

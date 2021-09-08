@@ -1,15 +1,38 @@
 import { LitElement, html, css } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { classMap } from "lit/directives/class-map.js";
+import { styleMap } from "lit/directives/style-map.js";
+import { WithWording } from "../utils/wording-mixin.js";
 
 export const selector = "app-projects-list";
 
 /**
- * @typedef {import('./projects-list').ProjectListWording} ProjectListWording
+ * @typedef {import('./projects-list').CallToActionParams} CallToActionParams
  * @typedef {import('./projects-list').ProjectListWordings} ProjectListWordings
  * @typedef {import('./projects-list').Project} Project
  * @typedef {import('../languages').Language} Language
  */
+
+const callToAction = (/** @type {CallToActionParams} */ cta) => {
+  if (cta.href) {
+    return html`<a
+      href="${cta.href}"
+      class="call-to-action ${classMap({ primary: !!cta.primary })}"
+      rel=${cta.href.startsWith("http") ? "noopener noreferrer" : ""}
+      target=${cta.href.startsWith("http") ? "_blank" : ""}
+      >${cta.text}</a
+    >`;
+  }
+  if (cta.onclick) {
+    return html`<button
+      class="call-to-action ${classMap({ primary: !!cta.primary })}"
+      @click=${cta.onclick}
+    >
+      ${cta.text}
+    </button> `;
+  }
+  return "";
+};
 
 /**
  * @param {Project} item
@@ -18,51 +41,44 @@ const projectCard = (item) => html`<a
   href=${ifDefined(item.href)}
   rel=${item.href && item.href.startsWith("http") ? "noopener noreferrer" : ""}
   target=${item.href && item.href.startsWith("http") ? "_blank" : ""}
-  class="project-card ${classMap({
+  class=${classMap({
+    "project-card": true,
     spotlight: !!item.spotlight,
     dimmed: !!item.wip,
-  })}"
+    "bg-card": !!item.backgroundImg,
+  })}
+  style=${item.backgroundImg
+    ? styleMap({ backgroundImage: `url(${item.backgroundImg})` })
+    : ""}
 >
   <div class="header">
     <div class="type">${item.type}</div>
     <div class="date">${item.date}</div>
   </div>
-  <div class="illustration">
-    <img
-      src=${item.img.src}
-      alt=${item.img.alt}
-      width="100%"
-      height="${item.img.height || 140}"
-    />
-  </div>
+  ${!item.backgroundImg && item.img
+    ? html` <div class="illustration">
+        <img
+          src=${item.img.src}
+          alt=${item.img.alt}
+          width="100%"
+          height="${item.img.height || 140}"
+        />
+      </div>`
+    : ""}
   <div class="desc">
     <h2>${item.desc.title}</h2>
     <p class="content">${item.desc.subtitle}</p>
     ${item.cta
-      ? html`<div class="actions">
-          ${item.cta.map(
-            (cta) =>
-              html`<a
-                href="${cta.href}"
-                class="call-to-action ${classMap({ primary: !!cta.primary })}"
-                rel=${cta.href.startsWith("http") ? "noopener noreferrer" : ""}
-                target=${cta.href.startsWith("http") ? "_blank" : ""}
-                >${cta.text}</a
-              >`
-          )}
-        </div> `
+      ? html`<div class="actions">${item.cta.map(callToAction)}</div> `
       : ""}
   </div>
 </a>`;
 
-export default class ProjectsListElement extends LitElement {
-  static get properties() {
-    return {
-      lang: { type: String },
-      wording: { type: Object, attribute: false },
-    };
-  }
+/** @type {import('./projects-list').WithProjectListWording & LitElement} */
+// @ts-ignore missing properties
+const LitElementWithProjectListWording = WithWording(LitElement);
 
+export default class ProjectsListElement extends LitElementWithProjectListWording {
   static get styles() {
     return css`
       :host {
@@ -87,7 +103,7 @@ export default class ProjectsListElement extends LitElement {
         max-width: 960px;
 
         text-align: center;
-        margin: 2rem auto 4rem;
+        margin: 2rem auto 0;
       }
 
       .grid {
@@ -95,7 +111,7 @@ export default class ProjectsListElement extends LitElement {
         justify-content: space-evenly;
         display: grid;
         grid-template-columns: 1fr;
-        margin: 0 auto;
+        margin: 4rem auto 0;
         grid-gap: 1rem;
       }
 
@@ -113,6 +129,37 @@ export default class ProjectsListElement extends LitElement {
         text-decoration: none;
         padding: 2rem;
         border-radius: 5px;
+      }
+
+      .bg-card {
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #fff;
+        position: relative;
+        background-position: center;
+        background-color: var(--neutral-color-600);
+      }
+
+      .bg-card * {
+        z-index: 2;
+        position: relative;
+      }
+
+      .bg-card::before {
+        content: "";
+        display: block;
+        -webkit-filter: blur(1px) brightness(0.4);
+        -moz-filter: blur(1px) brightness(0.4);
+        -ms-filter: blur(1px) brightness(0.4);
+        -o-filter: blur(1px) brightness(0.4);
+        filter: blur(1px) brightness(0.4);
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: inherit;
+        z-index: 0;
       }
 
       .project-card[href]:hover {
@@ -135,10 +182,15 @@ export default class ProjectsListElement extends LitElement {
 
       .project-card .desc {
         text-align: center;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
       .project-card .desc .content {
         text-align: center;
+        flex-grow: 2;
       }
 
       .project-card .actions {
@@ -185,12 +237,24 @@ export default class ProjectsListElement extends LitElement {
         color: var(--primary-color-stronger);
       }
 
+      .bg-card .type,
+      .bg-card .date,
+      .bg-card h2 {
+        color: #fff;
+      }
+
+      .cta-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
       /* FIXME: duplication */
       .call-to-action {
-        padding: 2px 34px 0;
+        padding: 0.8rem 34px;
         font-weight: 600;
         font-size: 18px;
-        line-height: 40px;
+        line-height: 1.2rem;
         border-radius: 48px;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
         box-sizing: border-box;
@@ -200,6 +264,7 @@ export default class ProjectsListElement extends LitElement {
         margin: 0.5rem;
         background-color: var(--soft-bg-color);
         color: var(--primary-text-color-stronger);
+        border: none;
       }
 
       .call-to-action.primary {
@@ -207,12 +272,20 @@ export default class ProjectsListElement extends LitElement {
         color: white;
       }
 
+      .call-to-action:hover {
+        background-color: var(--stronger-bg-color);
+      }
+
+      .call-to-action.primary:hover {
+        background-color: var(--primary-color);
+      }
+
       @media screen and (min-width: 720px) {
         h1 {
           margin-top: 2rem;
         }
-        .abstract {
-          margin-bottom: 6rem;
+        .grid {
+          margin-top: 6rem;
         }
       }
 
@@ -281,31 +354,19 @@ export default class ProjectsListElement extends LitElement {
 
   constructor() {
     super();
-    /** @type {Language} */
-    this.lang = "en";
     /** @type {Array<any>} */
     this.items = [];
-    /** @type {ProjectListWording | null} */
-    this.wording = null;
-  }
-
-  get w() {
-    if (!this.wording)
-      throw new Error(`can't find any wording for ${selector}`);
-    return this.wording;
   }
 
   render() {
     return html`
       <h1>${this.w.title}</h1>
       <section class="abstract">
-        <p>${this.w.abstract}</p>
-        ${this.w.intro
-          ? html`<p>
-              <a class="call-to-action primary" href="/docs/"
-                >${this.w.intro}</a
-              >
-            </p>`
+        ${this.w.abstract ? html`<p>${this.w.abstract}</p>` : ""}
+        ${this.w.cta
+          ? html`<div class="cta-container">
+              ${this.w.cta.map(callToAction)}
+            </div>`
           : ""}
       </section>
       ${typeof this.w.items === "string"
@@ -327,4 +388,5 @@ export default class ProjectsListElement extends LitElement {
   }
 }
 
+// @ts-ignore missing props
 customElements.define(selector, ProjectsListElement);
