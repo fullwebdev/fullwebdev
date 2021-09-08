@@ -16,10 +16,6 @@ const config = {
       root: "blog",
       reverseMenu: true,
     },
-    "services-details": {
-      src: "**/*.md",
-      root: "services-details",
-    },
     "browsers-history": {
       src: "**/*.md",
       root: "../materials/browsers-history/docs",
