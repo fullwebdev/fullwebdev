@@ -38,9 +38,6 @@ export interface CVNMAWording {
   title: string;
   subtitle: string;
   note: string;
-  contact: {
-    email: string;
-  };
   presentation: {
     title: string;
     abstract: string;

@@ -3,16 +3,9 @@ const wording = {
   title: "Noël Macé",
   subtitle: "Web Developer/Architect",
   note: "13 years experience",
-  contact: {
-    email: "contact@noelmace.com",
-  },
   presentation: {
     title: "Introduction",
-    abstract: `Je suis avant tout un développeur curieux et passionné.
-    Dans ce domaine, le Web, changeant et évoluant sans cesse, m'offre un terrain de jeux inégalé.
-    J'ai cependant très vite compris que la technique ne pouvait se suffire à elle-même.
-    Mener à bien des projets de qualité exige également des compétences annexes.
-    Compétences que j'ai eu la chance d'acquérir et exercer dans une grande variété d'activités, de l'enseignement aux developer relations, en passant par le management et l'architecture logicielle.`,
+    abstract: `TRANSLATION IN PROGRESS. Thank you for your patience.`,
     langs: {
       title: "Languages",
       content: [
@@ -24,12 +17,12 @@ const wording = {
     networks: {
       title: "Networks",
       content: [
-        {
-          icon: "/images/icons/mail.svg",
-          alt: "Email",
-          text: "contact@noelmace.com",
-          url: "mailto:contact@noelmace.com",
-        },
+        // {
+        //   icon: "/images/icons/mail.svg",
+        //   alt: "Email",
+        //   text: "contact@noelmace.com",
+        //   url: "mailto:contact@noelmace.com",
+        // },
         {
           icon: "/images/icons/twitter.svg",
           alt: "Twitter",
@@ -53,6 +46,12 @@ const wording = {
           alt: "website",
           text: "fullweb.dev",
           url: "https://fullweb.dev",
+        },
+        {
+          icon: "/images/icons/webpage.svg",
+          alt: "personnal web page",
+          text: "noelmace.com",
+          url: "https://noelmace.com",
         },
         {
           icon: "/images/icons/youtube.svg",
