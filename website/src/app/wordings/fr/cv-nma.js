@@ -6,9 +6,6 @@ const wording = {
   title: "Noël Macé",
   subtitle: "Développeur/Architecte Web",
   note: "13 ans d'expérience",
-  contact: {
-    email: "contact@noelmace.com",
-  },
   presentation: {
     title: "Présentation",
     abstract: `Je suis avant tout un développeur passionné et curieux.
@@ -25,12 +22,12 @@ const wording = {
     networks: {
       title: "Réseaux",
       content: [
-        {
-          icon: "/images/icons/mail.svg",
-          alt: "Email",
-          text: "contact@noelmace.com",
-          url: "mailto:contact@noelmace.com",
-        },
+        // {
+        //   icon: "/images/icons/mail.svg",
+        //   alt: "Email",
+        //   text: "contact@noelmace.com",
+        //   url: "mailto:contact@noelmace.com",
+        // },
         {
           icon: "/images/icons/twitter.svg",
           alt: "Twitter",
@@ -54,6 +51,12 @@ const wording = {
           alt: "website",
           text: "fullweb.dev",
           url: "https://fullweb.dev",
+        },
+        {
+          icon: "/images/icons/webpage.svg",
+          alt: "page web personnelle",
+          text: "noelmace.com",
+          url: "https://noelmace.com",
         },
         {
           icon: "/images/icons/youtube.svg",
