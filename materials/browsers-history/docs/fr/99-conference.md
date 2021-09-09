@@ -51,13 +51,13 @@ inspiration: hypertexte\
 Ted Nelson\
 projet Xanadu (1965)
 
-petit Wiki (anachronique)
+petit Wiki (anachronique) :
 
+- base de donnée locale
 - stocker des connaissances
 - liens entre elles
-- base de donnée locale
 
-#### :star_struck: "Enquire Within Uppon Everything"
+### :star_struck: "Enquire Within Uppon Everything"
 
 "renseignez-vous sur tout"
 
@@ -69,7 +69,7 @@ grimoire
 
 "ouvrir un portail vers l'information"
 
-➡️ NOM : ENQUIRE
+:arrow_right: NOM : ENQUIRE
 
 ### Le retour en Angleterre
 
@@ -132,13 +132,15 @@ et pas vraiment hypertexte\
 
 ### Proposition & NeXT
 
-**mars 1989**: proposition
-
-(↩️ mois) CERN :electric_plug: Internet\
+janv. 89: CERN :electric_plug: Internet\
 \+ gd site Internet d'Europe
 
-**mai 1990** :white_check_mark:\
-➡️ NeXT Computer
+:arrow_right: propositions
+
+1. **mars 1989**
+2. **mai 1990** :white_check_mark:
+
+:arrow_right: NeXT Computer
 
 - Steve Jobs (85-97, rachat Apple)
 - tout premier ("The Cube")
@@ -176,7 +178,7 @@ confusion: _« Le Web est un moyen de trouver des informations en tapant des nom
 <!-- **PIERRE** [DEMO](https://line-mode.cern.ch/www/hypertext/WWW/TheProject.html) -->
 
 _IL FAUT_ :muscle:: universités/recherche\
-UNIX ➡️ X Window System
+UNIX :arrow_right: X Window System
 
 _MAIS_ :stop_sign: pas de moyens :cry:
 
@@ -208,10 +210,10 @@ _Arrive_...
 <!-- FIXME: roller-coaster émotionnel ? -->
 
 Robert Cailliau :superhero:\
-➡️ navigateur pour Mac ?
+:arrow_right: navigateur pour Mac ?
 
 :shrug: tour des centres de recherche\
-➡️ Univ. tech. d'Helsinki
+:arrow_right: Univ. tech. d'Helsinki
 
 - 4 étudiants :star_struck:
 - projet fin d'étude (X11)
@@ -242,7 +244,7 @@ a déjà créé VIOLA (1an avant)
   - juste après ERWISE
 - **Mai**: 1ère version publique
 
-#### super complet :tada:
+### super complet :tada:
 
 historique
 
@@ -257,7 +259,7 @@ liens simple clic
 marques pages / favoris
 
 _et même_ (un an + tard)\
-1ère initiative "styles" (➡️ CSS)
+1ère initiative "styles" (:arrow_right: CSS)
 
 ### initiatives infructueuses
 
@@ -278,17 +280,17 @@ ViolaWWW
 
 _Mais aussi..._
 
-#### Les autres navigateurs
+### Les autres navigateurs
 
 ébulition
 
 Mac: **_Samba / MacWWW_** :smiley:\
-Robert ➡️ Nicola\
+Robert :arrow_right: Nicola\
 CERN = Osef :cry:
 
 3ème X11: **_Midas_** :smiley:\
 Centre de l'acc. lin. de Stanford\
-y ➡️ Web ::thum / y reste :thumbsdown: :cry:
+y :arrow_right: Web :thumbsup: / y reste :thumbsdown: :cry:
 
 **1993**
 
@@ -312,20 +314,20 @@ _Mais..._ CLI :laughing:
 >
 > Limite : 18 - 22"
 
-:stuck*out_tongue_winking_eye: \_Ben ... y a eu mieux !*
+:stuck_out_tongue: Ben ... y a eu mieux !
 
 ### NCSA - 1992
 
 "Open Source" (anachron.)\
-➡️ interop. & contrib.\
+:arrow_right: interop. & contrib.\
 ex: TCP/IP & Telnet (vs DECNet)
 
-NCSA Collage (X, Win & Mac)\
-partage données & docs
+_(NCSA Collage (X, Win & Mac))_\
+_(partage données & docs)_\
+_(lead dev X pour Collage)_
 
-lead dev X pour Collage\
 **décembre** : démo ViolaWWW\
-➡️ "on peut faire mieux"
+:arrow_right: "We can do better"
 
 Marc Andreessen (étudiant)\
 :soon: "vrai" projet NCSA\
@@ -333,7 +335,7 @@ dev, :moneybag:, direction...
 
 ### NCSA - 1993
 
-~6 mois: **α** navigateur X\
+~6 mois: **α** navigateur (X11)\
 "moderne": fav, histo, liens, barre URL ⬆️\
 images en ligne (avant: fenêtre)
 
@@ -362,7 +364,7 @@ HTML pas standardisé
 - son, video
 
 Aucune comparaison !
-➡️ :heavy_plus_sign: que doc (dev)
+:arrow_right: :heavy_plus_sign: que doc (dev)
 
 ### Netscape - 1994
 
@@ -425,8 +427,8 @@ PC standards depuis fin 80's\
 90% de parts de marché[@ArsTechnica30yPC2005]\
 WIndows standard de fait
 
-➡️ monopole s/ individuel\
-➡️ imposer leurs produits\
+:arrow_right: monopole s/ individuel\
+:arrow_right: imposer leurs produits\
 (ex. office)
 
 15 juillet 1994: accord justice US\
@@ -439,7 +441,7 @@ PAS un danger :shrug:
 _SAUF QUE..._
 
 Web devient :heavy_plus_sign: que doc\
-➡️ plateforme\
+:arrow_right: plateforme\
 ⚠️ interop
 
 SI Web ↗️ ALORS Microsoft ↘️
@@ -463,7 +465,7 @@ Pas de Netscape sur Windows\
 
 Netscape refuse
 
-➡️ Microsoft attaque\
+:arrow_right: Microsoft attaque\
 "campagne prédatrice"\
 (comme Java, Intel NSP & QuickTime)\
 « cut off air supply »
@@ -471,12 +473,12 @@ Netscape refuse
 ### Stratégies bancales
 
 :one: accords PC :x: concurrence\
-SI :white_check_mark: (Conpaq) ➡️ prix & support au TOP\
-SINON :x: (IBM) ➡️ :sob:
+SI :white_check_mark: (Conpaq) :arrow_right: prix & support au TOP\
+SINON :x: (IBM) :arrow_right: :sob:
 
 sortie IE 1 (= spyglass) **aout**\
-➡️ vente liée Win + IE\
-_pas un produit, feature_ :laughing:\
+:arrow*right: vente liée Win + IE\
+\_pas un produit, feature* :laughing:\
 même si Microsoft Plus! (vendu à part)
 
 :two: vengeance : Mac (IE 2, **nov**)
@@ -490,11 +492,11 @@ Netscape 3 UNE SEMAINE après :stuck_out_tongue_closed_eyes:
 :fearful: « perdre si l'utilisateur voit Netscape côte à côte avec IE »
 
 :three: "soudure" inutiles\
-Win 9x ➡️ Win Explorer :handshake: IE\
+Win 9x :arrow_right: Win Explorer :handshake: IE\
 meilleure "INTEGRATION" (UX)\
 :x: désinstaller
 
-x3 ➡️ :skull: Netscape
+x3 :arrow_right: :skull: Netscape
 
 - **97** suite Communicator
 - **98** gratuit
@@ -516,7 +518,7 @@ Nestscape **98**:\
 pas seulement "gratuit"
 
 (futur) Communicator 5.0
-➡️ Open Source
+:arrow_right: Open Source
 
 abandonné au rachat par AOL
 
@@ -528,7 +530,7 @@ géré par Netscape, donc AOL
 
 ### Gecko
 
-Dev rapide ➡️ nouveau moteur
+Dev rapide :arrow_right: nouveau moteur
 
 Raptor / NGLayout /\
 **_Gecko_**
@@ -549,23 +551,23 @@ _MAIS_ :x: complet
 fin de Netscape
 
 refontes graphiques\
-➡️ Phoenix 0.1
+:arrow_right: Phoenix 0.1
 
 réorg...\
-➡️ indépendance\
+:arrow_right: indépendance\
 
 Fondation Mozilla : **2003**\
-(AOL ➡️ 2m°$ + gens + softs)
+(AOL :arrow_right: 2m°$ + gens + softs)
 
-Phoenix ➡️ Firebird
+Phoenix :arrow_right: Firebird
 
 ### Erreur de Microsoft
 
-**2004** : Firebird ➡️ Firefox \
+**2004** : Firebird :arrow_right: Firefox \
 9 nov : v1.0 :tada:
 
-**2005** : 1u/10 IE ➡️ Firefox\
-_MAIS_ ↘️ 2006
+**2005** : 1u/10 IE :arrow*right: Firefox\
+\_MAIS* ↘️ 2006
 
 _MAIS_ **2003**: màj IE ⬅️ Windows
 
@@ -623,14 +625,14 @@ pas instinctif\
 :x: intégration apps
 
 **14 oct 96** : ☎️ Mathias Ettrich\
-➡️ Kool Desktop Environment ➡️ KDE\
-➡️ base commune (Qt & libs)\
-➡️ KDE HTML Widget (ou khtmlw)
+:arrow_right: Kool Desktop Environment :arrow_right: KDE\
+:arrow_right: base commune (Qt & libs)\
+:arrow_right: KDE HTML Widget (ou khtmlw)
 
 ### Beta & KFM
 
 1 an (20 oct 97): KDE beta 1\
-➡️ KFM
+:arrow_right: KFM
 
 `http://` :white_check_mark:
 
@@ -639,19 +641,19 @@ pas instinctif\
 pas fait pour
 
 **98** = Mozilla\
-➡️ attendre ?!
+:arrow_right: attendre ?!
 
 ### KHTML
 
 :x: Lars Knoll (ajd CTO Qt)
 
 seul, "for fun"\
-hhtmlw ➡️ KHTML\
+hhtmlw :arrow_right: KHTML\
 DOM
 
-:superhero: Harri Porten ➡️ JS
+:superhero: Harri Porten :arrow_right: JS
 
-:heavy_plus_sign: < 1 an ➡️ CSS
+:heavy_plus_sign: < 1 an :arrow_right: CSS
 
 **oct 2000**: KDE 2\
 w/ Konqueror :tada:
@@ -669,7 +671,7 @@ w/ Konqueror :tada:
 ### Webkit & Safari
 
 **2003**: :apple: Safari\
-khtml ➡️ WebKit
+khtml :arrow_right: WebKit
 
 Pourquoi :question:
 
@@ -677,7 +679,7 @@ accord Microsoft :apple: \
 IE défaut s/ Mac depuis 98
 
 **2001**: IE 5 for Mac\
-tt les devs ➡️ IE Win
+tt les devs :arrow_right: IE Win
 
 très mauvaises perfs\
 prblm sécu
@@ -743,7 +745,7 @@ WebKit ⬅️ équipe Android
 
 **Chromium !**
 
-2015: :skull: IE ➡️ Edge\
+2015: :skull: IE :arrow_right: Edge\
 2020: Edge 79 = Chromium\
 (2013: Opera 15 = Chromium)
 
@@ -756,7 +758,7 @@ Chrome/Android = IE/Win
 MAIS (inverse Microsoft):\
 Google ❤️ Web App
 
-Web ↗️ ➡️ Google ↗️
+Web ↗️ :arrow_right: Google ↗️
 
 _LIMITE_: :apple: ~15%\
 ⬅️ Safari :scream: Web Apps (= Microsoft)\
@@ -822,8 +824,8 @@ Qu'est ce que le Web ?
 (pas cher, pays émergeants)\
 ⬅️ vie privée & sécurité
 
-:two: :question: :exclamation: ➡️ DECIDER\
-➡️ compromis\
-➡️ meilleur résultat
+:two: :question: :exclamation: :arrow_right: DECIDER\
+:arrow_right: compromis\
+:arrow_right: meilleur résultat
 
 <!-- #endregion part-3 -->
