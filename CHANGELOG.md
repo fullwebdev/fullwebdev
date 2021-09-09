@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.12](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.11...v1.0.0-beta.12) (2021-09-09)
+
+### Features
+
+- **website:** add cv ([d498935](https://github.com/fullwebdev/fullwebdev/commit/d4989354df4bd1117e06bf25bccac89c27bd402a))
+- **website:** add en wording for CV ([db6a787](https://github.com/fullwebdev/fullwebdev/commit/db6a78726d247e34bcd2ec15b6eb62f8cd711cf9))
+- **website:** allow to print articles ([681f7de](https://github.com/fullwebdev/fullwebdev/commit/681f7debc5e55f63c0e5c32973a862b9cdd0e76e))
+- **website:** calendly integration ([a9865d9](https://github.com/fullwebdev/fullwebdev/commit/a9865d91b5a6b99e328cdd71c1f67613c06cfd3d))
+- **website:** new services pages ([3636900](https://github.com/fullwebdev/fullwebdev/commit/3636900a37eac014be96ed82de371c8775c7e827))
+- **website:** newsletter subscription form ([09cc37e](https://github.com/fullwebdev/fullwebdev/commit/09cc37ef76f064e7929e4151f096d5c0cdd6fb40))
+
+### Bug Fixes
+
+- **browsers-history:** conf notes printing ([6e09c8f](https://github.com/fullwebdev/fullwebdev/commit/6e09c8ff449acf16fcf8c536e0e09c9c080b15d6))
+- **website:** footer on static load ([26ffccf](https://github.com/fullwebdev/fullwebdev/commit/26ffccf12513722e42a3312067b7da2f0b1e6489))
+- **website:** hide mail & add personnal web page ([0f3b733](https://github.com/fullwebdev/fullwebdev/commit/0f3b733c126471c3caa50bed03749a850efb427e))
+- **website:** project list img overflow ([5ce1d49](https://github.com/fullwebdev/fullwebdev/commit/5ce1d494110b325a1a4ac1f69e6eb45dc8637116))
+- **website:** remove margin on print ([9f3bd34](https://github.com/fullwebdev/fullwebdev/commit/9f3bd34fde39ea9dd907d15534c465e6bf5f6894))
+
 ## [1.0.0-beta.11](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.10...v1.0.0-beta.11) (2021-08-01)
 
 ### ⚠ BREAKING CHANGES
