@@ -16,6 +16,7 @@ export interface AppRoute {
   wordings?: string;
   props?: ComponentProps;
   redirectTo?: string;
+  prerun?: (...args: any) => Promise<any>;
 }
 
 export type AppRoutes = Record<string, AppRoute>;

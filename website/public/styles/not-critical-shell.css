@@ -103,3 +103,26 @@ h6 {
   animation-delay: -1s;
 }
 /*#endregion spinner*/
+
+/*#region contents*/
+.call-to-action:hover {
+  background-color: var(--stronger-bg-color);
+}
+
+.call-to-action.primary:hover {
+  background-color: var(--primary-color);
+}
+
+.calendly-overlay {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.calendly-overlay .calendly-popup-close {
+  width: 25px !important;
+  height: 25px !important;
+}
+
+.calendly-popup-content.calendly-mobile {
+  overflow-y: visible;
+}
+/*#endregion contents*/

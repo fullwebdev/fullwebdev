@@ -8,15 +8,18 @@ import {
   AlreadyUsedElementNameError,
   NotAPotentialCustomElementNameError,
 } from "custom-element-name";
+import { WithWording } from "../utils/wording-mixin.js";
 
 export const selector = "app-ce-name";
 
-class CENameTestElement extends LitElement {
+/** @type {import('./ce-name').WithCeNameTestWording & LitElement} */
+// @ts-ignore missing properties
+const LitElementWithCeNameTestWording = WithWording(LitElement);
+
+class CENameTestElement extends LitElementWithCeNameTestWording {
   static get properties() {
     return {
       _msg: { type: String, state: true },
-      lang: { type: String },
-      wording: { type: Object, attribute: false },
       value: { type: String },
     };
   }
@@ -57,16 +60,6 @@ class CENameTestElement extends LitElement {
   constructor() {
     super();
     this.value = "";
-    /** @type {import('../languages').Language} */
-    this.lang = "en";
-    /** @type {import('./ce-name').CeNameTestWording | null} */
-    this.wording = null;
-  }
-
-  get w() {
-    if (!this.wording)
-      throw new Error(`can't find any wording for ${selector}`);
-    return this.wording;
   }
 
   render() {
@@ -131,15 +124,18 @@ class CENameTestElement extends LitElement {
   }
 }
 
+// @ts-ignore CENameTestElement typings
 customElements.define("ce-name-test", CENameTestElement);
 
 const examples = ["404-element", "copyright-©", "emotion-😍", "ce-win"];
 
-export default class CENameView extends LitElement {
+/** @type {import('./ce-name').WithCeNameWording & LitElement} */
+// @ts-ignore missing properties
+const LitElementWithCeNameWording = WithWording(LitElement);
+
+export default class CENameView extends LitElementWithCeNameWording {
   static get properties() {
     return {
-      lang: { type: String },
-      wording: { type: Object, attribute: false },
       testedName: { type: String, attribute: false },
     };
   }
@@ -182,16 +178,6 @@ export default class CENameView extends LitElement {
   constructor() {
     super();
     this.testedName = "";
-    /** @type {import('../languages').Language} */
-    this.lang = "en";
-    /** @type {import('./ce-name').CeNameWording | null} */
-    this.wording = null;
-  }
-
-  get w() {
-    if (!this.wording)
-      throw new Error(`can't find any wording for ${selector}`);
-    return this.wording;
   }
 
   render() {
@@ -220,4 +206,5 @@ export default class CENameView extends LitElement {
   }
 }
 
+// @ts-ignore missing properties
 customElements.define(selector, CENameView);
