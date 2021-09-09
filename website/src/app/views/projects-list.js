@@ -210,6 +210,7 @@ export default class ProjectsListElement extends LitElementWithProjectListWordin
         min-height: 180px;
         max-width: 350px;
         margin: 0 auto;
+        overflow-y: hidden;
       }
 
       .project-card img {
