@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.14](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.13...v1.0.0-beta.14) (2021-09-14)
+
+### Bug Fixes
+
+- **website:** add meta tags for BDW S02E01 blog post ([3a77280](https://github.com/fullwebdev/fullwebdev/commit/3a7728027890f1d5b0d126c278a43412f95ac6f5))
+
 ## [1.0.0-beta.13](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.12...v1.0.0-beta.13) (2021-09-14)
 
 ### Features
