@@ -4,6 +4,23 @@ const wording = {
   abstract: "Annonces et articles de blog.",
   items: [
     {
+      href: "/blog/rentree-2021",
+      spotlight: false,
+      wip: false,
+      type: "blog",
+      date: "2021-09-14",
+      desc: {
+        title: "C'est la rentrée !",
+        subtitle: `Quelques compléments après ma chronique pour Les Briques du Web S02E01`,
+      },
+      img: {
+        src: "/images/web-illustrations/nma-jsc21-thedamfr_cover-250x.jpg",
+        alt:
+          "Photo de Noël Macé prise au JUG SummerCamp 2021 après une conférence.",
+        height: 250,
+      },
+    },
+    {
       href: "/blog/naissance-whatwg",
       spotlight: false,
       wip: false,

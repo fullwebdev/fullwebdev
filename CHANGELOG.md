@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.13](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.12...v1.0.0-beta.13) (2021-09-14)
+
+### Features
+
+- **website:** bdw s02e01 ([6b402f7](https://github.com/fullwebdev/fullwebdev/commit/6b402f7d2dd876f7734d84e9122bb68d42b832f6))
+
 ## [1.0.0-beta.12](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.11...v1.0.0-beta.12) (2021-09-09)
 
 ### Features
