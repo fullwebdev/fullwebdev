@@ -47,6 +47,15 @@ exports.routes = {
     "og:image": "https://fullweb.dev/images/web-illustrations/two-foxes.jpg",
     "twitter:image:alt": "deux renards se battant dans la neige",
   },
+  "/blog/rentree-2021": {
+    "og:type": "article",
+    "og:title": "C'est la rentrée !",
+    "og:description": "Compléments pour Les Briques du Web S02E01",
+    "og:image":
+      "https://fullweb.dev/images/web-illustrations/nma-jsc21-thedamfr_cover-250x.jpg",
+    "twitter:image:alt":
+      "Photo de Noël Macé prise au JUG SummerCamp 2021 après une conférence.",
+  },
 };
 
 exports.dirs = [
