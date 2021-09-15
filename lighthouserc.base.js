@@ -19,6 +19,8 @@ module.exports = {
         "crawlable-anchors": "warn",
         // @material/drawer.js
         "unused-javascript": ["error", { maxLength: 1 }],
+        // https://web.dev/strict-csp/
+        "csp-xss": "warn",
       },
     },
   },
