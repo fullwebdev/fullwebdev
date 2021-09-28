@@ -50,7 +50,8 @@ exports.routes = {
   "/blog/rentree-2021": {
     "og:type": "article",
     "og:title": "C'est la rentrée !",
-    "og:description": `Réflexion personnelle sur le biais de négativité (script pour les Briques du Web S02E01)`,
+    "og:description":
+      "Réflexion personnelle sur le biais de négativité (script pour les Briques du Web S02E01)",
     "og:image":
       "https://fullweb.dev/images/web-illustrations/nma-jsc21-thedamfr_cover-250x.jpg",
     "twitter:image:alt":
@@ -59,7 +60,8 @@ exports.routes = {
   "/blog/fullstack-or-not-fullstack": {
     "og:type": "article",
     "og:title": "Qui a inventé les ordis et l'hypertexte ?",
-    "og:description": `Quel sens donner au terme "full stack" ? (script pour les Briques du Web S02E02)`,
+    "og:description":
+      "Quel sens donner au terme full stack ? (script pour les Briques du Web S02E02)",
     "og:image":
       "https://fullweb.dev/illustrations/images/web-illustrations/fullstack-of-pancakes.jpg",
     "twitter:image:alt": "A full stack of pancakes",
