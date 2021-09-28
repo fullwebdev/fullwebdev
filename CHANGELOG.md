@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.15](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.14...v1.0.0-beta.15) (2021-09-28)
+
+### Features
+
+- **website:** new blog post about fullstack ([971eee7](https://github.com/fullwebdev/fullwebdev/commit/971eee78d4cc19fcb6fab360e179ce434ec58a7d))
+- **website:** update conf after JSC ([14bc064](https://github.com/fullwebdev/fullwebdev/commit/14bc064dfae9b1ef62293f1959fdb88689de7413))
+
+### Bug Fixes
+
+- **website:** link to BDW SO2E01 ([4f114b9](https://github.com/fullwebdev/fullwebdev/commit/4f114b9e383c2e6bbaf2dfc18d58ed8fb40c39b3))
+- **website:** typo in metas for routes ([c8b2fd3](https://github.com/fullwebdev/fullwebdev/commit/c8b2fd38362a4403fbedb63182ce84702658e33b))
+- **website:** typos in blog post ([9de9c9a](https://github.com/fullwebdev/fullwebdev/commit/9de9c9aa6575015f8c46e04eaedbe2fdcbb2cb63))
+- upgrade lhci cli ([d162bb4](https://github.com/fullwebdev/fullwebdev/commit/d162bb40528bef907833389fcb162f2e9ecbddbe))
+
 ## [1.0.0-beta.14](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.13...v1.0.0-beta.14) (2021-09-14)
 
 ### Bug Fixes
