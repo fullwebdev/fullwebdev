@@ -1,20 +1,15 @@
 # :man_artist: Il était une fois ... les navigateurs :boat:
 
-> _De grandes batailles et de grandes innovations, racontées et dessinées en live !_
+> Venez écouter l’histoire animée des navigateurs depuis le CERN jusqu’à leur proche avenir !\
+> Replongez-vous dans les balbutiements de la navigation Web, bercé par la voix de Noël et les dessins de Pierre !
 
-::: tip
-Conférence réalisée et présentée avec [Pierre Tibulle](/about).
+Pierre Tibulle et moi-même avons eu beaucoup de plaisir à préparer ensemble cette conférence un peu particulière.
 
-Première présentation : (non enregistrée) le 2 juillet 2021, pour [Riviera Dev](https://2021.rivieradev.fr).
+Nous l'avons présentée pour la première fois le 2 juillet 2021 pour [Riviera Dev](https://2021.rivieradev.fr), où la capture vidéo était malheureusement impossible.
 
-Prochaine présentation : le vendredi 10 septembre 2021 à La Rochelle, pour le [JUG SummerCamp](https://www.jugsummercamp.org/edition/12).
+Heureusement, nous avons également eu le plaisir de donner une seconde représentation le vendredi 10 septembre 2021 à La Rochelle pour le [JUG SummerCamp](https://www.jugsummercamp.org/edition/12). Et cette fois, une vidéo est bien disponible :
 
-:::
-
-## Résumé
-
-Venez écouter l’histoire animée des navigateurs depuis le CERN jusqu’à leur proche avenir !
-Replongez-vous dans les balbutiements de la navigation Web, bercé par la voix de Noël et les dessins de Pierre !
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/g6erTxxy8vY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Vidéo Youtube : The Web is on FIRE, présenté par Noël Macé au DevFest Nantes (2019)"></iframe>
 
 ## Détails
 
@@ -29,38 +24,3 @@ Tous deux se sont retrouvés dans le cadre du podcast "Les briques du Web". Pier
 Maintenant, l'heure est enfin venue de redonner les conférences en physique. Alors autant en profiter pour créer quelque chose de nouveau et original : une histoire racontée et dessinée en Live (inspiration Draw My Life).
 
 Pas de slides : le discours est soutenu par une illustration créée en direct.
-
-### Plan prévu
-
-> _Plan global, susceptible de changer sur quelques détails d'ici la conférence. Le tout sera complété par des anecdotes peu connues et des détails techniques._
-
-    Il était une fois... les navigateurs
-    ├── Premiers pas
-    │   ├── Préhistoire: hypertexte et société de l'information
-    │   ├── Naissance du Web: CERN & Tim BL
-    │   ├── Premiers navigateurs (1993-1994)
-    │   │   ├── libwww
-    │   │   ├── Erwise
-    │   │   ├── ViolaWWW
-    │   │   ├── Midas
-    │   │   └── NCSA Mosaic
-    │   └── Dynamiser le web (1994-1995): Naissance de Netscape et du JavaScript
-    ├── De Netscape à Internet Explorer
-    │   ├── Première guerre des navigateurs (1992-2001)
-    │   ├── Naissance de Mozilla (1995-2004)
-    │   └── IE vs Firefox (2004-2010)
-    ├── Chrome & Safari
-    │   ├── Comment Linux et l'Open Source ont donnés naissance à Chrome (1996-2008)
-    │   ├── Chrome : de nombreuses innovations
-    │   └── Différences clés entre Chrome et Safari
-    ├── L'entrée dans le Web moderne
-    │   ├── Le succès des smartphones (2011-2017)
-    │   └── Le règne de Google (2017-?)
-    └── Le Web du futur ?
-        ├── Une nouvelle guerre ?
-        ├── Google dicte-t-il l'avenir du Web ?
-        │   ├── Rôle de Chromium dans le futur du Web (usages et standardisation)
-        │   └── PWA & Projet Fugu
-        └── Rôle des navigateurs dans le Web Moderne
-            ├── ESM & Web Components
-            └── Chrome, Polymer & Lit

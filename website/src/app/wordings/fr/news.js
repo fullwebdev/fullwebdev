@@ -4,6 +4,22 @@ const wording = {
   abstract: "Annonces et articles de blog.",
   items: [
     {
+      href: "/blog/fullstack-or-not-fullstack",
+      spotlight: false,
+      wip: false,
+      type: "blog",
+      date: "2021-09-28",
+      desc: {
+        title: "Être ou ne pas être full stack...",
+        subtitle: `Quel sens donner au terme "full stack" ? (script pour les Briques du Web S02E02)`,
+      },
+      img: {
+        src: "/images/web-illustrations/fullstack-of-pancakes.jpg",
+        alt: "A full stack of pancakes",
+        height: 250,
+      },
+    },
+    {
       href: "/blog/rentree-2021",
       spotlight: false,
       wip: false,
@@ -11,7 +27,7 @@ const wording = {
       date: "2021-09-14",
       desc: {
         title: "C'est la rentrée !",
-        subtitle: `Quelques compléments après ma chronique pour Les Briques du Web S02E01`,
+        subtitle: `Réflexion personnelle sur le biais de négativité (script pour les Briques du Web S02E01)`,
       },
       img: {
         src: "/images/web-illustrations/nma-jsc21-thedamfr_cover-250x.jpg",
