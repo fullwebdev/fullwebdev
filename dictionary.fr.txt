@@ -376,3 +376,6 @@ beta
 sketchnote
 meetup
 GDG
+Cavaillès
+SummerCamp
+Tibulle
