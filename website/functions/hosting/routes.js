@@ -63,7 +63,7 @@ exports.routes = {
     "og:description":
       "Quel sens donner au terme full stack ? (script pour les Briques du Web S02E02)",
     "og:image":
-      "https://fullweb.dev/illustrations/images/web-illustrations/fullstack-of-pancakes.jpg",
+      "https://fullweb.dev/images/web-illustrations/fullstack-of-pancakes.jpg",
     "twitter:image:alt": "A full stack of pancakes",
   },
 };
