@@ -59,7 +59,7 @@ exports.routes = {
   },
   "/blog/fullstack-or-not-fullstack": {
     "og:type": "article",
-    "og:title": "Qui a inventé les ordis et l'hypertexte ?",
+    "og:title": "Être ou ne pas être full stack…",
     "og:description":
       "Quel sens donner au terme full stack ? (script pour les Briques du Web S02E02)",
     "og:image":
