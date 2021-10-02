@@ -10,12 +10,20 @@ const INDEX_TEMPLATE = fs
   .readFileSync(path.resolve(__dirname, "index.html"))
   .toString();
 
+const escapeHTML = (unsafe) =>
+  unsafe
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+
 function metasForRoute(route) {
   let metas = "";
   for (const [key, value] of Object.entries(route)) {
     metas += `<meta ${
       key.startsWith("og:") ? "property" : "name"
-    }="${key}" content="${value}" />`;
+    }="${key}" content="${escapeHTML(value)}" />`;
   }
   return metas;
 }
