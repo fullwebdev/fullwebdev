@@ -38,10 +38,11 @@
     "prettier": "prettier \"./**/*.{js,css,ts,mjs,cjs,jsx,tsx,html,yml,vue,styl,md,json}\" --check",
     "==b==": "============================= build ===========================",
     "build": "bash scripts/build.sh -f",
-    "prebuild": "npm run prebuild:website",
+    "prebuild": "run-s prebuild:website prepare-functions",
     "build:illustrations": "lerna run build --scope=@fullweb/illustrations",
     "build:website": "lerna run build --scope=@fullweb/website && copyfiles -u 2 \"website/dist/**/*\" ./dist/",
     "prebuild:website": "run-s build:illustrations docs:api && npm run cp-website-assets",
+    "prepare-functions": "copyfiles -u 2 \"website/src/app/**/*.js\" ./website/functions/",
     "cp-website-assets": "bash scripts/cp-assets.sh",
     "build:eni-dpawm": "npm run build:illustrations && rimraf ./dpawm-build/public/ && lerna run build:web --scope=@fullweb/eni-dpawm && mv ./materials/eni-dpawm/dist ./dpawm-build/public",
     "prebuild:eni-dpawm": "npm run build:illustrations",
@@ -94,6 +95,7 @@
     "@commitlint/prompt-cli": "^11.0.0",
     "@daucus/pandoc": "./packages/daucus/pandoc/",
     "@lhci/cli": "~0.8.1",
+    "@modern-helpers/router": "*",
     "@monocli/cli": "^0.5.0",
     "@open-wc/eslint-config": "^4.2.0",
     "@open-wc/testing": "^2.5.32",
@@ -112,7 +114,7 @@
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-compat": "^3.9.0",
     "eslint-plugin-vue": "^7.6.0",
-    "firebase-tools": "^9.10.0",
+    "firebase-tools": "^9.19.0",
     "http-server": "^0.12.3",
     "husky": "^4.3.8",
     "lerna": "^3.22.1",
@@ -133,8 +135,7 @@
     "typedoc-plugin-markdown": "^3.7.1",
     "typescript": "^4.3.0-beta",
     "typescript-json-schema": "^0.50.0",
-    "web-component-analyzer": "^1.1.6",
-    "@modern-helpers/router": "*"
+    "web-component-analyzer": "^1.1.6"
   },
   "husky": {
     "hooks": {

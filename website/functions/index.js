@@ -1,3 +1,3 @@
-const hosting = require("./hosting");
+import { httpRequestHandler } from "./hosting/index.js";
 
-exports.httpRequestHandler = hosting.httpRequestHandler;
+export { httpRequestHandler };
