@@ -1,8 +1,10 @@
-// eslint-disable-next-line import/no-unresolved
-const functions = require("firebase-functions");
-const fs = require("fs");
-const path = require("path");
-const { routes, dirs } = require("./routes");
+import functions from "firebase-functions";
+import * as fs from "fs";
+import * as path from "path";
+import { fileURLToPath } from "url";
+import { routes, dirs } from "./routes.js";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const INDEX_TEMPLATE = fs
   .readFileSync(path.resolve(__dirname, "index.html"))
@@ -55,46 +57,48 @@ const DEFAULT_METAS = {
   },
 };
 
-exports.httpRequestHandler = functions.https.onRequest((request, result) => {
-  let reqPath = request.path;
-  let lang = "fr";
-  const langPathMatch = /^\/(en|fr)(\/.*)/.exec(reqPath);
-  if (langPathMatch) {
-    [, lang, reqPath] = langPathMatch;
-  }
-  let route = routes[reqPath];
-
-  if (!route) {
-    const found = dirs.find(
-      ([key, dirRoute]) => reqPath.startsWith(key) && dirRoute
-    ) || ["", {}];
-    [, route] = found;
-    if (route[lang]) {
-      if (route.default) {
-        route = {
-          ...route.default,
-          ...route[lang],
-        };
-      } else {
-        route = route[lang];
-      }
+export const httpRequestHandler = functions.https.onRequest(
+  (request, result) => {
+    let reqPath = request.path;
+    let lang = "fr";
+    const langPathMatch = /^\/(en|fr)(\/.*)/.exec(reqPath);
+    if (langPathMatch) {
+      [, lang, reqPath] = langPathMatch;
     }
-    route = {
-      ...DEFAULT_METAS[lang],
-      ...route,
-    };
+    let route = routes[reqPath];
+
+    if (!route) {
+      const found = dirs.find(
+        ([key, dirRoute]) => reqPath.startsWith(key) && dirRoute
+      ) || ["", {}];
+      [, route] = found;
+      if (route[lang]) {
+        if (route.default) {
+          route = {
+            ...route.default,
+            ...route[lang],
+          };
+        } else {
+          route = route[lang];
+        }
+      }
+      route = {
+        ...DEFAULT_METAS[lang],
+        ...route,
+      };
+    }
+
+    let indexHTML = INDEX_TEMPLATE;
+
+    if (isBot(request.headers["user-agent"]) && route) {
+      indexHTML = indexHTML.replace(
+        /<!-- meta-tags:start -->[\s\S]*<!-- meta-tags:end -->/,
+        metasForRoute(route)
+      );
+    }
+
+    // caching
+    // res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
+    result.status(200).send(indexHTML);
   }
-
-  let indexHTML = INDEX_TEMPLATE;
-
-  if (isBot(request.headers["user-agent"]) && route) {
-    indexHTML = indexHTML.replace(
-      /<!-- meta-tags:start -->[\s\S]*<!-- meta-tags:end -->/,
-      metasForRoute(route)
-    );
-  }
-
-  // caching
-  // res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
-  result.status(200).send(indexHTML);
-});
+);

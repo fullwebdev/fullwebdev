@@ -1,4 +1,4 @@
-exports.routes = {
+export const routes = {
   "/blog/qui-a-invente-hypertexte": {
     "og:type": "article",
     "og:title": "Qui a inventé les ordis et l'hypertexte ?",
@@ -68,7 +68,7 @@ exports.routes = {
   },
 };
 
-exports.dirs = [
+export const dirs = [
   [
     "/daucus",
     {
