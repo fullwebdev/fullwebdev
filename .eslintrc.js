@@ -89,7 +89,7 @@ module.exports = {
         "**/test-web/**/*.{js,mjs,cjs}",
         "**/scripts/**/*.{js,mjs,cjs}",
         "**/*.config.js",
-        "**/*.test.js",
+        "**/*.test.{js,ts}",
       ],
       rules: {
         "lit/no-invalid-html": "off",
