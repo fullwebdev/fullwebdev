@@ -25,6 +25,7 @@
     "test:web": "web-test-runner",
     "test:website": "run-s test:website:*",
     "test:website:app": "lerna run test:app --scope=@fullweb/website",
+    "test:website:functions": "firebase emulators:exec --project=dev --only functions 'cd website/functions && npm run test'",
     "types": "run-s types:clear types:copy types:build",
     "types:build": "tsc --build",
     "types:clear": "rimraf packages/*/types/ && rimraf packages/*/*/types/",
