@@ -11,6 +11,6 @@
     "@modern-helpers/router": "^0.4.0"
   },
   "devDependencies": {
-    "@web/dev-server": "~0.1.18-next.0"
+    "@web/dev-server": "~0.1.25"
   }
 }

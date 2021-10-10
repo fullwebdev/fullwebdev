@@ -26,8 +26,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@web/dev-server": "~0.1.18-next.0",
-    "@web/dev-server-storybook": "~0.3.6-next.0"
+    "@web/dev-server": "~0.1.25",
+    "@web/dev-server-storybook": "~0.3.8"
   },
   "types": "types/index.d.ts",
   "publishConfig": {

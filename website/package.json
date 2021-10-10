@@ -56,7 +56,7 @@
     "@modern-helpers/el": "*",
     "@modern-helpers/router": "*",
     "custom-element-name": "*",
-    "lit": "~2.0.0-rc.2",
+    "lit": "2.0.0",
     "prismjs": "^1.21.0"
   }
 }
