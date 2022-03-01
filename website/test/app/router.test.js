@@ -2,8 +2,10 @@ import { expect } from "@esm-bundle/chai";
 import { AppRouter } from "../../src/app/router.js";
 
 describe("AppRouter", () => {
+  // locale set to neither fr or en in test browser
   it("use english by default", async () => {
     const router = new AppRouter({}, "fragments/");
+    expect(router._forcedLanguage).to.be.null;
     expect(router.preferredLanguage).equal("en");
   });
 
