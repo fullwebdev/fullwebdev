@@ -20,6 +20,7 @@ package-lock.json
 /website/src/app/builds
 /website/functions/hosting/index.html
 API/
+builds/
 
 ## should stay as-is
 /packages/**/test-node/**/snapshots

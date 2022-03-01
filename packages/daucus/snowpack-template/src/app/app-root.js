@@ -210,6 +210,7 @@ class AppRoot extends LitElement {
   }
 
   render() {
+    /* eslint-disable lit/no-invalid-html */
     return html`
       <daucus-router
         .routes=${daucusRoutes}
@@ -246,6 +247,7 @@ class AppRoot extends LitElement {
         </div>
       </daucus-router>
     `;
+    /* eslint-enable lit/no-invalid-html */
   }
 }
 
