@@ -23,7 +23,7 @@
     "test:node": "mocha \"packages/*/*/test-node/**/*.test.{ts,js,mjs,cjs}\" --timeout 5000 --reporter dot --exit",
     "test:node:watch": "npm run test:node -- --watch --parallel",
     "test:web": "web-test-runner",
-    "test:website": "run-s test:website:*",
+    "test:website": "run-s 'test:website:!(e2e)'",
     "test:website:app": "lerna run test:app --scope=@fullweb/website",
     "test:website:functions": "firebase emulators:exec --project=dev --only functions 'cd website/functions && npm run test'",
     "test:website:e2e": "playwright test",
