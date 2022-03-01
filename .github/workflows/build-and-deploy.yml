@@ -37,13 +37,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Validate (test, types & formating)
-        run: npm run validate
-
       - name: Build
         run: |
           npm run build
           cp ./CNAME ./dist/CNAME
+
+      - name: Validate (test, types & formating)
+        run: npm run validate
 
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
