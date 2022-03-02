@@ -1,7 +1,7 @@
 # Les outils sont vos amis
 
 ::: tip
-Infos complémentaires pour ma chronique présentée durant [Les briques du Web S02E05](https://rdv-speakers.fr/les-briques-du-web/episodes/S02E05/) le 9 novembre 2021.
+Chronique inédite écrite pour [Les briques du Web](https://rdv-speakers.fr/les-briques-du-web/) vers novembre 2021. Ayant mis fin à l'émission à la même période, celle-ci n'a jamais été présentée.
 :::
 
 <hr>

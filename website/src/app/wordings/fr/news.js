@@ -8,7 +8,7 @@ const items = [
     date: "2021-11-16",
     desc: {
       title: "Les outils sont vos amis !",
-      subtitle: `Arrêtez de contourner les tests, le typage, le lint, etc. ! (script pour les Briques du Web S02E05)`,
+      subtitle: `Arrêtez de contourner les tests, le typage, le lint, etc. ! (script inédit)`,
     },
     img: {
       src: "/images/web-illustrations/tools.jpg",
