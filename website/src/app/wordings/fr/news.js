@@ -1,6 +1,22 @@
 /** @type {import('../../views/projects-list').Project[]} */
 const items = [
   {
+    href: "/blog/les-outils-sont-vos-amis",
+    spotlight: false,
+    wip: false,
+    type: "blog",
+    date: "2021-11-16",
+    desc: {
+      title: "Les outils sont vos amis !",
+      subtitle: `Arrêtez de contourner les tests, le typage, le lint, etc. ! (script inédit)`,
+    },
+    img: {
+      src: "/images/web-illustrations/tools.jpg",
+      alt: "Outils de bricolage",
+      height: 250,
+    },
+  },
+  {
     href: "/blog/fullstack-or-not-fullstack",
     spotlight: false,
     wip: false,
