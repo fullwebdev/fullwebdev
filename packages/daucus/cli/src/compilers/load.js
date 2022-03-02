@@ -24,6 +24,7 @@ export async function loadCompiler(name) {
 
   try {
     // @ts-ignore pandoc is an optionnal dependency
+    // eslint-disable-next-line import/no-extraneous-dependencies
     const { md2html } = await import("@daucus/pandoc");
 
     return md2html;

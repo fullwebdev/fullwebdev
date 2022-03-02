@@ -4,6 +4,9 @@ import { playwrightLauncher } from "@web/test-runner-playwright";
 
 const filteredLogs = ["Running in dev mode", "lit-html is in dev mode"];
 
+const createBrowserContext = ({ browser }) =>
+  browser.newContext({ locale: "es-ES" });
+
 export default /** @type {import("@web/test-runner").TestRunnerConfig} */ ({
   /** Test files to run */
   files: "test/app/**/*.test.js",
@@ -37,8 +40,11 @@ export default /** @type {import("@web/test-runner").TestRunnerConfig} */ ({
 
   /** Browsers to run tests on */
   browsers: [
-    playwrightLauncher({ product: "chromium" }),
-    playwrightLauncher({ product: "firefox" }),
+    playwrightLauncher({
+      product: "chromium",
+      createBrowserContext,
+    }),
+    playwrightLauncher({ product: "firefox", createBrowserContext }),
     //   playwrightLauncher({ product: 'webkit' }),
   ],
 });

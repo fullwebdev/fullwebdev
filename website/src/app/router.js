@@ -531,9 +531,9 @@ export class AppRouter extends AbstractRouter {
      * TODO: message to make this explicit to users as firebase does not
      * follow the same logic for localized index files
      */
-    if (!window.navigator.languages.find((code) => code.startsWith("fr")))
-      return "en";
-    return "fr";
+    if (window.navigator.languages.find((code) => code.startsWith("fr")))
+      return "fr";
+    return "en";
   }
 
   set preferredLanguage(lang) {

@@ -8,7 +8,7 @@
     "start": "wds --node-resolve --open --app-index index.html"
   },
   "devDependencies": {
-    "@web/dev-server": "^0.1.14"
+    "@web/dev-server": "~0.1.25"
   },
   "dependencies": {
     "@modern-helpers/template": "^0.4.0"

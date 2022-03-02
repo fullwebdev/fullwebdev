@@ -40,3 +40,5 @@ __mocks__
 /website/src/app/builds
 /website/functions/hosting/index.html
 API/
+website/functions/app
+builds/
