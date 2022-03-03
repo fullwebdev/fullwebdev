@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.16](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.15...v1.0.0-beta.16) (2022-03-03)
+
+### Features
+
+- **website:** script BDW S02E05 ([e56630e](https://github.com/fullwebdev/fullwebdev/commit/e56630edc013cc04024a3e4a27f3e8557a6d7537))
+
+### Bug Fixes
+
+- **website:** update blog post info ([72aec31](https://github.com/fullwebdev/fullwebdev/commit/72aec31c6896a81d7f18f34d43e44133387f76ba))
+- **website:** wrong img url in metas ([34afaa0](https://github.com/fullwebdev/fullwebdev/commit/34afaa07d3f8b55abb691cb11f6a1f19a0eecf5d))
+- **website:** wrong title in blog post meta ([432b209](https://github.com/fullwebdev/fullwebdev/commit/432b2091804cb78ba1b0598971e1bc379835ee51))
+
 ## [1.0.0-beta.15](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.14...v1.0.0-beta.15) (2021-09-28)
 
 ### Features
