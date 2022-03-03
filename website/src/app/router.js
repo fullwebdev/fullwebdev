@@ -473,42 +473,12 @@ export class AppRouter extends AbstractRouter {
       ];
     }
 
-    if (daucusProject) {
-      if (!this._currentDaucusProject) {
-        this.dispatchEvent(new CustomEvent("enter-daucus"));
-      }
-
-      this.dispatchEvent(
-        new CustomEvent("daucus-route-matched", {
-          detail: {
-            path: pathWithoutLang,
-            oldProjectName: this._currentDaucusProject,
-            newProjectName: daucusProject,
-            editURL:
-              templatePath &&
-              `${AppRouter.GITHUB_REPO.url}edit/${
-                AppRouter.GITHUB_REPO.branch
-              }/website/${templatePath.replace(/\.html$/, ".md")}`,
-            menuHTML,
-          },
-        })
-      );
-
-      this._currentDaucusProject = daucusProject;
-    } else {
-      if (this._currentDaucusProject) {
-        this.dispatchEvent(new CustomEvent("exit-daucus"));
-        this._currentDaucusProject = null;
-      }
-
-      this.dispatchEvent(
-        new CustomEvent("app-route-matched", {
-          detail: {
-            path: pathWithoutLang,
-          },
-        })
-      );
-    }
+    this._updateDaucusProject(
+      daucusProject,
+      pathWithoutLang,
+      templatePath,
+      menuHTML
+    );
 
     if (staticContent) {
       this.outlet.staticContent(staticContent);
@@ -561,14 +531,61 @@ export class AppRouter extends AbstractRouter {
      * TODO: message to make this explicit to users as firebase does not
      * follow the same logic for localized index files
      */
-    if (!window.navigator.languages.find((code) => code.startsWith("fr")))
-      return "en";
-    return "fr";
+    if (window.navigator.languages.find((code) => code.startsWith("fr")))
+      return "fr";
+    return "en";
   }
 
   set preferredLanguage(lang) {
     this._forcedLanguage = lang;
     this.navigate(this.currentPath.replace(/^\/(en|fr)/, `/${lang}`));
+  }
+
+  /**
+   * @param {string | null} [projectName]
+   * @param {string} [path]
+   * @param {string | null} [templatePath]
+   * @param {string} [menuHTML]
+   *
+   * @private
+   */
+  _updateDaucusProject(projectName, path, templatePath, menuHTML) {
+    if (projectName) {
+      if (!this._currentDaucusProject) {
+        this.dispatchEvent(new CustomEvent("enter-daucus"));
+      }
+
+      this.dispatchEvent(
+        new CustomEvent("daucus-route-matched", {
+          detail: {
+            path,
+            oldProjectName: this._currentDaucusProject,
+            newProjectName: projectName,
+            editURL:
+              templatePath &&
+              `${AppRouter.GITHUB_REPO.url}edit/${
+                AppRouter.GITHUB_REPO.branch
+              }/website/${templatePath.replace(/\.html$/, ".md")}`,
+            menuHTML,
+          },
+        })
+      );
+
+      this._currentDaucusProject = projectName;
+    } else {
+      if (this._currentDaucusProject) {
+        this.dispatchEvent(new CustomEvent("exit-daucus"));
+        this._currentDaucusProject = null;
+      }
+
+      this.dispatchEvent(
+        new CustomEvent("app-route-matched", {
+          detail: {
+            path,
+          },
+        })
+      );
+    }
   }
 
   /**

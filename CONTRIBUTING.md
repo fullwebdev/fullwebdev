@@ -91,6 +91,10 @@ Then, you'll need to install the dependencies for the whole monorepo by running 
 
 Finally, you can run the standalone website, without building any other packages, by going to the [/website](./website) directory and running `npm start`.
 
+### E2E test
+
+To install playwright system dependencies, see <https://github.com/microsoft/playwright/issues/2621#issuecomment-931530175>
+
 ## :warning: Quirks
 
 ### Daucus

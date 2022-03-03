@@ -1,6 +1,6 @@
 {
   "name": "@fullweb/website",
-  "version": "1.0.0-beta.15",
+  "version": "1.0.0-beta.16",
   "private": true,
   "scripts": {
     "build:daucus": "daucus build",
@@ -13,7 +13,8 @@
     "build:sass": "sass src/styles/:public/styles/build/ --load-path=node_modules",
     "postbuild": "npm run minify && npm run build:functions",
     "build:functions": "node ./scripts/fn-assets.mjs",
-    "minify": "node ./scripts/minify.mjs"
+    "minify": "node ./scripts/minify.mjs",
+    "test:app": "web-test-runner"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,10 @@
   "devDependencies": {
     "@daucus/cli": "*",
     "@daucus/pandoc": "*",
+    "@esm-bundle/chai": "^4.3.4-fix.0",
     "@types/prismjs": "^1.16.1",
+    "@web/test-runner": "^0.13.18",
+    "@web/test-runner-playwright": "^0.8.8",
     "concurrently": "^6.2.0",
     "csso": "^4.2.0",
     "globby": "^9.2.0",
@@ -52,7 +56,7 @@
     "@modern-helpers/el": "*",
     "@modern-helpers/router": "*",
     "custom-element-name": "*",
-    "lit": "~2.0.0-rc.2",
+    "lit": "2.2.0",
     "prismjs": "^1.21.0"
   }
 }
