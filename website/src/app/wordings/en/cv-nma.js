@@ -142,12 +142,20 @@ const wording = {
     items: [
       [
         {
-          company: { name: "Freelance" },
-          startDate: "avril 2021",
+          company: { name: "Freelance", details: "fullweb.dev" },
+          startDate: "janv. 2020",
           jobTitle: "Consultant, Formateur",
           icon: "/images/web-illustrations/companies-logos/fwd.svg",
+          details: "Développement & architecture Web",
+        },
+        {
+          company: { name: "blindnet", details: "start-up" },
+          startDate: "févr. 2022",
+          endDate: "oct. 2022",
+          jobTitle: "Head of DevRel",
           details:
-            "Développement & architecture Web, ingénierie pédagogique & Developer Relations.",
+            "Promotion de la privacy, encadrement et contribution au développement Web, Java et Scala, accompagnement client et rédaction de documentations",
+          icon: "/images/web-illustrations/companies-logos/blindnet.svg",
         },
         {
           company: {
@@ -278,9 +286,41 @@ const wording = {
         title: "Conferences",
         items: [
           {
-            headline: "Il était une fois... les navigateurs",
-            date: "2021",
+            headline: "Requiem pour le Web",
+            date: "2022",
             links: [
+              {
+                // date: "30 juin 2022",
+                text: "SunnyTech",
+                href:
+                  "https://sunny-tech.io/schedule/2022-06-30?sessionId=PuYsiu2FRao8oBToZbo7",
+              },
+            ],
+          },
+          {
+            headline: "Care Bears II: Revenge of the Vengeance",
+            date: "2022",
+            links: [
+              {
+                text: "Le Camping des Speakers",
+                href:
+                  "https://camping-speakers.fr/sessions/comment_ne_pas_etre_un_c/",
+              },
+              {
+                text: "Codeurs en Seine",
+                href: "https://www.codeursenseine.com/2022/programme",
+              },
+            ],
+          },
+          {
+            headline: "Il était une fois... les navigateurs",
+            date: "2021-2022",
+            links: [
+              {
+                // date: "2 juil. 2021",
+                text: "Riviera DEV",
+                href: "https://2021.rivieradev.fr/session/1029",
+              },
               {
                 // date: "10 sept. 2021",
                 text: "JUG SummerCamp",
@@ -288,9 +328,39 @@ const wording = {
                   "https://www.jugsummercamp.org/edition/12/presentations/zq4HdtYsZFbQghPedwLs",
               },
               {
-                // date: "2 juil. 2021",
-                text: "Riviera DEV",
-                href: "https://2021.rivieradev.fr/session/1029",
+                // date: "21 janv. 2022",
+                text: "Touraine Tech",
+                href: "https://2022.touraine.tech/talk/zq4HdtYsZFbQghPedwLs",
+              },
+              {
+                // date: "3 févr. 2022",
+                text: "Snowcamp (keynote d'ouverture)",
+                href:
+                  "https://snowcamp2022.sched.com/event/qa5F/il-etait-une-fois-les-navigateurs-nulb",
+              },
+              {
+                // date: "10 mars 2022",
+                text: "Université de Poitiers (master info-com)",
+              },
+              {
+                // date: "13 mai 2022",
+                text: "Devoxx UK",
+                href: "https://www.devoxx.co.uk/talk/?id=4955",
+              },
+              {
+                // date: "1 juillet 2022",
+                text: "SunnyTech",
+                href:
+                  "https://sunny-tech.io/schedule/2022-07-01?sessionId=zq4HdtYsZFbQghPedwLs",
+              },
+              {
+                // date: "30 sept. 2022",
+                text: "LunaConf",
+              },
+              {
+                // date: "14 oct. 2022",
+                text: "PHP Forum",
+                href: "https://event.afup.org/forum-php-2022/programme/#4041",
               },
             ],
           },
