@@ -1,7 +1,8 @@
 #main-header,
 #standard-menu,
 #edit-page-button,
-.no-print {
+.no-print,
+#main-footer {
   display: none !important;
 }
 
