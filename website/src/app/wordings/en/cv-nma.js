@@ -5,7 +5,9 @@ const wording = {
   note: "13 years experience",
   presentation: {
     title: "Introduction",
-    abstract: `TRANSLATION IN PROGRESS. Thank you for your patience.`,
+    abstract: `I am a passionate and curious developer above all.
+    So far, the Web is for me the best playground as it is constantly changing and evolving.
+    I especially deploy my full potential when associating my technical and soft skills in an environment conducive to knowledge-sharing and support.`,
     langs: {
       title: "Languages",
       content: [
@@ -79,27 +81,26 @@ const wording = {
           caption: "expertise",
         },
         content: [
-          /* HTML */ `focus sur les
-            <strong>standards et principes transverses</strong> (Web Components,
-            Web APIs, PWAs, PRPL, a11y, performances, etc.)`,
-          /* HTML */ `maitrise de nombreux frameworks et bibliothèques (<strong
+          /* HTML */ `focus on
+            <strong>transversal standards and principles</strong> (Web
+            Components, Web APIs, PWAs, PRPL, a11y, performance, etc.)`,
+          /* HTML */ `mastery of several frameworks and libraries (<strong
               >Lit, Open WC, Angular, React, Vue, Redux, Gatsby, 11ty,
               etc.</strong
             >)`,
-          /* HTML */ `maitrise avancée de
-            <strong>Angular, Angular CLI & Nrwl/Nx</strong> (contributeur de
-            2016 à 2018, puis suivi régulier)`,
-          /* HTML */ `<strong>livre</strong> complet sur les principes
-            fondamentaux de
+          /* HTML */ `advanced mastery of
+            <strong>Angular, Angular CLI & Nrwl/Nx</strong> (contributor from
+            2016 to 2018)`,
+          /* HTML */ `<strong>book</strong> providing an in-depth approach of
             <em
               ><a
                 href="https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523"
                 target="_blank"
                 rel="noreferrer noopener"
-                >Développement & Architecture des Applications Web Modernes</a
+                >Modern Web Apps development and architecture</a
               ></em
             >
-            publié aux éditions ENI en 2021`,
+            published (in French) by ENI Editions in 2021`,
         ],
       },
       {
@@ -109,12 +110,11 @@ const wording = {
           caption: "guideline",
         },
         content: [
-          /* HTML */ `<strong>mentoring</strong> et
-            <strong>transmission de compétences</strong> sont les piliers et
-            fils conducteurs de l'ensemble de ma carrière`,
-          /* HTML */ `large expérience, en tant que formateur autonome et dans
-          la direction et l'accompagnement d'importantes équipes pédagogique ou
-          de R&D`,
+          /* HTML */ `<strong>mentoring</strong> and
+            <strong>knowledge-sharing</strong> are the two pillars of my career`,
+          /* HTML */ `extensive and wide experience, as an independent teacher
+          and trainer, instructional engineer, and director for several
+          pedagogical teams and R&D programs`,
         ],
       },
       {
@@ -124,10 +124,10 @@ const wording = {
           caption: "motivations",
         },
         content: [
-          /* HTML */ `forte appétence pour l'<strong>Open Source</strong> et les
-            oeuvres libres`,
-          /* HTML */ `nombreux <strong>workshops et conférences</strong> créés
-            et présentés`,
+          /* HTML */ `strong passion for <strong>Open Source</strong> and
+            Openness in general`,
+          /* HTML */ `numerous
+            <strong>workshops and conferences</strong> created and presented`,
         ],
       },
     ],
@@ -142,114 +142,131 @@ const wording = {
     items: [
       [
         {
-          company: { name: "Freelance" },
-          startDate: "avril 2021",
-          jobTitle: "Consultant, Formateur",
+          company: { name: "Freelance", details: "fullweb.dev" },
+          startDate: "Jan. 2020",
+          jobTitle: "Consultant",
           icon: "/images/web-illustrations/companies-logos/fwd.svg",
-          details:
-            "Développement & architecture Web, ingénierie pédagogique & Developer Relations.",
+          details: "Web development and architecture",
+        },
+        {
+          company: { name: "blindnet", details: "start-up" },
+          startDate: "Feb. 2022",
+          endDate: "Oct. 2022",
+          jobTitle: "Head of DevRel",
+          details: [
+            "Promotion of privacy-by-design development",
+            "leading and contributing to the creation of a new DevKit (Web, Java and Scala)",
+            "solution engineering and technical writing",
+          ],
+          icon: "/images/web-illustrations/companies-logos/blindnet.svg",
         },
         {
           company: {
             name: "Editions ENI",
-            details: "maison d'édition de livres d'informatique",
+            details: "IT specialized french publisher",
           },
-          jobTitle: "Auteur",
-          startDate: "mars 2020",
-          endDate: "mars 2021",
+          jobTitle: "Autor",
+          startDate: "March 2020",
+          endDate: "March 2021",
           icon: "/images/web-illustrations/companies-logos/eni.svg",
           details: [
-            "rédaction du livre <strong>Développement et architecture des applications Web Modernes - Retrouver les fondamentaux</strong> (608 pages)",
-            "16500 lignes de code d'exemple, testées et executables",
-            "développement de bibliothèques, outils, scripts et projets permettant de valider et appuyer le contenu du livre, ainsi que de faciliter sa rédaction (CI/CD)",
+            "writing of the book <strong>Développement et architecture des applications Web Modernes - Retrouver les fondamentaux</strong> (608 pages)",
+            "16500 lines of tested and runnable demo code",
+            "development of libraries, tools, scripts et projects to validate and support written contents (CI/CD)",
           ],
         },
         {
           company: {
             name: "Bonitasoft",
-            details: "éditeur logiciel Open Source (BPM)",
+            details: "Open Source Software company (BPM)",
           },
           jobTitle: "Developer Advocate Web",
-          startDate: "avril 2019",
-          endDate: "oct. 2019",
+          startDate: "April 2019",
+          endDate: "Oct. 2019",
           icon: "/images/web-illustrations/companies-logos/bonitasoft.png",
           details: [
-            "Mission : améliorer la satisfaction utilisateur et l'image de marque des produits Bonitasoft impliquant des technologies Web",
-            "<strong>modernisation et performance</strong> : contribution et accompagnement à une transition de <em>AngularJS</em> aux <em>Web Components</em>",
-            "mise en place d'une stratégie et d'outils facilitant la production de contenus, ainsi que la gestion de 213 évènements (via Gatsby, Netlify CMS, GitHub)",
+            "Mission: improve user satisfaction and brand image of all Bonitasoft products involving web technologies",
+            "<strong>modernization and performance</strong>: contribution and support for the transition from <em>AngularJS</em> to <em>Web Components</em>",
+            "define and set-up new strategies and tools to facilitate content creation and tracking of numerous technical events (via Gatsby, Netlify CMS, GitHub)",
           ],
         },
         {
-          company: { name: "SFEIR", details: "ESN, 500 employés" },
-          jobTitle: "Developer Advocate / Architecte Web",
-          startDate: "juin 2018",
-          endDate: "avril 2019",
+          company: {
+            name: "SFEIR",
+            details: "Consulting Company, 500 employees",
+          },
+          jobTitle: "Developer Advocate / Web Architect",
+          startDate: "June 2018",
+          endDate: "April 2019",
           icon: "/images/web-illustrations/companies-logos/sfeir.jpg",
           details: [
-            "<strong>double mission</strong> : expertise technique (3j/5) et advocacy",
-            "stabilisation et amélioration de la maintenabilité d'une application <strong>Angular, NgRx et Preact</strong> en tant que tech lead pour la Société Générale",
-            "encadrement et montée en compétence d'une équipe de <strong>30 développeurs Angular</strong> (Paris & Hong Kong) pour BNP Paribas",
-            "audit et amélioration des performances de Progressive Web Apps (Vanilla, React, Vue, Angular), migrations AngularJS-Angular, réponses à appels d'offre, etc.",
-            "gestion communautaire interne et externe (organisation d'évènements et réseaux sociaux d'entreprise)",
-            "8 conférences et 5 formations délivrées (cf. réalisations)",
+            "<strong>dual mission</strong>: technical expertise (3 days /5) and advocacy",
+            "stabilization and improvement of the maintainability of an <strong>Angular, NgRx et Preact</strong> web app as a tech lead for the Société Générale company",
+            "management and mentoring of a tream composed of <strong>30 Angular developers</strong> (Paris & Hong Kong) for the BNP Paribas company",
+            "audits and performance improvements of several Progressive Web Apps (Vanilla, React, Vue, Angular), migration from AngularJS to Angular, respond calls for tenders, etc.",
+            "internal and external community management (organization of events and management of the company's internal social network)",
+            "8 conferences et 5 training courses delivered (cf. Accomplishments)",
           ],
         },
       ],
       [
         {
-          company: { name: "Sedona", details: "ESN, 100 employés" },
-          jobTitle: "Directeur Technique JS / Architecte Web",
-          startDate: "déc. 2015",
-          endDate: "mai 2018",
+          company: {
+            name: "Sedona",
+            details: "Consulting Company, 100 employees",
+          },
+          jobTitle: "JS Technical Director / Web Architect",
+          startDate: "Dec. 2015",
+          endDate: "May 2018",
           icon: "/images/web-illustrations/companies-logos/sedona.png",
           details: [
-            "<strong>direction technique de 8 projets</strong> front-end JavaScript (AngularJS, JQuery, PHP et Node.js) menés par 3 équipe de 12 développeurs",
-            "définition de l'architecture front-end web de référence pour Sedona ainsi que le groupe <em>Harmonie Mutuelle</em>",
-            "<strong>réponse à appels d'offre</strong> et <strong>modernisation</strong> de l'usage des technologies Web sur l'ensemble du groupe (marques Sedona, West, RedShift et Inadeo)",
-            "<em>(à partir de déc. 2016)</em> suivi, développement et mise en place des codes et outils transverses sur 3 projets, menés par 6 équipes (30 développeurs), en tant qu'<strong>architecte référant Angular</strong> pour le compte de <em>Saint Gobain</em>",
+            "<strong>technical and project management</strong> of 8 front-end JavaScript projects(AngularJS, JQuery, PHP and Node.js) with 3 teams of 12 developers",
+            "specification of a new front-end web development reference framework for Sedona and the <em>Harmonie Mutuelle</em> company",
+            "<strong>respond to call for tenders</strong> and strong <strong>modernization</strong> of Web technologies usages for the whole group (Sedona, West, RedShift et Inadeo brands)",
+            "<em>(from Dec. 2016)</em> develop, set-up and lead 3 projects, conducted by 6 teams (30 developers in total) as the <strong>referring Angular Architect</strong> for <em>Saint Gobain</em>",
           ],
         },
         {
           company: { name: "Française des Jeux" },
           jobTitle: "Lead Developer AngularJS",
-          startDate: "juin 2015",
-          endDate: "nov. 2015",
+          startDate: "June 2015",
+          endDate: "Nov. 2015",
           icon: "/images/web-illustrations/companies-logos/fdj.png",
-          details: `Développement des "widgets" de gestion de compte et de l'Euromillions en <strong>AngularJS 1.4 et ES2015</strong> pour le portail fdj.fr, au sein d'une équipe de 8 développeurs.`,
+          details: `Leading a team of 8 developers in charge of developing several <strong>AngularJS 1.4 et ES2015</strong> "widgets" providing user account management and the Euromillions game on fdj.fr`,
           shortLine: true,
         },
         {
           company: { name: "Freelance" },
-          jobTitle: "Formateur, Consultant",
-          startDate: "mai 2011",
-          endDate: "juin 2015",
+          jobTitle: "Teacher and Consultant",
+          startDate: "May 2011",
+          endDate: "June 2015",
           icon: "/images/web-illustrations/companies-logos/nmc.png",
           details: [
-            "<strong>38 formations</strong> délivrées en ligne et présentiel",
-            "<strong>3 applications</strong> Java (Spring, Struts, Hibernate) & Android développées",
+            "<strong>38 trainings</strong> conducted online and in-person",
+            "<strong>3 applications</strong> developped in Java (Spring, Struts, Hibernate) and with the Android SDK",
           ],
           shortLine: true,
         },
         {
           company: { name: "Supinfo" },
-          jobTitle: "Directeur de l'enseignement Unix",
-          startDate: "juin 2010",
-          endDate: "avril 2011",
+          jobTitle: "Unix Main Teacher",
+          startDate: "June 2010",
+          endDate: "April 2011",
           icon: "/images/web-illustrations/companies-logos/supinfo.jpg",
           details: [
-            "<strong>70 formateurs recrutés</strong> et formés pour l'enseignement de <strong>3 matières (Linux, Apple & Sécurité)</strong> sur les 30 sites du groupe à l'international",
-            "<strong>7 unités pédagogiques</strong> définies, rédigées et encadrées",
+            "<strong>recruiting, managing and training 70 teachers</strong> delivering trainings in <strong>3 areas (Linux, Apple & Sécurité)</strong> on the 30 international sites",
+            "<strong>7 teaching units</strong> defined, redacted and managed",
           ],
           shortLine: true,
         },
         {
           company: { name: "Supinfo" },
-          jobTitle: "Enseignant formateur",
-          startDate: "oct. 2009",
-          endDate: "juin 2010",
+          jobTitle: "Teacher",
+          startDate: "Oct. 2009",
+          endDate: "June 2010",
           icon: "/images/web-illustrations/companies-logos/supinfo.jpg",
           details:
-            "12 unités pégagogiques enseignées sur 18 sites dans 3 pays (+ DOM)",
+            "12 teaching units delivered on 18 sites in 3 countries (+ french overseas departments)",
           shortLine: true,
         },
       ],
@@ -260,7 +277,7 @@ const wording = {
     items: [
       {
         school: "Supinfo International University",
-        diploma: "Master's Degree of IT Engineering",
+        diploma: "Master's Degree in IT Engineering",
         year: "2010",
       },
       {
@@ -272,15 +289,47 @@ const wording = {
     ],
   },
   accomplishments: {
-    title: "Accomplishment",
+    title: "Accomplishments",
     groups: [
       {
         title: "Conferences",
         items: [
           {
-            headline: "Il était une fois... les navigateurs",
-            date: "2021",
+            headline: "Requiem for the Web",
+            date: "2022",
             links: [
+              {
+                // date: "30 juin 2022",
+                text: "SunnyTech",
+                href:
+                  "https://sunny-tech.io/schedule/2022-06-30?sessionId=PuYsiu2FRao8oBToZbo7",
+              },
+            ],
+          },
+          {
+            headline: "Care Bears II: Revenge of the Vengeance",
+            date: "2022",
+            links: [
+              {
+                text: "Le Camping des Speakers",
+                href:
+                  "https://camping-speakers.fr/sessions/comment_ne_pas_etre_un_c/",
+              },
+              {
+                text: "Codeurs en Seine",
+                href: "https://www.codeursenseine.com/2022/programme",
+              },
+            ],
+          },
+          {
+            headline: "Draw me like one of your web browsers",
+            date: "2021-2022",
+            links: [
+              {
+                // date: "2 juil. 2021",
+                text: "Riviera DEV",
+                href: "https://2021.rivieradev.fr/session/1029",
+              },
               {
                 // date: "10 sept. 2021",
                 text: "JUG SummerCamp",
@@ -288,9 +337,39 @@ const wording = {
                   "https://www.jugsummercamp.org/edition/12/presentations/zq4HdtYsZFbQghPedwLs",
               },
               {
-                // date: "2 juil. 2021",
-                text: "Riviera DEV",
-                href: "https://2021.rivieradev.fr/session/1029",
+                // date: "21 janv. 2022",
+                text: "Touraine Tech",
+                href: "https://2022.touraine.tech/talk/zq4HdtYsZFbQghPedwLs",
+              },
+              {
+                // date: "3 févr. 2022",
+                text: "Snowcamp (keynote d'ouverture)",
+                href:
+                  "https://snowcamp2022.sched.com/event/qa5F/il-etait-une-fois-les-navigateurs-nulb",
+              },
+              {
+                // date: "10 mars 2022",
+                text: "Université de Poitiers (master info-com)",
+              },
+              {
+                // date: "13 mai 2022",
+                text: "Devoxx UK",
+                href: "https://www.devoxx.co.uk/talk/?id=4955",
+              },
+              {
+                // date: "1 juillet 2022",
+                text: "SunnyTech",
+                href:
+                  "https://sunny-tech.io/schedule/2022-07-01?sessionId=zq4HdtYsZFbQghPedwLs",
+              },
+              {
+                // date: "30 sept. 2022",
+                text: "LunaConf",
+              },
+              {
+                // date: "14 oct. 2022",
+                text: "PHP Forum",
+                href: "https://event.afup.org/forum-php-2022/programme/#4041",
               },
             ],
           },
@@ -425,12 +504,12 @@ const wording = {
             date: "2018-2019",
             links: [
               {
-                text: "Angular 200 (référant)",
+                text: "Angular 200 (referring teacher)",
                 href:
                   "https://github.com/sfeir-open-source/sfeir-school-angular",
               },
               {
-                text: "PWA 200 (référant)",
+                text: "PWA 200 (referring teacher)",
                 href: "https://github.com/sfeir-open-source/sfeir-school-pwa",
               },
               {
@@ -448,13 +527,13 @@ const wording = {
           {
             headline: "Les briques du Web",
             // date: "depuis 2020",
-            context: "co-organisateur & chroniqueur",
+            context: "co-organizer & columnist",
             href: "https://rdv-speakers.fr/les-briques-du-web/",
           },
           {
             headline: "Rdv des speakers",
             // date: "depuis 2020",
-            context: `présentateur & contributeur`,
+            context: `prensenter & contributor`,
             href: "https://rdv-speakers.fr/",
           },
         ],
@@ -484,7 +563,7 @@ const wording = {
               "https://dev.to/open-wc/shared-behaviors-best-practices-with-mocha-519d",
           },
           {
-            headline: `Livre blanc "Progressive Web Apps"`,
+            headline: `"Progressive Web Apps" White Paper`,
             // date: "30 avril 2019",
             context: "SFEIR",
             href: "https://www.sfeir.com/fr/livre-blanc-progressive-web-app/",
@@ -497,7 +576,7 @@ const wording = {
               "https://medium.com/@noelm/angularconnect-2018-on-the-spot-92315b79af79",
           },
           {
-            headline: `Manuel de formation "Développement JQuery avancé"`,
+            headline: `"Advanced JQuery Development" training handbook`,
             date: "2013",
             context: "M2I",
           },
@@ -509,32 +588,32 @@ const wording = {
           {
             headline: "Daucus",
             // date: "depuis 2020",
-            context: "générateur moderne de ressources statiques",
+            context:
+              "Automate the generation of multiple static outputs from a unique source using the converters and formats of your choice.",
             href: "https://fullweb.dev/daucus/",
           },
           {
             headline: "Modern Helpers",
             // date: "depuis 2020",
-            context:
-              "helper functions pour le développement d'applications Web modernes",
+            context: "Simple helpers for modern web development.",
             href: "https://fullweb.dev/helpers/",
           },
           {
             headline: "Monocli",
             // date: "depuis 2020",
-            context: "Meta-CLI orientée monorepo",
+            context: "Monorepo-oriented meta-CLI",
             href: "https://github.com/noelmace/monocli",
           },
           {
             headline: "Angular, Angular CLI, ng-packagr & Nrwl/NX",
             date: "2016-2018",
-            context: "contributions régulières",
+            context: "regular contributions",
           },
           {
             headline:
               "ngrx, js-framework-benchmark, eslint, vuepress, deckdeckgo, etc.",
             // date: "depuis 2016",
-            context: "contributions ponctuelles",
+            context: "ponctual contributions",
           },
         ],
       },
@@ -543,12 +622,12 @@ const wording = {
   misc: {
     title: "Hobbies",
     content: [
-      "Logiciel Libre, Open Source & Ethical Source",
-      "Pédagogie et vulgarisation scientifique",
-      "Histoire des technologies et sociétés",
-      "Jeux de rôle & de société",
-      "Sciences naturelles, sociales, politiques et cognitives",
-      "Legos, maquettes, puzzles",
+      "FOSS Software, Open Source & Ethical Source",
+      "Pedagogy et Popular Science",
+      "History of technologies and society",
+      "Roleplay and cardboard games",
+      "Natural, Social, Political and Cognitive Sciences",
+      "Legos, models, puzzles",
     ],
   },
 };
