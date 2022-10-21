@@ -158,8 +158,11 @@ const wording = {
           startDate: "févr. 2022",
           endDate: "oct. 2022",
           jobTitle: "Head of DevRel",
-          details:
-            "Promotion de la privacy, encadrement et contribution au développement Web, Java et Scala, accompagnement client et rédaction de documentations",
+          details: [
+            "Promotion de la privacy",
+            "Encadrement et contribution au développement Web, Java et Scala",
+            "accompagnement client et rédaction de documentations",
+          ],
           icon: "/images/web-illustrations/companies-logos/blindnet.svg",
         },
         {
