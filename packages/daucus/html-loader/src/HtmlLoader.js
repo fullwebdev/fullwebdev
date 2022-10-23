@@ -134,7 +134,7 @@ export class HTMLLoaderElement extends HTMLElement {
       if (!res.ok) throw new Error(`(${href}) ${res.status}`);
       html = await res.text();
       isFetchOk = true;
-    } catch (err) {
+    } catch (/** @type {any} */ err) {
       if (this.fallback && shouldFallback) {
         return this._loadHTML(this.fallback, false);
       }

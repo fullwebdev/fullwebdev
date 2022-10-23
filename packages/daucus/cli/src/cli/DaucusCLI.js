@@ -10,7 +10,7 @@ export class DaucusCLI {
 
   /**
    * @param {string[]} argv
-   * @param {{ cwd?: string }} [options]
+   * @param {{ cwd?: string }} options
    */
   constructor(argv, { cwd } = {}) {
     const mainOptions = commandLineArgs(DaucusCLI.options, {
