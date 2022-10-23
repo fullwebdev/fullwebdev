@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.17](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.16...v1.0.0-beta.17) (2022-10-23)
+
+### Features
+
+- **website:** add CV pdf ([93a0b6e](https://github.com/fullwebdev/fullwebdev/commit/93a0b6e3960637e79efdb3973091b2cf2a582f16))
+
+### Bug Fixes
+
+- **daucus-typedoc-theme:** fixed peerDependencies ([7df25c5](https://github.com/fullwebdev/fullwebdev/commit/7df25c537f0e526394e733112ac58de31ab9cfbe))
+- **website:** hide footer in print version ([567f309](https://github.com/fullwebdev/fullwebdev/commit/567f3098c3fa0674cd05b437d6d2140e408770f9))
+- **website:** translation of my CV to english ([510fd99](https://github.com/fullwebdev/fullwebdev/commit/510fd9909bf03d8e99d1440bff9812aafa4785bf))
+- **website:** update CV content ([32024e5](https://github.com/fullwebdev/fullwebdev/commit/32024e5584bbaf5f2034d3870b11edbcdf4fd6e0))
+
 ## [1.0.0-beta.16](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.15...v1.0.0-beta.16) (2022-03-03)
 
 ### Features

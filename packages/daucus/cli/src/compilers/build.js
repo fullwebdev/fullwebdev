@@ -99,7 +99,7 @@ export async function compileFile(compiler, params) {
         return null;
       }
       return html;
-    } catch (e) {
+    } catch (/** @type {any} */ e) {
       console.warn(`failed conversion of ${filePath} to html:`);
       console.warn(e.message);
       return null;
