@@ -309,18 +309,18 @@
                 <div class="spinner__double-bounce1"></div>
                 <div class="spinner__double-bounce2"></div>
               </div>
+              <footer id="main-footer">
+                <div class="language-switch">
+                  {{#language.switch}}{{{language.switch}}}{{/language.switch}}
+                </div>
+                <div class="footer__license">
+                  {{#language.copyright}}{{{&language.copyright}}}{{/language.copyright}}
+                </div>
+              </footer>
             </div>
           </div>
         </main>
       </div>
-      <footer id="main-footer">
-        <div class="language-switch">
-          {{#language.switch}}{{{language.switch}}}{{/language.switch}}
-        </div>
-        <div class="footer__license">
-          {{#language.copyright}}{{{&language.copyright}}}{{/language.copyright}}
-        </div>
-      </footer>
     </div>
     <script type="module">
       import { App } from "/dist/app/index.js";
