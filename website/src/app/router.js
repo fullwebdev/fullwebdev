@@ -352,10 +352,6 @@ export class AppRouter extends AbstractRouter {
       this.navigate(this.currentPath, { skipLocationChange: true });
     });
 
-    this.addEventListener("navigation-start", () => {
-      this.outlet.staticContent("");
-    });
-
     /** @private @type {string | null} */
     this._currentDaucusProject = null;
 
@@ -383,23 +379,7 @@ export class AppRouter extends AbstractRouter {
       outlet.addEventListener("html-loaded", async () => {
         const { stylePage } = await import("./pages.js");
         stylePage(this.outlet);
-        window.scrollTo(0, 0);
-        const heading = outlet.querySelector("h1");
-        if (heading) {
-          heading.tabIndex = -1;
-          heading.focus();
-        }
-        if (this._scrollAnchor) {
-          const el = outlet.querySelector(`#${this._scrollAnchor}`);
-          if (el) {
-            // el.scrollIntoView({behavior: "smooth", block: "start"});
-            window.scrollTo({
-              // header (3.6rem x 16 -> px) + small margin
-              top: el.getBoundingClientRect().top - 75,
-              behavior: "smooth",
-            });
-          }
-        }
+        this.scrollView();
         this.dispatchEvent(new CustomEvent("route-loaded"));
       });
       outlet.addEventListener("html-loading-error", () => {
@@ -426,15 +406,45 @@ export class AppRouter extends AbstractRouter {
     return AppRouter.WORDINGS[this.preferredLanguage];
   }
 
+  scrollView() {
+    window.scrollTo(0, 0);
+    const heading = this.outlet.querySelector("h1");
+    if (heading) {
+      heading.tabIndex = -1;
+      heading.focus();
+    }
+    if (this._scrollAnchor) {
+      const el = this.outlet.querySelector(`#${this._scrollAnchor}`);
+      if (el) {
+        // el.scrollIntoView({behavior: "smooth", block: "start"});
+        window.scrollTo({
+          // header (3.6rem x 16 -> px) + small margin
+          top: el.getBoundingClientRect().top - 75,
+          behavior: "smooth",
+        });
+      }
+    }
+  }
+
   /**
    * @param {string} path
    * @param {NavigationOptions} [options]
    * @param {URLSearchParams} [params]
    * @param {string} [hash]
    *
-   * @returns {Promise<[path: string, options?: NavigationOptions] | null>}
+   * @returns {Promise<[path: string | null, options?: NavigationOptions] | null>}
    */
   async renderOrRedirect(path, options, params, hash) {
+    /** @private */
+    this._scrollAnchor = hash;
+
+    if (!path) {
+      this.scrollView();
+      return [null];
+    }
+
+    this.outlet.staticContent("");
+
     const langMatchInPath = /^\/(en|fr)(\/.*)?/.exec(path);
     if (!langMatchInPath) {
       return [`/${this.preferredLanguage}${path}`, { ...options }];
@@ -458,9 +468,6 @@ export class AppRouter extends AbstractRouter {
       // Warning: don't wait for promise for better performance
       routeCallback();
     }
-
-    /** @private */
-    this._scrollAnchor = hash;
 
     if (redirection) {
       return [redirection, { ...options, redirection: true }];
