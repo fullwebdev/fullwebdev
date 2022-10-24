@@ -17,11 +17,11 @@ export interface I18NRouteMatch extends RouteMatch {
 /**
  * Match a path with a Daucus route
  */
-export type FindRouteFn = (path: string) => RouteMatch;
+export type FindRouteFn = (path: string | null) => RouteMatch;
 /**
  * Match a path with a Daucus route (when the i18n option was set to true)
  */
 export type FindI18NRouteFn = (
-  path: string,
+  path: string | null,
   lang: LanguageCodeOrDefault
 ) => I18NRouteMatch;

@@ -9,6 +9,12 @@
  * @typedef {import('@daucus/core').ProjectRoutesConfig} ProjectRoutesConfig
  */
 
+/** @type {RouteMatch} */
+export const NO_ROUTE_FOUND = { projectName: "", route: null };
+
+/** @type {import('./find-route').I18NRouteMatch} */
+export const NO_I18N_ROUTE_FOUND = { projectName: "", route: null, lang: "" };
+
 /**
  * @param {string} path
  */
@@ -49,7 +55,9 @@ function findRoute(routes, paths) {
 export const routeFinder = (routes) => {
   const projectsNames = Object.keys(routes);
 
-  return (/** @type {string} */ path) => {
+  return (/** @type {string | null} */ path) => {
+    if (path === null) return NO_ROUTE_FOUND;
+
     const { projectName, paths } = parsePath(path);
 
     if (!projectsNames.includes(projectName)) return { projectName };
@@ -72,9 +80,11 @@ export const i18nRouteFinder = (routes) => {
   const projectsNames = Object.keys(routes);
 
   return (
-    /** @type {string} */ path,
+    /** @type {string | null} */ path,
     /** @type {LanguageCodeOrDefault} */ lang
   ) => {
+    if (path === null) return NO_I18N_ROUTE_FOUND;
+
     const { projectName, paths } = parsePath(path);
 
     if (!projectsNames.includes(projectName)) return { projectName, lang };
