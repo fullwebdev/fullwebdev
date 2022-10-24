@@ -62,7 +62,8 @@ body {
   padding: 2rem 1rem;
   position: absolute;
   bottom: 0;
-  width: calc(100% - 2rem);
+  width: 100%;
+  box-sizing: border-box;
   font-size: 15px;
 }
 

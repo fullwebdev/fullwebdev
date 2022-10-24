@@ -87,11 +87,9 @@
   max-height: calc(100vh - 6rem - 135px);
 }
 
-/* 936px (max-with of #page-container) + 2 * (250px (width of #daucus-menu) + 3rem (padding)) */
-@media screen and (min-width: 1533px) {
-  #standard-menu {
-    padding-left: 0;
-  }
+.daucus-page ~ #main-footer {
+  /* full width - standard menu */
+  width: calc(100vw - 250px - 3rem);
 }
 
 /*#endregion content */
