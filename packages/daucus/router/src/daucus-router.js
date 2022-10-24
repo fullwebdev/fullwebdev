@@ -83,7 +83,7 @@ export class DaucusRouter extends AbstractRouter {
 
   /**
    * @internal
-   * @param {string} path
+   * @param {string | null} path
    * @param {import("@modern-helpers/router").NavigationOptions} [options]
    * @param {URLSearchParams} [params]
    * @param {string} [hash]

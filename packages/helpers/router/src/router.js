@@ -21,6 +21,13 @@ function baseHRef() {
  * @param {boolean} mergeWithLocationSearch
  */
 function pathToURL(initialPath, mergeWithLocationSearch) {
+  if (initialPath.startsWith("#")) {
+    return {
+      path: null,
+      searchParams: new URLSearchParams(),
+      hash: initialPath,
+    };
+  }
   const url = new URL(initialPath, window.location.origin);
   if (mergeWithLocationSearch && window.location.search) {
     url.search = new URLSearchParams({
@@ -91,7 +98,7 @@ export class AbstractRouter extends EventTarget {
       searchParams,
       hash.replace(/^#/, "")
     );
-    if (newRoute && newRoute[0] !== path) {
+    if (newRoute && newRoute[0] !== path && newRoute[0] !== null) {
       /**
        * @type {import('./navigation').RedirectionEventDetail}
        */
@@ -115,16 +122,18 @@ export class AbstractRouter extends EventTarget {
     }
     this._redirectionCount = 0;
 
-    const newURL =
-      this.base +
-      path +
-      (searchParams.entries.length > 0 ? searchParams.toString() : "") +
-      (hash || "");
+    if (!newRoute || newRoute[0] !== null) {
+      const newURL =
+        this.base +
+        path +
+        (searchParams.entries.length > 0 ? searchParams.toString() : "") +
+        (hash || "");
 
-    if (options.redirection) {
-      window.history.replaceState(options.state, "", newURL);
-    } else if (!options.skipLocationChange) {
-      window.history.pushState(options.state, "", newURL);
+      if (options.redirection) {
+        window.history.replaceState(options.state, "", newURL);
+      } else if (!options.skipLocationChange) {
+        window.history.pushState(options.state, "", newURL);
+      }
     }
 
     /**
@@ -193,7 +202,7 @@ export class AbstractRouter extends EventTarget {
    *
    * SHOULD BE OVERRIDEN in your own Router class!
    *
-   * @param {string} path navigation path
+   * @param {string | null} path navigation path
    * @param {NavigationOptions} options navigation options
    * @param {URLSearchParams | null} [params] get parameters
    * @param {string} [hash] fragment identifier (without '#')
