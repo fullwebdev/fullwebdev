@@ -126,7 +126,8 @@ export function rewriteHTMLLinks(html, projectName, routePath) {
         href &&
         !isAbsoluteUrl(href) &&
         !href.startsWith(projectName) &&
-        !href.startsWith("/")
+        !href.startsWith("/") &&
+        !href.startsWith("#")
       ) {
         newHref = posixVPath.removePrefixes(
           posixVPath
