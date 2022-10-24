@@ -6,6 +6,27 @@
     <base href="/" />
     <title>fullweb.dev</title>
 
+    <script>
+      if (
+        window.matchMedia("(prefers-color-scheme: dark)").media === "not all"
+      ) {
+        document.documentElement.style.display = "none";
+        document.head.insertAdjacentHTML(
+          "beforeend",
+          '<link rel="stylesheet" href="/styles/light-theme.css" onload="document.documentElement.style.display = \'\'">'
+        );
+      }
+    </script>
+    <link
+      rel="stylesheet"
+      href="/styles/dark-theme.css"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="stylesheet"
+      href="/styles/light-theme.css"
+      media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)"
+    />
     <style>
       {{{css.shell}}}
     </style>
@@ -44,6 +65,7 @@
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <link rel="preconnect" href="https://mirrors.creativecommons.org" />
+    <link rel="preconnect" href="https://unpkg.com" />
 
     <link rel="manifest" href="/manifest.json" />
     <link
@@ -53,6 +75,10 @@
     />
     <meta property="og:site_name" content="fullweb.dev" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="" />
+
+    <script defer type="module" src="/dist/app/color-theme.js"></script>
+
     <!-- meta-tags:start -->
     <meta property="og:title" content="fullweb.dev" />
     <meta name="description" content="{{meta.description}}" />
@@ -114,6 +140,11 @@
           </div>
 
           <div class="external-icons">
+            <dark-mode-toggle
+              light="Light Theme"
+              dark="Dark Theme"
+            ></dark-mode-toggle>
+
             <hr class="mdc-list-divider" />
             <a
               class="mdc-list-item"
@@ -211,6 +242,7 @@
               >
             </div>
             <div class="external-icons-container">
+              <dark-mode-toggle></dark-mode-toggle>
               <a
                 class="icon"
                 href="https://twitter.com/noel_mace"
