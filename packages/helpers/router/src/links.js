@@ -57,13 +57,17 @@ export const clickEventHandler = (/** @type {string} */ baseUrl) => (
   if (`${baseUrl}${fullHref}` !== window.location.href) {
     let path = "";
     const url = new URL(fullHref);
-
+    // eslint-disable-next-line prefer-destructuring
+    let href = hrefAttr;
     if (hrefAttr.startsWith("./")) {
       const previousPath = window.location.pathname
         .replace(new RegExp(`^${baseUrl}(.*)`), "$1")
         .replace(/(.*)\/$/, "$1");
-      path = previousPath + hrefAttr.slice(1);
-    } else {
+      [href] = hrefAttr.split("#");
+      path = previousPath + href.slice(1);
+
+      // pathname == "/" for URLs with only an anchor
+    } else if (!hrefAttr.startsWith("#")) {
       path = url.pathname;
     }
 

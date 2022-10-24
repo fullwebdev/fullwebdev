@@ -21,6 +21,9 @@ function baseHRef() {
  * @param {boolean} mergeWithLocationSearch
  */
 function pathToURL(initialPath, mergeWithLocationSearch) {
+  if (initialPath.startsWith("#")) {
+    return { path: "", searchParams: new URLSearchParams(), hash: initialPath };
+  }
   const url = new URL(initialPath, window.location.origin);
   if (mergeWithLocationSearch && window.location.search) {
     url.search = new URLSearchParams({
