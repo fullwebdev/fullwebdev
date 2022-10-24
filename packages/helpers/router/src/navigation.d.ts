@@ -24,7 +24,7 @@ export interface NavigationOptions {
 }
 
 export interface NavigationEventDetail {
-  path: string;
+  path: string | null;
   options: NavigationOptions;
 }
 
