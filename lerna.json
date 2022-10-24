@@ -5,6 +5,7 @@
     "materials/codelabs",
     "materials/illustrations",
     "materials/perf",
+    "materials/slides/*",
     "packages/helpers",
     "packages/helpers/el",
     "packages/helpers/router",
