@@ -87,7 +87,6 @@ async function run() {
 
       return Promise.all(
         files.map(async (file) => {
-          console.log(file);
           const content = await asyncFs.readFile(file, { encoding: "utf-8" });
           const minifiedContent = minify(content);
           await asyncFs.writeFile(file, minifiedContent, { encoding: "utf-8" });
