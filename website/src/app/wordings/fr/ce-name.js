@@ -2,14 +2,17 @@
 const wording = {
   title: "Nommer un élément personnalisé",
   intro: /* HTML */ `<blockquote>
-      Vous pouvez reproduire les tests suivants via le paquet npm
-      <a
-        href="https://www.npmjs.com/package/custom-element-name"
-        target="_blank"
-        rel="noopener noreferrer"
-        >custom-element-name</a
-      >. Rendez-vous sur la <a href="/custom-element-name">documentation</a> de
-      ce paquet pour plus d'informations.
+      <p>
+        Vous pouvez reproduire les tests suivants via le paquet npm
+        <a
+          href="https://www.npmjs.com/package/custom-element-name"
+          target="_blank"
+          rel="noopener noreferrer"
+          >custom-element-name</a
+        >. Rendez-vous sur la
+        <a href="/custom-element-name">documentation</a> de ce paquet pour plus
+        d'informations.
+      </p>
     </blockquote>
     <p>Le nom d'un élément personnalisé doit :</p>
     <ul>
