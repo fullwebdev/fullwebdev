@@ -144,6 +144,10 @@ const timelineStyle = css`
     box-sizing: border-box;
   }
 
+  .light-icon {
+    filter: invert(var(--light-item-inversion, 0));
+  }
+
   .timeline {
     display: flex;
     flex-direction: column;
@@ -212,7 +216,6 @@ const timelineStyle = css`
   }
   .timeline__event__content {
     padding: 0.7rem 1rem 0.5rem 1rem;
-    background: #fff;
     border-radius: 0 6px 6px 0;
     flex-grow: 1;
     border: 1px solid var(--primary-color);
@@ -711,8 +714,11 @@ export default class NMACVElement extends LitElementWithCVNMAWording {
                           rel="noreferrer noopener"
                           class="invisible-link"
                           ><li class="networks__item">
-                            <img src=${item.icon} alt=${item.alt} /><span
-                              class="networks__item__content"
+                            <img
+                              src=${item.icon}
+                              alt=${item.alt}
+                              class="light-icon"
+                            /><span class="networks__item__content"
                               >${item.text}</span
                             >
                           </li></a
@@ -740,7 +746,7 @@ export default class NMACVElement extends LitElementWithCVNMAWording {
             ({ title, content, icon }) => html` <div class="cv__intro__item">
               <div class="cv__intro__item__header">
                 <div class="icon-container">
-                  <img class="icon" src=${icon.src} alt="" />
+                  <img class="icon light-icon" src=${icon.src} alt="" />
                 </div>
                 <div class="title-container">
                   <div class="category">${icon.caption}</div>

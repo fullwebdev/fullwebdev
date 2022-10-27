@@ -22,5 +22,6 @@ html {
   --soft-bg-color: var(--neutral-color-100);
   --stronger-bg-color: var(--neutral-color-300);
   --daucus-menu-active-color: var(--primary-color);
+  --light-item-inversion: 0;
   font-size: 16px;
 }
