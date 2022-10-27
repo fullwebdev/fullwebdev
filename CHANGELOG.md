@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.18](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.17...v1.0.0-beta.18) (2022-10-27)
+
+### Features
+
+- **helpers-router:** null route path ([ee0a9d7](https://github.com/fullwebdev/fullwebdev/commit/ee0a9d7dcdf60352ba91979e04817c9008d1748d))
+- **website:** dark mode ([a299fbe](https://github.com/fullwebdev/fullwebdev/commit/a299fbeca6b1bb379537defc9dc477db5fea4ff6))
+
+### Bug Fixes
+
+- **daucus-cli:** keep anchor links as is ([94bb414](https://github.com/fullwebdev/fullwebdev/commit/94bb414e21e07044ea0087b91df0cf91a7ab391d)), closes [#116](https://github.com/fullwebdev/fullwebdev/issues/116)
+- **helpers-router:** handle anchor links ([90fd6a4](https://github.com/fullwebdev/fullwebdev/commit/90fd6a4fbac23695b056d11fb2ceebd1c8b10284))
+- **website:** anchor links ([baa8a85](https://github.com/fullwebdev/fullwebdev/commit/baa8a8570f3a732de715db1cc478deaca6989f56))
+- **website:** ce-name dark mode ([abe3320](https://github.com/fullwebdev/fullwebdev/commit/abe3320e0bbd6b4e18e8e9864a958c409f63ecb1))
+- **website:** CV dark theme ([bb1eb8d](https://github.com/fullwebdev/fullwebdev/commit/bb1eb8d0f06e120792b0d5b2c7619f6f5a3f5e4b))
+- **website:** move footer to main content ([45c9b1a](https://github.com/fullwebdev/fullwebdev/commit/45c9b1a1fdc799a796d3f523ae28d0b566f4af0b)), closes [#122](https://github.com/fullwebdev/fullwebdev/issues/122)
+
 ## [1.0.0-beta.17](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.16...v1.0.0-beta.17) (2022-10-23)
 
 ### Features
