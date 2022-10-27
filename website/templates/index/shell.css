@@ -1,32 +1,5 @@
 /*#region root*/
 
-html {
-  --primary-text-color: #444;
-  --primary-text-color-stronger: #333;
-  --primary-text-color-softer: #555;
-  --primary-bg-color: white;
-  --primary-color: #002d61;
-  --primary-color-stronger: #00152e;
-  --primary-color-softer: #004594;
-  --link-color: #004594;
-  --mdc-theme-primary: var(--primary-color);
-  --neutral-color-900: #212121;
-  --neutral-color-800: #424242;
-  --neutral-color-700: #616161;
-  --neutral-color-600: #757575;
-  --neutral-color-500: #9e9e9e;
-  --neutral-color-400: #bdbdbd;
-  --neutral-color-300: #e0e0e0;
-  --neutral-color-200: #eee;
-  --neutral-color-100: #f5f5f5;
-  --neutral-color-50: #fafafa;
-  --neutral-color-0: #fff;
-  --soft-bg-color: var(--neutral-color-100);
-  --stronger-bg-color: var(--neutral-color-300);
-  --daucus-menu-active-color: var(--primary-color);
-  font-size: 16px;
-}
-
 /* :focus {
   outline: 1px dashed var(--primary-color, #555);
 } */
@@ -57,12 +30,12 @@ body {
 
 #main-footer {
   background-color: var(--soft-bg-color);
-  border-top: 1px solid #eaeaea;
   text-align: center;
   padding: 2rem 1rem;
   position: absolute;
   bottom: 0;
-  width: calc(100% - 2rem);
+  width: 100%;
+  box-sizing: border-box;
   font-size: 15px;
 }
 
@@ -211,6 +184,7 @@ h2 {
   flex-direction: row;
   flex-shrink: 0;
   flex-grow: 0;
+  align-items: center;
 }
 
 #main-header .external-icons-container a {

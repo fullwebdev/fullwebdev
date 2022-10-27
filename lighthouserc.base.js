@@ -14,7 +14,8 @@ module.exports = {
       assertions: {
         "external-anchors-use-rel-noopener": "warn",
         // stylesheet tags wich "Does not have a media attribute that matches the user's device"
-        "render-blocking-resources": ["error", { maxLength: 2 }],
+        // conditionnal dark/light theme + shell (small and xsmall) styles
+        "render-blocking-resources": ["error", { maxLength: 3 }],
         // TODO: (Lit 2.0) use a div instead of an anchor for projectCard when href is falsy
         "crawlable-anchors": "warn",
         // @material/drawer.js

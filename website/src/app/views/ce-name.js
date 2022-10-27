@@ -169,8 +169,12 @@ export default class CENameView extends LitElementWithCeNameWording {
       }
 
       blockquote {
-        background-color: #f3f5f7;
-        padding: 1.5rem;
+        background-color: var(--soft-bg-color);
+        border-color: #42b983;
+        padding: 0.1rem 1.5rem;
+        border-left-width: 0.5rem;
+        border-left-style: solid;
+        margin: 1rem 0;
       }
     `;
   }

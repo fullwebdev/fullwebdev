@@ -42,8 +42,11 @@ export class AppShell {
       }, 200);
     });
 
-    router.addEventListener("route-loaded", () => {
+    router.addEventListener("navigation-end", () => {
       this.querySelector("#page-spinner").classList.remove("active", "pending");
+    });
+
+    router.addEventListener("route-loaded", () => {
       this.querySelector("#edit-page-button").classList.remove("hidden");
     });
 
