@@ -173,7 +173,7 @@ dark-mode-toggle {
   display: inline-block;
 }
 
-.home::after {
+/* .home::after {
   content: "βeta";
   transform: rotate(-25deg);
   padding-left: 0.5rem;
@@ -181,7 +181,7 @@ dark-mode-toggle {
   display: inline-block;
   font-size: 1rem;
   color: var(--primary-color-softer);
-}
+} */
 
 #main-header .external-icons-container {
   display: flex;
