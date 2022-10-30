@@ -165,7 +165,7 @@ const wording = {
             name: "Editions ENI",
             details: "IT specialized french publisher",
           },
-          jobTitle: "Autor",
+          jobTitle: "Author",
           startDate: "March 2020",
           endDate: "March 2021",
           icon: "/images/web-illustrations/companies-logos/eni.svg",
