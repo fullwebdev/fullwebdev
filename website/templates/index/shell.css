@@ -90,6 +90,10 @@ h2 {
   height: 24px;
 }
 
+dark-mode-toggle {
+  --dark-mode-toggle-icon-size: 24px;
+}
+
 .call-to-action {
   padding: 0.8rem 34px;
   font-weight: 600;
