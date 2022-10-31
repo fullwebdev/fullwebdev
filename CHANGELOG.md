@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.18...v1.0.0) (2022-10-31)
+
+### Bug Fixes
+
+- **website:** clearer style for project cards ([020845c](https://github.com/fullwebdev/fullwebdev/commit/020845ca69f1533900aa469f91b718245bc573ac))
+- **website:** dark mode toggle icon size ([d27542b](https://github.com/fullwebdev/fullwebdev/commit/d27542bfd4f0864cb987b0058dc7692a6087eecb))
+- **website:** missing link to english resume ([0ffde71](https://github.com/fullwebdev/fullwebdev/commit/0ffde71d0831fcdfbd2c05c97fff4c6f51f74543))
+- **website:** remove beta label ([ce5ee9e](https://github.com/fullwebdev/fullwebdev/commit/ce5ee9ef2db82c165aeba87f4b193f1c8274a99a))
+- **website:** typo in CV ([40e332c](https://github.com/fullwebdev/fullwebdev/commit/40e332cc30df3ecfcb8b874cbfc45e081130c81c))
+
 ## [1.0.0-beta.18](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.17...v1.0.0-beta.18) (2022-10-27)
 
 ### Features
