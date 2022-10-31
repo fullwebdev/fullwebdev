@@ -10,7 +10,7 @@ sequenceDiagram
   S-->>N: index.html
   activate N
     Note left of N: Analyse de l'HTML
-    N->>N: &lt;script src="app.js"&gt;
+    N->>N: <script src="app.js">
     N->>S: GET app.js
     S-->>N: app.js
     N-->>U: rendu de l'accueil
