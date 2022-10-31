@@ -23,5 +23,6 @@ html {
   --stronger-bg-color: var(--neutral-color-300);
   --daucus-menu-active-color: var(--primary-color);
   --light-item-inversion: 0;
+  --negative-rgb: 0, 0, 0;
   font-size: 16px;
 }
