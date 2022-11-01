@@ -129,6 +129,7 @@ export default class ProjectsListElement extends LitElementWithProjectListWordin
         text-decoration: none;
         padding: 2rem;
         border-radius: 5px;
+        border: 1px solid var(--neutral-color-200);
       }
 
       .bg-card {
@@ -163,8 +164,9 @@ export default class ProjectsListElement extends LitElementWithProjectListWordin
       }
 
       .project-card[href]:hover {
-        box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
-          0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 2px 4px -1px rgba(var(--negative-rgb), 0.2),
+          0 4px 5px 0 rgba(var(--negative-rgb), 0.14),
+          0 1px 10px 0 rgba(var(--negative-rgb), 0.12);
       }
 
       .project-card:only-child {
@@ -338,7 +340,7 @@ export default class ProjectsListElement extends LitElementWithProjectListWordin
         }
         .grid {
           grid-template-columns: 1fr 1fr 1fr;
-          grid-gap: 4rem;
+          grid-gap: 2rem;
         }
       }
 

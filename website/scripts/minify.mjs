@@ -112,7 +112,6 @@ async function run() {
 
   Promise.all(
     imgs.map(async ({ sourcePath, data }) => {
-      console.log(sourcePath);
       await asyncFs.writeFile(sourcePath, data);
     })
   );

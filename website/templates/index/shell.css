@@ -90,6 +90,10 @@ h2 {
   height: 24px;
 }
 
+dark-mode-toggle {
+  --dark-mode-toggle-icon-size: 24px;
+}
+
 .call-to-action {
   padding: 0.8rem 34px;
   font-weight: 600;
@@ -169,7 +173,7 @@ h2 {
   display: inline-block;
 }
 
-.home::after {
+/* .home::after {
   content: "βeta";
   transform: rotate(-25deg);
   padding-left: 0.5rem;
@@ -177,7 +181,7 @@ h2 {
   display: inline-block;
   font-size: 1rem;
   color: var(--primary-color-softer);
-}
+} */
 
 #main-header .external-icons-container {
   display: flex;
