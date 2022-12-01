@@ -65,4 +65,22 @@ export const dirs = [
       },
     },
   ],
+  [
+    "/cv/nma",
+    {
+      default: {
+        "og:title": "Noël Macé • CV",
+        "og:image": "https://fullweb.dev/images/resume-banner-fr.jpg",
+        "twitter:image:alt": "Noël Macé - Développeur / Architecte Web Senior",
+      },
+      fr: {
+        "og:description": "Curriculum Vitae de Noël Macé",
+      },
+      en: {
+        "og:description": "Noël Macé's resume",
+        "og:image": "https://fullweb.dev/images/resume-banner-en.jpg",
+        "twitter:image:alt": "Noël Macé - Senior Web Developer/Architect",
+      },
+    },
+  ],
 ];
