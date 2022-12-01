@@ -99,9 +99,14 @@ export const httpRequestHandler = functions.https.onRequest(
     let indexHTML = INDEX_TEMPLATE;
 
     if (isBot(request.headers["user-agent"]) && route) {
+      const newMetas = metasForRoute(route);
       indexHTML = indexHTML.replace(
         /<!-- meta-tags:start -->[\s\S]*<!-- meta-tags:end -->/,
-        metasForRoute(route)
+        newMetas
+      );
+      // eslint-disable-next-line no-console
+      console.log(
+        `[rewrite] path: ${reqPath}, metas: ${JSON.stringify(newMetas)}`
       );
     }
 
