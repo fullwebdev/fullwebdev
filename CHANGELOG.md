@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0...v1.0.1) (2022-12-02)
+
+### Bug Fixes
+
+- **website:** firebase function log ([cd27101](https://github.com/fullwebdev/fullwebdev/commit/cd271018f154bb600462e538ab4aba5a0a84b733))
+- **website:** missing social meta tags for /cv ([538a79f](https://github.com/fullwebdev/fullwebdev/commit/538a79f5c13c7aa021b4d9bcf5344e0f9410116c))
+
 ## [1.0.0](https://github.com/fullwebdev/fullwebdev/compare/v1.0.0-beta.18...v1.0.0) (2022-10-31)
 
 ### Bug Fixes

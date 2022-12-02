@@ -1,4 +1,7 @@
 import functions from "firebase-functions";
+// eslint-disable-next-line import/no-unresolved
+import logger from "firebase-functions/logger";
+
 import * as fs from "fs";
 import * as path from "path";
 import { fileURLToPath } from "url";
@@ -99,10 +102,13 @@ export const httpRequestHandler = functions.https.onRequest(
     let indexHTML = INDEX_TEMPLATE;
 
     if (isBot(request.headers["user-agent"]) && route) {
+      const newMetas = metasForRoute(route);
       indexHTML = indexHTML.replace(
         /<!-- meta-tags:start -->[\s\S]*<!-- meta-tags:end -->/,
-        metasForRoute(route)
+        newMetas
       );
+      // eslint-disable-next-line no-console
+      logger.info(`rewrite ${reqPath} metas`, newMetas);
     }
 
     // caching
