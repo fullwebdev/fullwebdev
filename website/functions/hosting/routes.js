@@ -66,7 +66,7 @@ export const dirs = [
     },
   ],
   [
-    "/cv/nma",
+    "/cv",
     {
       default: {
         "og:title": "Noël Macé • CV",
