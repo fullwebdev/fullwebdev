@@ -1,4 +1,7 @@
 import functions from "firebase-functions";
+// eslint-disable-next-line import/no-unresolved
+import logger from "firebase-functions/logger";
+
 import * as fs from "fs";
 import * as path from "path";
 import { fileURLToPath } from "url";
@@ -105,9 +108,7 @@ export const httpRequestHandler = functions.https.onRequest(
         newMetas
       );
       // eslint-disable-next-line no-console
-      console.log(
-        `[rewrite] path: ${reqPath}, metas: ${JSON.stringify(newMetas)}`
-      );
+      logger.info(`rewrite ${reqPath} metas`, newMetas);
     }
 
     // caching
