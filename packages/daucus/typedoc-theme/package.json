@@ -16,7 +16,7 @@
   },
   "homepage": "https://fullweb.dev/daucus/typedoc-theme",
   "scripts": {
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "yarn run build",
     "build": "rimraf ./dist && tsc"
   },
   "author": {

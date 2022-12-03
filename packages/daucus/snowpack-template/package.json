@@ -2,12 +2,11 @@
   "name": "@daucus/snowpack-template",
   "version": "0.4.0",
   "scripts": {
-    "start": "concurrently npm:start:daucus npm:start:server",
+    "start": "yarn run build:daucus && concurrently npm:start:daucus npm:start:server",
     "start:server": "snowpack dev",
     "start:daucus": "daucus watch",
     "build": "snowpack build",
-    "prestart": "npm run prebuild",
-    "prebuild": "daucus build",
+    "build:daucus": "daucus build",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
     "format": "prettier --write \"src/**/*.js\"",
     "lint": "prettier --check \"src/**/*.js\""

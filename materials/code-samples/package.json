@@ -10,7 +10,7 @@
     "test:jest": "jest -c tests/config/jest.config.js",
     "test:chai": "karma start --coverage",
     "test:watch:chai": "karma start --auto-watch=true --single-run=false",
-    "e2e": "npm run e2e:jest",
+    "e2e": "yarn run e2e:jest",
     "e2e:jest": "jest -c tests/config/jest-puppeteer.config.js",
     "e2e:watch:jest": "jest -c tests/config/jest-puppeteer.config.js --watch",
     "build:index": "bash scripts/readme.sh",

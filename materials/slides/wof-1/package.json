@@ -9,8 +9,8 @@
     "test": "grunt test",
     "start": "grunt serve",
     "build": "rimraf dist && mkdirp dist && copyup -a \"snapshot/**/*\" dist",
-    "rebuild": "grunt",
-    "postrebuild": "rimraf snapshot && mkdirp snapshot && copyup -a \"dist/**/*\" snapshot/ && npm run build"
+    "rebuild": "grunt && yarn run clean-after-rebuild",
+    "clean-after-rebuild": "rimraf snapshot && mkdirp snapshot && copyup -a \"dist/**/*\" snapshot/ && yarn run build"
   },
   "author": {
     "name": "Noël Macé",

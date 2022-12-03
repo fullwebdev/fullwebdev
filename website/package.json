@@ -5,13 +5,12 @@
   "scripts": {
     "build:daucus": "daucus build",
     "build:templates": "node ./templates/build.mjs",
-    "prebuild": "npm run build:daucus && npm run build:templates && npm run build:sass",
-    "build": "snowpack build --reload",
-    "prestart": "npm run prebuild",
-    "start": "concurrently \"npm:start:daucus\" \"snowpack dev --reload\"",
+    "build": "yarn run prepare-build && yarn run build:snowpack && yarn run minify && yarn run build:functions",
+    "prepare-build": "yarn run build:daucus && yarn run build:templates && yarn run build:sass",
+    "build:snowpack": "snowpack build --reload",
+    "start": "yarn run prebuild && concurrently \"yarn start:daucus\" \"snowpack dev --reload\"",
     "start:daucus": "daucus watch",
     "build:sass": "sass src/styles/:public/styles/build/ --load-path=node_modules",
-    "postbuild": "npm run minify && npm run build:functions",
     "build:functions": "node ./scripts/fn-assets.mjs",
     "minify": "node ./scripts/minify.mjs",
     "test:app": "web-test-runner"
