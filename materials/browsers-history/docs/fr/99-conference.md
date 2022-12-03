@@ -477,8 +477,8 @@ SI :white_check_mark: (Conpaq) :arrow_right: prix & support au TOP\
 SINON :x: (IBM) :arrow_right: :sob:
 
 sortie IE 1 (= spyglass) **aout**\
-:arrow*right: vente liée Win + IE\
-\_pas un produit, feature* :laughing:\
+➡️ vente liée Win + IE\
+_pas un produit, feature_ :laughing:\
 même si Microsoft Plus! (vendu à part)
 
 :two: vengeance : Mac (IE 2, **nov**)
@@ -566,8 +566,8 @@ Phoenix :arrow_right: Firebird
 **2004** : Firebird :arrow_right: Firefox \
 9 nov : v1.0 :tada:
 
-**2005** : 1u/10 IE :arrow*right: Firefox\
-\_MAIS* ↘️ 2006
+**2005** : 1u/10 IE :arrow\*right: Firefox\
+_MAIS_ ↘️ 2006
 
 _MAIS_ **2003**: màj IE ⬅️ Windows
 
