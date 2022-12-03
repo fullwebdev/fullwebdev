@@ -14,10 +14,10 @@
   },
   "references": [
     {
-      "path": "../../helpers/router/tsconfig.json"
+      "path": "../../daucus/core/tsconfig.json"
     },
     {
-      "path": "../../daucus/core/tsconfig.json"
+      "path": "../../helpers/router/tsconfig.json"
     }
   ],
   "include": ["src", "*.js"],
