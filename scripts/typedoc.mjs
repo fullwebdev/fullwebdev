@@ -4,6 +4,8 @@ import { fileURLToPath } from "url";
 import fs from "fs";
 import ts from "typescript";
 import { packages as packagesConfig } from "../workspace-packages.mjs";
+// eslint-disable-next-line import/no-relative-packages
+import { DaucusMarkdownTheme } from "../packages/daucus/typedoc-theme/dist/theme.js"
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -76,6 +78,9 @@ packages.forEach(async ({ root }, name) => {
     console.error(`can't find ${path.relative(process.cwd(), index)}`);
   }
 
+  const theme = "daucus"
+  app.renderer.defineTheme(theme, DaucusMarkdownTheme);
+
   app.bootstrap({
     excludeExternals: true,
     // excludeNotDocumented: true,
@@ -90,30 +95,14 @@ packages.forEach(async ({ root }, name) => {
       "API"
     )}/`,
     tsconfig,
-    theme: path.join(
-      __dirname,
-      "..",
-      "packages",
-      "daucus",
-      "typedoc-theme",
-      "dist"
-    ),
+    theme,
     readme: "none",
     plugin: "typedoc-plugin-markdown",
     name: "API",
     namedAnchors: true,
   });
 
-  const program = ts.createProgram(
-    app.options.getFileNames(),
-    app.options.getCompilerOptions()
-  );
-
-  const project = app.converter.convert(
-    app.expandInputFiles(app.options.getValue("entryPoints")),
-    program
-  );
-
+  const project = app.convert();
   const outDir = path.join(root, "API");
 
   if (fs.existsSync(outDir)) {
