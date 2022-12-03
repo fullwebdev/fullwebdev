@@ -97,7 +97,7 @@
     "commit": "commit"
   },
   "dependencies": {
-    "@daucus/typedoc-theme": "file:packages/daucus/typedoc-theme",
+    "@daucus/typedoc-theme": "workspace:*",
     "deepmerge": "^4.2.2"
   },
   "devDependencies": {
@@ -105,7 +105,7 @@
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
     "@commitlint/prompt-cli": "^17.3.0",
-    "@daucus/pandoc": "./packages/daucus/pandoc/",
+    "@daucus/pandoc": "workspace:*",
     "@lhci/cli": "~0.10.0",
     "@modern-helpers/router": "*",
     "@monocli/cli": "^0.5.0",

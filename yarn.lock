@@ -1722,22 +1722,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@daucus/pandoc@*, @daucus/pandoc@workspace:packages/daucus/pandoc, @daucus/pandoc@~0.4.0":
+"@daucus/pandoc@*, @daucus/pandoc@workspace:*, @daucus/pandoc@workspace:packages/daucus/pandoc, @daucus/pandoc@~0.4.0":
   version: 0.0.0-use.local
   resolution: "@daucus/pandoc@workspace:packages/daucus/pandoc"
   dependencies:
     download: ^8.0.0
   languageName: unknown
   linkType: soft
-
-"@daucus/pandoc@file:./packages/daucus/pandoc/::locator=fullwebdev%40workspace%3A.":
-  version: 0.4.0
-  resolution: "@daucus/pandoc@file:./packages/daucus/pandoc/#./packages/daucus/pandoc/::hash=660746&locator=fullwebdev%40workspace%3A."
-  dependencies:
-    download: ^8.0.0
-  checksum: 4221359560dafb8accef69b508c9f3e8d9e9ef356713b1a92bb31a8cb9071a730b51625076062d8858b276cf0c4e32aa934d8d41ad14b03d7227302dd9e02254
-  languageName: node
-  linkType: hard
 
 "@daucus/router@*, @daucus/router@workspace:packages/daucus/router, @daucus/router@~0.4.0":
   version: 0.0.0-use.local
@@ -1769,17 +1760,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@daucus/typedoc-theme@file:packages/daucus/typedoc-theme::locator=fullwebdev%40workspace%3A.":
-  version: 0.4.0
-  resolution: "@daucus/typedoc-theme@file:packages/daucus/typedoc-theme#packages/daucus/typedoc-theme::hash=e12202&locator=fullwebdev%40workspace%3A."
-  peerDependencies:
-    typedoc: ^0.23.21
-    typedoc-plugin-markdown: ^3.13.6
-  checksum: e64ab22b2d352a84ecff62bba506e24a55f1b6e119de2bd8fc2a92bf3e67069bb93b5cb42018da71f9667b11a313f7ae9ac504de473118448c78a1b0d86e7f13
-  languageName: node
-  linkType: hard
-
-"@daucus/typedoc-theme@workspace:packages/daucus/typedoc-theme":
+"@daucus/typedoc-theme@workspace:*, @daucus/typedoc-theme@workspace:packages/daucus/typedoc-theme":
   version: 0.0.0-use.local
   resolution: "@daucus/typedoc-theme@workspace:packages/daucus/typedoc-theme"
   peerDependencies:
@@ -14475,8 +14456,8 @@ __metadata:
     "@commitlint/cli": ^17.3.0
     "@commitlint/config-conventional": ^17.3.0
     "@commitlint/prompt-cli": ^17.3.0
-    "@daucus/pandoc": ./packages/daucus/pandoc/
-    "@daucus/typedoc-theme": "file:packages/daucus/typedoc-theme"
+    "@daucus/pandoc": "workspace:*"
+    "@daucus/typedoc-theme": "workspace:*"
     "@lhci/cli": ~0.10.0
     "@modern-helpers/router": "*"
     "@monocli/cli": ^0.5.0
