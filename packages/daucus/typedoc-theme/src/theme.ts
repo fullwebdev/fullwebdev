@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies, max-classes-per-file */
 import { MarkdownTheme } from "typedoc-plugin-markdown/dist/theme";
-import * as Handlebars from 'handlebars';
+import * as Handlebars from "handlebars";
 
 export class DaucusMarkdownTheme extends MarkdownTheme {
   constructor(renderer: import("typedoc").Renderer) {

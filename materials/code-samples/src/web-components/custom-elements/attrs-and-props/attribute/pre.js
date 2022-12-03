@@ -12,9 +12,8 @@
   ];
 
   //#region createElement
-  const randomTextEl = document.createElement(
-    "random-text"
-  );
+  const randomTextEl =
+    document.createElement("random-text");
   //#endregion createElement
 
   //#region set-props

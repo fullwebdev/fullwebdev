@@ -26,9 +26,11 @@ describe("el", () => {
 
     customElements.define("fancy-button", TestButton, { extends: "button" });
 
-    const rslt = /** @type {TestButton} */ (el("button", {
-      is: "fancy-button",
-    }));
+    const rslt = /** @type {TestButton} */ (
+      el("button", {
+        is: "fancy-button",
+      })
+    );
     expect(rslt instanceof TestButton).to.be.true;
 
     const wrapper = document.createElement("div");
@@ -39,9 +41,11 @@ describe("el", () => {
   });
 
   it("set attributes", () => {
-    const rslt = /** @type {HTMLInputElement} */ (el("input", {
-      attributes: [["disabled", "true"]],
-    }));
+    const rslt = /** @type {HTMLInputElement} */ (
+      el("input", {
+        attributes: [["disabled", "true"]],
+      })
+    );
     expect(rslt.disabled).to.be.true;
   });
 

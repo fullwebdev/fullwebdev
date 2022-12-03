@@ -19,8 +19,7 @@ export default {
       path: "",
       templateUrl: "README.html",
       title: "Project w/o i18n directories",
-      menu:
-        '<div class="section-title menu-title"><a href=/another-project/ >Project w/o i18n directories</a></div><ul class=menu><li><div class=section-title><button aria-label=infos role=button>infos</button></div><ul class="child-menu collapsible"><li><div class=section-title><a href=/another-project/infos/lorem>Lorem Ipsum</a></div></ul></ul>',
+      menu: '<div class="section-title menu-title"><a href=/another-project/ >Project w/o i18n directories</a></div><ul class=menu><li><div class=section-title><button aria-label=infos role=button>infos</button></div><ul class="child-menu collapsible"><li><div class=section-title><a href=/another-project/infos/lorem>Lorem Ipsum</a></div></ul></ul>',
     },
   },
   docs: {
@@ -76,8 +75,7 @@ export default {
       path: "",
       templateUrl: "README.html",
       title: "Pages project",
-      menu:
-        '<div class="section-title menu-title"><a href=/docs/ >Pages project</a></div><ul class=menu><li><div class=section-title><a href=/docs/after-first-part>Inbetween</a></div><li><div class=section-title><button aria-label=first-part role=button>first-part</button></div><li><div class=section-title><a href=/docs/second-part>Second Part</a></div><ul class=child-menu><li><div class=section-title><a href=/docs/second-part/first-file>First file</a></div><li><div class=section-title><a href=/docs/second-part/another-file>Another file</a></div></ul><li><div class=section-title><a href=/docs/hello-world>Hello World!</a></div></ul>',
+      menu: '<div class="section-title menu-title"><a href=/docs/ >Pages project</a></div><ul class=menu><li><div class=section-title><a href=/docs/after-first-part>Inbetween</a></div><li><div class=section-title><button aria-label=first-part role=button>first-part</button></div><li><div class=section-title><a href=/docs/second-part>Second Part</a></div><ul class=child-menu><li><div class=section-title><a href=/docs/second-part/first-file>First file</a></div><li><div class=section-title><a href=/docs/second-part/another-file>Another file</a></div></ul><li><div class=section-title><a href=/docs/hello-world>Hello World!</a></div></ul>',
     },
     fr: {
       children: {
@@ -131,8 +129,7 @@ export default {
       path: "",
       templateUrl: "README.html",
       title: "Projet avec des pages",
-      menu:
-        '<div class="section-title menu-title"><a href=/docs/ >Projet avec des pages</a></div><ul class=menu><li><div class=section-title><a href=/docs/after-first-part>Au milieu</a></div><li><div class=section-title><button aria-label=first-part role=button>first-part</button></div><li><div class=section-title><a href=/docs/second-part>Seconde partie</a></div><ul class=child-menu><li><div class=section-title><a href=/docs/second-part/first-file>Premier fichier</a></div><li><div class=section-title><a href=/docs/second-part/another-file>Un autre fichier</a></div></ul><li><div class=section-title><a href=/docs/hello-world>Bonjour le Monde !</a></div></ul>',
+      menu: '<div class="section-title menu-title"><a href=/docs/ >Projet avec des pages</a></div><ul class=menu><li><div class=section-title><a href=/docs/after-first-part>Au milieu</a></div><li><div class=section-title><button aria-label=first-part role=button>first-part</button></div><li><div class=section-title><a href=/docs/second-part>Seconde partie</a></div><ul class=child-menu><li><div class=section-title><a href=/docs/second-part/first-file>Premier fichier</a></div><li><div class=section-title><a href=/docs/second-part/another-file>Un autre fichier</a></div></ul><li><div class=section-title><a href=/docs/hello-world>Bonjour le Monde !</a></div></ul>',
     },
   },
 };

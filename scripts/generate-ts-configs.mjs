@@ -196,9 +196,8 @@ const projectLevelTsconfigData = {
   references: resolveInternalDependencies(
     Array.from(packageDirnameMap.keys())
   ).map((packageName) => {
-    const [depDirScope, depDirName, projectType] = packageDirnameMap.get(
-      packageName
-    );
+    const [depDirScope, depDirName, projectType] =
+      packageDirnameMap.get(packageName);
     if (depDirScope) {
       return {
         path: `./${projectType}/${depDirScope}/${depDirName}/tsconfig.json`,

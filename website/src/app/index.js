@@ -9,9 +9,9 @@ export function App(wordings, onClick = false) {
     document.body.addEventListener(
       "click",
       () => {
-        /** @type {HTMLElement} */ (document.getElementById(
-          "main-content"
-        )).classList.remove("on-homepage");
+        /** @type {HTMLElement} */ (
+          document.getElementById("main-content")
+        ).classList.remove("on-homepage");
         router.resetPageContainer();
       },
       { once: true, capture: true }

@@ -9,9 +9,8 @@
   ];
 
   //#region setPossibleTexts
-  const randomTextEl = document.querySelector(
-    "random-text"
-  );
+  const randomTextEl =
+    document.querySelector("random-text");
   randomTextEl.possibleTexts = notLoremIpsum;
   //#endregion setPossibleTexts
 
@@ -37,9 +36,8 @@
 
   // only for demo
   //#region newLength
-  const lengthInput = document.getElementById(
-    "length-input"
-  );
+  const lengthInput =
+    document.getElementById("length-input");
 
   lengthInput.addEventListener("input", (e) => {
     randomTextEl.setAttribute("length", e.target.value);
