@@ -101,7 +101,7 @@ To install playwright system dependencies, see <https://github.com/microsoft/pla
 
 #### Snowpack-template
 
-When testing the Daucus Snowpack Template package (e.g. using `npm run lerna -- run start --scope "@daucus/snowpack-template"`), you need to specify the Snowpack `workspaceRoot` (i.e. add `workspaceRoot: "../../../"` to `packages/daucus/snowpack-template/snowpack.config.js`).
+When testing the Daucus Snowpack Template package (e.g. using `npm run start --workspace="@daucus/snowpack-template"`), you need to specify the Snowpack `workspaceRoot` (i.e. add `workspaceRoot: "../../../"` to `packages/daucus/snowpack-template/snowpack.config.js`).
 
 See the [Snowpack documentation](https://www.snowpack.dev/reference/configuration#workspaceroot) for more information.
 
