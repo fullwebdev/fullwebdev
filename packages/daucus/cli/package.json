@@ -33,20 +33,20 @@
   },
   "dependencies": {
     "@daucus/core": "~0.4.0",
-    "chalk": "^2.4.2",
-    "chokidar": "^3.5.1",
-    "command-line-args": "^5.1.1",
-    "file-type": "^16.2.0",
-    "fs-extra": "^9.1.0",
-    "gauge": "^3.0.0",
-    "globby": "^11.0.2",
+    "chalk": "^5.1.2",
+    "chokidar": "^3.5.3",
+    "command-line-args": "^5.2.1",
+    "file-type": "^18.0.0",
+    "fs-extra": "^11.1.0",
+    "gauge": "^5.0.0",
+    "globby": "^13.1.2",
     "html-minifier": "^4.0.0",
-    "node-html-parser": "^2.0.2",
+    "node-html-parser": "^6.1.4",
     "rimraf": "^3.0.2",
     "snarkdown": "^2.0.0"
   },
   "devDependencies": {
-    "@types/command-line-usage": "^5.0.1",
-    "@types/rimraf": "^3.0.0"
+    "@types/command-line-usage": "^5.0.2",
+    "@types/rimraf": "^3.0.2"
   }
 }

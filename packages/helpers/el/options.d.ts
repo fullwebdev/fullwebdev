@@ -1,7 +1,7 @@
 /**
  * Options for element creation via the el function.
  *
- * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement|Document.createElement()) second argument, "options"
+ * @see [Document.createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement) second argument, "options"
  */
 export interface ElOptions extends ElementCreationOptions {
   /**
