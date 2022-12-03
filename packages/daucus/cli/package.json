@@ -48,5 +48,13 @@
   "devDependencies": {
     "@types/command-line-usage": "^5.0.2",
     "@types/rimraf": "^3.0.2"
+  },
+  "peerDependencies": {
+    "@daucus/pandoc": "~0.4.0"
+  },
+  "peerDependenciesMeta": {
+    "@daucus/pandoc": {
+      "optional": true
+    }
   }
 }

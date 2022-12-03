@@ -1732,10 +1732,10 @@ __metadata:
 
 "@daucus/pandoc@file:./packages/daucus/pandoc/::locator=fullwebdev%40workspace%3A.":
   version: 0.4.0
-  resolution: "@daucus/pandoc@file:./packages/daucus/pandoc/#./packages/daucus/pandoc/::hash=a74348&locator=fullwebdev%40workspace%3A."
+  resolution: "@daucus/pandoc@file:./packages/daucus/pandoc/#./packages/daucus/pandoc/::hash=660746&locator=fullwebdev%40workspace%3A."
   dependencies:
     download: ^8.0.0
-  checksum: eab099f2c1f6a3faab4ce51d6445e5f0a252f31c4e5dc69feaf3e9377429390b823e871845d2301a12339e23bd0910107de5690c9db6a0611c01127b4f9061df
+  checksum: 4221359560dafb8accef69b508c9f3e8d9e9ef356713b1a92bb31a8cb9071a730b51625076062d8858b276cf0c4e32aa934d8d41ad14b03d7227302dd9e02254
   languageName: node
   linkType: hard
 
@@ -1771,11 +1771,11 @@ __metadata:
 
 "@daucus/typedoc-theme@file:packages/daucus/typedoc-theme::locator=fullwebdev%40workspace%3A.":
   version: 0.4.0
-  resolution: "@daucus/typedoc-theme@file:packages/daucus/typedoc-theme#packages/daucus/typedoc-theme::hash=eef519&locator=fullwebdev%40workspace%3A."
+  resolution: "@daucus/typedoc-theme@file:packages/daucus/typedoc-theme#packages/daucus/typedoc-theme::hash=e12202&locator=fullwebdev%40workspace%3A."
   peerDependencies:
     typedoc: ^0.23.21
     typedoc-plugin-markdown: ^3.13.6
-  checksum: 56296818a877c1a045a806099de57acb0fa70c010059005973556b926438315028d0177cd3ffb49f36d71653fa08cda40677fc1c6f8c6282dc2af07ef8435672
+  checksum: e64ab22b2d352a84ecff62bba506e24a55f1b6e119de2bd8fc2a92bf3e67069bb93b5cb42018da71f9667b11a313f7ae9ac504de473118448c78a1b0d86e7f13
   languageName: node
   linkType: hard
 

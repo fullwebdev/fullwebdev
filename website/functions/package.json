@@ -15,12 +15,13 @@
   "type": "module",
   "main": "index.js",
   "dependencies": {
+    "@google-cloud/functions-framework": "^3.1.2",
     "firebase-admin": "^11.3.0",
-    "firebase-functions": "^4.1.0",
-    "@google-cloud/functions-framework": "^3.1.2"
+    "firebase-functions": "^4.1.0"
   },
   "devDependencies": {
     "firebase-functions-test": "^3.0.0",
+    "jest": "^29.3.1",
     "mocha": "^10.1.0"
   },
   "private": true

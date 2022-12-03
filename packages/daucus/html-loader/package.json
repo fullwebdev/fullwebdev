@@ -24,7 +24,6 @@
     "storybook": "web-dev-server -c .storybook/server.mjs",
     "storybook:build": "build-storybook"
   },
-  "dependencies": {},
   "devDependencies": {
     "@web/dev-server": "~0.1.35",
     "@web/dev-server-storybook": "~0.5.4"
