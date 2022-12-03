@@ -1,7 +1,7 @@
 import HTML from "node-html-parser";
 import { dirname, resolve } from "path";
 import { readFileSync } from "fs";
-import globby from "globby";
+import { globby } from "globby";
 import { esmDirName } from "../../src/fs/path.js";
 import { WorkSpace as DaucusWorkspace } from "../../src/config/workspace.js";
 import { DaucusCLI } from "../../src/cli/DaucusCLI.js";
