@@ -2,10 +2,9 @@ import typedoc from "typedoc";
 import path from "path";
 import { fileURLToPath } from "url";
 import fs from "fs";
-import ts from "typescript";
 import { packages as packagesConfig } from "../workspace-packages.mjs";
 // eslint-disable-next-line import/no-relative-packages
-import { DaucusMarkdownTheme } from "../packages/daucus/typedoc-theme/dist/theme.js"
+import { DaucusMarkdownTheme } from "../packages/daucus/typedoc-theme/dist/theme.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -78,7 +77,7 @@ packages.forEach(async ({ root }, name) => {
     console.error(`can't find ${path.relative(process.cwd(), index)}`);
   }
 
-  const theme = "daucus"
+  const theme = "daucus";
   app.renderer.defineTheme(theme, DaucusMarkdownTheme);
 
   app.bootstrap({

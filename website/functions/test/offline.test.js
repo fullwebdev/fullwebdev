@@ -11,7 +11,6 @@ import firebaseTest from "firebase-functions-test";
 const test = firebaseTest();
 
 describe("Cloud Functions", () => {
-  let myFunctions;
   let adminInitStub;
 
   before(async () => {
@@ -22,7 +21,7 @@ describe("Cloud Functions", () => {
     // Here we stub admin.initializeApp to be a dummy function that doesn't do anything.
     adminInitStub = sinon.stub(admin, "initializeApp");
     // Now we can require index.js and save the exports inside a namespace called myFunctions.
-    myFunctions = await import("../index.js");
+    // myFunctions = await import("../index.js");
     // [END stubAdminInit]
   });
 
