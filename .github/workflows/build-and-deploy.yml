@@ -68,4 +68,4 @@ jobs:
       - name: Run Lighthouse CI
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-        run: yarn run lhci:autorun -- --githubAppToken="$LHCI_GITHUB_APP_TOKEN" --config lighthouserc.prod.js
+        run: yarn run lhci:autorun -githubAppToken="$LHCI_GITHUB_APP_TOKEN" --config lighthouserc.prod.js
