@@ -1,13 +1,14 @@
 /* eslint-disable func-names, import/no-extraneous-dependencies */
 const stringifyPackage = require("stringify-package");
-const detectIndent = require("detect-indent");
-const detectNewline = require("detect-newline");
 
 module.exports.readVersion = function (contents) {
   return JSON.parse(contents).version;
 };
 
-module.exports.writeVersion = function (contents, version) {
+module.exports.writeVersion = async function (contents, version) {
+  const detectIndent = await import("detect-indent");
+  const detectNewline = await import("detect-newline");
+
   const json = JSON.parse(contents);
   const { indent } = detectIndent(contents);
   const newline = detectNewline(contents);
