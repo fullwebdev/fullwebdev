@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.3](https://github.com/fullwebdev/fullwebdev/compare/v1.0.2...v1.0.3) (2022-12-04)
+
+### Misc
+
+- daucus@0.4.1 ([82af6da](https://github.com/fullwebdev/fullwebdev/commit/82af6daa3973ac85870dd00571de61f5c9c410fd))
+- helpers@0.5.0 ([8ec6f34](https://github.com/fullwebdev/fullwebdev/commit/8ec6f34ae278476c9d742681d8ac98a24a6815d7))
+
+### Tooling
+
+- **daucus:** fix dependencies update on release ([4fc86ec](https://github.com/fullwebdev/fullwebdev/commit/4fc86ec9320c82f1891b6c8023cc9a2b909b4c87))
+- fix typings deletion on setup ([ebb0754](https://github.com/fullwebdev/fullwebdev/commit/ebb0754576c718ef3efff8c677c51210536c6a1d))
+- verbose root CHANGELOG ([ddf5e9e](https://github.com/fullwebdev/fullwebdev/commit/ddf5e9ef1e8868b3ebed37a1fa7d82298bb6f0cf))
+
 ### [1.0.2](https://github.com/fullwebdev/fullwebdev/compare/v1.0.1...v1.0.2) (2022-12-04)
 
 ### Bug Fixes
