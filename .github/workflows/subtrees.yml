@@ -13,19 +13,12 @@ jobs:
         uses: actions/checkout@v1
 
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: "16.18.1"
-          cache: "yarn"
-
-      - name: Setup Yarn
-        run: |
-          corepack enable
-          yarn --version
 
       - name: Install dependencies
-        # FIXME: only install root dependencies and don't run postinstall
-        run: yarn install
+        uses: ./.github/actions/yarn-nm-install
 
       - uses: webfactory/ssh-agent@v0.4.1
         with:
