@@ -342,6 +342,9 @@ export default class ProjectsListElement extends LitElementWithProjectListWordin
           grid-template-columns: 1fr 1fr 1fr;
           grid-gap: 2rem;
         }
+        .short-grid.col-2 {
+          grid-template-columns: repeat(2, 400px);
+        }
       }
 
       @media screen and (min-width: 1680px) {
@@ -354,11 +357,8 @@ export default class ProjectsListElement extends LitElementWithProjectListWordin
         .short-grid {
           max-width: 1450px;
         }
-        .col-3 {
+        .short-grid.col-3 {
           grid-template-columns: repeat(3, 400px);
-        }
-        .col-2 {
-          grid-template-columns: repeat(2, 400px);
         }
       }
     `;
