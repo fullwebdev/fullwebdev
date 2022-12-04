@@ -23,19 +23,12 @@ jobs:
           python-version: "3.x"
 
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: "16.18.1"
-          cache: "yarn"
-
-      - name: Setup Yarn
-        run: |
-          corepack enable
-          yarn plugin import workspace-tools
-          yarn --version
 
       - name: Install dependencies
-        run: yarn install
+        uses: ./.github/actions/yarn-nm-install
 
       - name: Build
         run: |
