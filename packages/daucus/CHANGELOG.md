@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.1](https://github.com/fullwebdev/fullwebdev/compare/daucus@v0.4.0...daucus@v0.4.1) (2022-12-04)
+
+### Bug Fixes
+
+- **daucus-cli:** keep anchor links as is ([94bb414](https://github.com/fullwebdev/fullwebdev/commit/94bb414e21e07044ea0087b91df0cf91a7ab391d)), closes [#116](https://github.com/fullwebdev/fullwebdev/issues/116)
+- **daucus-typedoc-theme:** fixed peerDependencies ([7df25c5](https://github.com/fullwebdev/fullwebdev/commit/7df25c537f0e526394e733112ac58de31ab9cfbe))
+- **daucus/typedoc-theme:** typedoc 0.23 upgrade ([f5dee19](https://github.com/fullwebdev/fullwebdev/commit/f5dee1930f33893b0140b89ce88383084d3a8fa1))
+
 ## [0.4.0](https://github.com/fullwebdev/fullwebdev/compare/daucus@v0.3.0...daucus@v0.4.0) (2021-08-01)
 
 ### ⚠ BREAKING CHANGES

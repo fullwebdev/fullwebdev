@@ -1,6 +1,6 @@
 {
   "name": "@daucus/snowpack-template",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "scripts": {
     "start": "yarn run build:daucus && concurrently npm:start:daucus npm:start:server",
     "start:server": "snowpack dev",
