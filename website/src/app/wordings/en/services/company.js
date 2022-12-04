@@ -42,15 +42,6 @@ const wording = {
     },
     {
       desc: {
-        title: "Developer Relations",
-        subtitle:
-          "Improve your products developer experience and your relations with the community. ",
-      },
-      backgroundImg:
-        "/images/web-illustrations/jaime-lopes-0RDBOAdnbWM-unsplash.jpg",
-    },
-    {
-      desc: {
         title: "Instructional Engineering",
         subtitle: "Rationalisating your knowledge management and trainings.",
       },

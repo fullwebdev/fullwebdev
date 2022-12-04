@@ -4,29 +4,6 @@ const wording = {
   items: [
     {
       desc: {
-        title: "Coaching",
-        subtitle:
-          "Get personalized support according to your needs, at your own pace.",
-      },
-      backgroundImg:
-        "/images/web-illustrations/new-data-services-UO-QYR28hS0-unsplash.jpg",
-      cta: [
-        {
-          onclick: () => {
-            if (window.Calendly) {
-              window.Calendly.initPopupWidget({
-                url: "https://calendly.com/noelmace/coaching-interview",
-              });
-            }
-            return false;
-          },
-          text: "schedule a free meeting",
-          primary: true,
-        },
-      ],
-    },
-    {
-      desc: {
         title: "Newsletters",
         subtitle: "Keep up to date with the latest fullweb.dev news.",
       },

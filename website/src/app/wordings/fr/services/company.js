@@ -46,15 +46,6 @@ const wording = {
     },
     {
       desc: {
-        title: "Developer Relations",
-        subtitle:
-          "Améliorez l'expérience de développement de vos produits et les liens avec votre communauté.",
-      },
-      backgroundImg:
-        "/images/web-illustrations/jaime-lopes-0RDBOAdnbWM-unsplash.jpg",
-    },
-    {
-      desc: {
         title: "Ingénierie pédagogique",
         subtitle:
           "Suivi de montée en compétence, gestion des connaissances, et mise en oeuvre et encadrement de formations initiales et professionnelles",

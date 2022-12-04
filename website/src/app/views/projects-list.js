@@ -351,6 +351,15 @@ export default class ProjectsListElement extends LitElementWithProjectListWordin
         .grid {
           grid-template-columns: 1fr 1fr 1fr 1fr;
         }
+        .short-grid {
+          max-width: 1450px;
+        }
+        .col-3 {
+          grid-template-columns: repeat(3, 400px);
+        }
+        .col-2 {
+          grid-template-columns: repeat(2, 400px);
+        }
       }
     `;
   }
@@ -374,7 +383,11 @@ export default class ProjectsListElement extends LitElementWithProjectListWordin
       </section>
       ${typeof this.w.items === "string"
         ? html`<p class="empty-grid">${this.w.items}</p>`
-        : html`<section class="grid">
+        : html`<section
+            class="grid ${this.w.items.length < 4
+              ? `short-grid col-${this.w.items.length}`
+              : ""}"
+          >
             ${this.w.items.map(projectCard)}
           </section>`}
     `;
