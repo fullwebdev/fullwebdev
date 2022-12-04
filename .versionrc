@@ -44,5 +44,31 @@
       "filename": "materials/perf/package-lock.json",
       "type": "json"
     }
+  ],
+  "types": [
+    {
+      "type": "feat",
+      "section": "Features"
+    },
+    {
+      "type": "fix",
+      "section": "Bug Fixes"
+    },
+    {
+      "type": "docs",
+      "section": "Contents"
+    },
+    {
+      "type": "ci",
+      "section": "Tooling"
+    },
+    {
+      "type": "build",
+      "section": "Tooling"
+    },
+    {
+      "type": "chore",
+      "section": "Misc"
+    }
   ]
 }
