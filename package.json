@@ -32,7 +32,7 @@
     "test:website:e2e": "playwright test",
     "types": "run-s types:clear types:copy types:build",
     "types:build": "tsc --build",
-    "types:clear": "rimraf ./packages/**/types",
+    "types:clear": "rimraf './packages/**/types'",
     "types:copy": "yarn workspaces foreach run types:copy",
     "lint": "run-s lint:es lint:md lint:prettier ",
     "lint:md": "markdownlint .",
