@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/fullwebdev/fullwebdev/compare/helpers@v0.4.0...helpers@v0.5.0) (2022-12-04)
+
+### Features
+
+- **helpers-router:** null route path ([ee0a9d7](https://github.com/fullwebdev/fullwebdev/commit/ee0a9d7dcdf60352ba91979e04817c9008d1748d))
+
+### Bug Fixes
+
+- **helpers-router:** handle anchor links ([90fd6a4](https://github.com/fullwebdev/fullwebdev/commit/90fd6a4fbac23695b056d11fb2ceebd1c8b10284))
+
 ## [0.4.0](https://github.com/fullwebdev/fullwebdev/compare/helpers@v0.3.0...helpers@v0.4.0) (2021-04-25)
 
 ### Features
