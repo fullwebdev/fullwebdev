@@ -1735,7 +1735,7 @@ __metadata:
   resolution: "@daucus/router@workspace:packages/daucus/router"
   dependencies:
     "@daucus/core": ~0.4.0
-    "@modern-helpers/router": ^0.4.0
+    "@modern-helpers/router": ^0.5.0
   languageName: unknown
   linkType: soft
 
@@ -2236,7 +2236,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fwdemos/modern-helpers-el-simple-counter@workspace:demos/helpers/el-simple-counter"
   dependencies:
-    "@modern-helpers/el": ^0.4.0
+    "@modern-helpers/el": ^0.5.0
     "@web/dev-server": ~0.1.35
   languageName: unknown
   linkType: soft
@@ -2245,7 +2245,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fwdemos/modern-helpers-router-basehref@workspace:demos/helpers/router-basehref"
   dependencies:
-    "@modern-helpers/router": ^0.4.0
+    "@modern-helpers/router": ^0.5.0
     "@web/dev-server": ~0.1.35
   languageName: unknown
   linkType: soft
@@ -2254,7 +2254,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fwdemos/modern-helpers-router-basic@workspace:demos/helpers/router-basic"
   dependencies:
-    "@modern-helpers/router": ^0.4.0
+    "@modern-helpers/router": ^0.5.0
     "@web/dev-server": ~0.1.35
   languageName: unknown
   linkType: soft
@@ -2263,7 +2263,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fwdemos/modern-helpers-template-simple-counter@workspace:demos/helpers/template-simple-counter"
   dependencies:
-    "@modern-helpers/template": ^0.4.0
+    "@modern-helpers/template": ^0.5.0
     "@web/dev-server": ~0.1.35
   languageName: unknown
   linkType: soft
@@ -3231,19 +3231,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@modern-helpers/el@*, @modern-helpers/el@^0.4.0, @modern-helpers/el@workspace:packages/helpers/el":
+"@modern-helpers/el@*, @modern-helpers/el@^0.5.0, @modern-helpers/el@workspace:packages/helpers/el":
   version: 0.0.0-use.local
   resolution: "@modern-helpers/el@workspace:packages/helpers/el"
   languageName: unknown
   linkType: soft
 
-"@modern-helpers/router@*, @modern-helpers/router@^0.4.0, @modern-helpers/router@workspace:packages/helpers/router":
+"@modern-helpers/router@*, @modern-helpers/router@^0.5.0, @modern-helpers/router@workspace:packages/helpers/router":
   version: 0.0.0-use.local
   resolution: "@modern-helpers/router@workspace:packages/helpers/router"
   languageName: unknown
   linkType: soft
 
-"@modern-helpers/template@^0.4.0, @modern-helpers/template@workspace:packages/helpers/template":
+"@modern-helpers/template@^0.5.0, @modern-helpers/template@workspace:packages/helpers/template":
   version: 0.0.0-use.local
   resolution: "@modern-helpers/template@workspace:packages/helpers/template"
   languageName: unknown
