@@ -16,7 +16,7 @@
   },
   "homepage": "https://fullweb.dev/daucus/typedoc-theme",
   "scripts": {
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "yarn run build",
     "build": "rimraf ./dist && tsc"
   },
   "author": {
@@ -26,10 +26,12 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "typedoc": "^0.20.35",
-    "typedoc-plugin-markdown": "^3.7.1"
+    "typedoc": "^0.23.21",
+    "typedoc-plugin-markdown": "^3.13.6"
   },
-  "keywords": [],
+  "keywords": [
+    "typedoc-theme"
+  ],
   "publishConfig": {
     "access": "public"
   }

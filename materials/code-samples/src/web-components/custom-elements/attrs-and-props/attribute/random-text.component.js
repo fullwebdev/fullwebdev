@@ -102,9 +102,8 @@
 
     //#region render
     render() {
-      const container = this.shadowRoot.querySelector(
-        ".random-text"
-      );
+      const container =
+        this.shadowRoot.querySelector(".random-text");
 
       if (container) {
         container.textContent = this.#text;

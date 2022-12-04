@@ -1,10 +1,11 @@
 @use "@material/drawer";
 @use "@material/list";
+@use "@material/list/evolution-mixins" as list-evolution-mixins;
 
 @include drawer.core-styles;
 @include drawer.dismissible-core-styles;
 @include drawer.modal-core-styles;
-@include list.core-styles;
+@include list-evolution-mixins.core-styles();
 
 .mdc-drawer {
   max-width: 80vw;

@@ -51,7 +51,6 @@ export default {
     path: "",
     templateUrl: "README.html",
     title: "Pages project",
-    menu:
-      '<div class="section-title menu-title"><a href=/docs/ >Pages project</a></div><ul class=menu><li><div class=section-title><a href=/docs/hello-world>Hello World!</a></div><li><div class=section-title><a href=/docs/second-part>Second Part</a></div><ul class=child-menu><li><div class=section-title><a href=/docs/second-part/another-file>Another file</a></div><li><div class=section-title><a href=/docs/second-part/first-file>First file</a></div></ul><li><div class=section-title><button aria-label=first-part role=button>first-part</button></div><li><div class=section-title><a href=/docs/after-first-part>Inbetween</a></div></ul>',
+    menu: '<div class="section-title menu-title"><a href=/docs/ >Pages project</a></div><ul class=menu><li><div class=section-title><a href=/docs/hello-world>Hello World!</a></div><li><div class=section-title><a href=/docs/second-part>Second Part</a></div><ul class=child-menu><li><div class=section-title><a href=/docs/second-part/another-file>Another file</a></div><li><div class=section-title><a href=/docs/second-part/first-file>First file</a></div></ul><li><div class=section-title><button aria-label=first-part role=button>first-part</button></div><li><div class=section-title><a href=/docs/after-first-part>Inbetween</a></div></ul>',
   },
 };

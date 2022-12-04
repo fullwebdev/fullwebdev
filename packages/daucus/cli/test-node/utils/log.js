@@ -7,7 +7,7 @@ export class ConsoleStub {
   }
 
   _fakeLog(message = "") {
-    // eslint-disable-next-line no-control-regex
+    // eslint-disable-next-line no-control-regex, prefer-regex-literals
     this.logs += `${message}\n`.replace(new RegExp("\u001b[[0-9]+m", "g"), "");
   }
 

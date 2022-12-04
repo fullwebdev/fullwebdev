@@ -3,9 +3,8 @@
 
   //#region createElement
   // before-define.js
-  const helloWorldEl = document.createElement(
-    "hello-world"
-  );
+  const helloWorldEl =
+    document.createElement("hello-world");
   console.log("l'élément <hello-world> a été créé");
   //#endregion createElement
 

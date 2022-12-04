@@ -368,13 +368,13 @@ export class AppRouter extends AbstractRouter {
   /** @type {HTMLLoaderElement} */
   get outlet() {
     if (!this._possibleOutlet) {
-      let outlet = /** @type {HTMLLoaderElement} */ (document.querySelector(
-        "html-loader"
-      ));
+      let outlet = /** @type {HTMLLoaderElement} */ (
+        document.querySelector("html-loader")
+      );
       if (!outlet) {
-        outlet = /** @type {HTMLLoaderElement} */ (document.createElement(
-          "html-loader"
-        ));
+        outlet = /** @type {HTMLLoaderElement} */ (
+          document.createElement("html-loader")
+        );
       }
       outlet.addEventListener("html-loaded", async () => {
         const { stylePage } = await import("./pages.js");
@@ -516,9 +516,9 @@ export class AppRouter extends AbstractRouter {
 
   // eslint-disable-next-line class-methods-use-this
   resetPageContainer() {
-    const pageContainer = /** @type {HTMLElement} */ (document.getElementById(
-      "page-container"
-    ));
+    const pageContainer = /** @type {HTMLElement} */ (
+      document.getElementById("page-container")
+    );
     const initialContent = pageContainer.childNodes;
     const fragment = document.createDocumentFragment();
     fragment.append(...initialContent);
@@ -602,6 +602,7 @@ export class AppRouter extends AbstractRouter {
    *
    * @private
    */
+  // eslint-disable-next-line default-param-last
   async _loadComponent(path, props = {}, wordings) {
     const { selector } = await import(path);
     const el = document.createElement(selector);

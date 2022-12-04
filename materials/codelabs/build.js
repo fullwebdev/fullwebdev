@@ -40,12 +40,12 @@ async function createCodelab(file) {
     .children()
     .each((i, e) => {
       if (e.tagName === "h1") {
-        heading = cheerio(e).text();
+        heading = html(e).text();
       } else if (e.tagName === "h2") {
-        currentStep = { heading: cheerio(e), nodes: cheerio("<div></div>") };
+        currentStep = { heading: html(e), nodes: html("<div></div>") };
         steps.push(currentStep);
       } else if (currentStep) {
-        currentStep.nodes.append(cheerio(e));
+        currentStep.nodes.append(html(e));
       }
     });
 

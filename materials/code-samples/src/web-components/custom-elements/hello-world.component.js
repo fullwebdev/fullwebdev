@@ -24,11 +24,13 @@ HelloWorldFnComponent.prototype = Object.create(
   HTMLElement.prototype
 );
 
-HelloWorldFnComponent.prototype.constructor = HelloWorldFnComponent;
+HelloWorldFnComponent.prototype.constructor =
+  HelloWorldFnComponent;
 
-HelloWorldFnComponent.prototype.connectedCallback = function () {
-  this.innerHTML = "<p>Hello World</p>";
-};
+HelloWorldFnComponent.prototype.connectedCallback =
+  function () {
+    this.innerHTML = "<p>Hello World</p>";
+  };
 //#endregion fn-connected
 
 export { HelloWorldFnComponent, HelloWorldComponent };

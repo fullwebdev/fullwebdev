@@ -2,12 +2,11 @@
   "name": "@daucus/snowpack-template",
   "version": "0.4.0",
   "scripts": {
-    "start": "concurrently npm:start:daucus npm:start:server",
+    "start": "yarn run build:daucus && concurrently npm:start:daucus npm:start:server",
     "start:server": "snowpack dev",
     "start:daucus": "daucus watch",
     "build": "snowpack build",
-    "prestart": "npm run prebuild",
-    "prebuild": "daucus build",
+    "build:daucus": "daucus build",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
     "format": "prettier --write \"src/**/*.js\"",
     "lint": "prettier --check \"src/**/*.js\""
@@ -25,18 +24,19 @@
     "@daucus/html-loader": "~0.4.0",
     "@daucus/menu": "~0.4.0",
     "@daucus/router": "~0.4.0",
-    "lit": "~2.2.0"
+    "lit": "~2.4.1"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.20.5",
     "@daucus/cli": "~0.4.0",
     "@daucus/pandoc": "~0.4.0",
-    "@snowpack/plugin-babel": "^2.1.6",
-    "@snowpack/plugin-dotenv": "^2.0.5",
-    "concurrently": "^6.2.0",
-    "prettier": "^2.0.5",
-    "snowpack": "^3.0.1"
+    "@snowpack/plugin-babel": "^2.1.7",
+    "@snowpack/plugin-dotenv": "^2.2.0",
+    "concurrently": "^7.6.0",
+    "prettier": "^2.8.0",
+    "snowpack": "^3.8.8"
   },
   "publishConfig": {
     "access": "public"

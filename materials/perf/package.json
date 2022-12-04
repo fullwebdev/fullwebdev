@@ -1,7 +1,7 @@
 {
   "name": "perf-tests",
   "private": true,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "quick performance testing",
   "main": "index.js",
   "type": "module",
@@ -13,6 +13,6 @@
   "license": "MIT",
   "dependencies": {
     "benchmark": "^2.1.4",
-    "http-server": "^0.12.3"
+    "http-server": "^14.1.1"
   }
 }

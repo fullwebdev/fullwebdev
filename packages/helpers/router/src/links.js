@@ -6,71 +6,72 @@
  * @param baseUrl Prefix to ignore in location pathname when generating a path from an anchor href
  *
  */
-export const clickEventHandler = (/** @type {string} */ baseUrl) => (
-  /** @type {import('./navigation').PathUpdated} */ pathUpdatedCallback
-) => (/** @type {MouseEvent} */ e) => {
-  if (
-    e.defaultPrevented ||
-    e.button !== 0 ||
-    e.metaKey ||
-    e.ctrlKey ||
-    e.shiftKey
-  ) {
-    return;
-  }
-
-  // support Shadow DOM
-  let anchor = /** @type {HTMLAnchorElement | null} */ (e.composedPath()[0]);
-
-  if (!anchor) return;
-
-  if (anchor.tagName !== "A") {
-    anchor = anchor.closest("a");
-    if (!anchor) return;
-  }
-
-  if (
-    anchor.hasAttribute("download") ||
-    anchor.getAttribute("rel") === "external" ||
-    anchor.getAttribute("target") === "_blank"
-  ) {
-    return;
-  }
-
-  const fullHref = anchor.href;
-
-  if (!fullHref || fullHref.includes("mailto:")) {
-    return;
-  }
-
-  if (!fullHref.startsWith(window.location.origin)) {
-    return;
-  }
-
-  e.preventDefault();
-
-  const hrefAttr = anchor.getAttribute("href");
-  if (!hrefAttr) {
-    return;
-  }
-
-  if (`${baseUrl}${fullHref}` !== window.location.href) {
-    let path = "";
-    const url = new URL(fullHref);
-    // eslint-disable-next-line prefer-destructuring
-    let href = hrefAttr;
-    if (hrefAttr.startsWith("./")) {
-      const previousPath = window.location.pathname
-        .replace(new RegExp(`^${baseUrl}(.*)`), "$1")
-        .replace(/(.*)\/$/, "$1");
-      [href] = hrefAttr.split("#");
-      path = previousPath + href.slice(1);
-
-      // pathname == "/" for URLs with only an anchor
-    } else if (!hrefAttr.startsWith("#")) {
-      path = url.pathname;
+export const clickEventHandler =
+  (/** @type {string} */ baseUrl) =>
+  (/** @type {import('./navigation').PathUpdated} */ pathUpdatedCallback) =>
+  (/** @type {MouseEvent} */ e) => {
+    if (
+      e.defaultPrevented ||
+      e.button !== 0 ||
+      e.metaKey ||
+      e.ctrlKey ||
+      e.shiftKey
+    ) {
+      return;
     }
 
-    pathUpdatedCallback(path + url.search + url.hash, e);
-  }
-};
+    // support Shadow DOM
+    let anchor = /** @type {HTMLAnchorElement | null} */ (e.composedPath()[0]);
+
+    if (!anchor) return;
+
+    if (anchor.tagName !== "A") {
+      anchor = anchor.closest("a");
+      if (!anchor) return;
+    }
+
+    if (
+      anchor.hasAttribute("download") ||
+      anchor.getAttribute("rel") === "external" ||
+      anchor.getAttribute("target") === "_blank"
+    ) {
+      return;
+    }
+
+    const fullHref = anchor.href;
+
+    if (!fullHref || fullHref.includes("mailto:")) {
+      return;
+    }
+
+    if (!fullHref.startsWith(window.location.origin)) {
+      return;
+    }
+
+    e.preventDefault();
+
+    const hrefAttr = anchor.getAttribute("href");
+    if (!hrefAttr) {
+      return;
+    }
+
+    if (`${baseUrl}${fullHref}` !== window.location.href) {
+      let path = "";
+      const url = new URL(fullHref);
+      // eslint-disable-next-line prefer-destructuring
+      let href = hrefAttr;
+      if (hrefAttr.startsWith("./")) {
+        const previousPath = window.location.pathname
+          .replace(new RegExp(`^${baseUrl}(.*)`), "$1")
+          .replace(/(.*)\/$/, "$1");
+        [href] = hrefAttr.split("#");
+        path = previousPath + href.slice(1);
+
+        // pathname == "/" for URLs with only an anchor
+      } else if (!hrefAttr.startsWith("#")) {
+        path = url.pathname;
+      }
+
+      pathUpdatedCallback(path + url.search + url.hash, e);
+    }
+  };

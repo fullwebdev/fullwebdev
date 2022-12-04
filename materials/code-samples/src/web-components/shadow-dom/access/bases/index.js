@@ -74,9 +74,8 @@ try {
   closedCpt.shadowRoot.appendChild(p);
   //#endregion append-to-closed-shadow
 } catch (e) {
-  const errorContainer = document.querySelector(
-    ".error-closed"
-  );
+  const errorContainer =
+    document.querySelector(".error-closed");
   errorContainer.textContent = e;
 }
 

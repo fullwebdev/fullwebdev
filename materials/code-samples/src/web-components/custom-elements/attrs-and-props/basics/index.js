@@ -43,9 +43,10 @@ invertButton.addEventListener("click", () => {
 });
 
 //#region getLengthHack
-const randomText = randomTextEl.shadowRoot.querySelector(
-  ".random-text"
-).textContent;
+const randomText =
+  randomTextEl.shadowRoot.querySelector(
+    ".random-text"
+  ).textContent;
 //#endregion getLengthHack
 
 console.log(randomText);

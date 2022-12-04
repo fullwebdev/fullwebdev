@@ -1,4 +1,4 @@
-/* eslint-disable class-methods-use-this, eqeqeq, max-classes-per-file */
+/* eslint-disable class-methods-use-this, eqeqeq, max-classes-per-file, prefer-regex-literals */
 
 export class InvalidPathException extends Error {
   /**

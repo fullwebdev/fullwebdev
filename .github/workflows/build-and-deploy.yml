@@ -22,38 +22,27 @@ jobs:
           python-version: "3.x"
 
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: "16.x"
-
-      - name: Cache dependencies
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: "16.18.1"
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        uses: ./.github/actions/yarn-nm-install
 
       - name: Build
         run: |
-          npm run build
+          yarn run build
           cp ./CNAME ./dist/CNAME
 
       - name: Validate (test, types & formating)
-        run: npm run validate
+        run: yarn run validate
 
       - name: Deploy to Firebase
-        uses: FirebaseExtended/action-hosting-deploy@v0
+        uses: w9jds/firebase-action@master
         with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_FULLWEB_DEV }}"
-          projectId: fullweb-dev
-          channelId: live
+          args: deploy -P prod
         env:
-          FIREBASE_CLI_PREVIEWS: hostingchannels
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
       - name: Create archive
         run: |
@@ -72,4 +61,4 @@ jobs:
       - name: Run Lighthouse CI
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-        run: npm run lhci:autorun -- --githubAppToken="$LHCI_GITHUB_APP_TOKEN" --config lighthouserc.prod.js
+        run: yarn run lhci:autorun -githubAppToken="$LHCI_GITHUB_APP_TOKEN" --config lighthouserc.prod.js

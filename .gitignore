@@ -1,5 +1,12 @@
 ## dependencies
 node_modules
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 ## VS Code
 /.vscode/*
@@ -30,8 +37,8 @@ dist/
 /website/src/fragments/
 /website/public/localized-files/
 /website/public/*.html
-/website/public/styles/build/*.css
-/website/public/styles/build/*.css.map
+/website/public/styles/build/**/*.css
+/website/public/styles/build/**/*.css.map
 /website/public/browsers-history/
 /website/functions/hosting/index.html
 /dpawm-build/public

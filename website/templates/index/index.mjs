@@ -59,8 +59,7 @@ const scriptWordings = {
         "Except where otherwise noted, content of this site is licensed under a ",
         {
           href: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          text:
-            "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
+          text: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
         },
         "license.",
       ],
@@ -77,8 +76,7 @@ const scriptWordings = {
         "Sauf mention contraire, le contenu de ce site est distribué sous licence ",
         {
           href: "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr",
-          text:
-            "Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International (CC BY-NC-SA 4.0)",
+          text: "Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International (CC BY-NC-SA 4.0)",
         },
         ".",
       ],

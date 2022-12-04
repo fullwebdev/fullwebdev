@@ -44,8 +44,7 @@ const items = [
     },
     img: {
       src: "/images/web-illustrations/nma-jsc21-thedamfr_cover-250x.jpg",
-      alt:
-        "Photo de Noël Macé prise au JUG SummerCamp 2021 après une conférence.",
+      alt: "Photo de Noël Macé prise au JUG SummerCamp 2021 après une conférence.",
       height: 250,
     },
   },

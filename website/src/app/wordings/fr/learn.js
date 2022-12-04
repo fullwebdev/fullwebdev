@@ -16,25 +16,21 @@ const wording = {
       img: {
         src: "/images/web-illustrations/eni-dpawm-cover_320.jpg ",
         height: 320,
-        alt:
-          "développement et architecture des applications web modernes, éditions ENI",
+        alt: "développement et architecture des applications web modernes, éditions ENI",
       },
       cta: [
         {
-          href:
-            "https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523",
+          href: "https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523",
           primary: true,
           text: "éditions ENI",
         },
         {
-          href:
-            "https://www.leslibraires.fr/livre/18531129-developpement-et-architecture-des-applications--noel-mace-editions-eni",
+          href: "https://www.leslibraires.fr/livre/18531129-developpement-et-architecture-des-applications--noel-mace-editions-eni",
           primary: false,
           text: "leslibraires.fr",
         },
         {
-          href:
-            "https://www.librel.be/livre/9782409029523-developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-noel-mace/",
+          href: "https://www.librel.be/livre/9782409029523-developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-noel-mace/",
           primary: false,
           text: "librel.be",
         },
@@ -71,8 +67,7 @@ const wording = {
     },
     {
       type: "Atelier",
-      href:
-        "https://fullweb.dev/codelabs/doc/modern-data-driven_fr/index.html?index=/learn",
+      href: "https://fullweb.dev/codelabs/doc/modern-data-driven_fr/index.html?index=/learn",
       date: "février 2020",
       desc: {
         title: "PWA & capacités modernes",

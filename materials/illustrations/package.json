@@ -1,6 +1,6 @@
 {
   "name": "@fullweb/illustrations",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "scripts": {
     "build": "concurrently \"npm:mermaid\" \"npm:uml\"",
@@ -14,8 +14,8 @@
     "node-plantuml": "^0.9.0"
   },
   "devDependencies": {
-    "@mermaid-js/mermaid-cli": "^9.1.7",
-    "concurrently": "^7.5.0",
+    "@mermaid-js/mermaid-cli": "^9.2.2",
+    "concurrently": "^7.6.0",
     "mkdirp": "^1.0.4",
     "rimraf": "^3.0.2"
   },

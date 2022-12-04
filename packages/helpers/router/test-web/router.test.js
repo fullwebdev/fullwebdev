@@ -30,6 +30,7 @@ describe("router", () => {
     });
 
     // @ts-ignore missing argument
+    // eslint-disable-next-line no-promise-executor-return
     fakeCb = fake.returns(new Promise((resolve) => resolve()));
     abstractRouter = new AbstractRouter();
 

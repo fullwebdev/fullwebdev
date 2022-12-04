@@ -1,7 +1,7 @@
 import { promises as asyncFs } from "fs";
 import { extname, dirname, basename, relative, resolve, join } from "path";
 import HTMLMin from "html-minifier";
-import globby from "globby";
+import { globby } from "globby";
 import { ensureDir } from "../fs/path.js";
 import { createRouteFor } from "../routing/routes.js";
 import { loadCompiler } from "./load.js";
