@@ -5,29 +5,6 @@ const wording = {
   items: [
     {
       desc: {
-        title: "Tutorat",
-        subtitle:
-          "Un accompagnement individuel à votre rythme, selon vos besoins.",
-      },
-      backgroundImg:
-        "/images/web-illustrations/new-data-services-UO-QYR28hS0-unsplash.jpg",
-      cta: [
-        {
-          onclick: () => {
-            if (window.Calendly) {
-              window.Calendly.initPopupWidget({
-                url: "https://calendly.com/noelmace/tutorat-premier-entretient",
-              });
-            }
-            return false;
-          },
-          text: "organiser un entretient gratuit",
-          primary: true,
-        },
-      ],
-    },
-    {
-      desc: {
         title: "Newsletters",
         subtitle:
           "Tenez vous informés de l'actualité du Web sans effort grâce à nos newsletters.",
