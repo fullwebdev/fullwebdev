@@ -1,18 +1,19 @@
 {
   "name": "@fullweb/website",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": true,
   "scripts": {
-    "build:daucus": "daucus build",
-    "build:templates": "node ./templates/build.mjs",
     "build": "yarn run prepare-build && yarn run build:snowpack && yarn run minify && yarn run build:functions",
     "prepare-build": "yarn run build:daucus && yarn run build:templates && yarn run build:sass",
-    "build:snowpack": "snowpack build --reload",
-    "start": "yarn run prebuild && concurrently \"yarn start:daucus\" \"snowpack dev --reload\"",
-    "start:daucus": "daucus watch",
+    "build:daucus": "daucus build",
+    "build:templates": "node ./templates/build.mjs",
     "build:sass": "sass src/styles/:public/styles/build/ --load-path=node_modules",
     "build:functions": "node ./scripts/fn-assets.mjs",
+    "build:snowpack": "snowpack build --reload",
     "minify": "node ./scripts/minify.mjs",
+    "start": "yarn run prepare-build && yarn run start-all",
+    "start-all": "concurrently \"yarn start:daucus\" \"snowpack dev --reload\"",
+    "start:daucus": "daucus watch",
     "test:app": "web-test-runner"
   },
   "repository": {
