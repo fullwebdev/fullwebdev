@@ -36,6 +36,6 @@
   },
   "homepage": "https://github.com/fullwebdev/fullwebdev#readme",
   "devDependencies": {
-    "es-dev-server": "^1.57.1"
+    "es-dev-server": "^2.1.0"
   }
 }

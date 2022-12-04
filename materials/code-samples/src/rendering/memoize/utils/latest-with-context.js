@@ -1,3 +1,5 @@
+/* eslint-disable  @typescript-eslint/no-this-alias */
+
 function isEqual(newInputs, lastInputs) {
   if (newInputs.length !== lastInputs.length) {
     return false;

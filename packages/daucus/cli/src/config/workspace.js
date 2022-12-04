@@ -68,13 +68,12 @@ export class WorkSpace {
     }
 
     /** @private */
-    this._configPromise = (
-      configFileLoading || Promise.resolve(config)
-    ).then((loadedConfig) =>
-      daucusConfig.makeAllPathsAbsolute(
-        daucusConfig.create(loadedConfig),
-        this.root
-      )
+    this._configPromise = (configFileLoading || Promise.resolve(config)).then(
+      (loadedConfig) =>
+        daucusConfig.makeAllPathsAbsolute(
+          daucusConfig.create(loadedConfig),
+          this.root
+        )
     );
   }
 

@@ -26,9 +26,8 @@
 
       const shadow = this.attachShadow({ mode: "open" });
       shadow.appendChild(template.content.cloneNode(true));
-      shadow.querySelector(
-        ".random-text"
-      ).textContent = getRandomText();
+      shadow.querySelector(".random-text").textContent =
+        getRandomText();
     }
   }
   //#endregion component

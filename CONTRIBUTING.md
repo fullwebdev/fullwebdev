@@ -84,12 +84,18 @@ You'll find more information about each of these projects in their respective RE
 
 To run and build the website locally, you'll first need to install the following tools on your system:
 
-1. [Node.js & npm](https://nodejs.org/en/) current version (v14+)
+1. [Node.js](https://nodejs.org/en/) current version (v14+)
 1. [Python 3](https://www.python.org/downloads/)
 
-Then, you'll need to install the dependencies for the whole monorepo by running `npm install` from the root directory.
+> **Warning**
+>
+> This project use Yarn 3, not npm.
+>
+> Make sure to run `corepack enable` before anything. For more information, see [Yarn's install documentation](https://yarnpkg.com/getting-started/install).
 
-Finally, you can run the standalone website, without building any other packages, by going to the [/website](./website) directory and running `npm start`.
+Then, you'll need to install the dependencies for the whole monorepo by running `yarn install` from the root directory.
+
+Finally, you can run the standalone website, without building any other packages, by going to the [/website](./website) directory and running `yarn start`.
 
 ### E2E test
 
@@ -101,7 +107,7 @@ To install playwright system dependencies, see <https://github.com/microsoft/pla
 
 #### Snowpack-template
 
-When testing the Daucus Snowpack Template package (e.g. using `npm run lerna -- run start --scope "@daucus/snowpack-template"`), you need to specify the Snowpack `workspaceRoot` (i.e. add `workspaceRoot: "../../../"` to `packages/daucus/snowpack-template/snowpack.config.js`).
+When testing the Daucus Snowpack Template package (e.g. using `yarn workspace @daucus/snowpack-template run start`), you need to specify the Snowpack `workspaceRoot` (i.e. add `workspaceRoot: "../../../"` to `packages/daucus/snowpack-template/snowpack.config.js`).
 
 See the [Snowpack documentation](https://www.snowpack.dev/reference/configuration#workspaceroot) for more information.
 
@@ -128,7 +134,7 @@ Each commit message consists of a **header**, a **body**, and a **footer**.
 <footer>
 ```
 
-The `header` is mandatory and must conform to the [Commit Message Header](#commit-header) format.
+The `header` is mandatory and must conform to the Commit Message Header format.
 
 The `body` is mandatory for all commits.
 

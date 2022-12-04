@@ -24,26 +24,25 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: "16.16.0"
+          node-version: "16.18.1"
+          cache: "yarn"
 
-      - name: Cache dependencies
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+      - name: Setup Yarn
+        run: |
+          corepack enable
+          yarn plugin import workspace-tools
+          yarn --version
 
       - name: Install dependencies
-        run: npm install
+        run: yarn install
 
       - name: Build
         run: |
-          npm run build
+          yarn run build
           cp ./CNAME ./dist/CNAME
 
       - name: Validate (test, types & formating)
-        run: npm run validate
+        run: yarn run validate
 
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
@@ -69,4 +68,4 @@ jobs:
       - name: Run Lighthouse CI
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-        run: npm run lhci:autorun -- --githubAppToken="$LHCI_GITHUB_APP_TOKEN" --config lighthouserc.prod.js
+        run: yarn run lhci:autorun -githubAppToken="$LHCI_GITHUB_APP_TOKEN" --config lighthouserc.prod.js

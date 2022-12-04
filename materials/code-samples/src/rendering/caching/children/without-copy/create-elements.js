@@ -60,7 +60,8 @@
 
     //#region update
     _updateCounter() {
-      this.container.firstElementChild.textContent = this._count;
+      this.container.firstElementChild.textContent =
+        this._count;
     }
     //#endregion update
 

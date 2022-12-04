@@ -20,7 +20,7 @@ export class PandocRunError extends Error {
  * @param {string} [cwd] command working directory
  * @param {string} [src] content to send to the standard input of the pandoc command
  *
- * @returns {Promise<string>}>}
+ * @returns {Promise<string>}
  */
 export function run(args, cwd, src) {
   const pandocProcess = spawn(PANDOC_BIN, args, cwd ? { cwd } : {});

@@ -35,7 +35,7 @@ et d'avoir au moins une fois contribué au développement d'une Web App (peu imp
   - [Chrome Canary](https://www.google.com/chrome/canary/)
   - ou [Chrome Dev](https://www.google.com/chrome/dev/) si vous ne pouvez install la version Canary (e.g. sur Linux)
   - (optionnel, en supplément) [Firefox](https://www.mozilla.org/fr/firefox/channel/desktop/#nightly) Nightly ou Developer Edition
-- [Node.js](https://nodejs.org/en/) et [npm](https://www.npmjs.com/)
+- [Node.js](https://nodejs.org/en/)
 
 ### Recommandations
 

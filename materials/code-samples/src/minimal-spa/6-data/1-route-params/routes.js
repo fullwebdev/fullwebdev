@@ -1,3 +1,5 @@
+/* eslint-disable prefer-regex-literals */
+
 import { Post } from "../rendering.js";
 import { getPostData } from "../../1-fundamentals/fetch.js";
 import { Home } from "../../5-routes/rendering.js";

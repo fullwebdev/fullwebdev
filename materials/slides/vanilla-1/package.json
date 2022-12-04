@@ -5,17 +5,15 @@
   "private": true,
   "homepage": "https://fullweb.dev/slides/vanilla1/latest/",
   "scripts": {
-    "start": "concurrently --kill-others \"npm run watch\" \"npm run dev\"",
-    "start-no-remote": "concurrently --kill-others \"npm run watch-no-remote\" \"npm run dev\"",
+    "start": "concurrently --kill-others \"yarn run watch\" \"yarn run dev\"",
+    "start-no-remote": "concurrently --kill-others \"yarn run watch-no-remote\" \"yarn run dev\"",
     "dev": "lite-server",
     "clean": "rimraf ./build",
-    "prewatch": "npm run clean",
-    "watch": "webpack --watch --mode development",
+    "watch": "yarn run clean && webpack --watch --mode development",
     "watch-no-remote": "webpack --watch --mode development --env.no-remote=true",
     "build": "rimraf dist && mkdirp dist && copyup -a \"snapshots/**/*\" dist",
-    "prerebuild": "npm run clean",
-    "rebuild": "webpack --mode production",
-    "postrebuild": "rimraf snapshots/latest && mkdirp snapshots/latest && copyfiles -u 3 -a \"build/slides/vanilla1/latest/**/*\" snapshots/latest/ && npm run build"
+    "rebuild": "yarn run clean && webpack --mode production && yarn run clean-after-rebuild",
+    "clean-after-rebuild": "rimraf snapshots/latest && mkdirp snapshots/latest && copyfiles -u 3 -a \"build/slides/vanilla1/latest/**/*\" snapshots/latest/ && yarn run build"
   },
   "author": {
     "name": "Noël Macé",

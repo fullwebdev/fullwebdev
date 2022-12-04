@@ -1,3 +1,5 @@
+/* eslint-disable import/no-relative-packages */
+
 /**
  * @typedef {import("./router").NavigationOptions} NavigationOptions
  * @typedef {import("./router").NavigationListener} NavigationListener

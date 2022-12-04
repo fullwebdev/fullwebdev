@@ -26,14 +26,13 @@ export function findUp(names, from) {
   return null;
 }
 
-export const absoluteFrom = (/** @type {string} */ rootPath) => (
-  /** @type {string} */ path
-) => {
-  if (isAbsolute(path)) {
-    return path;
-  }
-  return resolve(rootPath, path);
-};
+export const absoluteFrom =
+  (/** @type {string} */ rootPath) => (/** @type {string} */ path) => {
+    if (isAbsolute(path)) {
+      return path;
+    }
+    return resolve(rootPath, path);
+  };
 
 /**
  * @param {{ url: string | import("url").URL; }} importMeta

@@ -1,3 +1,5 @@
+/* eslint-disable prefer-regex-literals */
+
 import {
   ErrorScreen,
   PostErrorScreen,

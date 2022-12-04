@@ -68,9 +68,9 @@ export class AppShell {
       this._updateDaucusMenu(/** @type {DaucusRouteMatchedEvent} */ (e));
       this._updateAppMenu(/** @type {AppRouteMatchedEvent} */ (e));
 
-      const editPageButton = /** @type {HTMLAnchorElement} */ (this.querySelector(
-        "#edit-page-button"
-      ));
+      const editPageButton = /** @type {HTMLAnchorElement} */ (
+        this.querySelector("#edit-page-button")
+      );
       const { editURL } = /** @type {CustomEvent} */ (e).detail;
       if (editURL) {
         editPageButton.href = editURL;
@@ -162,7 +162,10 @@ export class AppShell {
     this.daucusMenus.forEach(({ menu }) => {
       menu.activePath = "";
     });
-    this._router.preferredLanguage = /** @type {EventTarget & { dataset: {lang: Language } }}*/ (event.target).dataset.lang;
+    this._router.preferredLanguage =
+      /** @type {EventTarget & { dataset: {lang: Language } }}*/ (
+        event.target
+      ).dataset.lang;
     this.updateShellLang();
     window.scrollTo(0, 0);
   }
@@ -204,18 +207,18 @@ export class AppShell {
 
       footerLanguageSwitchEl.innerHTML = this.w.languageSwitch;
 
-      /** @type {HTMLElement}*/ (document.querySelector(
-        "#edit-page-button .text"
-      )).textContent = this.w.editButton;
+      /** @type {HTMLElement}*/ (
+        document.querySelector("#edit-page-button .text")
+      ).textContent = this.w.editButton;
 
       if (this._router.preferredLanguage) {
         document.documentElement.lang = this._router.preferredLanguage;
       }
     }
 
-    /** @type {HTMLElement}*/ (document.querySelector(
-      "#main-footer .footer__license"
-    )).innerHTML = this.w.copyright;
+    /** @type {HTMLElement}*/ (
+      document.querySelector("#main-footer .footer__license")
+    ).innerHTML = this.w.copyright;
 
     const languageSwitchAnchor = footerLanguageSwitchEl.querySelector("a");
 
@@ -233,9 +236,9 @@ export class AppShell {
    * @returns {HTMLElement}
    */
   querySelector(selector) {
-    let el = /** @type {HTMLElement | null | undefined} */ (this._elementsCache.get(
-      selector
-    ));
+    let el = /** @type {HTMLElement | null | undefined} */ (
+      this._elementsCache.get(selector)
+    );
     if (!el) {
       el = /** @type {HTMLElement} */ (document.querySelector(selector));
       if (!el) throw new Error(`can't find element "${selector}"`);
@@ -250,9 +253,9 @@ export class AppShell {
    * @returns {NodeListOf<Element>}
    */
   querySelectorAll(selector) {
-    let elmts = /** @type {NodeListOf<Element> | undefined} */ (this._elementsCache.get(
-      selector
-    ));
+    let elmts = /** @type {NodeListOf<Element> | undefined} */ (
+      this._elementsCache.get(selector)
+    );
     if (!elmts) {
       elmts = document.querySelectorAll(selector);
       if (!elmts.length)

@@ -24,10 +24,9 @@
     "storybook": "web-dev-server -c .storybook/server.mjs",
     "storybook:build": "build-storybook"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@web/dev-server": "~0.1.25",
-    "@web/dev-server-storybook": "~0.3.8"
+    "@web/dev-server": "~0.1.35",
+    "@web/dev-server-storybook": "~0.5.4"
   },
   "types": "types/index.d.ts",
   "publishConfig": {

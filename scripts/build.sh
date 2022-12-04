@@ -29,7 +29,7 @@ for (( i=0; i<${NBR_PACKAGES}; i++ )); do
   pkg="${PACKAGES[$i]}"
   echo "Package: $pkg"
   root_dist="${ROOTWD}/dist/${ROOT_DISTS[$i]}"
-  ${ROOTWD}/node_modules/.bin/monocli check "$pkg" --tag latest
+  yarn run monocli check "$pkg" --tag latest
   HAS_CHANGED=$?
 
   if [[ $pkg == "website" ]] && [[ $HAS_CHANGED -eq 0 ]]; then

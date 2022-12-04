@@ -1,16 +1,16 @@
-import Terser from "terser";
+import * as Terser from "terser";
 import { minifyHTMLLiterals } from "minify-html-literals";
-import globby from "globby";
+import { globby } from "globby";
 import * as path from "path";
 import { promises as asyncFs } from "fs";
 import { fileURLToPath } from "url";
 import * as HTMLMin from "html-minifier-terser";
-import CSSO from "csso";
+import { minify as minifyCSS } from "csso";
 import imagemin from "imagemin";
 import imageminJpegtran from "imagemin-jpegtran";
 import imageminPngquant from "imagemin-pngquant";
 import imageminSvgo from "imagemin-svgo";
-import imageminWebp from "imagemin-webp";
+// import imageminWebp from "imagemin-webp";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -53,17 +53,14 @@ const options = {
 const runners = [
   {
     glob: "**/*.js",
-    minify: (source) => {
+    minify: async (source) => {
       const minLiterals = minifyHTMLLiterals(source);
       const jsContentWithMinifiedLiterals =
         (minLiterals && minLiterals.code) || source;
-      const minified = Terser.minify(
+      const minified = await Terser.minify(
         jsContentWithMinifiedLiterals,
         options.terser
       );
-      if (minified.error) {
-        throw new Error(minified.error);
-      }
       return minified.code;
     },
   },
@@ -73,7 +70,7 @@ const runners = [
   },
   {
     glob: "**/*.css",
-    minify: (source) => CSSO.minify(source).css,
+    minify: (source) => minifyCSS(source).css,
   },
 ];
 
@@ -88,7 +85,7 @@ async function run() {
       return Promise.all(
         files.map(async (file) => {
           const content = await asyncFs.readFile(file, { encoding: "utf-8" });
-          const minifiedContent = minify(content);
+          const minifiedContent = await minify(content);
           await asyncFs.writeFile(file, minifiedContent, { encoding: "utf-8" });
         })
       );
@@ -104,7 +101,7 @@ async function run() {
         quality: [0.6, 0.8],
       }),
       imageminSvgo({
-        plugins: [{ removeViewBox: false }],
+        plugins: [{ name: "removeViewBox", active: false }],
       }),
       // imageminWebp({quality: 50})
     ],

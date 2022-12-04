@@ -301,8 +301,7 @@ const wording = {
               {
                 // date: "30 juin 2022",
                 text: "SunnyTech",
-                href:
-                  "https://sunny-tech.io/schedule/2022-06-30?sessionId=PuYsiu2FRao8oBToZbo7",
+                href: "https://sunny-tech.io/schedule/2022-06-30?sessionId=PuYsiu2FRao8oBToZbo7",
               },
             ],
           },
@@ -312,8 +311,7 @@ const wording = {
             links: [
               {
                 text: "Le Camping des Speakers",
-                href:
-                  "https://camping-speakers.fr/sessions/comment_ne_pas_etre_un_c/",
+                href: "https://camping-speakers.fr/sessions/comment_ne_pas_etre_un_c/",
               },
               {
                 text: "Codeurs en Seine",
@@ -333,8 +331,7 @@ const wording = {
               {
                 // date: "10 sept. 2021",
                 text: "JUG SummerCamp",
-                href:
-                  "https://www.jugsummercamp.org/edition/12/presentations/zq4HdtYsZFbQghPedwLs",
+                href: "https://www.jugsummercamp.org/edition/12/presentations/zq4HdtYsZFbQghPedwLs",
               },
               {
                 // date: "21 janv. 2022",
@@ -344,8 +341,7 @@ const wording = {
               {
                 // date: "3 févr. 2022",
                 text: "Snowcamp (keynote d'ouverture)",
-                href:
-                  "https://snowcamp2022.sched.com/event/qa5F/il-etait-une-fois-les-navigateurs-nulb",
+                href: "https://snowcamp2022.sched.com/event/qa5F/il-etait-une-fois-les-navigateurs-nulb",
               },
               {
                 // date: "10 mars 2022",
@@ -359,8 +355,7 @@ const wording = {
               {
                 // date: "1 juillet 2022",
                 text: "SunnyTech",
-                href:
-                  "https://sunny-tech.io/schedule/2022-07-01?sessionId=zq4HdtYsZFbQghPedwLs",
+                href: "https://sunny-tech.io/schedule/2022-07-01?sessionId=zq4HdtYsZFbQghPedwLs",
               },
               {
                 // date: "30 sept. 2022",
@@ -390,8 +385,7 @@ const wording = {
               {
                 // date: "22 oct. 2019",
                 text: "Devfest Nantes",
-                href:
-                  "https://devfest2019.gdgnantes.com/sessions/the_web_is_on__f_i_r_e________conference_/",
+                href: "https://devfest2019.gdgnantes.com/sessions/the_web_is_on__f_i_r_e________conference_/",
               },
               {
                 // date: "20 mars 2019",
@@ -407,8 +401,7 @@ const wording = {
             links: [
               {
                 text: "Devfest Toulouse 2019",
-                href:
-                  "https://2019.devfesttoulouse.fr/sessions/brace_yourself__vanilla_is_coming__back__/",
+                href: "https://2019.devfesttoulouse.fr/sessions/brace_yourself__vanilla_is_coming__back__/",
               },
             ],
           },
@@ -440,8 +433,7 @@ const wording = {
             links: [
               {
                 text: "Capitole du libre 2018",
-                href:
-                  "https://2018.capitoledulibre.org/programme/#reconcilier-lesn-avec-la-communaute-et-le-logiciel",
+                href: "https://2018.capitoledulibre.org/programme/#reconcilier-lesn-avec-la-communaute-et-le-logiciel",
               },
             ],
           },
@@ -451,8 +443,7 @@ const wording = {
             links: [
               {
                 text: "Algolia TechLunch",
-                href:
-                  "https://www.meetup.com/fr-FR/TechLunch/events/msrlfpyxmbjc/",
+                href: "https://www.meetup.com/fr-FR/TechLunch/events/msrlfpyxmbjc/",
               },
             ],
           },
@@ -462,8 +453,7 @@ const wording = {
             links: [
               {
                 text: "Angular X Paris",
-                href:
-                  "https://www.meetup.com/fr-FR/AngularX-Paris/events/251911007/",
+                href: "https://www.meetup.com/fr-FR/AngularX-Paris/events/251911007/",
               },
             ],
           },
@@ -479,8 +469,7 @@ const wording = {
               {
                 // date: "14 fév. 2020",
                 text: "Devfest Paris 2020",
-                href:
-                  "https://devfest.gdgparis.com/sessions/the_web_is_still_on_f_i_r_e_workshop_/",
+                href: "https://devfest.gdgparis.com/sessions/the_web_is_still_on_f_i_r_e_workshop_/",
               },
               {
                 // date: "6 juin 2019",
@@ -505,8 +494,7 @@ const wording = {
             links: [
               {
                 text: "Angular 200 (referring teacher)",
-                href:
-                  "https://github.com/sfeir-open-source/sfeir-school-angular",
+                href: "https://github.com/sfeir-open-source/sfeir-school-angular",
               },
               {
                 text: "PWA 200 (referring teacher)",
@@ -514,8 +502,7 @@ const wording = {
               },
               {
                 text: "Speaker 200",
-                href:
-                  "https://github.com/sfeir-open-source/sfeir-school-speaker",
+                href: "https://github.com/sfeir-open-source/sfeir-school-speaker",
               },
             ],
           },
@@ -546,8 +533,7 @@ const wording = {
               "Développement et architecture des applications Web Modernes - Retrouver les fondamentaux",
             // date: "17 mars 2021",
             context: "Éditions ENI",
-            href:
-              "https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523",
+            href: "https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523",
           },
           /* {
             headline: "blog",
@@ -559,8 +545,7 @@ const wording = {
             headline: "Shared Behaviors best practice with Mocha",
             // date: "26 août 2019",
             context: "Open Web Components",
-            href:
-              "https://dev.to/open-wc/shared-behaviors-best-practices-with-mocha-519d",
+            href: "https://dev.to/open-wc/shared-behaviors-best-practices-with-mocha-519d",
           },
           {
             headline: `"Progressive Web Apps" White Paper`,
@@ -572,8 +557,7 @@ const wording = {
             headline: "AngularConnect 2018 on-the-spot",
             // date: "10 nov. 2018",
             context: "Medium (SFEIR)",
-            href:
-              "https://medium.com/@noelm/angularconnect-2018-on-the-spot-92315b79af79",
+            href: "https://medium.com/@noelm/angularconnect-2018-on-the-spot-92315b79af79",
           },
           {
             headline: `"Advanced JQuery Development" training handbook`,

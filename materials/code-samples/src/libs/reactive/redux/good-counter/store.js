@@ -1,4 +1,6 @@
 /* global Redux */
+/* eslint-disable default-param-last */
+
 //#region actions
 const INCREMENT = "INCREMENT";
 const DECREMENT = "DECREMENT";

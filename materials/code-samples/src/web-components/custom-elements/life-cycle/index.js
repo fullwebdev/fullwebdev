@@ -13,9 +13,8 @@ customElements.define("hello-world", HelloWorldComponent);
 const container = document.getElementById("after-define");
 
 try {
-  const helloWorldEl = document.createElement(
-    "hello-world"
-  );
+  const helloWorldEl =
+    document.createElement("hello-world");
   console.log("élément créé après sa définition");
   if (!helloWorldEl.querySelector("p")) {
     helloWorldEl.innerHTML = `<p class="error">nothing here</p>`;

@@ -107,9 +107,8 @@
 
     //#region render
     render() {
-      const container = this.shadowRoot.querySelector(
-        ".random-text"
-      );
+      const container =
+        this.shadowRoot.querySelector(".random-text");
 
       if (container) {
         container.textContent = this.#text;
@@ -128,9 +127,8 @@
       /**
        * @type {HTMLElement}
        */
-      const content = this.shadowRoot.querySelector(
-        ".random-text"
-      );
+      const content =
+        this.shadowRoot.querySelector(".random-text");
       if (isInverted) {
         content.style.color = "black";
         content.style.backgroundColor = color;
