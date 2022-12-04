@@ -1,6 +1,6 @@
 {
   "name": "@fullweb/website",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": true,
   "scripts": {
     "build": "yarn run prepare-build && yarn run build:snowpack && yarn run minify && yarn run build:functions",

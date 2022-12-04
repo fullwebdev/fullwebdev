@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.4](https://github.com/fullwebdev/fullwebdev/compare/v1.0.3...v1.0.4) (2022-12-04)
+
+### Bug Fixes
+
+- **website:** small list on intermediate screen ([9a90842](https://github.com/fullwebdev/fullwebdev/commit/9a908429d3708ab303f3787d6074527c276a0449))
+
+### Tooling
+
+- fix dependencies to modern-helpers ([1ac0fde](https://github.com/fullwebdev/fullwebdev/commit/1ac0fde267d56f557b7ce71d9a93e60fdfff6234))
+- **website:** fix dev server ([3e4809e](https://github.com/fullwebdev/fullwebdev/commit/3e4809e40e11e3083b6a1089e56e1e175df3a9fd))
+
+### Misc
+
+- **website:** remove outdated services ([5ecc23e](https://github.com/fullwebdev/fullwebdev/commit/5ecc23e2fc223902ffc0ffb8f0fe3069bc8d3317))
+- **website:** update the about section ([5ffc275](https://github.com/fullwebdev/fullwebdev/commit/5ffc27547f7a6f360497eef6f8184a8b35807048))
+
 ### [1.0.3](https://github.com/fullwebdev/fullwebdev/compare/v1.0.2...v1.0.3) (2022-12-04)
 
 ### Misc
