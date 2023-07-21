@@ -13,11 +13,12 @@ interface ListSectionWording {
 
 interface ExperienceItemWording {
   jobTitle?: string;
+  duration?: string;
   company?: {
     name?: string;
     details?: string;
   };
-  startDate: string;
+  startDate?: string;
   endDate?: string;
   details?: string[] | string;
   shortLine?: boolean;
@@ -40,9 +41,9 @@ export interface CVNMAWording {
   note: string;
   presentation: {
     title: string;
-    abstract: string;
+    abstract: string[];
     langs: ListSectionWording;
-    networks: {
+    networks?: {
       title: string;
       content: {
         icon: string;
@@ -53,7 +54,7 @@ export interface CVNMAWording {
     };
   };
   intro: {
-    callToAction: {
+    callToAction?: {
       text: string;
       url: string;
       img: {
@@ -74,9 +75,10 @@ export interface CVNMAWording {
   education: {
     title: string;
     items: {
-      school: string;
+      school?: string;
       diploma: string;
-      year: string;
+      year?: string;
+      title?: string;
     }[];
   };
   accomplishments: {

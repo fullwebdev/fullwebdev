@@ -321,6 +321,10 @@ export class AppRouter extends AbstractRouter {
         componentURL: "./views/cv-nma.js",
         wordings: "cv-nma",
       },
+      "/cv/min": {
+        componentURL: "./views/cv-min.js",
+        wordings: "cv-min",
+      },
       "/eni/ce-name": {
         redirectTo: "/tools/ce-name",
       },

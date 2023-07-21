@@ -28,6 +28,12 @@ body {
   padding-bottom: 400px;
 }
 
+@media print {
+  #main-content-wrapper {
+    padding-bottom: 0;
+  }
+}
+
 #main-footer {
   background-color: var(--soft-bg-color);
   text-align: center;

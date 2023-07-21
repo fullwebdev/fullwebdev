@@ -5,12 +5,14 @@ const urlLivreENI =
 const wording = {
   title: "Noël Macé",
   subtitle: "Développeur/Architecte Web",
-  note: "13 ans d'expérience",
+  note: "14 ans d'expérience",
   presentation: {
     title: "Présentation",
-    abstract: `Je suis avant tout un développeur passionné et curieux.
-    Le Web est pour moi le meilleur des terrains de jeux, changeant et évoluant sans cesse.
-    Ce jeux d'équipe, le partage des connaissance, le travail collaboratif, motivent l'ensemble de mon travail, associant savoir faire technique et savoir être (humain).`,
+    abstract: [
+      `D'un naturel passionné et investi, je recherche perpétuellement de nouveaux défis techniques, intellectuels et humains.`,
+      `Grâce à cela, j'ai au cours des années accumulé une expérience complète et variée dans de nombreux domaines, notamment: le développement et l'architecture applicative, l'administration système et réseaux, la pédagogie, le management et la communication.`,
+      `Depuis 2014, mon focus technique se porte essentiellement sur la plateforme Web, ses outils et ses standards.`,
+    ],
     langs: {
       title: "Langues",
       content: [
@@ -28,12 +30,6 @@ const wording = {
         //   text: "contact@noelmace.com",
         //   url: "mailto:contact@noelmace.com",
         // },
-        {
-          icon: "/images/icons/twitter.svg",
-          alt: "Twitter",
-          text: "@noel_mace",
-          url: "https://twitter.com/noel_mace",
-        },
         {
           icon: "/images/icons/linkedin.svg",
           alt: "LinkedIn",
@@ -105,6 +101,8 @@ const wording = {
               ></em
             >
             publié aux éditions ENI en 2021`,
+          /* HTML */ `Aptitudes fullstack et DevOps (REST, ORM, CI/CD, SGBD,
+          Docker, PaaS, Node.js, Python, Java, etc.)`,
         ],
       },
       {
@@ -157,10 +155,10 @@ const wording = {
           company: { name: "blindnet", details: "start-up" },
           startDate: "févr. 2022",
           endDate: "oct. 2022",
-          jobTitle: "Head of DevRel",
+          jobTitle: "Head of DevRel / CTO",
           details: [
             "Promotion de la privacy",
-            "Encadrement et contribution au développement Web, Java et Scala",
+            "Encadrement du développement Web, Java et Scala",
             "accompagnement client et rédaction de documentations",
           ],
           icon: "/images/web-illustrations/companies-logos/blindnet.svg",
@@ -178,13 +176,13 @@ const wording = {
             /* HTML */ `Rédaction du livre
               <a href=${urlLivreENI} target="_blank" rel="noferrer noopener"
                 ><strong
-                  >Développement et architecture des applications Web Modernes -
-                  Retrouver les fondamentaux</strong
+                  >Développement et architecture des applications Web
+                  Modernes</strong
                 ></a
               >
               (608 pages)`,
             "16500 lignes de code d'exemple, testées et executables",
-            "Développement de bibliothèques, outils, scripts et projets permettant de valider et appuyer le contenu du livre, ainsi que de faciliter sa rédaction (CI/CD)",
+            "Développement de bibliothèques, outils, scripts et projets permettant de valider et appuyer la rédaction",
           ],
         },
         {
@@ -213,7 +211,6 @@ const wording = {
             "Stabilisation et amélioration de la maintenabilité d'une application <strong>Angular, NgRx et Preact</strong> en tant que tech lead pour la Société Générale",
             "Encadrement et montée en compétence d'une équipe de <strong>30 développeurs Angular</strong> (Paris & Hong Kong) pour BNP Paribas",
             "Audit et amélioration des performances de Progressive Web Apps (Vanilla, React, Vue, Angular), migrations AngularJS-Angular, réponses à appels d'offre, etc.",
-            "Gestion communautaire interne et externe (organisation d'évènements et réseaux sociaux d'entreprise)",
             "8 conférences et 5 formations délivrées (cf. réalisations)",
           ],
         },
@@ -245,7 +242,7 @@ const wording = {
           company: { name: "Freelance", details: "NMC Consulting" },
           jobTitle: "Formateur, Consultant",
           startDate: "mai 2011",
-          endDate: "juin 2015",
+          endDate: "nov. 2015",
           icon: "/images/web-illustrations/companies-logos/nmc.png",
           details: [
             "<strong>38 formations</strong> délivrées en ligne et présentiel",
@@ -327,77 +324,12 @@ const wording = {
           {
             headline: "Il était une fois... les navigateurs",
             date: "2021-2022",
-            links: [
-              {
-                // date: "2 juil. 2021",
-                text: "Riviera DEV",
-                href: "https://2021.rivieradev.fr/session/1029",
-              },
-              {
-                // date: "10 sept. 2021",
-                text: "JUG SummerCamp",
-                href: "https://www.jugsummercamp.org/edition/12/presentations/zq4HdtYsZFbQghPedwLs",
-              },
-              {
-                // date: "21 janv. 2022",
-                text: "Touraine Tech",
-                href: "https://2022.touraine.tech/talk/zq4HdtYsZFbQghPedwLs",
-              },
-              {
-                // date: "3 févr. 2022",
-                text: "Snowcamp (keynote d'ouverture)",
-                href: "https://snowcamp2022.sched.com/event/qa5F/il-etait-une-fois-les-navigateurs-nulb",
-              },
-              {
-                // date: "10 mars 2022",
-                text: "Université de Poitiers (master info-com)",
-              },
-              {
-                // date: "13 mai 2022",
-                text: "Devoxx UK",
-                href: "https://www.devoxx.co.uk/talk/?id=4955",
-              },
-              {
-                // date: "1 juillet 2022",
-                text: "SunnyTech",
-                href: "https://sunny-tech.io/schedule/2022-07-01?sessionId=zq4HdtYsZFbQghPedwLs",
-              },
-              {
-                // date: "30 sept. 2022",
-                text: "LunaConf",
-              },
-              {
-                // date: "14 oct. 2022",
-                text: "PHP Forum",
-                href: "https://event.afup.org/forum-php-2022/programme/#4041",
-              },
-            ],
+            context: "9 présentations (dont une keynote)",
           },
           {
             headline: "The Web is on FIRE",
             date: "2019",
-            links: [
-              {
-                // date: "10 déc. 2019",
-                text: "Paris Open Source Summit",
-                href: "https://2019.opensourcesummit.paris",
-              },
-              {
-                // date: "4 nov. 2019",
-                text: "Devoxx Belgium (3h deep dive)",
-                href: "https://devoxx.be/schedule/speaker-details/?id=50822",
-              },
-              {
-                // date: "22 oct. 2019",
-                text: "Devfest Nantes",
-                href: "https://devfest2019.gdgnantes.com/sessions/the_web_is_on__f_i_r_e________conference_/",
-              },
-              {
-                // date: "20 mars 2019",
-                text: "BreizhCamp (Université - 3h)",
-                href: "https://2019.breizhcamp.org/conference/programme/",
-              },
-            ],
+            context: "2 conférences & 2 deep-dive (3h)",
           },
 
           {
@@ -613,7 +545,6 @@ const wording = {
     content: [
       "Logiciel Libre, Open Source & Ethical Source",
       "Pédagogie et vulgarisation scientifique",
-      "Histoire des technologies et sociétés",
       "Jeux de rôle et de société",
       "Sciences naturelles, sociales, politiques et&nbsp;cognitives",
       "Legos, maquettes, puzzles",

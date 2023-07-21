@@ -4,7 +4,7 @@ import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import { classMap } from "lit/directives/class-map.js";
 import { WithWording } from "../utils/wording-mixin.js";
 
-export const selector = "nma-cv";
+export const selector = "ano-cv";
 
 class CVExperienceElement extends LitElement {
   static get properties() {
@@ -20,7 +20,7 @@ class CVExperienceElement extends LitElement {
     this._flatGroups = true;
     /**
      * FIXME : typing w/ jsdoc only
-     * @type {import('./cv-nma.js').ExperienceWording}
+     * @type {import('./cv-min.js').ExperienceWording}
      */
     // eslint-disable-next-line no-unused-expressions
     this.wording;
@@ -85,14 +85,8 @@ class CVExperienceElement extends LitElement {
                       </div>`
                     : ""}
                   <div class="dates">
-                    ${item.endDate
-                      ? html`<div class="start-date">
-                            ${this.wording.dateIntervals.start}
-                            ${item.startDate}
-                          </div>
-                          <div class="end-date">
-                            ${this.wording.dateIntervals.end} ${item.endDate}
-                          </div>`
+                    ${item.duration
+                      ? html`<div class="start-date">${item.duration}</div> `
                       : html` <div>${this.wording.dateIntervals.noEnd}</div>
                           <div class="start-date">${item.startDate}</div>`}
                   </div>
@@ -133,11 +127,11 @@ class CVExperienceElement extends LitElement {
   }
 }
 
-customElements.define("nma-cv-experience", CVExperienceElement);
+customElements.define("ano-cv-experience", CVExperienceElement);
 
-/** @type {import('./cv-nma.js').WithCVNMAWording & LitElement} */
+/** @type {import('./cv-min.js').WithCVAnoWording & LitElement} */
 // @ts-ignore missing props
-const LitElementWithCVNMAWording = WithWording(LitElement);
+const LitElementWithCVAnoWording = WithWording(LitElement);
 
 const timelineStyle = css`
   * {
@@ -338,10 +332,10 @@ const timelineStyle = css`
 `;
 
 /**
- * @class NMACVElement
+ * @class AnoCVElement
  * @property {boolean} quiet - hide calls to action
  */
-export default class NMACVElement extends LitElementWithCVNMAWording {
+export default class AnoCVElement extends LitElementWithCVAnoWording {
   static get properties() {
     return {
       quiet: { type: Boolean },
@@ -364,8 +358,7 @@ export default class NMACVElement extends LitElementWithCVNMAWording {
         }
 
         h1 {
-          font-size: 2rem;
-          margin-top: 0;
+          font-size: 1.1rem;
         }
 
         .first-page {
@@ -401,6 +394,10 @@ export default class NMACVElement extends LitElementWithCVNMAWording {
           justify-content: center;
           flex-wrap: wrap;
           margin-top: 1rem;
+        }
+
+        .presentation-contents .abstract {
+          margin: 2rem auto;
         }
 
         .presentation-contents > * {
@@ -559,6 +556,19 @@ export default class NMACVElement extends LitElementWithCVNMAWording {
           margin: .2em 0;
         }
 
+        #cv__misc h2 {
+          margin-top: 0;
+        }
+
+        .xp-note {
+          text-align: center;
+          margin-inline: 2em;
+          font-style: italic;
+          font-size: .9rem;
+          background-color: var(--primary-bg-color);
+          padding: 2rem 2em 0;
+        }
+
         @media print {
           @page {
             margin: 100cm !important;
@@ -569,18 +579,25 @@ export default class NMACVElement extends LitElementWithCVNMAWording {
             width: 100vw;
           }
 
+          .last-page {
+            padding-top: 3em;
+          }
+
           .first-page {
             height: 100vh;
             padding-right: 2rem;
           }
 
+          .xp-note {
+            padding: 0;
+          }
+
           #cv__xp {
-            height: 200vh;
             margin-top: 0;
           }
 
           #cv__xp > h2 {
-            display: none;
+            text-align: center;
           }
 
           #cv__education {
@@ -686,7 +703,7 @@ export default class NMACVElement extends LitElementWithCVNMAWording {
       <div class="first-page">
         <section id="cv__presentation">
           <div class="presentation-header">
-            <h1>${this.anonymous ? "NMA" : this.w.title}</h1>
+            <h1>${this.w.title}</h1>
             <p class="subtitle">${this.w.subtitle}</p>
             <p class="note">${this.w.note}</p>
           </div>
@@ -698,37 +715,6 @@ export default class NMACVElement extends LitElementWithCVNMAWording {
               )}
             </div>
           </div>
-          ${!this.w.presentation.networks
-            ? ""
-            : html`<div class="networks">
-                <h3>${this.w.presentation.networks.title}</h3>
-                <ul>
-                  ${this.w.presentation.networks.content.map((item) =>
-                    item.url
-                      ? html`<a
-                          href=${item.url}
-                          target="_blank"
-                          rel="noreferrer noopener"
-                          class="invisible-link"
-                          ><li class="networks__item">
-                            <img
-                              src=${item.icon}
-                              alt=${item.alt}
-                              class="light-icon"
-                            /><span class="networks__item__content"
-                              >${item.text}</span
-                            >
-                          </li></a
-                        > `
-                      : html`<li class="networks__item">
-                          <img src=${item.icon} alt=${item.alt} /><span
-                            class="networks__item__content"
-                            >${item.text}</span
-                          >
-                        </li>`
-                  )}
-                </ul>
-              </div>`}
           <div class="langs">
             <h3>${this.w.presentation.langs.title}</h3>
             <ul>
@@ -755,34 +741,20 @@ export default class NMACVElement extends LitElementWithCVNMAWording {
               </ul>
             </div>`
           )}
-          ${!this.w.intro.callToAction
-            ? html`<div></div>`
-            : html`<div class="cv__intro__cta">
-                <p>${this.w.intro.callToAction.text}</p>
-                <a
-                  href="https://${this.w.intro.callToAction.url}"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                  class="call-to-action"
-                >
-                  <img
-                    src=${this.w.intro.callToAction.img.src}
-                    alt=${this.w.intro.callToAction.img.alt}
-                    height="24px"
-                  />
-                  <div class="print-only print-link">
-                    ${this.w.intro.callToAction.url}
-                  </div>
-                </a>
-              </div>`}
+          <div></div>
         </section>
       </div>
       <section id="cv__xp">
         <h2>${this.w.experience.title}</h2>
-        <nma-cv-experience
+        <ano-cv-experience
           .wording=${this.w.experience}
           ?align=${this.align}
-        ></nma-cv-experience>
+        ></ano-cv-experience>
+        <p class="xp-note">
+          Certaines activités ayant fait intervenir plusieurs domaines de
+          compétences, le total cumulé de celles-ci dépasse mon expérience
+          professionnelle globale.
+        </p>
       </section>
       <div class="last-page">
         <section id="cv__accomplishments">
@@ -849,9 +821,8 @@ export default class NMACVElement extends LitElementWithCVNMAWording {
             ${this.w.education.items.map(
               (item) =>
                 html`<li>
-                  <span class="cv__education__year">${item.year}</span> :
-                  <span class="cv__education__diploma">${item.diploma}</span>,
-                  <span class="cv__education__school">${item.school}</span>
+                  <span class="cv__education__school">${item.diploma}</span>
+                  <span class="cv__education__diploma">${item.title}</span>
                 </li>`
             )}
           </ul>
@@ -862,4 +833,4 @@ export default class NMACVElement extends LitElementWithCVNMAWording {
 }
 
 // @ts-ignore missing props
-customElements.define(selector, NMACVElement);
+customElements.define(selector, AnoCVElement);
