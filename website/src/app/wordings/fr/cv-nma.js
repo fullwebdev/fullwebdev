@@ -27,8 +27,14 @@ const wording = {
         // {
         //   icon: "/images/icons/mail.svg",
         //   alt: "Email",
-        //   text: "contact@noelmace.com",
-        //   url: "mailto:contact@noelmace.com",
+        //   text: "",
+        //   url: "mailto:",
+        // },
+        // {
+        //   icon: "/images/icons/phone.svg",
+        //   alt: "Tel",
+        //   text: "",
+        //   url: "tel:",
         // },
         {
           icon: "/images/icons/linkedin.svg",
@@ -42,24 +48,24 @@ const wording = {
           text: "noelmace",
           url: "https://github.com/noelmace",
         },
-        {
-          icon: "/images/icons/web.svg",
-          alt: "website",
-          text: "fullweb.dev",
-          url: "https://fullweb.dev",
-        },
+        // {
+        //   icon: "/images/icons/web.svg",
+        //   alt: "website",
+        //   text: "fullweb.dev",
+        //   url: "https://fullweb.dev",
+        // },
         {
           icon: "/images/icons/webpage.svg",
           alt: "page web personnelle",
           text: "noelmace.com",
           url: "https://noelmace.com",
         },
-        {
-          icon: "/images/icons/youtube.svg",
-          alt: "Youtube",
-          text: "tube.noelmace.com",
-          url: "https://tube.noelmace.com",
-        },
+        // {
+        //   icon: "/images/icons/youtube.svg",
+        //   alt: "Youtube",
+        //   text: "tube.noelmace.com",
+        //   url: "https://tube.noelmace.com",
+        // },
       ],
     },
   },
