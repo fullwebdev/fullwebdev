@@ -1,0 +1,29 @@
+{
+  "name": "@daucus/menu",
+  "version": "0.4.1",
+  "description": "render the menu of a Daucus project from its configuration",
+  "license": "MIT",
+  "main": "./index.js",
+  "module": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullwebdev/fullwebdev.git",
+    "directory": "packages/daucus/menu"
+  },
+  "bugs": {
+    "url": "https://github.com/fullwebdev/fullwebdev/issues"
+  },
+  "scripts": {
+    "start": "web-dev-server",
+    "storybook": "web-dev-server -c .storybook/server.mjs",
+    "storybook:build": "build-storybook"
+  },
+  "devDependencies": {
+    "@web/dev-server": "~0.1.35",
+    "@web/dev-server-storybook": "~0.5.4"
+  },
+  "types": "types/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  }
+}

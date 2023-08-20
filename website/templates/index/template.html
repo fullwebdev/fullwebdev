@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="{{language.code}}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <base href="/" />
+    <title>fullweb.dev</title>
+
+    <script>
+      if (
+        window.matchMedia("(prefers-color-scheme: dark)").media === "not all"
+      ) {
+        document.documentElement.style.display = "none";
+        document.head.insertAdjacentHTML(
+          "beforeend",
+          '<link rel="stylesheet" href="/styles/light-theme.css" onload="document.documentElement.style.display = \'\'">'
+        );
+      }
+    </script>
+    <link
+      rel="stylesheet"
+      href="/styles/dark-theme.css"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="stylesheet"
+      href="/styles/light-theme.css"
+      media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)"
+    />
+    <style>
+      {{{css.shell}}}
+    </style>
+    <link
+      rel="stylesheet"
+      href="/styles/shell_small.css"
+      media="screen and (max-width: 1023px)"
+    />
+    <link
+      rel="stylesheet"
+      href="/styles/shell_xsmall.css"
+      media="screen and (max-width: 374px)"
+    />
+    <link
+      rel="stylesheet"
+      href="/styles/shell_large.css"
+      media="screen and (min-width: 1024px)"
+    />
+    <link rel="stylesheet" href="/styles/shell_print.css" media="print" />
+    <link
+      rel="preload"
+      href="/styles/not-critical-shell.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="/styles/build/drawer.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="/styles/build/daucus-pages.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link rel="preconnect" href="https://mirrors.creativecommons.org" />
+    <link rel="preconnect" href="https://unpkg.com" />
+
+    <link rel="manifest" href="/manifest.json" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/favicon/favicon-96x96.png"
+    />
+    <meta property="og:site_name" content="fullweb.dev" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="" />
+
+    <script defer type="module" src="/dist/app/color-theme.js"></script>
+
+    <!-- meta-tags:start -->
+    <meta property="og:title" content="fullweb.dev" />
+    <meta name="description" content="{{meta.description}}" />
+    <meta property="og:description" content="{{meta.description}}" />
+    <meta property="og:image" content="{{{meta.twitterCard}}}" />
+    <meta name="twitter:image:alt" content="{{meta.description}}" />
+    <!-- meta-tags:end -->
+  </head>
+  <body>
+    <aside class="mdc-drawer mdc-drawer--modal" id="mobile-drawer">
+      <div class="mdc-drawer__content">
+        <div class="mdc-drawer__header">
+          <a class="mdc-drawer__title" href="/"
+            ><span class="home">fullweb.dev</span></a
+          >
+        </div>
+        <nav class="mdc-list">
+          <div id="nav__language-switch">
+            <button
+              role="switch"
+              aria-checked="{{language.isFrench}}"
+              id="languageSwitchNav"
+              class="i18n-switch"
+              data-lang="{{language.otherCode}}"
+            >
+              <span aria-label="français">fr</span>
+              <span aria-label="english">en</span>
+            </button>
+            <label for="languageSwitchNav" class="switch sr-only"
+              >{{language.switcherLabel}}</label
+            >
+          </div>
+          <hr class="mdc-list-divider" />
+          <div id="modal-navigation">
+            <a class="mdc-list-item" href="/learn">
+              <span class="mdc-list-item__ripple"></span>
+              <span class="mdc-list-item__text">{{nav.0}}</span>
+            </a>
+            <a class="mdc-list-item" href="/build">
+              <span class="mdc-list-item__ripple"></span>
+              <span class="mdc-list-item__text">{{nav.1}}</span>
+            </a>
+          </div>
+          <div id="mobile-menu">
+            <hr class="mdc-list-divider" />
+            <daucus-menu></daucus-menu>
+          </div>
+
+          <div class="external-icons">
+            <dark-mode-toggle
+              light="Light Theme"
+              dark="Dark Theme"
+            ></dark-mode-toggle>
+
+            <hr class="mdc-list-divider" />
+            <a
+              class="mdc-list-item"
+              href="https://twitter.com/noel_mace"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span class="mdc-list-item__ripple"></span>
+              <span class="mdc-list-item__graphic">
+                <svg focusable="false" viewBox="0 0 51.8 50.4" fill="none">
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M50,9.3c-1.8,0.8-3.8,1.4-5.9,1.6c2.1-1.3,3.7-3.3,4.5-5.7c-2,1.2-4.2,2-6.5,2.5c-1.9-2-4.5-3.2-7.5-3.2c-5.7,0-10.3,4.6-10.3,10.3c0,0.8,0.1,1.6,0.3,2.3C16.1,16.7,8.5,12.6,3.5,6.4c-0.9,1.5-1.4,3.3-1.4,5.2c0,3.6,1.8,6.7,4.6,8.5C5,20,3.4,19.6,2,18.8c0,0,0,0.1,0,0.1c0,5,3.5,9.1,8.2,10.1c-0.9,0.2-1.8,0.4-2.7,0.4c-0.7,0-1.3-0.1-1.9-0.2c1.3,4.1,5.1,7,9.6,7.1c-3.5,2.8-7.9,4.4-12.7,4.4c-0.8,0-1.6,0-2.4-0.1c4.5,2.9,9.9,4.6,15.7,4.6c18.9,0,29.2-15.6,29.2-29.2c0-0.4,0-0.9,0-1.3C46.9,13.2,48.6,11.4,50,9.3z"
+                  ></path>
+                </svg>
+              </span>
+              <span class="mdc-list-item__text">Twitter</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </aside>
+    <div class="mdc-drawer-scrim"></div>
+    <div id="main-content" class="{{globalClass}}">
+      <div id="main-content-wrapper">
+        <header id="main-header" class="navbar">
+          <div class="row">
+            <svg viewBox="0 0 100 80" width="25" height="25" id="burger-menu">
+              <rect width="100" height="20"></rect>
+              <rect y="30" width="100" height="20"></rect>
+              <rect y="60" width="100" height="20"></rect>
+            </svg>
+            <a class="home" href="/">fullweb.dev</a>
+            <ul class="navigation" id="header-navigation">
+              <li>
+                <a class="nav-link" href="/learn"
+                  ><span class="nav-link-inner">{{nav.0}}</span></a
+                >
+              </li>
+              <li>
+                <a class="nav-link" href="/build"
+                  ><span class="nav-link-inner">{{nav.1}}</span></a
+                >
+              </li>
+            </ul>
+            <div id="header__language-switch">
+              <button
+                role="switch"
+                aria-checked="{{language.isFrench}}"
+                id="languageSwitchHeader"
+                class="i18n-switch"
+                data-lang="{{language.otherCode}}"
+              >
+                <span aria-label="français">fr</span>
+                <span aria-label="english">en</span>
+              </button>
+              <label for="languageSwitchHeader" class="switch sr-only"
+                >{{language.switcherLabel}}</label
+              >
+            </div>
+            <div class="external-icons-container">
+              <dark-mode-toggle></dark-mode-toggle>
+            </div>
+          </div>
+        </header>
+        <main id="content-container">
+          <div class="content">
+            <div id="standard-menu">
+              <daucus-menu></daucus-menu>
+            </div>
+            <div class="main-content">
+              <div id="page-message"></div>
+              <div id="page-container">
+                {{#home}}{{{home}}}{{/home}} {{^home}}<html-loader
+                ></html-loader>{{/home}}
+              </div>
+              <div id="page-spinner">
+                <div class="spinner__double-bounce1"></div>
+                <div class="spinner__double-bounce2"></div>
+              </div>
+              <footer id="main-footer">
+                <div class="language-switch">
+                  {{#language.switch}}{{{language.switch}}}{{/language.switch}}
+                </div>
+                <div class="footer__license">
+                  {{#language.copyright}}{{{&language.copyright}}}{{/language.copyright}}
+                </div>
+              </footer>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script type="module">
+      import { App } from "/dist/app/index.js";
+      {{#root}}
+      App({{{script.wordings}}})
+      {{/root}}
+      {{^root}}
+      App({{{script.wordings}}}, true)
+      {{/root}}
+    </script>
+  </body>
+</html>

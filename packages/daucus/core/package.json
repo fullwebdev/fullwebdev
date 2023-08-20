@@ -1,0 +1,21 @@
+{
+  "name": "@daucus/core",
+  "version": "0.4.1",
+  "description": "Daucus core utility library",
+  "license": "MIT",
+  "main": "index.js",
+  "module": "index.js",
+  "type": "module",
+  "types": "./index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullwebdev/fullwebdev.git",
+    "directory": "packages/daucus/router"
+  },
+  "bugs": {
+    "url": "https://github.com/fullwebdev/fullwebdev/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

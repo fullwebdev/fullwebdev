@@ -1,0 +1,26 @@
+/*#region globals*/
+/*#endregion globals*/
+
+/*#region navbar */
+
+#main-header {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+#main-header .external-icons-container {
+  display: none;
+}
+
+#main-header .row {
+  justify-content: flex-start;
+}
+
+.mdc-drawer .external-icons {
+  display: block;
+}
+
+/*#endregion navbar */
+
+/*#region content */
+/*#endregion content */

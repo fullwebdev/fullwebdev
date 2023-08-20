@@ -1,0 +1,5 @@
+{
+  "path": ".",
+  "tag-prefix": "wof-slides@v",
+  "releaseCommitMessageFormat": "chore: wof-slides@{{currentTag}}"
+}

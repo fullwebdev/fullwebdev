@@ -1,0 +1,23 @@
+{
+  "name": "@fullweb/illustrations",
+  "version": "1.0.4",
+  "private": true,
+  "scripts": {
+    "build": "concurrently \"npm:mermaid\" \"npm:uml\"",
+    "clean": "rimraf graphs/images && mkdirp graphs/images",
+    "uml": "node scripts/build-uml.js",
+    "mermaid": "bash scripts/build-mermaid.sh",
+    "marble": "bash scripts/build-marbles.sh",
+    "plots": "bash plots/build.sh"
+  },
+  "dependencies": {
+    "node-plantuml": "^0.9.0"
+  },
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^9.2.2",
+    "concurrently": "^7.6.0",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2"
+  },
+  "license": "MIT"
+}

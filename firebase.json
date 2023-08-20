@@ -1,0 +1,18 @@
+{
+  "functions": {
+    "source": "./website/functions"
+  },
+  "hosting": {
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "httpRequestHandler"
+      }
+    ],
+    "i18n": {
+      "root": "/localized-files"
+    }
+  }
+}

@@ -1,0 +1,552 @@
+diff --git a/src/assets/code-samples/copy-share-twitter.js b/src/assets/code-samples/copy-share-twitter.js
+index a89827b..4f03229 100644
+--- a/src/assets/code-samples/copy-share-twitter.js
++++ b/src/assets/code-samples/copy-share-twitter.js
+@@ -1,8 +1,8 @@
+ const tweets = {
+-    slides: `Hey look, I can share my slides with the Twitter #PWA using the Web Share & Web Share Target APIs! 🙌 #usetheplatform #WebOnFIRE wof.show`,
+-    camera: `I can share a picture with the Twitter #PWA from the Camera App using the Web Share Target API Level 2 😁! #WebOnFIRE #usetheplatform wof.show`,
+-    picture: `I can also share a picture from my own app using the Web Share & Web Share Target API Level 2! #WebOnFIRE #usetheplatform wof.show`,
+-    clipboardPic: `And I can even share an image using the Async Clipboard Level 2 🤯! #WebOnFIRE #usetheplatform wof.show`
++    slides: `Hey look, I can share my slides with the Twitter #PWA using the Web Share & Web Share Target APIs! 🙌 #usetheplatform #WebOnFIRE`,
++    camera: `I can share a picture with the Twitter #PWA from the Camera App using the Web Share Target API Level 2 😁! #WebOnFIRE #usetheplatform`,
++    picture: `I can also share a picture from my own app using the Web Share & Web Share Target API Level 2! #WebOnFIRE #usetheplatform`,
++    clipboardPic: `And I can even share an image using the Async Clipboard Level 2 🤯! #WebOnFIRE #usetheplatform`
+ };
+ 
+ const getImgFile = async (url) => {
+@@ -40,7 +40,7 @@ const share = async (data) => {
+ document.querySelector('.share-btn-slides').addEventListener('click', () =>
+     share({
+         text: tweets.slides,
+-        url: 'https://devoxxbe-2019.wof.show'
++        url: 'https://fullweb.dev/slides/vanilla1/poss19/'
+     })
+ );
+ 
+@@ -49,7 +49,7 @@ document
+     .addEventListener('click', () => copy(tweets.camera));
+ 
+ (async () => {
+-    const imgFile = await getImgFile('/assets/img/usetheplatform.png');
++    const imgFile = await getImgFile('assets/img/usetheplatform.png');
+     const shareData = {
+         text: tweets.picture,
+         files: [imgFile]
+@@ -65,7 +65,7 @@ document
+ 
+ document.querySelector('.copy-btn-img').addEventListener('click', async () => {
+     try {
+-        const imgURL = '/assets/img/elmo.png';
++        const imgURL = 'assets/img/elmo.png';
+         const data = await fetch(imgURL);
+         const blob = await data.blob();
+         const item = new ClipboardItem(
+diff --git a/src/index.html b/src/index.html
+index 9049f56..23cbb63 100644
+--- a/src/index.html
++++ b/src/index.html
+@@ -7,7 +7,7 @@
+             content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+         />
+ 
+-        <base href="/" />
++        <base href="/slides/vanilla1/poss19/" />
+ 
+         <title>Vanilla is coming back</title>
+ 
+@@ -26,11 +26,11 @@
+         />
+ 
+         <meta property="og:type" content="website" />
+-        <meta property="og:url" content="https://modern-vanilla.wof.show" />
++        <meta property="og:url" content="https://fullweb.dev/slides/vanilla1/poss19/" />
+ 
+         <meta
+             property="og:image"
+-            content="https://modern-vanilla.wof.show/assets/img/vanilla.png"
++            content="https://fullweb.dev/slides/vanilla1/poss19/assets/img/vanilla.png"
+         />
+         <meta property="og:image:type" content="image/png" />
+ 
+@@ -351,7 +351,7 @@
+                             <p style="font-style: italic">
+                                 Go read it
+                                 <a
+-                                    href="https://github.com/noelmace/slides-modern-vanilla/blob/master/src/notes.md"
++                                    href="https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla1/src/notes.md"
+                                     >on Github</a
+                                 >!
+                             </p>
+@@ -409,10 +409,10 @@ la raison d'être de nos royaumes
+ 
+ ☀️ Terres ensoleillées
+ 🏝️ Terres isolées
+-❄️ nord ⚛️ réactif 
+-🧱 au dela du 🕸️ Web 
++❄️ nord ⚛️ réactif
++🧱 au dela du 🕸️ Web
+ 
+-⚔️ guerre entre 👑 royaumes 
++⚔️ guerre entre 👑 royaumes
+ maintenir ☮️ paix
+                         </div>
+                     </deckgo-slide-big-img>
+@@ -457,7 +457,7 @@ Nombreuses façons de nous rejoindre
+ 🟨 🍦Vanilla JS
+ 🧊 Web Components
+ 
+-🗣️🤦‍♂️ Trop de mauvaises infos 
++🗣️🤦‍♂️ Trop de mauvaises infos
+ RAPPEL pour SysthoryOS
+                         </div>
+                     </deckgo-slide-content>
+@@ -604,7 +604,7 @@ CEO Clever Cloud
+                         class="bg-img"
+                     >
+                         <h1 slot="title" hidden>Easy game</h1>
+-                         prettier-ignore 
++                         prettier-ignore
+                         <div slot="notes" show>
+ 🎮👶 JEUX D'ENFANT
+ 
+@@ -645,7 +645,7 @@ CONNAISSANCE, VEILLE
+                         class="bg-img"
+                     >
+                         <h1 slot="title" hidden>Closed door</h1>
+-                         prettier-ignore 
++                         prettier-ignore
+                         <div slot="notes" show>
+ 🚪 PORTE FERMÉE
+ 
+@@ -707,7 +707,7 @@ RAPPEL: react frameworks
+ 
+ ABSTRACTION 👍
+ 
+-❌ PAS 🍦 VANILLA 
++❌ PAS 🍦 VANILLA
+ ⬅ 🕸 Web Platform
+ ⬅ SUPER POUVOIRS
+                         </div>
+@@ -759,7 +759,7 @@ résoud un problème LIÉ au WEB
+                     <deckgo-slide-chart
+                         type="bar"
+                         animation="true"
+-                        src="/assets/charts/libs-weight.csv"
++                        src="assets/charts/libs-weight.csv"
+                         class="lib-chart"
+                     >
+                         <div slot="title" class="flex-row">
+@@ -797,7 +797,7 @@ Github, Clever Cloud
+                         class="bg-img"
+                     >
+                         <h1 slot="title" hidden>lit-element</h1>
+-                         prettier-ignore 
++                         prettier-ignore
+                         <div slot="notes" show>LIT-ELEMENT/HTML</div>
+                     </deckgo-slide-content>-->
+ 
+@@ -938,7 +938,7 @@ Github, Clever Cloud
+                     <!-- #region react-wc -->
+ 
+                     <deckgo-slide-code
+-                        src="/assets/code-samples/wc-in-react.js"
++                        src="assets/code-samples/wc-in-react.js"
+                     >
+                         <h1 slot="title">WC in React</h1>
+                         <!-- prettier-ignore -->
+@@ -955,7 +955,7 @@ The community is discussing some solutions (since 2016)
+                         <h1 slot="title">React in WC</h1>
+                         <div slot="content" class="flex flex-center">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/react-in-wc.js"
++                                src="assets/code-samples/react-in-wc.js"
+                                 highlight-lines="8,8"
+                             >
+                             </deckgo-highlight-code>
+@@ -1001,7 +1001,7 @@ The community is discussing some solutions (since 2016)
+                         <h1 slot="title">Bare specifiers</h1>
+                         <div slot="content">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/import-maps/bare.js"
++                                src="assets/code-samples/import-maps/bare.js"
+                             >
+                             </deckgo-highlight-code>
+                             <deckgo-reveal>
+@@ -1024,11 +1024,11 @@ The community is discussing some solutions (since 2016)
+                         <h1 slot="title">Import Maps</h1>
+                         <div slot="content">
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/import-maps/map.html"
++                                src="assets/code-samples/import-maps/map.html"
+                             >
+                             </deckgo-highlight-code>
+                             <deckgo-highlight-code
+-                                src="/assets/code-samples/import-maps/bare-equivalent.js"
++                                src="assets/code-samples/import-maps/bare-equivalent.js"
+                             >
+                             </deckgo-highlight-code>
+                         </div>
+@@ -1146,7 +1146,7 @@ The community is discussing some solutions (since 2016)
+                         <div slot="notes" show>
+                     You can add, remove, modify children of the &lt;virtual-scroller&gt; as you would
+                     a regular element, using DOM APIs.
+-                    
++
+                     When the set of actually-rendered children is about to change,
+                     the &lt;virtual-scroller&gt; will fire a "rangechange" event with the
+                     new range of rendered children.
+@@ -1221,7 +1221,7 @@ The community is discussing some solutions (since 2016)
+                     </deckgo-slide-content>
+ 
+                     <deckgo-slide-code
+-                        src="/assets/code-samples/pwa-helpers-routing.js"
++                        src="assets/code-samples/pwa-helpers-routing.js"
+                     >
+                         <h1 slot="title">PWA Helpers</h1>
+                         <!-- prettier-ignore -->
+@@ -1252,7 +1252,7 @@ pwa-helpers/router.min.js is 589 bytes only!
+                     </deckgo-slide-content>
+ 
+                     <!-- <deckgo-slide-code
+-                        src="/assets/code-samples/ssr-puppeteer.js"
++                        src="assets/code-samples/ssr-puppeteer.js"
+                     >
+                         <h1 slot="title">SSR w/ Puppeteer</h1>
+                     </deckgo-slide-code> -->
+@@ -1311,17 +1311,17 @@ pwa-helpers/router.min.js is 589 bytes only!
+                     </deckgo-slide-content>
+ 
+                     <!--<deckgo-slide-code
+-                        src="/assets/code-samples/bloc/bloc-class.js"
++                        src="assets/code-samples/bloc/bloc-class.js"
+                     >
+                         <h1 slot="title">Pseudo BLoC Class</h1>
+-                         prettier-ignore 
++                         prettier-ignore
+                         <div slot="notes" show>
+                             BLoC design pattern with Angular, by Suguru Inatomi.
+                         </div>
+                     </deckgo-slide-code>-->
+ 
+                     <!--<deckgo-slide-code
+-                        src="/assets/code-samples/bloc/bloc-rx.js"
++                        src="assets/code-samples/bloc/bloc-rx.js"
+                     >
+                         <h1 slot="title">Real BLoC w/ RxJS</h1>
+                     </deckgo-slide-code>-->
+@@ -1352,7 +1352,7 @@ RxJS ~30kB minified.
+                         style="--background:center no-repeat url('assets/img/castle.jpg')"
+                         class="bg-img dark"
+                     >
+-                         prettier-ignore 
++                         prettier-ignore
+                         <div slot="notes" show>
+ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+                         </div>
+@@ -1380,19 +1380,19 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+                     </deckgo-slide-content>
+ 
+                     <deckgo-slide-code
+-                        src="/assets/code-samples/typing/card.js"
++                        src="assets/code-samples/typing/card.js"
+                     >
+                         <h1 slot="title">You don't need TS</h1>
+                     </deckgo-slide-code>
+ 
+                     <deckgo-slide-code
+-                        src="/assets/code-samples/typing/import.js"
++                        src="assets/code-samples/typing/import.js"
+                     >
+                         <h1 slot="title">You don't need TS</h1>
+                     </deckgo-slide-code>
+ 
+                     <deckgo-slide-code
+-                        src="/assets/code-samples/typing/vs-code.json"
++                        src="assets/code-samples/typing/vs-code.json"
+                     >
+                         <h1 slot="title">VS Code</h1>
+                     </deckgo-slide-code>
+@@ -1589,7 +1589,7 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+                             slot="title"
+                             style="text-align: center; font-size: 3em"
+                         >
+-                            noelmace/slides-modern-vanilla
++                            fullwebdev/fullwebdev
+                         </h2>
+                         <div slot="content" class="flex flex-center">
+                             <img
+@@ -1611,7 +1611,7 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+                     </deckgo-slide-content>
+ 
+                     <deckgo-slide-qrcode
+-                        content="https://vanilla-poss19.wof.show"
++                        content="https://fullweb.dev/slides/vanilla1/poss19/"
+                         style="--deckgo-qrcode-color-fill: black;"
+                         class="resources-slide"
+                     >
+@@ -1633,7 +1633,7 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+                                 @noel_mace</deckgo-social
+                             >
+                             <deckgo-social
+-                                full-url="https://vanilla-poss19.wof.show"
++                                full-url="https://fullweb.dev/slides/vanilla1/poss19/"
+                                 class="hydrated"
+                                 style="margin-left: 32px"
+                                 ><ion-icon
+@@ -1646,10 +1646,10 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+                                     class="md hydrated"
+                                     aria-label="logo twitter"
+                                 ></ion-icon>
+-                                poss19.wof.show</deckgo-social
++                                fullweb.dev/slides/vanilla1/poss19/</deckgo-social
+                             >
+                             <deckgo-social
+-                                github="noelmace/slides-modern-vanilla"
++                                github="fullwebdev/fullwebdev"
+                                 class="hydrated"
+                                 style="margin-left: 32px"
+                                 ><ion-icon
+@@ -1662,7 +1662,7 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+                                     class="md hydrated"
+                                     aria-label="logo slides"
+                                 ></ion-icon>
+-                                noelmace/slides-modern-vanilla</deckgo-social
++                                fullwebdev/fullwebdev</deckgo-social
+                             >
+                             <deckgo-social
+                                 full-url="https://dev.to/noelmace"
+@@ -1978,7 +1978,7 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+                     <div class="row style-scope browser-table">
+                         <div class="style-scope browser-table">
+                             <img
+-                                src="/assets/logos/chrome.svg"
++                                src="assets/logos/chrome.svg"
+                                 class="style-scope browser-table"
+                             />
+                             <span class="style-scope browser-table"
+@@ -1987,14 +1987,14 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+                         </div>
+                         <div class="style-scope browser-table">
+                             <img
+-                                src="/assets/logos/opera-icon.svg"
++                                src="assets/logos/opera-icon.svg"
+                                 class="style-scope browser-table"
+                             />
+                             <span class="style-scope browser-table">Opera</span>
+                         </div>
+                         <div class="style-scope browser-table">
+                             <img
+-                                src="/assets/logos/safari.svg"
++                                src="assets/logos/safari.svg"
+                                 class="style-scope browser-table"
+                             />
+                             <span class="style-scope browser-table"
+@@ -2003,7 +2003,7 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+                         </div>
+                         <div class="style-scope browser-table">
+                             <img
+-                                src="/assets/logos/firefox.svg"
++                                src="assets/logos/firefox.svg"
+                                 class="style-scope browser-table"
+                             />
+                             <span class="style-scope browser-table"
+@@ -2012,7 +2012,7 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+                         </div>
+                         <div class="style-scope browser-table">
+                             <img
+-                                src="/assets/logos/edge.svg"
++                                src="assets/logos/edge.svg"
+                                 class="style-scope browser-table"
+                             />
+                             <span class="style-scope browser-table">Edge</span>
+@@ -2036,7 +2036,7 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+                                 class="style-scope browser-table"
+                             >
+                                 <use
+-                                    xlink:href="/sprite.octicons.svg#template"
++                                    xlink:href="sprite.octicons.svg#template"
+                                     class="style-scope browser-table"
+                                 ></use>
+                             </svg>
+@@ -2085,7 +2085,7 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+                                 class="style-scope browser-table"
+                             >
+                                 <use
+-                                    xlink:href="/sprite.octicons.svg#element"
++                                    xlink:href="sprite.octicons.svg#element"
+                                     class="style-scope browser-table"
+                                 ></use>
+                             </svg>
+@@ -2142,7 +2142,7 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+                                 class="style-scope browser-table"
+                             >
+                                 <use
+-                                    xlink:href="/sprite.octicons.svg#shadow"
++                                    xlink:href="sprite.octicons.svg#shadow"
+                                     class="style-scope browser-table"
+                                 ></use>
+                             </svg>
+@@ -2199,7 +2199,7 @@ Chaque ⬛ brique d'un 🏰 chateau n'est pas un 🏰 chateau
+                                 class="style-scope browser-table"
+                             >
+                                 <use
+-                                    xlink:href="/sprite.octicons.svg#import"
++                                    xlink:href="sprite.octicons.svg#import"
+                                     class="style-scope browser-table"
+                                 ></use>
+                             </svg>
+diff --git a/src/notes.md b/src/notes.md
+index 0021ad6..78ee822 100644
+--- a/src/notes.md
++++ b/src/notes.md
+@@ -303,7 +303,7 @@ It just need some tricks.
+ 
+ Here is an example using a Web Component inside a React component:
+ 
+-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/wc-in-react.js
++https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/wc-in-react.js
+ 
+ > Using a complex web component inside a React App still need a bunch of boilerplate code.
+ > The community is discussing some solutions of that since 2016:
+@@ -312,25 +312,25 @@ https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-sa
+ 
+ And as React is a rendering library, you can even use it inside your Web Components in order to handle the rendering. Here is an example from the documentation:
+ 
+-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/react-in-wc.js
++https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/react-in-wc.js
+ 
+ Here, we're using the standard HTMLElement...
+ 
+-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/react-in-wc.js#L1
++https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/react-in-wc.js#L1
+ 
+ ...and use customElement.define...
+ 
+-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/react-in-wc.js#L12
++https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/react-in-wc.js#L12
+ 
+ ...like every Custom Element.
+ 
+ And we use the standard in order to attach a shadow root.
+ 
+-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/react-in-wc.js#L4
++https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/react-in-wc.js#L4
+ 
+ Finally, we can use React to render the template.
+ 
+-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/react-in-wc.js#L9
++https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/react-in-wc.js#L9
+ 
+ Does those make React a "Vanilla" library? Let's see...
+ 
+@@ -449,7 +449,7 @@ You could use for example the minimalist helpers the Polymer project provides: [
+ 
+ It includes the "router.js" utility, which only weights 589 bytes once minified!
+ 
+-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/pwa-helpers-routing.js
++https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/pwa-helpers-routing.js
+ 
+ You can find an example in https://github.com/noelmace/prpl-demo/tree/master/common/app (using Redux, lit-element & pwa-helpers).
+ 
+@@ -520,7 +520,7 @@ Basically, you could think "reactive MVVM" :wink: It's kind of similar to most S
+ 
+ You could write a BLoC like a ViewModel with VanillaJS.
+ 
+-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/bloc/bloc-class.js
++https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/bloc/bloc-class.js
+ 
+ Yet, we would miss the point doing so. Using Dart, implementing the BLoC pattern relies on Dart streams most of the time.
+ 
+@@ -528,7 +528,7 @@ Yet, we would miss the point doing so. Using Dart, implementing the BLoC pattern
+ 
+ Some are also using RxDart in order to make it simpler. Let's use RxJS instead.
+ 
+-https://github.com/noelmace/slides-modern-vanilla/blob/master/src/assets/code-samples/bloc/bloc-rx.js
++https://github.com/fullwebdev/fullwebdev/blob/master/packages/slides/vanilla-1/src/assets/code-samples/bloc/bloc-rx.js
+ 
+ > These examples where taken from [BLoC design pattern with Angular](https://medium.com/lacolaco-blog/bloc-design-pattern-with-angular-1c2f0339f6a3),
+ > by Suguru Inatomi. I just transpiled them.
+diff --git a/src/scripts/menu.js b/src/scripts/menu.js
+index f954a3d..94b4a13 100644
+--- a/src/scripts/menu.js
++++ b/src/scripts/menu.js
+@@ -18,7 +18,7 @@ buildMenuListActions = () => {
+         result += '<ion-item ion-item button detail="false" onclick="displaySlideNotes()" color="primary" style="--border-style: none;"><ion-icon name="clipboard" aria-label="Display slide notes" slot="end"></ion-icon><ion-label>Display slide notes</ion-label></ion-item>';
+         result += '<ion-item ion-item button detail="false" onclick="displayRemoteControl()" color="primary" style="--border-style: none;"><ion-icon name="phone-portrait" aria-label="Remote control" slot="end"></ion-icon><ion-label>Remote control</ion-label></ion-item>';
+         result += '<ion-item ion-item button detail="false" onclick="openShare()" color="primary" style="--border-style: none;"><ion-icon name="share" aria-label="Share this presentation" slot="end"></ion-icon><ion-label>Share</ion-label></ion-item>';
+-        result += '<ion-item ion-item button detail="false" onclick="openLink(\'https://deckdeckgo.com\')" style="--border-style: none; --ion-item-background: white;"><ion-icon src="/assets/icons/deckdeckgo.svg" aria-label="DeckDeckGo" slot="end"></ion-icon><ion-label>Created with DeckDeckGo</ion-label></ion-item>';
++        result += '<ion-item ion-item button detail="false" onclick="openLink(\'https://deckdeckgo.com\')" style="--border-style: none; --ion-item-background: white;"><ion-icon src="assets/icons/deckdeckgo.svg" aria-label="DeckDeckGo" slot="end"></ion-icon><ion-label>Created with DeckDeckGo</ion-label></ion-item>';
+ 
+         resolve(result);
+     });
+diff --git a/src/scripts/modalRemoteControl.js b/src/scripts/modalRemoteControl.js
+index 10a8b46..10b4633 100644
+--- a/src/scripts/modalRemoteControl.js
++++ b/src/scripts/modalRemoteControl.js
+@@ -17,9 +17,9 @@ displayRemoteControl = async () => {
+     </ion-toolbar>
+   </ion-header>
+   <ion-content padding color="primary">
+-  
++
+   ${getRemoteControlModalContent()}
+-    
++
+   </ion-content>
+   `;
+ 
+@@ -72,18 +72,18 @@ function getRemoteControlModalContent() {
+ 
+         return `<ion-list style="ion-no-margin">
+         <ion-item style="--border-color: transparent; color: black;">
+-            <ion-label class="ion-text-wrap">Toggle to disable or enable the remote control</ion-label> 
++            <ion-label class="ion-text-wrap">Toggle to disable or enable the remote control</ion-label>
+             <ion-toggle slot="end" checked="true" color="tertiary" style="--background: var(--ion-color-light); --handle-background: white; --handle-background-checked: white;"></ion-toggle>
+         </ion-item>
+     </ion-list>
+-  
++
+     <p class="ion-padding-start ion-padding-end" style="margin: 0; font-size: 16px;">Remote control this presentation with your phone or any devices. Scan the following QR Code to open it directly or get the Progressive Web Apps at <a href="https://deckdeckgo.app" target="_blank" style="color: var(--ion-color-tertiary);">https://deckdeckgo.app <ion-icon name="open" style="color: var(--ion-color-tertiary); vertical-align: bottom;"></ion-icon></a> and find <mark style="background: transparent; color: var(--ion-color-tertiary); font-weight: 500;">${remoteRoom}</mark>.</p>
+ 
+     <p class="ion-padding-start ion-padding-end" style="margin-bottom: 0; font-size: 16px;">If you can't connect or if you lost the connection, toggle off and on the connection to refresh it.</p>
+ 
+     <div class="qrcode-container" style="display: flex; justify-content: center;  --deckgo-qrcode-size: 300px; --deckgo-qrcode-color-fill: var(--ion-color-tertiary);">
+         <deckgo-qrcode content="${qrCodeLink}">
+-            <ion-icon slot="logo" src="/assets/icons/deckdeckgo.svg"></ion-icon>
++            <ion-icon slot="logo" src="assets/icons/deckdeckgo.svg"></ion-icon>
+         </deckgo-qrcode>
+     </div>`;
+     }
+diff --git a/webpack.config.js b/webpack.config.js
+index cd19aaa..4d8e9d0 100644
+--- a/webpack.config.js
++++ b/webpack.config.js
+@@ -5,7 +5,6 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+ 
+ const {DeckDeckGoInfoPlugin, DeckDeckGoRemoveNotesPlugin} = require('deckdeckgo-webpack-plugins');
+ 
+-const {GenerateSW} = require('workbox-webpack-plugin');
+ 
+ const webpack = require('webpack');
+ 
+@@ -31,6 +30,9 @@ const config = {
+ };
+ 
+ const plugins = [
++    new webpack.DefinePlugin({
++      'process.env.ASSET_PATH': '/slides/vanilla1/poss19/',
++    }),
+     new CleanWebpackPlugin({
+         cleanStaleWebpackAssets: false
+     }),
+@@ -57,9 +59,6 @@ module.exports = (env, argv) => {
+     }
+ 
+     if (argv.mode === 'production') {
+-        plugins.push(new GenerateSW({
+-            ignoreURLParametersMatching: [/./]
+-        }));
+         plugins.push(new DeckDeckGoInfoPlugin());
+ 
+         if (!argv.notes) {

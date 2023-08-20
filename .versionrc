@@ -1,0 +1,74 @@
+{
+  "bumpFiles": [
+    {
+      "filename": "package.json",
+      "type": "json"
+    },
+    {
+      "filename": "package-lock.json",
+      "type": "json"
+    },
+    {
+      "filename": "website/package.json",
+      "type": "json"
+    },
+    {
+      "filename": "materials/code-samples/package.json",
+      "type": "json"
+    },
+    {
+      "filename": "materials/code-samples/package-lock.json",
+      "type": "json"
+    },
+    {
+      "filename": "materials/codelabs/package.json",
+      "type": "json"
+    },
+    {
+      "filename": "materials/codelabs/package-lock.json",
+      "type": "json"
+    },
+    {
+      "filename": "materials/illustrations/package.json",
+      "type": "json"
+    },
+    {
+      "filename": "materials/illustrations/package-lock.json",
+      "type": "json"
+    },
+    {
+      "filename": "materials/perf/package.json",
+      "type": "json"
+    },
+    {
+      "filename": "materials/perf/package-lock.json",
+      "type": "json"
+    }
+  ],
+  "types": [
+    {
+      "type": "feat",
+      "section": "Features"
+    },
+    {
+      "type": "fix",
+      "section": "Bug Fixes"
+    },
+    {
+      "type": "docs",
+      "section": "Contents"
+    },
+    {
+      "type": "ci",
+      "section": "Tooling"
+    },
+    {
+      "type": "build",
+      "section": "Tooling"
+    },
+    {
+      "type": "chore",
+      "section": "Misc"
+    }
+  ]
+}

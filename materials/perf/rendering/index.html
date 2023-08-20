@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        margin: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="params">
+      <fieldset>
+        <legend>Runner parameters</legend>
+        <label for="runs-input"
+          >Runs:
+          <input type="number" value="50" name="runs" id="runs-input" />
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Benchmark Data</legend>
+        <select name="data" id="data-select">
+          <option value="">--Please choose a dataset--</option>
+          <option value="simple-create/hello-world">
+            simple create: Hello World
+          </option>
+          <option value="simple-create/heroes">simple create: Heroes</option>
+        </select>
+      </fieldset>
+      <button id="run-button" type="button" disabled>Run</button>
+    </form>
+    <rb-runner></rb-runner>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

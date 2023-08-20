@@ -1,0 +1,29 @@
+{
+  "name": "@daucus/html-loader",
+  "version": "0.4.1",
+  "description": "Webcomponent html-loader following open-wc recommendations",
+  "license": "MIT",
+  "main": "./index.js",
+  "module": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullwebdev/fullwebdev.git",
+    "directory": "packages/daucus/html-loader"
+  },
+  "bugs": {
+    "url": "https://github.com/fullwebdev/fullwebdev/issues"
+  },
+  "scripts": {
+    "start": "web-dev-server",
+    "storybook": "web-dev-server -c .storybook/server.mjs",
+    "storybook:build": "build-storybook"
+  },
+  "devDependencies": {
+    "@web/dev-server": "~0.1.35",
+    "@web/dev-server-storybook": "~0.5.4"
+  },
+  "types": "types/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  }
+}

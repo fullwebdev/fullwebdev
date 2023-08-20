@@ -1,0 +1,20 @@
+@media (prefers-color-scheme: no-preference) {
+    .dark-demo {
+        background: black;
+        color: red;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .dark-demo {
+        background: #333;
+        color: white;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .dark-demo {
+        background: yellow;
+        color: black;
+    }
+}

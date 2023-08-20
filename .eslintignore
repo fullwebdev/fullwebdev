@@ -1,0 +1,44 @@
+node_modules
+coverage/
+dist
+build
+tsc-dist
+stats.html
+*.fake.*
+__mocks__
+.lighthouseci
+/dpawm-build/public
+
+## should stay as-is
+/packages/**/test-node/**/snapshots
+/packages/**/types
+/packages/**/demo
+/website/public/prism-components/
+
+## projects with other conventions
+/materials/benchmark
+/materials/slides
+*.jest.js
+/website/templates/**/*.html
+
+## code samples on historic topics
+/materials/code-samples/src/CBSE/angularjs/
+/materials/code-samples/src/CBSE/jquery/
+/materials/code-samples/src/CBSE/react/
+/materials/code-samples/src/minimal-spa/2-location/ie-location.js
+/materials/code-samples/src/minimal-spa/5-routes/frameworks
+/materials/code-samples/src/CBSE/introduction/
+
+## compatibility / consistency
+/materials/code-samples/src/index.html
+/materials/perf/benchmarks
+
+## generated
+/website/public/*.html
+/website/public/localized-files/en_ALL/index.html
+/website/public/localized-files/fr_ALL/index.html
+/website/src/app/builds
+/website/functions/hosting/index.html
+API/
+website/functions/app
+builds/

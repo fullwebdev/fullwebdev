@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Custom Elements - Errors</title>
+    <script type="module" src="index.js"></script>
+    <style>
+      .error {
+        color: red;
+      }
+      .success {
+        color: green;
+      }
+      .transition {
+        font-weight: bold;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Custom Elements - Errors</h1>
+    <h2>No Hypen</h2>
+    <success></success>
+    <section id="no-hyphen-error" class="error"></section>
+    <h2>Non-ASCII Name</h2>
+    <emotion-😍></emotion-😍>
+    <h3>createElement</h3>
+    <div id="non-ascii-container"></div>
+  </body>
+</html>

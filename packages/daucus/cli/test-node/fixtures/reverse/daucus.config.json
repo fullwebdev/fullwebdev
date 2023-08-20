@@ -1,0 +1,10 @@
+{
+  "$schema": "../../../daucus-config.schema.json",
+  "projects": {
+    "docs": {
+      "root": "docs",
+      "src": "**/*.md",
+      "reverseMenu": true
+    }
+  }
+}

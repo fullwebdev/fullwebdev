@@ -1,0 +1,32 @@
+{
+  "projects": [
+    {
+      "scope": "illustrations",
+      "directory": "materials/illustrations"
+    },
+    {
+      "scope": "code-samples",
+      "directory": "materials/code-samples"
+    },
+    {
+      "scope": "website",
+      "directory": "website"
+    },
+    {
+      "scope": "codelabs",
+      "directory": "materials/codelabs"
+    },
+    {
+      "scope": "slides-wof-1",
+      "directory": "materials/slides/wof-1"
+    },
+    {
+      "scope": "slides-wof-2",
+      "directory": "materials/slides/wof-2"
+    },
+    {
+      "scope": "slides-vanilla",
+      "directory": "materials/slides/vanilla-1"
+    }
+  ]
+}

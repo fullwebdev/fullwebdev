@@ -1,0 +1,33 @@
+{
+  "name": "@daucus/pandoc",
+  "version": "0.4.1",
+  "description": "Install & use pandoc in Nodejs",
+  "license": "MIT",
+  "type": "module",
+  "main": "./index.js",
+  "files": [
+    "*.d.ts",
+    "*.js",
+    "src",
+    "scripts"
+  ],
+  "scripts": {
+    "types:copy": "copyfiles \"./src/**/*.d.ts\" \"./*.d.ts\" types",
+    "postinstall": "node ./scripts/download.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullwebdev/fullwebdev.git",
+    "directory": "packages/daucus/pandoc"
+  },
+  "bugs": {
+    "url": "https://github.com/fullwebdev/fullwebdev/issues"
+  },
+  "dependencies": {
+    "download": "^8.0.0"
+  },
+  "types": "./types/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  }
+}

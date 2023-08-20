@@ -1,0 +1,33 @@
+{
+  "name": "@modern-helpers/template",
+  "version": "0.5.0",
+  "description": "create pre-rendered elements with an HyperHTML syntax",
+  "main": "index.js",
+  "module": "index.js",
+  "types": "./types/index.d.ts",
+  "keywords": [
+    "modern",
+    "vanilla",
+    "hyperhtml",
+    "DOM",
+    "helper",
+    "template"
+  ],
+  "files": [
+    "*.d.ts",
+    "*.js",
+    "src"
+  ],
+  "scripts": {
+    "types:copy": "copyfiles \"./*/src/**/*.d.ts\" \"./*.d.ts\" types"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fullwebdev/fullwebdev.git",
+    "directory": "packages/helpers/template"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

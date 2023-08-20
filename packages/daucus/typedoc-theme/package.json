@@ -1,0 +1,33 @@
+{
+  "name": "@daucus/typedoc-theme",
+  "version": "0.4.1",
+  "description": "An extension of the default theme from typedoc-plugin-markdown to create a compatible file structure for Daucus.",
+  "main": "dist/theme.js",
+  "files": [
+    "dist/"
+  ],
+  "bugs": {
+    "url": "https://github.com/fullwebdev/fullwebdev/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fullwebdev/fullwebdev.git",
+    "directory": "packages/daucus/typedoc-theme"
+  },
+  "homepage": "https://fullweb.dev/daucus/typedoc-theme",
+  "scripts": {
+    "prepublishOnly": "yarn run build",
+    "build": "rimraf ./dist && tsc"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "typedoc": "^0.23.21",
+    "typedoc-plugin-markdown": "^3.13.6"
+  },
+  "keywords": [
+    "typedoc-theme"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

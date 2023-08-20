@@ -1,0 +1,48 @@
+## generated
+node_modules
+coverage/
+dist
+tsc-dist
+stats.html
+*.fake.*
+build
+_daucus_/
+.lighthouseci
+package-lock.json
+/website/public/*.html
+/website/public/localized-files/en_ALL/index.html
+/website/public/localized-files/fr_ALL/index.html
+/website/src/fragments/
+/packages/daucus/snowpack-template/src/templates/
+/website/src/styles/*.css
+/website/public/prism-components/
+/dpawm-build/public
+/website/src/app/builds
+/website/functions/hosting/index.html
+API/
+builds/
+
+## should stay as-is
+/packages/**/test-node/**/snapshots
+/packages/**/types
+/packages/**/demo
+vercel.json
+__mocks__
+
+## projects with other conventions
+/materials/benchmark
+/materials/slides
+/materials/eni-dpawm
+*.jest.js
+
+## code samples on historic topics
+/materials/code-samples/src/CBSE/angularjs/
+/materials/code-samples/src/CBSE/jquery/
+/materials/code-samples/src/CBSE/react/
+/materials/code-samples/src/minimal-spa/2-location/ie-location.js
+/materials/code-samples/src/minimal-spa/5-routes/frameworks
+/materials/code-samples/src/CBSE/introduction/
+
+## compatibility / consistency
+/materials/code-samples/src/index.html
+/materials/perf/benchmarks

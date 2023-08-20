@@ -1,0 +1,17 @@
+{
+  "name": "perf-tests",
+  "private": true,
+  "version": "1.0.4",
+  "description": "quick performance testing",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "exec": "node benchmarks/index.js $*",
+    "start": "http-server"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "benchmark": "^2.1.4",
+    "http-server": "^14.1.1"
+  }
+}

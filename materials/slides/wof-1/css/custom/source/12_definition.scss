@@ -1,0 +1,35 @@
+@import 'pwa-colors.scss';
+
+.reveal .slides section {
+  .target-capacities {
+    position: absolute;
+    transform: rotateZ(270deg);
+    font-size: 2em;
+    left: -1em;
+    color: gray;
+    top: 50%;
+  }
+
+  .target-touch {
+    position: absolute;
+    font-size: 2em;
+    color: gray;
+    text-align: center;
+  }
+
+  img {
+    padding: 25px;
+  }
+  img[alt*='red'] {
+    background: $red;
+  }
+  img[alt*='green'] {
+    background: $green;
+  }
+  img[alt*='blue'] {
+    background: $blue;
+  }
+  img[alt*='purple'] {
+    background: $purple;
+  }
+}

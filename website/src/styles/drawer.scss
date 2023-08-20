@@ -1,0 +1,95 @@
+@use "@material/drawer";
+@use "@material/list";
+@use "@material/list/evolution-mixins" as list-evolution-mixins;
+
+@include drawer.core-styles;
+@include drawer.dismissible-core-styles;
+@include drawer.modal-core-styles;
+@include list-evolution-mixins.core-styles();
+
+.mdc-drawer {
+  max-width: 80vw;
+  min-width: 256px;
+  width: initial;
+
+  .external-icons {
+    display: none;
+  }
+
+  daucus-menu {
+    padding: 2rem 2.5rem;
+    max-width: 740px;
+    text-align: left;
+  }
+}
+
+daucus-menu {
+  .menu-title {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    padding: 7px 0;
+  }
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    cursor: pointer;
+    font-size: 1em;
+    color: var(--daucus-menu-default-color, #666);
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  button:after {
+    content: "›";
+    width: 1em;
+    height: 1em;
+    font-weight: bold;
+    color: var(--daucus-menu-default-color, #666);
+    text-align: center;
+    transition: all 0.1s;
+    transform-origin: center;
+    line-height: 1em;
+    margin-left: 0.5em;
+  }
+
+  button[aria-pressed="true"]:after {
+    transform: rotate(90deg);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .menu {
+    padding: 0;
+  }
+
+  .child-menu {
+    padding: 7px 0 0px 20px;
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 150ms ease-out;
+  }
+
+  .child-menu.open {
+    max-height: 50vh;
+    transition: max-height 1s ease-out;
+  }
+
+  .section-title.active {
+    color: var(--daucus-menu-active-color, #b20000);
+    font-weight: bold;
+  }
+}

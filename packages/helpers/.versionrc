@@ -1,0 +1,47 @@
+{
+  "path": ".",
+  "bumpFiles": [
+    {
+      "filename": "package.json",
+      "type": "json"
+    },
+    {
+      "filename": "package-lock.json",
+      "type": "json"
+    },
+    {
+      "filename": "el/package.json",
+      "type": "json"
+    },
+    {
+      "filename": "el/package-lock.json",
+      "type": "json"
+    },
+    {
+      "filename": "template/package.json",
+      "type": "json"
+    },
+    {
+      "filename": "template/package-lock.json",
+      "type": "json"
+    },
+    {
+      "filename": "router/package-lock.json",
+      "type": "json"
+    },
+    {
+      "filename": "router/package.json",
+      "type": "json"
+    },
+    {
+      "filename": "navigation/package-lock.json",
+      "type": "json"
+    },
+    {
+      "filename": "navigation/package.json",
+      "type": "json"
+    }
+  ],
+  "tag-prefix": "helpers@v",
+  "releaseCommitMessageFormat": "chore: helpers@{{currentTag}}"
+}

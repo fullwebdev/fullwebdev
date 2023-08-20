@@ -1,0 +1,54 @@
+{
+  "name": "@daucus/cli",
+  "version": "0.4.1",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Daucus CLI",
+  "license": "MIT",
+  "type": "module",
+  "typings": "./types/index.d.ts",
+  "exports": {
+    "default": "./index.js"
+  },
+  "bin": {
+    "daucus": "bin/daucus.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullwebdev/fullwebdev.git",
+    "directory": "packages/daucus/cli"
+  },
+  "bugs": {
+    "url": "https://github.com/fullwebdev/fullwebdev/issues"
+  },
+  "scripts": {
+    "types:copy": "copyfiles \"./src/**/*.d.ts\" \"./*.d.ts\" types"
+  },
+  "dependencies": {
+    "@daucus/core": "~0.4.0",
+    "chalk": "^5.1.2",
+    "chokidar": "^3.5.3",
+    "command-line-args": "^5.2.1",
+    "file-type": "^18.0.0",
+    "fs-extra": "^11.1.0",
+    "gauge": "^5.0.0",
+    "globby": "^13.1.2",
+    "html-minifier": "^4.0.0",
+    "node-html-parser": "^6.1.4",
+    "rimraf": "^3.0.2",
+    "snarkdown": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/command-line-usage": "^5.0.2",
+    "@types/rimraf": "^3.0.2"
+  },
+  "peerDependencies": {
+    "@daucus/pandoc": "~0.4.0"
+  },
+  "peerDependenciesMeta": {
+    "@daucus/pandoc": {
+      "optional": true
+    }
+  }
+}

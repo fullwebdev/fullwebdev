@@ -1,0 +1,37 @@
+{
+  "name": "modern-helpers",
+  "version": "0.5.0",
+  "description": "Minimalistic helper functions for Modern Web Apps development.",
+  "scripts": {
+    "start": "es-dev-server --compatibility none",
+    "types:copy": "copyfiles \"./*/src/**/*.d.ts\" \"./*.d.ts\" types"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fullwebdev/fullwebdev.git",
+    "directory": "packages/helpers"
+  },
+  "keywords": [
+    "utils",
+    "helpers"
+  ],
+  "type": "module",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./types/index.d.ts",
+  "files": [
+    "*.js",
+    "*.d.ts",
+    "el",
+    "router",
+    "template"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fullwebdev/fullwebdev/issues"
+  },
+  "homepage": "https://github.com/fullwebdev/fullwebdev#readme",
+  "devDependencies": {
+    "es-dev-server": "^2.1.0"
+  }
+}

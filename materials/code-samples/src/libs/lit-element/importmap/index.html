@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>lit-element - hello world</title>
+  </head>
+  <body>
+    <h1>
+      lit-element - async hello world with es-module-shims
+    </h1>
+    <fwd-async-hw></fwd-async-hw>
+    <script
+      type="module-shim"
+      src="./async-helloworld.js"
+    ></script>
+    <script type="importmap-shim">
+      {
+        "imports": {
+          "lit/": "https://cdn.skypack.dev/lit@2.2.0/",
+          "lit": "https://cdn.skypack.dev/lit@2.2.0"
+        }
+      }
+    </script>
+    <script
+      async
+      defer
+      src="https://unpkg.com/es-module-shims@0.4.6/dist/es-module-shims.js"
+    ></script>
+  </body>
+</html>

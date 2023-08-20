@@ -1,0 +1,16 @@
+{
+  "name": "@fwdemos/modern-helpers-el-simple-counter",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "wds --node-resolve --open --app-index index.html"
+  },
+  "devDependencies": {
+    "@web/dev-server": "~0.1.35"
+  },
+  "dependencies": {
+    "@modern-helpers/el": "^0.5.0"
+  }
+}

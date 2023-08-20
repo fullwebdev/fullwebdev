@@ -1,0 +1,50 @@
+name: Deploy to dev
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build-deploy-to-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout with submodules
+        uses: actions/checkout@v1
+        with:
+          submodules: true
+          token: ${{ secrets.ACCESS_TOKEN }}
+          fetch-depth: 50
+
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: "3.x"
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.18.1"
+
+      - name: Install dependencies
+        uses: ./.github/actions/yarn-nm-install
+
+      - name: Build
+        run: |
+          yarn run build
+          cp ./CNAME ./dist/CNAME
+
+      - name: Validate (test, types & formating)
+        run: yarn run validate
+
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy -P dev
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+      - name: Run Lighthouse CI
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+        run: yarn run lhci:autorun --githubAppToken="$LHCI_GITHUB_APP_TOKEN" --config lighthouserc.dev.js

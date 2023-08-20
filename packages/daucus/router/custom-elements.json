@@ -1,0 +1,67 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "daucus-router",
+      "path": "./src/DaucusRouterWC.js",
+      "description": "Routing wrapper element for Daucus Routes\n\nWrap the programmatic DaucusRouter for declarative usage.",
+      "attributes": [
+        {
+          "name": "default-path",
+          "description": "Path of the default route",
+          "type": "string",
+          "default": "\"/docs/\""
+        },
+        {
+          "name": "base-dir",
+          "description": "Directory where templates are published, relative to the baseHRef (should end with a '/')",
+          "type": "string",
+          "default": "\"templates/\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "defaultPath",
+          "attribute": "default-path",
+          "description": "Path of the default route",
+          "type": "string",
+          "default": "\"/docs/\""
+        },
+        {
+          "name": "routes",
+          "description": "Daucus Routes",
+          "type": "SimpleRoutesConfig | undefined"
+        },
+        {
+          "name": "baseDir",
+          "attribute": "base-dir",
+          "description": "Directory where templates are published, relative to the baseHRef (should end with a '/')",
+          "type": "string",
+          "default": "\"templates/\""
+        }
+      ],
+      "events": [
+        {
+          "name": "navigation-start",
+          "description": "New navigation begins"
+        },
+        {
+          "name": "navigation-end",
+          "description": "A navigation ended without error"
+        },
+        {
+          "name": "route-redirection",
+          "description": "A navigation led to a redirection to another route"
+        },
+        {
+          "name": "route-match",
+          "description": "A corresponding route was found for a navigation"
+        },
+        {
+          "name": "project-change",
+          "description": "A navigation led to a route from another Daucus Project"
+        }
+      ]
+    }
+  ]
+}
