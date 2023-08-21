@@ -47,7 +47,7 @@ const wording = {
       },
     },
     {
-      href: "https://github.com/noelmace/monocli",
+      href: "https://github.com/nlm-pro/monocli",
       date: "revision in progress...",
       type: "CLI",
       wip: true,

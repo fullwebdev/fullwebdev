@@ -47,7 +47,7 @@ const wording = {
       },
     },
     {
-      href: "https://github.com/noelmace/monocli",
+      href: "https://github.com/nlm-pro/monocli",
       date: "v0",
       type: "CLI",
       wip: true,

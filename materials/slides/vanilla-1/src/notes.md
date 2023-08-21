@@ -455,7 +455,7 @@ It includes the "router.js" utility, which only weights 589 bytes once minified!
 
 https://github.com/fullwebdev/fullwebdev/blob/master/materials/slides/vanilla-1/src/assets/code-samples/pwa-helpers-routing.js
 
-You can find an example in https://github.com/noelmace/prpl-demo/tree/master/common/app (using Redux, lit-element & pwa-helpers).
+You can find an example in https://github.com/nlm-pro/prpl-demo/tree/master/common/app (using Redux, lit-element & pwa-helpers).
 
 Of course, if you wanna go "full vanilla", you can simply use the History API, but beware:
 calling history.pushState() or history.replaceState() won't trigger a popstate event on Firefox.
@@ -564,11 +564,11 @@ Use it very carefully! But if you need to, IMO, you should choose RxJS for now.
 
 ### Typings
 
-> See https://github.com/noelmace/devcards/blob/master/dev-doc/type-js.md
+> See https://github.com/nlm-pro/devcards/blob/master/dev-doc/type-js.md
 
 ### Unit Tests & Tooling
 
-> See https://github.com/noelmace/devcards/blob/master/dev-doc/testing.md & https://open-wc.org/guide/
+> See https://github.com/nlm-pro/devcards/blob/master/dev-doc/testing.md & https://open-wc.org/guide/
 
 ## PWA - The Web is on F.I.R.E.
 

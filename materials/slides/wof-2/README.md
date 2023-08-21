@@ -18,7 +18,7 @@ More information on [fullweb.dev](https://fullweb.dev/en/conferences/wof-v2).
 
 I stopped updating the content of these slides the 10th of December 2019.
 
-This project has been moved from wof.show (:octocat: [noelmace/slides-wof-conf](https://github.com/noelmace/slides-wof-conf/)) to [fullweb.dev](https://fullweb.dev) (:octocat: [fullwebdev/fullwebdev](https://github.com/fullwebdev/fullwebdev)) after that, as there is a good chance I recycle this project into something else here.
+This project has been moved from wof.show (:octocat: [noelmace/slides-wof-conf](https://github.com/nlm-pro/slides-wof-conf/)) to [fullweb.dev](https://fullweb.dev) (:octocat: [fullwebdev/fullwebdev](https://github.com/fullwebdev/fullwebdev)) after that, as there is a good chance I recycle this project into something else here.
 
 ## License
 
