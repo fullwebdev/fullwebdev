@@ -13,7 +13,6 @@
 <!-- markdownlint-enable header-style -->
 
 <p align="center"><a href="https://fullweb.dev"><img src="https://img.shields.io/website?up_message=fullweb.dev&amp;url=https%3A%2F%2Ffullweb.dev" alt="Website"></a>
-<a href="https://twitter.com/intent/follow?screen_name=noel_mace"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/noel_mace?label=Stay%20tunned%21&style=social"></a></p>
 
 <p align="center">
 <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/fullwebdev/fullwebdev">

@@ -1,11 +1,6 @@
 # The Web is on FIRE - Season Two
 
-<p>Slides by <a href="https://twitter.com/noel_mace" rel="nofollow">Noël Macé</a>, using <a href="https://github.com/deckgo/deckdeckgo-starter">DeckDeckGo-starter</a> .</p>
-<p>
-<a href="https://twitter.com/intent/follow?screen_name=noel_mace">
-    <img src="https://img.shields.io/twitter/follow/noel_mace?style=social" alt="follow on Twitter">
-  </a>
-</p>
+<p>Slides by Noël Macé, using <a href="https://github.com/deckgo/deckdeckgo-starter">DeckDeckGo-starter</a> .</p>
 
 - [Slides](https://fullweb.dev/slides/wof/latest/)
 - [Notes, Resources & Comments](./src/notes.md)

@@ -1,6 +1,6 @@
 # The Web is on FIRE - Season 1
 
-> (old) Slides made with Reveal.js by [Noël Macé](https://twitter.com/noel_mace).
+> (old) Slides made with Reveal.js by Noël Macé.
 
 :arrow_right: :globe_with_meridians: [fullweb.dev/slides/wof1/](https://fullweb.dev/slides/wof1/)
 
